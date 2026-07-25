@@ -1,0 +1,14 @@
+{
+  "name": "spd-iran",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A historically grounded political simulation of Iran's constitutional and oil crises, 1949–1953.",
+  "scripts": {
+    "build": "dendrynexus make-html"
+  },
+  "dependencies": {
+    "dendrynexus": "github:originn0/dendrynexus",
+    "parliament-svg": "^3.0.0"
+  }
+}
+

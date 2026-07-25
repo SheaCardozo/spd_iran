@@ -1,0 +1,56 @@
+title: Root Scene
+new-page: true
+go-to: start_menu
+
+@start_menu
+new-page: true
+
+= The Last Majles
+
+## Iran, 1949–1953
+
+Iran has a constitution, elections, a parliament, political parties, and a
+mobilized public. It does not have a settled distribution of power.
+
+You will represent the coordinating leadership of the National Front as it
+tries to secure representative government and Iranian control of the oil
+industry without losing the coalition and institutions needed to make either
+achievement durable.
+
+- @prototype_briefing: Read the prototype briefing
+- @about: About this project
+
+@prototype_briefing
+new-page: true
+
+= October 1949
+
+The elections to the Sixteenth Majles are being manipulated. Mohammad
+Mossadegh and a small group of opposition figures prepare to seek sanctuary
+at the royal palace and demand genuinely representative elections.
+
+The eventual game will begin here. Its first playable slice will ask the
+player to turn this protest into a working coalition, contest the elections,
+and decide how a constitutional opposition should respond to a monarchy that
+possesses both formal powers and informal instruments of influence.
+
+This technical build confirms the project structure and build pipeline. No
+campaign systems or historical choices have been implemented yet.
+
+- @start_menu: Return to the title
+
+@about
+new-page: true
+
+= About this project
+
+*The Last Majles* is planned as a long-form, single-player historical
+simulation. It is inspired by the institutional density of *Social Democracy:
+An Alternate History*, but it requires a distinct model of Iranian political
+life rather than a reskin of a European parliamentary party system.
+
+The design document in the repository states the historical thesis, system
+requirements, content plan, standards of evidence, and bibliography.
+
+- @start_menu: Return to the title
+
