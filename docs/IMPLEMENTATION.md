@@ -56,6 +56,12 @@ This repository deliberately keeps them in `web/` and overlays them after the
 Dendry build. This local tooling divergence makes `out/` reproducible and
 disposable without changing the runtime UI model.
 
+Historical scene prose uses the semantic classes and authoring rules in
+[`COLOR_STYLE_GUIDE.md`](COLOR_STYLE_GUIDE.md). The same palette is implemented
+in `web/game.css` and `web/timeline.css`, so the playable campaign and its
+historical primer share one visual language. The CSS class names, not their
+current hexadecimal values, are the content-facing interface.
+
 ## Implemented foundation
 
 The current build follows SPD in these respects:
@@ -131,6 +137,7 @@ easier to inspect, balance, and compare with SPD.
 | Numerical state display | `source/scenes/status.scene.dry` |
 | Party-affairs action pattern | `source/scenes/party_affairs/media.scene.dry` |
 | Browser shell and responsive styling | `out/html/index.html`, `out/html/game.js`, `out/html/game.css` |
+| Inline political colors | `source/scenes/**/*.scene.dry`, especially `source/scenes/main.scene.dry` |
 | Image attribution | `credits_images.txt` |
 | Packaged browser assets | `out/html/img/` |
 

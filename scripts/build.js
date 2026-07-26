@@ -1,6 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {spawnSync} = require('node:child_process');
+const {buildTimeline} = require('./build-timeline');
 
 const projectDirectory = path.resolve(__dirname, '..');
 const dendryCli = path.join(
@@ -33,3 +34,5 @@ if (fs.existsSync(assetDirectory)) {
   fs.cpSync(assetDirectory, outputDirectory, {recursive: true});
   console.log(`Copied assets to ${outputDirectory}`);
 }
+
+buildTimeline();

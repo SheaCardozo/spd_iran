@@ -50,3 +50,6 @@ bibliography entry, or asset-rights record.
 - [Persian newspaper corpus expansion](2026-07-26-newspaper-corpus-expansion.md)
 - [*Shahed* newspaper search and coup-window intake](2026-07-26-shahed-newspaper-search.md)
 - [Parallel research-workstream reconciliation](2026-07-26-parallel-research-reconciliation.md)
+- [Historical timeline primer](2026-07-26-timeline-primer.md)
+- [Formatted historical-primer webpage](2026-07-26-timeline-webpage.md)
+- [Game-wide political text-color standard](2026-07-26-game-color-style-guide.md)

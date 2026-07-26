@@ -29,6 +29,9 @@ The full pre-production specification and bibliography are in
 [`docs/GAME_DESIGN.md`](docs/GAME_DESIGN.md).
 The current SPD-first implementation policy and source map are in
 [`docs/IMPLEMENTATION.md`](docs/IMPLEMENTATION.md).
+The project-wide political text-color convention for game scenes and the
+historical primer is in
+[`docs/COLOR_STYLE_GUIDE.md`](docs/COLOR_STYLE_GUIDE.md).
 The maintained source and image-rights registries are in
 [`docs/research/BIBLIOGRAPHY.md`](docs/research/BIBLIOGRAPHY.md) and
 [`docs/research/ASSETS.md`](docs/research/ASSETS.md).
@@ -61,6 +64,10 @@ npm run play
 ```
 
 Then open <http://127.0.0.1:8080>. Set `GAME_PORT` to use another port.
+The formatted historical orientation is available at
+<http://127.0.0.1:8080/timeline.html> and is generated from
+[`docs/research/TIMELINE_PRIMER.md`](docs/research/TIMELINE_PRIMER.md) during
+each build.
 
 ## Project layout
 

@@ -9,10 +9,11 @@ new-page: true
 
 ## Iran, 1949–1953
 
-You represent the coordinating leadership of the National Front. Build an
+You represent the coordinating leadership of the
+{!<span class="term term-national-front">!}National Front{!</span>!}. Build an
 effective constitutional opposition, hold together a diverse coalition, and
-prepare for the struggle over representative government and Iranian control of
-the oil industry.
+prepare for the struggle over representative government and Iranian control
+of the oil industry.
 
 - @start_game: Start game
 - @about: About this prototype

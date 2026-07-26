@@ -13,3 +13,8 @@ from the local Dynamic SPD reference:
 
 Iran-specific labels and available status tabs live here. Game state and
 historical content remain in `source/`.
+
+`timeline.html`, `timeline.css`, and `timeline.js` provide the formatted
+historical-primer shell. During each build, `scripts/build-timeline.js`
+replaces the shell markers with content generated from
+`docs/research/TIMELINE_PRIMER.md`; the Markdown remains the canonical text.
