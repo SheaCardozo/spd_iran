@@ -63,6 +63,13 @@ const electronicSources = [
     hash: 'b8c3046b231c5c864db86a283881cc9d36a59f3ccd39f033be7c4a9ef9727b55',
   },
   {
+    id: 'MAJ-S14 EPUB',
+    path:
+      `${sourceRoot}/major/` +
+      'MAJ-S14-painter-brew-2023-struggle-for-iran.epub',
+    hash: '73b9f43999db6a450363d27ddad4c5439150dbd542899dab2c41cfaf161c6cba',
+  },
+  {
     id: 'SUP-016 EPUB',
     path:
       `${sourceRoot}/supplemental/` +
@@ -154,6 +161,54 @@ const chaqueriSourceFiles = [
   ['original-edition-scans/volume-19-original-scan.pdf', '9fe21f2287804ab43ad91bc50c94fe549db9c11449b19ee239ddfe055009ee65'],
   ['original-edition-scans/volume-20-original-scan.pdf', '2375b697e8850876881755ea4b46ca5890d3ab3d30c4dddd841173b29c7c9db1'],
 ];
+const worldBankSourceFiles = [
+  ['access-decision-ai2258-board-transcript.pdf', 'fba0e9f803a6b6dee1ff1f2c700ddcd9f461b5018534c608ec51449f1bf9d790'],
+  ['access-decision-ai3487-hoar-memo.pdf', 'fded87d68d160bdabb0f60825c2c718791dec6892a5e78e296aa302e3faefa1c'],
+  ['access-request-summary-ai9493-2024-11.pdf', '438a2ea59cccc04884a190f040b9d571e52a3becb17b2ac7cb2e7a63f11e60eb'],
+  ['annual-report-1951-1952-iran-section.pdf', 'f3dc225eae2f92697d89cfbc8273cc8b355fcadc8f0d9c8e9fb8f35d2a3caebe'],
+  ['folder-1806440-boushenri-origin-and-issues-official.pdf', 'a4c4b089b2ed035765e146cb4b72ead01c528bf052a7a24d8fd6d238a341c9f6'],
+  ['folder-1806440-boushenri-origin-and-issues.pdf', '0ef99c3f366b086dd60b42fba3d8e7cfe1d74e52c94db987ded778d506f9318e'],
+  ['oral-history-hector-prudhomme-1985-05-02.pdf', '8fa1c6c1dfec4508a824984ce148e9f0b18c887156e87c8d27941321a5379aa1'],
+  ['oral-history-robert-garner-1961-07-19.pdf', '15f8385fe47dae383d5ea1a6562b6334a1b5449aae1c3324b68b39fbb5f9c50d'],
+  ['press-release-285-review-of-negotiations-1952-04-03.pdf', 'ba831d2b8b080e41fc013a7b9d713d79df6400bcaea4dfba66bde3be6d5d79ad'],
+];
+const newspaperCollections = [
+  {
+    id: 'SUP-027',
+    directory: 'SUP-027-mardom-tudeh-fourth-series-1328-1333',
+    pdfCount: 103,
+    manifestHash:
+      'a49081dff72bb931a8eca3d517f9a44f73c0dd8d9f4f27f8749b8834ffefb22b',
+  },
+  {
+    id: 'SUP-028',
+    directory: 'SUP-028-niruye-sevom-piruz-mishavad-1331-1332',
+    pdfCount: 248,
+    manifestHash:
+      '79aad98bee2cdc3f2d2ead7ad9c05d5b7aad6c28f8e398ed35000d747b795219',
+  },
+  {
+    id: 'SUP-029',
+    directory: 'SUP-029-mardom-e-iran-1331-1332',
+    pdfCount: 50,
+    manifestHash:
+      '42ea7239dc20215bf52aed8c0291b9e25940df22f113781677c84ab6bdfd7847',
+  },
+  {
+    id: 'SUP-030',
+    directory: 'SUP-030-apadana-1330-1332',
+    pdfCount: 40,
+    manifestHash:
+      '7c251e5cf90d9bcdfc8603279a62ea51193832c5b8c1b1767c34ecf81ab45d51',
+  },
+  {
+    id: 'SUP-031',
+    directory: 'SUP-031-bakhtar-emruz-1330-1332',
+    pdfCount: 38,
+    manifestHash:
+      '96cc6c260a9317145d277be9edffe897b27aecb7ca4fed661963931f0968609c',
+  },
+];
 const sources = [
   {
     id: 'MAJ-S1',
@@ -189,6 +244,16 @@ const sources = [
     id: 'MAJ-S7',
     relativePath: 'major/MAJ-S7-bayandor-2010-iran-cia.pdf',
     hash: '446e3060036ed7fe947a8fdc467532e6e1ad8cfbb75bf3485cfcd00265ee8cef',
+  },
+  {
+    id: 'MAJ-S13',
+    relativePath: 'major/MAJ-S13-azimi-2008-quest-for-democracy.pdf',
+    hash: '3acd9dc720662b1f79e82aee0a100c2b6543b151f0b5ff0bac07e1c0b8d95ddd',
+  },
+  {
+    id: 'SUP-048',
+    relativePath: 'supplemental/SUP-048-efimenco-1955-civilian-dictatorship.pdf',
+    hash: '5d8a748725f5282f0bf98b63cbd776d067b5e66b9f573b62e55ddca4d2cc0193',
   },
   {
     id: 'SUP-001',
@@ -319,6 +384,49 @@ const sources = [
       'supplemental/SUP-024-azimi-1997-on-shaky-ground.pdf',
     hash: '36b77a0ca81c3e6c01a38f52371ec7ac7e9f8039c3e54c6d7e67efc36a9c3c2b',
   },
+  {
+    id: 'SUP-040',
+    relativePath:
+      'supplemental/SUP-040-ibrd-1950-present-economic-situation-iran.pdf',
+    hash: 'f4a3634c41aaa0ea3af19b2890185d5415f977041af29cc0257bd4cb6f96604a',
+  },
+  {
+    id: 'SUP-041',
+    relativePath:
+      'supplemental/SUP-041-ibrd-1957-economic-development-iran.pdf',
+    hash: '9861b790ac7c886f365623a52c932667fd29198d1a0defdc5ceb6370ceb94ec4',
+  },
+  {
+    id: 'SUP-042',
+    relativePath: 'supplemental/SUP-042-imf-areaer-1952.pdf',
+    hash: 'fd6c05f65bfd3d14ea976ce267f7daa0b5dcc0868825fc9ec33778d0452250ca',
+  },
+  {
+    id: 'SUP-043',
+    relativePath: 'supplemental/SUP-043-imf-areaer-1953.pdf',
+    hash: '28130311d2479dc16cfe14d23a8076aa9a4c17871f71c18812f433f34ca6a7bf',
+  },
+  {
+    id: 'SUP-044',
+    relativePath: 'supplemental/SUP-044-imf-areaer-1954.pdf',
+    hash: '9f8d7af1c5c8bea86fc0f55b9ad6fe59c78270c6d9819862a87ed38fc80a0e23',
+  },
+  {
+    id: 'SUP-045',
+    relativePath: 'supplemental/SUP-045-imf-areaer-1955.pdf',
+    hash: '267004ff08fe870f0e24263a0d4896a0215eeff2eb79fe790b164b01cd1cca0b',
+  },
+  {
+    id: 'SUP-046',
+    relativePath: 'supplemental/SUP-046-majles-1332-budget.pdf',
+    hash: '77f5a4221ff3d27bb3b37f2653a92b7788cfa4e8edfeffcf8ba5a8b85cc3c2dc',
+  },
+  {
+    id: 'SUP-047',
+    relativePath:
+      'supplemental/SUP-047-un-1957-middle-east-economic-developments.pdf',
+    hash: 'f59f2643f6a2484ed7a9014d6b8c35e0e0748d975b9d7167dbb6cd0d82d92cd5',
+  },
 ];
 
 function sha256File(path) {
@@ -352,6 +460,55 @@ test('research source taxonomy and catalog cross-references are present', () => 
   }
 });
 
+test('economic source-family registry is synchronized', () => {
+  const bibliography = fs.readFileSync(
+    'docs/research/BIBLIOGRAPHY.md',
+    'utf8',
+  );
+  const unavailable = fs.readFileSync(
+    'docs/research/UNAVAILABLE_SOURCES.md',
+    'utf8',
+  );
+  const available = fs.readFileSync(
+    'docs/research/AVAILABLE_SOURCES.md',
+    'utf8',
+  );
+
+  for (const id of [
+    ...Array.from({ length: 23 }, (_, index) => `E${index + 1}`),
+    'E2a',
+    'E9a',
+  ]) {
+    assert.match(
+      bibliography,
+      new RegExp(`\\| ${id} \\|`),
+      `${id} bibliography record`,
+    );
+  }
+
+  for (const id of [
+    'E1', 'E2', 'E2a', 'E3', 'E4', 'E5', 'E9', 'E10', 'E11', 'E12',
+    'E13', 'E14', 'E15', 'E16', 'E17', 'E18', 'E19', 'E20', 'E21',
+    'E22', 'E23',
+  ]) {
+    assert.match(unavailable, new RegExp(`\\b${id}\\b`), `${id} queue record`);
+  }
+
+  for (let id = 40; id <= 47; id += 1) {
+    assert.match(available, new RegExp(`SUP-0${id}`));
+  }
+  assert.match(available, /SUP-032`–`SUP-039` remain intentionally unassigned/);
+  assert.ok(
+    available.indexOf('### SUP-047') < available.indexOf('### SUP-048'),
+    'supplemental records should remain in archive-ID order',
+  );
+  assert.ok(
+    bibliography.indexOf('### SUP-011') <
+      bibliography.indexOf('### SUP-027'),
+    'primary-source trust records should remain in archive-ID order',
+  );
+});
+
 test('multi-file primary collections are cross-referenced', () => {
   for (const path of [
     'docs/research/AVAILABLE_SOURCES.md',
@@ -364,6 +521,8 @@ test('multi-file primary collections are cross-referenced', () => {
       'SUP-009',
       'SUP-011',
       'SUP-022',
+      'SUP-026',
+      ...newspaperCollections.map((collection) => collection.id),
     ]) {
       assert.match(contents, new RegExp(id));
     }
@@ -420,5 +579,62 @@ test('ignored local archive matches its catalog when present', async () => {
   for (const [relativePath, expectedHash] of chaqueriSourceFiles) {
     const actualHash = await sha256File(`${chaqueriRoot}/${relativePath}`);
     assert.equal(actualHash, expectedHash, `SUP-011 ${relativePath}`);
+  }
+
+  const worldBankRoot =
+    `${sourceRoot}/supplemental/` +
+    'SUP-026-world-bank-oil-mediation-records';
+  for (const [relativePath, expectedHash] of worldBankSourceFiles) {
+    const actualHash = await sha256File(`${worldBankRoot}/${relativePath}`);
+    assert.equal(actualHash, expectedHash, `SUP-026 ${relativePath}`);
+  }
+
+  for (const collection of newspaperCollections) {
+    const collectionRoot =
+      `${sourceRoot}/supplemental/${collection.directory}`;
+    const pdfs = fs.readdirSync(collectionRoot)
+      .filter((name) => name.endsWith('.pdf'));
+    assert.equal(pdfs.length, collection.pdfCount, collection.id);
+
+    const manifestPath = `${collectionRoot}/SHA256SUMS`;
+    const actualHash = await sha256File(manifestPath);
+    assert.equal(actualHash, collection.manifestHash, collection.id);
+
+    const readme = fs.readFileSync(`${collectionRoot}/README.md`, 'utf8');
+    assert.match(readme, new RegExp(collection.id));
+    assert.equal(
+      fs.readFileSync(manifestPath, 'utf8').trim().split('\n').length,
+      collection.pdfCount,
+      `${collection.id} manifest`,
+    );
+  }
+
+  const shahedRoot =
+    `${sourceRoot}/supplemental/` +
+    'SUP-009-coup-week-partisan-press-1332-05';
+  assert.equal(
+    await sha256File(`${shahedRoot}/SHA256SUMS`),
+    '11942a548c739d2e1364c498b0df4f181852cab4e389415cb8aac5afdc388949',
+    'SUP-009 manifest',
+  );
+  for (const shahedFile of [
+    'shahed-1332-05-20.pdf',
+    'shahed-1332-05-22.pdf',
+    'shahed-1332-05-24.pdf',
+    'shahed-1332-05-25.pdf',
+    'shahed-1332-05-26.pdf',
+    'shahed-1332-05-27.pdf',
+    'shahed-1332-05-28.pdf',
+    'Shahed-1332-05-27-telegram-preview.jpg',
+    'Shahed-1332-05-28-telegram-preview.jpg',
+    'shahed-telegram-archive-3821-3840.html',
+    'shahed-telegram-archive-3851-3871.html',
+    'shahed-telegram-archive-3872-3892.html',
+    'shahed-telegram-archive-3893-3913.html',
+    'shahed-telegram-archive-3914-3934.html',
+    'shahed-telegram-archive-3935-3955.html',
+    'shahed-telegram-index-4746-4766.html',
+  ]) {
+    assert.ok(fs.existsSync(`${shahedRoot}/${shahedFile}`), shahedFile);
   }
 });

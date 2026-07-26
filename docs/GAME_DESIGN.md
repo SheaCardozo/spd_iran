@@ -581,29 +581,35 @@ No offer is assigned an authorial “fairness” score. Advisers assess it using
 
 ### 8.5 Economy
 
-Minimum state variables:
+The economic model is deliberately **not selected yet**. Research will first
+reconstruct the fullest defensible economic story and preserve disaggregated
+observations, definitions, dates, institutional provenance, conflicting
+estimates, and uncertainty. The model-neutral corpus and S9 evidence audit are
+maintained in [`research/ECONOMIC_HISTORY.md`](research/ECONOMIC_HISTORY.md).
 
-- oil production;
-- oil exports and realized receipts;
-- non-oil exports;
-- foreign-exchange reserves by usable category;
-- sterling access and convertibility restrictions;
-- import licensing and import capacity;
-- customs and domestic tax receipts;
-- budget cash and deficit;
-- note issuance/monetary expansion;
-- government payroll reliability;
-- urban employment, especially in Khuzestan;
-- cost-of-living index or a carefully labeled proxy;
-- selected essential-goods availability;
-- development commitments and Plan Organization capacity;
-- harvest/rural condition where sourced.
+The research scope includes oil production, exports and the several meanings of
+oil income; non-oil trade; reserves and sterling access; the multiple exchange
+rates and certificate system; import controls and actual imports; fiscal
+appropriations and cash execution; customs, taxes, and state monopolies; note
+issue, money, and public/private credit; employment, wages, prices, essential
+goods, and regional welfare; Plan Organization commitments and expenditure;
+and agriculture and rural conditions. These are historical evidence domains,
+not a commitment that each becomes a state variable or player-facing meter.
 
-Policies include import compression, exchange-rate changes, export promotion, tax collection, bond drives, spending cuts, note issuance, arrears, social relief, and pursuit of loans or oil advances. Effects are lagged and distributional.
+Likewise, documented policies—import compression, exchange-rate changes,
+export promotion, revenue measures, bond drives, cuts, credit, arrears, relief,
+loans, and oil advances—should first be reconstructed as dated institutional
+actions with observed and contested consequences. A later design gate will
+decide whether effects are simulated, event-driven, qualitative, hidden, or
+omitted.
 
 Patrick Clawson and Cyrus Sassanpour show that Iran endured an extraordinary foreign-exchange shock and adjusted through trade and financial measures; the period should not be narrated as an uninterrupted mechanical countdown to bankruptcy [S9]. At the same time, adaptation did not eliminate fiscal stress, lost oil employment, import constraints, or the political importance of reserves. The game should present ranges and source notes when historical economic series conflict.
 
-The existing repository's Phillips-curve-like macro loop and fixed monthly modifiers should be replaced, not adapted.
+Dynamic SPD's Phillips-curve-like macro loop and fixed monthly modifiers are
+not historical evidence for Iran. Whether the eventual implementation adapts
+that compact architecture or replaces it with linked accounts remains
+explicitly deferred until the source corpus and player-facing purpose have been
+reviewed.
 
 ### 8.6 Public order and mobilization
 

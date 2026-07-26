@@ -22,7 +22,7 @@ itself is never committed; this catalog is the durable record.
 ## Major sources
 
 The initial seven priority books were supplied on 2026-07-25, followed by
-five further scholarly works on 2026-07-26. “Acquired” records edition and
+seven further scholarly works on 2026-07-26. “Acquired” records edition and
 file verification only; an implemented claim still requires a checked locator.
 
 | Archive ID | Bibliography | Local edition and file | File quality | Status |
@@ -39,6 +39,8 @@ file verification only; an implemented claim still requires a checked locator.
 | <a id="maj-s10"></a>`MAJ-S10` | [`S17`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Mohammad Ali Movahed, *Khab-e Ashofteh-ye Naft*, vol. II, revised second ed. (Karnameh, winter 1384 SH / 2005–06). [PDF](sources/major/MAJ-S10-movahed-1384-khab-e-ashofteh-naft-vol-2.pdf) · [metadata](sources/major/MAJ-S10-movahed-1384-khab-e-ashofteh-naft-vol-2.md) | 584 stable-page scans with a flawed Persian OCR layer. SHA-256 `114325b746d2f8be415920be417458584983dcec8bdb6b6748a35abdd845820c` | **Acquired volume II; local-only.** Volume I remains wanted. |
 | <a id="maj-s11"></a>`MAJ-S11` | [`S14`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | James A. Bill and Wm. Roger Louis, eds., *Musaddiq, Iranian Nationalism, and Oil* (University of Texas Press, 1988). [PDF](sources/major/MAJ-S11-bill-louis-1988-musaddiq-nationalism-oil.pdf) · [metadata](sources/major/MAJ-S11-bill-louis-1988-musaddiq-nationalism-oil.md) | 376-page stable-layout Internet Archive scan with OCR. SHA-256 `13303caafcda31f3ed1f4462a124dfdbe5214d92529cb74dd7cc419821704979`. | **Acquired; local-only. Cite individual chapter authors.** |
 | <a id="maj-s12"></a>`MAJ-S12` | [`S18`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Mostafa Elm, *Oil, Power, and Principle: Iran's Oil Nationalization and Its Aftermath* (Syracuse UP, 1992). [EPUB](sources/major/MAJ-S12-elm-1992-oil-power-principle.epub) · [metadata](sources/major/MAJ-S12-elm-1992-oil-power-principle.md) | Valid 37-member EPUB with complete chapters, notes, and index. SHA-256 `b8c3046b231c5c864db86a283881cc9d36a59f3ccd39f033be7c4a9ef9727b55`. Reflowable sections are stable; print pages are not. | **Acquired; source EPUB local-only.** |
+| <a id="maj-s13"></a>`MAJ-S13` | [`S21`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Fakhreddin Azimi, *The Quest for Democracy in Iran* (Harvard UP, 2008). [PDF](sources/major/MAJ-S13-azimi-2008-quest-for-democracy.pdf) · [metadata](sources/major/MAJ-S13-azimi-2008-quest-for-democracy.md) | 508-page JSTOR PDF. SHA-256 `3acd9dc720662b1f79e82aee0a100c2b6543b151f0b5ff0bac07e1c0b8d95ddd`. | **Acquired; local-only; review pending.** |
+| <a id="maj-s14"></a>`MAJ-S14` | [`S22`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | David S. Painter and Gregory Brew, *The Struggle for Iran* (UNC Press, 2023). [EPUB](sources/major/MAJ-S14-painter-brew-2023-struggle-for-iran.epub) · [metadata](sources/major/MAJ-S14-painter-brew-2023-struggle-for-iran.md) | Valid reflowable JSTOR EPUB. SHA-256 `73b9f43999db6a450363d27ddad4c5439150dbd542899dab2c41cfaf161c6cba`. | **Acquired; local-only; review pending.** |
 
 ## Supplemental sources
 
@@ -169,27 +171,34 @@ repository and direct-file provenance.
   printed page rather than this archive ID alone.
 
 <a id="sup-008"></a>
-### SUP-008 — *Ettela'at*, selected Mordad 1332 issues
+### SUP-008 — *Ettela'at*, selected 1332 issues
 
 - **Status:** Acquired partial run; local-only.
 - **Bibliography:** [`SUP-008` trust record](BIBLIOGRAPHY.md#sup-008)
 - **Local collection:** [issue inventory and checksums](sources/supplemental/SUP-008-ettelaat-coup-week-1332-05/README.md)
-- **Extent:** Five issues dated 24, 25, 26, 27, and 31 Mordad 1332, totaling
-  48 scanned pages. The saved API manifest enumerates 289 files for 1332 but
-  contains no 28–30 Mordad files.
+- **Extent:** Twenty-one issues totaling 208 scanned pages. Five cover
+  24–27 and 31 Mordad; sixteen additional issues were selected because
+  Abrahamian's *Oil Crisis in Iran* cites their dates. The saved API manifest
+  exposes the broader 1332 corpus but contains no 28–30 Mordad files.
 - **Role:** Contemporary reporting and rhetoric; gaps are scan-corpus gaps,
   and reports require comparison across political positions.
 
 <a id="sup-009"></a>
-### SUP-009 — Selected partisan press, 24–27 Mordad 1332
+### SUP-009 — Selected partisan press, 24–29 Mordad 1332
 
-- **Status:** Acquired selected issues; local-only.
+- **Status:** Acquired selected issues, sheets, and carrier records; local-only.
 - **Bibliography:** [`SUP-009` trust record](BIBLIOGRAPHY.md#sup-009)
 - **Local collection:** [issue inventory and checksums](sources/supplemental/SUP-009-coup-week-partisan-press-1332-05/README.md)
-- **Extent:** Four consecutive *Bakhtar-e Emruz* issues, nos. 1171–1174;
-  one-page items from *Be Su-ye Ayande* and *Keyhan*; and one *Shahed* image.
+- **Extent:** Four consecutive *Bakhtar-e Emruz* issues, nos. 1171–1174; four
+  complete *Kayhan* issues dated 25–27 and 29 Mordad; one-page items from *Be
+  Su-ye Ayande* and *Keyhan*; seven complete *Shahed* issue PDFs dated 20, 22,
+  and 24–28 Mordad, totaling 26 image-only pages; an original-size *Shahed*
+  front page for 26 Mordad; low-resolution *Shahed* front-page previews for 27
+  and 28 Mordad; and four discovery clippings. Saved carrier snapshots identify
+  the provenance of the manually transferred *Shahed* PDFs.
 - **Role:** Interested contemporary primary evidence. No title in this set is
-  treated as a neutral narrative, and this is not a complete multi-paper run.
+  treated as a neutral narrative. Cite the complete issue PDFs rather than the
+  retained previews.
 
 <a id="sup-010"></a>
 ### SUP-010 — *FRUS, 1952–1954, Iran, 1951–1954*
@@ -321,14 +330,18 @@ repository and direct-file provenance.
 <a id="sup-019"></a>
 ### SUP-019 — World Bank Iran oil-mediation folder inventory
 
-- **Status:** Acquired official finding aid; underlying files not ingested.
+- **Status:** Acquired official finding aid; it identifies 24 folders and
+  embeds 23 legacy scan links. The old links tested during the follow-up search
+  now return World Bank 404 responses.
 - **Bibliography:** [`P5` trust record](BIBLIOGRAPHY.md#reviewed-primary-and-reference-families).
 - **Local source:** [PDF](sources/supplemental/SUP-019-world-bank-iran-oil-mediation-inventory.pdf)
   · [metadata](sources/supplemental/SUP-019-world-bank-iran-oil-mediation-inventory.md).
 - **File quality:** Two-page World Bank Archives folder list.
 - **SHA-256:** `62a43ef8945754e1d9487048eb342072a1639f82b71fa23b5d80044a55c22bc7`.
 - **Role:** Locate mediation records only; it cannot substitute for the
-  underlying file cited by a claim.
+  underlying file cited by a claim. The reconstructed folder list and current
+  acquisition status are in
+  [`WORLD_BANK_MEDIATION_FILES.md`](WORLD_BANK_MEDIATION_FILES.md).
 
 <a id="sup-020"></a>
 ### SUP-020 — UK Cabinet conclusions, CAB 195/9
@@ -400,6 +413,221 @@ repository and direct-file provenance.
 - **Role:** Focused scholarship on party weakness and discontinuity. Its broad
   argument cannot substitute for event-specific evidence about an individual
   organization, election, or cabinet.
+
+<a id="sup-025"></a>
+### SUP-025 — Bozorgmehr, Mossadegh military court records
+
+- **Status:** Four identified court-record volumes acquired; local-only.
+- **Bibliography:** [`SUP-025` trust record](BIBLIOGRAPHY.md#sup-025).
+- **Local collection:** [edition, provenance, and checksum
+  record](sources/supplemental/SUP-025-mossadegh-court-records/README.md).
+- **First-instance trial:** Jalil Bozorgmehr, ed., *Mohammad Mossadegh dar
+  Mahkameh-ye Nezami*, ketab-e avval, 2 vols. (Nashr-e Tarikh-e Iran, 1363 SH
+  / 1984–85). Complete image PDFs of 504 and 483 pages; continuous printed
+  pagination pp. 1–802, followed in each volume by plates. SHA-256
+  `32f77cd62be747c9430cece0f4d50745746f4f914f33f58bfc7a94050765c2d3`
+  (vol. I) and
+  `b564351bcdcd007b63ee29c6378f719f508b7d4c7b2cce748d5de467414dd271`
+  (vol. II).
+- **Military appeal:** Jalil Bozorgmehr, ed., *Doktor Mohammad Mossadegh dar
+  Dadgah-e Tajdid-e Nazar-e Nezami* (Sherkat-e Sahami-ye Enteshar, first ed.,
+  autumn 1365 SH / 1986). Complete 611-page image PDF; SHA-256
+  `9baf2f02d03b9acee7862de719fae87639e642ac92f0cf97ea4c2c0744f3d573`.
+- **Cassation review:** Jalil Bozorgmehr, ed., *Doktor Mohammad Mossadegh va
+  Residegi-ye Farjami dar Divan-e Keshvar* (Sherkat-e Sahami-ye Enteshar,
+  second ed./printing, autumn 1367 SH / 1988). Complete 378-page image PDF;
+  SHA-256
+  `6f09615ed29c77623a74560c2315a93618779df81d6d1a356502b15b18eaefd5`.
+- **Verification:** Covers, title matter, contents, pagination transitions,
+  proceeding conclusions, and final leaves were visually checked as
+  applicable. Iran Archive and Telegram are recorded only as carriers. Open
+  Library and CiNii were used as independent catalog checks; page images
+  control where external metadata disagrees with the local scans.
+- **OCR:** The first-instance and appeal scans have no useful text layer and
+  the cassation scan has a malformed sparse layer. Preserve these originals;
+  any future derivative must use OCRmyPDF/Tesseract `fas+eng` and remain
+  discovery-only.
+- **Role:** Direct, interested primary evidence edited by Mossadegh's defense
+  counsel. Cite the particular session, filing, judgment, and printed page,
+  and compare claims with independent records and scholarship.
+
+<a id="sup-026"></a>
+### SUP-026 — World Bank Iran oil-mediation records
+
+- **Status:** Partial institutional collection acquired; local-only.
+- **Bibliography:** [`P5` trust record](BIBLIOGRAPHY.md#reviewed-primary-and-reference-families).
+- **Local collection:** [provenance, locators, and checksums](sources/supplemental/SUP-026-world-bank-oil-mediation-records/README.md).
+- **Contemporaneous records:** Officially migrated folder `1806440`, report
+  `75976`, 67 pages; Press Release No. 285 and its attached negotiation
+  review, report `147458`, 10 pages; and the official 1951–52 annual report.
+- **Additional records:** Official Garner and Prud'homme oral histories plus
+  three Access to Information records documenting the status of folder
+  `1806451`, the Hoar legal memorandum, and the 23 November 1951 Board
+  transcript. A 138-page legacy carrier of folder `1806440` is retained for
+  provenance comparison; the 67-page official report is canonical.
+- **Role:** Direct evidence of the Bank's published proposal, institutional
+  summary, and retrospective participant accounts. The oral histories are not
+  contemporaneous neutral narratives, and the access decisions establish
+  restriction status rather than the substance of withheld documents.
+- **Remaining files:** See the exact folder-by-folder queue and request plan in
+  [`WORLD_BANK_MEDIATION_FILES.md`](WORLD_BANK_MEDIATION_FILES.md).
+
+<a id="sup-027"></a>
+### SUP-027 — *Mardom*, Tudeh Party fourth series
+
+- **Status:** Partial newspaper corpus acquired; local-only.
+- **Bibliography:** [`SUP-027` trust record](BIBLIOGRAPHY.md#sup-027).
+- **Local collection:** [coverage, provenance, gaps, and
+  checksums](sources/supplemental/SUP-027-mardom-tudeh-fourth-series-1328-1333/README.md).
+- **Extent:** 103 PDFs and 216 scanned pages representing issues 1–250 from
+  1328–1333 SH, with large and explicit gaps. The carrier's statement that
+  issues 48–156 are absent conflicts with its own issue-50 file; the local
+  manifest controls.
+- **Role:** Situated Tudeh primary evidence. Cite issue/date, page, and item;
+  compare reported claims across positions and with scholarship.
+
+<a id="sup-028"></a>
+### SUP-028 — *Niruye Sevvom Piruz Mishavad*
+
+- **Status:** Complete numbered run acquired; local-only.
+- **Bibliography:** [`SUP-028` trust record](BIBLIOGRAPHY.md#sup-028).
+- **Local collection:** [coverage, provenance, and
+  checksums](sources/supplemental/SUP-028-niruye-sevom-piruz-mishavad-1331-1332/README.md).
+- **Extent:** Introductory item plus issues 1–247, 22 Mehr 1331–28 Mordad
+  1332; 248 PDFs and 1,266 scanned pages.
+- **Role:** Third Force party press for Maleki's organization. It is direct
+  evidence of publication and political argument, not neutral fact.
+
+<a id="sup-029"></a>
+### SUP-029 — *Mardom-e Iran*
+
+- **Status:** Near-complete surviving run acquired; local-only.
+- **Bibliography:** [`SUP-029` trust record](BIBLIOGRAPHY.md#sup-029).
+- **Local collection:** [coverage, provenance, gaps, and
+  checksums](sources/supplemental/SUP-029-mardom-e-iran-1331-1332/README.md).
+- **Extent:** Introductory item plus 49 numbered issues, 14 Shahrivar
+  1331–26 Mordad 1332; 50 PDFs and 161 scanned pages. Issues 3–10 are absent.
+- **Role:** Situated press of the socialist-theist movement, useful for a
+  religious/socialist pro-national-movement position.
+
+<a id="sup-030"></a>
+### SUP-030 — *Apadana*
+
+- **Status:** Selected Pan-Iranist newspaper runs acquired; local-only.
+- **Bibliography:** [`SUP-030` trust record](BIBLIOGRAPHY.md#sup-030).
+- **Local collection:** [coverage, provenance, gaps, and
+  checksums](sources/supplemental/SUP-030-apadana-1330-1332/README.md).
+- **Extent:** Forty issue PDFs and 163 scanned pages from 11 Khordad 1330
+  through 28 Mordad 1332. Holdings are issues 11–18, 107–120, 129–133, and
+  136–148.
+- **Role:** Interested Pan-Iranist party press and a useful counter-position.
+  Verify dates against mastheads and compare claims across positions.
+
+<a id="sup-031"></a>
+### SUP-031 — Selected *Bakhtar-e Emruz* runs
+
+- **Status:** Selected National Front-aligned newspaper runs acquired;
+  local-only.
+- **Bibliography:** [`SUP-031` trust record](BIBLIOGRAPHY.md#sup-031).
+- **Local collection:** [coverage, provenance, gaps, and
+  checksums](sources/supplemental/SUP-031-bakhtar-emruz-1330-1332/README.md).
+- **Extent:** Thirty-eight complete issues and 300 scanned pages, including a
+  Thirty Tir sequence and a dense 20 Tir–27 Mordad 1332 sequence.
+- **Role:** Fatemi's interested contemporary press. It establishes what was
+  published and how events were framed, not the truth of every report.
+
+## Economic-history records
+
+These holdings preserve observations and institutional interpretations for the
+model-neutral [economic-history research record](ECONOMIC_HISTORY.md).
+Acquisition does not approve a numerical mechanic or resolve conflicts among
+series. Archive IDs `SUP-032`–`SUP-039` remain intentionally unassigned: the
+economic intake began at `SUP-040` to avoid colliding with primary-source
+collections being assigned concurrently.
+
+<a id="sup-040"></a>
+### SUP-040 — IBRD, *Present Economic Situation and Creditworthiness of Iran*
+
+- **Status:** Acquired official report; local-only.
+- **Local source:** [PDF](sources/supplemental/SUP-040-ibrd-1950-present-economic-situation-iran.pdf)
+  · [metadata](sources/supplemental/SUP-040-ibrd-1950-present-economic-situation-iran.md).
+- **Report:** F. G. Bochenski, IBRD E-99, 21 July 1950; 51 PDF pages.
+- **SHA-256:** `f4a3634c41aaa0ea3af19b2890185d5415f977041af29cc0257bd4cb6f96604a`.
+- **Role:** Contemporary pre-nationalization baseline for public finance,
+  banking, trade, foreign exchange, oil receipts, and First Plan expenditure.
+
+<a id="sup-041"></a>
+### SUP-041 — IBRD, *Economic Development of Iran*
+
+- **Status:** Acquired official report; local-only.
+- **Local source:** [PDF](sources/supplemental/SUP-041-ibrd-1957-economic-development-iran.pdf)
+  · [metadata](sources/supplemental/SUP-041-ibrd-1957-economic-development-iran.md).
+- **Report:** IBRD Asia Series AS-55, 18 January 1957; 61 PDF pages.
+- **SHA-256:** `9861b790ac7c886f365623a52c932667fd29198d1a0defdc5ceb6370ceb94ec4`.
+- **Role:** Retrospective quantitative reconstruction of the crisis and early
+  post-coup period. Audit its tables to contemporaneous Iranian records.
+
+<a id="sup-042"></a>
+### SUP-042–SUP-045 — IMF annual exchange-restriction reports, 1952–55
+
+- **Status:** Four official reports acquired; local-only.
+- **Local files:** 1952 [`SUP-042` PDF](sources/supplemental/SUP-042-imf-areaer-1952.pdf)
+  · [metadata](sources/supplemental/SUP-042-imf-areaer-1952.md);
+  1953 [`SUP-043` PDF](sources/supplemental/SUP-043-imf-areaer-1953.pdf)
+  · [metadata](sources/supplemental/SUP-043-imf-areaer-1953.md);
+  1954 [`SUP-044` PDF](sources/supplemental/SUP-044-imf-areaer-1954.pdf)
+  · [metadata](sources/supplemental/SUP-044-imf-areaer-1954.md);
+  1955 [`SUP-045` PDF](sources/supplemental/SUP-045-imf-areaer-1955.pdf)
+  · [metadata](sources/supplemental/SUP-045-imf-areaer-1955.md).
+- **Extent and checksums:** 165 pages,
+  `fd6c05f65bfd3d14ea976ce267f7daa0b5dcc0868825fc9ec33778d0452250ca`;
+  172 pages,
+  `28130311d2479dc16cfe14d23a8076aa9a4c17871f71c18812f433f34ca6a7bf`;
+  212 pages,
+  `9f8d7af1c5c8bea86fc0f55b9ad6fe59c78270c6d9819862a87ed38fc80a0e23`;
+  and 207 pages,
+  `267004ff08fe870f0e24263a0d4896a0215eeff2eb79fe790b164b01cd1cca0b`.
+- **Role:** Report-vintage chronology of exchange rates, certificates,
+  controls, and restrictions through the crisis and oil-settlement comparison.
+
+<a id="sup-046"></a>
+### SUP-046 — Iranian general state budget for 1332 SH
+
+- **Status:** Acquired official image scan; local-only.
+- **Local source:** [PDF](sources/supplemental/SUP-046-majles-1332-budget.pdf)
+  · [metadata](sources/supplemental/SUP-046-majles-1332-budget.md).
+- **Persian title:** لایحه قانونی بودجه سال ۱۳۳۲ کل کشور.
+- **Date and extent:** 11 Khordad 1332 SH / 1 June 1953; 27 image pages.
+- **SHA-256:** `77f5a4221ff3d27bb3b37f2653a92b7788cfa4e8edfeffcf8ba5a8b85cc3c2dc`.
+- **Role:** Legal appropriations and fiscal continuity clauses. It does not
+  establish actual Treasury receipts, expenditure, borrowing, or arrears.
+
+<a id="sup-047"></a>
+### SUP-047 — UN, *Economic Developments in the Middle East, 1956–1957*
+
+- **Status:** Acquired official report; local-only.
+- **Local source:** [PDF](sources/supplemental/SUP-047-un-1957-middle-east-economic-developments.pdf)
+  · [metadata](sources/supplemental/SUP-047-un-1957-middle-east-economic-developments.md).
+- **Documents and extent:** `E/3116` / `ST/ECA/55`, 177 PDF pages including
+  carrier material and corrigendum.
+- **SHA-256:** `f59f2643f6a2484ed7a9014d6b8c35e0e0748d975b9d7167dbb6cd0d82d92cd5`.
+- **Role:** Retrospective UN checksum that republishes Bank Melli monetary and
+  credit series beginning in 1952. Each table's underlying source and later
+  report vintage must remain visible.
+
+## Additional supplemental scholarship
+
+<a id="sup-048"></a>
+### SUP-048 — Efimenco, “An Experiment with Civilian Dictatorship”
+
+- **Status:** Acquired; local-only; review pending.
+- **Bibliography:** [`S23`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining)
+- **Local source:** [PDF](sources/supplemental/SUP-048-efimenco-1955-civilian-dictatorship.pdf)
+- **Metadata:** [sidecar](sources/supplemental/SUP-048-efimenco-1955-civilian-dictatorship.md)
+- **Stable record:** <https://www.jstor.org/stable/2127013>
+- **SHA-256:** `5d8a748725f5282f0bf98b63cbd776d067b5e66b9f573b62e55ddca4d2cc0193`
+- **Role:** Historiographic and bibliographic lead only; compare its dated
+  constitutional framing with Azimi and later scholarship.
 
 ## Intake checklist
 

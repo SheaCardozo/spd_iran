@@ -110,6 +110,11 @@ These should be evaluated when their dependent system is implemented:
 - institution-specific compliance instead of automatic government control;
 - named constituencies instead of a normalized national election algorithm;
 - term-by-term oil proposals instead of one policy meter;
+- an economic representation more detailed than SPD's abstract budget,
+  inflation, unemployment, and growth scalars. Source collection and the
+  observation ledger in `docs/research/ECONOMIC_HISTORY.md` do not approve a
+  simulation architecture; plan that divergence only after the historical
+  corpus and player-facing purpose are reviewed;
 - a network model for coup operations instead of aggregate preparation;
 - daily time during the August 1953 crisis.
 

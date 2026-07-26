@@ -154,28 +154,58 @@ true.
   speeches, motions, votes, and parliamentary procedure. They do not establish
   that every speaker's assertion was true, and repository transcriptions are
   not substitutes for the page scans.
+- **Verified use:** The six-month emergency-powers bill was passed by a
+  standing vote in the Seventeenth Majles, session 23, 12 Mordad 1331,
+  printed p. 13 (session-scan PDF p. 7). The official record says only that
+  the majority rose and the bill passed; it does not give a numerical Majles
+  tally.
 - **Planned use:** Elections, oil legislation, cabinets, emergency powers,
   constitutional procedure, and the referendum dispute.
 
 <a id="sup-008"></a>
-### SUP-008 — *Ettela'at*, selected Mordad 1332 issues
+### SUP-008 — *Ettela'at*, selected 1332 issues
 
 - **Status:** Acquired partial contemporary run.
 - **Access:** [`SUP-008` available-source record](AVAILABLE_SOURCES.md#sup-008).
 - **Trust and limitations:** A major contemporary newspaper useful for what
   readers were told and for dated public claims. Editorial framing,
   censorship, rumor, and rapidly changing control during the coup crisis must
-  be considered; corroborate contested facts.
+  be considered; corroborate contested facts. Sixteen added dates were
+  selected through Abrahamian's references, but that discovery path does not
+  make either the issue or Abrahamian a substitute for checking the cited page.
 
 <a id="sup-009"></a>
-### SUP-009 — *Bakhtar-e Emruz*, *Be Su-ye Ayande*, *Keyhan*, and *Shahed*
+### SUP-009 — *Bakhtar-e Emruz*, *Be Su-ye Ayande*, *Kayhan*, and *Shahed*
 
-- **Status:** Acquired selected contemporary issues and sheets.
+- **Status:** Acquired selected contemporary issues, sheets, and carrier
+  records.
 - **Access:** [`SUP-009` available-source record](AVAILABLE_SOURCES.md#sup-009).
+- **Publication identity:** Catalogs transliterate شاهد as both *Shahed* and
+  *Shahid*. Azimi describes *Shahid* as a weekly, later daily, published
+  1946–54 (`MAJ-S1`, PDF p. 438). Katouzian dates Baghai's daily iteration to
+  12 September 1949 and describes its later role as the Toilers Party organ
+  (`MAJ-S6`, PDF p. 92 / printed p. 72 and PDF pp. 117–18 / printed
+  pp. 97–98). The local 26 Mordad 1332 masthead is consistent with that party
+  identity. Catalog continuity across the 1946 and 1949 iterations must still
+  be verified issue by issue. Princeton's five-reel `MICROFILM S00895`
+  encompasses the 1949–53 Baghai run; a separate limited four-volume 1385 /
+  2006 photocopy edition reportedly covers second-series nos. 1–773. Neither
+  has yet been reviewed locally.
+- **Editorial caution:** Rahnema identifies Hoseyn Khatibi and Dr. Shervin as
+  collaborators (`MAJ-S5`, PDF pp. 69 and 86 / printed pp. 41 and 58).
+  Maleki's contemporary open letter disputes a broad editorial role sometimes
+  assigned to Ali Zaheri and credits most party-organ-period material to
+  Maleki's faction (`SUP-004`, printed pp. 511–17). Editorial control was
+  period-specific and contested; do not attach a single editor to the entire
+  run without a dated masthead or stronger locator.
 - **Trust and limitations:** These publications occupied different political
   positions and are valuable precisely as situated evidence. They establish
   publication and rhetoric, not neutral fact. Cite title, issue/date, page, and
   item, then compare across positions and with proceedings and scholarship.
+  Telegram and Mashruteh are carriers, not authorities for their descriptions.
+  The seven manually transferred *Shahed* PDFs have been visually checked at
+  their first pages and all 26 image pages render. The retained Telegram
+  previews are not substitutes for those complete issue files.
 
 <a id="sup-011"></a>
 ### SUP-011 / S20 — Cosroe Chaqueri, ed., *Historical Documents of the Iranian Left*
@@ -193,6 +223,86 @@ true.
   provide facsimiles only for volumes 3, 8, 19, and 20. Cite individual
   documents and verify important wording against page images or another
   edition.
+
+<a id="sup-027"></a>
+### SUP-027 — *Mardom*, Tudeh Party fourth series
+
+- **Status:** Partial primary-source corpus acquired.
+- **Access:** [`SUP-027` available-source record](AVAILABLE_SOURCES.md#sup-027).
+- **Institutional identity:** The masthead and carrier identify *Mardom* as the
+  Tudeh Party's central organ. Treat the fourth series and its publication
+  conditions separately from other titles transliterated as *Mardom*.
+- **Trust and limitations:** Authoritative evidence of what this party organ
+  printed, subject to image legibility and masthead/date verification. It is
+  partisan evidence, not neutral reporting; unattributed items and factual
+  allegations require corroboration. The surviving run has major gaps and poor
+  film quality.
+- **Project use:** Tudeh rhetoric, organization, public campaigns, chronology,
+  and comparison with police, diplomatic, parliamentary, and rival-press
+  records.
+
+<a id="sup-028"></a>
+### SUP-028 — *Niruye Sevvom Piruz Mishavad*
+
+- **Status:** Complete numbered primary-source run acquired.
+- **Access:** [`SUP-028` available-source record](AVAILABLE_SOURCES.md#sup-028).
+- **Institutional identity:** Organ of the Toilers Party of the Iranian Nation
+  (Third Force), associated with Khalil Maleki's organization after its split
+  from Baghai. The project's specialist Maleki and party sources should control
+  attribution where the newspaper's internal factions or authorship matter.
+- **Trust and limitations:** Strong direct evidence of Third Force publication,
+  policy argument, campaigns, and reported chronology. It is interested party
+  press; claims about opponents, crowds, covert activity, and motive require
+  independent comparison.
+- **Project use:** Maleki and Third Force positions, organization, coalition
+  conflict, referendum and coup-period rhetoric, and dated event discovery.
+
+<a id="sup-029"></a>
+### SUP-029 — *Mardom-e Iran*
+
+- **Status:** Near-complete surviving primary-source run acquired.
+- **Access:** [`SUP-029` available-source record](AVAILABLE_SOURCES.md#sup-029).
+- **Institutional identity:** Publication of the Society for the Freedom of the
+  Iranian People, commonly described by the collection as socialist theists.
+  It is distinct from the Tudeh *Mardom* in [`SUP-027`](#sup-027).
+- **Trust and limitations:** Direct evidence of the movement's published
+  religious-socialist and pro-national-movement framing. Organizational
+  self-description, accusations, and event reports remain situated claims and
+  require corroboration.
+- **Project use:** Religious-left networks, coalition breadth, political
+  rhetoric, referendum and coup buildup, and cross-press comparisons.
+
+<a id="sup-030"></a>
+### SUP-030 — *Apadana*
+
+- **Status:** Selected primary-source runs acquired.
+- **Access:** [`SUP-030` available-source record](AVAILABLE_SOURCES.md#sup-030).
+- **Institutional identity:** The masthead identifies *Apadana* as an organ of
+  the Nation Party of Iran on a Pan-Iranist basis. Exact editorial ownership
+  and shifts over time must be checked against specialist party scholarship.
+- **Trust and limitations:** Valuable precisely as an interested nationalist
+  counter-position. It establishes published arguments and rhetoric, not the
+  truth of accusations or reported events. The local sequence is incomplete,
+  and one carrier filename contains a year typo that requires masthead control.
+- **Project use:** Pan-Iranist organization and rhetoric, cross-faction
+  comparisons, and the referendum/coup period.
+
+<a id="sup-031"></a>
+### SUP-031 — *Bakhtar-e Emruz*
+
+- **Status:** Selected primary-source runs acquired.
+- **Access:** [`SUP-031` available-source record](AVAILABLE_SOURCES.md#sup-031).
+- **Editorial standing:** Hossein Fatemi was the newspaper's editor and a
+  leading National Front politician who served as Mossadegh's foreign
+  minister. That proximity makes the paper exceptionally valuable for the
+  movement's public arguments and exceptionally interested as a factual
+  narrator.
+- **Trust and limitations:** Direct evidence of publication, rhetoric,
+  campaigns, and dated public claims. It must be compared with other political
+  positions and with official and scholarly records, especially for crowd
+  numbers, opponents' motives, and coup allegations.
+- **Project use:** National Front messaging, Fatemi's role, Thirty Tir,
+  referendum politics, coup buildup, and cross-newspaper chronology.
 
 ## Core books
 
@@ -351,11 +461,48 @@ the audit decisions are in `SOURCE_AUDIT.md`.
 | ID | Source | Status and expertise note | Access requirement |
 | --- | --- | --- | --- |
 | S8 | Arash Azizi, “Communism, Cold War, and the 1953 Coup” (2024) | **Supplement.** Historian of communist internationalism and the Middle East; useful for comparing Cold War and anti-imperial frames. | **Acquired:** [`SUP-012`](AVAILABLE_SOURCES.md#sup-012), open-access Cambridge publisher PDF. Cite exact pages. |
-| S9 | Patrick Clawson and Cyrus Sassanpour, “Adjustment to a Foreign Exchange Shock” (1987) | **Focused economic source.** Clawson has published extensively on Iran's economy and policy; Sassanpour was an economist and later a senior IMF official. Their peer-reviewed analysis is directly relevant, but its model, data choices, and estimates must be compared with Iranian fiscal records and later scholarship. | **Acquired:** [`SUP-023`](AVAILABLE_SOURCES.md#sup-023), complete searchable JSTOR article with stable journal pagination. Full methodological review remains required before mechanical use. |
+| S9 | Patrick Clawson and Cyrus Sassanpour, “Adjustment to a Foreign Exchange Shock” (1987) | **Focused economic source.** Clawson has published extensively on Iran's economy and policy; Sassanpour was an economist and later a senior IMF official. Their peer-reviewed analysis is directly relevant, but its model, data choices, and estimates must be compared with Iranian fiscal records and later scholarship. | **Acquired:** [`SUP-023`](AVAILABLE_SOURCES.md#sup-023), complete searchable JSTOR article with stable journal pagination. Its tables, evidence trail, and methodological limitations are mapped in [`ECONOMIC_HISTORY.md`](ECONOMIC_HISTORY.md); no estimate is approved as a mechanic. |
 | S10 | Fakhreddin Azimi, “On Shaky Ground” (1997) | **Supplement.** Established specialist expertise in modern Iranian political and constitutional history; appropriate for party weakness and organizational constraints. | **Acquired:** [`SUP-024`](AVAILABLE_SOURCES.md#sup-024), complete searchable JSTOR article with stable journal pagination. Cite exact pages and pair broad arguments with organization-specific evidence. |
 | S11 | Siavush Randjbar-Daemi, “The Tudeh Party of Iran and the Peasant Question” (2020) | **Supplement.** Senior Lecturer in modern Iranian history at St Andrews, with research on political pluralism and actors in the early 1950s: <https://www.st-andrews.ac.uk/history/people/srd5>. | **Acquired:** [`SUP-013`](AVAILABLE_SOURCES.md#sup-013), open repository accepted manuscript. Cite manuscript pages and version. |
 | S12 | Mari Nukii, “The Bazaaris' Political Role during Mosadeq's Government” (2003) | **Supplement.** Narrow specialist work on bazaar organization and autonomous interests. | **Acquired:** [`SUP-014`](AVAILABLE_SOURCES.md#sup-014), J-STAGE publisher PDF. Cite exact pages and pair major claims with book-length history. |
 | S13 | Firoozeh Kashani-Sabet, “The Other Fight” (2024) | **Supplement.** Penn's Annenberg Professor of History and an established scholar of Iranian history, nationalism, and gender: <https://web.sas.upenn.edu/endowed-professors/kashani-sabet/>. | **Acquired:** [`SUP-015`](AVAILABLE_SOURCES.md#sup-015), open-access Cambridge publisher PDF. Cite exact pages and follow its Persian primary-source notes. |
+
+## Economic-history source families
+
+These records support a model-neutral reconstruction of the economic story.
+The complete observation and acquisition map is
+[`ECONOMIC_HISTORY.md`](ECONOMIC_HISTORY.md). Official and institutional
+records are authoritative for what their issuing bodies recorded, but their
+definitions, omissions, revisions, and institutional interests must remain
+visible.
+
+| ID | Source | Standing, expertise, and limitations | Access and project role |
+| --- | --- | --- | --- |
+| E1 | Bank Melli Iran, *Bulletin / Bulletin de la Bank Melli Iran*, 1949–54 issues | The contemporary monetary, banking, exchange, price, and trade statistical authority while Bank Melli also performed central-bank functions. Its institutional position makes it indispensable but not disinterested. Preserve Issue Department/banking distinctions and report vintages. | **Unavailable locally.** LOC LCCN [`45049141`](https://lccn.loc.gov/45049141), class `HC471 .B3`; Japanese holdings begin with issue 135/136 in June/July 1953. Acquire the fullest 1949–54 run, especially nos. 104, 111, and 122/123. |
+| E2 | Bank Melli Iran, annual reports, accounts, and Executive Board reports, years ending 20 March 1949–55 | Contemporaneous balance sheets and management reports for foreign assets, government accounts, note issue, credit, and institutional lending. Published accounts require reconciliation with later Bank Melli and IMF revisions. | **Unavailable locally.** Acquire each annual report and its tables; later-series catalog identity is CiNii `BB25521070`. |
+| E2a | Abdul Ali Jahanshahi, *A History of the First Thirty Years of Bank Melli Iran, 1928–1958* (Bank Melli Iran Press, 1958) | An institutional self-history that reconstructs balance sheets, note cover, deposits, prices, exchange, and oil receipts. It is valuable evidence of Bank Melli's own retrospective account, not independent interpretation, and must be checked against contemporaneous reports and external series. | **Unavailable locally.** LOC LCCN [`79482650`](https://lccn.loc.gov/79482650), class `HG3338.B3 J34`; acquire the complete 307-page edition and prioritize the oil-nationalization section beginning at p. 222. |
+| E3 | Iran Ministry of Finance, Customs Administration, *Statistique annuelle du commerce extérieur de l'Iran*, 1327–1333 | Official annual commodity and partner trade record. Strong for recorded customs flows; current-price valuation, exchange rates, smuggling, and exclusions of oil/concessionaires/government trade require explicit treatment. | **Unavailable locally.** LOC LCCN [`sf85019491`](https://lccn.loc.gov/sf85019491), OCLC `12871090`, class `WMLC L 83/1273`; IDE-JETRO holds 1952–55. |
+| E4 | Iran Ministry of Finance, *Amar-i bazargani-i khariji-i Iran: Foreign Trade Statistics of Iran* / *Monthly Bulletin of External Trade Statistics*, 1949–54 | Official monthly trade spine needed to time the shock and adjustment. Coverage and valuation must be checked issue by issue against the annual Customs series. | **Unavailable locally.** LOC LCCN [`78271590`](https://lccn.loc.gov/78271590), class `HF253 .A37`. |
+| E5 | Iranian budgets, provisional twelfths, supplements, emergency appropriations, Treasury cash statements, and closed accounts, 1329–1332 | Controlling legal and fiscal records. Appropriations establish authority, not collection or execution; closed and cash accounts are necessary for actual flows. | **Partially acquired:** [`SUP-046`](AVAILABLE_SOURCES.md#sup-046) is the 1332 legal budget. Earlier measures and actual Treasury accounts remain wanted. |
+| E6 | F. G. Bochenski, IBRD, *Present Economic Situation and Creditworthiness of Iran*, E-99 (1950) | Contemporary external lender assessment by IBRD economic staff, with a dense pre-shock fiscal, banking, trade, oil, exchange, and First Plan baseline. Its creditworthiness purpose and foreign perspective require comparison with Iranian records. | **Acquired:** [`SUP-040`](AVAILABLE_SOURCES.md#sup-040). Use as a source map and cross-check, with exact table/page locators. |
+| E7 | IBRD, *Economic Development of Iran*, Asia Series AS-55 (1957) | Institutionally authoritative retrospective lender analysis with extensive crisis-period tables. It benefits from later information but can import post-coup revisions and policy framing. | **Acquired:** [`SUP-041`](AVAILABLE_SOURCES.md#sup-041). Audit every crisis figure to its contemporaneous Iranian source. |
+| E8 | IMF, *Annual Report on Exchange Restrictions*, 1952–55 | Official Fund reporting on multiple rates, certificates, controls, restrictions, and Fund relations. Valuable for report-vintage chronology; not a substitute for Iranian legal texts or market observations. | **Acquired:** [`SUP-042`](AVAILABLE_SOURCES.md#sup-042), `SUP-043`, `SUP-044`, and `SUP-045`, the complete official annual reports for the four target years. |
+| E9 | UN Department of Economic Affairs, *Public Finance Information Papers: Iran*, no. 4 (1951), `ST/ECA/SER.A/4` | Prepared for the UN Technical Assistance Mission by the UN Fiscal Division; strong institutional survey of the pre-shock fiscal system, Treasury cash categories, taxes, debt, legislation, and 1938–50 budget record. It predates most of the nationalization crisis. | **Unavailable locally.** 102 pp., sales no. `1951.XVI.4`, OCLC `39963481`; physical holdings and Google/Open Library records are listed in `UNAVAILABLE_SOURCES.md`. |
+| E9a | UN Department of Economic and Social Affairs, *Economic Developments in the Middle East, 1956–1957* (1958), `E/3116` / `ST/ECA/55` | Official retrospective regional survey using UN statistical work and named national/international sources. Its Iran tables reproduce Bank Melli monetary and credit series back through 1952, making it a useful checksum; later compilation and regional-comparability limits remain explicit. | **Acquired:** [`SUP-047`](AVAILABLE_SOURCES.md#sup-047). Cite the Iran table, original Bank Melli source, and report vintage. |
+| E10 | Homa Katouzian, *The Political Economy of Modern Iran: Despotism and Pseudo-Modernism, 1926–1979* (Macmillan, 1981) | Core book-length interpretation by an established Iranian economist and historian. Particularly important for fiscal politics, note cover, and the oil-less economy; its broader state/society framework requires comparison with other specialists and primary data. | **Unavailable locally.** Acquire the complete book, prioritizing pp. 141–210 and notes. |
+| E11 | Julian Bharier, *Economic Development in Iran, 1900–1970* (Oxford University Press, 1971) | Foundational book-length economic synthesis by an Iran economist who later served as a World Bank senior economist. Its extensive data/source compilation is indispensable, while early national-income estimates and inherited official definitions require audit. | **Unavailable locally.** Acquire complete OUP edition, including bibliography pp. 283–303. |
+| E12 | Gregory Brew, *Petroleum and Progress in Iran: Oil, Development, and the Cold War* (Cambridge University Press, 2022) | Recent university-press monograph by a specialist historian of oil, Iran, and the Cold War using Iranian and US material. Best modern interpretive check on petroleum, development, and the 1952 oil-less program. | **Unavailable locally.** Complete CUP book, DOI `10.1017/9781009206327`. |
+| E13 | M. G. Majd, “The 1951–53 Oil Nationalization Dispute and the Iranian Economy: A Rejoinder” (1995) | Direct scholarly challenge to the S9 interpretation. Required for methodological disagreement; it is an adversarial article, not a replacement primary foundation. | **Unavailable locally.** *Middle Eastern Studies* 31, no. 3: 449–59, DOI `10.1080/00263209508701063`. |
+| E14 | National Iranian Oil Company and Iranian oil-sector reports, 1951–54 | Contemporaneous institutional primary evidence for production, refining, inventories, domestic sales, receipts, employment, payroll, and operations. NIOC's reporting interests, changing definitions, and incomplete publication history require comparison with Iranian fiscal records, company records, and independent scholarship. | **Unavailable locally.** Acquire the fullest dated report run with tables, appendices, and field/refinery breakdowns. |
+| E15 | Plan Organization First Plan laws, reports, project records, and later reviews | The responsible Iranian planning institution's records control what was authorized, committed, spent, delayed, or cancelled. Plans and retrospective reviews must not be conflated with cash execution or completed work. | **Unavailable locally.** Acquire the First Plan law, project register, annual reports, expenditure records, the five-volume 1949 Overseas Consultants report, and the later review cataloged as CiNii `BA73180213`. |
+| E16 | IMF, *International Financial Statistics*, *Balance of Payments Yearbook*, and *Direction of International Trade*, 1950–55 vintages | Contemporary institutional compilations preserve Bank Melli submissions, international definitions, partner trade, and revision history. Fund categories and later revisions are evidence to audit, not a seamless substitute for the underlying Iranian series. | **Unavailable locally.** Acquire complete monthly/annual issues and exact Iran tables with publication and revision vintages. |
+| E17 | United Nations Middle East economic surveys, trade yearbooks, and *World Energy Supplies, 1951–1954* | Official contemporary cross-checks for Iranian fiscal, trade, monetary, and energy series. Their value lies in independent transcription and stated sources; regional standardization and later compilation can obscure Iranian definitions. | **Unavailable locally.** Acquire complete official editions and record exact Iran-table locators and named underlying sources. |
+| E18 | International Labour Office, *Labour Conditions in the Oil Industry in Iran* (1950) | An official field-mission report and the priority pre-nationalization source for workforce, wages, hours, safety, housing, health, welfare, and unions. Its institutional frame and 1950 observation date limit later-crisis inference. | **Unavailable locally.** Acquire the complete 87-page Studies and Reports, New Series no. 24 edition; CiNii `BA46169524`. |
+| E19 | Anglo-Iranian Oil Company, *Annual Reports and Accounts*, 1950–53; J. H. Bamberg, *The History of the British Petroleum Company*, vol. 2 (Cambridge University Press, 1994) | A deliberately paired but distinct evidence family: interested corporate primary reports plus a later specialist archival company history. Cite each item separately and compare production, employment, royalties, taxation, reserves, and policy with NIOC, ILO, UN, and Iranian scholarship. | **Unavailable locally.** Acquire the complete annual reports and Bamberg volume; do not collapse their different authorship or evidentiary roles into one citation. |
+| E20 | K. Afshar, *Monetary Estimate of Iran's GNP, 1900–1975* (Florida State University dissertation, 1977) | A direct methodological dependency for S9's reconstructed GNP path, which S9 itself calls imprecise. The author's full identity and scholarly context remain unresolved, so this is an audit target rather than an approved authority. | **Unavailable locally.** Resolve authoritative dissertation metadata before assessing expertise; acquire the complete dissertation and data appendix. Do not guess missing metadata. |
+| E21 | Ali Akbar Khosropour, *Le contrôle des changes en Iran depuis 1930 jusqu'à la fin de 1955* (Paris law dissertation, 1956) | A narrow near-contemporary legal study of exchange control. It may establish legislation and administrative chronology after its edition and argument are reviewed, but it does not replace Bank Melli, Ministry, or IMF records. | **Unavailable locally.** Acquire the complete 118-page dissertation and verify its institutional metadata. |
+| E22 | G. Reza Moghadam, “Iran's Foreign Trade Policy and Economic Development in the Interwar Period” (Stanford economics dissertation, 1956) | A specialized trade-policy study and source bridge cited for AIOC-account evidence; the author later served in IMF and Iranian planning roles. Its interwar focus and dissertation status limit direct inference about 1951–53. | **Unavailable locally.** Acquire the complete dissertation, especially p. 76, source notes, and bibliography. |
+| E23 | William H. Bartsch and Julian Bharier, *The Economy of Iran, 1940–1970: A Bibliography* (Durham, 1971) | A specialist bibliographic census, not claim evidence. Bharier's Iran-economic expertise supports its value as discovery infrastructure, but every located work still requires its own trust and availability review. | **Unavailable locally.** Acquire the complete 114-page bibliography, ISBN `090301100X`. |
 
 ## Priority leads from cross-reference mining
 
@@ -372,8 +519,77 @@ below; presence does not turn an unread work into claim-level evidence.
 | S18 | Mostafa Elm, *Oil, Power, and Principle: Iran's Oil Nationalization and Its Aftermath* (Syracuse University Press, 1992) | Scholarly monograph by an Iranian economist and former diplomat, providing a sustained Iranian perspective on nationalization, negotiations, embargo, and aftermath. Its political judgments and retrospective causal claims require comparison with Movahed, Abrahamian, and archival records. | **Acquired:** [`MAJ-S12`](AVAILABLE_SOURCES.md#maj-s12), complete reflowable EPUB with notes and index; cite chapter/section because it lacks print pagination. |
 | S19 | Sepehr Zabih, *The Communist Movement in Iran* (University of California Press, 1966) | Foundational book-length study of Iranian communism by a political scientist specializing in Iran. Its Cold War framing and age require comparison with Abrahamian and later Persian-source scholarship. | Repeats in MAJ-S1 and Iranica's Tudeh bibliography. |
 | S20 | Cosroe Chaqueri, ed., *Historical Documents: The Workers', Social-Democratic, and Communist Movement in Iran*, 23 vols. (1969–94) | Large multilingual documentary edition assembled by a historian of the Iranian left; unusually valuable for otherwise scattered movement records. Individual documents and editorial decisions require scrutiny. | **Partially acquired:** [`SUP-011`](AVAILABLE_SOURCES.md#sup-011) has retypeset volumes 1–6 and legacy scans of volumes 3, 8, 19, and 20. The full corpus, especially volumes 12 and 17, remains wanted. |
+| S21 | Fakhreddin Azimi, *The Quest for Democracy in Iran: A Century of Struggle Against Authoritarian Rule* (Harvard University Press, 2008) | Book-length constitutional and political history by an established historian of modern Iran whose specialist work centers on democratic institutions, parties, and authoritarianism. It is the strongest newly identified secondary target for Senate powers and parliamentary-system context. Broad institutional interpretation still needs claim-level comparison with the proceedings. | **Acquired:** [`MAJ-S13`](AVAILABLE_SOURCES.md#maj-s13), complete 508-page JSTOR PDF. Prioritize “Restoration of Parliamentary Politics,” notes, bibliography, and index; review remains pending. |
+| S22 | David S. Painter and Gregory Brew, *The Struggle for Iran: Oil, Autocracy, and the Cold War, 1951–1954* (University of North Carolina Press, 2023) | Recent university-press synthesis by historians of oil, U.S. foreign relations, and modern Iran. Its use of Iranian, American, and British materials makes it valuable for updating the oil-crisis chronology and identifying primary records; its international-relations focus does not replace Iranian parliamentary evidence. | **Acquired:** [`MAJ-S14`](AVAILABLE_SOURCES.md#maj-s14), complete JSTOR EPUB with notes and bibliography. Review remains pending; cite stable chapter/section locators unless print pagination is verified. |
+| S23 | N. Marbury Efimenco, “An Experiment with Civilian Dictatorship in Iran: The Case of Mohammed Mossadegh,” *The Journal of Politics* 17, no. 3 (August 1955), pp. 390–406 | Near-contemporary peer-reviewed political-science treatment. It may be useful for tracing early constitutional interpretations and citations, but its framing is overtly evaluative, its evidence base predates later archival access, and it must not displace Azimi or later scholarship. | **Acquired:** [`SUP-048`](AVAILABLE_SOURCES.md#sup-048), complete JSTOR article with stable journal pagination. Substantive review remains pending. |
 
 ## Reviewed primary and reference families
+
+<a id="ir-p4"></a>
+### IR-P4 — *Muzakerat-e Majles-e Sena*, First Senate
+
+- **Status:** Unavailable locally; complete-work scans for individually
+  cataloged sessions are confirmed in an access-controlled digital library,
+  and a partial independent microfilm holding is identified in
+  [`UNAVAILABLE_SOURCES.md`](UNAVAILABLE_SOURCES.md#first-senate-search-record-ir-p4).
+  The emergency-powers result is independently narrowed to **26 votes for and
+  4 against**, but this remains a contemporary wire-service corroboration
+  pending inspection of the official session record.
+- **Persian title:** مذاکرات مجلس سنا.
+- **Issuing authority:** Majles-e Sena-ye Iran; contemporary proceedings were
+  printed and corrected as the chamber's official record.
+- **Known coverage:** The Shahr-e Danesh Institute for Law Research and Study
+  (SDIL) catalog database 13 exposes individual First-Senate records with
+  “complete work” scan links, including sessions 84, 91–92, 95, 125, and
+  190–193. The scan server requires an SDIL digital-library account; the
+  anonymous catalog and generic thumbnail do not provide the page images.
+  University of Chicago `microfm K13.U84` independently holds sessions 38–126,
+  15 Mehr 1329–13 Mehr 1330, within the First Senate's 20 Bahman 1328–28 Aban
+  1332 term. Azimi's bibliography, p. 406, records the proceedings as part of
+  *Ruznamih-yi Rasmi-yi Kishvar-i Shahanshahi* for 1950–52.
+- **Trust and limitations:** Controlling evidence for recorded speeches,
+  motions, votes, attendance, and procedure. A proceeding establishes what the
+  official record says occurred, not the truth of every assertion by a
+  participant. Newspaper excerpts and later transcriptions must be checked
+  against the page image.
+- **Planned use:** Oil nationalization and implementation, cabinet-confidence
+  scenes, selection of the mixed oil board, Senate procedural mechanics, and
+  the later constitutional conflict between Mossadegh and the Senate. For the
+  six-month powers bill, cite First-Senate session 192, 20 Mordad 1331. Until
+  its scan is reviewed, preserve the 26–4 result as provisional and do not
+  invent attendance, abstention, or member-by-member data.
+
+<a id="sup-025"></a>
+### SUP-025 / IR-P6 — Jalil Bozorgmehr, ed., Mossadegh court records
+
+- **Status:** Complete identified court-record set acquired: two-volume
+  first-instance trial, military appeal, and Court of Cassation review.
+- **Access:** [`SUP-025` available-source
+  record](AVAILABLE_SOURCES.md#sup-025); the completed acquisition history is
+  retained in [`UNAVAILABLE_SOURCES.md`](UNAVAILABLE_SOURCES.md#ir-p6).
+- **Local editions:** *Mohammad Mossadegh dar Mahkameh-ye Nezami*, ketab-e
+  avval, 2 vols. (Nashr-e Tarikh-e Iran, 1363 SH / 1984–85); *Doktor Mohammad
+  Mossadegh dar Dadgah-e Tajdid-e Nazar-e Nezami* (Sherkat-e Sahami-ye
+  Enteshar, first ed., 1365 SH / 1986); and *Doktor Mohammad Mossadegh va
+  Residegi-ye Farjami dar Divan-e Keshvar* (Sherkat-e Sahami-ye Enteshar,
+  second ed./printing, 1367 SH / 1988).
+- **Editor expertise and standing:** Bozorgmehr was the military officer
+  appointed as Mossadegh's defense counsel and then retained and edited the
+  trial materials. His direct role makes these editions unusually important
+  for the defense record, courtroom exchanges, filings, and procedural
+  sequence.
+- **Trust and limitations:** These are primary court-record editions assembled
+  by an interested participant, not detached scholarly narratives. They are
+  authoritative evidence of the text and materials they reproduce, subject to
+  checking the edition's editorial interventions and, where possible, the
+  original case file. They do not independently prove every factual claim by
+  Mossadegh, the prosecution, witnesses, judges, or Bozorgmehr. Later
+  commentary and motive assignments require comparison with specialist
+  scholarship.
+- **Project use:** Trial-focused narrative, defense strategy, jurisdictional
+  arguments, appellate procedure, judgments, and character voice. Every use
+  must identify the proceeding, date or session, document where applicable,
+  and printed page.
 
 - **P1:** approved and acquired as the official 2018 second edition,
   [`SUP-010`](AVAILABLE_SOURCES.md#sup-010). Use individual document numbers,
@@ -385,9 +601,22 @@ below; presence does not turn an unread work into claim-level evidence.
   official UN carrier `S/2746`, [`SUP-017`](AVAILABLE_SOURCES.md#sup-017).
 - **P4:** approved and acquired as official Security Council record
   `S/PV.559`, [`SUP-018`](AVAILABLE_SOURCES.md#sup-018).
-- **P5:** approved finding aid acquired as
-  [`SUP-019`](AVAILABLE_SOURCES.md#sup-019); the underlying World Bank
-  mediation files remain to be obtained and cited.
+- **P5:** World Bank Group Archives, Iran oil-mediation records in the Records
+  of the Middle East and North Africa Regional Vice Presidency fonds,
+  `WB IBRD/IDA MNA`. The official finding aid is
+  [`SUP-019`](AVAILABLE_SOURCES.md#sup-019). A partial institutional corpus is
+  now [`SUP-026`](AVAILABLE_SOURCES.md#sup-026): folder `1806440`; Press
+  Release No. 285 and its attached negotiation review; the 1951–52 annual
+  report; participant oral histories; and access-status decisions. These are
+  authoritative evidence of what the Bank recorded, published, or later said
+  about its own mediation, not neutral evidence of Iranian or British aims.
+  Garner and Prud'homme were direct participants, but their oral histories are
+  retrospective and require comparison with contemporaneous records.
+  Twenty-three inventory rows contain obsolete scan links and folder
+  `1806451` had none; the outstanding request queue and known restrictions are
+  recorded in
+  [`WORLD_BANK_MEDIATION_FILES.md`](WORLD_BANK_MEDIATION_FILES.md). Cite the
+  individual folder, item, date, and page rather than `P5` generically.
 - **P6:** approved and acquired as official UK National Archives file
   `CAB 195/9`, [`SUP-020`](AVAILABLE_SOURCES.md#sup-020).
 - **P7:** approved and acquired as official historic Hansard,

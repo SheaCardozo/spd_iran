@@ -3,8 +3,10 @@
 - **Audit date:** 2026-07-26
 - **Scope:** every source identified as `P1`–`P11`, `S1`–`S13`, and
   `R1`–`R12` in `docs/GAME_DESIGN.md`, plus the 2026-07-25 reference-mining
-  intake recorded as `SUP-002`–`SUP-022`, `MAJ-S8`–`MAJ-S12`, and
-  `S14`–`S20`
+  intake recorded as `SUP-002`–`SUP-031`, `MAJ-S8`–`MAJ-S12`, and
+  `S14`–`S23`, and the model-neutral economic corpus registered as
+  `E1`–`E23` (including subrecords `E2a` and `E9a`) and acquired as
+  `SUP-040`–`SUP-047`
 
 This audit applies the project's book-first standard to the existing design
 bibliography. It does not certify that a source supports a particular claim.
@@ -59,7 +61,7 @@ The local formats affect locator practice:
 | ID | Decision | Expertise and proper role |
 | --- | --- | --- |
 | S8 / SUP-012 | **Approved supplement; acquired.** | Arash Azizi is a historian of the communist movement and the Middle East; the peer-reviewed state-of-the-field intervention is useful for framing competing Cold War and anti-imperial interpretations, not as the only authority for an event. |
-| S9 / SUP-023 | **Approved focused source; acquired, methodological review pending.** | A peer-reviewed economic-history analysis relevant to foreign-exchange adjustment. Its estimates need comparison with Iranian fiscal records and later scholarship before mechanical use. |
+| S9 / SUP-023 | **Approved focused source; acquired and evidence-mapped; independent validation pending.** | A peer-reviewed economic-history analysis relevant to foreign-exchange adjustment. Its tables, footnotes, regressions, definitions, and underlying record families are audited in `ECONOMIC_HISTORY.md`. Its estimates still need comparison with the identified Iranian fiscal, Bank Melli, Customs, oil, labor, and planning records before numerical or causal use. |
 | S10 / SUP-024 | **Approved focused source; acquired.** | Azimi's established expertise directly supports its use on parties and institutional weakness; cite exact pages and pair its broad argument with organization-specific evidence. |
 | S11 / SUP-013 | **Approved focused source; accepted manuscript acquired.** | Siavush Randjbar-Daemi is a modern-Iran historian whose research uses Persian political and party materials. Appropriate for the Tudeh peasant question, with exact manuscript pages and version identification. |
 | S12 / SUP-014 | **Approved focused source with a narrow remit; acquired.** | Nukii's specialist bazaar research supports bazaar organization and mobilization. Do not use it as the sole book-length political narrative. |
@@ -77,7 +79,8 @@ pending contemporary Iranian evidence.
 | --- | --- | --- |
 | P1 / SUP-010 | **Approved and acquired official documentary edition.** | The canonical local copy is the 2018 second edition. Cite the individual FRUS document, date, record type or correspondents, and editorial notes; it represents the U.S. institutional record, not neutral Iranian reality. |
 | P2 / SUP-016, P3 / SUP-017, P4 / SUP-018, P6 / SUP-020, P7 / SUP-021, P8 / SUP-022 | **Approved primary/institutional collections; acquired.** | Cite the individual document, meeting, judgment, file, date, sender, and recipient as applicable. These sources are authoritative evidence of what their institutions recorded, argued, or did—not neutral accounts of Iranian motives. |
-| P5 / SUP-019 | **Approved archival finding aid; inventory acquired, underlying records missing.** | Use the World Bank folder list to locate the underlying mediation files; do not treat the inventory as the final source for a claim. |
+| P5 / SUP-019 / SUP-026 | **Approved institutional collection; partial corpus acquired and exact remainder queued.** | `SUP-019` is a finding aid, not claim evidence. `SUP-026` supplies folder `1806440`, the Bank's published negotiation review, annual summary, participant oral histories, and access decisions. Cite individual records and preserve institutional interest; the unavailable meeting, proposal, and correspondence folders cannot be replaced by the inventory or oral histories. |
+| IR-P6 / SUP-025 | **Approved interested primary editions; complete target set acquired.** | Bozorgmehr's direct role as defense counsel makes the first-instance, appeal, and cassation editions central to the recorded defense and procedure, but assertions and later editorial commentary require comparison. Cite the exact proceeding, document, and printed page. |
 | P9 | **Approved document portal and editorial aid.** | Distinguish National Security Archive commentary from the attached declassified documents. |
 | P10 | **Approved finding aid.** | Use the Truman Library entry to locate and cite the underlying document. |
 | P11 | **Approved official historical orientation.** | Follow the essay to British files and cite those files for implemented events. |
@@ -102,7 +105,7 @@ The bibliographies of MAJ-S1–MAJ-S7 were searched for recurring works,
 official proceedings, Persian memoirs, party collections, and newspaper runs.
 Iranica entries on oil agreements, the 1953 coup, Kashani, and the Tudeh Party
 were then used only to cross-check and extend those leads. This produced the
-exact scholarly acquisition queue `S14`–`S20` and the official-record leads
+exact scholarly acquisition queue `S14`–`S23` and the official-record leads
 `IR-P1`–`IR-P6` in `UNAVAILABLE_SOURCES.md`.
 
 Iran Archive and Mashruteh were evaluated as discovery repositories, not
@@ -144,18 +147,115 @@ repository-recorded byte sizes and SHA-1 values.
 unchanged page images remain controlling because inspection found substantial
 recognition errors on the implementation law, especially printed p. 16.
 
-`IR-P5` is partially resolved by `SUP-008` and `SUP-009`: five *Ettela'at*
-issues, four consecutive *Bakhtar-e Emruz* issues, and isolated sheets from
-three other titles. Newspaper scans are primary evidence of publication and
-rhetoric, not neutral scholarship. Missing dates and issue numbers are
-explicit gaps.
+`IR-P5` is now substantially but incompletely resolved. `SUP-008` contains 21
+selected *Ettela'at* issues; `SUP-009` has complete *Kayhan* and *Bakhtar-e
+Emruz* coup-week issues, isolated sheets, and seven complete *Shahed* issues
+for 20, 22, and 24–28 Mordad; and `SUP-027`–`SUP-031` add the
+gapped Tudeh *Mardom*, a complete 247-issue *Niruye Sevvom* run, a
+near-complete surviving *Mardom-e Iran* run, selected *Apadana*, and all 38
+*Bakhtar-e Emruz* issues exposed by Iran Archive. Together the new five
+collections contain 479 unchanged PDFs and 2,106 scanned pages.
 
-`IR-P4` and `IR-P6` remain unavailable. A National Diet Library catalog record
-confirms that the print serial includes Senate proceedings, but its listed
-holdings omit 1953 and no accessible First-Senate scan was located. Search
-results for Bozorgmehr's trial editions yielded a gated volume,
-commercial/catalog listings, and a
-discovery-site transcription corpus—not complete, identified local editions.
+This materially improves Persian primary coverage and political range, but it
+does not create a neutral newspaper of record. Each title is situated party or
+movement evidence. Missing dates and issue numbers remain explicit gaps, and
+every claim needs issue/date/page/item locators plus comparison with other
+positions and scholarship. Seven complete *Shahed* issue PDFs for 20, 22, and
+24–28 Mordad are now locally archived as part of `SUP-009`; all 26 image pages
+render and the first-page mastheads and dates were visually checked. *Shahed*
+for the 1949 opening and Thirty Tir, other opposing 28 Mordad issues,
+religious-right press, *Shurish*, and *Tihran-i Musavvar* remain priorities.
+Institutional digital, microfilm, and ILL routes are recorded under `IR-P5` in
+`UNAVAILABLE_SOURCES.md`.
+
+`IR-P4` remains unavailable locally, but is no longer a merely physical lead.
+The Shahr-e Danesh Institute for Law Research and Study (SDIL) public catalog,
+database 13, exposes individual First-Senate records whose “complete work”
+links resolve to digitized files. Exact records were confirmed for the oil-law
+sessions 84, 91–92, 95, and 125 and for the 1952 sequence 190–193. The file
+server returns HTTP Basic authentication rather than the scan to an anonymous
+request, and the guest endpoint returns only a generic PDF thumbnail. SDIL's
+current digital-library registration form advertises download allowances but
+requires an Iranian national ID, identity-card upload, and Iranian contact
+details. The project therefore records this as accessible by account or direct
+institutional request, not as reviewed evidence.
+
+The catalog chronology makes one useful correction: session 190 was 13 Mordad
+1331, session 191 was 18 Mordad, session 192 was 20 Mordad, and session 193 was
+not until 26 Shahrivar. There was therefore no First-Senate sitting on
+30 Mordad 1331. The enacted law's colophon and the Senate letter read to the
+Majles on 21 Mordad independently confirm that the Senate passed the
+six-month emergency-powers bill on 20 Mordad, making session 192 the exact
+official-record target.
+
+The lower-house procedure is now verified directly in `SUP-007`: Seventeenth
+Majles session 23, 12 Mordad 1331, printed p. 13 (session-scan PDF p. 7),
+records a standing vote in which “the majority rose” and the bill passed; it
+does not provide a numerical tally. A *Le Monde* dispatch from Tehran,
+published 12 August 1952 and attributed to AFP, United Press, and AP, reports
+the Senate division as 26 votes for and 4 against. That aggregate is retained
+as strong contemporary corroboration, but the current article could not be
+archived unchanged and the official session 192 scan remains access-controlled.
+The project therefore does not infer attendance, abstentions, or individual
+votes from the press report.
+
+The University of Chicago remains a concrete independent partial holding:
+First-Senate sessions 38–126 (15 Mehr 1329–13 Mehr 1330) on 35 mm microfilm
+under `microfm K13.U84`. The University of Washington's microform union list
+independently confirms the session ranges and Chicago holding. This run covers
+the principal 1950–51 oil and early-Mossadegh debates, but not sessions 1–37
+or the later 1951–53 Senate conflict.
+
+A second Iran Archive pass searched the standalone Senate title, Royal
+Official Gazette title, exact Persian dates, and alternate romanizations. It
+found a self-published parliamentary chronicle and an appendix reproducing the
+law, but no official First-Senate proceeding or Gazette run. The chronicle is
+retained only as a discovery clue. Azimi's *Iran: The Crisis of Democracy*,
+bibliography p. 406 (local PDF p. 422), provides the stronger carrier lead: it
+identifies the Senate debates as part of *Ruznamih-yi Rasmi-yi Kishvar-i
+Shahanshahi* for 1950–52. The acquired official law at `SUP-006`, printed
+p. 16 (PDF p. 28), confirms that Senate approval occurred on 9 Ordibehesht
+1330, correcting the former 7–8 Ordibehesht target range.
+
+Mashruteh's indexed Senate transcript set is limited to the seventh term,
+Internet Archive returns no Persian or romanized metadata match, and Wikimedia
+Commons' First-Senate category contains a membership booklet rather than
+debates. A Commons file generically titled “session 190” was downloaded and
+visually checked; its title page identifies Second-Senate session 190, 28 Mehr
+1335, so it was rejected and removed rather than miscataloged as the 1331
+session. The National Diet Library record remains a non-digital additional
+holding lead.
+
+`IR-P6` is now resolved. Complete scans of Bozorgmehr's military appeal and
+Court of Cassation editions were retrieved from Iran Archive,
+visually checked against their title and copyright pages, independently
+catalog-checked through Open Library and CiNii, checksummed, and archived as
+`SUP-025`. The cassation scan identifies itself as a second edition/printing
+even though the external catalog describes a 1367 copy as a first edition, so
+the local page image controls the edition statement.
+
+The user supplied the first-instance files previously located at public
+Telegram posts `@sheikhesmaeili/708` and `/709`. Image inspection identifies
+them as the 1363 Nashr-e Tarikh-e Iran two-volume edition. The 504-page volume
+I ends its proceeding text at printed p. 398; the 483-page volume II resumes
+at p. 399 and concludes at p. 802, after which both scans contain photographic
+plates. CiNii's catalog record independently agrees on the editor, publisher,
+date, series, and 802-page printed extent. The files are checksummed and
+archived with the appellate records as `SUP-025`; all four originals remain
+non-searchable reference scans. Mashruteh's typed sessions remain
+discovery-only.
+
+Three exact JSTOR acquisition targets were added as `S21`–`S23`. Azimi's
+Harvard University Press monograph is the priority parliamentary and
+constitutional synthesis; Painter and Brew's recent UNC Press book is the
+priority updated oil-crisis synthesis; Efimenco's 1955 article is a
+supplemental bibliographic and historiographic lead only.
+
+The user subsequently supplied complete JSTOR copies of all three targets.
+They are now archived as [`MAJ-S13`](AVAILABLE_SOURCES.md#maj-s13),
+[`MAJ-S14`](AVAILABLE_SOURCES.md#maj-s14), and
+[`SUP-048`](AVAILABLE_SOURCES.md#sup-048). This resolves acquisition only:
+none has yet been promoted to reviewed or claim-level evidence.
 
 ### User-supplied scholarly and FRUS intake
 
@@ -219,8 +319,10 @@ The institutional intake adds:
 - P2's official FRUS 1949 volume, with Document 273 verified in the EPUB;
 - P3's complete ICJ judgment and opinions in official UN carrier `S/2746`;
 - P4's official Security Council record `S/PV.559`;
-- P5's World Bank folder inventory, which remains only a route to underlying
-  mediation files;
+- P5's World Bank folder inventory plus the `SUP-026` partial corpus: folder
+  `1806440`, Press Release No. 285 and its attached negotiation review, the
+  annual summary, participant oral histories, and access-status records. The
+  24-folder reconstruction and remaining request queue are tracked separately;
 - P6's official `CAB 195/9`, with the 2 July 1951 Persia discussion located
   at PDF pages 126–131;
 - P7's official Hansard record at HC Deb 11 June 1951, vol. 488,
@@ -235,6 +337,24 @@ implemented claim merely by acquisition. In particular, the CIA histories are
 interested operational narratives, Hansard's translation does not replace the
 official Persian law in `SUP-006`, and the World Bank inventory cannot replace
 the file it describes.
+
+### Model-neutral economic corpus
+
+The S9 audit now distinguishes the economic story from any future gameplay
+model. `ECONOMIC_HISTORY.md` maps S9's seven tables, appendices, definitions,
+transformations, and source lineage; defines an observation ledger; and
+separates oil flows, external adjustment, legal and cash fiscal histories,
+Bank Melli functions, distributional effects, planning, and post-coup
+comparators.
+
+Official IBRD reports E-99 (1950) and AS-55 (1957), IMF exchange-restriction
+reports for 1952–55, the Iranian 1332 legal budget, and a 1958 UN survey
+reproducing Bank Melli series were acquired as `SUP-040`–`SUP-047`. These are
+contemporary or near-contemporary cross-checks, not replacements for the
+underlying Iranian records. Exact LOC and Japanese holding paths now exist for
+the Bank Melli bulletin, annual Customs statistics, and monthly foreign-trade
+statistics. The direct S9 challenge by Majd and the principal book-length
+economic interpretations are separately queued.
 
 ## Registry synchronization rules
 
@@ -266,14 +386,27 @@ the file it describes.
    local, but Movahed volume I, most Chaqueri volumes, and further Iranian
    institutional records remain important gaps.
 3. The Sixteenth and Seventeenth Majles proceedings and the official
-   nine-article law are acquired, but the First Senate proceedings and
-   Bozorgmehr trial editions remain unavailable. Newspaper acquisition is
-   event-specific and partial; economic official records remain a major gap.
+   nine-article law are acquired. First-Senate sessions 38–126 now have a
+   precise Chicago microfilm acquisition path, but no local or digital copy;
+   the remaining First-Senate sessions are unresolved. Bozorgmehr's complete
+   target court-record set is now local. Newspaper holdings are now broad but
+   still uneven: *Shahed* outside the acquired coup window, opposing
+   coup-period titles, and further full 28 Mordad issues remain major gaps.
+   Economic official records also remain a major gap, although `SUP-040`–
+   `SUP-047` now provide official international cross-checks and the 1332
+   legal budget. Seven complete coup-week *Shahed* PDFs are now local;
+   Princeton's five-reel 1946–53 run remains the strongest route for the 1949,
+   Thirty Tir, and wider missing dates. Exact reproduction paths are recorded
+   for Bank Melli and Customs serials.
 4. Most planned events in `docs/GAME_DESIGN.md` have discovery citations but
    not adjacent claim-level records or precise locators.
 5. All six focused articles are available, but they still require
    claim-specific reading before numerical or causal arguments are translated
-   into mechanics. S9 particularly requires method and dataset comparison with
-   Iranian fiscal records and later scholarship.
-6. The P5 World Bank inventory is local, but its underlying mediation files
-   remain unavailable.
+   into content. S9's method and evidence trail have been mapped, but its
+   estimates remain unapproved pending dataset comparison with Iranian records
+   and later scholarship. No economic gameplay model has been selected.
+6. P5 is partially resolved: folder `1806440` and the Bank's published
+   negotiation review are local, while the principal meeting, proposal,
+   calculation, mission, and correspondence folders remain identified but
+   inaccessible through obsolete `pubdocs` links. Known withheld legal and
+   Board records are restrictions, not ordinary search gaps.

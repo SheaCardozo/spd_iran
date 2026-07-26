@@ -1,0 +1,254 @@
+# Economic history research record, 1949–1954
+
+## Purpose and boundary
+
+This record organizes the economic history of the campaign without selecting
+a game economy. Research should preserve enough disaggregated evidence to
+support a simple narrative model, a more complicated simulation, or a later
+decision to expose only part of the economy to the player.
+
+The research object is therefore an **observation ledger**, not a list of game
+state variables. Acquisition and extraction do not authorize a causal rule,
+monthly interpolation, precise player-facing value, or mechanical effect.
+
+The principal starting point is Patrick Clawson and Cyrus Sassanpour,
+“Adjustment to a Foreign Exchange Shock: Iran, 1951–1953” (1987), archived as
+[`SUP-023`](AVAILABLE_SOURCES.md#sup-023) and registered as
+[`S9`](BIBLIOGRAPHY.md#reviewed-focused-scholarship). Its central corrective is
+important: the loss of oil exports was an extraordinary foreign-exchange shock
+but did not produce an automatic, immediate bankruptcy. Its quantitative and
+causal conclusions remain hypotheses to audit, not parameters to import.
+
+## Economic story to reconstruct
+
+### 1. Oil was several different flows
+
+Research must distinguish gross oil exports, AIOC remittances abroad, AIOC
+imports and operating costs, royalties and taxes received by Iran, domestic
+oil sales, NIOC receipts, and oil-sector employment. A collapse in gross
+exports did not remove an equal amount from the Iranian Treasury or domestic
+economy. Conversely, the smaller direct budget share does not capture lost
+foreign exchange, employment, investment, development finance, or regional
+effects.
+
+### 2. The external shock was managed through reserves, prices, and trade
+
+The story includes the sterling-convertibility dispute; legally tied and
+actually usable reserves; the official rate and multiple exchange-certificate
+rates; import quotas; actual imports; the composition and origin of imports;
+non-oil exports; changes in trading partners; and the distribution of access
+to scarce foreign exchange. Administrative ceilings, market prices, and
+actual trade must remain separate observations.
+
+### 3. Fiscal adjustment was not a single annual deficit
+
+The state used customs duties, state-monopoly profits, borrowing, delayed
+payments, expenditure restraint, and the postponement of development. The
+1332 budget also reveals that parts of 1330–31 were financed through older
+appropriations, provisional twelfths, emergency additions, and later
+ratification. The historical series therefore needs a legal-appropriation
+chronology and a separate cash-execution chronology. An enacted budget is not
+evidence that the revenue was collected or the money spent.
+
+### 4. Bank Melli joined central-bank and commercial-bank functions
+
+Bank Melli managed currency issue, reserve backing, exchange operations, state
+credit, and ordinary banking. Research must preserve the distinction between
+the Issue Department and the banking system, gross foreign assets and usable
+reserves, central-government credit and lending to public enterprises or
+municipalities, and note issue versus wider money and quasi-money.
+
+### 5. Austerity had institutions, places, and people
+
+Aggregate adjustment does not establish its welfare distribution. The corpus
+must seek wages, employment, layoffs, arrears, food and fuel prices, shortages,
+housing and public services, rural conditions, harvests, and access to credit.
+Abadan and the oil fields require separate treatment from Tehran, other towns,
+and rural provinces. The evidence should also identify which groups benefited
+from import licenses, certificate trading, customs policy, state monopolies,
+and government contracts.
+
+### 6. Development was an opportunity-cost story
+
+The First Seven-Year Plan was both an institution and a set of promised
+projects. Research must retain planned cost, financing, foreign-exchange
+component, schedule, actual commitment, actual expenditure, suspension, and
+project condition. Municipal and public-enterprise investment continued in
+some areas even while the Plan Organization contracted.
+
+### 7. 19 August is not an economic endpoint
+
+Post-coup aid, reserve changes, import expansion, exchange stabilization, and
+the 1954 oil settlement must be collected beyond the campaign endpoint. They
+are necessary to distinguish what changed because Mossadegh fell from what was
+already underway, and to avoid crediting the prior or succeeding government
+with observations from the wrong fiscal year or report vintage.
+
+## Observation-ledger fields
+
+Every extracted figure or categorical observation should record:
+
+| Field | Requirement |
+| --- | --- |
+| Observation | Plain-language definition; never only a short variable name |
+| Value and unit | Original value, scale, currency, weight, volume, index base, or percentage |
+| Time | Exact date or period; Iranian fiscal year and Gregorian equivalent |
+| Frequency | Daily, monthly, quarterly, annual, point-in-time, or event |
+| Coverage | Institution, geography, population, commodities, and excluded sectors |
+| Valuation | Nominal/real; official/certificate/market rate; f.o.b./c.i.f.; current/constant prices |
+| Source | Archive ID, title, table, page, issuing institution, and report vintage |
+| Provenance | The underlying Iranian record when an IMF, UN, IBRD, UK, or US source republishes it |
+| Transformation | Deflation, conversion, interpolation, aggregation, or reconstruction, with formula |
+| Confidence | Direct observation, official estimate, later estimate, modeled value, or unresolved |
+| Conflict | Competing value, definition difference, and proposed resolution |
+| Potential use | Historical question served; not a commitment to a mechanic |
+
+Never silently splice series across changed definitions, exchange rates,
+calendar bases, coverage, or later revisions.
+
+## S9 evidence audit
+
+| S9 material | Underlying evidence | What it can establish | Principal audit issue |
+| --- | --- | --- | --- |
+| Table 1, balance of payments, 1948/49–1954/55 (p. 4) | IMF, *International Financial Statistics*, various issues; data supplied by Bank Melli | Oil/non-oil current accounts, trade, grants, capital, overall balance | Official-rate valuation, large errors and omissions, later revisions, and oil-company treatment |
+| Table 2, quotas and imports (p. 5) | H. Motamem, “Iran's Experience with Import Quotas” (1955); IMF IFS | Difference between legal quota and actual imports | Quota valuation, exclusions, evasion, and whether changes were price- or control-driven |
+| Exchange-rate narrative and Appendix II (pp. 5–7, 22) | Bank Melli history and bulletins; exchange-control rules | Multiple certificate regimes and effective rates | Transaction category, exact effective date, official versus market rate, and enforcement |
+| Reserve argument (pp. 7–8) | Bank Melli/IMF foreign assets and note-cover accounts | Gross reserve decline and alternative usable-reserve concepts | Sterling convertibility, Issue Department, IMF gold subscription, legal cover, liquidity |
+| Tables 3–4, trade direction and composition (pp. 9–10) | Customs, *Statistique annuelle du commerce extérieur de l'Iran* | Partner and commodity restructuring | Current prices, market-rate valuation, commodity classes, petroleum and concessionaire exclusions |
+| Table 5, government budget (p. 12) | Plan Organization review; Bank Melli bulletins | Budget structure and contrast with bank borrowing | Fragmentary years; estimates rather than closed accounts; extrabudgetary oil and monopoly accounts |
+| Customs and monopoly revenue argument (pp. 13–14) | Customs receipts; budget documents; UN public-finance survey | Fiscal adaptation outside oil revenue | Specific versus ad valorem duties, tea/sugar tax classification, budget versus collection |
+| First Plan account (pp. 14–15) | Overseas Consultants; Motamen; Bank Melli executive reports | Planned finance, underspending, retrenchment, continuing public projects | Planned availability versus actual commitment/expenditure and project-by-project status |
+| Table 6, banking changes (p. 15) | Bank Melli data supplied to IMF and printed in IFS | Foreign assets, money, domestic credit by borrower | Unclassified assets, public-corporation loans, stocks versus changes, later revisions |
+| Table 7, GNP and urban prices (p. 16) | K. Afshar dissertation; Bank Melli data through IFS | One reconstructed output path and urban cost-of-living series | S9 itself calls GNP imprecise; annual output was interpolated into monthly regressions; urban index is not national welfare |
+| Import/export regressions, Appendix I (pp. 20–21) | IFS, April 1950–March 1955; interpolated Afshar output | A test of price/liquidity relationships | Small sample, low explanatory power, period sensitivity, interpolation, endogeneity, and causal overreach |
+
+S9 explicitly states on p. 3 that its data could not evaluate population
+welfare. That is a research gap, not evidence that adjustment was painless.
+
+## Source hierarchy and acquisition map
+
+### Tier A — contemporaneous Iranian records
+
+These control definitions and should be acquired in the fullest available
+runs:
+
+1. **Bank Melli Iran, *Bulletin / Bulletin de la Bank Melli Iran*.** Request
+   the 1949–54 run under Library of Congress LCCN
+   [`45049141`](https://lccn.loc.gov/45049141), class `HC471 .B3`.
+   IDE-JETRO holds issues 135–136 and 139 onward beginning June/July 1953
+   (CiNii `AA00085687`). Obtain at least the issues S9's evidence trail names:
+   104, 111, 122/123, and the continuing crisis run. Expected observations
+   include exchange rates, reserves and money, import/export/domestic price
+   indices, cost of living, wholesale and commodity prices, and city interest
+   rates.
+2. **Bank Melli annual reports and accounts / Executive Board reports.**
+   Acquire years ending 20 March 1949–1955, including balance sheets,
+   departmental distinctions, foreign assets, government accounts, credit,
+   note issue, and project lending.
+3. **Customs, *Statistique annuelle du commerce extérieur de l'Iran*.**
+   Request 1327–1333, prioritizing 1329–1333, from the Library of Congress
+   under LCCN [`sf85019491`](https://lccn.loc.gov/sf85019491), OCLC
+   `12871090`, class `WMLC L 83/1273`. IDE-JETRO holds a 1952–55 run under
+   CiNii `AB00061711`.
+4. **Monthly foreign-trade statistics.** Request 1949–54 under Library of
+   Congress LCCN [`78271590`](https://lccn.loc.gov/78271590), class
+   `HF253 .A37`, cataloged as *Amar-i bazargani-i khariji-i Iran: Foreign Trade
+   Statistics of Iran* / *Monthly Bulletin of External Trade Statistics*.
+5. **Budgets, provisional twelfths, supplements, emergency decrees, Treasury
+   cash statements, and closed accounts.** [`SUP-046`](AVAILABLE_SOURCES.md#sup-046)
+   supplies the 1332 legal budget, not execution. Build the month-by-month
+   legal chronology for 1329–1332 and continue searching for Treasury results.
+6. **Plan Organization records.** Acquire the First Plan law, annual reports,
+   project accounts, and the later *Review of the Second Seven-Year Plan
+   Program of Iran* for its retrospective First Plan tables.
+7. **NIOC and oil-industry records.** Acquire production, refining, domestic
+   sales, inventories, realized receipts, employment, payroll, and borrowing,
+   keeping NIOC and AIOC accounts distinct.
+8. **Ministry and institutional series.** Agriculture, labor, state
+   monopolies, municipalities, and public enterprises replace the nonexistent
+   contemporary all-purpose statistical yearbook.
+
+### Tier B — contemporary institutional cross-checks
+
+- [`SUP-040`](AVAILABLE_SOURCES.md#sup-040), IBRD E-99 (1950), is the
+  pre-nationalization baseline.
+- IMF IFS vintages for 1950–55 and *Balance of Payments Yearbook* volumes
+  4–7 preserve Bank Melli submissions and their revisions.
+- [`SUP-042`](AVAILABLE_SOURCES.md#sup-042) through
+  [`SUP-045`](AVAILABLE_SOURCES.md#sup-045) preserve the IMF's annual
+  exchange-control accounts for 1952–55.
+- UN, *Public Finance Information Papers: Iran*, no. 4,
+  `ST/ECA/SER.A/4` (1951), reconstructs the pre-shock fiscal system, Treasury
+  cash categories, taxes, debt, and 1938–50 budgets.
+- UN Middle East surveys, trade yearbooks, statistical yearbooks, and
+  *World Energy Supplies, 1951–1954* offer contemporary checks, with their
+  underlying Iranian source retained. [`SUP-047`](AVAILABLE_SOURCES.md#sup-047)
+  carries later tables that reproduce Bank Melli monetary and credit series
+  back through 1952.
+- ILO, *Labour Conditions in the Oil Industry in Iran* (1950), is the priority
+  field record for workforce, wages, hours, safety, housing, health, and
+  welfare before nationalization.
+- AIOC annual reports and accounts for 1950–53 provide corporate production,
+  employment, tax, royalty, and balance-sheet evidence requiring Iranian and
+  independent comparison.
+- FRUS, UK Foreign Office, Bank of England, CIA, and aid-agency records provide
+  dated policy estimates and perceptions. They must retain classification,
+  institutional interest, and confidence language.
+
+### Tier C — later reconstruction and specialist interpretation
+
+- [`SUP-023`](AVAILABLE_SOURCES.md#sup-023), Clawson and Sassanpour, is the
+  audited starting hypothesis.
+- [`SUP-041`](AVAILABLE_SOURCES.md#sup-041), IBRD AS-55 (1957), is the nearest
+  acquired retrospective quantitative synthesis.
+- Homa Katouzian, *The Political Economy of Modern Iran* (1981), supplies the
+  principal specialist political-economy interpretation.
+- Julian Bharier, *Economic Development in Iran, 1900–1970* (1971), is a
+  foundational compilation and source map.
+- Gregory Brew, *Petroleum and Progress in Iran* (2022), is the priority
+  modern oil-and-development interpretation.
+- George Baldwin, *Planning and Development in Iran* (1967), Frances Bostock
+  and Geoffrey Jones, *Planning and Power in Iran* (1989), and Geoffrey Jones,
+  *Banking and Empire in Iran* (1986), cover planning and banking institutions.
+- J. H. Bamberg, *The History of the British Petroleum Company*, vol. 2
+  (1994), supplies the AIOC archival side.
+- Ann Lambton, *Landlord and Peasant in Persia* (1953), is valuable for rural
+  institutions but requires explicit treatment of the author's British-policy
+  role and comparison with later scholarship.
+- M. G. Majd, “The 1951–53 Oil Nationalization Dispute and the Iranian
+  Economy: A Rejoinder” (1995), is the required direct methodological
+  challenge to S9.
+- The Afshar, Khosropour, and Moghadam dissertations must be acquired because
+  S9's GNP, exchange-control, and AIOC-account figures depend on them.
+- William Bartsch and Julian Bharier, *The Economy of Iran, 1940–1970: A
+  Bibliography* (1971), is a priority discovery tool, not a claim source.
+
+## Current holdings
+
+| Archive ID | Record | Research role |
+| --- | --- | --- |
+| [`SUP-023`](AVAILABLE_SOURCES.md#sup-023) | Clawson and Sassanpour (1987) | Starting argument and evidence map |
+| [`SUP-040`](AVAILABLE_SOURCES.md#sup-040) | IBRD E-99 (1950) | Contemporary pre-shock baseline |
+| [`SUP-041`](AVAILABLE_SOURCES.md#sup-041) | IBRD AS-55 (1957) | Retrospective crisis reconstruction |
+| [`SUP-042`](AVAILABLE_SOURCES.md#sup-042)–[`SUP-045`](AVAILABLE_SOURCES.md#sup-045) | IMF exchange-restriction reports, 1952–55 | Exchange regime chronology |
+| [`SUP-046`](AVAILABLE_SOURCES.md#sup-046) | General state budget, 1332 SH | Legal fiscal chronology, not actual execution |
+| [`SUP-047`](AVAILABLE_SOURCES.md#sup-047) | UN Middle East economic survey (1958) | Retrospective Bank Melli-series checksum |
+
+## Immediate extraction sequence
+
+1. Extract every S9 table, footnote datum, definition, transformation, and
+   underlying source into the observation ledger.
+2. Extract the 1950 IBRD baseline before using the 1957 retrospective account.
+3. Build the dated exchange-control chronology from the four IMF reports,
+   retaining contradictions and later corrections.
+4. Transcribe the 1332 budget's legal continuity clauses and schedules, then
+   connect each cited older appropriation or emergency measure to Majles,
+   cabinet, and gazette records.
+5. Request the exact Bank Melli and Customs runs from LOC and the identified
+   Japanese holdings.
+6. Add distributional evidence before characterizing adjustment as successful
+   or sustainable for the population.
+
+No gameplay model should be inferred from this sequence. A later design review
+will decide which observations become hidden simulation state, player-facing
+indicators, event conditions, narrative context, or unused research.

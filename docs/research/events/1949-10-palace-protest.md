@@ -26,3 +26,14 @@ The two generalized claims now meet the project's book-first requirement
 through Azimi, pp. 207–08. Expansion into an exact-day chronology, participant
 count, quoted dialogue, or detailed attribution still requires contemporary
 Iranian reporting and comparison across the four-day sequence.
+
+## Unimplemented primary-source lead
+
+Abrahamian cites the National Front's “Declaration to the Public” in *Shahed*,
+24 October 1949 (`MAJ-S2`, printed p. 280 n. 70). Azimi's notes identify a
+longer dated sequence—press conference on 12 October, proclamation on 13
+October, sanctuary exchanges on 15 October, the Hazhir letter on 18 October,
+and Mossadegh's letter on 19 October (`MAJ-S1`, PDF p. 391). No scan of the
+relevant *Shahed* issue or surrounding run has been found online. These
+locators refine the acquisition request but do not authorize new quotations or
+an exact-day expansion of the implemented scene.
