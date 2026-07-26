@@ -3,3 +3,6 @@
 /AGENTS.md
 .DS_Store
 npm-debug.log*
+
+# Local research corpus; tracked catalogs preserve provenance and checksums.
+/docs/research/sources/

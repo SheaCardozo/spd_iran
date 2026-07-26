@@ -29,6 +29,17 @@ The full pre-production specification and bibliography are in
 [`docs/GAME_DESIGN.md`](docs/GAME_DESIGN.md).
 The current SPD-first implementation policy and source map are in
 [`docs/IMPLEMENTATION.md`](docs/IMPLEMENTATION.md).
+The maintained source and image-rights registries are in
+[`docs/research/BIBLIOGRAPHY.md`](docs/research/BIBLIOGRAPHY.md) and
+[`docs/research/ASSETS.md`](docs/research/ASSETS.md).
+The ignored local archive at `docs/research/sources/` is divided into major and
+supplemental evidence. Its tracked available-source catalog, source review, and
+acquisition queue are in
+[`docs/research/AVAILABLE_SOURCES.md`](docs/research/AVAILABLE_SOURCES.md),
+[`docs/research/SOURCE_AUDIT.md`](docs/research/SOURCE_AUDIT.md) and
+[`docs/research/UNAVAILABLE_SOURCES.md`](docs/research/UNAVAILABLE_SOURCES.md).
+Every project change receives a dated system note under
+[`docs/changelog/`](docs/changelog/README.md).
 
 ## Build
 

@@ -44,3 +44,15 @@ test('opening an action and resolving it advances one month', async () => {
   assert.equal(dendry.state.qualities.year, 1949);
   assert.equal(dendry.state.qualities.month_actions, 0);
 });
+
+test('historical card assets are copied into the web build', async () => {
+  const game = await loadGame();
+
+  assert.equal(
+    game.scenes.electoral_committee.cardImage,
+    'img/majlis_1940s.jpg',
+  );
+  assert.ok(fs.existsSync('out/html/img/majlis_1940s.jpg'));
+  assert.ok(fs.existsSync('out/html/img/shah_1949.jpg'));
+  assert.ok(fs.existsSync('out/html/img/makki_abadan_1951.jpg'));
+});

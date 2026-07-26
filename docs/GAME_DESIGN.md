@@ -915,6 +915,12 @@ The interface should say “modeled estimate” when a value is reconstructed. F
 
 ## 14. Technical plan for this repository
 
+This section describes long-term design candidates. It does not authorize
+immediate replacement of the working Dynamic SPD structure. Before each item is
+implemented, apply the comparison gate in `docs/IMPLEMENTATION.md`: inspect the
+corresponding Dynamic SPD implementation, record what it does, retain or adapt
+it by default, and plan any major divergence with its system-wide consequences.
+
 ### 14.1 Reuse
 
 The existing architecture already provides useful patterns:
@@ -1074,6 +1080,12 @@ Do not fill objection arrays from memory. They are deliberately empty until rese
 ## 15. Annotated bibliography
 
 The bibliography is organized by function. “Primary” does not mean impartial: diplomatic, corporate, intelligence, party, and governmental records reflect the institutions that produced them.
+
+This section is a discovery inventory, not evidence that every work has been
+accessed or approved for every claim. Current trust decisions are maintained in
+`docs/research/BIBLIOGRAPHY.md`, the full inventory audit is in
+`docs/research/SOURCE_AUDIT.md`, and respected works awaiting accessible text
+are in `docs/research/UNAVAILABLE_SOURCES.md`.
 
 ### A. Primary and institutional collections
 
