@@ -526,6 +526,37 @@ below; presence does not turn an unread work into claim-level evidence.
 
 ## Reviewed primary and reference families
 
+<a id="p14"></a>
+### P14 — Official retrospective Majles and Senate membership rosters
+
+- **Status:** Used official reference.
+- **Access:** Sixteenth Majles [`SUP-051`](AVAILABLE_SOURCES.md#sup-051),
+  Seventeenth Majles [`SUP-052`](AVAILABLE_SOURCES.md#sup-052), and First
+  Senate [`SUP-053`](AVAILABLE_SOURCES.md#sup-053).
+- **Issuing authority and publication:** Majles-e Showra-ye Melli,
+  *Asami-ye Namayandegan-e Majles-e Showra-ye Melli az Aghaz-e Mashrutiyat
+  ta Dowreh-ye 24-e Qanungozari va Namayandegan-e Majles-e Sena dar Haft
+  Dowreh-ye Taqniniyeh* (Tehran: Majles Press, Khordad 2536 Shahanshahi /
+  May–June 1977).
+- **Institutional standing:** An official parliamentary compilation produced
+  by the legislature's press. It is the strongest currently accessible
+  reference for the retrospective names, constituencies, appointment route,
+  replacements, vacancies, and chamber officers of the three bodies.
+- **Evidence and languages:** Persian image scans of official tables; no
+  searchable text layer. Names and marginal notes must be read from the page
+  images.
+- **Trust and limitations:** The compilation was published more than two
+  decades after the crisis. It does not provide ideology, caucus, attendance,
+  or votes, and its constituency-return tables are not identical to the
+  chamber's operative credential count. In particular, its Seventeenth-Majles
+  section has 81 constituency entries but 80 people because Mozaffar Baghai
+  appears for Tehran and Kerman, while contemporary and scholarly accounts
+  generally use 79 accepted credentials. Contemporary proceedings control
+  disputes.
+- **Project use:** Membership and denominator baseline in
+  [`PARLIAMENTARY_CONTROL.md`](PARLIAMENTARY_CONTROL.md), interpreted with
+  `MAJ-S2`, `MAJ-S3`, `SUP-007`, and dated diplomatic records.
+
 <a id="ir-p4"></a>
 ### IR-P4 — *Muzakerat-e Majles-e Sena*, First Senate
 

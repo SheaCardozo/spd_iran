@@ -61,3 +61,4 @@ bibliography entry, or asset-rights record.
 - [Election results, parliamentary alignments, and Senate color](2026-07-26-election-results-and-senate-color.md)
 - [Crisis evidence and parliamentary-control audit](2026-07-26-crisis-evidence-audit.md)
 - [Westminster comparisons in the constitutional primer](2026-07-26-westminster-comparisons.md)
+- [Parliamentary membership and dated control reconstruction](2026-07-26-parliamentary-membership-and-control.md)

@@ -217,6 +217,9 @@ an elected/appointed division and its own fluid royal, conservative, and
 government relations.
 
 Consequently, the most accurate reconstruction is a **dated control ledger**:
+the full member-level working roster, Senate list, caucus evidence, and
+control chronology are now maintained in
+[`PARLIAMENTARY_CONTROL.md`](PARLIAMENTARY_CONTROL.md).
 
 | Layer | Required count |
 | --- | --- |
@@ -233,17 +236,20 @@ Consequently, the most accurate reconstruction is a **dated control ledger**:
 | --- | --- | --- |
 | **Sixteenth Majles, 1950–spring 1951** | The National Front entered with only about **eight firm deputies**. A substantial majority could be personally or socially conservative and skeptical of Mossadegh while voting for oil nationalization. | No National Front parliamentary majority existed. Oil votes were a large issue coalition, not a party seat count. `MAJ-S2`, chapter 5; `MAJ-S3`, chapter 3; FRUS doc. 63, para. 12. |
 | **Mossadegh's nomination, 28 April 1951** | A contemporary Associated Press report said **79 of 99 deputies** at the secret meeting voted for Mossadegh. | It is a cabinet-formation vote, not evidence that 79 deputies joined the National Front. AP, [“Mossadegh Urged As New Premier By Iranian House,” 28 April 1951](https://www.mohammadmossadegh.com/news/ap-associated-press/april-28-1951/); compare `MAJ-S3`, chapter 3. |
-| **Early Seventeenth Majles election** | **136 seats were legally possible, but only 79 returns were completed** before polling stopped. Tehran returned all twelve National Front-list candidates. Contemporary US estimates expected the incomplete chamber to favor the government, while warning about National Front rivalry. | The chamber's denominator was 79 returned seats, not a normal full 136. Constituency wins and durable caucus loyalty must remain separate. `MAJ-S2`, pp. 250–61; `MAJ-S3`, pp. 86–100; FRUS docs. 63 and 67. |
+| **Early Seventeenth Majles election** | **136 seats were legally possible.** The official retrospective roster contains 81 constituency entries and 80 people because Baghai appears for Tehran and Kerman; specialist reconstructions normally count 79 accepted credentials and 77 initially usable members. Tehran returned all twelve National Front-list candidates. A March 1952 US estimate of the first roughly 60 returns found about 25 active supporters, 15 opponents, and 20 conditional deputies. | Return, person, accepted credential, and usable member are different denominators. Constituency wins and durable caucus loyalty must remain separate. `SUP-052`; `MAJ-S2`, pp. 269–70; `MAJ-S3`, pp. 86–100; FRUS docs. 63 and 67. |
+| **Opening Seventeenth-Majles control, 29 June–5 July 1952** | Royalist Hassan Emami won the speakership 39–35 after the government first split between Shayegan (16) and Moazemi (17). Mossadegh then received **52 of 64** Majles votes but only **14 of 45** Senate votes in the renewed inclination. | Chamber-office control, lower-house confidence, and upper-house confidence were three distinct contests. `MAJ-S3`, pp. 96–103. |
 | **Before and after the Qavam crisis, July 1952** | The acquired scholarly synthesis records Mossadegh receiving **52 of 64 votes cast** before the crisis. On 22 July, Associated Press reported that **61 of the 76 deputies then seated** voted to renominate him after Thirty Tir. | These are not identical denominators: the first is votes cast; the second compares affirmative votes with all seated deputies. They show a pre-crisis institutional limit and the uprising's immediate effect, not a permanent “pro-Mossadegh faction.” `MAJ-S3`, pp. 96–103; AP, [“Iran's Parliament Re-Elects Mossadegh Premier,” 22 July 1952](https://www.mohammadmossadegh.com/news/ap-associated-press/iran-s-parliament-re-elects-mossadegh-premier/). |
-| **Post–30 Tir through early 1953** | Contemporary and later reconstructions commonly find a government core around **30**, a fragmented opposition around **40**, and several waverers. One CIA classification divided the 79 returns into **30 staunch supporters, 4 waverers, and 45 potential opposition**, with the 45 themselves split among royalists, Kashani supporters, former National Front allies, and uncommitted deputies. | Useful dated intelligence estimate, not an official party result. The categories changed as Baghai, Makki, Kashani, and others broke with Mossadegh. `MAJ-S3`, chapter 3, especially pp. 112–17. |
-| **Spring–summer 1953** | Mossadegh increasingly doubted that he could command a majority and relied on the threat or use of supporter absence to deny quorum. TPAJAX planners modeled an **80-member** chamber with **52 needed to debate, 60 to vote, and 41 to pass** their target resolution. | The operational question was no longer “who has 41 loyalists?” alone, but who could assemble or break quorum. The TPAJAX arithmetic is a hostile operational estimate, not a neutral constitutional commentary. FRUS docs. 193, 233, and 239. |
+| **Post–30 Tir through early 1953** | Mossadegh immediately received **61 of 64** in the Majles and **33 of 41** in the Senate; in late January 1953 he still received **59 of 61** in the Majles. The stable government caucus remained nearer **30**. | Large confidence and emergency votes were issue coalitions around a much smaller reliable core. `MAJ-S3`, pp. 100–08. |
+| **April 1953 operational estimate** | A CIA paper said the chamber “numbers 79,” then classified **30 loyal, 4 wavering, and 46 potential opposition**—an impossible total of 80. Abrahamian regularizes potential opposition to 45. | Preserve the arithmetic error and observer bias. The CIA subgroups were ten Freedom, eight Kashani, eighteen miscellaneous opposition, and ten pro-Shah; they were potential conduct, not a common caucus. FRUS doc. 192; `MAJ-S3`, p. 100. |
+| **Spring–summer 1953** | Only 69 members were in Tehran in one reconstruction. Abrahamian gives **46 needed to debate and 52 to vote**; a US estimate gave the government 28 secure votes. TPAJAX later modeled an **80-member** chamber with **52 needed to debate, 60 to vote, and 41 to pass** its target resolution. | The operational question was no longer “who has 41 loyalists?” alone, but who could assemble or break quorum. These differing thresholds are dated reconstructions, not interchangeable constitutional constants. FRUS docs. 193, 233, and 239; `MAJ-S3`, pp. 108–15. |
 | **After National Front resignations, August 1953** | The British post-coup review recorded **23 non-resigning deputies** and proposed completing the 57 still-unfilled seats to create an 80-member quorum-capable chamber. | Confirms how profoundly the incomplete election and resignations altered the denominator. FRUS vol. X, doc. 362, para. 11. |
 
 ### Control estimate suitable for future mechanics
 
 The evidence supports four simultaneous player-facing ideas:
 
-1. **formal returns** — 79 of 136 for the Seventeenth Majles;
+1. **formal returns** — 81 constituency entries / 80 people in the official
+   roster, 79 accepted credentials, out of 136 authorized seats;
 2. **reliable government core** — approximately 30 at its most useful
    mid-period estimate, dated and revisable;
 3. **issue coalition** — often larger on oil sovereignty or confidence than
@@ -255,10 +261,11 @@ It does **not** support one permanent “National Front: X seats; royalists: Y
 seats” chart. Every number in a future election or parliament system should
 carry a date, layer, source, and uncertainty flag.
 
-The First Senate remains less reconstructable. It should be represented
-through its 30 elected and 30 appointed origins, identified members, and dated
-roll calls rather than invented stable faction totals until the complete
-proceedings are acquired.
+The complete First-Senate roster is now acquired: thirty elected and thirty
+appointed members plus replacements. Its factional control remains less
+reconstructable because appointment origin does not determine alignment and
+the complete proceedings are not accessible. Represent identified members and
+dated behavior rather than invented stable faction totals.
 
 ## Remaining acquisition and verification queue
 
@@ -276,9 +283,10 @@ proceedings are acquired.
 5. **Welfare:** NIOC payrolls; Abadan municipality and hospital records;
    ration, housing, and school records; Labor Ministry reports; town-level
    prices and wages; provincial harvest, credit, migration, and relief data.
-6. **Parliament:** machine-readable Sixteenth- and Seventeenth-Majles
-   member/credential/attendance/roll-call ledger, plus complete First Senate
-   proceedings.
+6. **Parliament:** the official Sixteenth-Majles, Seventeenth-Majles, and
+   First-Senate roster baselines are acquired and transcribed. Complete the
+   credential, attendance, dated-caucus, and roll-call joins, and acquire the
+   First Senate proceedings.
 
 ## Principal source locators
 

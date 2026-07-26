@@ -125,8 +125,10 @@ These should be evaluated when their dependent system is implemented:
   one of those layers. The migration path from the current placeholder is to
   introduce constituency and member records before any national summary
   display; validate them against named returns and dated votes in
-  `docs/research/TIMELINE_PRIMER.md`. The source-graded control estimates and
-  required ledger layers are in
+  `docs/research/TIMELINE_PRIMER.md`. The complete current roster baseline,
+  source-graded tendencies, denominator audit, and dated control layers are in
+  `docs/research/PARLIAMENTARY_CONTROL.md`; the wider evidentiary boundary is
+  summarized in
   `docs/research/CRISIS_EVIDENCE_AUDIT.md#5-parliamentary-factions-and-effective-control`;
 - term-by-term oil proposals instead of one policy meter;
 - an economic representation more detailed than SPD's abstract budget,

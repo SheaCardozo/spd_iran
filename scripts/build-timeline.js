@@ -39,6 +39,9 @@ const sources = {
   'sup-017': 'International Court of Justice, 1952 oil judgment',
   'sup-023':
     'Clawson and Sassanpour, “Adjustment to a Foreign Exchange Shock”',
+  'sup-051': 'Iranian Parliament, official Sixteenth-Majles roster',
+  'sup-052': 'Iranian Parliament, official Seventeenth-Majles roster',
+  'sup-053': 'Iranian Parliament, official First-Senate roster',
 };
 
 const highlightedTerms = {

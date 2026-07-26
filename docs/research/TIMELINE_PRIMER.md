@@ -201,9 +201,12 @@ became central in August 1953
 ### The Senate
 
 The constitutional texts had provided for a sixty-member Senate, but it did
-not actually convene until 1950. Thirty senators were appointed by the Shah
-and thirty were elected. Its membership and method of formation made it more
-conservative and more closely connected to the palace than the Majles.
+not actually convene until February 1950. Thirty senators were appointed by
+the Shah and thirty were chosen indirectly through a two-stage election.
+Eligibility favored people who had already occupied senior political,
+administrative, military, clerical, landowning, or commercial positions. A
+six-year term and the Crown's appointment of half the chamber were intended
+to make the Senate a conservative check on the elected Majles.
 
 The Senate could therefore act as a second source of parliamentary approval
 or resistance. In July 1952, for example, Mossadegh won a new vote of
@@ -221,6 +224,66 @@ erupted; and no equivalent of the long-settled political primacy of the
 Commons had yet emerged. The Senate was a new and still contested component
 of the constitution, not merely a revising chamber operating under familiar
 rules.
+
+Nor did “appointed by the Shah” mean “reliable royalist” in every case.
+Royal appointee Baqer Kazemi later served in Mossadegh's cabinet, and the
+appointed Qashqai leader Mohammad Nasser Qashqai was strongly anti-Pahlavi.
+Senate president Hassan Taqizadeh was an elected constitutional veteran who
+supported nationalization and privately warned the British against trying to
+remove Mossadegh. By contrast, appointed general Fazlollah Zahedi became the
+prime-ministerial candidate around whom the 1953 coup was organized. Entry
+route described the chamber's institutional design; it did not settle each
+senator's politics.
+
+The official retrospective roster gives the following opening membership.
+Arrows mark later replacements. Titles have been omitted here because they
+often describe office or social rank rather than a political tendency.
+
+| Shah-appointed senators | Indirectly elected senators |
+| --- | --- |
+| Nasrollah Saba | Ahmad Matin-Daftari |
+| Qasem Qasemzadeh | Isa Sadiq |
+| Azizollah Zarghami | Mohammad Soruri |
+| Mohammad Nakhjavan | Hassan Taqizadeh |
+| Ahmad Amir-Ahmadi | Javad Bushehri → Abolfazl Lesani |
+| Ali Haqnevis | Abol-Qasem Najm |
+| Nasrollah Khalatbari | Abdol-Hossein Nikpur |
+| Anushirvan Sepahbodi | Hossein-Ali Kamal-Hedayat |
+| Mahmoud Hesabi → Ali Dashti | Abbas Masoudi |
+| Amir A'lam | Ebrahim Khajeh-Nouri |
+| Sadeq Sadeq | Hassan Naqavi |
+| Abdol-Mehdi Tabataba'i | Saeed Malek |
+| Sadeq Rezazadeh-Shafaq | Mehdi Malekzadeh |
+| Baqer Kazemi | Ebrahim Hakimi |
+| Javad Emami, Zahir al-Islam | Asadollah Yamin-Esfandiyari |
+| Kazem Jalili | Mehdi Moshir-Fatemi |
+| Mohammad-Ali Nezam-Mafi | Amir-Hossein Ilkhan-Zafar |
+| Abolfath Valatabar | Asadollah Mamagani |
+| Mostafa Adl → Ali Hay'at | Qasem Ahari |
+| Isa Sorush | Hossein Sami'i |
+| Mohammad Sa'ed-Maraghe'i → Mehdi Farrukh | Javad Emami-Kho'i |
+| Esmail Sang | Hossein Dadgar |
+| Amanollah Jahanbani | Ebrahim Qavam |
+| Mohammad Nasser Qashqai | Mohammad-Mehdi Namazi |
+| Mohammad-Mehdi Nahvi | Ataollah Rouhi |
+| Ali Divanbeigi | Farajollah Asef |
+| Ali Moqaddam | Ebrahim Afkhami |
+| Hassan Masoudi-Khorasani | Mohammad Tadayyon → Sultan Ahmad Rad |
+| Badi' al-Zaman Foruzanfar | Ali Moayyed-Sabti |
+| Fazlollah Zahedi | Morteza-Qoli Bayat |
+
+Several broad tendencies are visible, but they should not be converted into a
+sixty-seat faction chart. Retired generals Ahmad Amir-Ahmadi, Amanollah
+Jahanbani, Mohammad Nakhjavan, and Azizollah Zarghami embodied the chamber's
+court-and-army connection. Ahmad Matin-Daftari, Ali Dashti, Ebrahim
+Khajeh-Nouri, Abdol-Hossein Nikpur, Hossein-Ali Kamal-Hedayat, and Mehdi
+Farrukh appear in contemporary or specialist accounts as conservative,
+royalist, anti-Mossadegh, or British-connected in different combinations.
+Those labels remain individual and dated: they are not proof that all six
+always voted together. The roster itself establishes only membership and
+appointment route
+([official parliamentary roster](https://commons.wikimedia.org/wiki/File:Senat_1.pdf);
+[`MAJ-S2`, pp. 260–67](AVAILABLE_SOURCES.md#maj-s2)).
 
 ### How Majles elections worked
 
@@ -270,11 +333,27 @@ from an election therefore helped decide which election results were valid
 ### Why the incomplete Seventeenth Majles could function
 
 The Seventeenth Majles had 136 authorized seats. Mossadegh stopped the
-unfinished elections after seventy-nine had been filled, arguing that the
-assembly had enough members to convene and that continued voting in
-palace- and army-influenced districts would manufacture a hostile majority.
-The decision had precedent, but opponents treated it as an abuse of executive
-power.
+unfinished elections once enough returns existed to convene, arguing that
+continued voting in palace- and army-influenced districts would manufacture a
+hostile majority. The decision had precedent, but opponents treated it as an
+abuse of executive power. Even the final count depends on what is being
+counted:
+
+| Number | Meaning |
+| ---: | --- |
+| 136 | Seats authorized for a complete Majles |
+| 81 | Constituency entries in the official retrospective roster |
+| 80 | People in that roster, because Mozaffar Baghai appears for both Tehran and Kerman and chose Kerman |
+| 79 | Accepted credentials in the standard scholarly reconstruction |
+| 77 | Initially usable members in one reconstruction: Ayatollah Kashani did not attend and Hossein Fatemi could not sit after accepting the Foreign Ministry |
+| 69 | Members in Tehran by April 1953, after deaths, resignations, office-holding, and travel |
+
+The 79-to-80 discrepancy cannot yet be eliminated without a
+session-by-session credential audit. It is safer to preserve it than to make a
+retrospective roster, an accepted credential, and an attending deputy look
+like the same thing
+([official Seventeenth-Majles roster](https://commons.wikimedia.org/wiki/File:Doreh_17.pdf);
+[`MAJ-S3`, pp. 92–100](AVAILABLE_SOURCES.md#maj-s3)).
 
 Attendance rules made the incomplete chamber unusually vulnerable. Its rules
 required two-thirds of the relevant membership to open debate, three-quarters
@@ -302,44 +381,136 @@ A caucus list records a deputy's alignment at a particular moment. A roll-call
 records how those present voted on one question. None of these is automatically
 equivalent to a durable party-seat total.
 
-The Sixteenth Majles offers the clearest National Front result. Its
-parliamentary delegation comprised eight deputies. Mossadegh, Haerizadeh,
-Makki, Nariman, and Shayegan represented Tehran; Azad represented Sabzevar;
-Baghai represented Kerman; and Saleh represented Kashan. The delegation was
-tiny in a chamber of more than 130 deputies, but it included effective
-speakers, organizers, and the eventual prime minister. Its political weight
-cannot therefore be read from eight seats alone
-([`MAJ-S2`, pp. 250–61](AVAILABLE_SOURCES.md#maj-s2)).
+The Sixteenth Majles is the clearest starting point. Abrahamian counts 131
+deputies, approximately 85 percent of them landlords, wealthy merchants, or
+senior civil servants. That social composition was not itself a faction
+count. He reconstructs a large royalist majority, roughly forty independent
+notables, a southern conservative group with especially strong British
+connections, and only eight National Front deputies.
+
+Those eight were Mohammad Mossadegh, Abol-Hassan Haerizadeh, Hossein Makki,
+Mahmoud Nariman, Ali Shayegan, Abdol-Qadir Azad, Mozaffar Baghai, and Allahyar
+Saleh. Five represented Tehran in Abrahamian's account; Azad, Baghai, and
+Saleh represented Sabzevar, Kerman, and Kashan. The official retrospective
+roster instead places Azad among the Tehran returns and lists Baghai for both
+Tehran and Kerman. That unresolved constituency detail is precisely why
+credentials matter. Politically, the important fact is that a tiny but
+talented opposition delegation used speeches, committee work, urban
+mobilization, and the oil issue to construct majorities far larger than
+itself
+([`MAJ-S2`, pp. 250–67](AVAILABLE_SOURCES.md#maj-s2);
+[official Sixteenth-Majles roster](https://commons.wikimedia.org/wiki/File:Doreh_16.pdf)).
+
+The conservative majority's eventual support for nationalization did not
+turn it into the National Front. In April 1951 Mossadegh was reportedly
+nominated for prime minister by 79 of 99 deputies present. That was an
+issue-and-government-formation coalition created by the oil crisis and public
+pressure, not a seventy-nine-member party caucus.
 
 The Seventeenth Majles is much harder to turn into a conventional result
-graphic. Polling stopped with seventy-nine of 136 seats returned. At least four
-returned deputies never took their seats, and credential disputes continued
-after the chamber opened. A contemporary American intelligence estimate
-classified the seventy-nine as follows:
+graphic. A 28 March 1952 US report, based on roughly the first sixty returns,
+estimated about twenty-five active National Front supporters, fifteen definite
+opponents, and twenty uncommitted or issue-dependent deputies. It regarded the
+twelve Tehran and eight Tabriz returns as the government's hardest core,
+expected roughly fifteen personal followers of Kashani, and warned that many
+provincial notables would support the government on oil but not necessarily
+on domestic power
+([*Foreign Relations of the United States*, Iran, doc. 67](https://history.state.gov/historicaldocuments/frus1951-54Iran/d67)).
+
+After the election stopped, Abrahamian identified thirty of the accepted
+deputies as members of, or initially close to, the National Front. This was a
+coalition category, not a party whip. It included:
+
+- Iran Party constitutionalists Karim Sanjabi and Ahmad Zirakzadeh;
+- Mozaffar Baghai and associates from the Toilers' Party;
+- Ayatollah Abol-Qasem Kashani and Shams al-Din Qanatabadi from the
+  religious-nationalist network;
+- nonparty nationalist deputies such as Ali Shayegan, Ahmad Razavi, Mahmoud
+  Nariman, Hossein Makki, and Abol-Hassan Haerizadeh; and
+- Khosrow Qashqai and Mohammad Hossein Qashqai, whose support rested heavily
+  on Qashqai hostility to the Pahlavi dynasty.
+
+Abrahamian's prose identifies the second Qashqai deputy as Mohammad Nasser,
+but the official records place Mohammad **Hossein** in the Majles and
+Mohammad **Nasser** among the Shah-appointed senators. The chamber roster is
+followed here while the credential record remains to be checked. Forty-nine
+of the 79 accepted deputies were landlords, yet this too is social
+composition rather than a reliable vote prediction. The thirty-member initial
+coalition also included ten members of the ulama, lawyers, engineers,
+journalists, professors, and a historian
+([`MAJ-S2`, pp. 269–70](AVAILABLE_SOURCES.md#maj-s2)).
+
+The opening speakership showed how quickly initial sponsorship could fail to
+produce control. On the first ballot, royalist Hassan Emami received 33 votes,
+while the government side split between Ali Shayegan with 16 and Abdullah
+Moazemi with 17. Shayegan withdrew, but Emami defeated Moazemi 39–35 on the
+second ballot. The government had enough potential allies to contest the
+chair, but not enough coordination to win it.
+
+On 5 July 1952 Mossadegh nevertheless received fifty-two of sixty-four votes
+cast in the Majles in a renewed vote of inclination. His simultaneous 14 of
+45 in the Senate exposed serious upper-house resistance. After Qavam's
+appointment and the lethal 30 Tir uprising, the figures swung to 61 of 64 in
+the Majles and 33 of 41 in the Senate. In late January 1953 Mossadegh still
+obtained 59 of 61 Majles votes along with a twelve-month extension of special
+powers. These were overwhelming snapshots on confidence after moments of mass
+pressure. They were not permanent membership figures.
+
+The government's initial group of roughly thirty called itself the Homeland
+Caucus. After independents joined it became the National Movement Caucus.
+About forty opponents remained divided among smaller, often
+personality-centered caucuses called Freedom, Iran, Alliance, two different
+Unity groupings, State, Confederate, and Save the Movement. The “Iran caucus”
+was not the pro-Mossadegh Iran Party. Freedom, led by former National Front
+deputy Haerizadeh, joined defecting nationalists to royalists such as
+Mir-Ashrafi, Abdol-Rahman Faramarzi, and the Zolfaqari brothers.
+
+Coalition fracture changed what “National Front” meant. The Iran Party and
+Khalil Maleki's Third Force remained with Mossadegh. Baghai split with Maleki
+and moved into opposition; by April 1953 the CIA credited him with no more
+than three faithful deputies. Kashani and Qanatabadi opposed the prolonged
+special powers. Makki and Haerizadeh became leading parliamentary dissidents.
+The Qashqais remained broadly pro-Mossadegh because they were anti-Pahlavi.
+These were different trajectories, not one synchronized rightward movement.
+
+An April 1953 CIA estimate tried to classify the live chamber as follows:
 
 | Dated estimate of alignment | Deputies |
 | --- | ---: |
 | Staunch Mossadegh supporters | 30 |
 | Waverers | 4 |
-| Potential opponents | 45 |
+| Potential opponents in the CIA document | 46 |
 
-The same estimate divided the forty-five potential opponents into ten
-royalists, seventeen unaffiliated “free floaters,” eight followers of
-Ayatollah Abol-Qasem Kashani, and ten National Front defectors. These were an
-observer's estimates of likely allegiance—not official party labels, not the
-popular vote, and not proof that all forty-five would vote together
-([`MAJ-S3`, pp. 92–100](AVAILABLE_SOURCES.md#maj-s3)).
+There is an error in the source: it says the chamber “numbers 79,” but
+30 + 4 + 46 equals 80. Its opposition subgroups—ten Freedom, eight Kashani,
+eighteen other opposition, and ten pro-Shah deputies—also total 46.
+Abrahamian's reconstruction regularizes the last category to 45: ten
+royalists, seventeen unaffiliated “free floaters,” eight Kashani followers,
+and ten National Front defectors. The discrepancy must remain visible. These
+were covert planners' estimates of likely behavior, not official declarations
+or proof that all potential opponents could be assembled for one vote
+([*Foreign Relations of the United States*, Iran, doc. 192](https://history.state.gov/historicaldocuments/frus1951-54Iran/d192);
+[`MAJ-S3`, p. 100](AVAILABLE_SOURCES.md#maj-s3)).
 
-Once the chamber was operating, Abrahamian describes roughly thirty
-pro-government deputies forming the Homeland Caucus and later the National
-Movement Caucus. Roughly forty opponents divided among several small,
-personality-centered caucuses. Even the first election of the Majles
-president exposes the instability: on the second ballot, royalist Hassan
-Emami defeated Abdullah Moazemi by thirty-nine votes to thirty-five. A
-mechanic should therefore track candidates, credentials, attendance, current
-alignment, and individual votes separately rather than assigning every seat a
-permanent party color
-([`MAJ-S3`, pp. 96–100 and 112–17](AVAILABLE_SOURCES.md#maj-s3)).
+By spring 1953, nominal allegiance was less important than presence. With 69
+members in Tehran, Abrahamian gives 46 as the threshold to begin debate and 52
+to vote. Opposition deputies repeatedly walked out, stayed in committee, or
+left for Qom. The government claimed that more than 180 bills were trapped
+behind over forty days of obstruction. A US Embassy estimate gave Mossadegh
+only 28 secure votes—ten short of the 38 it thought necessary for dependable
+legislation—while another report described the government relying on its own
+minority to leave and break quorum when a hostile majority assembled.
+
+On 15 July, 52 deputies—29 from the National Movement Caucus and 23
+others—announced their resignations; the total later rose to 56. Opponents
+argued that resignation was ineffective until accepted by the chamber. Coup
+planners adopted that reading so that the Shah might summon the nominal
+Majles. The remaining struggle was therefore not simply “56 government
+against 23 opposition.” It concerned who was still legally a member, who was
+physically present, and whether any actor could construct a quorum
+([*Foreign Relations of the United States*, Iran, doc. 233](https://history.state.gov/historicaldocuments/frus1951-54Iran/d233)
+and [doc. 239](https://history.state.gov/historicaldocuments/frus1951-54Iran/d239);
+[`MAJ-S3`, pp. 108–17](AVAILABLE_SOURCES.md#maj-s3)).
 
 ### Can the Senate be divided into factions?
 
@@ -351,15 +522,43 @@ landholding, professional, and political networks, and the accessible
 scholarly accounts more often report a specific vote than a complete caucus
 register.
 
-The useful numbers are therefore dated snapshots. In July 1952, Mossadegh
-received fifty-two of sixty-four votes cast in the Majles vote of inclination,
-but only fourteen of forty-five in the Senate. That comparison establishes
-real institutional resistance without pretending that the other thirty-one
-senators belonged to one organized opposition party. Until complete
-proceedings or reliable division lists are available, Senate data should show
-the appointed/elected origin of each senator where known and preserve
-individual roll calls rather than infer stable factions
+The useful numbers are therefore dated snapshots:
+
+| Date or question | Senate behavior | What it demonstrates |
+| --- | ---: | --- |
+| Oil nationalization, March 1951 | Approved after the Majles | Nationalization crossed the chamber's conservative baseline |
+| Renewed inclination, 5 July 1952 | Mossadegh 14 of 45 | Strong pre–30 Tir resistance, but not a thirty-one-member party |
+| Renewed inclination after 30 Tir | Mossadegh 33 of 41 | Public mobilization sharply altered upper-house conduct |
+| Six-month special powers, August 1952 | Provisionally 26–4 | Acquiescence with attempted limits; the complete official division is not yet available |
+| Senate term, autumn 1952 | Majles reduced six years to two | The elected chamber effectively closed the conservative upper house |
+
+Taqizadeh's stance, the crossover behavior of Kazemi and Nasser Qashqai, and
+the very different conduct of Zahedi or Dashti all warn against treating
+appointed and elected halves as government and opposition. Until complete
+proceedings or reliable division lists are available, Senate data should
+preserve appointment route, individual politics, attendance, and each dated
+vote separately
 ([`MAJ-S3`, pp. 96–103](AVAILABLE_SOURCES.md#maj-s3)).
+
+### Parliamentary control at a glance
+
+| Date or phase | Majles position | Senate position | Political meaning |
+| --- | --- | --- | --- |
+| February 1950 | National Front 8 in a 131-member Sixteenth Majles | New chamber structurally favored palace and notables | The Front was an opposition cadre, not a parliamentary government |
+| March–April 1951 | Nationalization gained an overwhelming cross-bloc coalition; Mossadegh reportedly nominated 79 of 99 | Nationalization approved | Oil sovereignty temporarily reorganized both chambers |
+| March 1952, first roughly 60 returns | US estimate: about 25 active government, 15 opposition, 20 conditional | — | The staggered election had not yet produced a settled chamber |
+| 29 June 1952 | Royalist Emami won the chair 39–35 after the government split | — | Office control could differ from confidence |
+| 5 July 1952 | Mossadegh 52 of 64 | Mossadegh 14 of 45 | Lower-house confidence, upper-house resistance |
+| After 30 Tir | Mossadegh 61 of 64 | Mossadegh 33 of 41 | Street victory created a temporary parliamentary landslide |
+| Late January 1953 | Mossadegh 59 of 61 and twelve-month special powers | Senate already forced toward closure | Last overwhelming recorded confidence snapshot |
+| April 1953 | CIA claimed 30 loyal, 4 wavering, and 45 or 46 potential opposition; 69 physically in Tehran | No longer functioning as a normal counter-chamber | Attendance and walkout strategy displaced stable-majority arithmetic |
+| July–August 1953 | 52, later 56, announced resignations; 23 did not | Closed | Legal membership, quorum, referendum, and royal decree replaced ordinary bicameral government |
+
+This sequence resembles a series of minority-government confidence maps more
+than an election-night seat chart. The same deputy might be in the oil
+coalition, outside the reliable government core, inside a personal caucus,
+absent for a quorum maneuver, and opposed to special powers without any one of
+those facts cancelling the others.
 
 For future election and parliament representations, the safe hierarchy is:
 
@@ -1012,6 +1211,7 @@ for each subject rather than merely listing titles.
 | Topic | Principal source locators |
 | --- | --- |
 | Constitutional powers, cabinet formation, Senate, and the 1949 revision | `MAJ-S1`, chapters 1–3 and 15–20; `MAJ-S3`, chapter 3, especially pp. 79–86 and 96–103 |
+| Official chamber membership and appointment route | Iranian Parliament, official retrospective rosters for the [Sixteenth Majles](https://commons.wikimedia.org/wiki/File:Doreh_16.pdf), [Seventeenth Majles](https://commons.wikimedia.org/wiki/File:Doreh_17.pdf), and [First Senate](https://commons.wikimedia.org/wiki/File:Senat_1.pdf) |
 | Sixteenth and Seventeenth Majles elections, constituency returns, alignment estimates, credentials, caucuses, and quorum | `MAJ-S2`, chapter 5, especially pp. 250–61; `MAJ-S3`, chapter 3, especially pp. 86–100 and 112–17 |
 | National Front composition and mass politics | `MAJ-S1`, pp. 207–08; `MAJ-S2`, chapter 5; `MAJ-S14`, chapter 1 |
 | Oil background, nationalization, and negotiations | `MAJ-S3`, chapters 1–2; `MAJ-S12`, nationalization and negotiation chapters; `MAJ-S14`, chapters 1–4 |
@@ -1051,8 +1251,11 @@ for each subject rather than merely listing titles.
   Ahmad Aramesh $10,000 intended for Ayatollah Kashani, but neither could
   confirm Kashani received it. The record does not support a complete named
   clerical, bazaar, press, or street payroll.
-- Complete official First Senate proceedings for procedural and vote-detail
-  claims.
+- **First Senate divisions:** its complete appointed/elected membership and
+  replacement list is now known, but the official proceedings remain
+  inaccessible for many sessions. Member-by-member attendance and vote
+  claims, including the reported 26–4 special-powers vote, remain provisional
+  until the chamber record can be inspected.
 - **Oil-shock welfare:** the government continued paying most former AIOC
   workers despite widespread underemployment, while fiscal compression
   appeared in arrears, unpaid contracts, reduced investment, urban
@@ -1060,13 +1263,17 @@ for each subject rather than merely listing titles.
   were more resilient than urban state- and import-dependent livelihoods, but
   household, Abadan, town-level, and provincial evidence is still too thin for
   a welfare series.
-- **Parliamentary control:** the best evidence supports dated layers rather
-  than fixed factions: eight firm National Front deputies in the Sixteenth
-  Majles; 79 completed returns out of 136 in the Seventeenth; a mid-period
-  estimate of roughly 30 firm government supporters, 4 waverers, and 45
-  potential opponents; and, by 1953, growing dependence on attendance and
-  quorum. Named member, credential, attendance, caucus, and roll-call data
-  still need to be joined into one ledger.
+- **Parliamentary control:** the official member rosters can now be compared
+  with dated scholarly and diplomatic estimates, but they do not eliminate
+  every denominator problem. The Seventeenth-Majles roster contains 81
+  constituency entries and 80 people, while the best scholarly reconstruction
+  has 79 accepted credentials and 77 initially usable members. Full
+  credential decisions, changing caucus memberships, authorized absences, and
+  member-by-member divisions are still incomplete. The safe account therefore
+  remains eight firm National Front deputies in the Sixteenth Majles; about
+  thirty initially National Front or pro-government deputies in the
+  Seventeenth; much larger issue coalitions at moments such as 30 Tir; and,
+  by 1953, control increasingly determined by attendance and quorum.
 - Contemporary Iranian corroboration for exact-day accounts, dialogue, crowd
   size, and individual motives.
 - Claim-by-claim comparison of English-language reconstructions with Persian

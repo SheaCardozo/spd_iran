@@ -656,6 +656,61 @@ collections being assigned concurrently.
   especially chapters 2–3. It is not evidence about Iran or a claim that
   British practice was unchanged across time.
 
+<a id="sup-051"></a>
+### SUP-051 — Official Sixteenth-Majles membership roster
+
+- **Status:** Acquired official retrospective reference; local-only.
+- **Bibliography:** [`P14` trust record](BIBLIOGRAPHY.md#p14).
+- **Local source:** [PDF](sources/supplemental/SUP-051-iranian-parliament-1977-sixteenth-majles-members.pdf)
+  · [metadata](sources/supplemental/SUP-051-iranian-parliament-1977-sixteenth-majles-members.md).
+- **Publication:** Majles-e Showra-ye Melli, *Asami-ye Namayandegan-e
+  Majles-e Showra-ye Melli ...*, Sixteenth-period section (Majles Press,
+  1977); 11 image pages.
+- **Provenance:** [Wikimedia Commons carrier](https://commons.wikimedia.org/wiki/File:Doreh_16.pdf)
+  reproducing the official parliamentary publication.
+- **SHA-256:** `1710ad698349e97d14a4eeea45f536080279f8a6b01b6453a84b602b8e3f62c4`.
+- **Role:** Official baseline for returned members, constituencies, duplicate
+  returns, vacancies, and chamber officers. It is not an ideological or
+  voting register; contemporary credentials and proceedings control disputed
+  cases.
+
+<a id="sup-052"></a>
+### SUP-052 — Official Seventeenth-Majles membership roster
+
+- **Status:** Acquired official retrospective reference; local-only.
+- **Bibliography:** [`P14` trust record](BIBLIOGRAPHY.md#p14).
+- **Local source:** [PDF](sources/supplemental/SUP-052-iranian-parliament-1977-seventeenth-majles-members.pdf)
+  · [metadata](sources/supplemental/SUP-052-iranian-parliament-1977-seventeenth-majles-members.md).
+- **Publication:** Majles-e Showra-ye Melli, *Asami-ye Namayandegan-e
+  Majles-e Showra-ye Melli ...*, Seventeenth-period section (Majles Press,
+  1977); 11 image pages.
+- **Provenance:** [Wikimedia Commons carrier](https://commons.wikimedia.org/wiki/File:Doreh_17.pdf)
+  reproducing the official parliamentary publication.
+- **SHA-256:** `00e1b83e5d6bd1b22326eda9b3a6699d55db267203023a741f27b78855c626b5`.
+- **Role:** Complete retrospective constituency-return baseline. Its 81
+  entries include Mozaffar Baghai for both Tehran and Kerman, producing 80
+  named people rather than a clean operative chamber count. Credential,
+  attendance, and office-holding records must be joined before any seat total
+  is treated as live.
+
+<a id="sup-053"></a>
+### SUP-053 — Official First-Senate membership roster
+
+- **Status:** Acquired official retrospective reference; local-only.
+- **Bibliography:** [`P14` trust record](BIBLIOGRAPHY.md#p14).
+- **Local source:** [PDF](sources/supplemental/SUP-053-iranian-parliament-1977-first-senate-members.pdf)
+  · [metadata](sources/supplemental/SUP-053-iranian-parliament-1977-first-senate-members.md).
+- **Publication:** Majles-e Showra-ye Melli, *Asami-ye Namayandegan-e
+  Majles-e Showra-ye Melli ...*, First-Senate section (Majles Press, 1977);
+  9 image pages.
+- **Provenance:** [Wikimedia Commons carrier](https://commons.wikimedia.org/wiki/File:Senat_1.pdf)
+  reproducing the official parliamentary publication.
+- **SHA-256:** `5e70ecf957b0794e37b1bd754dc0540ab55a06f2df9bdfc0e6d40779fdeac543`.
+- **Role:** Complete official roster separating the thirty Shah-appointed
+  senators from the thirty indirectly elected senators and recording
+  replacements. Entry route is not ideology; proceedings are still required
+  for attendance and divisions.
+
 ## Additional supplemental scholarship
 
 <a id="sup-048"></a>
