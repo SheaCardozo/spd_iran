@@ -1,0 +1,28 @@
+title: Coordinate the Press
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: press_coordination_timer <= 0
+on-arrival: month_actions += 1; press_coordination_timer += 4
+
+= Coordinate the Press
+
+Friendly newspapers can repeat a common message or preserve space for arguments
+within the emerging coalition.
+
+- @election_message: Concentrate on electoral integrity
+- @coalition_debate: Publish the coalition's internal debate
+
+@election_message
+on-arrival: public_mandate += 5; constitutional_legitimacy += 3; court_relation -= 2
+go-to: post_event
+
+The coalition's public message emphasizes its demand for representative
+elections.
+
+@coalition_debate
+on-arrival: coalition_cohesion += 2; political_intelligence += 3; public_mandate += 2
+go-to: post_event
+
+Publishing competing arguments makes the coalition look less unified, but helps
+its members understand the choices ahead.

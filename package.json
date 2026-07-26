@@ -4,11 +4,12 @@
   "private": true,
   "description": "A historically grounded political simulation of Iran's constitutional and oil crises, 1949–1953.",
   "scripts": {
-    "build": "dendrynexus make-html"
+    "build": "dendrynexus make-html",
+    "play": "npm run build && node scripts/serve.js",
+    "test": "npm run build && node --test test/*.test.js"
   },
   "dependencies": {
     "dendrynexus": "github:originn0/dendrynexus",
     "parliament-svg": "^3.0.0"
   }
 }
-

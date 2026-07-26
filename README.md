@@ -7,8 +7,10 @@ secure representative government, establish Iranian control of the oil
 industry, and preserve constitutional politics amid institutional rivalry,
 economic pressure, coalition fracture, and covert intervention.
 
-The project is in pre-production. The current build is a small technical
-foundation; it does not yet implement the campaign.
+The project is in early implementation. The current build establishes an
+SPD-style monthly card loop, shared political state, an initial status screen,
+and the sourced October 1949 opening. Its action effects are prototype balance
+values; it does not yet implement the historical campaign beyond that opening.
 
 ## Design commitments
 
@@ -25,6 +27,8 @@ foundation; it does not yet implement the campaign.
 
 The full pre-production specification and bibliography are in
 [`docs/GAME_DESIGN.md`](docs/GAME_DESIGN.md).
+The current SPD-first implementation policy and source map are in
+[`docs/IMPLEMENTATION.md`](docs/IMPLEMENTATION.md).
 
 ## Build
 
@@ -39,14 +43,23 @@ npm run build
 The generated web build is written to `out/html/`. Open
 `out/html/index.html` in a browser to run it locally.
 
+For a normal local webpage with automatic rebuilding, run:
+
+```sh
+npm run play
+```
+
+Then open <http://127.0.0.1:8080>. Set `GAME_PORT` to use another port.
+
 ## Current milestone
 
 The first playable vertical slice will cover the formation of the National
-Front through the passage of oil nationalization, with:
+Front through the passage of oil nationalization. Implementation begins close
+to the structure of *Dynamic Social Democracy* and will diverge piecemeal where
+Iran's institutions require it, with:
 
 - the October 1949 palace protest as the campaign opening;
 - a monthly briefing and decision loop;
 - coalition and named-institution records;
 - an initial oil-proposal model;
 - sourced research notes for every implemented historical event.
-

@@ -1,0 +1,29 @@
+title: Coalition Meeting
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: coalition_meeting_timer <= 0
+on-arrival: month_actions += 1; coalition_meeting_timer += 3
+
+= Coalition Meeting
+
+The organizations and political circles cooperating with Mossadegh do not yet
+constitute a disciplined party. A meeting can settle immediate priorities, but
+not erase their different interests.
+
+- @shared_program: Draft a narrow shared program
+- @open_floor: Give every tendency room to state its priorities
+
+@shared_program
+on-arrival: coalition_cohesion += 6; constitutional_legitimacy += 2; iran_party_relation += 2; toilers_relation -= 1
+go-to: post_event
+
+The meeting agrees to concentrate on representative elections and constitutional
+government. Broader disagreements remain outside the common program.
+
+@open_floor
+on-arrival: coalition_cohesion += 3; toilers_relation += 2; muslim_warriors_relation += 2; political_intelligence += 2
+go-to: post_event
+
+The discussion exposes disagreements, but the secretariat leaves with a clearer
+picture of what each circle expects from cooperation.

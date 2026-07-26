@@ -1,0 +1,28 @@
+title: Next month
+new-page: true
+is-hand: true
+max-cards: 3
+
+= [+ month +]/[+ year +]
+
+The coalition secretariat can make one major organizational commitment this
+month. Draw from Party Affairs and choose an action.
+
+- @party_affairs
+- @status: Status
+- @about_loop: How turns work
+
+@party_affairs
+title: Party Affairs
+is-deck: true
+
+- #party_affairs
+
+@about_loop
+title: How turns work
+
+Opening an action card commits the month, following the SPD baseline. The
+decision inside the card determines its effects. When the action resolves,
+cooldowns tick and the calendar advances.
+
+- @main: Return

@@ -1,6 +1,6 @@
 title: Root Scene
 new-page: true
-go-to: start_menu
+go-to: post_event if started = 1; start_menu if started = 0
 
 @start_menu
 new-page: true
@@ -9,48 +9,63 @@ new-page: true
 
 ## Iran, 1949–1953
 
-Iran has a constitution, elections, a parliament, political parties, and a
-mobilized public. It does not have a settled distribution of power.
+You represent the coordinating leadership of the National Front. Build an
+effective constitutional opposition, hold together a diverse coalition, and
+prepare for the struggle over representative government and Iranian control of
+the oil industry.
 
-You will represent the coordinating leadership of the National Front as it
-tries to secure representative government and Iranian control of the oil
-industry without losing the coalition and institutions needed to make either
-achievement durable.
+- @start_game: Start game
+- @about: About this prototype
 
-- @prototype_briefing: Read the prototype briefing
-- @about: About this project
-
-@prototype_briefing
+@start_game
 new-page: true
+on-arrival: {!
+Q.started = 1;
 
-= October 1949
+// Calendar: October 1949. As in SPD, one normal action advances one month.
+Q.time = 1;
+Q.year = 1949;
+Q.month = 10;
+Q.month_actions = 0;
 
-The elections to the Sixteenth Majles are being manipulated. Mohammad
-Mossadegh and a small group of opposition figures prepare to seek sanctuary
-at the royal palace and demand genuinely representative elections.
+// Coalition resources. These are prototype balance values, not historical data.
+Q.resources = 2;
+Q.dues = 3;
+Q.coalition_cohesion = 50;
+Q.constitutional_legitimacy = 50;
+Q.public_mandate = 35;
+Q.organizational_reach = 20;
+Q.political_intelligence = 20;
 
-The eventual game will begin here. Its first playable slice will ask the
-player to turn this protest into a working coalition, contest the elections,
-and decide how a constitutional opposition should respond to a monarchy that
-possesses both formal powers and informal instruments of influence.
+// Named relationships remain numerical during the SPD-baseline phase.
+Q.mossadegh_authority = 60;
+Q.iran_party_relation = 55;
+Q.toilers_relation = 40;
+Q.muslim_warriors_relation = 35;
+Q.court_relation = 15;
 
-This technical build confirms the project structure and build pipeline. No
-campaign systems or historical choices have been implemented yet.
-
-- @start_menu: Return to the title
+// Card cooldowns.
+Q.coalition_meeting_timer = 0;
+Q.press_coordination_timer = 0;
+Q.electoral_committee_timer = 0;
+Q.timers = [
+    'coalition_meeting',
+    'press_coordination',
+    'electoral_committee'
+];
+!}
+go-to: palace_protest
 
 @about
 new-page: true
 
-= About this project
+= About this prototype
 
-*The Last Majles* is planned as a long-form, single-player historical
-simulation. It is inspired by the institutional density of *Social Democracy:
-An Alternate History*, but it requires a distinct model of Iranian political
-life rather than a reskin of a European parliamentary party system.
+This build establishes the same basic implementation rhythm as *Dynamic Social
+Democracy*: initialize a large shared state, draw organizational action cards,
+take one strategic action per month, update the simulation, and resolve events.
 
-The design document in the repository states the historical thesis, system
-requirements, content plan, standards of evidence, and bibliography.
+The historical campaign is not implemented yet. Numerical effects in this build
+are tuning placeholders rather than estimates of historical quantities.
 
-- @start_menu: Return to the title
-
+- @start_menu: Return to title

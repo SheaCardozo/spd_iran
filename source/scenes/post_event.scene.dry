@@ -1,0 +1,42 @@
+title: Post Event
+new-page: true
+on-arrival: {!
+if (Q.month_actions >= 1) {
+    Q.time += 1;
+    Q.month_actions = 0;
+    Q.month += 1;
+
+    if (Q.month >= 13) {
+        Q.month = 1;
+        Q.year += 1;
+        Q.resources += Q.dues;
+    }
+
+    for (var timer of Q.timers) {
+        var timerName = timer + '_timer';
+        if (Q[timerName] > 0) {
+            Q[timerName] -= 1;
+        }
+    }
+}
+
+// Keep prototype qualities within their intended display range.
+var boundedQualities = [
+    'coalition_cohesion',
+    'constitutional_legitimacy',
+    'public_mandate',
+    'organizational_reach',
+    'political_intelligence',
+    'mossadegh_authority',
+    'iran_party_relation',
+    'toilers_relation',
+    'muslim_warriors_relation',
+    'court_relation'
+];
+
+for (var quality of boundedQualities) {
+    if (Q[quality] < 0) Q[quality] = 0;
+    if (Q[quality] > 100) Q[quality] = 100;
+}
+!}
+go-to: main
