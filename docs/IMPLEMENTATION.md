@@ -105,6 +105,10 @@ Their numerical effects are balance scaffolding, not historical measurements.
 3. Add advisers as cards with a shared action cooldown.
 4. Add coalition factions and faction-specific dissent.
 5. Implement Sixteenth Majles constituencies and candidates.
+   The complete research baseline is
+   [`docs/research/SIXTEENTH_MAJLES_LEDGER.md`](research/SIXTEENTH_MAJLES_LEDGER.md);
+   implementation must preserve its separate return, credential, seat-status,
+   dated-tendency, attendance, and vote layers.
 6. Add the first oil-policy state only when the campaign reaches the relevant
    proposals.
 

@@ -381,31 +381,45 @@ A caucus list records a deputy's alignment at a particular moment. A roll-call
 records how those present voted on one question. None of these is automatically
 equivalent to a durable party-seat total.
 
-The Sixteenth Majles is the clearest starting point. Abrahamian counts 131
-deputies, approximately 85 percent of them landlords, wealthy merchants, or
-senior civil servants. That social composition was not itself a faction
-count. He reconstructs a large royalist majority, roughly forty independent
-notables, a southern conservative group with especially strong British
-connections, and only eight National Front deputies.
+The Sixteenth Majles is the clearest starting point, but even here the
+headline number needs unpacking. The law authorized 136 places. The official
+roster records 131 completed returns and five unfilled places. The chamber
+approved 98 credentials in its second session, then admitted later waves.
+The Kashan/Natanz pair passed on 18 May, all eleven Tehran credentials on
+1 June, and the southern-Armenian member only in October. A returned deputy
+was therefore not necessarily an available vote from opening day. Abrahamian
+counts the eventual 131 and estimates that approximately 85 percent were
+landlords, wealthy merchants, or senior civil servants. That social
+composition was not itself a faction count. He reconstructs a large royalist
+majority, roughly forty independent notables, a southern conservative group
+with especially strong British connections, and only eight National Front
+deputies.
 
 Those eight were Mohammad Mossadegh, Abol-Hassan Haerizadeh, Hossein Makki,
 Mahmoud Nariman, Ali Shayegan, Abdol-Qadir Azad, Mozaffar Baghai, and Allahyar
-Saleh. Five represented Tehran in Abrahamian's account; Azad, Baghai, and
-Saleh represented Sabzevar, Kerman, and Kashan. The official retrospective
-roster instead places Azad among the Tehran returns and lists Baghai for both
-Tehran and Kerman. That unresolved constituency detail is precisely why
-credentials matter. Politically, the important fact is that a tiny but
-talented opposition delegation used speeches, committee work, urban
-mobilization, and the oil issue to construct majorities far larger than
-itself
+Saleh. Abrahamian places Azad in Sabzevar and Baghai in Kerman, while the
+official retrospective roster places both among the Tehran returns. Its
+footnote explains that Baghai was also returned at Kerman but no separate
+second Kerman member was seated. Saleh's credential was approved on 18 May;
+the other seven National Front members in the reconstruction were among the
+eleven Tehran credentials approved on 1 June. Politically, the important fact
+is that a tiny but talented
+opposition delegation accumulated its usable seats over time and used
+speeches, committee work, urban mobilization, and the oil issue to construct
+majorities far larger than itself
 ([`MAJ-S2`, pp. 250–67](AVAILABLE_SOURCES.md#maj-s2);
 [official Sixteenth-Majles roster](https://commons.wikimedia.org/wiki/File:Doreh_16.pdf)).
 
 The conservative majority's eventual support for nationalization did not
-turn it into the National Front. In April 1951 Mossadegh was reportedly
-nominated for prime minister by 79 of 99 deputies present. That was an
-issue-and-government-formation coalition created by the oil crisis and public
-pressure, not a seventy-nine-member party caucus.
+turn it into the National Front. On 15 March 1951 every representative
+present rose for the nationalization report; on 27 April every representative
+present rose for the final nine-article implementation bill after
+article-by-article standing votes. Neither record prints a numerical tally.
+The following day Mossadegh was reportedly nominated for prime minister by
+79 of 99 deputies present at a secret inclination meeting. These were two
+unanimous public policy votes and one very large secret government-formation
+vote, not a seventy-nine-member National Front caucus (`SUP-007`, sessions
+128 and 141; `SUP-006`, printed pp. 15–16).
 
 The Seventeenth Majles is much harder to turn into a conventional result
 graphic. A 28 March 1952 US report, based on roughly the first sixty returns,
@@ -544,8 +558,8 @@ vote separately
 
 | Date or phase | Majles position | Senate position | Political meaning |
 | --- | --- | --- | --- |
-| February 1950 | National Front 8 in a 131-member Sixteenth Majles | New chamber structurally favored palace and notables | The Front was an opposition cadre, not a parliamentary government |
-| March–April 1951 | Nationalization gained an overwhelming cross-bloc coalition; Mossadegh reportedly nominated 79 of 99 | Nationalization approved | Oil sovereignty temporarily reorganized both chambers |
+| February–October 1950 | 136 authorized, 131 eventual returns; 98 credentials approved in session 2, with later admission waves; National Front cohort 8 | New chamber structurally favored palace and notables | Returns, accepted seats, usable votes, and political cohorts had different denominators |
+| March–April 1951 | All present stood for nationalization and later the implementation bill; no numerical tallies printed; Mossadegh reportedly nominated 79 of 99 | Nationalization approved | Oil sovereignty temporarily reorganized both chambers |
 | March 1952, first roughly 60 returns | US estimate: about 25 active government, 15 opposition, 20 conditional | — | The staggered election had not yet produced a settled chamber |
 | 29 June 1952 | Royalist Emami won the chair 39–35 after the government split | — | Office control could differ from confidence |
 | 5 July 1952 | Mossadegh 52 of 64 | Mossadegh 14 of 45 | Lower-house confidence, upper-house resistance |
@@ -1263,14 +1277,19 @@ for each subject rather than merely listing titles.
   were more resilient than urban state- and import-dependent livelihoods, but
   household, Abadan, town-level, and provincial evidence is still too thin for
   a welfare series.
-- **Parliamentary control:** the official member rosters can now be compared
-  with dated scholarly and diplomatic estimates, but they do not eliminate
-  every denominator problem. The Seventeenth-Majles roster contains 81
+- **Parliamentary control:** the Sixteenth Majles now has a complete
+  136-place return ledger, a 98-person initial credential block and 23 later
+  members mapped to admission waves, its presiding boards, named National
+  Front cohort, and its decisive nationalization votes. The 98-name
+  row-by-row crosswalk, ten later credential-session locators,
+  attendance totals, and most named divisions remain open. The
+  Seventeenth-Majles roster contains 81
   constituency entries and 80 people, while the best scholarly reconstruction
   has 79 accepted credentials and 77 initially usable members. Full
   credential decisions, changing caucus memberships, authorized absences, and
   member-by-member divisions are still incomplete. The safe account therefore
-  remains eight firm National Front deputies in the Sixteenth Majles; about
+  remains eight firm National Front returns in the Sixteenth Majles,
+  accumulated into usable seats over time; about
   thirty initially National Front or pro-government deputies in the
   Seventeenth; much larger issue coalitions at moments such as 30 Tir; and,
   by 1953, control increasingly determined by attendance and quorum.

@@ -41,6 +41,7 @@ file verification only; an implemented claim still requires a checked locator.
 | <a id="maj-s12"></a>`MAJ-S12` | [`S18`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Mostafa Elm, *Oil, Power, and Principle: Iran's Oil Nationalization and Its Aftermath* (Syracuse UP, 1992). [EPUB](sources/major/MAJ-S12-elm-1992-oil-power-principle.epub) · [metadata](sources/major/MAJ-S12-elm-1992-oil-power-principle.md) | Valid 37-member EPUB with complete chapters, notes, and index. SHA-256 `b8c3046b231c5c864db86a283881cc9d36a59f3ccd39f033be7c4a9ef9727b55`. Reflowable sections are stable; print pages are not. | **Acquired; source EPUB local-only.** |
 | <a id="maj-s13"></a>`MAJ-S13` | [`S21`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Fakhreddin Azimi, *The Quest for Democracy in Iran* (Harvard UP, 2008). [PDF](sources/major/MAJ-S13-azimi-2008-quest-for-democracy.pdf) · [metadata](sources/major/MAJ-S13-azimi-2008-quest-for-democracy.md) | 508-page JSTOR PDF. SHA-256 `3acd9dc720662b1f79e82aee0a100c2b6543b151f0b5ff0bac07e1c0b8d95ddd`. | **Acquired; local-only; review pending.** |
 | <a id="maj-s14"></a>`MAJ-S14` | [`S22`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | David S. Painter and Gregory Brew, *The Struggle for Iran* (UNC Press, 2023). [EPUB](sources/major/MAJ-S14-painter-brew-2023-struggle-for-iran.epub) · [metadata](sources/major/MAJ-S14-painter-brew-2023-struggle-for-iran.md) | Valid reflowable JSTOR EPUB. SHA-256 `73b9f43999db6a450363d27ddad4c5439150dbd542899dab2c41cfaf161c6cba`. | **Acquired; local-only; review pending.** |
+| <a id="maj-s15"></a>`MAJ-S15` | [`S19`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Sepehr Zabih, *The Communist Movement in Iran* (University of California Press, 1966). [PDF](sources/major/MAJ-S15-zabih-1966-communist-movement-iran.pdf) · [metadata](sources/major/MAJ-S15-zabih-1966-communist-movement-iran.md) | Complete 305-page Internet Archive scan with searchable text, bibliography, and index. SHA-256 `fb1835fbd7a3ff291f8c1204187db9e73514132f68a656c5908736be32be7d5e`. | **Acquired; initial Sixteenth-Majles review completed; local-only.** |
 
 ## Supplemental sources
 
@@ -670,9 +671,11 @@ collections being assigned concurrently.
   reproducing the official parliamentary publication.
 - **SHA-256:** `1710ad698349e97d14a4eeea45f536080279f8a6b01b6453a84b602b8e3f62c4`.
 - **Role:** Official baseline for returned members, constituencies, duplicate
-  returns, vacancies, and chamber officers. It is not an ideological or
-  voting register; contemporary credentials and proceedings control disputed
-  cases.
+  returns, vacancies, and chamber officers. Its complete 136-place
+  transcription is joined to the proceedings in
+  [`SIXTEENTH_MAJLES_LEDGER.md`](SIXTEENTH_MAJLES_LEDGER.md). It is not an
+  ideological or voting register; contemporary credentials and proceedings
+  control disputed cases.
 
 <a id="sup-052"></a>
 ### SUP-052 — Official Seventeenth-Majles membership roster

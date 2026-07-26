@@ -86,6 +86,13 @@ legalistic operation, not a clean correction to the official record
 
 ## The Sixteenth Majles
 
+The complete constituency and legal-status reconstruction now lives in the
+[`Sixteenth Majles ledger`](SIXTEENTH_MAJLES_LEDGER.md). It records all 136
+authorized places, 131 completed returns, the five distinct unfilled places,
+the Shadlu replacement, later seat losses, the chamber boards, the first
+credential waves, and a conservative political classification. This section
+explains what those records mean for control.
+
 ### Social and political baseline
 
 The Sixteenth Majles opened in February 1950 with 131 deputies actually
@@ -106,6 +113,24 @@ every vote. Public mobilization and the legitimacy of oil nationalization
 eventually induced conservative deputies and senators to support measures
 they might otherwise have opposed (`MAJ-S2`, pp. 260–67; `MAJ-S3`, pp. 8–9).
 
+### Returns were not yet votes
+
+The retrospective roster's 131 is an eventual return count. In session 2 on
+18 February 1950 the chamber approved 98 credentials. Sessions 3, 5, 6, 7,
+and 8 added nine. The two Kashan/Natanz credentials, including National Front
+deputy Allahyar Saleh, passed on 18 May; all eleven Tehran credentials,
+including the other seven members of the reconstructed National Front cohort,
+passed on 1 June. Petros Abkar's southern-Armenian credential passed only in
+October. The full named crosswalk is in the
+[`credential ledger`](SIXTEENTH_MAJLES_LEDGER.md#credential-waves-already-verified).
+
+This changes how early control should be described. The National Front had
+eight returned deputies in the historical reconstruction, but it did not
+necessarily have eight usable votes in February. Nor did the “royalist
+majority” mean one disciplined government whip. Credentials, attendance,
+office acceptance, death, committee assignment, the question before the
+house, and public pressure all changed the operative denominator.
+
 ### The eight National Front deputies
 
 | Deputy | Constituency in Abrahamian's reconstruction | Initial tendency | Confidence and qualification |
@@ -121,10 +146,11 @@ they might otherwise have opposed (`MAJ-S2`, pp. 260–67; `MAJ-S3`, pp. 8–9).
 
 The constituency discrepancy for Azad is a warning against copying a single
 secondary list into code. The official Sixteenth-Majles scan lists Azad in
-Tehran, while Abrahamian places him in Sabzevar. The official scan also lists
-Baghai in both Tehran and Kerman. Before constituency mechanics are
-implemented, the relevant credentials proceedings must decide whether these
-were duplicate returns, later choices, or a secondary-source error.
+Tehran, while Abrahamian places him in Sabzevar. The official roster's
+footnote resolves the apparent Baghai duplication more clearly: Baghai was
+also returned for Kerman, but is listed under Tehran and no separate second
+Kerman member was seated. The remaining credential proceeding should still
+be checked before the exact choice date becomes a simulation event.
 
 ### How eight deputies became decisive
 
@@ -146,6 +172,23 @@ premiership to Mossadegh. A contemporary report put his nomination at 79 of
 99 deputies present. That was a government-formation and oil-policy
 coalition—not a conversion of seventy-nine deputies into National Front
 members.
+
+### Dated Sixteenth-Majles control
+
+| Date or phase | Legal or voting layer | Best supported interpretation |
+| --- | --- | --- |
+| 18 February 1950 | 98 credentials approved in session 2 | The operating chamber began well below the eventual 131 returns. |
+| 22 February–12 March 1950 | Nine more credentials mapped in sessions 3, 5, 6, 7, and 8 | Legal membership accumulated in waves while the permanent board and committees formed. |
+| 18 May 1950 | Allahyar Saleh and Mohammad-Kazem Saleh-Sheibani approved | One of the National Front eight became usable only months into the term. |
+| 1 June 1950 | All eleven Tehran credentials approved | The other seven members of the reconstructed National Front cohort became credentialed together with Jamal Emami and three other Tehran returns. |
+| 12 October 1950 | Petros Abkar approved | At least one communal constituency remained unresolved deep into the term. |
+| December 1950–March 1951 | Special oil committee and nationalization campaign | The Front converted committee position, speeches, and public pressure into an issue coalition far beyond eight deputies. |
+| 15 March 1951 | Nationalization principle accepted unanimously by all present in a standing vote; no number printed | A cross-bloc sovereignty vote; it cannot be read back as party affiliation. |
+| 27 April 1951 | Implementation bill approved unanimously by all present after article-by-article standing votes; no number printed | A second cross-bloc decision with a different legal object and denominator. |
+| 28 April 1951 | Mossadegh reportedly 79 of 99 present in the inclination ballot | The conservative chamber selected the opposition leader to execute the policy it had embraced. |
+
+The member-level return, status, office, and vote audit is maintained in
+[`SIXTEENTH_MAJLES_LEDGER.md`](SIXTEENTH_MAJLES_LEDGER.md).
 
 ## The Seventeenth Majles
 
@@ -611,8 +654,9 @@ original slate as permanent voting parties.
 1. Reconcile the 81 official Seventeenth-Majles constituency returns, 80
    unique people, 79 accepted credentials, and 77 usable members through the
    credential proceedings.
-2. Transcribe every Sixteenth- and Seventeenth-Majles credential decision,
-   authorized absence, death, resignation, and return date from `SUP-007`.
+2. Complete the Sixteenth session-2 98-name credential crosswalk and the
+   remaining ten exact credential-session locators; then perform the equivalent
+   Seventeenth audit.
 3. Recover or reconstruct the full dated membership of the Homeland,
    National Movement, Freedom, Iran, Alliance, both Unity, State,
    Confederate, Save the Movement, and Islamic caucuses.
@@ -629,6 +673,9 @@ original slate as permanent voting parties.
 | Claim family | Source |
 | --- | --- |
 | Sixteenth Majles composition and National Front eight | `MAJ-S2`, pp. 250–67 |
+| Complete Sixteenth return roster, vacancies, replacements, and boards | `SUP-051`, pp. 1–11; [`SIXTEENTH_MAJLES_LEDGER.md`](SIXTEENTH_MAJLES_LEDGER.md) |
+| Sixteenth credential waves presently mapped | `SUP-007`, sessions 2, 3, 5, 6, 7, 8, 25, 30, and 69 |
+| Tudeh ban and absence of a legal communist parliamentary caucus | `MAJ-S15`, pp. 161–75 |
 | Seventeenth election, social composition, initial 30, and fracture | `MAJ-S2`, pp. 269–80; `MAJ-S3`, pp. 86–117 |
 | Official Sixteenth, Seventeenth, and First-Senate rosters | `SUP-051`, `SUP-052`, `SUP-053` |
 | Early Seventeenth election estimate | [FRUS, Iran, doc. 67, paras. 6–7](https://history.state.gov/historicaldocuments/frus1951-54Iran/d67) |

@@ -234,7 +234,7 @@ control chronology are now maintained in
 
 | Date or phase | Evidence of control | What it means |
 | --- | --- | --- |
-| **Sixteenth Majles, 1950–spring 1951** | The National Front entered with only about **eight firm deputies**. A substantial majority could be personally or socially conservative and skeptical of Mossadegh while voting for oil nationalization. | No National Front parliamentary majority existed. Oil votes were a large issue coalition, not a party seat count. `MAJ-S2`, chapter 5; `MAJ-S3`, chapter 3; FRUS doc. 63, para. 12. |
+| **Sixteenth Majles, 1950–spring 1951** | The chamber had 136 authorized places and 131 eventual returns, but session 2 initially approved 98 credentials. Allahyar Saleh passed on 18 May and the eleven Tehran returns—including the other seven National Front members in the reconstruction—on 1 June. The National Front historical cohort contained about **eight firm returned deputies**. All representatives present stood for the nationalization report on 15 March 1951 and for the aggregate implementation bill on 27 April; neither proceeding prints a numerical tally. | No National Front parliamentary majority existed. Return, accepted credential, attendance, and vote are separate. The oil votes were unanimous among those present and represented a large issue coalition, not a party seat count. `SUP-051`; `SUP-007`, sessions 2, 3, 5, 6, 7, 8, 25, 30, 69, 128, and 141; `MAJ-S2`, chapter 5; `MAJ-S3`, chapter 3. |
 | **Mossadegh's nomination, 28 April 1951** | A contemporary Associated Press report said **79 of 99 deputies** at the secret meeting voted for Mossadegh. | It is a cabinet-formation vote, not evidence that 79 deputies joined the National Front. AP, [“Mossadegh Urged As New Premier By Iranian House,” 28 April 1951](https://www.mohammadmossadegh.com/news/ap-associated-press/april-28-1951/); compare `MAJ-S3`, chapter 3. |
 | **Early Seventeenth Majles election** | **136 seats were legally possible.** The official retrospective roster contains 81 constituency entries and 80 people because Baghai appears for Tehran and Kerman; specialist reconstructions normally count 79 accepted credentials and 77 initially usable members. Tehran returned all twelve National Front-list candidates. A March 1952 US estimate of the first roughly 60 returns found about 25 active supporters, 15 opponents, and 20 conditional deputies. | Return, person, accepted credential, and usable member are different denominators. Constituency wins and durable caucus loyalty must remain separate. `SUP-052`; `MAJ-S2`, pp. 269–70; `MAJ-S3`, pp. 86–100; FRUS docs. 63 and 67. |
 | **Opening Seventeenth-Majles control, 29 June–5 July 1952** | Royalist Hassan Emami won the speakership 39–35 after the government first split between Shayegan (16) and Moazemi (17). Mossadegh then received **52 of 64** Majles votes but only **14 of 45** Senate votes in the renewed inclination. | Chamber-office control, lower-house confidence, and upper-house confidence were three distinct contests. `MAJ-S3`, pp. 96–103. |
@@ -245,6 +245,13 @@ control chronology are now maintained in
 | **After National Front resignations, August 1953** | The British post-coup review recorded **23 non-resigning deputies** and proposed completing the 57 still-unfilled seats to create an 80-member quorum-capable chamber. | Confirms how profoundly the incomplete election and resignations altered the denominator. FRUS vol. X, doc. 362, para. 11. |
 
 ### Control estimate suitable for future mechanics
+
+The complete Sixteenth-Majles baseline is now in
+[`SIXTEENTH_MAJLES_LEDGER.md`](SIXTEENTH_MAJLES_LEDGER.md): all 136 places,
+131 returns, five unfilled places, replacements and later vacancies,
+presiding boards, early credential waves, cautiously named tendencies, and
+the decisive public oil votes. It deliberately leaves undocumented politics
+unclassified.
 
 The evidence supports four simultaneous player-facing ideas:
 

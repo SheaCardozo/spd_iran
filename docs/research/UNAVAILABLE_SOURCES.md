@@ -29,7 +29,6 @@ acquired core bibliographies and specialist reference bibliographies.
 | Bibliography ID | Source | Priority and purpose | Acquisition requirement |
 | --- | --- | --- | --- |
 | [`S17`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Mohammad Ali Movahed, *Khab-e Ashofteh-ye Naft*, 2 vols. | **Critical:** Persian legal and oil-history foundation | Volume II, revised second edition, is [`MAJ-S10`](AVAILABLE_SOURCES.md#maj-s10). No accessible volume-I PDF was found; retail/catalog records identify ISBN `978-964-431-023-2`. Acquire an identified volume-I file or scan. |
-| [`S19`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Sepehr Zabih, *The Communist Movement in Iran* (1966) | **Medium:** older foundational Tudeh comparison | Complete UC Press edition |
 | [`S20`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Cosroe Chaqueri, ed., *Historical Documents: The Workers', Social-Democratic, and Communist Movement in Iran*, 23 vols. (1969–94) | **High:** documentary corpus for the Iranian left | [`SUP-011`](AVAILABLE_SOURCES.md#sup-011) partially resolves the set with retypeset volumes 1–6 and legacy scans of volumes 3, 8, 19, and 20. Acquire original-edition facsimiles and remaining volumes, prioritizing 12 and 17. |
 
 ## World Bank mediation folders
@@ -98,6 +97,7 @@ edition records live in the available-source catalog.
 | `S21` | 2026-07-26 | [`MAJ-S13`](AVAILABLE_SOURCES.md#maj-s13) | User supplied the complete 508-page JSTOR book PDF; substantive review remains pending. |
 | `S22` | 2026-07-26 | [`MAJ-S14`](AVAILABLE_SOURCES.md#maj-s14) | User supplied the complete JSTOR EPUB; use chapter/section locators unless print pagination is verified. |
 | `S23` | 2026-07-26 | [`SUP-048`](AVAILABLE_SOURCES.md#sup-048) | User supplied the complete JSTOR article; it remains a dated historiographic lead rather than a baseline. |
+| `S19` | 2026-07-26 | [`MAJ-S15`](AVAILABLE_SOURCES.md#maj-s15) | User supplied the complete 1966 University of California Press edition; initial Sixteenth-Majles and National Front/Tudeh locators were verified. |
 | `IR-P6` Mossadegh court-record editions | 2026-07-26 | [`SUP-025`](AVAILABLE_SOURCES.md#sup-025) | All four target volumes are local: the identified 1363 two-volume first-instance trial and the 1365 military-appeal and 1367 Court of Cassation editions. The scans were checked for identity and completeness. |
 
 ## Iranian and Persian-language acquisition priorities
