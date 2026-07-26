@@ -522,6 +522,7 @@ below; presence does not turn an unread work into claim-level evidence.
 | S21 | Fakhreddin Azimi, *The Quest for Democracy in Iran: A Century of Struggle Against Authoritarian Rule* (Harvard University Press, 2008) | Book-length constitutional and political history by an established historian of modern Iran whose specialist work centers on democratic institutions, parties, and authoritarianism. It is the strongest newly identified secondary target for Senate powers and parliamentary-system context. Broad institutional interpretation still needs claim-level comparison with the proceedings. | **Acquired:** [`MAJ-S13`](AVAILABLE_SOURCES.md#maj-s13), complete 508-page JSTOR PDF. Prioritize “Restoration of Parliamentary Politics,” notes, bibliography, and index; review remains pending. |
 | S22 | David S. Painter and Gregory Brew, *The Struggle for Iran: Oil, Autocracy, and the Cold War, 1951–1954* (University of North Carolina Press, 2023) | Recent university-press synthesis by historians of oil, U.S. foreign relations, and modern Iran. Its use of Iranian, American, and British materials makes it valuable for updating the oil-crisis chronology and identifying primary records; its international-relations focus does not replace Iranian parliamentary evidence. | **Acquired:** [`MAJ-S14`](AVAILABLE_SOURCES.md#maj-s14), complete JSTOR EPUB with notes and bibliography. Review remains pending; cite stable chapter/section locators unless print pagination is verified. |
 | S23 | N. Marbury Efimenco, “An Experiment with Civilian Dictatorship in Iran: The Case of Mohammed Mossadegh,” *The Journal of Politics* 17, no. 3 (August 1955), pp. 390–406 | Near-contemporary peer-reviewed political-science treatment. It may be useful for tracing early constitutional interpretations and citations, but its framing is overtly evaluative, its evidence base predates later archival access, and it must not displace Azimi or later scholarship. | **Acquired:** [`SUP-048`](AVAILABLE_SOURCES.md#sup-048), complete JSTOR article with stable journal pagination. Substantive review remains pending. |
+| S24 | M. Torkamān, *Qīām-e mellī-e sīom-e Tīr* (قیام ملی سی‌ام تیر; Tehran, 1361 SH / 1982) | **Priority Persian documentary lead.** Ahmad Ashraf's specialist bibliography cites this work for detailed police evidence, occupational data on arrestees, and a combined 235 killed-and-injured figure. The compiler's expertise, edition history, selection method, and exact use of official records have not yet been established; its value will depend on the reproduced documents and transparent provenance rather than reputation inferred from the citation alone. | **Unavailable locally:** [`UNAVAILABLE_SOURCES.md`](UNAVAILABLE_SOURCES.md#iranian-and-persian-language-acquisition-priorities). Acquire the complete identified edition and check pp. 465–66, casualty definitions, geographic scope, lists, document provenance, bibliography, and editorial method before using any number. Iranica remains only the discovery path. |
 
 ## Reviewed primary and reference families
 
@@ -627,6 +628,12 @@ below; presence does not turn an unread work into claim-level evidence.
   operational accounts and preserve the documented archival-mirror provenance.
 - **P9–P11:** approved document portals, finding aids, or official historical
   orientation. Follow them to the underlying document.
+- **P12:** the unexpurgated 2 September 1953 British memorandum, “Persia:
+  Political Review of the Recent Crisis,” is acquired as
+  [`SUP-049`](AVAILABLE_SOURCES.md#sup-049). Its NARA provenance is firm, but
+  its author, office, audience, and informants remain unidentified. It is
+  authoritative evidence of the document's contemporary British assessment
+  and allegations, not conclusive evidence that each allegation was true.
 - **R1–R12:** respected specialist reference entries for discovery and
   cross-checking only. Record the individual entry author and follow the
   bibliography; an Iranica entry cannot be the sole authority for an event.

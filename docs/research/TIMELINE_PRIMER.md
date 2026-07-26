@@ -1,18 +1,18 @@
-# Timeline primer: Iran's oil-nationalization crisis, 1941–1954
+# The Last Majles
 
 ## Purpose and limits
 
-This is a narrative orientation to the political story surrounding Iran's oil
-nationalization movement, Mohammad Mossadegh's governments, and the coup of
-August 1953. It begins with the political opening of 1941 and ends with the
-immediate post-coup oil settlement and consolidation of royal power. A final
-section carries the consequences forward to 1979.
+This primer is intended for a reader who may know little more about Iran than
+the names Mossadegh and the Shah. It explains the political institutions,
+social coalitions, oil economy, international confrontation, and sequence of
+events that produced the coup of August 1953. It begins with the political
+opening of 1941, follows the immediate post-coup settlement, and carries the
+consequences forward to 1979.
 
-It is a research primer, not a claim record for playable content. A game event
-still requires its own adjacent source note with claim-level locators. Dates,
-headcounts, casualty figures, responsibility for particular covert actions,
-and interpretations identified here as disputed must not be silently promoted
-into precise game claims.
+Dates, headcounts, casualty figures, responsibility for particular covert
+actions, and historical interpretations are stated cautiously where the
+evidence remains disputed. Dates are Gregorian; familiar Iranian calendar
+names such as 30 Tir and 9 Esfand are explained when they appear.
 
 The sources transliterate names in several ways. This document uses
 **Mossadegh**, **Majles**, **Tudeh**, and **National Front** except in titles.
@@ -90,6 +90,311 @@ The coalition's composition and tensions are treated in
 [`MAJ-S2`, chapter 5](AVAILABLE_SOURCES.md#maj-s2) and
 [`MAJ-S14`, chapter 1, “Mosaddeq and the National Front”](AVAILABLE_SOURCES.md#maj-s14).
 
+## Political map: how power worked
+
+### The constitutional framework
+
+Iran's constitutional order rested on the Fundamental Law of 1906 and its
+1907 Supplement, products of the Constitutional Revolution. They created a
+constitutional monarchy and an elected National Consultative Assembly—the
+Majles—but not a tidy modern separation of powers. The texts described the
+monarch as chief executive and commander of the armed forces while making
+ministers responsible to parliament. The Shah issued appointments and royal
+decrees; the cabinet was supposed to answer politically for what the state
+did.
+
+By this period the Majles had 136 seats and normally sat for a two-year term.
+It controlled legislation, taxation, state budgets, borrowing, foreign
+concessions, and international agreements. It elected its own president,
+organized committees, examined the credentials of incoming deputies, and
+could question ministers. Deputies enjoyed parliamentary immunity while the
+assembly was in session. These powers made the Majles much more than an
+advisory chamber, even though rulers repeatedly found ways to intimidate,
+pack, suspend, or bypass it
+([`MAJ-S3`, chapter 3, pp. 79–86](AVAILABLE_SOURCES.md#maj-s3);
+[`MAJ-S1`, chapters 1–3](AVAILABLE_SOURCES.md#maj-s1)).
+
+### How a government was formed
+
+Voters did not directly elect a prime minister. Parliamentary factions first
+assembled a majority for a candidate through a **vote of inclination**
+(*ezhar-e tamayol*). The Shah then issued that candidate a *farman*, or royal
+decree, authorizing him to form a government. The new prime minister returned
+to the Majles with his ministers and program for a **vote of confidence**
+(*ray-e e'temad*).
+
+That sequence joined royal form to parliamentary substance. In ordinary
+constitutional practice the Shah was expected to appoint the person who could
+command the chamber, rather than select a government by personal preference.
+The Majles could subsequently interrogate an individual minister or bring down
+the ministry through a vote of no confidence. A new parliament also expected
+the incumbent prime minister to resign formally and seek a fresh vote of
+inclination. Much of the crisis turns on whether these conventions were
+binding rules or merely practices that a sufficiently powerful monarch,
+cabinet, or parliamentary bloc could evade
+([`MAJ-S3`, pp. 79–86 and 96–103](AVAILABLE_SOURCES.md#maj-s3)).
+
+### The Shah, the army, and the 1949 revision
+
+The constitution left dangerous ambiguities. The Shah claimed the authority
+to appoint and dismiss ministers and treated command of the armed forces as a
+personal royal prerogative. Constitutionalists answered that ministers—not
+the inviolable monarch—were responsible for government and that the army
+therefore had to obey the responsible cabinet. Control of the War Ministry,
+senior commands, promotions, and military budgets was consequently a struggle
+over the location of sovereignty, not an administrative quarrel.
+
+The original order had not given the Shah a general power to dissolve the
+Majles. A constituent assembly convened after the 1949 attempt on his life
+amended the constitution to permit royal dissolution of either chamber, with
+new elections required within three months. The amendment strengthened the
+palace but did not resolve whether the Shah could dismiss a prime minister who
+still claimed parliamentary or popular support. That unresolved question
+became central in August 1953
+([`MAJ-S1`, chapters 15–20](AVAILABLE_SOURCES.md#maj-s1);
+[`MAJ-S3`, pp. 82–86](AVAILABLE_SOURCES.md#maj-s3)).
+
+### The Senate
+
+The constitutional texts had provided for a sixty-member Senate, but it did
+not actually convene until 1950. Thirty senators were appointed by the Shah
+and thirty were elected. Its membership and method of formation made it more
+conservative and more closely connected to the palace than the Majles.
+
+The Senate could therefore act as a second source of parliamentary approval
+or resistance. In July 1952, for example, Mossadegh won a new vote of
+inclination decisively in the Majles but initially received only fourteen of
+forty-five Senate votes. References to “parliament” in this period may mean
+the elected Majles alone or the two chambers acting within an incompletely
+settled bicameral system
+([`MAJ-S3`, pp. 82–86 and 96–103](AVAILABLE_SOURCES.md#maj-s3)).
+
+### How Majles elections worked
+
+The law provided direct voting by adult men; women remained excluded.
+Representation was territorial rather than proportional to a national party
+vote. Seats were allocated among geographic constituencies, with reserved
+representation for recognized religious minorities. Some constituencies
+returned one deputy, while Tehran returned twelve. A voter selected named
+candidates, often from a locally circulated slate, rather than choosing a
+party whose national percentage was converted into seats.
+
+There was no single nationwide election day followed by an immediate national
+result. Polling opened constituency by constituency and could continue for
+weeks or months. For the Seventeenth Majles, voting began in December 1951 and
+was still incomplete the following May. This staggered timetable let the
+government, palace, army, foreign embassies, candidates, and press react to
+early results while later contests were still underway
+([`MAJ-S3`, pp. 86–96](AVAILABLE_SOURCES.md#maj-s3)).
+
+The Interior Ministry administered elections through governors and local
+supervisory boards; in areas under martial law, military authorities acquired
+particular leverage. The formal act of voting could therefore be direct while
+the surrounding process was heavily mediated. Landlords and tribal leaders
+could deliver dependent voters; officials could shape supervisory boards;
+soldiers could intimidate a district; organizers could distribute completed
+ballots to people unable to write candidates' names; and ballot boxes could be
+stuffed, switched, delayed, or invalidated. Urban organization and press
+campaigning mattered greatly in Tehran, while property, patronage, and armed
+authority were often more decisive in rural and tribal constituencies.
+
+Parties did not own seats in the modern sense. Candidates entered as
+individual deputies and could change caucuses after election. Before taking a
+seat, each deputy's credentials were reviewed by the Majles itself, turning
+disputed returns into parliamentary battles. The same chamber that resulted
+from an election therefore helped decide which election results were valid
+([`MAJ-S3`, pp. 90–100](AVAILABLE_SOURCES.md#maj-s3)).
+
+### Why the incomplete Seventeenth Majles could function
+
+The Seventeenth Majles had 136 authorized seats. Mossadegh stopped the
+unfinished elections after seventy-nine had been filled, arguing that the
+assembly had enough members to convene and that continued voting in
+palace- and army-influenced districts would manufacture a hostile majority.
+The decision had precedent, but opponents treated it as an abuse of executive
+power.
+
+Attendance rules made the incomplete chamber unusually vulnerable. Its rules
+required two-thirds of the relevant membership to open debate, three-quarters
+to take a vote, and then a simple majority of those voting to pass an ordinary
+motion. Authorized absences and disputed credentials affected the operative
+number. Consequently, a few dozen deputies could sustain a government, defeat
+it, or prevent any decision simply by leaving the chamber. Quorum denial,
+credential challenges, ministerial questioning, and fistfights were not side
+shows: they were methods of governing or disabling the state
+([`MAJ-S3`, pp. 92–100 and 112–17](AVAILABLE_SOURCES.md#maj-s3)).
+
+### What the election results actually tell us
+
+There are usable numbers for these elections, but they do not all measure the
+same thing. A constituency result identifies the candidate who was returned.
+Credential approval determines whether that return became an accepted seat.
+A caucus list records a deputy's alignment at a particular moment. A roll-call
+records how those present voted on one question. None of these is automatically
+equivalent to a durable party-seat total.
+
+The Sixteenth Majles offers the clearest National Front result. Its
+parliamentary delegation comprised eight deputies. Mossadegh, Haerizadeh,
+Makki, Nariman, and Shayegan represented Tehran; Azad represented Sabzevar;
+Baghai represented Kerman; and Saleh represented Kashan. The delegation was
+tiny in a chamber of more than 130 deputies, but it included effective
+speakers, organizers, and the eventual prime minister. Its political weight
+cannot therefore be read from eight seats alone
+([`MAJ-S2`, pp. 250–61](AVAILABLE_SOURCES.md#maj-s2)).
+
+The Seventeenth Majles is much harder to turn into a conventional result
+graphic. Polling stopped with seventy-nine of 136 seats returned. At least four
+returned deputies never took their seats, and credential disputes continued
+after the chamber opened. A contemporary American intelligence estimate
+classified the seventy-nine as follows:
+
+| Dated estimate of alignment | Deputies |
+| --- | ---: |
+| Staunch Mossadegh supporters | 30 |
+| Waverers | 4 |
+| Potential opponents | 45 |
+
+The same estimate divided the forty-five potential opponents into ten
+royalists, seventeen unaffiliated “free floaters,” eight followers of
+Ayatollah Abol-Qasem Kashani, and ten National Front defectors. These were an
+observer's estimates of likely allegiance—not official party labels, not the
+popular vote, and not proof that all forty-five would vote together
+([`MAJ-S3`, pp. 92–100](AVAILABLE_SOURCES.md#maj-s3)).
+
+Once the chamber was operating, Abrahamian describes roughly thirty
+pro-government deputies forming the Homeland Caucus and later the National
+Movement Caucus. Roughly forty opponents divided among several small,
+personality-centered caucuses. Even the first election of the Majles
+president exposes the instability: on the second ballot, royalist Hassan
+Emami defeated Abdullah Moazemi by thirty-nine votes to thirty-five. A
+mechanic should therefore track candidates, credentials, attendance, current
+alignment, and individual votes separately rather than assigning every seat a
+permanent party color
+([`MAJ-S3`, pp. 96–100 and 112–17](AVAILABLE_SOURCES.md#maj-s3)).
+
+### Can the Senate be divided into factions?
+
+Not responsibly from the accessible record as one fixed chart. Its
+constitutional division is firm—thirty royal appointees and thirty elected
+senators—but appointment method was not the same thing as a permanent voting
+bloc. Senators were prominent individuals connected by court, family,
+landholding, professional, and political networks, and the accessible
+scholarly accounts more often report a specific vote than a complete caucus
+register.
+
+The useful numbers are therefore dated snapshots. In July 1952, Mossadegh
+received fifty-two of sixty-four votes cast in the Majles vote of inclination,
+but only fourteen of forty-five in the Senate. That comparison establishes
+real institutional resistance without pretending that the other thirty-one
+senators belonged to one organized opposition party. Until complete
+proceedings or reliable division lists are available, Senate data should show
+the appointed/elected origin of each senator where known and preserve
+individual roll calls rather than infer stable factions
+([`MAJ-S3`, pp. 96–103](AVAILABLE_SOURCES.md#maj-s3)).
+
+For future election and parliament representations, the safe hierarchy is:
+
+| Evidence | What it can support |
+| --- | --- |
+| Constituency return and credential decision | A named deputy's election and admission to the chamber |
+| Dated caucus list or contemporary alignment estimate | A provisional political grouping with its source and date visible |
+| Recorded division or vote of inclination | The behavior of the members present on that question |
+| Appointment or election to the Senate | How a senator entered the chamber, not how that senator always voted |
+| Undated party-seat total reconstructed from later loyalties | Too unstable to present as an election result |
+
+### Parties, factions, and political networks
+
+Iran did not have a stable party system resembling a contemporary European
+parliament. Deputies often followed local notables, family connections,
+patrons, or temporary parliamentary factions. Formal parties and electoral
+slates mattered, especially in Tehran, but they coexisted with governors,
+landowners, tribal leaders, security officials, guild networks, and court
+patronage.
+
+Political power also operated outside parliament:
+
+- **The bazaar** meant more than a marketplace. Its merchants, shopkeepers,
+  craft guilds, lenders, mosques, and neighborhood connections could finance
+  politics, close commerce, circulate messages, and bring crowds into the
+  streets.
+- **The ulama**, or Shi'i religious scholars, did not form a single hierarchy
+  with one political command. Individual clerics possessed different degrees
+  of religious prestige, bazaar support, and political ambition.
+- **The press** consisted of numerous partisan or personally connected
+  newspapers. A newspaper could be an organization, a patronage network, and a
+  mobilizing instrument as much as a business.
+- **The armed forces** were formally national institutions but the Shah's most
+  dependable political base. Officers also formed competing personal,
+  professional, foreign-linked, and conspiratorial networks.
+- **The street** was not one actor. Student groups, party militants, guild
+  members, religious followers, labor organizers, neighborhood strongmen,
+  paid crowds, police, and soldiers could appear together without sharing the
+  same purpose.
+
+The National Front united parts of the modern professional middle class and
+the traditional bazaar middle class against court interference and foreign
+control of oil. Those common enemies temporarily concealed disagreements over
+religion, property, social reform, emergency power, the monarchy, and the
+Tudeh. These divisions do not fit neatly onto a single left-to-right line
+([`MAJ-S2`, chapter 5, especially pp. 250–61 and
+275–78](AVAILABLE_SOURCES.md#maj-s2)).
+
+## Economic map: why oil dominated the crisis
+
+### An unequal oil enclave
+
+Iran was not simply an oil field. Most people lived outside the petroleum
+sector, agriculture remained central to livelihoods, and urban crafts,
+commerce, government employment, and non-oil trade continued to matter. Oil
+nevertheless occupied an extraordinary strategic position. The AIOC controlled
+production, the immense Abadan refinery, shipping and foreign sales, and much
+of the information needed to calculate profits and payments. Britain held a
+controlling interest in the company and treated Iranian oil as a financial,
+naval, and imperial asset.
+
+The industry generated state revenue and foreign exchange, but operated as a
+partly separated enclave whose wealth contrasted sharply with working and
+living conditions around Abadan. Iranian grievances therefore concerned
+sovereignty, accounting, labor conditions, and economic development—not only
+the percentage of profits transferred to the treasury
+([`MAJ-S9`, chapters 3–4](AVAILABLE_SOURCES.md#maj-s9);
+[`MAJ-S14`, chapter 1](AVAILABLE_SOURCES.md#maj-s14)).
+
+### What nationalization had to accomplish
+
+Nationalization transferred legal ownership to Iran, but ownership alone could
+not sell oil. Sustained exports also required technical continuity, tankers,
+insurance, buyers, access to sterling and dollars, and protection against
+lawsuits or commercial retaliation. Iranian personnel could operate much of
+the physical industry; replacing the AIOC's international marketing system
+under a coordinated British boycott was far harder.
+
+The frequently discussed “fifty-fifty” formula referred to dividing profits.
+It did not by itself answer who would manage production, audit costs, set
+output, market the oil, or compensate the former concessionaire. Those
+questions explain why apparently generous percentage offers could still leave
+the fundamental sovereignty dispute unresolved
+([`MAJ-S3`, chapters 1–2](AVAILABLE_SOURCES.md#maj-s3);
+[`MAJ-S12`, nationalization and negotiation
+chapters](AVAILABLE_SOURCES.md#maj-s12)).
+
+### Adjustment without oil exports
+
+When the embargo reduced oil exports almost to zero, the government lost its
+principal source of foreign exchange and an important stream of revenue.
+Imports contracted, development expenditure was cut, credit expanded, and
+pressure increased on prices, employment, and the currency. Abadan and people
+directly dependent on the oil economy suffered especially severe disruption.
+
+The economy nevertheless adjusted more successfully at the aggregate level
+than predictions of immediate collapse implied. Currency depreciation,
+non-oil exports, import compression, taxation, reserves, and domestic credit
+kept the state operating through August 1953. This distinction is essential:
+Iran was neither economically unharmed nor demonstrably hours from bankruptcy.
+National accounts also cannot show how evenly hardship was distributed among
+workers, salaried households, merchants, towns, and rural communities
+([`SUP-023`, pp. 2–18](AVAILABLE_SOURCES.md#sup-023)).
+
 ## 1. Before Mossadegh: concession, dictatorship, and political opening
 
 ### 1901–1941: oil and the Pahlavi state
@@ -160,8 +465,8 @@ soon joined two questions that became inseparable: Iranian sovereignty over
 the country's most important natural resource and constitutional government
 free of royal and foreign interference. Exact-day accounts of the palace
 protest vary, so this primer identifies the sequence only as October 1949
-([event claim record](events/1949-10-palace-protest.md);
-[`MAJ-S1`, pp. 207–08](AVAILABLE_SOURCES.md#maj-s1)).
+([`MAJ-S1`, pp. 207–08](AVAILABLE_SOURCES.md#maj-s1);
+[`MAJ-S2`, chapter 5](AVAILABLE_SOURCES.md#maj-s2)).
 
 ### 1949–1950: the supplemental agreement fails
 
@@ -267,8 +572,7 @@ the use of reserves. Reserves declined but remained substantial. Their
 conclusion is that macroeconomic adjustment was more successful than many
 narratives suggest, not that the embargo was painless, socially neutral, or
 sustainable indefinitely. Their evidence cannot establish population welfare
-([`SUP-023`, pp. 2–18](AVAILABLE_SOURCES.md#sup-023);
-[economic-history audit](ECONOMIC_HISTORY.md#s9-evidence-audit)).
+([`SUP-023`, pp. 2–18](AVAILABLE_SOURCES.md#sup-023)).
 
 ## 4. The constitutional showdown and the July uprising
 
@@ -375,7 +679,7 @@ security official, was kidnapped and murdered. His removal weakened the
 government's ability to monitor and suppress the conspiracy forming around
 it
 ([`MAJ-S5`, chapter 4](AVAILABLE_SOURCES.md#maj-s5);
-[`MAJ-S14`, chapter 5](AVAILABLE_SOURCES.md#maj-s14)).
+[`MAJ-S14`, pp. 138–39 and 155](AVAILABLE_SOURCES.md#maj-s14)).
 
 ### The concurrent women's-rights struggle
 
@@ -632,38 +936,68 @@ intelligence operation—is the shape of the story.
 
 ## Source spine and locator map
 
-The following are the principal works used to construct this orientation.
-Expertise, standing, interpretive limits, editions, checksums, and provenance
-are recorded in
-[`BIBLIOGRAPHY.md`](BIBLIOGRAPHY.md) and
-[`AVAILABLE_SOURCES.md`](AVAILABLE_SOURCES.md).
+The following are the principal books, articles, and primary records used to
+construct this orientation. The table gives the most useful chapters or pages
+for each subject rather than merely listing titles.
 
 | Topic | Principal source locators |
 | --- | --- |
-| Constitutional order, 1941 opening, Shah–Majles conflict | `MAJ-S1`, chapters 1–3 and 15–20; `MAJ-S3`, chapter 3, especially “The Constitution” |
+| Constitutional powers, cabinet formation, Senate, and the 1949 revision | `MAJ-S1`, chapters 1–3 and 15–20; `MAJ-S3`, chapter 3, especially pp. 79–86 and 96–103 |
+| Sixteenth and Seventeenth Majles elections, constituency returns, alignment estimates, credentials, caucuses, and quorum | `MAJ-S2`, chapter 5, especially pp. 250–61; `MAJ-S3`, chapter 3, especially pp. 86–100 and 112–17 |
 | National Front composition and mass politics | `MAJ-S1`, pp. 207–08; `MAJ-S2`, chapter 5; `MAJ-S14`, chapter 1 |
 | Oil background, nationalization, and negotiations | `MAJ-S3`, chapters 1–2; `MAJ-S12`, nationalization and negotiation chapters; `MAJ-S14`, chapters 1–4 |
 | Official implementation law | `SUP-006`, printed pp. 15–16 |
 | Labor and Abadan | `MAJ-S9`, chapters 3–4 |
 | 30 Tir and bazaar mobilization | `MAJ-S1`, chapter 19, especially pp. 288–92; `SUP-014`, pp. 159–75 |
-| Economic adjustment and its limits | `SUP-023`, pp. 2–18; `ECONOMIC_HISTORY.md` evidence audit |
+| Economic adjustment and its limits | `SUP-023`, pp. 2–18; *Foreign Relations of the United States, 1952–1954, Iran, 1951–1954*, docs. 39, 63, 67, and 152 |
 | Coalition fracture and constitutional crisis | `MAJ-S1`, chapter 20; `MAJ-S6`, chapters 11–13; `MAJ-S3`, chapter 3 |
-| 9 Esfand through the coup | `MAJ-S5`, pp. 49–288; `MAJ-S14`, chapters 5–6 |
+| 9 Esfand through the coup | `MAJ-S5`, pp. 49–288; `MAJ-S14`, chapters 5–6; *Foreign Relations of the United States*, Iran second edition, doc. 306, and volume X, doc. 362 |
 | Coup interpretation and Iranian/foreign agency | `MAJ-S4`, pp. 227–80; `MAJ-S5`, chapters 8–16; `MAJ-S7`, chapters 7–9 as revisionist counterpoint; `MAJ-S14`, chapter 6 |
+| Majles returns, alignments, votes, and quorum control | `MAJ-S2`, chapter 5, especially pp. 250–61; `MAJ-S3`, chapter 3, especially pp. 86–100 and 112–17; *Foreign Relations of the United States, 1952–1954, Iran, 1951–1954*, docs. 63, 67, 193, 233, and 239 |
 | Women and suffrage during the crisis | `SUP-015`, pp. 270–79 |
 | Cold War and decolonization frames | `MAJ-S14`, chapters 4–7; `SUP-012`, pp. 295–99 |
 | Repression, consortium, and longer aftermath | `MAJ-S2`, chapters 9–11; `MAJ-S3`, chapter 2; `MAJ-S14`, chapter 7 and “History and Contested Memories” |
 
-## Questions that remain open for event-level research
+## What remains uncertain
 
-- Exact sequences, organizers, and casualty counts for 30 Tir and 19 August.
-- Exact attribution and payment of particular clerical, bazaar, press, and
-  street intermediaries.
+- **Thirty Tir:** the uprising was produced by distinct National Front,
+  clerical-bazaar, guild, labor, and Tudeh mobilizations rather than one
+  command. Existing estimates plausibly indicate dozens killed and at least
+  hundreds killed or injured, but figures around 25 deaths, 235 combined
+  casualties, at least 250 killed or seriously injured, and much higher
+  contemporary press estimates use different categories and geographic
+  coverage. A verified death list and provincial incident ledger remain
+  unavailable.
+- **Nineteen August:** a contemporary British reconstruction places an
+  approximately 3,000-person initial crowd in south Tehran around 8 a.m.,
+  attacks on government and newspaper offices from 9 a.m. to noon, capture of
+  the radio around 2:30 p.m., and collapse of Mossadegh's residence around
+  6 p.m. It estimated more than fifty killed and about 300 wounded. The
+  sequence is substantially corroborated, but a casualty ledger and the exact
+  control of each early street column remain unresolved.
+- **Covert intermediaries:** covert propaganda finance and paid mobilization
+  are firmly established. Evidence is strongest for money and an organizing
+  role involving Ayatollah Behbehani. Two CIA participants recalled giving
+  Ahmad Aramesh $10,000 intended for Ayatollah Kashani, but neither could
+  confirm Kashani received it. The record does not support a complete named
+  clerical, bazaar, press, or street payroll.
 - Complete official First Senate proceedings for procedural and vote-detail
   claims.
-- Welfare effects of the oil shock outside the available aggregate economic
-  series, especially in Abadan, other towns, and rural provinces.
-- Contemporary Iranian corroboration for exact-day scenes, dialogue, crowd
+- **Oil-shock welfare:** the government continued paying most former AIOC
+  workers despite widespread underemployment, while fiscal compression
+  appeared in arrears, unpaid contracts, reduced investment, urban
+  unemployment, and lower imports. Early evidence suggests rural essentials
+  were more resilient than urban state- and import-dependent livelihoods, but
+  household, Abadan, town-level, and provincial evidence is still too thin for
+  a welfare series.
+- **Parliamentary control:** the best evidence supports dated layers rather
+  than fixed factions: eight firm National Front deputies in the Sixteenth
+  Majles; 79 completed returns out of 136 in the Seventeenth; a mid-period
+  estimate of roughly 30 firm government supporters, 4 waverers, and 45
+  potential opponents; and, by 1953, growing dependence on attendance and
+  quorum. Named member, credential, attendance, caucus, and roll-call data
+  still need to be joined into one ledger.
+- Contemporary Iranian corroboration for exact-day accounts, dialogue, crowd
   size, and individual motives.
 - Claim-by-claim comparison of English-language reconstructions with Persian
   documentary editions, newspapers, memoirs, and Majles

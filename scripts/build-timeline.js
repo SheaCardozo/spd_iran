@@ -10,6 +10,15 @@ const sourcePath = path.join(
 );
 const templatePath = path.join(projectDirectory, 'web', 'timeline.html');
 const outputPath = path.join(projectDirectory, 'out', 'html', 'timeline.html');
+const standaloneDirectory = path.join(projectDirectory, 'out', 'timeline');
+const standaloneImageDirectory = path.join(standaloneDirectory, 'img');
+const standaloneAssets = [
+  ['web/timeline.css', 'timeline.css'],
+  ['web/timeline.js', 'timeline.js'],
+  ['assets/img/majlis_1940s.jpg', 'img/majlis_1940s.jpg'],
+  ['assets/img/shah_1949.jpg', 'img/shah_1949.jpg'],
+  ['assets/img/makki_abadan_1951.jpg', 'img/makki_abadan_1951.jpg'],
+];
 
 const sources = {
   'maj-s1': 'Azimi, <i>Iran: The Crisis of Democracy</i>',
@@ -33,24 +42,45 @@ const sources = {
 };
 
 const highlightedTerms = {
-  'term-mossadegh': ['Mossadegh'],
-  'term-national-front': ['National Front', 'Iran Party'],
+  'term-mossadegh': ['Mohammad Mossadegh', 'Mossadegh'],
+  'term-national-front': ['National Front', 'Front'],
   'term-constitutionalist': [
+    'Iran Party',
+    'Karim Sanjabi',
+    'Ahmad Zirakzadeh',
+    'Ali Shayegan',
+    'Mahmud Nariman',
+    'Allahyar Saleh',
     'Sanjabi',
     'Zirakzadeh',
     'Shayegan',
     'Nariman',
     'Saleh',
   ],
-  'term-nationalist-left': ['Fatemi'],
-  'term-nationalist-social-democratic': [
+  'term-government-loyalist': [
+    'General Mahmoud Afshartus',
+    'Mahmoud Afshartus',
+    'Afshartus',
+  ],
+  'term-social-democratic': [
     'Toilers&#39; Party',
     'Third Force',
+  ],
+  'term-nationalist-social-democratic': [
+    'Hossein Fatemi',
+    'Khalil Maleki',
+    'Fatemi',
     'Maleki',
   ],
-  'term-baghai': ['Baghai'],
-  'term-makki': ['Makki'],
+  'term-baghai': ['Mozaffar Baghai', 'Baghai'],
+  'term-makki': ['Hossein Makki', 'Makki'],
   'term-royalist': [
+    'Mohammad Reza Shah',
+    'Reza Shah',
+    'General Fazlollah Zahedi',
+    'Colonel Nematollah Nassiri',
+    'Fazlollah Zahedi',
+    'Nematollah Nassiri',
     'Zahedi',
     'Nassiri',
     'SAVAK',
@@ -58,21 +88,34 @@ const highlightedTerms = {
   ],
   'term-left': ['Tudeh Party', 'Tudeh'],
   'term-religious': [
+    'Ayatollah Abol-Qasem Kashani',
+    'Abol-Qasem Kashani',
     'Kashani',
     'Society of Muslim Warriors',
   ],
   'term-islamist': [
     'Fada&#39;iyan-e Islam',
+    'Khalil Tahmasabi',
+    'Ruhollah Khomeini',
     'Tahmasabi',
     'Khomeini',
   ],
   'term-parliament': [
     'the Majles',
     'Majles',
+  ],
+  'term-senate': [
     'the Senate',
     'Senate',
   ],
-  'term-independent': ['Qavam', 'Razmara'],
+  'term-independent': [
+    'Prime Minister Haj Ali Razmara',
+    'Haj Ali Razmara',
+    'Ahmad Qavam',
+    'Ali Razmara',
+    'Qavam',
+    'Razmara',
+  ],
   'term-world-bank': ['World Bank'],
   'term-aioc': ['AIOC'],
   'term-tpajax': ['TPAJAX'],
@@ -120,6 +163,7 @@ function slugify(value) {
 
 function highlightImportantTerms(value) {
   return value.replace(termPattern, (term) => {
+    if (term.toLowerCase() === 'us' && term !== 'US') return term;
     const className = termLookup.get(term.toLowerCase());
     return `<span class="term ${className}">${term}</span>`;
   });
@@ -362,15 +406,19 @@ function buildTimeline() {
   if (purposeSection) {
     purposeSection.title = 'How to read this primer';
     purposeSection.lines = [
-      'This is a narrative orientation to Iran’s oil nationalization movement,',
-      'Mohammad Mossadegh’s governments, and the coup of August 1953. It begins',
-      'with the political opening of 1941, follows the immediate post-coup',
-      'settlement, and then carries the consequences forward to 1979.',
+      'This standalone primer assumes only a general familiarity with Iran. It',
+      'explains the institutions, political coalitions, oil economy, international',
+      'confrontation, and sequence of events that produced the coup of August',
+      '1953. It begins with the political opening of 1941, follows the immediate',
+      'post-coup settlement, and carries the consequences forward to 1979.',
       '',
       'Where dates, casualty figures, covert responsibility, or interpretation',
       'remain disputed, the text says so instead of presenting false precision.',
       'The citations name the relevant historian or primary record directly;',
       'the final source guide gives the useful chapter or page range.',
+      '',
+      'Dates are Gregorian. Familiar Iranian calendar names such as **30 Tir**',
+      'and **9 Esfand** are explained when they appear.',
       '',
       'Names appear in several transliterations across the literature. This page',
       'uses **Mossadegh**, **Majles**, **Tudeh**, and **National Front** except',
@@ -420,7 +468,18 @@ function buildTimeline() {
     .replace(/\s*;?\s*<!-- OMIT_INTERNAL_REFERENCE -->\s*;?\s*/g, '');
 
   fs.writeFileSync(outputPath, output);
+
+  fs.mkdirSync(standaloneImageDirectory, {recursive: true});
+  fs.writeFileSync(path.join(standaloneDirectory, 'index.html'), output);
+  for (const [source, destination] of standaloneAssets) {
+    fs.copyFileSync(
+      path.join(projectDirectory, source),
+      path.join(standaloneDirectory, destination),
+    );
+  }
+
   console.log(`Built historical primer at ${outputPath}`);
+  console.log(`Built standalone primer at ${standaloneDirectory}`);
 }
 
 if (require.main === module) buildTimeline();

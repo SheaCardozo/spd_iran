@@ -1,0 +1,296 @@
+# Crisis evidence audit: crowds, covert networks, welfare, and parliament
+
+## Scope and method
+
+This record revisits four questions that cannot safely be represented by one
+unqualified number: the violence of 30 Tir 1331 / 21 July 1952 and 28 Mordad
+1332 / 19 August 1953; the people and money behind the 1953 street
+mobilization; the social distribution of the oil shock; and control of the
+Sixteenth and Seventeenth Majles.
+
+The audit separates:
+
+1. a contemporary observation from a prediction;
+2. a death count from a combined killed-and-injured count;
+3. Tehran from national coverage;
+4. a recorded transfer from an attempted transfer, reported receipt, or
+   inference;
+5. a constituency result from a credentialed seat, caucus affiliation,
+   attendance, or vote; and
+6. a source's statement from the project's confidence in it.
+
+The strongest narrative base remains the acquired scholarly books. Official
+US and British records supply unusually precise contemporary observations,
+but they were produced by governments participating in the crisis and cannot
+be treated as neutral accounts. Encyclopaedia Iranica was used only to locate
+the Persian documentary history by M. Torkamān; its article is not promoted
+to a claim source.
+
+### Confidence labels
+
+| Label | Meaning |
+| --- | --- |
+| **Firm** | Supported by converging specialist scholarship and/or a direct record whose scope is clear |
+| **Probable** | Strong evidence, but the chain of responsibility, coverage, or number remains incomplete |
+| **Contested** | Serious sources disagree or the evidence is interested, retrospective, redacted, or category-incompatible |
+| **Unresolved** | The records required for a responsible conclusion have not been acquired |
+
+## 1. Thirty Tir: sequence, organization, and casualties
+
+### Reconstructed sequence
+
+| Date | Best-supported sequence | Confidence and locators |
+| --- | --- | --- |
+| **25 Tir / 16 July** | Mossadegh resigned after the Shah refused to concede effective control of the War Ministry. The Shah appointed Ahmad Qavam. | **Firm.** `MAJ-S1`, chapter 19, especially pp. 288–92; `MAJ-S3`, chapter 3. |
+| **26–28 Tir / 17–19 July** | National Front deputies appealed for resistance. Bazaar and guild networks closed shops and helped turn an elite constitutional confrontation into a general strike. Ayatollah Kashani issued public warnings and a call to resist Qavam. Tudeh organizations also mobilized, but did not form a single command with the National Front and clerical-bazaar networks. Provincial bazaar closures and protests make “a Tehran riot” too narrow a description. | **Firm on the distinct mobilizing networks; probable on the exact chain of local instructions.** `MAJ-S1`, pp. 288–92; `SUP-014`, pp. 159–75. Torkamān is the priority missing documentary reconstruction for the police and provincial record. |
+| **29 Tir / 20 July** | Tehran clashes intensified around the bazaar and routes toward Baharestan and the Majles. Demonstrations and closures continued in several provincial cities. | **Probable.** The acquired scholarship agrees on escalation, but an hour-by-hour police map and provincial incident register are not yet local. |
+| **30 Tir / 21 July** | The general strike and demonstrations culminated in lethal confrontations with police and troops. The first Tehran shooting is reported early in the morning; fighting spread along the bazaar–Baharestan approaches. After security units became unreliable and senior politicians warned that repression could no longer sustain Qavam, the Shah dismissed him and recalled Mossadegh. | **Firm in outline; unresolved at street and unit level.** `MAJ-S1`, pp. 288–92; `SUP-014`, pp. 159–75. |
+
+### Who organized it?
+
+No evidence supports a single organizer. The coalition was functionally
+coordinated but institutionally plural:
+
+- National Front deputies provided the parliamentary and constitutional call
+  to action.
+- Kashani and clerical-bazaar intermediaries supplied religious authority,
+  guild connections, and neighborhood mobilization.
+- Bazaar guilds and shopkeepers made the strike effective and supplied
+  meeting and communication networks.
+- Tudeh and labor organizations brought disciplined demonstrators of their
+  own. Their presence should not be silently folded into the National Front or
+  attributed to Kashani.
+- Provincial protests had local organizers whose identities and instructions
+  cannot be reconstructed from the national narratives alone.
+
+This is a **firm structural conclusion**, not a complete organizer list.
+
+### Casualty findings
+
+The available counts are not measurements of the same thing:
+
+| Estimate | Coverage and category | Assessment |
+| --- | --- | --- |
+| **About 25 dead** | Tehran deaths in a later chronology cited by the specialist reference literature | Plausible death-only order of magnitude, but the underlying chronology and name list have not been checked locally. Do not use as an exact total. |
+| **235 killed and injured** | Combined casualty count in M. Torkamān's Persian documentary study, apparently based substantially on police records | The most important acquisition lead. It is not a death count, and its geographic coverage must be checked in the book before use. |
+| **At least 250 killed or seriously injured** | Later scholarly national reconstruction | Compatible with 235 only at rough scale because both category and geography may differ. Verify the exact locator in the acquired Abrahamian editions before implementing a number. |
+| **Contemporary estimates as high as roughly 800 victims** | Reported newspaper figures | Evidence of contemporary perception and propaganda, not a verified casualty count. The exact issues and their source chains must be checked. |
+
+**Conclusion:** the project can presently say that dozens were killed and at
+least hundreds were killed or injured across the uprising. It cannot responsibly
+publish an exact death toll. The highest-value missing evidence is a
+name-by-name reconciliation of police, hospital, cemetery, newspaper, and
+provincial records, beginning with Torkamān.
+
+## 2. Nineteen August: sequence, organization, and casualties
+
+### Source-graded Tehran sequence
+
+The following clock is anchored to a top-secret British memorandum dated
+2 September 1953, locally archived unexpurgated as `SUP-049` and preserved in
+redacted form as FRUS volume X, document 362. It is unusually
+specific, but its author and informants are not identified and Britain was a
+participant in the operation. It is therefore a contemporary operational
+estimate, not a neutral master chronology. It should be read alongside
+Rahnema's full reconstruction (`MAJ-S5`, pp. 138–288), the Gasiorowski chapter
+in `MAJ-S4`, pp. 227–80, and the two CIA internal histories in `SUP-022`.
+
+| Approximate time | Event | Assessment |
+| --- | --- | --- |
+| **About 8:00 a.m.** | A roughly 3,000-person pro-Shah, anti-Mossadegh crowd appeared in south Tehran, carrying clubs and sticks. The British memo believed many participants had been hired and noted unemployed men and known street toughs. The police chief ordered noninterference. | **Probable scale and sequence; contested composition.** FRUS vol. X, doc. 362, paras. 8–9. “Hired” is the memorandum's assessment, not a payroll. |
+| **Morning** | One column threatened the bazaar, prompting closure. Trucks and buses moved demonstrators around the city. Police increasingly sympathized with or directed crowds. Government orders for dispersal were delayed or disobeyed. | **Firm in outline.** Doc. 362; `MAJ-S5`, coup-day chapters. |
+| **9:00 a.m.–noon** | Pro-government party offices and about six supporting newspapers were attacked, followed by Tudeh newspaper offices. | **Probable exact interval.** Doc. 362, para. 8. The particular six-paper set still needs an issue-by-issue and address-level reconstruction. |
+| **By midday** | Soldiers, armored vehicles, and tanks appeared. Some fired; many joined the royalist movement. From this point military defection and control of coercive institutions were more important than raw crowd size. | **Firm.** Doc. 362; `SUP-022`; `MAJ-S4`, Gasiorowski, pp. 227–80. |
+| **About 2:30 p.m.** | Zahedi's followers took the radio station and broadcast false reports of complete victory and Fatemi's death, then read the royal decree. | **Firm on capture and broadcast; the memorandum supplies the minute.** Doc. 362, para. 8. |
+| **2:30–4:00 p.m.** | General Staff headquarters and government offices were captured; Zahedi established himself at Central Police headquarters. | **Firm in outline.** Doc. 362. |
+| **Afternoon–about 6:00 p.m.** | Crowds and then pro-Zahedi troops attacked Mossadegh's residence. Early assaults were repelled with lethal fire. Tanks later bombarded the house; its defense collapsed, and the house was looted and burned. Mossadegh escaped and surrendered the next day. | **Firm in outline; unresolved casualty allocation.** Doc. 362; `MAJ-S5`, pp. 138–288. |
+
+The sequence shows three overlapping phases rather than one homogeneous
+“mob”: prepared street columns; police and army noncompliance or defection;
+and seizure of state communications and heavy-force positions. CIA officers
+and Iranian agents helped prepare the conditions and supplied a spark, while
+the station's own post-operation memorandum acknowledged that many people
+joining the movement were not under its control (FRUS 2018 second edition,
+doc. 306). “Completely spontaneous uprising” and “every person in the street
+was a paid CIA agent” are both contradicted by the record.
+
+### Casualty findings
+
+| Estimate | Provenance | Assessment |
+| --- | --- | --- |
+| **More than 50 killed and about 300 wounded** | British memorandum of 2 September 1953 | Best precisely scoped contemporary official estimate found in this audit, but not backed by an exposed name list. FRUS vol. X, doc. 362, para. 9. |
+| **At least 50 killed and more than 100 wounded** | Preliminary contemporary wire report | Useful lower-bound perception on the day, not a final count. |
+| **Figures around 100 killed and 300 wounded** | Later military and secondary reconstructions | Plausible, but their underlying record must be identified before use. |
+| **Contemporary reports of more than 300 killed** | Newspaper reporting | Too unstable and source-opaque for a game statistic. |
+
+**Conclusion:** use “more than fifty killed and hundreds wounded” when a
+concise summary is required. Do not convert that phrase into a precise total.
+A casualty ledger separating Mossadegh's residence, other firefights, crowd
+victims, soldiers, and bystanders remains unavailable.
+
+## 3. Clerical, bazaar, press, and street intermediaries
+
+### Attribution matrix
+
+| Actor or channel | What the evidence supports | What it does **not** support | Confidence and locators |
+| --- | --- | --- | --- |
+| **Ayatollah Mohammad Behbehani** | A British post-coup memorandum says the US Embassy passed “large sums” to influential people, including Behbehani, on 10 August, and separately identifies him as responsible for organizing demonstrations on 19 August. | The exact amount, receipt, onward distribution, and complete organizer chain. | **Probable, unusually strong but not conclusive.** `SUP-049`; FRUS vol. X, doc. 362, para. 7. |
+| **Ayatollah Abol-Qasem Kashani** | CIA operational accounts and later participant testimony support that Kashani-linked people helped bring many demonstrators into the streets. Two CIA participants independently recalled handing **$10,000** to Ahmad Aramesh as an intermediary for Kashani. | Neither participant could confirm that Kashani actually received the money. The transfer therefore cannot be written as “CIA paid Kashani $10,000.” | **Probable mobilization; contested payment receipt.** `SUP-022`; National Security Archive, “New Findings on Clerical Involvement”; `MAJ-S4`, Gasiorowski, pp. 227–80. |
+| **Grand Ayatollah Hossein Borujerdi** | The CIA attempted to obtain a declaration of holy war against communism through clerical channels. | The internal account reports no definitive result. No evidence found here supports calling Borujerdi an active coup organizer or paid participant. | **Firm negative boundary.** `SUP-022`; National Security Archive documentary briefing. |
+| **Ahmad Aramesh** | Named by two CIA participants as the intended conduit for the $10,000 Kashani payment. | That the money reached Kashani or how Aramesh disbursed it. | **Probable transfer to intermediary; unresolved onward payment.** Same sources as Kashani row. |
+| **Rashidian network** | British-connected political and bazaar networks participated in propaganda, royal contacts, and street preparation and were incorporated into TPAJAX. | A complete payee ledger or proof that every later crowd action was directed by the brothers. | **Firm institutional role; incomplete individual accounting.** `MAJ-S4`, Gasiorowski, pp. 227–80; `SUP-022`; `MAJ-S14`, chapter 6. |
+| **Bazaar guilds and merchants** | Parts of the bazaar had broken with Mossadegh by 1953; clerical, guild, and neighborhood connections could close markets and move supporters. | That “the bazaar” acted as a bloc or that every closure on 19 August was voluntary. The British account says threats of looting helped force closure. | **Firm fragmentation; contested balance of consent and coercion.** `SUP-014`, pp. 159–75; FRUS vol. X, doc. 362. |
+| **Meydan and neighborhood toughs** | Named toughs and market networks appear in scholarly reconstructions, and the British memo describes many known hooligans in the initial crowd. | A reliable person-by-person CIA payroll. Shaban Jafari's timing and direct operational role remain particularly contested. | **Probable network participation; unresolved payment chains.** `MAJ-S5`, pp. 138–288; `MAJ-S4`, Gasiorowski, pp. 227–80. |
+| **Press operations** | CIA records establish a sustained anti-communist propaganda program, subsidies to selected newspapers, procurement of newsprint and printing capacity, prepared broadsheets, and attacks on government and Tudeh offices. | A complete public list matching each title, editor, article, and payment. Six new opposition papers appearing near the coup aroused contemporary suspicion but are not themselves proof of a CIA payment to each. | **Firm program; unresolved payees.** FRUS 2018 second edition, docs. 11 and 306; `SUP-022`; `MAJ-S4`, Gasiorowski, pp. 227–80. |
+| **Court and military channels** | Royal decrees, Zahedi's network, police cooperation, regiment commanders, and military contacts were decisive; after midday their coercive control overtook street mobilization as the central mechanism. | Reduction of the coup to purchased civilians. | **Firm.** `MAJ-S5`; `MAJ-S14`, chapter 6; FRUS vol. X, doc. 362. |
+
+### Rules for representing money
+
+1. Record the currency, date, giver, immediate recipient, intended recipient,
+   stated purpose, and whether receipt or expenditure is independently
+   confirmed.
+2. “Operational budget,” “money delivered to an intermediary,” and “person
+   paid” are different claims.
+3. Do not infer payment from later political behavior.
+4. Do not infer knowledge of the full coup plan from accepting money for
+   propaganda or demonstrations.
+5. Preserve cover names, redactions, and participant disagreement rather than
+   resolving them by guesswork.
+
+The public record establishes covert funding and a number of channels. It does
+not expose a complete payroll. The most defensible named statement is that
+money intended for Kashani was reportedly given to Aramesh, while delivery to
+Kashani remains unconfirmed.
+
+## 4. Welfare effects of the oil shock
+
+### The evidence corrects two opposite exaggerations
+
+The July 1951 CIA forecast that about **80,000 Iranians would become
+unemployed** and the state would lose roughly **40 percent of its revenue**
+was a prediction made as the industry closed, not an observed layoff count
+(FRUS 2018 second edition, doc. 39). It predicted rapid bankruptcy and
+political collapse that did not occur on that timetable.
+
+The failure of that forecast does not show that the shock was painless.
+Clawson and Sassanpour explicitly state that their data cannot evaluate the
+welfare of the population (`SUP-023`, p. 3). The best available conclusion is
+**macroeconomic resilience with sharply uneven local and sectoral burdens**.
+
+### Distributional observation ledger
+
+| Population or place | Observed effect | Limits and source |
+| --- | --- | --- |
+| **Abadan and former AIOC workers** | The government continued paying former AIOC workers even though most were not fully employed. By January 1953 it considered resettlement but regarded continued payments as politically unavoidable. The shutdown therefore produced paid idleness, lost productive work, and a large fiscal burden rather than a clean 80,000-person dismissal. | FRUS docs. 63 and 152 are contemporary US intelligence estimates, not household surveys. Exact payroll coverage, real wages, housing, rationing, health, municipal services, and dependent-family effects remain unresolved. |
+| **Oil-field labor before shutdown** | The March–April 1951 labor crisis demonstrates the vulnerable baseline: withdrawal of housing allowances and amenities helped trigger a strike that spread from Bandar Shapur and Agha Jari to other fields and Abadan. At the peak, virtually all roughly 30,000 refinery workers and about a quarter of field workers were idle. | `MAJ-S9`, printed pp. 188–92. This describes the strike and labor regime immediately before full shutdown, not welfare through August 1953. |
+| **Government employees, contractors, and government-dependent urban labor** | By early 1952 salary problems were appearing; later reporting records arrears, unpaid New Year bonuses, delayed payments to contractors, and unemployment associated with postponed government disbursements. | FRUS docs. 63, 67 note 4, and 152. These establish channels and timing, not a national household-incidence rate. |
+| **Urban consumers and firms** | Wholesale prices and the urban cost-of-living index rose little through 1952, while real income and business activity declined and unemployment rose. Imports fell toward roughly half the pre-dispute level; luxury and capital goods were compressed more than essentials. | FRUS doc. 152; `SUP-023`, pp. 2–18. The 20–30 percent price increase in doc. 152 was a **forecast for 1953**, not an observed outcome. Urban indices cannot represent all towns or social classes. |
+| **Seasonal migrants and casual workers** | The government faced recurring winter relief needs when unemployed agricultural and construction workers migrated to cities. | FRUS doc. 152. This is evidence of vulnerability and public obligation, not proof that the oil shock caused all seasonal unemployment. |
+| **Rural majority** | A February 1952 estimate reported a normal food crop, stable prices, no shortage of the imported staples sugar and tea, and little immediate effect on the peasant majority. Later US reporting judged rural inflation slower than urban inflation. | FRUS docs. 63 and 355. Both are broad outside-observer judgments, not provincial surveys; doc. 355 also served a post-coup aid argument. They cannot support “the countryside was unaffected” over the whole crisis. |
+| **Other towns and provinces** | Import-dependent commerce, public works, and government contracts were exposed to foreign-exchange and fiscal compression. Some local production and non-oil exports benefited from import substitution and changed relative prices. | `SUP-023`, pp. 2–18, plus contemporary institutional estimates. Town-level wage, employment, food-price, credit, and migration series remain the largest unresolved welfare gap after Abadan. |
+| **Development beneficiaries** | First Plan investment and other capital spending were delayed or reduced. The welfare loss therefore included forgone roads, irrigation, health, education, and future productive capacity, not only current consumption. | `SUP-023`, pp. 14–15; FRUS docs. 63 and 152. Project-level completion and geographic incidence still require Plan Organization records. |
+
+### Defensible summary
+
+- Iran avoided the immediate national collapse forecast in 1951.
+- The government socialized much of the direct oil-worker shock through
+  continued payrolls.
+- Fiscal compression then passed through unevenly as arrears, unpaid
+  contracts, reduced investment, import compression, and urban unemployment.
+- Available evidence suggests essential consumption and the rural food economy
+  were initially more resilient than the urban state- and import-dependent
+  economy.
+- Evidence is weakest exactly where a welfare claim requires it: household
+  budgets, real wages, nutrition, housing, public health, migration, and
+  province-level prices.
+
+## 5. Parliamentary factions and effective control
+
+### Why there is no stable seat chart
+
+Iranian deputies were elected as individuals in staggered, locally contested
+elections. Credentials could be challenged; attendance and quorum varied;
+“National Front” could describe original sponsorship, a public tendency, a
+small caucus, or a temporary voting coalition; and oil nationalization could
+command votes from deputies otherwise opposed to Mossadegh. The Senate added
+an elected/appointed division and its own fluid royal, conservative, and
+government relations.
+
+Consequently, the most accurate reconstruction is a **dated control ledger**:
+
+| Layer | Required count |
+| --- | --- |
+| Election | authorized constituencies, completed returns, and interrupted or missing returns |
+| Membership | returned, credentialed, rejected, vacant, and not-yet-decided seats |
+| Presence | deputies actually attending on the date |
+| Organization | named caucus or declared alignment on that date |
+| Vote | yes, no, abstention, absence, and quorum rule for the particular motion |
+| Interpretation | which issue the vote tests: oil, cabinet confidence, decree powers, court, Shah, or dissolution |
+
+### Best current estimates
+
+| Date or phase | Evidence of control | What it means |
+| --- | --- | --- |
+| **Sixteenth Majles, 1950–spring 1951** | The National Front entered with only about **eight firm deputies**. A substantial majority could be personally or socially conservative and skeptical of Mossadegh while voting for oil nationalization. | No National Front parliamentary majority existed. Oil votes were a large issue coalition, not a party seat count. `MAJ-S2`, chapter 5; `MAJ-S3`, chapter 3; FRUS doc. 63, para. 12. |
+| **Mossadegh's nomination, 28 April 1951** | A contemporary Associated Press report said **79 of 99 deputies** at the secret meeting voted for Mossadegh. | It is a cabinet-formation vote, not evidence that 79 deputies joined the National Front. AP, [“Mossadegh Urged As New Premier By Iranian House,” 28 April 1951](https://www.mohammadmossadegh.com/news/ap-associated-press/april-28-1951/); compare `MAJ-S3`, chapter 3. |
+| **Early Seventeenth Majles election** | **136 seats were legally possible, but only 79 returns were completed** before polling stopped. Tehran returned all twelve National Front-list candidates. Contemporary US estimates expected the incomplete chamber to favor the government, while warning about National Front rivalry. | The chamber's denominator was 79 returned seats, not a normal full 136. Constituency wins and durable caucus loyalty must remain separate. `MAJ-S2`, pp. 250–61; `MAJ-S3`, pp. 86–100; FRUS docs. 63 and 67. |
+| **Before and after the Qavam crisis, July 1952** | The acquired scholarly synthesis records Mossadegh receiving **52 of 64 votes cast** before the crisis. On 22 July, Associated Press reported that **61 of the 76 deputies then seated** voted to renominate him after Thirty Tir. | These are not identical denominators: the first is votes cast; the second compares affirmative votes with all seated deputies. They show a pre-crisis institutional limit and the uprising's immediate effect, not a permanent “pro-Mossadegh faction.” `MAJ-S3`, pp. 96–103; AP, [“Iran's Parliament Re-Elects Mossadegh Premier,” 22 July 1952](https://www.mohammadmossadegh.com/news/ap-associated-press/iran-s-parliament-re-elects-mossadegh-premier/). |
+| **Post–30 Tir through early 1953** | Contemporary and later reconstructions commonly find a government core around **30**, a fragmented opposition around **40**, and several waverers. One CIA classification divided the 79 returns into **30 staunch supporters, 4 waverers, and 45 potential opposition**, with the 45 themselves split among royalists, Kashani supporters, former National Front allies, and uncommitted deputies. | Useful dated intelligence estimate, not an official party result. The categories changed as Baghai, Makki, Kashani, and others broke with Mossadegh. `MAJ-S3`, chapter 3, especially pp. 112–17. |
+| **Spring–summer 1953** | Mossadegh increasingly doubted that he could command a majority and relied on the threat or use of supporter absence to deny quorum. TPAJAX planners modeled an **80-member** chamber with **52 needed to debate, 60 to vote, and 41 to pass** their target resolution. | The operational question was no longer “who has 41 loyalists?” alone, but who could assemble or break quorum. The TPAJAX arithmetic is a hostile operational estimate, not a neutral constitutional commentary. FRUS docs. 193, 233, and 239. |
+| **After National Front resignations, August 1953** | The British post-coup review recorded **23 non-resigning deputies** and proposed completing the 57 still-unfilled seats to create an 80-member quorum-capable chamber. | Confirms how profoundly the incomplete election and resignations altered the denominator. FRUS vol. X, doc. 362, para. 11. |
+
+### Control estimate suitable for future mechanics
+
+The evidence supports four simultaneous player-facing ideas:
+
+1. **formal returns** — 79 of 136 for the Seventeenth Majles;
+2. **reliable government core** — approximately 30 at its most useful
+   mid-period estimate, dated and revisable;
+3. **issue coalition** — often larger on oil sovereignty or confidence than
+   the core;
+4. **quorum control** — by 1953, the ability to make or break attendance was
+   sometimes more important than a nominal plurality.
+
+It does **not** support one permanent “National Front: X seats; royalists: Y
+seats” chart. Every number in a future election or parliament system should
+carry a date, layer, source, and uncertainty flag.
+
+The First Senate remains less reconstructable. It should be represented
+through its 30 elected and 30 appointed origins, identified members, and dated
+roll calls rather than invented stable faction totals until the complete
+proceedings are acquired.
+
+## Remaining acquisition and verification queue
+
+1. **M. Torkamān, *Qīām-e mellī-e sīom-e Tīr* (Tehran, 1361 SH /
+   1982):** check pp. 465–66, casualty definitions, police-record
+   provenance, arrest lists, and provincial coverage.
+2. **Thirty Tir casualty reconciliation:** police reports, Tehran and
+   provincial hospital registers, cemetery/burial records, inquest files, and
+   the exact *Kayhan* and other newspaper issues cited by later historians.
+3. **Nineteen August casualty reconciliation:** hospital, police, military,
+   cemetery, and court files divided by location and participant category.
+4. **Covert finance:** unredacted CIA and British station accounting, payee
+   ledgers, and contemporaneous Iranian corroboration. Some may never be
+   recoverable because records were destroyed or remain redacted.
+5. **Welfare:** NIOC payrolls; Abadan municipality and hospital records;
+   ration, housing, and school records; Labor Ministry reports; town-level
+   prices and wages; provincial harvest, credit, migration, and relief data.
+6. **Parliament:** machine-readable Sixteenth- and Seventeenth-Majles
+   member/credential/attendance/roll-call ledger, plus complete First Senate
+   proceedings.
+
+## Principal source locators
+
+| Subject | Source |
+| --- | --- |
+| Thirty Tir politics and sequence | `MAJ-S1`, chapter 19, especially pp. 288–92; `SUP-014`, pp. 159–75 |
+| Nineteen August detailed sequence | `MAJ-S5`, pp. 138–288; `MAJ-S4`, Gasiorowski, pp. 227–80; `SUP-049`; FRUS vol. X, [doc. 362](https://history.state.gov/historicaldocuments/frus1952-54v10/d362) |
+| CIA's post-operation assessment | `SUP-010`, [doc. 306](https://history.state.gov/historicaldocuments/frus1951-54Iran/d306); `SUP-022` |
+| Clerical payment evidence | `SUP-022`; `SUP-049`; National Security Archive, [“New Findings on Clerical Involvement in the 1953 Coup”](https://nsarchive.gwu.edu/briefing-book/iran/2018-03-07/new-findings-clerical-involvement-1953-coup-iran); `MAJ-S4`, Gasiorowski, pp. 227–80 |
+| Initial shutdown forecast | `SUP-010`, [doc. 39](https://history.state.gov/historicaldocuments/frus1951-54IranEd2/d39) |
+| Early welfare and parliamentary estimate | `SUP-010`, [doc. 63](https://history.state.gov/historicaldocuments/frus1951-54Iran/d63) |
+| January 1953 economic estimate | `SUP-010`, [doc. 152](https://history.state.gov/historicaldocuments/frus1951-54Iran/d152) |
+| Economic adjustment and data limit | `SUP-023`, especially pp. 2–18 and the welfare caveat at p. 3 |
+| Pre-shutdown oil labor conditions | `MAJ-S9`, printed pp. 188–92 |
+| Majles election and alignment reconstruction | `MAJ-S2`, chapter 5, especially pp. 250–61; `MAJ-S3`, chapter 3, especially pp. 86–100 and 112–17; `SUP-010`, docs. 63, 67, 193, 233, and 239 |

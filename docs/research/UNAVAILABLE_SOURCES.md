@@ -108,12 +108,26 @@ or publication details before a real catalog or copy is checked.
 
 | Priority | Source family | Why it is wanted | Needed for | What to provide |
 | --- | --- | --- | --- | --- |
+| Critical | [`S24`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining), M. Torkamān, *Qīām-e mellī-e sīom-e Tīr* (قیام ملی سی‌ام تیر; Tehran, 1361 SH / 1982) | Persian documentary reconstruction repeatedly cited for police records, arrest occupations, and a 235-person combined killed-and-injured count | Thirty Tir chronology, organizer networks, casualty definitions, Tehran/provincial coverage, and reconciliation of later scholarly totals | Complete identified edition, especially pp. 465–66, bibliography, document reproductions, casualty lists, and editorial explanation |
 | Critical | Official proceedings of the First Senate | Direct record of the upper chamber's legislation, speeches, votes, and procedure | Oil legislation, cabinet confidence, mixed-board selections, emergency powers, and the Senate conflict | Scans or searchable official volumes, including session/date metadata and indices; see `IR-P4` below |
 | Critical | Authoritative Persian texts of the oil nationalization and implementation laws | Controls the exact legal terms rather than relying on translations or summaries | Oil-law mechanics, tooltips, and negotiations | Official gazette, Majles printing, or critical documentary edition |
 | High | Critical editions of Mohammad Mossadegh's speeches, correspondence, memoirs, and defense statements | Provides Iranian political argument and first-person evidence with editorial apparatus | Character voice, constitutional arguments, diplomacy, trial and retrospective claims | Identified edition with editor, publisher, date, pagination, and notes |
 | High | National Front, Iran Party, Toilers/Third Force, Kashani, Fada'iyan-e Islam, and Tudeh document collections | Reduces dependence on foreign diplomatic descriptions of Iranian organizations | Coalition, faction, mobilization, defection, and party systems | Cataloged collections or scholarly editions with provenance |
 | Critical | Period runs of *Bākhtar-e Emrūz*, *Eṭṭelāʿāt*, *Keyhān*, *Mardom*, *Shāhed*, and press from other political positions | Contemporary chronology and public claims across competing factions | Events, demonstrations, elections, rhetoric, and information uncertainty | Dated, legible scans with mastheads and page numbers; complete runs preferred |
 | High | Iranian government budgets, Bank Melli reports, oil-company/NIOC records, trade series, and statistical yearbooks | Grounds economic mechanics in Iranian data and institutions | Revenue, reserves, imports, prices, employment, and non-oil adjustment | Official reports or scholarly documentary editions with tables and definitions |
+
+Torkamān was identified through Ahmad Ashraf's specialist bibliography and is
+not yet reviewed. The reported 235 figure must not be cited as “235 dead”: the
+secondary locator describes **killed and injured together**, and the book's
+geographic coverage and police-record method remain to be checked.
+
+The crisis audit also identifies two unresolved **record families**, rather
+than pretending they are single known books: police, hospital, cemetery,
+military, and provincial casualty records for Thirty Tir and Nineteen August;
+and unredacted British/CIA finance and payee records for clerical, press,
+bazaar, and street channels. The exact surviving files and access routes still
+need archival identification. Their evidentiary requirements are recorded in
+[`CRISIS_EVIDENCE_AUDIT.md`](CRISIS_EVIDENCE_AUDIT.md#remaining-acquisition-and-verification-queue).
 
 ## Economic-history acquisition queue
 

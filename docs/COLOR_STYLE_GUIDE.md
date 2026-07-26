@@ -17,10 +17,12 @@ official historical brand.
 2. Color an actor only when the alignment is historically supported and useful
    across repeated appearances. Ideological extremity alone does not make a
    minor actor important enough to color.
-3. Color personal surnames only. Leave honorifics and given names neutral:
-   `Ayatollah Abol-Qasem Kashani`, `Mohammad Mossadegh`, and `Ruhollah Khomeini`
-   color only the final surname. For Mohammad Reza Shah and Reza Shah, color
-   only the distinctive political title `Shah`.
+3. Color the complete personal name when it is written: `Abol-Qasem Kashani`,
+   `Mohammad Mossadegh`, `Mohammad Reza Shah`, and `Ruhollah Khomeini` each
+   form one colored unit. Include any directly attached office, rank, or
+   honorific in that unit: `Ayatollah Abol-Qasem Kashani`, `General Fazlollah
+   Zahedi`, and `Prime Minister Haj Ali Razmara`. A later surname-only reference
+   remains colored.
 4. Color the complete established name of a party, group, or institution.
    Do not color an ordinary word merely because it appears inside that name.
 5. Country names and direct national adjectives may use flag-order treatments.
@@ -41,12 +43,13 @@ accessibility variants while retaining the same relationships.
 
 | Meaning | Class | Anchor | Current use |
 | --- | --- | --- | --- |
-| National Front field | `term-national-front` | teal `#2f766a` | National Front; Iran Party |
-| Parliamentary constitutionalism | `term-parliament` | gold `#a87925` | Majles; Senate |
-| Secular constitutionalist cadre | `term-constitutionalist` | gold `#a87925` | Sanjabi; Zirakzadeh; Shayegan; Nariman; Saleh |
+| National Front field | `term-national-front` | teal `#2f766a` | National Front; contextual “the Front” |
+| Parliamentary constitutionalism | `term-parliament` | gold `#a87925` | Majles |
+| Secular constitutionalist cadre | `term-constitutionalist` | gold `#a87925` | Iran Party; Sanjabi; Zirakzadeh; Shayegan; Nariman; Saleh |
+| Constitutional-government loyalist | `term-government-loyalist` | gold `#a87925` | General Mahmoud Afshartus |
 | Monarchy or sourced pro-monarchy alignment | `term-royalist` | blue `#416a9b` | Shah; Zahedi; Nassiri; SAVAK |
 | Communist current | `term-left` | dark red `#700000` | Tudeh |
-| European-style social democracy | `term-social-democratic` | red `#c00000` | Used within the Maleki/Third Force blend |
+| Social-democratic and democratic-socialist field | `term-social-democratic` | red `#c00000` | Third Force; Toilers' Party |
 | Pragmatic bazaar-clerical politics | `term-religious` | light green `#4f8448` | Kashani; Society of Muslim Warriors |
 | Dogmatic or revolutionary Islamism | `term-islamist` | dark green `#24502f` | Fada'iyan-e Islam; Tahmasabi; Khomeini's movement |
 | Independent political figure | `term-independent` | grey `#808080` | Qavam; Razmara |
@@ -61,16 +64,23 @@ individual's relevant political alignment before applying it.
 
 | Meaning | Class | Blend |
 | --- | --- | --- |
+| Senate as a constitutionally mixed chamber | `term-senate` | monarchy blue → parliamentary gold |
 | Mossadegh | `term-mossadegh` | National Front teal → parliamentary gold |
-| Fatemi | `term-nationalist-left` | National Front teal → communist/Marxist dark red |
-| Maleki, Third Force, Toilers' Party | `term-nationalist-social-democratic` | National Front teal → social-democratic red |
+| Fatemi; Maleki | `term-nationalist-social-democratic` | National Front teal → social-democratic red |
 | Baghai | `term-baghai` | National Front teal → royalist blue |
 | Makki | `term-makki` | National Front teal → pragmatic religious green |
 
-The Toilers' Party treatment describes its broad socialist organizational
-identity; the prose must still explain its internal Baghai–Maleki fracture.
-Likewise, Fatemi's dark-red component marks radical-left nationalism and does
-not make him a Tudeh member.
+The solid-red Toilers' Party treatment describes its broad socialist
+organizational identity; the prose must still explain its internal
+Baghai–Maleki fracture. Fatemi's teal component reflects his direct ministerial
+leadership within the National Front, while the red places him visually within
+the nationalist left; this does not assert that he belonged to a European
+social-democratic party.
+
+The Senate treatment represents its constitutional composition—thirty members
+appointed by the Shah and thirty elected—not a claim that its senators divided
+into two stable blue and gold factions. Where actual alignments matter, use a
+dated vote or caucus reconstruction rather than reading them from this color.
 
 ## Country treatments
 
@@ -103,6 +113,12 @@ especially printed pp. 304–05](research/AVAILABLE_SOURCES.md#maj-s1). The
 primer's [source-locator map](research/TIMELINE_PRIMER.md#source-spine-and-locator-map)
 tracks the broader institutional and chronological evidence.
 
+Afshartus receives gold as a role-coded constitutional-government loyalist,
+not as an Iran Party member or a claim about his private ideology. Painter and
+Brew describe him as Mossadegh's own loyalist and an important supporter whose
+police command fortified the government
+([`MAJ-S14`, pp. 138–39 and 155](research/AVAILABLE_SOURCES.md#maj-s14)).
+
 These sources establish political characterization, not official party
 colors. Teal and the composite gradients are editorial devices unless a later
 source record explicitly establishes a period symbol.
@@ -112,15 +128,15 @@ source record explicitly establishes a period symbol.
 Dendry scene text uses raw-HTML blocks around only the semantic term:
 
 ```text
-Mohammad {!<span class="term term-mossadegh">!}Mossadegh{!</span>!}
+{!<span class="term term-mossadegh">!}Mohammad Mossadegh{!</span>!}
 
 the {!<span class="term term-parliament">!}Majles{!</span>!}
 
-Ayatollah Abol-Qasem
-{!<span class="term term-religious">!}Kashani{!</span>!}
+{!<span class="term term-religious">!}Ayatollah Abol-Qasem Kashani{!</span>!}
 ```
 
-Do not wrap the full personal name. Do not hardcode `style="color: …"`.
+Wrap the complete identifying phrase, including an attached office, rank, or
+honorific. Do not hardcode `style="color: …"`.
 
 ## Dynamic SPD relationship
 
@@ -132,7 +148,7 @@ Its scene files normally hardcode these values inline, and its treatment of
 personal full names versus surnames is inconsistent.
 
 This project retains the repeated ideological associations but centralizes
-them as semantic CSS classes, formalizes the surname-only rule, and derives
+them as semantic CSS classes, formalizes a full-name rule, and derives
 Iran-specific assignments from Iran scholarship. The AIOC and TPAJAX reuse
 Dynamic SPD's fascist brown as a transparent editorial analogy, not as a claim
 that a company or covert operation was literally a political party. Do not

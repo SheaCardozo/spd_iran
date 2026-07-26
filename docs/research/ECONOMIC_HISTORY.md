@@ -125,6 +125,38 @@ calendar bases, coverage, or later revisions.
 S9 explicitly states on p. 3 that its data could not evaluate population
 welfare. That is a research gap, not evidence that adjustment was painless.
 
+## Welfare evidence audit, 1951–1953
+
+The focused follow-up in
+[`CRISIS_EVIDENCE_AUDIT.md`](CRISIS_EVIDENCE_AUDIT.md#4-welfare-effects-of-the-oil-shock)
+supports a narrower conclusion than either “Iran collapsed without oil” or
+“the embargo did little harm.” The economy adjusted at the aggregate level,
+but the burdens were distributed unevenly.
+
+| Group or place | Current finding | Evidence boundary |
+| --- | --- | --- |
+| Abadan and former AIOC labor | The government kept former AIOC workers on payroll although most were not fully employed, and considered but hesitated to pursue resettlement. The direct shock therefore appeared as paid idleness, lost production, and fiscal burden rather than the forecast 80,000 clean dismissals. | `SUP-010`, docs. 63 and 152. Exact payroll coverage, real wages, household consumption, housing, health, and municipal-service effects remain unavailable. |
+| Oil-field labor baseline | The March–April 1951 strike spread across the fields and Abadan after withdrawal of housing allowances and amenities; at its peak virtually all roughly 30,000 refinery workers and about one quarter of field workers were idle. | `MAJ-S9`, printed pp. 188–92. This establishes vulnerability immediately before shutdown, not a 1951–53 household series. |
+| Government-dependent townspeople | Salary arrears, unpaid bonuses, unpaid contractors, postponed disbursements, and associated unemployment transmitted the fiscal shock into the urban economy. | `SUP-010`, docs. 63, 67 note 4, and 152. No national incidence rate follows from these reports. |
+| Urban consumers and firms | Business activity and real income fell and unemployment rose even while reported wholesale and cost-of-living indices changed little through 1952. Imports compressed toward half their pre-dispute level, with luxury and capital goods affected more than essentials. | `SUP-010`, doc. 152; `SUP-023`, pp. 2–18. The 20–30 percent price rise in doc. 152 is a forecast for 1953, not an observation. |
+| Seasonal migrants | Contemporary officials expected winter relief needs for agricultural and construction workers who customarily migrated to cities during slack months. | `SUP-010`, doc. 152. This does not establish that the oil shock caused all seasonal unemployment. |
+| Rural population | Early outside estimates described a normal crop, stable essential prices, and little immediate direct impact on the peasant majority; post-coup reporting judged rural inflation slower than urban inflation. | `SUP-010`, docs. 63 and 355. These are broad, interested observer judgments, not provincial household surveys, and cannot be extended across the whole crisis without qualification. |
+| Development beneficiaries | Retrenchment and postponed investment shifted part of the burden into forgone infrastructure and future services rather than current consumption alone. | `SUP-023`, pp. 14–15; `SUP-010`, docs. 63 and 152. Geographic and project incidence require Plan Organization records. |
+
+The July 1951 CIA estimate that approximately 80,000 Iranians would become
+unemployed and that oil royalties had supplied approximately 40 percent of
+government revenue (`SUP-010`, doc. 39) must be labeled a **forecast**. Later
+records show that the government instead continued oil-worker payments. The
+forecast is valuable evidence of contemporary expectations, not an observed
+layoff count.
+
+The present defensible synthesis is **macroeconomic resilience with localized
+and sectorally uneven hardship**. Town-level wages and prices, Abadan household
+conditions, provincial harvest and credit data, migration, nutrition, public
+health, and real access to relief remain unresolved. These gaps preclude a
+single player-facing “standard of living” series without an explicit model and
+uncertainty treatment.
+
 ## Source hierarchy and acquisition map
 
 ### Tier A — contemporaneous Iranian records

@@ -907,10 +907,10 @@ th {
 }
 
 .term-mossadegh,
-.term-nationalist-left,
 .term-nationalist-social-democratic,
 .term-baghai,
-.term-makki {
+.term-makki,
+.term-senate {
   color: var(--term-nationalist);
   background-clip: text;
   -webkit-background-clip: text;
@@ -924,16 +924,6 @@ th {
     var(--term-nationalist) 42%,
     var(--term-parliament) 82%,
     var(--term-parliament) 100%
-  );
-}
-
-.term-nationalist-left {
-  background-image: linear-gradient(
-    105deg,
-    var(--term-nationalist) 12%,
-    var(--term-nationalist) 42%,
-    var(--term-left) 82%,
-    var(--term-left) 100%
   );
 }
 
@@ -967,6 +957,16 @@ th {
   );
 }
 
+.term-senate {
+  background-image: linear-gradient(
+    105deg,
+    var(--term-royalist) 12%,
+    var(--term-royalist) 42%,
+    var(--term-parliament) 82%,
+    var(--term-parliament) 100%
+  );
+}
+
 .term-royalist {
   color: var(--term-royalist);
 }
@@ -988,7 +988,8 @@ th {
 }
 
 .term-parliament,
-.term-constitutionalist {
+.term-constitutionalist,
+.term-government-loyalist {
   color: var(--term-parliament);
 }
 

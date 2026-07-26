@@ -37,9 +37,11 @@ title: Relations
 
 = Relations
 
-Iran Party: [+ iran_party_relation +]
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!}:
+[+ iran_party_relation +]
 
-Toilers: [+ toilers_relation +]
+{!<span class="term term-social-democratic">!}Toilers' Party{!</span>!}:
+[+ toilers_relation +]
 
 Society of Muslim Warriors: [+ muslim_warriors_relation +]
 

@@ -39,7 +39,7 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
     gameCss,
     /\.gray-mode \.term\s*\{[\s\S]*?background-image:\s*none !important;[\s\S]*?-webkit-text-fill-color:\s*currentColor !important;/,
   );
-  assert.ok(hasOpeningTerm('term-mossadegh', 'Mossadegh'));
+  assert.ok(hasOpeningTerm('term-mossadegh', 'Mohammad Mossadegh'));
   assert.ok(hasOpeningTerm('term-parliament', 'Majles'));
   assert.ok(hasOpeningTerm('term-national-front', 'National Front'));
 
@@ -50,35 +50,56 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.match(timeline, /Painter and Brew/);
   assert.match(
     timeline,
-    /Mohammad <span class="term term-mossadegh">Mossadegh<\/span>/,
+    /<span class="term term-mossadegh">Mohammad Mossadegh<\/span>/,
   );
   assert.match(timeline, /class="term term-national-front">National Front/);
-  assert.match(timeline, /class="term term-national-front">Iran Party/);
-  assert.match(timeline, /class="term term-nationalist-left">Fatemi/);
+  assert.match(timeline, /the <span class="term term-national-front">Front/);
+  assert.match(timeline, /class="term term-constitutionalist">Iran Party/);
   assert.match(
     timeline,
-    /class="term term-nationalist-social-democratic">Maleki/,
+    /class="term term-nationalist-social-democratic">Hossein Fatemi/,
   );
   assert.match(
     timeline,
-    /class="term term-nationalist-social-democratic">Third Force/,
+    /class="term term-nationalist-social-democratic">Khalil Maleki/,
   );
   assert.match(
     timeline,
-    /class="term term-nationalist-social-democratic">Toilers&#39; Party/,
+    /class="term term-social-democratic">Third Force/,
   );
-  assert.match(timeline, /class="term term-baghai">Baghai/);
-  assert.match(timeline, /class="term term-makki">Makki/);
+  assert.match(
+    timeline,
+    /class="term term-social-democratic">Toilers&#39; Party/,
+  );
+  assert.match(timeline, /class="term term-senate">the Senate/);
+  assert.match(
+    timelineCss,
+    /\.term-senate\s*\{[\s\S]*?linear-gradient\([\s\S]*?var\(--term-royalist\)[\s\S]*?var\(--term-parliament\)[\s\S]*?\}/,
+  );
+  assert.match(timeline, /class="term term-baghai">Mozaffar Baghai/);
+  assert.match(timeline, /class="term term-makki">Hossein Makki/);
   assert.match(timeline, /class="term term-left">Tudeh/);
   assert.match(
     timeline,
-    /Mohammad Reza <span class="term term-royalist">Shah<\/span>/,
+    /<span class="term term-royalist">Mohammad Reza Shah<\/span>/,
   );
-  assert.match(timeline, /class="term term-royalist">Zahedi/);
-  assert.match(timeline, /class="term term-royalist">Nassiri/);
+  assert.match(
+    timeline,
+    /class="term term-royalist">General Fazlollah Zahedi/,
+  );
+  assert.match(
+    timeline,
+    /class="term term-royalist">Colonel Nematollah Nassiri/,
+  );
   assert.match(timeline, /class="term term-independent">Qavam/);
-  assert.match(timeline, /class="term term-independent">Razmara/);
-  assert.doesNotMatch(timeline, /class="term [^"]*">Afshartus/);
+  assert.match(
+    timeline,
+    /class="term term-independent">Prime Minister Haj Ali Razmara/,
+  );
+  assert.match(
+    timeline,
+    /class="term term-government-loyalist">General Mahmoud Afshartus/,
+  );
   assert.doesNotMatch(timeline, /<span class="term [^"]*">Iran<\/span> Party/);
   assert.doesNotMatch(timeline, /term-establishment/);
   assert.match(timeline, /class="term term-country country-us">United States/);
@@ -87,31 +108,31 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.match(timeline, /class="term term-religious">Kashani/);
   assert.match(
     timeline,
-    /Ayatollah Abol-Qasem <span class="term term-religious">Kashani<\/span>/,
+    /<span class="term term-religious">Ayatollah Abol-Qasem Kashani<\/span>/,
   );
   assert.match(
     timeline,
-    /Karim <span class="term term-constitutionalist">Sanjabi<\/span>/,
+    /<span class="term term-constitutionalist">Karim Sanjabi<\/span>/,
   );
   assert.match(
     timeline,
-    /Ahmad <span class="term term-constitutionalist">Zirakzadeh<\/span>/,
+    /<span class="term term-constitutionalist">Ahmad Zirakzadeh<\/span>/,
   );
   assert.match(
     timeline,
-    /Ali <span class="term term-constitutionalist">Shayegan<\/span>/,
+    /<span class="term term-constitutionalist">Ali Shayegan<\/span>/,
   );
   assert.match(
     timeline,
-    /Mahmud <span class="term term-constitutionalist">Nariman<\/span>/,
+    /<span class="term term-constitutionalist">Mahmud Nariman<\/span>/,
   );
   assert.match(
     timeline,
-    /Allahyar <span class="term term-constitutionalist">Saleh<\/span>/,
+    /<span class="term term-constitutionalist">Allahyar Saleh<\/span>/,
   );
   assert.match(timeline, /class="term term-islamist">Fada&#39;iyan-e Islam/);
-  assert.match(timeline, /class="term term-islamist">Tahmasabi/);
-  assert.match(timeline, /class="term term-islamist">Khomeini/);
+  assert.match(timeline, /class="term term-islamist">Khalil Tahmasabi/);
+  assert.match(timeline, /class="term term-islamist">Ruhollah Khomeini/);
   assert.match(
     timeline,
     /Royal <span class="term term-country country-netherlands">Dutch<\/span> Shell/,
@@ -127,14 +148,20 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   );
   assert.match(
     timelineCss,
-    /\.term-mossadegh\s*\{[\s\S]*?linear-gradient\([\s\S]*?var\(--term-nationalist\)[\s\S]*?var\(--term-parliament\)[\s\S]*?\}/,
+    /\.term-government-loyalist\s*\{\s*color:\s*var\(--term-parliament\)/,
   );
   assert.match(
     timelineCss,
-    /\.term-nationalist-left\s*\{[\s\S]*?var\(--term-nationalist\)[\s\S]*?var\(--term-left\)[\s\S]*?\}/,
+    /\.term-mossadegh\s*\{[\s\S]*?linear-gradient\([\s\S]*?var\(--term-nationalist\)[\s\S]*?var\(--term-parliament\)[\s\S]*?\}/,
   );
+  assert.doesNotMatch(timeline, /term-nationalist-left/);
+  assert.doesNotMatch(timelineCss, /\.term-nationalist-left/);
   assert.match(timelineCss, /--term-left:\s*#700000/i);
   assert.match(timelineCss, /--term-social-democratic:\s*#c00000/i);
+  assert.match(
+    timelineCss,
+    /\.term-social-democratic\s*\{\s*color:\s*var\(--term-social-democratic\)/,
+  );
   assert.match(
     timelineCss,
     /\.term-nationalist-social-democratic\s*\{[\s\S]*?var\(--term-nationalist\)[\s\S]*?var\(--term-social-democratic\)[\s\S]*?\}/,
@@ -168,16 +195,68 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   }
   assert.doesNotMatch(timeline, /\b(?:MAJ-S|SUP-)\d+/);
   assert.doesNotMatch(timeline, /TIMELINE_(?:NAV|CONTENT)/);
+  assert.doesNotMatch(
+    timeline,
+    /Enter the game|href="index\.html"|repository|archive ID/i,
+  );
+  assert.match(timeline, /<title>The Last Majles<\/title>/);
+  assert.match(timeline, /<strong>The Last Majles<\/strong>/);
+  assert.match(timeline, /id="page-title">The Last<br><em>Majles<\/em>/);
+  assert.match(timeline, /id="political-map-how-power-worked"/);
+  assert.match(timeline, /id="how-majles-elections-worked"/);
+  assert.match(timeline, /id="how-a-government-was-formed"/);
+  assert.match(timeline, /id="why-the-incomplete-seventeenth-majles-could-function"/);
+  assert.match(timeline, /id="what-the-election-results-actually-tell-us"/);
+  assert.match(timeline, />What the election results actually tell us<\/h3>/);
+  assert.doesNotMatch(
+    timeline,
+    /tell <span class="term term-country country-us">us<\/span>/,
+  );
+  assert.match(timeline, /id="can-the-senate-be-divided-into-factions"/);
+  assert.match(
+    timeline,
+    /Staunch <span class="term term-mossadegh">Mossadegh<\/span> supporters/,
+  );
+  assert.match(timeline, /fifty-two of sixty-four votes cast/);
+  assert.match(timeline, /id="economic-map-why-oil-dominated-the-crisis"/);
+  assert.equal(
+    timeline.match(/After the Allied invasion ended/g)?.length,
+    1,
+  );
   assert.ok(fs.existsSync('out/html/timeline.css'));
   assert.ok(fs.existsSync('out/html/timeline.js'));
+
+  const standaloneTimeline = fs.readFileSync(
+    'out/timeline/index.html',
+    'utf8',
+  );
+  assert.equal(standaloneTimeline, timeline);
+  for (const filename of [
+    'timeline.css',
+    'timeline.js',
+    'img/majlis_1940s.jpg',
+    'img/shah_1949.jpg',
+    'img/makki_abadan_1951.jpg',
+  ]) {
+    assert.ok(fs.existsSync(`out/timeline/${filename}`));
+  }
 });
 
 test('status sidebar scenes and qdisplay compile with stable IDs', () => {
   const game = JSON.parse(fs.readFileSync('out/game.json', 'utf8'));
+  const relationsText = JSON.stringify(game.scenes['status.relations']);
 
   assert.equal(game.scenes.status.isSpecial, true);
   assert.ok(game.scenes['status.coalition']);
   assert.ok(game.scenes['status.relations']);
+  assert.match(
+    relationsText,
+    /term term-constitutionalist\\?">.*Iran Party/,
+  );
+  assert.match(
+    relationsText,
+    /term term-social-democratic\\?">.*Toilers' Party/,
+  );
   assert.ok(game.qdisplays.month);
   assert.ok(
     fs.existsSync('source/scenes/events/1949/palace_protest.scene.dry'),

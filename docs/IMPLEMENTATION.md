@@ -114,7 +114,20 @@ These should be evaluated when their dependent system is implemented:
 
 - qualitative or uncertain displays for intelligence;
 - institution-specific compliance instead of automatic government control;
-- named constituencies instead of a normalized national election algorithm;
+- named constituencies instead of a normalized national election algorithm.
+  Dynamic SPD can convert a nationwide proportional vote into party seats; the
+  Iranian elections in scope were staggered, candidate-based contests whose
+  returns were followed by credential disputes and fluid caucus alignments.
+  Before implementing this system, define separate records for constituency
+  returns, credential status, attendance, dated caucus or allegiance, and
+  roll-call behavior. For the Senate, also preserve whether a member was
+  elected or appointed. Do not derive a permanent party-seat chart from any
+  one of those layers. The migration path from the current placeholder is to
+  introduce constituency and member records before any national summary
+  display; validate them against named returns and dated votes in
+  `docs/research/TIMELINE_PRIMER.md`. The source-graded control estimates and
+  required ledger layers are in
+  `docs/research/CRISIS_EVIDENCE_AUDIT.md#5-parliamentary-factions-and-effective-control`;
 - term-by-term oil proposals instead of one policy meter;
 - an economic representation more detailed than SPD's abstract budget,
   inflation, unemployment, and growth scalars. Source collection and the
@@ -123,6 +136,13 @@ These should be evaluated when their dependent system is implemented:
   corpus and player-facing purpose are reviewed;
 - a network model for coup operations instead of aggregate preparation;
 - daily time during the August 1953 crisis.
+
+The last two divergences must preserve the distinction between prepared
+street networks, police and military defection, and institutional seizure.
+The payment-attribution and hour-by-hour evidence boundaries are recorded in
+`docs/research/CRISIS_EVIDENCE_AUDIT.md`; disputed individuals and casualty
+totals must remain uncertainty-bearing evidence rather than hidden exact
+values.
 
 Until then, keeping numerical state and centralized updates makes the build
 easier to inspect, balance, and compare with SPD.

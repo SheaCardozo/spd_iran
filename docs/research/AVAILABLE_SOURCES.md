@@ -216,7 +216,10 @@ repository and direct-file provenance.
   `697dc30450017402cafcbf54911fd3bc953cab78c2cb389395bd6a30802715d5`.
 - **Role:** Official U.S. documentary record. Cite individual document number,
   date, parties, and editorial notes; do not generalize it into neutral
-  evidence of Iranian motives or public opinion.
+  evidence of Iranian motives or public opinion. Documents 39, 63, 67, 152,
+  193, 233, 239, and 306 are now mapped in
+  [`CRISIS_EVIDENCE_AUDIT.md`](CRISIS_EVIDENCE_AUDIT.md) for shutdown
+  expectations, welfare, parliamentary control, and coup operations.
 
 <a id="sup-011"></a>
 ### SUP-011 — Chaqueri, *Historical Documents of the Iranian Left*
@@ -275,7 +278,9 @@ repository and direct-file provenance.
 - **File quality:** Searchable 27-page J-STAGE publisher PDF.
 - **SHA-256:** `4eda82ba9e7a014f61b6e79bbaa4c901999a50ef04a073f73dd4891a6e25b37b`.
 - **Role:** Narrow evidence about bazaar organization and autonomous
-  interests, to be paired with book-length political history.
+  interests, to be paired with book-length political history. Its pp. 159–75
+  are used in [`CRISIS_EVIDENCE_AUDIT.md`](CRISIS_EVIDENCE_AUDIT.md) to
+  distinguish Thirty Tir's overlapping mobilizing networks.
 
 <a id="sup-015"></a>
 ### SUP-015 — Kashani-Sabet, “The Other Fight”
@@ -380,7 +385,9 @@ repository and direct-file provenance.
   usable complete files. The sidecar records both agency and carrier
   provenance.
 - **Role:** Interested internal operational histories. Assertions must be
-  compared with other declassified records and scholarship.
+  compared with other declassified records and scholarship. The clerical,
+  propaganda, finance, and street claims are source-graded in
+  [`CRISIS_EVIDENCE_AUDIT.md`](CRISIS_EVIDENCE_AUDIT.md).
 
 <a id="sup-023"></a>
 ### SUP-023 — Clawson and Sassanpour, “Adjustment to a Foreign Exchange Shock”
@@ -396,7 +403,10 @@ repository and direct-file provenance.
 - **SHA-256:** `5356219df43970e1ed374a82fa40fbf626b5d7c31b02a66e8d4a65cb722b4f4b`.
 - **Role:** Focused economic analysis of adjustment to the oil embargo and
   foreign-exchange shock. Estimates require comparison with Iranian fiscal,
-  banking, trade, and statistical records before becoming mechanics.
+  banking, trade, and statistical records before becoming mechanics. Its
+  explicit welfare limit and distributional implications are now separated in
+  [`ECONOMIC_HISTORY.md`](ECONOMIC_HISTORY.md#welfare-evidence-audit-19511953)
+  and [`CRISIS_EVIDENCE_AUDIT.md`](CRISIS_EVIDENCE_AUDIT.md).
 
 <a id="sup-024"></a>
 ### SUP-024 — Azimi, “On Shaky Ground”
@@ -614,6 +624,22 @@ collections being assigned concurrently.
 - **Role:** Retrospective UN checksum that republishes Bank Melli monetary and
   credit series beginning in 1952. Each table's underlying source and later
   report vintage must remain visible.
+
+<a id="sup-049"></a>
+### SUP-049 — British memorandum, “Persia: Political Review of the Recent Crisis”
+
+- **Status:** Acquired declassified government record; local-only.
+- **Bibliography:** [`P12` trust record](BIBLIOGRAPHY.md#reviewed-primary-and-reference-families).
+- **Local source:** [unexpurgated PDF](sources/supplemental/SUP-049-british-1953-09-02-political-review-unexpurgated.pdf)
+  · [metadata](sources/supplemental/SUP-049-british-1953-09-02-political-review-unexpurgated.md).
+- **Date, provenance, and extent:** 2 September 1953; NARA RG 59, box 411,
+  `788.00/9-253`; ten-page National Security Archive carrier scan.
+- **SHA-256:** `cb1809f31b9c9d7c834533212132958f7f14dbff6ec003f96bd091d1491ae5c0`.
+- **Role:** Detailed near-contemporary British reconstruction of 15–20 August,
+  including a casualty estimate and previously excised allegations about
+  clerical payments. Exact authorship and informants are unknown, and the
+  memorandum obscures Britain's own role; every claim remains attributed and
+  compared in [`CRISIS_EVIDENCE_AUDIT.md`](CRISIS_EVIDENCE_AUDIT.md).
 
 ## Additional supplemental scholarship
 
