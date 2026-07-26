@@ -205,6 +205,14 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.match(timeline, /id="political-map-how-power-worked"/);
   assert.match(timeline, /id="how-majles-elections-worked"/);
   assert.match(timeline, /id="how-a-government-was-formed"/);
+  assert.match(timeline, /id="the-westminster-shorthand-and-where-it-fails"/);
+  assert.match(timeline, />The Westminster shorthand—and where it fails<\/h3>/);
+  assert.match(timeline, /House of Commons/);
+  assert.match(timeline, /House of Lords/);
+  assert.match(
+    timeline,
+    /href="https:\/\/www\.gov\.uk\/government\/publications\/cabinet-manual"/,
+  );
   assert.match(timeline, /id="why-the-incomplete-seventeenth-majles-could-function"/);
   assert.match(timeline, /id="what-the-election-results-actually-tell-us"/);
   assert.match(timeline, />What the election results actually tell us<\/h3>/);

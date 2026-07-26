@@ -641,6 +641,21 @@ collections being assigned concurrently.
   memorandum obscures Britain's own role; every claim remains attributed and
   compared in [`CRISIS_EVIDENCE_AUDIT.md`](CRISIS_EVIDENCE_AUDIT.md).
 
+<a id="sup-050"></a>
+### SUP-050 — UK Cabinet Office, *The Cabinet Manual*
+
+- **Status:** Acquired official comparative reference; local-only.
+- **Bibliography:** [`P13` trust record](BIBLIOGRAPHY.md#reviewed-primary-and-reference-families).
+- **Local source:** [PDF](sources/supplemental/SUP-050-uk-cabinet-office-2011-cabinet-manual.pdf)
+  · [metadata](sources/supplemental/SUP-050-uk-cabinet-office-2011-cabinet-manual.md).
+- **Edition and extent:** First edition, October 2011; 110-page searchable
+  official GOV.UK PDF.
+- **SHA-256:** `f8b6ae38842a0e07ab8c483b566c58f0416fde7d59c915a1c3d9ad3b72e27e9b`.
+- **Role:** Authoritative comparative shorthand for modern Westminster
+  government formation, sovereign appointment, and Commons confidence,
+  especially chapters 2–3. It is not evidence about Iran or a claim that
+  British practice was unchanged across time.
+
 ## Additional supplemental scholarship
 
 <a id="sup-048"></a>

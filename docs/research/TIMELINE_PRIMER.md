@@ -2,8 +2,11 @@
 
 ## Purpose and limits
 
-This primer is intended for a reader who may know little more about Iran than
-the names Mossadegh and the Shah. It explains the political institutions,
+This primer is intended for a politically interested reader who may know
+little more about Iran than the names Mossadegh and the Shah. It assumes that
+comparisons to other parliamentary systems—especially the British
+Westminster system—will be useful, but not that the reader already knows
+Iranian constitutional vocabulary. It explains the political institutions,
 social coalitions, oil economy, international confrontation, and sequence of
 events that produced the coup of August 1953. It begins with the political
 opening of 1941, follows the immediate post-coup settlement, and carries the
@@ -114,6 +117,39 @@ pack, suspend, or bypass it
 ([`MAJ-S3`, chapter 3, pp. 79–86](AVAILABLE_SOURCES.md#maj-s3);
 [`MAJ-S1`, chapters 1–3](AVAILABLE_SOURCES.md#maj-s1)).
 
+### The Westminster shorthand—and where it fails
+
+The nearest familiar comparison is a Westminster constitutional monarchy. As
+in Britain, the monarch formally appointed the prime minister and ministers,
+while a government needed the confidence of the elected lower chamber to
+govern. Ministers, rather than the legally inviolable monarch, were answerable
+for public acts. The Majles therefore occupied something like the House of
+Commons' central position in responsible government.
+
+The analogy is useful precisely because the differences explain the crisis.
+By the 1950s, a British sovereign's choice of prime minister was governed by
+the answer to “who can command the Commons?” In Iran, the same convention was
+asserted but not securely settled. The Shah possessed an independent political
+network, claimed personal command of the armed forces, influenced elections,
+and sometimes tried to choose or remove ministers on his own authority. Iran
+had the forms of Crown appointment and parliamentary confidence without a
+British degree of agreement about where convention ended and royal discretion
+began.
+
+Nor was the Majles simply a Persian House of Commons. British governments
+normally rested on disciplined national parties elected on a common election
+day. Iranian cabinets assembled support among individual deputies, loose
+caucuses, local notables, and issue coalitions. A deputy could support
+nationalization, oppose Mossadegh on emergency powers, and cooperate with the
+court on another question without formally crossing a modern party floor.
+
+The British side of this comparison follows the Cabinet Office's description
+of a prime minister appointed by the sovereign because that person can command
+Commons confidence. The Iranian differences are documented in the political
+histories used throughout this section
+([`MAJ-S1`, chapters 1–3 and 15–20](AVAILABLE_SOURCES.md#maj-s1);
+[`MAJ-S3`, pp. 79–103](AVAILABLE_SOURCES.md#maj-s3)).
+
 ### How a government was formed
 
 Voters did not directly elect a prime minister. Parliamentary factions first
@@ -133,6 +169,14 @@ inclination. Much of the crisis turns on whether these conventions were
 binding rules or merely practices that a sufficiently powerful monarch,
 cabinet, or parliamentary bloc could evade
 ([`MAJ-S3`, pp. 79–86 and 96–103](AVAILABLE_SOURCES.md#maj-s3)).
+
+For a British reader, the vote of inclination made explicit what Westminster
+usually left to political arithmetic and royal convention: it told the Shah
+whom the Majles believed he should invite to form a government. The *farman*
+resembled the sovereign's formal appointment, and the later confidence vote
+tested whether the completed ministry could actually survive. The crucial
+difference was that the Iranian monarch could be an interested contestant in
+that process rather than a referee constrained by settled convention.
 
 ### The Shah, the army, and the 1949 revision
 
@@ -169,6 +213,15 @@ the elected Majles alone or the two chambers acting within an incompletely
 settled bicameral system
 ([`MAJ-S3`, pp. 82–86 and 96–103](AVAILABLE_SOURCES.md#maj-s3)).
 
+The loose British analogy is the House of Lords: a more conservative upper
+chamber with less democratic authority than the elected house. It should not
+be pushed further. Exactly half of Iran's senators were elected and half
+appointed by the Shah; the chamber was only two years old when the 1952 crisis
+erupted; and no equivalent of the long-settled political primacy of the
+Commons had yet emerged. The Senate was a new and still contested component
+of the constitution, not merely a revising chamber operating under familiar
+rules.
+
 ### How Majles elections worked
 
 The law provided direct voting by adult men; women remained excluded.
@@ -178,6 +231,15 @@ representation for recognized religious minorities. Some constituencies
 returned one deputy, while Tehran returned twelve. A voter selected named
 candidates, often from a locally circulated slate, rather than choosing a
 party whose national percentage was converted into seats.
+
+A British comparison helps mainly by contrast. Do not imagine a uniform
+first-past-the-post contest in single-member constituencies, producing one
+national party result on election night. Iranian constituencies could return
+several deputies—Tehran returned twelve—and voters chose named candidates
+from slates or personal networks. The result was closer to many staggered
+local contests whose winners later assembled parliamentary relationships than
+to a British general election that immediately identifies a government and
+opposition.
 
 There was no single nationwide election day followed by an immediate national
 result. Polling opened constituency by constituency and could continue for
@@ -223,6 +285,13 @@ it, or prevent any decision simply by leaving the chamber. Quorum denial,
 credential challenges, ministerial questioning, and fistfights were not side
 shows: they were methods of governing or disabling the state
 ([`MAJ-S3`, pp. 92–100 and 112–17](AVAILABLE_SOURCES.md#maj-s3)).
+
+Westminster offers a partial analogy in minority government and
+confidence-and-supply: a cabinet may survive because parties that will not
+join it nevertheless abstain on confidence or budgets. Iran added a sharper
+procedural weapon. Deputies could deny the chamber the quorum required even
+to debate or vote, so absence could disable parliament rather than merely
+alter the division result.
 
 ### What the election results actually tell us
 
@@ -954,6 +1023,7 @@ for each subject rather than merely listing titles.
 | 9 Esfand through the coup | `MAJ-S5`, pp. 49–288; `MAJ-S14`, chapters 5–6; *Foreign Relations of the United States*, Iran second edition, doc. 306, and volume X, doc. 362 |
 | Coup interpretation and Iranian/foreign agency | `MAJ-S4`, pp. 227–80; `MAJ-S5`, chapters 8–16; `MAJ-S7`, chapters 7–9 as revisionist counterpoint; `MAJ-S14`, chapter 6 |
 | Majles returns, alignments, votes, and quorum control | `MAJ-S2`, chapter 5, especially pp. 250–61; `MAJ-S3`, chapter 3, especially pp. 86–100 and 112–17; *Foreign Relations of the United States, 1952–1954, Iran, 1951–1954*, docs. 63, 67, 193, 233, and 239 |
+| Westminster comparison: government formation, confidence, the sovereign, and Parliament | UK Cabinet Office, [*The Cabinet Manual*](https://www.gov.uk/government/publications/cabinet-manual), especially chapters 2–3 |
 | Women and suffrage during the crisis | `SUP-015`, pp. 270–79 |
 | Cold War and decolonization frames | `MAJ-S14`, chapters 4–7; `SUP-012`, pp. 295–99 |
 | Repression, consortium, and longer aftermath | `MAJ-S2`, chapters 9–11; `MAJ-S3`, chapter 2; `MAJ-S14`, chapter 7 and “History and Contested Memories” |

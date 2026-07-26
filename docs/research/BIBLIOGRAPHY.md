@@ -634,6 +634,12 @@ below; presence does not turn an unread work into claim-level evidence.
   its author, office, audience, and informants remain unidentified. It is
   authoritative evidence of the document's contemporary British assessment
   and allegations, not conclusive evidence that each allegation was true.
+- **P13:** the UK Cabinet Office's 2011 *Cabinet Manual* is acquired as
+  [`SUP-050`](AVAILABLE_SOURCES.md#sup-050). It is authoritative for the UK
+  government's stated modern conventions of sovereign appointment, Commons
+  confidence, and government formation. It is used only as comparative
+  shorthand; it is neither an Iran source nor proof that British practice was
+  static in the 1940s–50s.
 - **R1–R12:** respected specialist reference entries for discovery and
   cross-checking only. Record the individual entry author and follow the
   bibliography; an Iranica entry cannot be the sole authority for an event.

@@ -60,3 +60,4 @@ bibliography entry, or asset-rights record.
 - [Constitutional and electoral primer expansion](2026-07-26-constitutional-electoral-primer.md)
 - [Election results, parliamentary alignments, and Senate color](2026-07-26-election-results-and-senate-color.md)
 - [Crisis evidence and parliamentary-control audit](2026-07-26-crisis-evidence-audit.md)
+- [Westminster comparisons in the constitutional primer](2026-07-26-westminster-comparisons.md)
