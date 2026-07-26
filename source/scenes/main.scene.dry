@@ -3,7 +3,7 @@ new-page: true
 is-hand: true
 max-cards: 3
 
-= [+ month +]/[+ year +]
+= [+ month : month +] [+ year +]
 
 The coalition secretariat can make one major organizational commitment this
 month. Draw from Party Affairs and choose an action.

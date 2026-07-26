@@ -4,8 +4,8 @@
 
 | Claim | Location in game | Source |
 | --- | --- | --- |
-| Opposition politicians organized around Mohammad Mossadegh to protest manipulation of the Sixteenth Majles election. | `source/scenes/palace_protest.scene.dry` | [`SUP-001`](../AVAILABLE_SOURCES.md#sup-001), Mari Nukii, “Protest Events in the Tehran Bazaar during the Oil Nationalization Movement of Iran,” *Annals of Japan Association for Middle East Studies* 28, no. 1 (2012), p. 10. |
-| The cooperation produced the National Front and initially centered representative elections. | `source/scenes/palace_protest.scene.dry` | [`SUP-001`](../AVAILABLE_SOURCES.md#sup-001), Nukii, “Protest Events,” p. 10. |
+| Opposition politicians organized around Mohammad Mossadegh to protest manipulation of the Sixteenth Majles election. | `source/scenes/events/1949/palace_protest.scene.dry` | [`SUP-001`](../AVAILABLE_SOURCES.md#sup-001), Mari Nukii, “Protest Events in the Tehran Bazaar during the Oil Nationalization Movement of Iran,” *Annals of Japan Association for Middle East Studies* 28, no. 1 (2012), p. 10. |
+| The cooperation produced the National Front and initially centered representative elections. | `source/scenes/events/1949/palace_protest.scene.dry` | [`SUP-001`](../AVAILABLE_SOURCES.md#sup-001), Nukii, “Protest Events,” p. 10. |
 
 The publisher PDF is archived locally as supplemental source `SUP-001`.
 Its [catalog entry](../AVAILABLE_SOURCES.md#sup-001) records the DOI,

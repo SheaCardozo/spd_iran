@@ -1,24 +1,46 @@
 title: Status
 new-page: true
+is-special: true
 
-= Coalition
+= Status
 
-Resources: [+ resources +]  
-Coalition cohesion: [+ coalition_cohesion +]  
-Constitutional legitimacy: [+ constitutional_legitimacy +]  
-Public mandate: [+ public_mandate +]  
-Organizational reach: [+ organizational_reach +]  
-Political intelligence: [+ political_intelligence +]
+[+ month : month +] [+ year +]
 
-= Relationships
+Resources available: [+ resources +]
 
-Mossadegh's authority: [+ mossadegh_authority +]  
-Iran Party: [+ iran_party_relation +]  
-Toilers: [+ toilers_relation +]  
-Society of Muslim Warriors: [+ muslim_warriors_relation +]  
-Court: [+ court_relation +]
+Major commitments this month: [+ month_actions +] / 1
+
+Constitutional legitimacy: [+ constitutional_legitimacy +]
+
+Public mandate: [+ public_mandate +]
 
 *All values are visible prototype state, following the SPD implementation
 baseline. They are not historical measurements.*
 
 - @main: Return to the monthly briefing
+
+@coalition
+title: Coalition
+
+= Coalition
+
+Cohesion: [+ coalition_cohesion +]
+
+Organizational reach: [+ organizational_reach +]
+
+Political intelligence: [+ political_intelligence +]
+
+Mossadegh's authority: [+ mossadegh_authority +]
+
+@relations
+title: Relations
+
+= Relations
+
+Iran Party: [+ iran_party_relation +]
+
+Toilers: [+ toilers_relation +]
+
+Society of Muslim Warriors: [+ muslim_warriors_relation +]
+
+Court: [+ court_relation +]

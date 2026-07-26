@@ -62,6 +62,23 @@ npm run play
 
 Then open <http://127.0.0.1:8080>. Set `GAME_PORT` to use another port.
 
+## Project layout
+
+The implementation follows Dynamic SPD's domain-oriented Dendry layout:
+
+| Path | Purpose |
+| --- | --- |
+| `source/scenes/events/` | Dated historical event scenes |
+| `source/scenes/party_affairs/` | Recurring organizational action cards |
+| `source/qdisplays/` | Reusable human-readable state displays |
+| `web/` | Tracked SPD-style browser shell applied after every build |
+| `assets/` | Rights-reviewed source assets copied into the web build |
+| `docs/research/` | Source catalogs, event records, and the ignored local source archive |
+
+Dynamic SPD keeps customized files directly in generated `out/html/`. This
+project keeps the same browser behavior in `web/` because `out/` is disposable;
+`npm run build` applies the overlay after DendryNexus generation.
+
 ## Current milestone
 
 The first playable vertical slice will cover the formation of the National

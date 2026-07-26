@@ -35,6 +35,27 @@ status UI, persistence, and build/runtime structure.
 Dynamic SPD is not a historical source. Iran-specific content and mechanics
 still require independent research and claim-level citations.
 
+## Browser baseline
+
+The generated browser experience now follows Dynamic SPD's customized
+`out/html/game.css`, `game.js`, and `index.html` conventions:
+
+- the same warm paper palette, typography, card geometry, hover treatment,
+  overlays, dark mode, and responsive breakpoints;
+- a persistent left status panel with live tabs;
+- visible Status, Save/Load, and Options controls;
+- event-image, animation, color-scheme, and colored-text settings; and
+- SPD's special-scene return behavior for the full Status page.
+
+Only controls backed by implemented Iran systems are exposed. Music, mod
+loading, D3 election graphs, and the hidden right-hand scheming panel remain
+out until their dependent systems exist.
+
+Dynamic SPD stores its customized files directly in generated `out/html/`.
+This repository deliberately keeps them in `web/` and overlays them after the
+Dendry build. This local tooling divergence makes `out/` reproducible and
+disposable without changing the runtime UI model.
+
 ## Implemented foundation
 
 The current build follows SPD in these respects:
@@ -61,11 +82,13 @@ Their numerical effects are balance scaffolding, not historical measurements.
 | Path | Responsibility |
 | --- | --- |
 | `source/scenes/root.scene.dry` | Menu and initial shared state |
-| `source/scenes/palace_protest.scene.dry` | Sourced campaign opening |
+| `source/scenes/events/1949/palace_protest.scene.dry` | Sourced campaign opening |
 | `source/scenes/main.scene.dry` | Hand, decks, and recurring briefing |
 | `source/scenes/party_affairs/` | Organizational action cards |
 | `source/scenes/post_event.scene.dry` | Calendar and shared reducers |
 | `source/scenes/status.scene.dry` | Visible state |
+| `source/qdisplays/` | Shared human-readable quality displays |
+| `web/` | Reproducible Dynamic SPD-style browser overlay |
 | `docs/research/events/` | Claim-level research records |
 
 ## Near-term extension order
@@ -102,6 +125,7 @@ easier to inspect, balance, and compare with SPD.
 | Post-card event routing and shared updates | `source/scenes/post_event.scene.dry` |
 | Numerical state display | `source/scenes/status.scene.dry` |
 | Party-affairs action pattern | `source/scenes/party_affairs/media.scene.dry` |
+| Browser shell and responsive styling | `out/html/index.html`, `out/html/game.js`, `out/html/game.css` |
 | Image attribution | `credits_images.txt` |
 | Packaged browser assets | `out/html/img/` |
 

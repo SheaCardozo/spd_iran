@@ -34,3 +34,4 @@ bibliography entry, or asset-rights record.
 - [Research registry and historical assets](2026-07-25-research-and-assets.md)
 - [Project process controls](2026-07-25-process-controls.md)
 - [Local historical-source archive](2026-07-25-source-archive.md)
+- [Dynamic SPD browser and structure sync](2026-07-25-spd-style-sync.md)
