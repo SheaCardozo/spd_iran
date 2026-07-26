@@ -4,12 +4,12 @@
 
 | Claim | Location in game | Source |
 | --- | --- | --- |
-| Opposition politicians organized around Mohammad Mossadegh to protest manipulation of the Sixteenth Majles election. | `source/scenes/events/1949/palace_protest.scene.dry` | [`SUP-001`](../AVAILABLE_SOURCES.md#sup-001), Mari Nukii, “Protest Events in the Tehran Bazaar during the Oil Nationalization Movement of Iran,” *Annals of Japan Association for Middle East Studies* 28, no. 1 (2012), p. 10. |
-| The cooperation produced the National Front and initially centered representative elections. | `source/scenes/events/1949/palace_protest.scene.dry` | [`SUP-001`](../AVAILABLE_SOURCES.md#sup-001), Nukii, “Protest Events,” p. 10. |
+| Opposition politicians organized around Mohammad Mossadegh to protest manipulation of the Sixteenth Majles election. | `source/scenes/events/1949/palace_protest.scene.dry` | [`MAJ-S1`](../AVAILABLE_SOURCES.md#maj-s1), Fakhreddin Azimi, *Iran: The Crisis of Democracy, 1941–1953* (St. Martin's Press, 1989), pp. 207–08; [`SUP-001`](../AVAILABLE_SOURCES.md#sup-001), Mari Nukii, “Protest Events in the Tehran Bazaar during the Oil Nationalization Movement of Iran,” *Annals of Japan Association for Middle East Studies* 28, no. 1 (2012), p. 10. |
+| The cooperation produced the National Front and initially centered representative elections. | `source/scenes/events/1949/palace_protest.scene.dry` | [`MAJ-S1`](../AVAILABLE_SOURCES.md#maj-s1), Azimi, *Iran*, p. 208; [`SUP-001`](../AVAILABLE_SOURCES.md#sup-001), Nukii, “Protest Events,” p. 10. |
 
-The publisher PDF is archived locally as supplemental source `SUP-001`.
-Its [catalog entry](../AVAILABLE_SOURCES.md#sup-001) records the DOI,
-provenance, checksum, and version-control status.
+The major Azimi scan (`MAJ-S1`) and Nukii publisher PDF (`SUP-001`) are
+archived locally. Their catalog entries record editions, provenance,
+checksums, file quality, and version-control status.
 
 ## Editorial limits
 
@@ -22,9 +22,7 @@ political history and contemporary Iranian reporting, the playable scene uses
 The action-card effects following this event are prototype balance abstractions.
 Their numerical values are not presented as historical measurements.
 
-Under the project's book-first sourcing policy, this record is provisional.
-Before the opening sequence is expanded or treated as release-ready, its claims
-must receive a precise locator in an accessible specialist monograph—preferably
-Azimi's *Iran: The Crisis of Democracy, 1941–1953* or Katouzian's *Musaddiq and
-the Struggle for Power in Iran*—and be compared with contemporary Iranian
-reporting.
+The two generalized claims now meet the project's book-first requirement
+through Azimi, pp. 207–08. Expansion into an exact-day chronology, participant
+count, quoted dialogue, or detailed attribution still requires contemporary
+Iranian reporting and comparison across the four-day sequence.

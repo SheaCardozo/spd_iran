@@ -1139,10 +1139,10 @@ Major recent reinterpretation emphasizing control of oil, imperial political eco
 **[S4] Mark J. Gasiorowski and Malcolm Byrne, eds. [*Mohammad Mosaddeq and the 1953 Coup in Iran*](https://www.jstor.org/stable/j.ctt1j5d815). Syracuse: Syracuse University Press, 2004.**  
 Multi-author collection spanning Iranian politics, British and American policy, intelligence, economics, and coup operations. Particularly useful because chapters can be compared rather than treated as a single-author verdict.
 
-**[S5] Ali Rahnema. [*Behind the 1953 Coup in Iran: Thugs, Turncoats, Soldiers, and Spooks*](https://www.cambridge.org/core/books/behind-the-1953-coup-in-iran/70645DFA58568EABC10B12371A6F5C3D). Cambridge: Cambridge University Press, 2014.**  
+**[S5] Ali Rahnema. [*Behind the 1953 Coup in Iran: Thugs, Turncoats, Soldiers, and Spooks*](https://www.cambridge.org/core/books/behind-the-1953-coup-in-iran/70645DFA58568EABC10B12371A6F5C3D). Cambridge: Cambridge University Press, 2015.**
 Detailed reconstruction of the actors and events from 15 to 19 August, based on Iranian, British, and American material. Essential for the daily crisis map and for avoiding a coup system that jumps directly from authorization to outcome.
 
-**[S6] Homa Katouzian. [*Musaddiq and the Struggle for Power in Iran*](https://books.google.com/books/about/Musaddiq_and_the_Struggle_for_Power_in_I.html?id=mJfBAAAAIAAJ). London: I.B. Tauris, 1990.**  
+**[S6] Homa Katouzian. [*Musaddiq and the Struggle for Power in Iran*](https://books.google.com/books/about/Musaddiq_and_the_Struggle_for_Power_in_I.html?id=mJfBAAAAIAAJ). London: I.B. Tauris, 1990; local revised paperback edition, 1999 (2009 reprint).**
 Influential political interpretation of Mossadegh and Iran's unstable state–society order. Useful for leadership, constitutional behavior, and structural fragility; compare its broader theoretical framing with Azimi and later work.
 
 **[S7] Darioush Bayandor. [*Iran and the CIA: The Fall of Mosaddeq Revisited*](https://obnb.uk/p15385035-iran-and-the-cia-the-fall-of-mosaddeq-revisited). Basingstoke: Palgrave Macmillan, 2010.**  

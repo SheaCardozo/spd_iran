@@ -35,3 +35,4 @@ bibliography entry, or asset-rights record.
 - [Project process controls](2026-07-25-process-controls.md)
 - [Local historical-source archive](2026-07-25-source-archive.md)
 - [Dynamic SPD browser and structure sync](2026-07-25-spd-style-sync.md)
+- [Major source intake and catalog resolution](2026-07-25-major-source-intake.md)

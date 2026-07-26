@@ -51,23 +51,25 @@ catalogs state whether the evidence itself can currently be inspected.
   protest in the Tehran bazaar—and useful for identifying the National Front's
   formation. It is an article rather than the preferred book-length political
   foundation, its principal dataset begins in 1951, and its one-paragraph
-  summary of the October 1949 protest should be checked against a specialist
-  political history and contemporary reporting before the opening sequence is
-  expanded.
-- **Project use:** October 1949 palace-protest opening, specifically p. 10.
+  summary of the October 1949 protest is therefore paired with Azimi, pp.
+  207–08. Contemporary reporting remains necessary before the opening gains an
+  exact date or participant count.
+- **Project use:** October 1949 palace-protest opening, p. 10, alongside
+  `MAJ-S1`.
 
 ## Core books
 
-These works are already identified by the design bibliography. They have not
-yet been used for an implemented claim unless separately listed above with a
-precise locator.
+These works are already identified by the design bibliography. Acquisition
+does not itself make them “Used”; that status still requires a checked
+claim-level locator.
 
 <a id="s1"></a>
-### S1 — Fakhreddin Azimi, *Iran: The Crisis of Democracy, 1941–1953*
+### S1 / MAJ-S1 — Fakhreddin Azimi, *Iran: The Crisis of Democracy, 1941–1953*
 
-- **Status:** Core; precise locators still required.
-- **Access:** [`S1` in the unavailable-source queue](UNAVAILABLE_SOURCES.md#s1).
-- **Publication:** London and New York: I.B. Tauris, 1989.
+- **Status:** Used; Core.
+- **Access:** [`MAJ-S1` available-source record](AVAILABLE_SOURCES.md#maj-s1).
+- **Local edition:** New York: St. Martin's Press, 1989; searchable OCR scan
+  with original print pagination.
 - **Author expertise and standing:** Azimi is a historian specializing in
   modern Iranian political and constitutional history, a professor of history
   at the University of Connecticut, and an Oxford-trained historian whose work
@@ -80,14 +82,15 @@ precise locator.
 - **Trust and limitations:** Preferred political baseline. Its arguments and
   factual reconstruction should still be compared with Iranian primary
   materials and later specialist research.
-- **Planned use:** National Front formation, elections, cabinets, Majles,
+- **Project use:** National Front formation and the October 1949 election
+  protest, pp. 207–08. Planned uses also include elections, cabinets, Majles,
   constitutional conflict, and coalition politics.
 
 <a id="s2"></a>
-### S2 — Ervand Abrahamian, *Iran Between Two Revolutions*
+### S2 / MAJ-S2 — Ervand Abrahamian, *Iran Between Two Revolutions*
 
 - **Status:** Core; precise locators still required.
-- **Access:** [`S2` in the unavailable-source queue](UNAVAILABLE_SOURCES.md#s2).
+- **Access:** [`MAJ-S2` available-source record](AVAILABLE_SOURCES.md#maj-s2).
 - **Publication:** Princeton: Princeton University Press, 1982.
 - **Author expertise and standing:** Abrahamian is a leading historian of
   modern Iran and professor emeritus at Baruch College and the CUNY Graduate
@@ -99,30 +102,36 @@ precise locator.
   and social-history research.
 - **Trust and limitations:** Foundational for social structure, parties, labor,
   and the Tudeh Party. Some categories and conclusions should be checked
-  against later specialist work.
+  against later specialist work. The source EPUB provides stable
+  chapter/section structure, while its converted PDF does not provide
+  trustworthy print-page locators. Prefer the EPUB for searching and reading;
+  obtain a print-layout copy when a claim needs a printed page number.
 - **Planned use:** Party organization, labor, constituencies, social networks,
   and Tudeh.
 
 <a id="s3"></a>
-### S3 — Ervand Abrahamian, *Oil Crisis in Iran: From Nationalism to Coup d’État*
+### S3 / MAJ-S3 — Ervand Abrahamian, *Oil Crisis in Iran: From Nationalism to Coup d’État*
 
 - **Status:** Core; precise locators still required.
-- **Access:** [`S3` in the unavailable-source queue](UNAVAILABLE_SOURCES.md#s3).
+- **Access:** [`MAJ-S3` available-source record](AVAILABLE_SOURCES.md#maj-s3).
 - **Publication:** Cambridge: Cambridge University Press, 2021.
 - **Author expertise and standing:** A recent specialist monograph by a leading
   historian of modern Iran, centered on sovereignty, control, and the political
   economy of the oil dispute.
 - **Trust and limitations:** Essential for avoiding a simplistic compensation
   or “50/50” model. Its interpretive emphasis should be compared with other
-  specialists and the diplomatic record.
+  specialists and the diplomatic record. The source EPUB provides stable
+  chapter/section structure, while its converted PDF does not provide
+  trustworthy print-page locators. Prefer the EPUB for searching and reading;
+  obtain a publisher-layout copy when a claim needs a printed page number.
 - **Planned use:** Oil proposals, AIOC control, sanctions, negotiations, and
   the political economy of nationalization.
 
 <a id="s4"></a>
-### S4 — Mark J. Gasiorowski and Malcolm Byrne, eds., *Mohammad Mosaddeq and the 1953 Coup in Iran*
+### S4 / MAJ-S4 — Mark J. Gasiorowski and Malcolm Byrne, eds., *Mohammad Mosaddeq and the 1953 Coup in Iran*
 
 - **Status:** Core; chapter-level author and locator records still required.
-- **Access:** [`S4` in the unavailable-source queue](UNAVAILABLE_SOURCES.md#s4).
+- **Access:** [`MAJ-S4` available-source record](AVAILABLE_SOURCES.md#maj-s4).
 - **Publication:** Syracuse: Syracuse University Press, 2004.
 - **Editor expertise and standing:** Gasiorowski is a long-standing specialist
   on the 1953 coup and U.S.–Iran relations and a professor of political science
@@ -137,11 +146,13 @@ precise locator.
   and economics.
 
 <a id="s5"></a>
-### S5 — Ali Rahnema, *Behind the 1953 Coup in Iran*
+### S5 / MAJ-S5 — Ali Rahnema, *Behind the 1953 Coup in Iran*
 
 - **Status:** Core; precise locators still required.
-- **Access:** [`S5` in the unavailable-source queue](UNAVAILABLE_SOURCES.md#s5).
-- **Publication:** Cambridge: Cambridge University Press, 2014.
+- **Access:** [`MAJ-S5` available-source record](AVAILABLE_SOURCES.md#maj-s5).
+- **Publication:** Cambridge: Cambridge University Press, 2015. The local
+  copyright page states “First published 2015”; earlier project references to
+  2014 followed cataloging data and have been corrected.
 - **Author expertise and standing:** Rahnema is a scholar of modern Iranian
   political, economic, and intellectual history and professor emeritus at the
   American University of Paris. His institutional profile emphasizes late
@@ -155,12 +166,12 @@ precise locator.
 - **Planned use:** August 1953 crisis sequence and coup network.
 
 <a id="s6"></a>
-### S6 — Homa Katouzian, *Musaddiq and the Struggle for Power in Iran*
+### S6 / MAJ-S6 — Homa Katouzian, *Musaddiq and the Struggle for Power in Iran*
 
 - **Status:** Core interpretive comparison; precise locators still required.
-- **Access:** [`S6` in the unavailable-source queue](UNAVAILABLE_SOURCES.md#s6).
-- **Publication:** London: I.B. Tauris, 1990. Verify the supplied edition before
-  recording locators.
+- **Access:** [`MAJ-S6` available-source record](AVAILABLE_SOURCES.md#maj-s6).
+- **Local edition:** London: I.B. Tauris, revised paperback edition 1999,
+  reprinted 2009; first published 1990.
 - **Author expertise and standing:** Katouzian is an economist, historian, and
   long-standing scholar of Iran associated with Oxford's Iranian Studies
   program. His publisher profile records a substantial body of scholarship on
@@ -169,15 +180,18 @@ precise locator.
 - **Trust and limitations:** An influential specialist interpretation of
   Mossadegh and structural political instability. Compare its wider
   state–society theory with Azimi's institutional history and more recent
-  archival work rather than treating the theory as settled fact.
+  archival work rather than treating the theory as settled fact. The local
+  scan preserves print pages, and a separate OCR derivative supports
+  discovery. Citations and quotations must still be verified against the
+  original page images.
 - **Planned use:** Mossadegh, constitutional behavior, political leadership,
   structural fragility, and corroboration of the 1949 opening.
 
 <a id="s7"></a>
-### S7 — Darioush Bayandor, *Iran and the CIA: The Fall of Mosaddeq Revisited*
+### S7 / MAJ-S7 — Darioush Bayandor, *Iran and the CIA: The Fall of Mosaddeq Revisited*
 
 - **Status:** Core counterpoint; precise locators still required.
-- **Access:** [`S7` in the unavailable-source queue](UNAVAILABLE_SOURCES.md#s7).
+- **Access:** [`MAJ-S7` available-source record](AVAILABLE_SOURCES.md#maj-s7).
 - **Publication:** Basingstoke: Palgrave Macmillan, 2010.
 - **Author expertise and standing:** Bayandor is an Iran analyst, historian,
   former diplomat, and former United Nations official. The scholarly publisher

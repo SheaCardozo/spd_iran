@@ -20,13 +20,23 @@ are maintained in [`BIBLIOGRAPHY.md`](BIBLIOGRAPHY.md).
 
 | IDs | Decision | Use and limits |
 | --- | --- | --- |
-| S1, S2, S3, S5, S6 | **Approved as core scholarship; text required before use.** | Scholarly monographs by established modern-Iran specialists. Suitable as book-length foundations once the relevant pages or chapters are accessible and recorded. |
+| S1, S2, S3, S5, S6 | **Approved as core scholarship; acquired locally.** | Scholarly monographs by established modern-Iran specialists. They are suitable book-length foundations, but each new claim still requires a checked page, chapter, or stable-section locator. |
 | S4 | **Approved as a core edited volume; cite chapter author.** | The editors and press are credible, but each chapter has its own author, evidence, and argument. A claim must cite the individual chapter and locator. |
 | S7 | **Approved as a serious interpretive counterpoint, not a neutral baseline.** | A scholarly monograph by an Iran analyst and historian. Its revisionist account of domestic agency must be compared with operational records and other specialist histories. |
 
-None of S1, S2, S3, S4, S5, S6, or S7 is presently cleared for a new claim solely by appearing in the
-design bibliography. The current workspace lacks the relevant searchable pages
-or scans; they are tracked in `UNAVAILABLE_SOURCES.md`.
+All of S1–S7 are now present in the local archive and have passed edition,
+page-count, searchability, and checksum intake. Acquisition does not clear a
+new claim by itself. `S1` is presently the only one used by implemented
+content, after its pp. 207–08 were checked for the October 1949 opening.
+
+The local formats affect locator practice:
+
+- S1, S4, S5, S6, and S7 preserve stable print layout and pagination.
+- S2 and S3 include their source EPUBs and converted PDFs. EPUB chapter and
+  section structure is suitable for stable electronic-edition locators; the
+  generated PDF page numbers are not reliable print locators.
+- S6's canonical scan is image-only; a separate searchable OCR derivative is
+  now available for discovery.
 
 ### Peer-reviewed and focused scholarship
 
@@ -39,10 +49,11 @@ or scans; they are tracked in `UNAVAILABLE_SOURCES.md`.
 | S12 | **Approved focused source with a narrow remit.** | Nukii's specialist bazaar research supports bazaar organization and mobilization. Do not use it as the sole book-length political narrative. |
 | S13 | **Approved focused source.** | Firoozeh Kashani-Sabet is an established historian of modern Iran. The article is appropriate for women's organization and suffrage during nationalization; follow its notes into Persian publications and cite exact pages. |
 
-The present opening uses the separate Nukii article archived as
-[`SUP-001`](AVAILABLE_SOURCES.md#sup-001). That use remains provisional because
-the opening still lacks the preferred book-length and contemporary Iranian
-corroboration.
+The present opening uses Azimi's S1/MAJ-S1, pp. 207–08, as its book-length
+foundation and the separate Nukii article archived as
+[`SUP-001`](AVAILABLE_SOURCES.md#sup-001), p. 10, as specialist
+corroboration. The project still withholds a precise date and participant count
+pending contemporary Iranian evidence.
 
 ### Primary and institutional sources
 
@@ -89,7 +100,8 @@ record.
 
 ## Gaps exposed by the audit
 
-1. The core monographs are not available in the workspace at page level.
+1. S2 and S3 still need publisher-layout or print-equivalent copies when a
+   claim specifically requires printed-page rather than EPUB section locators.
 2. The bibliography is weighted toward English-language scholarship and
    Western institutional archives.
 3. Sixteenth and Seventeenth Majles proceedings, Iranian laws, budgets,

@@ -17,21 +17,29 @@ for both available and unavailable works are in
   claim in the game.
 
 When a source is acquired, record the exact edition and file provenance in
-`AVAILABLE_SOURCES.md`, update its access status in `BIBLIOGRAPHY.md`, remove
-the resolved queue entry, and add page or chapter locators only after the text
-has been checked.
+`AVAILABLE_SOURCES.md`, update its access status in `BIBLIOGRAPHY.md`, move its
+queue entry into the resolved table below, and add page or chapter locators
+only after the text has been checked.
 
 ## Priority scholarly books
 
-| ID | Priority | Source | Why it is wanted | Needed for | Current access result | What to provide |
-| --- | --- | --- | --- | --- | --- | --- |
-| <span id="s1"></span>[S1](BIBLIOGRAPHY.md#s1) | Critical | Fakhreddin Azimi, *Iran: The Crisis of Democracy, 1941–1953* (I.B. Tauris, 1989; a later edition may also be useful) | Major specialist political and institutional history by an established historian of modern Iran | 1949 election protest, National Front formation, cabinets, Majles, parties, court, constitutional conflict | Catalog/publisher-level metadata found; required pages not accessible in the workspace | Searchable PDF or scans including title/copyright pages, notes, bibliography, and relevant chapters |
-| <span id="s2"></span>[S2](BIBLIOGRAPHY.md#s2) | Critical | Ervand Abrahamian, *Iran Between Two Revolutions* (Princeton UP, 1982) | Foundational social and party history by a leading modern-Iran historian | Tudeh, labor, class and occupational networks, party organization | Stable JSTOR/book records found; usable full text not accessible in the workspace | Searchable edition with pagination, notes, and bibliography |
-| <span id="s3"></span>[S3](BIBLIOGRAPHY.md#s3) | Critical | Ervand Abrahamian, *Oil Crisis in Iran: From Nationalism to Coup d'État* (Cambridge UP, 2021) | Recent book-length account centered on sovereignty and control in the oil dispute | Oil negotiation terms, sanctions, political economy, coup interpretation | Publisher record and preview metadata found; required text not accessible | Searchable publisher or print-equivalent edition |
-| <span id="s4"></span>[S4](BIBLIOGRAPHY.md#s4) | High | Mark J. Gasiorowski and Malcolm Byrne, eds., *Mohammad Mosaddeq and the 1953 Coup in Iran* (Syracuse UP, 2004) | Multi-author scholarly comparison of Iranian politics, diplomacy, economics, and operations | Coup design and disputed interpretations | Book record found; chapter texts not accessible in the workspace | Full volume with contributor list and stable page numbers |
-| <span id="s5"></span>[S5](BIBLIOGRAPHY.md#s5) | Critical | Ali Rahnema, *Behind the 1953 Coup in Iran* (Cambridge UP, 2014) | Detailed specialist reconstruction of 15–19 August using Iranian, British, and American evidence | Daily August crisis chronology, actors, networks, and disputed coordination | Publisher metadata found; required chapters not accessible | Searchable edition with notes and bibliography |
-| <span id="s6"></span>[S6](BIBLIOGRAPHY.md#s6) | High | Homa Katouzian, *Musaddiq and the Struggle for Power in Iran* (I.B. Tauris, 1990; verify edition supplied) | Influential specialist biography and political interpretation | Mossadegh, constitutional behavior, leadership, and 1949 opening corroboration | Publisher/catalog descriptions found; relevant text not accessible | Searchable copy with edition statement and original page numbers |
-| <span id="s7"></span>[S7](BIBLIOGRAPHY.md#s7) | High | Darioush Bayandor, *Iran and the CIA: The Fall of Mosaddeq Revisited* (Palgrave Macmillan, 2010) | Serious revisionist account useful for testing claims about domestic and foreign causation | Coup historiography and explicit disagreement modeling | Publisher preview/metadata found; complete evidentiary text not accessible | Full edition with notes and bibliography |
+No priority scholarly book is currently unavailable. The Iranian and
+Persian-language priorities below remain active.
+
+## Resolved acquisitions
+
+These entries preserve the acquisition history while their current file and
+edition records live in the available-source catalog.
+
+| Former queue ID | Resolved | Available record | Resolution note |
+| --- | --- | --- | --- |
+| `S1` | 2026-07-25 | [`MAJ-S1`](AVAILABLE_SOURCES.md#maj-s1) | St. Martin's Press 1989 OCR scan with stable print pagination; pp. 207–08 reviewed and cited. |
+| `S2` | 2026-07-25 | [`MAJ-S2`](AVAILABLE_SOURCES.md#maj-s2) | Source EPUB and converted reading PDF acquired; EPUB sections are stable, while a print-layout copy would add printed-page locators. |
+| `S3` | 2026-07-25 | [`MAJ-S3`](AVAILABLE_SOURCES.md#maj-s3) | Source EPUB and converted reading PDF acquired; EPUB sections are stable, while a publisher-layout copy would add printed-page locators. |
+| `S4` | 2026-07-25 | [`MAJ-S4`](AVAILABLE_SOURCES.md#maj-s4) | OCR scan with stable print pagination and contributor list acquired. |
+| `S5` | 2026-07-25 | [`MAJ-S5`](AVAILABLE_SOURCES.md#maj-s5) | Searchable publisher-layout copy acquired; title page corrects the project year to 2015. |
+| `S6` | 2026-07-25 | [`MAJ-S6`](AVAILABLE_SOURCES.md#maj-s6) | Revised 1999 paperback, reprinted 2009, acquired as a stable-page image scan; a searchable OCR derivative is also available. |
+| `S7` | 2026-07-25 | [`MAJ-S7`](AVAILABLE_SOURCES.md#maj-s7) | Searchable publisher-layout copy acquired; retained as an interpretive counterpoint. |
 
 ## Iranian and Persian-language acquisition priorities
 
