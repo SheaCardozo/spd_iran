@@ -515,6 +515,22 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
     timelineCss,
     /\.contents\.is-collapsible\.is-open nav\s*\{[\s\S]*?display:\s*grid;/,
   );
+  assert.match(
+    timelineCss,
+    /\.primer-layout\s*\{[\s\S]*?grid-template-columns:\s*210px minmax\(0, 760px\);[\s\S]*?gap:\s*68px;/,
+  );
+  assert.match(
+    timelineCss,
+    /\.primer\s*\{[\s\S]*?max-width:\s*760px;[\s\S]*?margin-inline:\s*auto;/,
+  );
+  assert.match(
+    timelineCss,
+    /\.contents\s*\{[\s\S]*?scrollbar-color:\s*transparent transparent;[\s\S]*?scrollbar-width:\s*thin;/,
+  );
+  assert.match(
+    timelineCss,
+    /\.contents:hover,[\s\S]*?\.contents:focus-within\s*\{[\s\S]*?scrollbar-color:\s*var\(--gold\) transparent;/,
+  );
   assert.match(timelineJs, /setContentsOpen/);
   assert.match(timelineJs, /classList\.add\('is-collapsible'\)/);
   assert.match(timelineJs, /max-width: 600px/);

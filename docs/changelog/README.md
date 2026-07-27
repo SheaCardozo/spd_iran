@@ -86,3 +86,4 @@ bibliography entry, or asset-rights record.
 - [Primer historical image sequence](2026-07-27-primer-historical-image-sequence.md)
 - [Primer adversarial image audit](2026-07-27-primer-adversarial-image-audit.md)
 - [Primer prompt-residue audit](2026-07-27-primer-prompt-residue-audit.md)
+- [Primer reading measure](2026-07-27-primer-reading-measure.md)
