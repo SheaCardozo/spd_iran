@@ -20,11 +20,10 @@ began after Reza Shah's abdication in 1941
 ([`MAJ-S2`, chapters 7–9](AVAILABLE_SOURCES.md#maj-s2);
 [`MAJ-S14`, chapter 7](AVAILABLE_SOURCES.md#maj-s14)).
 
-Dates, headcounts, casualty figures, responsibility for particular covert
-actions, and historical interpretations are stated cautiously where the
-evidence remains disputed. Dates are Gregorian; familiar Iranian calendar
-names such as 30 Tir and 9 Esfand are explained at their first historical
-appearance.
+Some dates, headcounts, casualty figures, and covert chains of command cannot
+be reconstructed exactly; the text marks those limits where they matter.
+Dates are Gregorian; familiar Iranian calendar names such as 30 Tir and
+9 Esfand are explained at their first historical appearance.
 
 The sources transliterate names in several ways. This document uses
 **Mossadegh**, **Majles**, **Tudeh**, and **National Front** except in titles.
@@ -391,8 +390,8 @@ cooperation became the National Front.
 Oil was not the coalition's only, or initially even its principal, demand. It
 soon joined two questions that became inseparable: Iranian sovereignty over
 the country's most important natural resource and constitutional government
-free of royal and foreign interference. Exact-day accounts of the palace
-protest vary, so this primer identifies the sequence only as October 1949
+free of royal and foreign interference. The precise day of the palace protest
+is uncertain, so the sequence is dated only to October 1949
 ([`MAJ-S1`, pp. 207–08](AVAILABLE_SOURCES.md#maj-s1);
 [`MAJ-S2`, chapter 5](AVAILABLE_SOURCES.md#maj-s2)).
 
@@ -428,8 +427,8 @@ supplemental agreement on 25 November 1950, and the Majles rejected it on
 ### March 1951: assassination and nationalization
 
 On 7 March 1951, Khalil Tahmasabi, a member of the militant Islamist
-Fada'iyan-e Islam, assassinated Razmara. Claims about who encouraged or knew
-about the assassination remain disputed. The oil committee approved
+Fada'iyan-e Islam, assassinated Razmara. Who else encouraged or knew about the
+assassination remains unknown. The oil committee approved
 nationalization the following day. The Majles approved the principle in
 mid-March, and the Senate approved it on 20 March
 ([`MAJ-S14`, chapter 1, pp. 36–38](AVAILABLE_SOURCES.md#maj-s14)).
@@ -525,10 +524,10 @@ management, protection for AIOC, and terms that would not encourage
 nationalization elsewhere. Through 1952, Washington increasingly tied aid to
 a settlement and feared that prolonged deadlock would strengthen the Tudeh,
 but the Truman administration still refused Britain's request for support for
-a coup. Some historians fault Mossadegh for not converting an interim plan
-into a workable settlement; others emphasize how each plan limited Iranian
-control. The record establishes real room for negotiation, but not a single,
-politically costless bargain that one side simply refused
+a coup. There was real room for negotiation, but no politically easy bargain.
+Interim arrangements could restart the industry only by postponing conflicts
+over control, personnel, sales, and compensation—the very questions on which
+both sides believed their larger political position depended
 ([`MAJ-S3`, pp. 56–58](AVAILABLE_SOURCES.md#maj-s3);
 [`MAJ-S6`, revised preface and chapters 8–9](AVAILABLE_SOURCES.md#maj-s6);
 [`MAJ-S12`, negotiation chapters](AVAILABLE_SOURCES.md#maj-s12);
@@ -561,12 +560,11 @@ Qavam announced that he would restore order and resolve the crisis. On
 21 July—30 Tir in the Iranian calendar—a general uprising engulfed Tehran and
 other cities. National Front organizations, bazaar networks, Kashani's
 followers, and the Tudeh mobilized, but not under one command. Security forces
-fired on demonstrators; casualty totals remain contested.
+fired on demonstrators; no agreed casualty count survives.
 
 The Shah retreated, Qavam resigned, and Mossadegh returned in triumph.
-Specialist work on bazaar organization shows that this victory cannot be
-attributed solely to prominent party and clerical leaders: commercial,
-neighborhood, and crowd networks were crucial
+Prominent party and clerical leaders mattered, but commercial, neighborhood,
+and crowd networks were equally crucial to the mobilization
 ([`MAJ-S1`, chapter 19, pp. 288–92](AVAILABLE_SOURCES.md#maj-s1);
 [`SUP-014`, pp. 159–75](AVAILABLE_SOURCES.md#sup-014)).
 
@@ -630,27 +628,25 @@ unemployment, and development retrenchment accumulated; retaining former oil
 workers shifted part of the shock onto the budget. The government's
 answers—new taxes, credit expansion, regulation, and provisional reforms—gave
 opponents concrete arguments about inflation, property, and executive power.
-The burden varied substantially by place and class, so the economic shock
-should not be treated as uniform hardship or a mechanical cause of each
-defection
+The burden varied substantially by place and class, and each defection also
+reflected political interests, personal rivalry, or disagreement over the
+government's direction
 ([`MAJ-S18`, pp. 120–44](AVAILABLE_SOURCES.md#maj-s18);
 [`SUP-023`, pp. 2–18](AVAILABLE_SOURCES.md#sup-023)).
 
 The Tudeh increasingly defended Mossadegh against royalism and imperialism,
 but remained institutionally separate and distrusted him. Its visible street
 power frightened conservatives, clerics, landowners, officers, and American
-policymakers. The party was a real and important political actor; the
-available evidence does not establish that it was poised to seize power in
-August 1953
+policymakers. It was a major political force, but it neither controlled the
+government nor had the position within the armed forces required for an
+immediate seizure of power in August 1953
 ([`MAJ-S2`, chapter 6](AVAILABLE_SOURCES.md#maj-s2);
 [`MAJ-S4`, Maziar Behrooz, pp. 102–25](AVAILABLE_SOURCES.md#maj-s4)).
 
-Historians disagree on what mattered most. Abrahamian emphasizes a widening
-social and ideological split between modern and traditional middle-class
-allies; Katouzian gives greater weight to rivalry, appointments, personal
-authority, and tactical frustration. Neither account supports reducing the
-break to religion, communism, or principle alone. The coalition had united
-people whose desired futures for Iran were fundamentally incompatible
+The coalition broke apart for several reasons at once: widening social and
+ideological differences, rivalry over appointments and access, disputes over
+Mossadegh's authority, and tactical frustration. It had united people whose
+desired futures for Iran were fundamentally incompatible
 ([`MAJ-S1`, chapter 20](AVAILABLE_SOURCES.md#maj-s1);
 [`MAJ-S2`, pp. 275–78](AVAILABLE_SOURCES.md#maj-s2);
 [`MAJ-S6`, chapters 11–12](AVAILABLE_SOURCES.md#maj-s6)).
@@ -681,10 +677,10 @@ become a parliamentary majority
 The immediate dispute concerned the boundary between crown and government.
 Mossadegh demanded an end to palace and army intrigues, transfer of control
 over the royal estates, and the Shah's subordination to the responsible
-government. The Shah then offered to leave Iran temporarily. Later accounts
-differ over whether he genuinely intended to go and whether Mossadegh merely
-accepted or actively encouraged the plan; opponents presented it as an attempt
-to drive out the monarch
+government. The Shah then offered to leave Iran temporarily. Whether he
+genuinely intended to go—and whether Mossadegh merely accepted or actively
+encouraged the plan—is unclear. Opponents presented it as an attempt to drive
+out the monarch
 ([`MAJ-S5`, pp. 49–59](AVAILABLE_SOURCES.md#maj-s5);
 [`MAJ-S14`, chapter 5, “9 Esfand”](AVAILABLE_SOURCES.md#maj-s14)).
 
@@ -693,9 +689,9 @@ the Shah's departure. A crowd attacked Mossadegh's residence, and the prime
 minister escaped through the rear of the compound.
 
 The incident demonstrated how anti-government crowds, officers, court
-politicians, and clerical networks could cooperate. It also showed the danger
-of presenting the Shah's departure as imminent. Rahnema treats it as an
-important precursor to August
+politicians, and clerical networks could cooperate. It also showed the
+mobilizing power of presenting the Shah's departure as imminent, making
+9 Esfand an important precursor to August
 ([`MAJ-S5`, pp. 49–59](AVAILABLE_SOURCES.md#maj-s5);
 [`MAJ-S14`, chapter 5, “9 Esfand”](AVAILABLE_SOURCES.md#maj-s14)).
 
@@ -703,20 +699,18 @@ important precursor to August
 
 General Mahmoud Afshartus, Mossadegh's police chief and an important loyal
 security official, was kidnapped and murdered. His removal deprived the
-government of a trusted commander amid several overlapping conspiracies. The
-murder's networks and their relationship to the later coup remain contested,
-so it should not be treated as a proven stage of TPAJAX
+government of a trusted commander amid several overlapping conspiracies. No
+documented link shows that foreign governments directed the murder
 ([`MAJ-S5`, chapter 4](AVAILABLE_SOURCES.md#maj-s5);
 [`MAJ-S14`, pp. 138–39 and 155](AVAILABLE_SOURCES.md#maj-s14)).
 
 At the same time, dissident deputies used absence to obstruct a parliamentary
 report affirming cabinet control of the civil and military administration.
 After the murder, investigators linked suspects to Baghai and Zahedi; both
-men took sanctuary in the Majles under Kashani's protection. The evidence
-does not establish that Baghai ordered the murder or that it was a
-foreign-directed stage of the August operation. It does show former National
-Front allies, royalists, and parliamentary obstruction converging in practice
-before the summer quorum crisis
+men took sanctuary in the Majles under Kashani's protection. Investigators did
+not prove that Baghai ordered the killing. Its political effect was
+nevertheless clear: former National Front allies, royalists, and parliamentary
+obstruction were converging before the summer quorum crisis
 ([`MAJ-S3`, pp. 112–15](AVAILABLE_SOURCES.md#maj-s3);
 [`MAJ-S6`, pp. 172–73](AVAILABLE_SOURCES.md#maj-s6)).
 
@@ -742,21 +736,19 @@ Their motives overlapped without being identical:
 - Both worried that successful nationalization could become a model elsewhere.
 - Both came to treat Mossadegh's removal as a prerequisite for “stability.”
 
-Gregory Brew describes the resulting argument as a **collapse narrative**.
-Its force did not depend on proof that Iran would fail the next week. It
-combined two forecasts: that an oil-less economy could not endure in the long
-term, and that the National Front lacked the administrative capacity to
-manage the transition. Contemporary assessments continued to place a
-breakdown months away, but anticipated economic failure was converted into an
-argument for replacing the government and reintegrating Iranian oil into the
-international company system. This does not replace the Cold War or
-decolonization explanations; it shows how policymakers converted a real but
-nonterminal shock into a forecast of future political collapse
+Officials increasingly justified removal through a forecast of eventual
+collapse. They argued that an oil-less economy could not endure and that the
+National Front could not manage the transition, even while contemporary
+assessments placed a breakdown months rather than days away. A real but
+nonterminal economic shock thus became an argument for replacing the
+government and returning Iranian oil to the international company system.
+Economic pessimism, Cold War fears, and resistance to decolonization reinforced
+one another
 ([`MAJ-S18`, pp. 128–44](AVAILABLE_SOURCES.md#maj-s18);
 [`SUP-023`, pp. 2–18](AVAILABLE_SOURCES.md#sup-023)).
 
-The coup therefore belongs to the histories of both the Cold War and
-decolonization
+The decision for a coup joined Cold War strategy to the defense of an imperial
+economic order against decolonization
 ([`MAJ-S14`, chapters 4–5](AVAILABLE_SOURCES.md#maj-s14);
 [`MAJ-S3`, chapters 1–2](AVAILABLE_SOURCES.md#maj-s3);
 [`SUP-012`, pp. 295–99](AVAILABLE_SOURCES.md#sup-012)).
@@ -776,23 +768,23 @@ Mossadegh called a referendum on dissolving the Seventeenth Majles. It was
 held in Tehran on 3 August and in the provinces on 10 August. Separate
 locations or visibly separate ballot boxes for “yes” and “no” compromised
 secrecy. The official result was overwhelmingly in favor of dissolution.
-Women also attempted to participate. Surviving accounts disagree over whether
-officials prevented them from voting or excluded their ballots from the
-official count.
+Women also attempted to participate. It is unclear whether officials prevented
+them from voting or allowed votes that were then excluded from the official
+count.
 
 The referendum was not the dissolution procedure written into the
-constitution. A 1949 revision had given the Shah a contested power to dissolve
-the Majles if new elections followed, whereas Mossadegh grounded the vote in
-popular sovereignty. The referendum result therefore did not by itself settle
-the chamber's legal status. The Interior Ministry began preparing a new
+constitution. A 1949 revision had given the Shah a power to dissolve the
+Majles if new elections followed, but its scope was never agreed; Mossadegh
+instead grounded the vote in popular sovereignty. The result therefore did not
+settle the chamber's legal status. The Interior Ministry began preparing a new
 election, and on 16 August—after the first coup attempt failed and the Shah
 fled—the government formally announced the dissolution.
 
-This does not by itself establish that Mossadegh had simply become a dictator:
-he faced genuine obstruction, corruption, and royal interference. The sequence
-was nevertheless constitutionally disputed and politically disastrous. It
-removed the institution on which his parliamentary legitimacy rested and
-enabled coup planners to argue that the Shah could dismiss him directly
+Genuine obstruction, corruption, and royal interference explain why Mossadegh
+turned to a referendum. The choice was still constitutionally irregular and
+politically disastrous. It removed the institution on which his parliamentary
+legitimacy rested and enabled coup planners to argue that the Shah could
+dismiss him directly
 ([`MAJ-S3`, chapter 4, “Government Removal”](AVAILABLE_SOURCES.md#maj-s3);
 [`MAJ-S14`, chapter 5](AVAILABLE_SOURCES.md#maj-s14);
 [`SUP-015`, pp. 275, 278](AVAILABLE_SOURCES.md#sup-015)).
@@ -815,9 +807,10 @@ were a British-connected Iranian family network with political, press, bazaar,
 and street contacts. They were important intermediaries, not a single command
 capable of controlling every crowd or officer.
 
-Whether the Shah possessed the constitutional power to dismiss a prime
-minister in these circumstances was itself disputed. The firmans supplied a
-claim to legality; they did not settle the constitutional question.
+The Shah and the coup planners presented the decrees as a lawful transfer of
+government. The constitution did not clearly authorize the Shah to dismiss a
+prime minister in these circumstances, so the firmans supplied a claim to
+legality rather than settling the question.
 
 ### 15–16 August: the first attempt fails
 
@@ -836,8 +829,11 @@ despite confused and discouraging instructions from Washington. The Shah's
 decrees were publicized. CIA and British-linked agents continued contacting
 Iranian officers, politicians, newspapers, and crowd organizers. Roosevelt,
 Zahedi, and surviving Iranian and British-linked networks improvised after the
-original military plan failed; how centrally they directed the mobilization
-that followed remains disputed.
+original military plan failed. Coordination was now looser: some actions
+followed those networks, while others gathered momentum through local officers,
+politicians, and street groups
+([`MAJ-S5`, pp. 138–220](AVAILABLE_SOURCES.md#maj-s5);
+[`MAJ-S14`, chapter 6](AVAILABLE_SOURCES.md#maj-s14)).
 
 At the same time, anti-Shah demonstrations—some involving Tudeh supporters
 and some manipulated or intensified by provocateurs—alarmed moderates and
@@ -867,41 +863,35 @@ into line.
 
 Tanks attacked Mossadegh's residence after several hours of fighting.
 Mossadegh escaped but surrendered the following day. A near-contemporary
-memorandum estimated more than fifty killed and about 300 wounded,
-but no exposed name list or reconciled casualty ledger supports turning that
-estimate into a final exact count.
+memorandum estimated more than fifty killed and about 300 wounded, but the
+exact toll is unknown
+([`MAJ-S5`, pp. 220–88](AVAILABLE_SOURCES.md#maj-s5);
+[`MAJ-S14`, chapter 6](AVAILABLE_SOURCES.md#maj-s14);
+[`SUP-060`, pp. 284–86](AVAILABLE_SOURCES.md#sup-060);
+[`SUP-049`, paragraphs 8–9](AVAILABLE_SOURCES.md#sup-049)).
 
-The fullest operational reconstructions used here are
-[`MAJ-S5`, pp. 138–288](AVAILABLE_SOURCES.md#maj-s5) and
-[`MAJ-S14`, chapters 5–6](AVAILABLE_SOURCES.md#maj-s14). The communications
-clock comes from [`SUP-060`, pp. 284–86](AVAILABLE_SOURCES.md#sup-060), checked
-against [`SUP-049`, paragraphs 8–9](AVAILABLE_SOURCES.md#sup-049).
-
-### Coup or popular uprising?
-
-Neither monocausal account is adequate.
+### How the coup succeeded
 
 The United States and Britain supplied the larger operation's planning,
 money, propaganda, royal pressure, communications, and military contacts.
 After the first attempt failed, the immediate Tehran coordination of the
 renewed and partly improvised effort centered on Roosevelt, Zahedi, CIA
 officers, the Rashidians, and their Iranian military and political contacts.
-It should not be described as an MI6-directed street operation. Without the
-preceding Anglo-American intervention, however, the events almost certainly
-would not have occurred in this form.
+The successful operation was not the original plan revived intact, but it
+depended on the organization, money, and relationships built for that plan.
 
-Foreign operatives did not, however, personally capture Tehran. Iranian
-officers, police, court politicians, clerical and bazaar intermediaries,
-newspaper operators, and street organizers supplied the coercive and political
-machinery. Mossadegh's loss of allies, the army's unreliability, the clearing
-of the streets, and contingency all mattered.
+Iranian officers, police, court politicians, clerical and bazaar
+intermediaries, newspaper operators, and street organizers supplied the
+coercive and political machinery that captured Tehran. Mossadegh's loss of
+allies, the army's unreliability, the clearing of pro-government demonstrators
+from the streets, and decisions made on the day all helped the operation
+succeed.
 
-The principal scholarly dispute is therefore not whether a coup occurred, but
-how much of the successful 19 August mobilization remained centrally directed
-by the CIA and how much acquired autonomous Iranian momentum after the first
-plan failed. Bayandor argues strongly for the latter; Painter and Brew,
-Rahnema, and Gasiorowski assign substantially greater causal weight to covert
-organization and the networks assembled before and after the failed attempt
+No single command controlled every participant on 19 August. Central
+organizers continued to direct important parts of the operation, while other
+participants acted through local alliances and for their own reasons. The
+result was both foreign-engineered regime change and an Iranian struggle for
+control of the state
 ([`MAJ-S7`, chapters 7–9](AVAILABLE_SOURCES.md#maj-s7);
 [`MAJ-S14`, chapter 6](AVAILABLE_SOURCES.md#maj-s14);
 [`MAJ-S5`, chapters 8–16](AVAILABLE_SOURCES.md#maj-s5);
@@ -942,9 +932,9 @@ concession but far short of the independent control envisioned in 1951
 
 ### The Shah consolidates power
 
-The coup did not instantly create the later royal dictatorship. Prime Minister
-Zahedi initially possessed his own power base. The Shah removed him in 1955
-and progressively centralized authority.
+The later royal dictatorship developed in stages. Prime Minister Zahedi
+initially possessed his own power base. The Shah removed him in 1955 and
+progressively centralized authority.
 
 US economic and military assistance expanded. SAVAK, the monarchy's
 intelligence and internal-security service, was established in 1957 with
@@ -975,15 +965,15 @@ possibilities:
   than a possible anti-colonial mediator.
 
 In 1979, a broad revolutionary coalition overthrew the monarchy and an Islamic
-Republic dominated by Khomeini's movement emerged. The revolution was not an
-automatic consequence of 1953; too much happened in the intervening
-twenty-six years. The coup nevertheless helped create the authoritarian
-political structure, foreign dependency, and historical grievance within
-which the revolution developed
+Republic dominated by Khomeini's movement emerged. During the intervening
+twenty-six years, social change, royal policy, religious organization, and new
+opposition movements transformed Iranian politics. The coup nevertheless
+helped create the authoritarian political structure, foreign dependency, and
+historical grievance within which the revolution developed
 ([`MAJ-S14`, “History and Contested Memories”](AVAILABLE_SOURCES.md#maj-s14);
 [`MAJ-S2`, chapters 9–11](AVAILABLE_SOURCES.md#maj-s2)).
 
-## Interpretive spine
+## Why the crisis ended in a coup
 
 The crisis ends badly because six problems become locked together:
 
@@ -1006,8 +996,8 @@ The crisis ends badly because six problems become locked together:
    Iranian agency, military defection, government mistakes, and luck. Its
    exact path was not inevitable.
 
-That combination—not only a dispute over oil, and not only a foreign
-intelligence operation—is the shape of the story.
+The outcome came from that combination: neither the oil dispute nor the
+foreign intelligence operation explains the whole crisis by itself.
 
 ## Bibliography and source guide
 
@@ -1026,7 +1016,7 @@ entry rather than to an external website.
 | Labor, Abadan, and adjustment to the oil shock | `MAJ-S9`, chapters 3–4; `MAJ-S18`, chapter 4, especially pp. 120–44; `SUP-023`, pp. 2–18; `SUP-055`, pp. 31–38; `SUP-057`, pp. 187–88 |
 | 30 Tir, coalition fracture, and the constitutional crisis | `MAJ-S1`, chapters 19–20; `MAJ-S3`, chapter 3; `MAJ-S6`, chapters 11–13; `SUP-014`, pp. 159–75 |
 | 9 Esfand, 19 August, and the coup's operational sequence | `MAJ-S5`, pp. 49–288; `MAJ-S14`, chapters 5–6; `SUP-049`, paragraphs 8–9; `SUP-060`, pp. 280–87; [*Foreign Relations of the United States, 1952–1954, Iran, 1951–1954*, docs. 306 and 362](BIBLIOGRAPHY.md#p1) |
-| Coup interpretation, foreign intervention, and Iranian agency | `MAJ-S4`, pp. 227–80; `MAJ-S5`, chapters 8–16; `MAJ-S7`, chapters 7–9 as revisionist counterpoint; `MAJ-S14`, chapters 4–7; `SUP-012`, pp. 295–99 |
+| Coup planning, foreign intervention, and Iranian execution | `MAJ-S4`, pp. 227–80; `MAJ-S5`, chapters 8–16; `MAJ-S7`, chapters 7–9 as a contrasting reconstruction; `MAJ-S14`, chapters 4–7; `SUP-012`, pp. 295–99 |
 | Women and suffrage during the crisis | `SUP-015`, pp. 270–79 |
 | Repression, consortium, and longer aftermath | `MAJ-S2`, chapters 9–11; `MAJ-S3`, chapter 2; `MAJ-S14`, chapter 7 and “History and Contested Memories” |
 

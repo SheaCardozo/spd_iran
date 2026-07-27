@@ -340,8 +340,17 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.match(timeline, />Bibliography and source guide<\/h2>/);
   assert.match(
     timeline,
-    /<section class="chapter reference-chapter" id="interpretive-spine">\s*<p class="chapter-kicker">Interpretation<\/p>/,
+    /<section class="chapter reference-chapter" id="why-the-crisis-ended-in-a-coup">\s*<p class="chapter-kicker">Conclusion<\/p>/,
   );
+  assert.doesNotMatch(
+    timeline,
+    /Historians disagree|Some historians fault|principal scholarly dispute|Neither monocausal account|Rahnema treats|Interpretive spine|Coup or popular uprising/,
+  );
+  assert.match(
+    timeline,
+    /No documented link shows that foreign governments directed the murder/,
+  );
+  assert.doesNotMatch(timeline, /makes the murder a stage of/);
   assert.match(
     timeline,
     /<section class="chapter reference-chapter" id="bibliography-and-source-guide">\s*<p class="chapter-kicker">Sources<\/p>/,

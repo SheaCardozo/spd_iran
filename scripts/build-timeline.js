@@ -481,7 +481,7 @@ function renderSection(section) {
     ? 'chapter timeline-chapter'
     : 'chapter reference-chapter';
   const referenceKickers = {
-    'Interpretive spine': 'Interpretation',
+    'Why the crisis ended in a coup': 'Conclusion',
     'Bibliography and source guide': 'Sources',
   };
   const kickerLabel = numbered
