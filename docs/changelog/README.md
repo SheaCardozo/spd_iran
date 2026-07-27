@@ -73,3 +73,4 @@ bibliography entry, or asset-rights record.
 - [Economic monograph intake](2026-07-26-economic-book-intake.md)
 - [Online substitutes for inaccessible priority sources](2026-07-26-online-source-substitution-audit.md)
 - [Documentation and source-registry reconciliation](2026-07-26-documentation-registry-reconciliation.md)
+- [Historical-primer source refresh](2026-07-26-timeline-source-refresh.md)

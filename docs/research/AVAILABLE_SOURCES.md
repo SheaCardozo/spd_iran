@@ -44,7 +44,7 @@ file verification only; an implemented claim still requires a checked locator.
 | <a id="maj-s15"></a>`MAJ-S15` | [`S19`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Sepehr Zabih, *The Communist Movement in Iran* (University of California Press, 1966). [PDF](sources/major/MAJ-S15-zabih-1966-communist-movement-iran.pdf) · [metadata](sources/major/MAJ-S15-zabih-1966-communist-movement-iran.md) | Complete 305-page Internet Archive scan with searchable text, bibliography, and index. SHA-256 `fb1835fbd7a3ff291f8c1204187db9e73514132f68a656c5908736be32be7d5e`. | **Acquired; initial Sixteenth-Majles review completed; local-only.** |
 | <a id="maj-s16"></a>`MAJ-S16` | [`E10`](BIBLIOGRAPHY.md#economic-history-source-families) | Homa Katouzian, *The Political Economy of Modern Iran: Despotism and Pseudo-Modernism, 1926–1979* (Macmillan, 1981). [PDF](sources/major/MAJ-S16-katouzian-1981-political-economy-modern-iran.pdf) · [metadata](sources/major/MAJ-S16-katouzian-1981-political-economy-modern-iran.md) | Complete 408-page first-edition Internet Archive scan with searchable text and stable print pagination. SHA-256 `c5f9af1a51e9e46fd83a096ec5b1045457ff249cc5948b67facdca8aa4f7a4fb`. | **Acquired; local-only; economic review pending.** |
 | <a id="maj-s17"></a>`MAJ-S17` | [`E11`](BIBLIOGRAPHY.md#economic-history-source-families) | Julian Bharier, *Economic Development in Iran, 1900–1970* (Oxford University Press, 1971). [PDF](sources/major/MAJ-S17-bharier-1971-economic-development-iran.pdf) · [metadata](sources/major/MAJ-S17-bharier-1971-economic-development-iran.md) | Complete 344-page Internet Archive scan with searchable text, tables, bibliography through printed p. 303, index, and stable print pagination. SHA-256 `6bae08bc32b743ce17191da36c3648b493c033d092b20c9c1423df93b419eda0`. | **Acquired; local-only; economic review pending.** |
-| <a id="maj-s18"></a>`MAJ-S18` | [`E12`](BIBLIOGRAPHY.md#economic-history-source-families) | Gregory Brew, *Petroleum and Progress in Iran: Oil, Development, and the Cold War* (Cambridge University Press, 2022). [PDF](sources/major/MAJ-S18-brew-2022-petroleum-progress-iran.pdf) · [metadata](sources/major/MAJ-S18-brew-2022-petroleum-progress-iran.md) | Complete searchable 294-page publisher-layout PDF with stable print pagination, notes, bibliography, and index. SHA-256 `38df072dff3d8ad6c7004d6ec281227046818f6edb3bd4f83e994c98240f9832`. | **Acquired; local-only; economic review pending.** |
+| <a id="maj-s18"></a>`MAJ-S18` | [`E12`](BIBLIOGRAPHY.md#economic-history-source-families) | Gregory Brew, *Petroleum and Progress in Iran: Oil, Development, and the Cold War* (Cambridge University Press, 2022). [PDF](sources/major/MAJ-S18-brew-2022-petroleum-progress-iran.pdf) · [metadata](sources/major/MAJ-S18-brew-2022-petroleum-progress-iran.md) | Complete searchable 294-page publisher-layout PDF with stable print pagination, notes, bibliography, and index. SHA-256 `38df072dff3d8ad6c7004d6ec281227046818f6edb3bd4f83e994c98240f9832`. | **Chapter 4 reviewed and cited; local-only.** Used for the 1952 oil-less program, Point Four, the collapse narrative, and the pre-coup economic assessment at pp. 120–44. The remainder still requires claim-level review. |
 
 ## Supplemental sources
 
@@ -763,8 +763,8 @@ collections being assigned concurrently.
 <a id="sup-055"></a>
 ### SUP-055 — ILO, *Labour Conditions in the Oil Industry in Iran*
 
-- **Status:** Acquired official field-mission report; local-only; claim-level
-  review pending.
+- **Status:** Acquired official field-mission report; housing and supply
+  baseline reviewed and cited; local-only.
 - **Bibliography:** [`E18` trust record](BIBLIOGRAPHY.md#economic-history-source-families).
 - **Local source:** [PDF](sources/supplemental/SUP-055-ilo-1950-labour-conditions-oil-industry-iran.pdf)
   · [metadata](sources/supplemental/SUP-055-ilo-1950-labour-conditions-oil-industry-iran.md).
@@ -776,7 +776,10 @@ collections being assigned concurrently.
 - **Role:** Priority pre-nationalization field baseline for oil employment,
   wages, hours, safety, housing, health, welfare, and industrial relations.
   It records a January–February 1950 mission and partly relies on AIOC
-  information; do not project it unchanged into the 1951–53 shutdown.
+  information; do not project it unchanged into the 1951–53 shutdown. The
+  primer uses printed pp. 31–38 for Abadan population, stratified housing,
+  overcrowding, emergency tents, and dependence on company ration shops;
+  other chapters remain unreviewed for claim use.
 
 <a id="sup-056"></a>
 ### SUP-056 — Ahmadi-Nasab and Sadeghi, “The Sixteenth Majles and the Nationalization of Oil”
@@ -801,8 +804,8 @@ collections being assigned concurrently.
 <a id="sup-057"></a>
 ### SUP-057 — IMF, *International Financial Statistics*, selected 1950–54 vintages
 
-- **Status:** Four complete contemporary issues acquired and
-  observation-mapped; local-only.
+- **Status:** Four complete contemporary issues acquired,
+  observation-mapped, and selectively cited; local-only.
 - **Bibliography:** [`E16` trust record](BIBLIOGRAPHY.md#economic-history-source-families).
 - **Local collection:** [coverage, provenance, locators, and
   checksums](sources/supplemental/SUP-057-imf-ifs-selected-1950-1954/README.md).
@@ -816,7 +819,9 @@ collections being assigned concurrently.
   banking, foreign-asset, trade, price, exchange-rate, AIOC-payment, and oil-
   output series plus definitions. They are IMF transcriptions and
   standardizations, not Bank Melli originals; page images, units, footnotes,
-  and revision vintages must control every extraction.
+  and revision vintages must control every extraction. The primer cites the
+  August 1953 issue's printed pp. 187–88 for the 28 June certificate-rate
+  chronology and transaction categories.
 
 <a id="sup-058"></a>
 ### SUP-058 — UN Middle East economic surveys, 1949/50–1951/52

@@ -229,6 +229,19 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   );
   assert.match(timeline, /fifty-two of sixty-four votes cast/);
   assert.match(timeline, /id="economic-map-why-oil-dominated-the-crisis"/);
+  assert.match(timeline, /id="oil-less-economics-was-a-program"/);
+  assert.match(timeline, /5,298 of 31,875 wage earners/);
+  assert.match(timeline, /60,000 tons of sugar imports/);
+  assert.match(timeline, /Brew, <i>Petroleum and Progress in Iran<\/i>/);
+  assert.match(
+    timeline,
+    /International Labour Office, <i>Labour Conditions in the Oil Industry in Iran<\/i>/,
+  );
+  assert.match(timeline, /4:45–4:55/);
+  assert.match(
+    timeline,
+    /Randjbar-Daemi, “Radio Tehran and the 19 August 1953 Coup”/,
+  );
   assert.equal(
     timeline.match(/After the Allied invasion ended/g)?.length,
     1,

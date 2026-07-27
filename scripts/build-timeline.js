@@ -33,6 +33,7 @@ const sources = {
   'maj-s12': 'Elm, <i>Oil, Power, and Principle</i>',
   'maj-s14': 'Painter and Brew, <i>The Struggle for Iran</i>',
   'maj-s15': 'Zabih, <i>The Communist Movement in Iran</i>',
+  'maj-s18': 'Brew, <i>Petroleum and Progress in Iran</i>',
   'sup-006': 'Official Sixteenth Majles laws and decisions',
   'sup-007': 'Official Sixteenth and Seventeenth Majles proceedings',
   'sup-012': 'Azizi, “Communism, Cold War, and the 1953 Coup”',
@@ -41,9 +42,15 @@ const sources = {
   'sup-017': 'International Court of Justice, 1952 oil judgment',
   'sup-023':
     'Clawson and Sassanpour, “Adjustment to a Foreign Exchange Shock”',
+  'sup-049': 'British memorandum, “Political Review of the Recent Crisis”',
   'sup-051': 'Iranian Parliament, official Sixteenth-Majles roster',
   'sup-052': 'Iranian Parliament, official Seventeenth-Majles roster',
   'sup-053': 'Iranian Parliament, official First-Senate roster',
+  'sup-055':
+    'International Labour Office, <i>Labour Conditions in the Oil Industry in Iran</i>',
+  'sup-057':
+    'International Monetary Fund, <i>International Financial Statistics</i>',
+  'sup-060': 'Randjbar-Daemi, “Radio Tehran and the 19 August 1953 Coup”',
 };
 
 const highlightedTerms = {

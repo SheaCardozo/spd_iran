@@ -629,6 +629,25 @@ the percentage of profits transferred to the treasury
 ([`MAJ-S9`, chapters 3–4](AVAILABLE_SOURCES.md#maj-s9);
 [`MAJ-S14`, chapter 1](AVAILABLE_SOURCES.md#maj-s14)).
 
+A January–February 1950 International Labour Office mission reveals how
+uneven that enclave was immediately before nationalization. It estimated
+Abadan's population at about 173,000, including roughly 133,000 AIOC employees
+and dependants. The company had built modern housing, treated water,
+electricity, schools, clinics, and ration shops, yet access followed the
+employment hierarchy: about 90 percent of salaried staff had company housing,
+compared with only 5,298 of 31,875 wage earners. Most other wage earners lived
+in crowded municipal districts; some occupied mud shelters or one of 360
+emergency tents. Company shops also supplied essentials at controlled or
+subsidized prices because local production and ordinary distribution could
+not reliably support the rapidly expanded city.
+
+This was neither a simple company-beneficence story nor a picture of uniform
+misery. AIOC investment had created indispensable urban services while
+binding housing, food supply, medical care, and tenure to an unequal company
+order. Nationalization therefore inherited an industrial plant and a
+company-town welfare system at the same time
+([`SUP-055`, pp. 31–38](AVAILABLE_SOURCES.md#sup-055)).
+
 ### What nationalization had to accomplish
 
 Nationalization transferred legal ownership to Iran, but ownership alone could
@@ -663,6 +682,29 @@ Iran was neither economically unharmed nor demonstrably hours from bankruptcy.
 National accounts also cannot show how evenly hardship was distributed among
 workers, salaried households, merchants, towns, and rural communities
 ([`SUP-023`, pp. 2–18](AVAILABLE_SOURCES.md#sup-023)).
+
+### “Oil-less economics” was a program
+
+After 30 Tir, Mossadegh used his emergency powers for more than short-term
+budget improvisation. An August 1952 package authorized 2 billion rials for
+agricultural projects, proposed 3 billion rials for a five-year drive toward
+self-sufficiency in sugar and tea, and set aside 450 million rials to
+encourage non-oil exports. Exchange policy also shifted sharply. By 28 June
+1953 the principal certificate rate used for almost all trade had been fixed
+at 100 rials to the US dollar, while the old official rate near 32.5 remained
+for only a few government transactions.
+
+The US Point Four mission formed an odd companion to this experiment even as
+Washington moved toward regime change. It supported irrigation, seed
+exchanges, village health programs, and anti-malaria work, and between August
+1952 and February 1953 helped finance 60,000 tons of sugar imports costing
+about $4 million. This assistance did not make the program self-sufficient or
+prove it could last indefinitely. Mossadegh continued seeking an oil
+settlement. It does show that “survival without oil” involved development,
+trade, exchange-rate, and welfare choices—not merely waiting for the treasury
+to empty
+([`MAJ-S18`, pp. 120–28](AVAILABLE_SOURCES.md#maj-s18);
+[`SUP-057`, pp. 187–88](AVAILABLE_SOURCES.md#sup-057)).
 
 ## 1. Before Mossadegh: concession, dictatorship, and political opening
 
@@ -843,6 +885,17 @@ narratives suggest, not that the embargo was painless, socially neutral, or
 sustainable indefinitely. Their evidence cannot establish population welfare
 ([`SUP-023`, pp. 2–18](AVAILABLE_SOURCES.md#sup-023)).
 
+The newest book-length economic history sharpens the political point. A US
+assessment made only weeks before the coup recorded a rising Bank Melli
+foreign-exchange balance and exports exceeding imports, while still warning
+about deficit finance and judging a major breakdown to be months away.
+Officials nevertheless increasingly treated an “oil-less” Iran as
+unsustainable because they doubted that the National Front could manage it.
+Economic collapse was therefore both a real risk and a policy narrative built
+from forecasts, institutional judgments, and Cold War assumptions—not an
+event that had already occurred
+([`MAJ-S18`, pp. 128–44](AVAILABLE_SOURCES.md#maj-s18)).
+
 ## 4. The constitutional showdown and the July uprising
 
 ### The Seventeenth Majles
@@ -986,6 +1039,17 @@ Their motives overlapped without being identical:
 - Both worried that successful nationalization could become a model elsewhere.
 - Both came to treat Mossadegh's removal as a prerequisite for “stability.”
 
+Gregory Brew describes the resulting argument as a **collapse narrative**.
+Its force did not depend on proof that Iran would fail the next week. It
+combined two forecasts: that an oil-less economy could not endure in the long
+term, and that the National Front lacked the administrative capacity to
+manage the transition. Contemporary assessments continued to place a
+breakdown months away, but anticipated economic failure was converted into an
+argument for replacing the government and reintegrating Iranian oil into the
+international company system. This does not replace the Cold War or
+decolonization explanations; it shows how economic forecasts connected them
+([`MAJ-S18`, pp. 128–44](AVAILABLE_SOURCES.md#maj-s18)).
+
 The coup therefore belongs to the histories of both the Cold War and
 decolonization
 ([`MAJ-S14`, chapters 4–5](AVAILABLE_SOURCES.md#maj-s14);
@@ -1061,16 +1125,25 @@ aside or joined.
 
 The decisive phase was military. Pro-Shah officers and units deployed tanks
 and occupied the telegraph office, police headquarters, and radio station.
-Zahedi proclaimed himself prime minister. Tanks attacked Mossadegh's residence
-after several hours of fighting. Mossadegh escaped but surrendered the
-following day.
+Government control of Radio Tehran ended at about 2:00–2:30 p.m. The station
+then became part of the operation rather than merely its announcer. Around
+4:45–4:55 it falsely reported that Hossein Fatemi was dead and Mossadegh's
+house had fallen before either claim was true; Zahedi then spoke and read the
+royal appointment decree. The premature reports presented contested streets
+and institutions as an already completed transfer of state power and helped
+bring provincial stations into line.
 
-Published estimates of the dead and wounded differ substantially. No precise
-casualty number should be used without a dedicated source audit.
+Tanks attacked Mossadegh's residence after several hours of fighting.
+Mossadegh escaped but surrendered the following day. A near-contemporary
+British memorandum estimated more than fifty killed and about 300 wounded,
+but no exposed name list or reconciled casualty ledger supports turning that
+estimate into a final exact count.
 
 The fullest operational reconstructions used here are
 [`MAJ-S5`, pp. 138–288](AVAILABLE_SOURCES.md#maj-s5) and
-[`MAJ-S14`, chapters 5–6](AVAILABLE_SOURCES.md#maj-s14).
+[`MAJ-S14`, chapters 5–6](AVAILABLE_SOURCES.md#maj-s14). The communications
+clock comes from [`SUP-060`, pp. 284–86](AVAILABLE_SOURCES.md#sup-060), checked
+against [`SUP-049`, paragraphs 8–9](AVAILABLE_SOURCES.md#sup-049).
 
 ### Coup or popular uprising?
 
@@ -1217,11 +1290,12 @@ for each subject rather than merely listing titles.
 | National Front composition and mass politics | `MAJ-S1`, pp. 207–08; `MAJ-S2`, chapter 5; `MAJ-S14`, chapter 1 |
 | Oil background, nationalization, and negotiations | `MAJ-S3`, chapters 1–2; `MAJ-S12`, nationalization and negotiation chapters; `MAJ-S14`, chapters 1–4 |
 | Official implementation law | `SUP-006`, printed pp. 15–16 |
-| Labor and Abadan | `MAJ-S9`, chapters 3–4 |
+| Labor and Abadan | `MAJ-S9`, chapters 3–4; `SUP-055`, pp. 31–38 |
 | 30 Tir and bazaar mobilization | `MAJ-S1`, chapter 19, especially pp. 288–92; `SUP-014`, pp. 159–75 |
-| Economic adjustment and its limits | `SUP-023`, pp. 2–18; *Foreign Relations of the United States, 1952–1954, Iran, 1951–1954*, docs. 39, 63, 67, and 152 |
+| Oil-less economics, exchange policy, and the collapse narrative | `MAJ-S18`, chapter 4, especially pp. 120–44; `SUP-057`, pp. 187–88; `SUP-023`, pp. 2–18; *Foreign Relations of the United States, 1952–1954, Iran, 1951–1954*, docs. 39, 63, 67, and 152 |
 | Coalition fracture and constitutional crisis | `MAJ-S1`, chapter 20; `MAJ-S6`, chapters 11–13; `MAJ-S3`, chapter 3 |
-| 9 Esfand through the coup | `MAJ-S5`, pp. 49–288; `MAJ-S14`, chapters 5–6; *Foreign Relations of the United States*, Iran second edition, doc. 306, and volume X, doc. 362 |
+| 9 Esfand through the coup | `MAJ-S5`, pp. 49–288; `MAJ-S14`, chapters 5–6; `MAJ-S18`, pp. 128–44; *Foreign Relations of the United States*, Iran second edition, doc. 306, and volume X, doc. 362 |
+| Radio Tehran and the 19 August clock | `SUP-060`, pp. 280–87; `SUP-049`, paragraphs 8–9 |
 | Coup interpretation and Iranian/foreign agency | `MAJ-S4`, pp. 227–80; `MAJ-S5`, chapters 8–16; `MAJ-S7`, chapters 7–9 as revisionist counterpoint; `MAJ-S14`, chapter 6 |
 | Majles returns, alignments, votes, and quorum control | `MAJ-S2`, chapter 5, especially pp. 250–61; `MAJ-S3`, chapter 3, especially pp. 86–100 and 112–17; *Foreign Relations of the United States, 1952–1954, Iran, 1951–1954*, docs. 63, 67, 193, 233, and 239 |
 | Limited comparison with British government formation and confidence | UK Cabinet Office, [*The Cabinet Manual*](https://www.gov.uk/government/publications/cabinet-manual), especially chapters 2–3 |
@@ -1260,10 +1334,12 @@ for each subject rather than merely listing titles.
 - **Oil-shock welfare:** the government continued paying most former AIOC
   workers despite widespread underemployment, while fiscal compression
   appeared in arrears, unpaid contracts, reduced investment, urban
-  unemployment, and lower imports. Early evidence suggests rural essentials
-  were more resilient than urban state- and import-dependent livelihoods, but
-  household, Abadan, town-level, and provincial evidence is still too thin for
-  a welfare series.
+  unemployment, and lower imports. The 1950 ILO mission now supplies a strong
+  pre-shutdown baseline for Abadan's unequal housing and company-provided
+  essentials, but not a 1951–53 household series. Early evidence suggests
+  rural essentials were more resilient than urban state- and
+  import-dependent livelihoods; Abadan, town-level, and provincial evidence
+  is still too thin for a welfare series.
 - **Parliamentary control:** the Sixteenth Majles now has a complete
   136-place return ledger, a 98-person initial credential block and 23 later
   members mapped to admission waves, its presiding boards, named National

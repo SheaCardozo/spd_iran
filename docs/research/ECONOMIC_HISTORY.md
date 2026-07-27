@@ -135,6 +135,7 @@ but the burdens were distributed unevenly.
 
 | Group or place | Current finding | Evidence boundary |
 | --- | --- | --- |
+| Abadan before nationalization | The January–February 1950 ILO mission estimated about 173,000 residents, including roughly 133,000 AIOC employees and dependants. About 90 percent of salaried staff but only 5,298 of 31,875 wage earners had company housing; most other wage earners lived in crowded municipal districts, with some in mud shelters or 360 emergency tents. Company ration shops had become essential to local supply. | `SUP-055`, printed pp. 31–38. This is a strong field-mission baseline, partly dependent on AIOC information; it does not measure how housing, consumption, or services changed during the 1951–53 shutdown. |
 | Abadan and former AIOC labor | The government kept former AIOC workers on payroll although most were not fully employed, and considered but hesitated to pursue resettlement. The direct shock therefore appeared as paid idleness, lost production, and fiscal burden rather than the forecast 80,000 clean dismissals. | `SUP-010`, docs. 63 and 152. Exact payroll coverage, real wages, household consumption, housing, health, and municipal-service effects remain unavailable. |
 | Oil-field labor baseline | The March–April 1951 strike spread across the fields and Abadan after withdrawal of housing allowances and amenities; at its peak virtually all roughly 30,000 refinery workers and about one quarter of field workers were idle. | `MAJ-S9`, printed pp. 188–92. This establishes vulnerability immediately before shutdown, not a 1951–53 household series. |
 | Government-dependent townspeople | Salary arrears, unpaid bonuses, unpaid contractors, postponed disbursements, and associated unemployment transmitted the fiscal shock into the urban economy. | `SUP-010`, docs. 63, 67 note 4, and 152. No national incidence rate follows from these reports. |
@@ -219,7 +220,8 @@ runs:
   back through 1952.
 - ILO, *Labour Conditions in the Oil Industry in Iran* (1950), is the priority
   field record for workforce, wages, hours, safety, housing, health, and
-  welfare before nationalization.
+  welfare before nationalization. Printed pp. 31–38 now supply the extracted
+  Abadan housing and company-distribution baseline.
 - AIOC annual reports and accounts for 1950–53 provide corporate production,
   employment, tax, royalty, and balance-sheet evidence requiring Iranian and
   independent comparison.
@@ -241,7 +243,8 @@ runs:
   source map.
 - [`MAJ-S18`](AVAILABLE_SOURCES.md#maj-s18), Gregory Brew, *Petroleum and
   Progress in Iran* (2022), is the priority modern oil-and-development
-  interpretation.
+  interpretation. Chapter 4, especially pp. 120–44, now supplies the reviewed
+  oil-less program and collapse-narrative analysis used in the primer.
 - George Baldwin, *Planning and Development in Iran* (1967), Frances Bostock
   and Geoffrey Jones, *Planning and Power in Iran* (1989), and Geoffrey Jones,
   *Banking and Empire in Iran* (1986), cover planning and banking institutions.
