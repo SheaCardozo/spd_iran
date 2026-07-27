@@ -308,7 +308,11 @@ true.
   positions and with official and scholarly records, especially for crowd
   numbers, opponents' motives, and coup allegations.
 - **Project use:** National Front messaging, Fatemi's role, Thirty Tir,
-  referendum politics, coup buildup, and cross-newspaper chronology.
+  referendum politics, coup buildup, and cross-newspaper chronology. Issue
+  1174, 27 Mordad 1332 / 18 August 1953, p. 1 is also used narrowly for its
+  photograph caption identifying six deputies leaving a National Movement
+  caucus meeting; the caption proves presence in that dated organizational
+  setting, not every political claim printed by the paper.
 
 ## Core books
 
@@ -336,13 +340,15 @@ claim-level locator.
   factual reconstruction should still be compared with Iranian primary
   materials and later specialist research.
 - **Project use:** National Front formation and the October 1949 election
-  protest, pp. 207–08. Planned uses also include elections, cabinets, Majles,
-  constitutional conflict, and coalition politics.
+  protest, pp. 207–08; named Sixteenth-Majles opposition and tactical
+  crossover, pp. 265–67; Seventeenth-Majles faction formation and opposition
+  to the Committee of Eight report, pp. 318–20; and the wider constitutional
+  conflict among cabinet, court, and parliament.
 
 <a id="s2"></a>
 ### S2 / MAJ-S2 — Ervand Abrahamian, *Iran Between Two Revolutions*
 
-- **Status:** Core; precise locators still required.
+- **Status:** Used; Core.
 - **Access:** [`MAJ-S2` available-source record](AVAILABLE_SOURCES.md#maj-s2).
 - **Publication:** Princeton: Princeton University Press, 1982.
 - **Author expertise and standing:** Abrahamian is a leading historian of
@@ -356,16 +362,20 @@ claim-level locator.
 - **Trust and limitations:** Foundational for social structure, parties, labor,
   and the Tudeh Party. Some categories and conclusions should be checked
   against later specialist work. The source EPUB provides stable
-  chapter/section structure, while its converted PDF does not provide
-  trustworthy print-page locators. Prefer the EPUB for searching and reading;
-  obtain a print-layout copy when a claim needs a printed page number.
-- **Planned use:** Party organization, labor, constituencies, social networks,
-  and Tudeh.
+  chapter/section structure and embedded source-page anchors; the `pp.`
+  locators below refer to those anchors. Its converted PDF's generated page
+  numbers are not locators. Prefer the EPUB for searching, reading, and
+  locator verification.
+- **Project use:** Earlier parliamentary and party biographies at pp. 179–80,
+  198, and 201; Sixteenth-Majles election, social composition, four broad
+  groupings, and National Front eight at pp. 250–67; Seventeenth-Majles
+  election and initial coalition at pp. 269–80. These aggregate groupings do
+  not by themselves classify unnamed deputies.
 
 <a id="s3"></a>
 ### S3 / MAJ-S3 — Ervand Abrahamian, *Oil Crisis in Iran: From Nationalism to Coup d’État*
 
-- **Status:** Core; precise locators still required.
+- **Status:** Used; Core.
 - **Access:** [`MAJ-S3` available-source record](AVAILABLE_SOURCES.md#maj-s3).
 - **Publication:** Cambridge: Cambridge University Press, 2021.
 - **Author expertise and standing:** A recent specialist monograph by a leading
@@ -374,11 +384,14 @@ claim-level locator.
 - **Trust and limitations:** Essential for avoiding a simplistic compensation
   or “50/50” model. Its interpretive emphasis should be compared with other
   specialists and the diplomatic record. The source EPUB provides stable
-  chapter/section structure, while its converted PDF does not provide
-  trustworthy print-page locators. Prefer the EPUB for searching and reading;
-  obtain a publisher-layout copy when a claim needs a printed page number.
-- **Planned use:** Oil proposals, AIOC control, sanctions, negotiations, and
-  the political economy of nationalization.
+  chapter/section structure and embedded source-page anchors; the `pp.`
+  locators below refer to those anchors. Its converted PDF's generated page
+  numbers are not locators. Prefer the EPUB for searching, reading, and
+  locator verification.
+- **Project use:** Oil proposals, AIOC control, sanctions, negotiations, and
+  the political economy of nationalization; First-Senate social and political
+  profiles at pp. 89–91; Seventeenth-Majles caucuses, control, fracture, and
+  quorum at pp. 96–117.
 
 <a id="s4"></a>
 ### S4 / MAJ-S4 — Mark J. Gasiorowski and Malcolm Byrne, eds., *Mohammad Mosaddeq and the 1953 Coup in Iran*
@@ -401,7 +414,7 @@ claim-level locator.
 <a id="s5"></a>
 ### S5 / MAJ-S5 — Ali Rahnema, *Behind the 1953 Coup in Iran*
 
-- **Status:** Core; precise locators still required.
+- **Status:** Used; Core.
 - **Access:** [`MAJ-S5` available-source record](AVAILABLE_SOURCES.md#maj-s5).
 - **Publication:** Cambridge: Cambridge University Press, 2015. The local
   copyright page states “First published 2015”; earlier project references to
@@ -416,7 +429,9 @@ claim-level locator.
 - **Trust and limitations:** A principal source for the daily coup chronology;
   disputed assignments of motive or coordination must still be compared with
   primary records and other specialists.
-- **Planned use:** August 1953 crisis sequence and coup network.
+- **Project use:** October 1951 Senate representatives and National Front
+  tensions, p. 258; August 1953 crisis sequence and coup network in the
+  relevant chapters.
 
 <a id="s6"></a>
 ### S6 / MAJ-S6 — Homa Katouzian, *Musaddiq and the Struggle for Power in Iran*
@@ -484,12 +499,12 @@ visible.
 
 | ID | Source | Standing, expertise, and limitations | Access and project role |
 | --- | --- | --- | --- |
-| E1 | Bank Melli Iran, *Bulletin / Bulletin de la Bank Melli Iran*, 1949–54 issues | The contemporary monetary, banking, exchange, price, and trade statistical authority while Bank Melli also performed central-bank functions. Its institutional position makes it indispensable but not disinterested. Preserve Issue Department/banking distinctions and report vintages. | **Unavailable locally.** LOC LCCN [`45049141`](https://lccn.loc.gov/45049141), class `HC471 .B3`; Japanese holdings begin with issue 135/136 in June/July 1953. Acquire the fullest 1949–54 run, especially nos. 104, 111, and 122/123. |
+| E1 | Bank Melli Iran, *Bulletin / Bulletin de la Bank Melli Iran*, 1949–54 issues | The contemporary monetary, banking, exchange, price, and trade statistical authority while Bank Melli also performed central-bank functions. Its institutional position makes it indispensable but not disinterested. Preserve Issue Department/banking distinctions and report vintages. | **Unavailable locally.** LOC LCCN [`45049141`](https://lccn.loc.gov/45049141), class `HC471 .B3`; CiNii `AA00085687` identifies IDE-JETRO issues 135–136, 139–144, and later issues from 1953 and Kobe issues 142–229 from 1954. British Library `IOR/L/PS/12/3397` supplies openly digitized 1946 exemplars but not crisis evidence. See the [`online search audit`](ECONOMIC_RECORD_SEARCH_2026-07-26.md#bank-melli). |
 | E2 | Bank Melli Iran, annual reports, accounts, and Executive Board reports, years ending 20 March 1949–55 | Contemporaneous balance sheets and management reports for foreign assets, government accounts, note issue, credit, and institutional lending. Published accounts require reconciliation with later Bank Melli and IMF revisions. | **Unavailable locally.** Acquire each annual report and its tables; later-series catalog identity is CiNii `BB25521070`. |
 | E2a | Abdul Ali Jahanshahi, *A History of the First Thirty Years of Bank Melli Iran, 1928–1958* (Bank Melli Iran Press, 1958) | An institutional self-history that reconstructs balance sheets, note cover, deposits, prices, exchange, and oil receipts. It is valuable evidence of Bank Melli's own retrospective account, not independent interpretation, and must be checked against contemporaneous reports and external series. | **Unavailable locally.** LOC LCCN [`79482650`](https://lccn.loc.gov/79482650), class `HG3338.B3 J34`; acquire the complete 307-page edition and prioritize the oil-nationalization section beginning at p. 222. |
 | E3 | Iran Ministry of Finance, Customs Administration, *Statistique annuelle du commerce extérieur de l'Iran*, 1327–1333 | Official annual commodity and partner trade record. Strong for recorded customs flows; current-price valuation, exchange rates, smuggling, and exclusions of oil/concessionaires/government trade require explicit treatment. | **Unavailable locally.** LOC LCCN [`sf85019491`](https://lccn.loc.gov/sf85019491), OCLC `12871090`, class `WMLC L 83/1273`; IDE-JETRO holds 1952–55. |
 | E4 | Iran Ministry of Finance, *Amar-i bazargani-i khariji-i Iran: Foreign Trade Statistics of Iran* / *Monthly Bulletin of External Trade Statistics*, 1949–54 | Official monthly trade spine needed to time the shock and adjustment. Coverage and valuation must be checked issue by issue against the annual Customs series. | **Unavailable locally.** LOC LCCN [`78271590`](https://lccn.loc.gov/78271590), class `HF253 .A37`. |
-| E5 | Iranian budgets, provisional twelfths, supplements, emergency appropriations, Treasury cash statements, and closed accounts, 1329–1332 | Controlling legal and fiscal records. Appropriations establish authority, not collection or execution; closed and cash accounts are necessary for actual flows. | **Partially acquired:** [`SUP-046`](AVAILABLE_SOURCES.md#sup-046) is the 1332 legal budget. Earlier measures and actual Treasury accounts remain wanted. |
+| E5 | Iranian budgets, provisional twelfths, supplements, emergency appropriations, Treasury cash statements, and closed accounts, 1329–1332 | Controlling legal and fiscal records. Appropriations establish authority, not collection or execution; closed and cash accounts are necessary for actual flows. The online law chronology shows that 1329–31 relied heavily on provisional twelfths rather than ordinary enacted annual general budgets. | **Partially acquired:** [`SUP-046`](AVAILABLE_SOURCES.md#sup-046) is the 1332 legal budget. The earlier legal measures can be reconstructed from Majles records; detailed 1329 schedules and actual Treasury cash/closed accounts remain wanted. See the [`online search audit`](ECONOMIC_RECORD_SEARCH_2026-07-26.md#state-budgets-and-actual-accounts). |
 | E6 | F. G. Bochenski, IBRD, *Present Economic Situation and Creditworthiness of Iran*, E-99 (1950) | Contemporary external lender assessment by IBRD economic staff, with a dense pre-shock fiscal, banking, trade, oil, exchange, and First Plan baseline. Its creditworthiness purpose and foreign perspective require comparison with Iranian records. | **Acquired:** [`SUP-040`](AVAILABLE_SOURCES.md#sup-040). Use as a source map and cross-check, with exact table/page locators. |
 | E7 | IBRD, *Economic Development of Iran*, Asia Series AS-55 (1957) | Institutionally authoritative retrospective lender analysis with extensive crisis-period tables. It benefits from later information but can import post-coup revisions and policy framing. | **Acquired:** [`SUP-041`](AVAILABLE_SOURCES.md#sup-041). Audit every crisis figure to its contemporaneous Iranian source. |
 | E8 | IMF, *Annual Report on Exchange Restrictions*, 1952–55 | Official Fund reporting on multiple rates, certificates, controls, restrictions, and Fund relations. Valuable for report-vintage chronology; not a substitute for Iranian legal texts or market observations. | **Acquired:** [`SUP-042`](AVAILABLE_SOURCES.md#sup-042), `SUP-043`, `SUP-044`, and `SUP-045`, the complete official annual reports for the four target years. |
@@ -499,11 +514,11 @@ visible.
 | E11 | Julian Bharier, *Economic Development in Iran, 1900–1970* (Oxford University Press, 1971) | Foundational book-length economic synthesis by an Iran economist who later served as a World Bank senior economist. Its extensive data/source compilation is indispensable, while early national-income estimates and inherited official definitions require audit. | **Unavailable locally.** Acquire complete OUP edition, including bibliography pp. 283–303. |
 | E12 | Gregory Brew, *Petroleum and Progress in Iran: Oil, Development, and the Cold War* (Cambridge University Press, 2022) | Recent university-press monograph by a specialist historian of oil, Iran, and the Cold War using Iranian and US material. Best modern interpretive check on petroleum, development, and the 1952 oil-less program. | **Unavailable locally.** Complete CUP book, DOI `10.1017/9781009206327`. |
 | E13 | M. G. Majd, “The 1951–53 Oil Nationalization Dispute and the Iranian Economy: A Rejoinder” (1995) | Direct scholarly challenge to the S9 interpretation. Required for methodological disagreement; it is an adversarial article, not a replacement primary foundation. | **Unavailable locally.** *Middle Eastern Studies* 31, no. 3: 449–59, DOI `10.1080/00263209508701063`. |
-| E14 | National Iranian Oil Company and Iranian oil-sector reports, 1951–54 | Contemporaneous institutional primary evidence for production, refining, inventories, domestic sales, receipts, employment, payroll, and operations. NIOC's reporting interests, changing definitions, and incomplete publication history require comparison with Iranian fiscal records, company records, and independent scholarship. | **Unavailable locally.** Acquire the fullest dated report run with tables, appendices, and field/refinery breakdowns. |
+| E14 | National Iranian Oil Company and Iranian oil-sector accounts, 1951–54 | Contemporaneous institutional primary evidence for production, refining, inventories, domestic sales, receipts, employment, payroll, borrowing, and operations. NIOC's reporting interests, changing definitions, and incomplete publication history require comparison with Iranian fiscal records, company records, and independent scholarship. | **Unavailable locally.** No cataloged published 1951–54 annual-report run was found. The 9 Azar 1333 Majles record instead points to High Council-approved internal balance sheets and a requested three-year operational account. Acquire those balance sheets, council minutes, auditor reports, internal schedules, the NIOC statement read in session, and the later published account if it survives. See the [`online search audit`](ECONOMIC_RECORD_SEARCH_2026-07-26.md#nioc). |
 | E15 | Plan Organization First Plan laws, reports, project records, and later reviews | The responsible Iranian planning institution's records control what was authorized, committed, spent, delayed, or cancelled. Plans and retrospective reviews must not be conflated with cash execution or completed work. | **Unavailable locally.** Acquire the First Plan law, project register, annual reports, expenditure records, the five-volume 1949 Overseas Consultants report, and the later review cataloged as CiNii `BA73180213`. |
-| E16 | IMF, *International Financial Statistics*, *Balance of Payments Yearbook*, and *Direction of International Trade*, 1950–55 vintages | Contemporary institutional compilations preserve Bank Melli submissions, international definitions, partner trade, and revision history. Fund categories and later revisions are evidence to audit, not a seamless substitute for the underlying Iranian series. | **Unavailable locally.** Acquire complete monthly/annual issues and exact Iran tables with publication and revision vintages. |
-| E17 | United Nations Middle East economic surveys, trade yearbooks, and *World Energy Supplies, 1951–1954* | Official contemporary cross-checks for Iranian fiscal, trade, monetary, and energy series. Their value lies in independent transcription and stated sources; regional standardization and later compilation can obscure Iranian definitions. | **Unavailable locally.** Acquire complete official editions and record exact Iran-table locators and named underlying sources. |
-| E18 | International Labour Office, *Labour Conditions in the Oil Industry in Iran* (1950) | An official field-mission report and the priority pre-nationalization source for workforce, wages, hours, safety, housing, health, welfare, and unions. Its institutional frame and 1950 observation date limit later-crisis inference. | **Unavailable locally.** Acquire the complete 87-page Studies and Reports, New Series no. 24 edition; CiNii `BA46169524`. |
+| E16 | IMF, *International Financial Statistics*, *Balance of Payments Yearbook*, and *Direction of International Trade*, 1950–55 vintages | Contemporary institutional compilations preserve Bank Melli submissions, international definitions, partner trade, and revision history. Fund categories and later revisions are evidence to audit, not a seamless substitute for the underlying Iranian series. | **Partially acquired:** [`SUP-057`](AVAILABLE_SOURCES.md#sup-057) contains December 1950, December 1951, August 1953, and December 1954 IFS issues selected from an open 70-issue 1950–55 run. The Iran sheets and explanatory notes make IFS the strongest practical online Bank Melli proxy. Acquire an intervening issue only when a specific month or revision requires it; the yearbooks and trade serial remain wanted. |
+| E17 | United Nations Middle East economic surveys, trade yearbooks, and *World Energy Supplies, 1951–1954* | Official contemporary cross-checks for Iranian fiscal, trade, monetary, and energy series. Their value lies in independent transcription and stated sources; regional standardization and later compilation can obscure Iranian definitions. | **Partially acquired:** [`SUP-058`](AVAILABLE_SOURCES.md#sup-058) contains the official 1949/50, 1950/51, and 1951/52 Middle East surveys; [`SUP-047`](AVAILABLE_SOURCES.md#sup-047) supplies a later Bank Melli-sourced checksum. The 1952/53 survey is indexed but its current full-text endpoint is broken. Trade yearbooks and *World Energy Supplies* remain wanted. |
+| E18 | International Labour Office, *Labour Conditions in the Oil Industry in Iran* (1950) | An official field-mission report and the priority pre-nationalization source for workforce, wages, hours, safety, housing, health, welfare, and unions. Its institutional frame, partial dependence on AIOC-supplied information, and 1950 observation date limit later-crisis inference. | **Acquired:** complete official ILO *Studies and Reports*, New Series no. 24 PDF as [`SUP-055`](AVAILABLE_SOURCES.md#sup-055). Claim-level review and printed-page locators remain pending. |
 | E19 | Anglo-Iranian Oil Company, *Annual Reports and Accounts*, 1950–53; J. H. Bamberg, *The History of the British Petroleum Company*, vol. 2 (Cambridge University Press, 1994) | A deliberately paired but distinct evidence family: interested corporate primary reports plus a later specialist archival company history. Cite each item separately and compare production, employment, royalties, taxation, reserves, and policy with NIOC, ILO, UN, and Iranian scholarship. | **Unavailable locally.** Acquire the complete annual reports and Bamberg volume; do not collapse their different authorship or evidentiary roles into one citation. |
 | E20 | K. Afshar, *Monetary Estimate of Iran's GNP, 1900–1975* (Florida State University dissertation, 1977) | A direct methodological dependency for S9's reconstructed GNP path, which S9 itself calls imprecise. The author's full identity and scholarly context remain unresolved, so this is an audit target rather than an approved authority. | **Unavailable locally.** Resolve authoritative dissertation metadata before assessing expertise; acquire the complete dissertation and data appendix. Do not guess missing metadata. |
 | E21 | Ali Akbar Khosropour, *Le contrôle des changes en Iran depuis 1930 jusqu'à la fin de 1955* (Paris law dissertation, 1956) | A narrow near-contemporary legal study of exchange control. It may establish legislation and administrative chronology after its edition and argument are reviewed, but it does not replace Bank Melli, Ministry, or IMF records. | **Unavailable locally.** Acquire the complete 118-page dissertation and verify its institutional metadata. |
@@ -529,6 +544,7 @@ below; presence does not turn an unread work into claim-level evidence.
 | S22 | David S. Painter and Gregory Brew, *The Struggle for Iran: Oil, Autocracy, and the Cold War, 1951–1954* (University of North Carolina Press, 2023) | Recent university-press synthesis by historians of oil, U.S. foreign relations, and modern Iran. Its use of Iranian, American, and British materials makes it valuable for updating the oil-crisis chronology and identifying primary records; its international-relations focus does not replace Iranian parliamentary evidence. | **Acquired:** [`MAJ-S14`](AVAILABLE_SOURCES.md#maj-s14), complete JSTOR EPUB with notes and bibliography. Review remains pending; cite stable chapter/section locators unless print pagination is verified. |
 | S23 | N. Marbury Efimenco, “An Experiment with Civilian Dictatorship in Iran: The Case of Mohammed Mossadegh,” *The Journal of Politics* 17, no. 3 (August 1955), pp. 390–406 | Near-contemporary peer-reviewed political-science treatment. It may be useful for tracing early constitutional interpretations and citations, but its framing is overtly evaluative, its evidence base predates later archival access, and it must not displace Azimi or later scholarship. | **Acquired:** [`SUP-048`](AVAILABLE_SOURCES.md#sup-048), complete JSTOR article with stable journal pagination. Substantive review remains pending. |
 | S24 | M. Torkamān, *Qīām-e mellī-e sīom-e Tīr* (قیام ملی سی‌ام تیر; Tehran, 1361 SH / 1982) | **Priority Persian documentary lead.** Ahmad Ashraf's specialist bibliography cites this work for detailed police evidence, occupational data on arrestees, and a combined 235 killed-and-injured figure. The compiler's expertise, edition history, selection method, and exact use of official records have not yet been established; its value will depend on the reproduced documents and transparent provenance rather than reputation inferred from the citation alone. | **Unavailable locally:** [`UNAVAILABLE_SOURCES.md`](UNAVAILABLE_SOURCES.md#iranian-and-persian-language-acquisition-priorities). Acquire the complete identified edition and check pp. 465–66, casualty definitions, geographic scope, lists, document provenance, bibliography, and editorial method before using any number. Iranica remains only the discovery path. |
+| S25 | Ali Tatari and Hasan Zandiyeh, comps., Ruhollah Tahmuresi, ed., *Nigāhī bih sākhtār va kārkard-i Majlis-i Shūrā-yi Millī: dawrah-i sīzdahum tā shānzdahum* (نگاهی به ساختار و کارکرد مجلس شورای ملی دوره‌های سیزدهم تا شانزدهم; Parliament Library, 1392 SH / 2013–14) | **Priority edited scholarly collection.** The issuing institution is Iran's parliamentary library and archive, the papers passed a named conference scientific committee, and several chapters directly concern the Sixteenth-Majles election, membership, oil commission, and legislation. Standing must be evaluated chapter by chapter: institutional publication and peer selection do not establish every contributor's expertise or every claim's reliability. | **Complete volume unavailable locally.** The Library of Congress holds the non-digitized 618-page volume under LCCN `2013358066`, call no. `JQ1787 .N57 2012`; ISBN `9786002201720`. A complete-looking author-posted version of Ahmadi-Nasab and Sadeghi's oil-nationalization chapter is archived as [`SUP-056`](AVAILABLE_SOURCES.md#sup-056). The official three-period Oil Commission minutes are now archived as [`SUP-059`](AVAILABLE_SOURCES.md#sup-059), substantially reducing dependence on the two oil chapters but not replacing their scholarly analysis. See the [`acquisition and substitution audit`](SIXTEENTH_MAJLES_SOURCE_ACQUISITION.md#parliament-library-conference-volume) and [`UNAVAILABLE_SOURCES.md`](UNAVAILABLE_SOURCES.md#sixteenth-majles-membership-and-election-evidence). |
 
 ## Reviewed primary and reference families
 
@@ -562,6 +578,86 @@ below; presence does not turn an unread work into claim-level evidence.
 - **Project use:** Membership and denominator baseline in
   [`PARLIAMENTARY_CONTROL.md`](PARLIAMENTARY_CONTROL.md), interpreted with
   `MAJ-S2`, `MAJ-S3`, `SUP-007`, and dated diplomatic records.
+
+<a id="p15"></a>
+### P15 — UK National Archives, `FO 371/75466`
+
+- **Status:** Precisely identified primary file; unavailable locally and not
+  yet reviewed.
+- **Access:** No online scan was found. Exact acquisition and page-check
+  instructions are in the
+  [`Sixteenth-Majles source acquisition audit`](SIXTEENTH_MAJLES_SOURCE_ACQUISITION.md#uk-national-archives-file-fo-37175466).
+- **Issuing authority and evidence:** Contemporary British Foreign Office
+  registered correspondence. Ahmad Ashraf identifies Le Rougetel to Wright,
+  19 July 1949, and Lawford to the Foreign Office, 13 October 1949, in the
+  file.
+- **Trust and limitations:** Strong primary evidence for what Embassy and
+  Foreign Office personnel received, reported, and discussed. It is not
+  neutral observation and cannot by itself prove a candidate's allegiance,
+  Hazhir's influence, or the effect of any British response. Preserve the
+  distinction between an Iranian approach, British discussion, operational
+  action, and an election result.
+- **Planned use:** Identify court- and oil-agreement-sponsored candidate
+  activity and test whether a member-level Sixteenth-Majles alignment can be
+  supported. Compare every candidate claim with Persian election records,
+  credentials, press, and specialist scholarship.
+
+<a id="p16"></a>
+### P16 — Official Sixteenth-Majles Special Oil Commission minutes
+
+- **Status:** Acquired official primary record; claim-level review pending.
+- **Access:** [`SUP-059` available-source record](AVAILABLE_SOURCES.md#sup-059).
+- **Issuing authority and publication:** Majles-e Showra-ye Melli, *Surat-e
+  Muzakerat-e Komision-e Makhsus-e Naft-e Majles-e Showra-ye Melli*
+  (صورت مذاکرات کمیسیون مخصوص نفت مجلس شورای ملی; Tehran: Majles
+  Information and Publications Administration), print-order nos. 172 and 300.
+- **Coverage and evidence:** The 198-page no. 172 volume covers the
+  commission's first period. The 169-page no. 300 volume identifies itself as
+  the second and third periods and is dated Khordad 1330 SH. Together they
+  preserve the official record of the commission's membership, recorded
+  interventions by deputies and government representatives, motions, reports,
+  and decisions through the nationalization sequence.
+- **Institutional standing:** Controlling primary evidence for what the
+  commission's official record says occurred. The open scans derive from the
+  Library, Museum and Documentation Center of the Iranian Parliament.
+- **Trust and limitations:** The record does not make every assertion in a
+  speech true, does not classify the wider chamber politically, and may embody
+  the parliamentary publication office's selection and correction
+  conventions. Compare it with the full-chamber proceedings, enacted law,
+  contemporary papers, and specialist scholarship. The scans are image-only;
+  cite the print-order number, period or meeting, date, and printed page after
+  image verification.
+- **Project use:** Principal primary substitute for the unavailable
+  conference-volume chapters on the Oil Commission and the legislative route
+  to nationalization. Planned member-ledger use includes commission
+  membership, attendance where recorded, participation, and dated coalition
+  behavior.
+
+<a id="p17"></a>
+### P17 — British Library, `IOR/L/PS/12/1225`, “Persian situation: miscellaneous reports”
+
+- **Status:** Acquired archival primary record; context use only pending
+  claim-level review.
+- **Access:** [`SUP-054` available-source record](AVAILABLE_SOURCES.md#sup-054).
+- **Holding institution and provenance:** British Library, India Office
+  Records and Private Papers, Ext 5000/47/3, carried openly by the Qatar
+  Digital Library under the Open Government Licence.
+- **Coverage and evidence:** 128 folios dated 10 February 1947–24 October
+  1949, consisting principally of British diplomatic cables and dispatches
+  concerning Iranian domestic politics, Soviet relations and the Tudeh Party,
+  the Seven-Year Plan, constitutional revision, the Senate, and election
+  administration.
+- **Trust and limitations:** Strong primary evidence for what named British
+  officials reported, discussed, or believed, but not neutral observation or
+  proof of Iranian actors' private allegiance. The file is **not**
+  `FO 371/75466` and does not contain the two documents known from that file
+  for the Sixteenth-Majles candidate-influence question. Do not treat shared
+  year, subject, or Foreign Office provenance as archival equivalence.
+- **Project use:** Background context for the institutional situation
+  preceding the Sixteenth Majles. No historical claim currently relies on it;
+  any future use requires an individual document, sender, recipient, date,
+  folio or carrier-page locator, and comparison with Iranian evidence and
+  specialist scholarship.
 
 <a id="ir-p4"></a>
 ### IR-P4 — *Muzakerat-e Majles-e Sena*, First Senate

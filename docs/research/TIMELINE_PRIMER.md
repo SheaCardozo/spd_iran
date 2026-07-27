@@ -3,14 +3,14 @@
 ## Purpose and limits
 
 This primer is intended for a politically interested reader who may know
-little more about Iran than the names Mossadegh and the Shah. It assumes that
-comparisons to other parliamentary systems—especially the British
-Westminster system—will be useful, but not that the reader already knows
-Iranian constitutional vocabulary. It explains the political institutions,
-social coalitions, oil economy, international confrontation, and sequence of
-events that produced the coup of August 1953. It begins with the political
-opening of 1941, follows the immediate post-coup settlement, and carries the
-consequences forward to 1979.
+little more about Iran than the names Mossadegh and the Shah. It explains
+Iranian constitutional vocabulary and political practice on their own terms.
+Comparisons to other parliamentary systems appear only where they clarify a
+particular mechanism or difference. The primer covers the political
+institutions, social coalitions, oil economy, international confrontation,
+and sequence of events that produced the coup of August 1953. It begins with
+the political opening of 1941, follows the immediate post-coup settlement,
+and carries the consequences forward to 1979.
 
 Dates, headcounts, casualty figures, responsibility for particular covert
 actions, and historical interpretations are stated cautiously where the
@@ -117,39 +117,6 @@ pack, suspend, or bypass it
 ([`MAJ-S3`, chapter 3, pp. 79–86](AVAILABLE_SOURCES.md#maj-s3);
 [`MAJ-S1`, chapters 1–3](AVAILABLE_SOURCES.md#maj-s1)).
 
-### The Westminster shorthand—and where it fails
-
-The nearest familiar comparison is a Westminster constitutional monarchy. As
-in Britain, the monarch formally appointed the prime minister and ministers,
-while a government needed the confidence of the elected lower chamber to
-govern. Ministers, rather than the legally inviolable monarch, were answerable
-for public acts. The Majles therefore occupied something like the House of
-Commons' central position in responsible government.
-
-The analogy is useful precisely because the differences explain the crisis.
-By the 1950s, a British sovereign's choice of prime minister was governed by
-the answer to “who can command the Commons?” In Iran, the same convention was
-asserted but not securely settled. The Shah possessed an independent political
-network, claimed personal command of the armed forces, influenced elections,
-and sometimes tried to choose or remove ministers on his own authority. Iran
-had the forms of Crown appointment and parliamentary confidence without a
-British degree of agreement about where convention ended and royal discretion
-began.
-
-Nor was the Majles simply a Persian House of Commons. British governments
-normally rested on disciplined national parties elected on a common election
-day. Iranian cabinets assembled support among individual deputies, loose
-caucuses, local notables, and issue coalitions. A deputy could support
-nationalization, oppose Mossadegh on emergency powers, and cooperate with the
-court on another question without formally crossing a modern party floor.
-
-The British side of this comparison follows the Cabinet Office's description
-of a prime minister appointed by the sovereign because that person can command
-Commons confidence. The Iranian differences are documented in the political
-histories used throughout this section
-([`MAJ-S1`, chapters 1–3 and 15–20](AVAILABLE_SOURCES.md#maj-s1);
-[`MAJ-S3`, pp. 79–103](AVAILABLE_SOURCES.md#maj-s3)).
-
 ### How a government was formed
 
 Voters did not directly elect a prime minister. Parliamentary factions first
@@ -170,13 +137,11 @@ binding rules or merely practices that a sufficiently powerful monarch,
 cabinet, or parliamentary bloc could evade
 ([`MAJ-S3`, pp. 79–86 and 96–103](AVAILABLE_SOURCES.md#maj-s3)).
 
-For a British reader, the vote of inclination made explicit what Westminster
-usually left to political arithmetic and royal convention: it told the Shah
-whom the Majles believed he should invite to form a government. The *farman*
-resembled the sovereign's formal appointment, and the later confidence vote
-tested whether the completed ministry could actually survive. The crucial
-difference was that the Iranian monarch could be an interested contestant in
-that process rather than a referee constrained by settled convention.
+A limited Westminster comparison can clarify this sequence. The vote of
+inclination made explicit what Commons arithmetic and royal convention
+normally left implicit: whom the monarch should invite to form a government.
+Unlike the modern British sovereign, however, the Shah was an interested
+contestant with his own political and military power.
 
 ### The Shah, the army, and the 1949 revision
 
@@ -216,14 +181,10 @@ the elected Majles alone or the two chambers acting within an incompletely
 settled bicameral system
 ([`MAJ-S3`, pp. 82–86 and 96–103](AVAILABLE_SOURCES.md#maj-s3)).
 
-The loose British analogy is the House of Lords: a more conservative upper
-chamber with less democratic authority than the elected house. It should not
-be pushed further. Exactly half of Iran's senators were elected and half
-appointed by the Shah; the chamber was only two years old when the 1952 crisis
-erupted; and no equivalent of the long-settled political primacy of the
-Commons had yet emerged. The Senate was a new and still contested component
-of the constitution, not merely a revising chamber operating under familiar
-rules.
+The House of Lords offers a limited shorthand for a conservative upper
+chamber with less democratic authority than the elected house. But Iran's
+Senate was half elected, only two years old during the 1952 crisis, and
+operating before Majles primacy had become a settled convention.
 
 Nor did “appointed by the Shah” mean “reliable royalist” in every case.
 Royal appointee Baqer Kazemi later served in Mossadegh's cabinet, and the
@@ -365,12 +326,10 @@ credential challenges, ministerial questioning, and fistfights were not side
 shows: they were methods of governing or disabling the state
 ([`MAJ-S3`, pp. 92–100 and 112–17](AVAILABLE_SOURCES.md#maj-s3)).
 
-Westminster offers a partial analogy in minority government and
-confidence-and-supply: a cabinet may survive because parties that will not
-join it nevertheless abstain on confidence or budgets. Iran added a sharper
-procedural weapon. Deputies could deny the chamber the quorum required even
-to debate or vote, so absence could disable parliament rather than merely
-alter the division result.
+Minority government offers a useful comparison: a cabinet may survive because
+deputies who will not join it nevertheless abstain on confidence or budgets.
+Iran's quorum rules made absence a sharper procedural weapon, because a
+walkout could prevent the chamber from debating or voting at all.
 
 ### What the election results actually tell us
 
@@ -464,11 +423,14 @@ chair, but not enough coordination to win it.
 On 5 July 1952 Mossadegh nevertheless received fifty-two of sixty-four votes
 cast in the Majles in a renewed vote of inclination. His simultaneous 14 of
 45 in the Senate exposed serious upper-house resistance. After Qavam's
-appointment and the lethal 30 Tir uprising, the figures swung to 61 of 64 in
-the Majles and 33 of 41 in the Senate. In late January 1953 Mossadegh still
-obtained 59 of 61 Majles votes along with a twelve-month extension of special
-powers. These were overwhelming snapshots on confidence after moments of mass
-pressure. They were not permanent membership figures.
+appointment and the lethal 30 Tir uprising, the figures swung to 61 of 64
+votes cast in the Majles and 33 of 41 in the Senate. A contemporary press
+report instead compared the 61 Majles votes with all 76 deputies then seated;
+the figures use different denominators rather than recording different
+affirmative totals. In late January 1953 Mossadegh still obtained 59 of 61
+Majles votes along with a twelve-month extension of special powers. These
+were overwhelming snapshots on confidence after moments of mass pressure.
+They were not permanent membership figures.
 
 The government's initial group of roughly thirty called itself the Homeland
 Caucus. After independents joined it became the National Movement Caucus.
@@ -478,6 +440,20 @@ Unity groupings, State, Confederate, and Save the Movement. The “Iran caucus�
 was not the pro-Mossadegh Iran Party. Freedom, led by former National Front
 deputy Haerizadeh, joined defecting nationalists to royalists such as
 Mir-Ashrafi, Abdol-Rahman Faramarzi, and the Zolfaqari brothers.
+
+The surviving evidence can sometimes put names into these groupings without
+pretending that a complete party register exists. Azimi identifies Baghai,
+Ali Zohari, Qanatabadi, and Nad-Ali Karimi as founders of the anti-government
+Salvation of the Movement caucus in early March 1953. He also identifies
+Fazl-Ali Hoda, Abdol-Karim Faqihi-Shirazi, Mohsen Afshar-Sadeqi, Ahmad
+Bahadori, and Ahmad Hamidiyeh as opponents of the Committee of Eight report
+later that month. From the other side, a photograph caption in *Bakhtar-e
+Emruz* on 18 August identifies Ebrahim Rigi, Mohammad-Reza Eqbal, Khalil
+Falsafi, Mahmoud Najafi, Baqer Jalali-Mousavi, and Mehdi Zia-Haj Seyyed
+Javadi leaving a National Movement caucus meeting. These are dated acts and
+memberships, not timeless ideologies
+([`MAJ-S1`, pp. 318–20](AVAILABLE_SOURCES.md#maj-s1);
+[*Bakhtar-e Emruz*, 18 August 1953](AVAILABLE_SOURCES.md#sup-031)).
 
 Coalition fracture changed what “National Front” meant. The Iran Party and
 Khalil Maleki's Third Force remained with Mossadegh. Baghai split with Maleki
@@ -542,7 +518,7 @@ The useful numbers are therefore dated snapshots:
 | --- | ---: | --- |
 | Oil nationalization, March 1951 | Approved after the Majles | Nationalization crossed the chamber's conservative baseline |
 | Renewed inclination, 5 July 1952 | Mossadegh 14 of 45 | Strong pre–30 Tir resistance, but not a thirty-one-member party |
-| Renewed inclination after 30 Tir | Mossadegh 33 of 41 | Public mobilization sharply altered upper-house conduct |
+| Renewed inclination after 30 Tir | Mossadegh 33 of 41 votes cast | Public mobilization sharply altered upper-house conduct |
 | Six-month special powers, August 1952 | Provisionally 26–4 | Acquiescence with attempted limits; the complete official division is not yet available |
 | Senate term, autumn 1952 | Majles reduced six years to two | The elected chamber effectively closed the conservative upper house |
 
@@ -552,7 +528,18 @@ appointed and elected halves as government and opposition. Until complete
 proceedings or reliable division lists are available, Senate data should
 preserve appointment route, individual politics, attendance, and each dated
 vote separately
-([`MAJ-S3`, pp. 96–103](AVAILABLE_SOURCES.md#maj-s3)).
+([`MAJ-S3`, pp. 89–103](AVAILABLE_SOURCES.md#maj-s3)).
+
+Individual records already reveal the chamber's cross-currents. Matin-Daftari
+was a veteran royalist, yet he and the old-establishment Morteza-Qoli Bayat
+represented the Senate on Mossadegh's October 1951 UN delegation. Royal
+appointee Javad Emami privately urged British pressure on the Shah against
+Mossadegh; royal appointee Baqer Kazemi instead entered Mossadegh's cabinet;
+and royal appointee Nasser Qashqai remained strongly anti-Pahlavi. Such
+evidence supports named, dated classifications for fewer than half the sixty
+places, not a two-color Senate seat chart
+([`MAJ-S1`, p. 266](AVAILABLE_SOURCES.md#maj-s1);
+[`MAJ-S5`, p. 258](AVAILABLE_SOURCES.md#maj-s5)).
 
 ### Parliamentary control at a glance
 
@@ -563,7 +550,7 @@ vote separately
 | March 1952, first roughly 60 returns | US estimate: about 25 active government, 15 opposition, 20 conditional | — | The staggered election had not yet produced a settled chamber |
 | 29 June 1952 | Royalist Emami won the chair 39–35 after the government split | — | Office control could differ from confidence |
 | 5 July 1952 | Mossadegh 52 of 64 | Mossadegh 14 of 45 | Lower-house confidence, upper-house resistance |
-| After 30 Tir | Mossadegh 61 of 64 | Mossadegh 33 of 41 | Street victory created a temporary parliamentary landslide |
+| After 30 Tir | Mossadegh 61 of 64 votes cast (76 deputies then seated) | Mossadegh 33 of 41 votes cast | Street victory created a temporary parliamentary landslide |
 | Late January 1953 | Mossadegh 59 of 61 and twelve-month special powers | Senate already forced toward closure | Last overwhelming recorded confidence snapshot |
 | April 1953 | CIA claimed 30 loyal, 4 wavering, and 45 or 46 potential opposition; 69 physically in Tehran | No longer functioning as a normal counter-chamber | Attendance and walkout strategy displaced stable-majority arithmetic |
 | July–August 1953 | 52, later 56, announced resignations; 23 did not | Closed | Legal membership, quorum, referendum, and royal decree replaced ordinary bicameral government |
@@ -1237,7 +1224,7 @@ for each subject rather than merely listing titles.
 | 9 Esfand through the coup | `MAJ-S5`, pp. 49–288; `MAJ-S14`, chapters 5–6; *Foreign Relations of the United States*, Iran second edition, doc. 306, and volume X, doc. 362 |
 | Coup interpretation and Iranian/foreign agency | `MAJ-S4`, pp. 227–80; `MAJ-S5`, chapters 8–16; `MAJ-S7`, chapters 7–9 as revisionist counterpoint; `MAJ-S14`, chapter 6 |
 | Majles returns, alignments, votes, and quorum control | `MAJ-S2`, chapter 5, especially pp. 250–61; `MAJ-S3`, chapter 3, especially pp. 86–100 and 112–17; *Foreign Relations of the United States, 1952–1954, Iran, 1951–1954*, docs. 63, 67, 193, 233, and 239 |
-| Westminster comparison: government formation, confidence, the sovereign, and Parliament | UK Cabinet Office, [*The Cabinet Manual*](https://www.gov.uk/government/publications/cabinet-manual), especially chapters 2–3 |
+| Limited comparison with British government formation and confidence | UK Cabinet Office, [*The Cabinet Manual*](https://www.gov.uk/government/publications/cabinet-manual), especially chapters 2–3 |
 | Women and suffrage during the crisis | `SUP-015`, pp. 270–79 |
 | Cold War and decolonization frames | `MAJ-S14`, chapters 4–7; `SUP-012`, pp. 295–99 |
 | Repression, consortium, and longer aftermath | `MAJ-S2`, chapters 9–11; `MAJ-S3`, chapter 2; `MAJ-S14`, chapter 7 and “History and Contested Memories” |
@@ -1280,12 +1267,16 @@ for each subject rather than merely listing titles.
 - **Parliamentary control:** the Sixteenth Majles now has a complete
   136-place return ledger, a 98-person initial credential block and 23 later
   members mapped to admission waves, its presiding boards, named National
-  Front cohort, and its decisive nationalization votes. The 98-name
+  Front cohort, twenty-two places with some defensible individual political
+  information, and its decisive nationalization votes. The 98-name
   row-by-row crosswalk, ten later credential-session locators,
   attendance totals, and most named divisions remain open. The
   Seventeenth-Majles roster contains 81
   constituency entries and 80 people, while the best scholarly reconstruction
-  has 79 accepted credentials and 77 initially usable members. Full
+  has 79 accepted credentials and 77 initially usable members. Fifty-two of
+  those returned people now have at least one defensible dated alignment,
+  organization, caucus, or political-behavior classification; twenty-seven
+  of the sixty Senate places have some individual political information. Full
   credential decisions, changing caucus memberships, authorized absences, and
   member-by-member divisions are still incomplete. The safe account therefore
   remains eight firm National Front returns in the Sixteenth Majles,

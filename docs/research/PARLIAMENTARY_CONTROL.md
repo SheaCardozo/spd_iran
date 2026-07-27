@@ -20,6 +20,21 @@ whole term. “Landlord,” “royal appointee,” “National Front candidate,�
 “Kashani follower,” “government supporter,” and “yes on nationalization” are
 different attributes.
 
+Each member classification therefore preserves up to five independent
+dimensions:
+
+| Dimension | Example | What it does not prove |
+| --- | --- | --- |
+| Declared organization | Iran Party, Toilers' Party, Society of Muslim Warriors | Permanent loyalty to a coalition leader |
+| Constitutional or ideological tendency | constitutional nationalist, social democrat, clerical nationalist, conservative | Conduct on a particular bill |
+| Institutional allegiance | pro-court, pro-government, anti-Pahlavi | A complete political philosophy |
+| Dated caucus | National Movement, Freedom, Kashani-associated group | The same membership before or after that date |
+| Observed behavior | committee membership, confidence vote, resignation, walkout | Party or ideological identity |
+
+“Unresolved” is itself a usable classification state. It is preferable to
+turning a title, clerical status, landholding, Senate appointment, or
+constituency into a fictional allegiance.
+
 ## Source and confidence rules
 
 The membership baseline is the Iranian parliament's retrospective official
@@ -51,6 +66,29 @@ Confidence labels used below:
   categorization, always retaining its date and institutional bias.
 - **D — unresolved:** plausible identification or tendency not yet verified
   to a claim-level source. It must not be rendered as fact.
+
+### Current classification coverage
+
+| Chamber | Complete membership baseline | Entries with some defensible individual political information | What remains unresolved |
+| --- | ---: | ---: | --- |
+| Sixteenth Majles | 136 authorized places / 131 eventual returns | 22 places | Most members of the aggregate royalist majority, independent group, and southern-conservative network are not named by the current synthesis. |
+| Seventeenth Majles | 81 return entries / 80 unique people | 52 people | Twenty-eight returned people still lack an individual classification, while several classified members have only a later rather than opening alignment. |
+| First Senate | 60 places, with replacements recorded | 27 places | Thirty-three places remain wholly unresolved; several of the 27 preserve only political background or institutional milieu rather than a personal vote. |
+
+Coverage is not an estimate of faction strength. For example, the Sixteenth
+Majles can have a well-supported aggregate royalist majority while most
+individual royalists remain unnamed.
+
+### Political priors for unresolved members
+
+Every unresolved member can still receive a deliberately weak, inherited
+political “vibe” for simulation and player explanation. The
+[`parliamentary political-prior model`](PARLIAMENTARY_VIBE_MODEL.md) assigns
+chamber-, appointment-route-, and phase-level language such as
+“establishment-leaning notable,” “issue-dependent provincial notable,” or
+“royal appointee; loyalty not guaranteed.” These are heuristic defaults, not
+new member classifications. They remain in a separate `inherited_prior` field
+and never fill an undocumented party, caucus, allegiance, or vote.
 
 ## Why the denominators disagree
 
@@ -95,10 +133,12 @@ explains what those records mean for control.
 
 ### Social and political baseline
 
-The Sixteenth Majles opened in February 1950 with 131 deputies actually
-returned in Abrahamian's count. Approximately 85 percent were landlords,
-wealthy merchants, or senior civil servants. This is a social profile, not a
-voting bloc. Abrahamian reconstructs four broad parliamentary groupings:
+The retrospective roster eventually records 131 returned places for the
+Sixteenth Majles. That is Abrahamian's denominator for the chamber's social
+profile, not the number of credentials usable when the term opened in
+February 1950. Approximately 85 percent were landlords, wealthy merchants, or
+senior civil servants. This is a social profile, not a voting bloc.
+Abrahamian reconstructs four broad parliamentary groupings:
 
 | Group at the opening of the term | Approximate strength or character |
 | --- | --- |
@@ -251,15 +291,21 @@ Initial National Front membership and the coalition's social composition use
 pp. 96–103; later government, Freedom, Kashani, royalist, and dissident
 descriptions use `MAJ-S3`, pp. 100–17. CIA-derived April 1953 classifications
 use [FRUS doc. 192, pp. 531–35](https://history.state.gov/historicaldocuments/frus1951-54Iran/d192).
-These locators control the corresponding **B** and **C** labels in the table;
-an unresolved row carries no inferred occupation or ideology.
+The Salvation of the Movement membership and named opposition to the
+Committee of Eight report use `MAJ-S1`, pp. 318–20 and the latter's cited
+14 March 1953 *Bakhtar-e Emruz* report.
+The 18 August 1953 *Bakhtar-e Emruz* photograph and caption in `SUP-031`,
+issue 1174, p. 1, directly identify six deputies leaving a National Movement
+caucus meeting. These locators control the corresponding **B** and **C**
+labels in the table; an unresolved row carries no inferred occupation or
+ideology.
 
-| Constituency | Returned member | Initial documented tendency |
+| Constituency | Returned member | Documented political classification |
 | --- | --- | --- |
 | Abadeh | Mohammad Hossein Qashqai (محمدحسین قشقائی) | Qashqai; pro-Mossadegh largely through anti-Pahlavi alignment (**B**) |
-| Ardabil | Fazl-Ali Hoda (فضل‌علی هدی) | Unresolved |
+| Ardabil | Fazl-Ali Hoda (فضل‌علی هدی) | Opposed the Committee of Eight report in March 1953; broader ideology and caucus unresolved (**B**) |
 | Ahar / Arasbaran | Ali-Akbar Emami-Ahari (علی‌اکبر امامی اهری) | Unresolved |
-| Iranshahr / Fahraj / Baluchistan | Ebrahim Rigi, “Morad” (ابراهیم ریگی) | Unresolved |
+| Iranshahr / Fahraj / Baluchistan | Ebrahim Rigi, “Morad” (ابراهیم ریگی) | National Movement caucus by 18 August 1953 (**C**) |
 | Bojnord | Nasrollah Shadlu (نصرالله شادلو) | Unresolved |
 | Bandar Pahlavi | Abu al-Makarem Mo'tamed-Damavandi (ابوالمکارم معتمد دماوندی) | Unresolved |
 | Bandar Abbas | Mostafa Mosbahzadeh (مصطفی مصباح‌زاده) | Unresolved |
@@ -275,7 +321,7 @@ an unresolved row carries no inferred occupation or ideology.
 | Tabriz | Ali-Asghar Modarres (علی‌اصغر مدرس) | Clerical/Kashani-associated opening tendency (**C**) |
 | Tabriz | Abol-Hossein Maleki (ابوالحسین ملکی) | Initial tendency unresolved |
 | Tabriz | Seyyed Ebrahim Milani (سیدابراهیم میلانی) | Clerical/Kashani-associated opening tendency (**C**) |
-| Tabriz | Ahmad Bahadori (احمد بهادری) | Initial tendency unresolved |
+| Tabriz | Ahmad Bahadori (احمد بهادری) | Opposed the Committee of Eight report in March 1953; opening tendency and caucus unresolved (**B**) |
 | Tehran | Seyyed Hossein Makki (سیدحسین مکی) | National Front nationalist; later dissident (**B**) |
 | Tehran | Ayatollah Seyyed Abol-Qasem Kashani (آیت‌الله سیدابوالقاسم کاشانی) | Clerical-nationalist coalition leader; later opposition (**B**) |
 | Tehran | Hossein Fatemi (حسین فاطمی) | National Front social-democratic nationalist; could not sit after taking the Foreign Ministry (**A/B**) |
@@ -291,12 +337,12 @@ an unresolved row carries no inferred occupation or ideology.
 | Jahrom | Hesam al-Din Vakilpur (حسام‌الدین وکیل‌پور) | Unresolved |
 | Jiroft | Mohammad-Ebrahim Shapouri (محمدابراهیم شاپوری) | Later government-aligned list (**C**) |
 | Khorramabad / Luristan | Fathollah Khan Pursartip, Sagvand (فتح‌الله پورسرتیپ) | Unresolved |
-| Khorramabad / Luristan | Seyyed Abdol-Karim Faqihi-Shirazi (عبدالکریم فقیهی شیرازی) | Unresolved |
+| Khorramabad / Luristan | Seyyed Abdol-Karim Faqihi-Shirazi (عبدالکریم فقیهی شیرازی) | Opposed the Committee of Eight report in March 1953; broader ideology and caucus unresolved (**B**) |
 | Khalkhal | Hamdollah Zaka'i (حمدالله ذکائی) | Unresolved |
 | Khoy / Maku / Salmas | Asghar Parsa (اصغر پارسا) | Later government caucus spokesman in one reconstruction (**C**) |
 | Khoy / Maku / Salmas | Mir Majid Mousavi (میرمجید موسوی) | Unresolved |
-| Damavand | Seyyed Baqer Jalali-Mousavi (سیدباقر جلالی موسوی) | Later government-aligned list (**C**) |
-| Rezaieh | Mohsen Afshar-Sadeqi (محسن افشار صادقی) | Unresolved |
+| Damavand | Seyyed Baqer Jalali-Mousavi (سیدباقر جلالی موسوی) | Later government-aligned list; National Movement caucus by 18 August 1953 (**C**) |
+| Rezaieh | Mohsen Afshar-Sadeqi (محسن افشار صادقی) | Opposed the Committee of Eight report in March 1953; broader ideology and caucus unresolved (**B**) |
 | Rafsanjan | Bahram Majdzadeh (بهرام مجدزاده) | Committee of Eight; FRUS/Abrahamian sometimes render the given name “Bahman” (**A/D**) |
 | Zanjan | Mohammad-Hassan Amir-Afshari (محمدحسن امیرافشاری) | Unresolved |
 | Zanjan | Mohammad Zolfaqari (محمد ذوالفقاری) | Royalist tribal notable (**B**) |
@@ -308,24 +354,24 @@ an unresolved row carries no inferred occupation or ideology.
 | Shahreza | Gholamreza Kian (غلامرضا کیان) | Unresolved |
 | Shahriar | Baha al-Din Kahbod (بهاءالدین کهبد) | Unresolved |
 | Talesh / Gorganrud | Haj Aqa Reza Rafi (رضا رفیع) | Committee of Eight; establishment notable, issue-dependent (**B**) |
-| Tun / Tabas / Ferdows | Seyyed Mahmoud Najafi (سیدمحمود نجفی) | Unresolved |
+| Tun / Tabas / Ferdows | Seyyed Mahmoud Najafi (سیدمحمود نجفی) | National Movement caucus by 18 August 1953 (**C**) |
 | Fuman | Mohammad-Ali Dadvar (محمدعلی دادور) | Unresolved |
 | Firuzabad / Khamseh tribes | Khosrow Qashqai (خسرو قشقائی) | Pro-Mossadegh, strongly anti-Pahlavi tribal leader (**B**) |
-| Qazvin | Seyyed Mehdi Zia-Haj Seyyed Javadi (سیدمهدی ضیاء حاج‌سیدجوادی) | Later government-aligned list (**C**) |
+| Qazvin | Seyyed Mehdi Zia-Haj Seyyed Javadi (سیدمهدی ضیاء حاج‌سیدجوادی) | Later government-aligned list; National Movement caucus by 18 August 1953 (**C**) |
 | Qazvin | Seyyed Ahmad Safa'i (سیداحمد صفائی) | Later government-aligned list (**C**) |
 | Qom | Abolfazl Towlit (ابوالفضل تولیت) | Unresolved |
 | Kashmar | Mehdi Showkati (مهدی شوکتی) | Unresolved |
 | Kerman | Seyyed Ahmad Razavi (سیداحمد رضوی) | Initial nonparty National Front supporter (**B**) |
-| Kermanshah | Mohammad-Reza Eqbal, Al-Aqa (محمدرضا اقبال آل‌آقا) | Later government-aligned list (**C**) |
+| Kermanshah | Mohammad-Reza Eqbal, Al-Aqa (محمدرضا اقبال آل‌آقا) | Later government-aligned list; National Movement caucus by 18 August 1953 (**C**) |
 | Kermanshah | Karim Sanjabi (کریم سنجابی) | Iran Party; constitutional nationalist; Committee of Eight (**B**) |
 | Kermanshah | Fakhr al-Din Farzaneh (فخرالدین فرزانه) | Later government-aligned list (**C**) |
-| Kermanshah | Nad-Ali Karimi (نادعلی کریمی) | Unresolved |
-| Gorgan | Khalil Falsafi (خلیل فلسفی) | Unresolved |
+| Kermanshah | Nad-Ali Karimi (نادعلی کریمی) | Salvation of the Movement caucus with Baghai, Zohari, and Qanatabadi by early March 1953 (**B**) |
+| Gorgan | Khalil Falsafi (خلیل فلسفی) | National Movement caucus by 18 August 1953 (**C**) |
 | Golpayegan / Khansar | Abdullah Moazemi (عبدالله معظمی) | Iran Party; pro-government constitutionalist and later speaker (**B**) |
 | Lahijan / Langarud | Shams al-Din Elmi-Gharavi (شمس‌الدین علمی غروی) | Unresolved |
 | Khomein / Mahallat | Shahab Khosravani (شهاب خسروانی) | Unresolved |
 | Maragheh | Fath-Ali Afshar (فتحعلی افشار) | Unresolved |
-| Maragheh | Ahmad Hamidiyeh (احمد حمیدیه) | Unresolved |
+| Maragheh | Ahmad Hamidiyeh (احمد حمیدیه) | Opposed the Committee of Eight report in March 1953; broader ideology and caucus unresolved (**B**) |
 | Meshgin Shahr | Seyyed Mehdi Mir-Ashrafi (سیدمهدی میراشرافی) | Rightist editor and royalist (**B**) |
 | Malayer and associated districts | Hashem Malek-Madani (هاشم ملک‌مدنی) | Pro-British/conservative notable in specialist accounts (**B**) |
 | Malayer | Hadi Mossadeqi (هادی مصدقی) | Unresolved; surname does not establish alignment |
@@ -377,13 +423,17 @@ arithmetic swung sharply:
 
 | Post-uprising vote | Result |
 | --- | ---: |
-| Majles vote of inclination for Mossadegh | 61 of 64 |
-| Senate vote of inclination for Mossadegh | 33 of 41 |
+| Majles vote of inclination for Mossadegh | 61 affirmative out of 64 votes cast |
+| Senate vote of inclination for Mossadegh | 33 affirmative out of 41 votes cast |
 | Late-January 1953 Majles confidence vote | 59 of 61 |
 
 These numbers are issue- and moment-specific. Deputies who supported
 Mossadegh immediately after a lethal uprising did not thereby become members
-of a disciplined government party.
+of a disciplined government party. A contemporary Associated Press account
+instead compared the same 61 affirmative Majles votes with 76 deputies then
+seated. That is a membership denominator, not a conflicting vote total; the
+scholarly synthesis's 64 is the number of votes cast
+([AP, 22 July 1952](https://www.mohammadmossadegh.com/news/ap-associated-press/iran-s-parliament-re-elects-mossadegh-premier/)).
 
 The initial government group of about thirty called itself the Homeland
 Caucus (*Fraksiun-e Vatan*). After some independents joined, it became the
@@ -482,99 +532,107 @@ several replacements. A replacement is listed after an arrow.
 
 #### Thirty appointed senators
 
-| Place | Senator |
-| --- | --- |
-| Tehran | Nasrollah Saba |
-| Tehran | Dr Qasem Qasemzadeh |
-| Tehran | Maj-Gen Azizollah Zarghami |
-| Tehran | Lt-Gen Mohammad Nakhjavan |
-| Tehran | Lt-Gen Ahmad Amir-Ahmadi |
-| Tehran | Ali Haqnevis |
-| Tehran | Nasrollah Khalatbari |
-| Tehran | Anushirvan Sepahbodi |
-| Tehran | Dr Mahmoud Hesabi → Ali Dashti after Hesabi accepted government office |
-| Tehran | Dr Amir A'lam |
-| Tehran | Sadeq Sadeq |
-| Tehran | Abdol-Mehdi Tabataba'i |
-| Tehran | Dr Sadeq Rezazadeh-Shafaq |
-| Tehran | Seyyed Baqer Kazemi |
-| Tehran | Seyyed Javad Emami, Zahir al-Islam |
-| Isfahan | Seyyed Kazem Jalili |
-| Ahvaz | Mohammad-Ali Nezam-Mafi |
-| Tabriz | Abolfath Valatabar |
-| Tabriz | Mostafa Adl → Ali Hay'at after Adl's death |
-| Rasht | Isa Sorush |
-| Rezaieh | Mohammad Sa'ed-Maraghe'i → Seyyed Mehdi Farrukh after Sa'ed accepted government office |
-| Sari | Dr Esmail Sang |
-| Shiraz | Lt-Gen Amanollah Jahanbani |
-| Shiraz | Mohammad Nasser Qashqai |
-| Kerman | Mohammad-Mehdi Nahvi |
-| Kermanshah | Ali Divanbeigi |
-| Qazvin | Ali Moqaddam |
-| Mashhad | Hassan Masoudi-Khorasani |
-| Mashhad | Badi' al-Zaman Foruzanfar |
-| Hamadan | Maj-Gen Fazlollah Zahedi; left the seat upon becoming interior minister in April 1951 |
+| Place | Senator | Documented political classification |
+| --- | --- | --- |
+| Tehran | Nasrollah Saba | Unresolved |
+| Tehran | Dr Qasem Qasemzadeh | Unresolved |
+| Tehran | Maj-Gen Azizollah Zarghami | Retired military-establishment cohort; personal voting alignment unresolved (**B/D**) |
+| Tehran | Lt-Gen Mohammad Nakhjavan | Retired military-establishment cohort; personal voting alignment unresolved (**B/D**) |
+| Tehran | Lt-Gen Ahmad Amir-Ahmadi | Retired military-establishment cohort; personal voting alignment unresolved (**B/D**) |
+| Tehran | Ali Haqnevis | Unresolved |
+| Tehran | Nasrollah Khalatbari | Unresolved |
+| Tehran | Anushirvan Sepahbodi | Unresolved |
+| Tehran | Dr Mahmoud Hesabi → Ali Dashti after Hesabi accepted government office | Hesabi vacated for government office; replacement Dashti became a prominent anti-Mossadegh and privately pro-British voice (**A/B**) |
+| Tehran | Dr Amir A'lam | Unresolved |
+| Tehran | Sadeq Sadeq | Unresolved |
+| Tehran | Abdol-Mehdi Tabataba'i | Unresolved |
+| Tehran | Dr Sadeq Rezazadeh-Shafaq | Iran Party founder and constitutional-nationalist intellectual; warned against class conflict in the Senate in April 1951, but a stable Senate caucus allegiance remains unresolved (**B**) |
+| Tehran | Seyyed Baqer Kazemi | Royal appointee who became Mossadegh's foreign minister; pro-government by that appointment (**A/B**) |
+| Tehran | Seyyed Javad Emami, Zahir al-Islam | Urged the British Embassy to press the Shah to act against Mossadegh in 1951; broader ideological position and individual votes unresolved (**B**) |
+| Isfahan | Seyyed Kazem Jalili | Unresolved |
+| Ahvaz | Mohammad-Ali Nezam-Mafi | Unresolved |
+| Tabriz | Abolfath Valatabar | Unresolved |
+| Tabriz | Mostafa Adl → Ali Hay'at after Adl's death | Unresolved |
+| Rasht | Isa Sorush | Unresolved |
+| Rezaieh | Mohammad Sa'ed-Maraghe'i → Seyyed Mehdi Farrukh after Sa'ed accepted government office | Farrukh supported the Shah by the chamber's opening in Abrahamian's reconstruction (**B**) |
+| Sari | Dr Esmail Sang | Unresolved |
+| Shiraz | Lt-Gen Amanollah Jahanbani | Retired military-establishment cohort; personal voting alignment unresolved (**B/D**) |
+| Shiraz | Mohammad Nasser Qashqai | Strongly anti-Pahlavi and consistently pro-Mossadegh despite royal appointment (**B/C**) |
+| Kerman | Mohammad-Mehdi Nahvi | Unresolved |
+| Kermanshah | Ali Divanbeigi | Unresolved |
+| Qazvin | Ali Moqaddam | Unresolved |
+| Mashhad | Hassan Masoudi-Khorasani | Unresolved |
+| Mashhad | Badi' al-Zaman Foruzanfar | Unresolved |
+| Hamadan | Maj-Gen Fazlollah Zahedi; left the seat upon becoming interior minister in April 1951 | Pro-Shah retired general; later organized to replace Mossadegh and became the coup government's candidate (**A/B/C**) |
 
 #### Thirty elected senators
 
-| Place | Senator |
-| --- | --- |
-| Tehran | Dr Ahmad Matin-Daftari |
-| Tehran | Dr Isa Sadiq |
-| Tehran | Mohammad Soruri |
-| Tehran | Seyyed Hassan Taqizadeh |
-| Tehran | Javad Bushehri → Abolfazl Lesani after Bushehri resigned |
-| Tehran | Abol-Qasem Najm |
-| Tehran | Abdol-Hossein Nikpur |
-| Tehran | Hossein-Ali Kamal-Hedayat |
-| Tehran | Abbas Masoudi |
-| Tehran | Ebrahim Khajeh-Nouri |
-| Tehran | Hassan Naqavi |
-| Tehran | Dr Saeed Malek |
-| Tehran | Dr Mehdi Malekzadeh |
-| Tehran | Ebrahim Hakimi |
-| Tehran | Asadollah Yamin-Esfandiyari |
-| Isfahan | Mehdi Moshir-Fatemi |
-| Ahvaz | Amir-Hossein Ilkhan-Zafar |
-| Tabriz | Asadollah Mamagani |
-| Tabriz | Dr Qasem Ahari |
-| Rasht | Hossein Sami'i |
-| Rezaieh | Javad Emami-Kho'i |
-| Sari | Hossein Dadgar |
-| Shiraz | Ebrahim Qavam |
-| Shiraz | Mohammad-Mehdi Namazi |
-| Kerman | Ataollah Rouhi |
-| Kermanshah | Farajollah Asef |
-| Qazvin | Ebrahim Afkhami |
-| Mashhad | Seyyed Mohammad Tadayyon → Sultan Ahmad Rad after Tadayyon's death |
-| Mashhad | Seyyed Ali Moayyed-Sabti |
-| Hamadan | Morteza-Qoli Bayat |
+| Place | Senator | Documented political classification |
+| --- | --- | --- |
+| Tehran | Dr Ahmad Matin-Daftari | Veteran royalist at the chamber's opening, but joined Mossadegh's October 1951 UN delegation as a Senate representative (**B**) |
+| Tehran | Dr Isa Sadiq | Unresolved |
+| Tehran | Mohammad Soruri | Unresolved |
+| Tehran | Seyyed Hassan Taqizadeh | Constitutional veteran who supported the Shah at the chamber's opening, then supported nationalization and rejected British pressure to remove Mossadegh in September 1951 (**B/C**) |
+| Tehran | Javad Bushehri → Abolfazl Lesani after Bushehri resigned | Bushehri was an old-guard commercial intermediary in British reporting; Lesani unresolved (**C/D**) |
+| Tehran | Abol-Qasem Najm | Elder establishment notable who had worked closely with Reza Shah; precise 1950 allegiance unresolved (**B/D**) |
+| Tehran | Abdol-Hossein Nikpur | Commercial notable maintaining British and Qavam contacts; later anti-government operational tendency (**C**) |
+| Tehran | Hossein-Ali Kamal-Hedayat | Conservative and explicitly anti-government in a dated report (**C**) |
+| Tehran | Abbas Masoudi | Former critic who supported the Shah by the Senate's opening (**B**) |
+| Tehran | Ebrahim Khajeh-Nouri | Zahedi associate and unusually open pro-British figure in British reporting (**B/C**) |
+| Tehran | Hassan Naqavi | Unresolved |
+| Tehran | Dr Saeed Malek | Unresolved |
+| Tehran | Dr Mehdi Malekzadeh | Constitutional historian who supported the Shah by the chamber's opening but criticized the Senate's titled old-guard character (**B**) |
+| Tehran | Ebrahim Hakimi | Constitutional veteran who supported the Shah by the chamber's opening (**B**) |
+| Tehran | Asadollah Yamin-Esfandiyari | Veteran royalist/establishment politician in the opening reconstruction (**B**) |
+| Isfahan | Mehdi Moshir-Fatemi | Unresolved |
+| Ahvaz | Amir-Hossein Ilkhan-Zafar | Titled Bakhtiari notable with Reza-Shah-era service; 1950 allegiance unresolved (**B/D**) |
+| Tabriz | Asadollah Mamagani | Unresolved |
+| Tabriz | Dr Qasem Ahari | Unresolved |
+| Rasht | Hossein Sami'i | Unresolved |
+| Rezaieh | Javad Emami-Kho'i | Unresolved |
+| Sari | Hossein Dadgar | Former Justice Party anti-communist and constitutional politician; precise 1950 allegiance unresolved (**B/D**) |
+| Shiraz | Ebrahim Qavam | Old-guard Fars magnate; precise Senate allegiance unresolved (**B/D**) |
+| Shiraz | Mohammad-Mehdi Namazi | Veteran leader of the pro-British southern parliamentary network and major importer of British goods (**B**) |
+| Kerman | Ataollah Rouhi | Unresolved |
+| Kermanshah | Farajollah Asef | Unresolved |
+| Qazvin | Ebrahim Afkhami | Unresolved |
+| Mashhad | Seyyed Mohammad Tadayyon → Sultan Ahmad Rad after Tadayyon's death | Unresolved |
+| Mashhad | Seyyed Ali Moayyed-Sabti | Unresolved |
+| Hamadan | Morteza-Qoli Bayat, Saham al-Soltan | Elder establishment notable with Reza-Shah-era service; joined Mossadegh's October 1951 UN delegation as a Senate representative, while his precise caucus and votes remain unresolved (**B**) |
 
 ### Named Senate tendencies that can be supported
 
-These are individual, dated profiles—not a sixty-seat faction chart.
-The opening royalist/conservative reconstruction uses `MAJ-S2`, pp. 260–67;
-Taqizadeh, the nationalization coalition, and later Senate-government conflict
-use `MAJ-S3`, pp. 8–9 and 96–117. The April 1953 description of Amayoun and
-Zahedi's claimed support is [FRUS doc. 192,
+The complete roster above now carries every defensible individual
+classification and an explicit `Unresolved` state for the rest. These are
+individual, dated profiles—not a sixty-seat faction chart. The opening
+royalist/conservative reconstruction uses `MAJ-S2`, pp. 260–67. The chamber's
+old-guard social composition, retired-general cohort, named intermediaries,
+and later Senate-government conflict use `MAJ-S3`, pp. 89–91 and 96–117.
+Javad Emami's anti-government Embassy contact uses `MAJ-S1`, p. 266.
+Taqizadeh's nationalization position and warning to Britain use `MAJ-S3`,
+pp. 8–9. Matin-Daftari and Morteza-Qoli Bayat's October 1951 delegation role
+uses `MAJ-S5`, p. 258. The April 1953 description of Amayoun and Zahedi's
+claimed support is [FRUS doc. 192,
 pp. 533–35](https://history.state.gov/historicaldocuments/frus1951-54Iran/d192).
 Private British contacts remain claims about the named meeting, not a general
 ideological registry.
 
 | Senator or network | Evidence-supported tendency |
 | --- | --- |
-| Hassan Taqizadeh | Constitutional veteran and Senate president. Structurally part of the elite chamber, but supported nationalization and warned the British in September 1951 that seeking Mossadegh's removal was improper intervention. |
-| Ahmad Matin-Daftari | Veteran royalist in the Sixteenth-Majles/Senate alignment reconstructed by Abrahamian. |
+| Hassan Taqizadeh | Constitutional veteran and Senate president. Abrahamian places him among earlier critics who supported the Shah by 1950; he nevertheless supported nationalization and warned the British in September 1951 that seeking Mossadegh's removal was improper intervention. |
+| Ahmad Matin-Daftari | Veteran royalist in the opening alignment reconstructed by Abrahamian, but also a Senate representative in Mossadegh's October 1951 UN delegation. |
 | Ebrahim Hakimi, Mehdi Malekzadeh, Mehdi Farrukh, Abbas Masoudi | Earlier differences with the Shah had given way to support for him by the Senate's opening in Abrahamian's reconstruction. Individual later votes still require checking. |
 | Fazlollah Zahedi | Shah-appointed retired general; later organized to replace Mossadegh and became the coup's prime-ministerial candidate. |
 | Ahmad Amir-Ahmadi, Amanollah Jahanbani, Mohammad Nakhjavan, Azizollah Zarghami | Retired-general cohort associated with the Senate's conservative and royal institutional character; do not infer identical votes without proceedings. |
 | Baqer Kazemi | Royal appointee who later became Mossadegh's foreign minister; a decisive example of why appointment does not equal permanent royalist alignment. |
 | Mohammad Nasser Qashqai | Royal appointee but strongly anti-Pahlavi and aligned with Mossadegh. |
 | Ali Dashti | Appointed replacement; urged British force against Abadan in a private discussion and became a prominent anti-Mossadegh voice. |
+| Seyyed Javad Emami | Royal appointee who urged the British Embassy to press the Shah to act against Mossadegh; that private contact does not establish every Senate vote. |
 | Ebrahim Khajeh-Nouri | Elected senator, Zahedi associate, and unusually open pro-British figure in British reporting. |
 | Abdol-Hossein Nikpur | Elected commercial notable who maintained contacts with the British and Qavam. |
 | Hossein-Ali Kamal-Hedayat | Conservative senator; recorded threatening to oppose any bill from the existing government. |
 | Mehdi Farrukh | Conservative royalist, but capable of defending individual Mossadegh ministers from accusations of communism. |
+| Morteza-Qoli Bayat | Elder establishment notable and Mossadegh relative who joined the October 1951 UN delegation as a Senate representative; that assignment does not establish all his later votes. |
 | “Amayoun/Amiyun” network | CIA described a conservative association of former high officials and senators with British and Masonic “overtones,” claimed by Zahedi as support. This is a hostile operational description, not a formal complete caucus register. |
 
 ### Dated Senate control
@@ -585,7 +643,7 @@ ideological registry.
 | September 1951 | Taqizadeh rejected British encouragement of a change of government. | The Senate presidency was not simply an embassy or palace instrument. |
 | March 1952 | The Senate seriously considered calling for Mossadegh's resignation but did not act without the Shah's support. | Opposition existed, but royal coordination remained necessary. |
 | 5 July 1952 | Mossadegh received only 14 of 45 votes in the renewed vote of inclination; contemporary reporting also records many blank ballots. | The strongest documented pre–30 Tir institutional resistance. The non-affirmative senators were not necessarily one faction. |
-| After 30 Tir | Mossadegh received 33 of 41. | Public crisis and the Majles result transformed upper-house behavior. |
+| After 30 Tir | Mossadegh received 33 affirmative votes out of 41 cast. | Public crisis and the Majles result transformed upper-house behavior. |
 | August 1952 | The Senate approved the six-month special-powers bill provisionally by 26–4, while seeking limits and review. | Conservative scrutiny coexisted with post-uprising acquiescence. Exact proceeding locator: First Senate session 192, 20 Mordad 1331, still to be fully acquired. |
 | Autumn 1952 | The Majles reduced the Senate term from six years to two, effectively closing the chamber. | A struggle over democratic legitimacy and bicameral power, not an ordinary adjournment. |
 
@@ -597,14 +655,14 @@ division ledger possible as records are acquired.
 
 | Date or phase | Government's effective position | Mechanism of control |
 | --- | --- | --- |
-| February 1950 | National Front: 8 in a 131-member Sixteenth Majles; royalist majority reinforced by the Senate | Opposition speeches, street legitimacy, and committees rather than votes alone |
+| February 1950 | National Front: 8 in the eventual 131-return Sixteenth-Majles roster; only 98 credentials were approved in session 2 | Opposition speeches, street legitimacy, and committees rather than votes alone |
 | March–April 1951 | Oil nationalization commands overwhelming cross-bloc support | Issue coalition under public pressure |
 | 28 April 1951 | Mossadegh reportedly receives 79 of 99 in the Majles nomination meeting | Vote of inclination tied to implementing nationalization |
 | February–March 1952 election returns | About 25 hard-core government, 15 definite opposition, 20 conditional among first ~60, in a US estimate | Staggered election still changing the chamber |
 | 29 June–early July 1952 | Government side loses speakership 39–35 after splitting on first ballot | Internal coordination failure |
 | 5 July 1952 | Mossadegh 52/64 Majles, 14/45 Senate | Majles confidence but serious bicameral resistance |
 | 16–21 July 1952 | Mossadegh resigns; Qavam selected; 30 Tir uprising defeats replacement | Crown, chamber maneuver, and street veto collide |
-| 22 July 1952 | Mossadegh 61/64 Majles and 33/41 Senate | Immediate post-uprising supermajority |
+| 22 July 1952 | Mossadegh 61/64 Majles votes cast and 33/41 Senate votes cast; contemporary reporting counted 76 Majles deputies seated | Immediate post-uprising supermajority |
 | August 1952 | Six-month special powers obtained | Broad emergency issue coalition |
 | Late January 1953 | Twelve-month extension and 59/61 confidence | Last overwhelming recorded confidence snapshot |
 | February–March 1953 | National Front splits; Committee of Eight initially favors responsible-ministry interpretation | Constitutional issue coalition, then defections |
@@ -628,12 +686,20 @@ seat_status
 appointment_method
 social_position
 declared_party
+dated_institutional_alignment[]
 dated_caucus[]
 dated_tendency[]
 attendance[]
 votes[]
 source_locators[]
 confidence[]
+inherited_prior {
+  scope
+  start_date
+  end_date
+  signals[]
+  evidence_state: heuristic
+}
 ```
 
 The player-facing summary may show:
@@ -657,9 +723,10 @@ original slate as permanent voting parties.
 2. Complete the Sixteenth session-2 98-name credential crosswalk and the
    remaining ten exact credential-session locators; then perform the equivalent
    Seventeenth audit.
-3. Recover or reconstruct the full dated membership of the Homeland,
-   National Movement, Freedom, Iran, Alliance, both Unity, State,
-   Confederate, Save the Movement, and Islamic caucuses.
+3. Extend the six-member late National Movement primary-source identification
+   into full dated membership of the Homeland, National Movement, Freedom,
+   Iran, Alliance, both Unity, State, Confederate, Save the Movement, and
+   Islamic caucuses.
 4. Build roll calls for government formation, nationalization, special
    powers, the Committee of Eight, the Senate term, and dissolution.
 5. Acquire the complete First Senate proceedings, especially the exact
@@ -673,11 +740,16 @@ original slate as permanent voting parties.
 | Claim family | Source |
 | --- | --- |
 | Sixteenth Majles composition and National Front eight | `MAJ-S2`, pp. 250–67 |
+| Named late-term Sixteenth opposition, intermediaries, and tactical crossover | `MAJ-S1`, pp. 265–67 |
 | Complete Sixteenth return roster, vacancies, replacements, and boards | `SUP-051`, pp. 1–11; [`SIXTEENTH_MAJLES_LEDGER.md`](SIXTEENTH_MAJLES_LEDGER.md) |
 | Sixteenth credential waves presently mapped | `SUP-007`, sessions 2, 3, 5, 6, 7, 8, 25, 30, and 69 |
 | Tudeh ban and absence of a legal communist parliamentary caucus | `MAJ-S15`, pp. 161–75 |
 | Seventeenth election, social composition, initial 30, and fracture | `MAJ-S2`, pp. 269–80; `MAJ-S3`, pp. 86–117 |
+| Salvation of the Movement caucus and named Committee-of-Eight-report opponents | `MAJ-S1`, pp. 318–20 |
+| Six late National Movement caucus members | `SUP-031`, *Bakhtar-e Emruz*, no. 1174, 27 Mordad 1332 / 18 August 1953, p. 1 photograph and caption |
 | Official Sixteenth, Seventeenth, and First-Senate rosters | `SUP-051`, `SUP-052`, `SUP-053` |
+| Named First-Senate political backgrounds and intermediaries | `MAJ-S2`, pp. 260–67; `MAJ-S3`, pp. 89–91 and 96–117 |
+| Matin-Daftari and Bayat as October 1951 Senate delegation representatives | `MAJ-S5`, p. 258 |
 | Early Seventeenth election estimate | [FRUS, Iran, doc. 67, paras. 6–7](https://history.state.gov/historicaldocuments/frus1951-54Iran/d67) |
 | April 1953 CIA Majles and political-group estimate | [FRUS, Iran, doc. 192, pp. 531–35](https://history.state.gov/historicaldocuments/frus1951-54Iran/d192) |
 | Committee of Eight and wavering majority | [FRUS, Iran, doc. 193](https://history.state.gov/historicaldocuments/frus1951-54Iran/d193) |

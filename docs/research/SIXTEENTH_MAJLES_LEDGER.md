@@ -20,9 +20,22 @@ pp. 1–11. The credential sequence comes from the official proceedings
 authority-file forms.
 
 `A` means an official roster or proceeding. `B` means a named alignment in
-specialist scholarship. `D` means unresolved. An empty political cell is not
-an invitation to infer ideology from title, wealth, occupation, region, or a
-later vote.
+specialist scholarship. `C` means a dated contemporary observer or partisan
+record whose perspective must remain visible. `D` means unresolved. An em dash
+in the political column is the explicit unresolved state; it is not an
+invitation to infer ideology from title, wealth, occupation, region, or a later
+vote.
+
+For simulation, an unresolved row inherits only the dated chamber-level
+heuristic in
+[`PARLIAMENTARY_VIBE_MODEL.md`](PARLIAMENTARY_VIBE_MODEL.md). That heuristic
+is not part of the member's historical classification.
+
+The final column can contain four different kinds of classification, stated
+explicitly rather than collapsed: declared party or coalition, constitutional
+orientation, operational allegiance to court or government, and historically
+documented political background. A committee assignment or vote belongs in a
+dated record and does not silently replace any of those classifications.
 
 ## The denominator
 
@@ -30,7 +43,7 @@ later vote.
 | --- | ---: | --- |
 | Authorized places | 136 | The statutory full chamber. |
 | Places with a completed return in the retrospective roster | 131 | Five places had no completed election or no separate member. |
-| Named returned people | 131 | Ardeshir Shadlu died before approval and was replaced by Nasrollah Shadlu; the place still contributes one eventual member. |
+| Sequential replacement history | 1 place / 2 named people | Ardeshir Shadlu died before approval and was replaced by Nasrollah Shadlu. The roster's 131 is a place-based eventual-return count, not a count of every person named across the term. |
 | Credentials approved in session 2 | 98 | The first large legal intake, not all returned deputies. |
 | Additional credentials presently mapped in sessions 3, 5, 6, 7, and 8 | 9 | Two, three, two, one, and one respectively. |
 | Later credentials presently mapped in sessions 25, 30, and 69 | 14 | Two Kashan/Natanz members, all eleven Tehran members, and the southern-Armenian member. |
@@ -68,7 +81,7 @@ cohort, not eight simultaneous votes in February or March.
 establishes membership but the individual proceeding has not yet been
 crosswalked. It is not a claim that the member sat from opening day.
 
-| No. | Constituency | Official return | Credential or seat-status note | Documented opening tendency |
+| No. | Constituency | Official return | Credential or seat-status note | Documented political classification |
 | ---: | --- | --- | --- | --- |
 | 1 | Abadeh | — | No completed election (**A**) | — |
 | 2 | Arak | Hossein Khakbaz (حسین خاکباز) | Official member; credential session pending | — |
@@ -78,7 +91,7 @@ crosswalked. It is not a claim that the member sat from opening day.
 | 6 | Isfahan | Taqi Boroumand (تقی برومند) | Official member; credential session pending | — |
 | 7 | Isfahan | Mojtaba Dowlatabadi (مجتبی دولت‌آبادی) | Official member; credential session pending | — |
 | 8 | Isfahan | Abolfath Qahreman, Sardar A'zam (ابوالفتح قهرمان، سردار اعظم) | Official member; credential session pending | — |
-| 9 | Armenians, south | Petros Abkar (پطرس آبکار) | Credential approved session 69 (**A**) | — |
+| 9 | Armenians, south | Petros Abkar (پطرس آبکار) | Credential approved session 69 (**A**) | Discreet intermediary between Jamal Emami's anti-Mossadegh opposition and the British Embassy by 1951; broader ideology unresolved (**B**) |
 | 10 | Armenians, north | Aram Budaghian (آرام بوداغیان) | Official member; credential session pending | — |
 | 11 | Zoroastrians | Rostam Giv (رستم گیو) | Official member; credential session pending | — |
 | 12 | Chaldeans | Dr Musa Baral (دکتر موسی برال) | Official member; credential session pending | — |
@@ -104,7 +117,7 @@ crosswalked. It is not a claim that the member sat from opening day.
 | 32 | Tabriz | Nasser Sadr Tabrizi (ناصر صدر تبریزی) | Credential approved session 6 (**A**) | — |
 | 33 | Tabriz | Abdol-Hossein Mojtahedi (عبدالحسین مجتهدی) | Official member; credential session pending | — |
 | 34 | Tabriz | Dr Yusef Mojtahedi (دکتر یوسف مجتهدی) | Official member; credential session pending | — |
-| 35 | Tabriz | Ali-Asghar Sartipzadeh (علی‌اصغر سرتیپ‌زاده) | Official member; credential session pending | — |
+| 35 | Tabriz | Ali-Asghar Sartipzadeh (علی‌اصغر سرتیپ‌زاده) | Official member; credential session pending | Constitutional-Revolution veteran; former Communist Party organizer expelled in 1927 after continuing to support Reza Shah; 1950 allegiance unresolved (**B**) |
 | 36 | Tabriz | Dr Seyyed Ahmad Emami (دکتر سید احمد امامی) | Official member; credential session pending | — |
 | 37 | Tabriz | Vali-zadeh Javanshiri (ولی‌زاده جوانشیری) | Official member; name order needs authority check (**D**) | — |
 | 38 | Torbat Heydariyeh | Emad al-Din Torbati (عمادالدین تربتی) | Official member; credential session pending | — |
@@ -128,13 +141,13 @@ crosswalked. It is not a claim that the member sat from opening day.
 | 56 | Khalkhal | Seyyed Hamdollah Zaka'i (سید حمدالله ذکائی) | Official member; credential session pending | — |
 | 57 | Khoy / Maku / Salmas | Nour al-Din Emami-Kho'i (نورالدین امامی خوئی) | Official member; credential session pending | — |
 | 58 | Khoy / Maku / Salmas | Mir Majid Mousavi (میر مجید موسوی) | Official member; credential session pending | — |
-| 59 | Dorud | Hassan Mokarram (حسن مکرم) | Official member; credential session pending | — |
-| 60 | Dezful | Hossein Farhoudi (حسین فرهودی) | Official member; credential session pending | — |
+| 59 | Dorud | Hassan Mokarram (حسن مکرم) | Official member; credential session pending | Advised British representatives against Mossadegh in 1951; formal caucus and broader ideology unresolved (**B**) |
+| 60 | Dezful | Hossein Farhoudi (حسین فرهودی) | Official member; credential session pending | Helped organize a parliamentary and press opposition to Mossadegh by July 1951 and reported the plan to the British Embassy (**B**) |
 | 61 | Dasht-e Gorgan and dependencies | Mohammad Akhund Gerjani / Gorgani (محمد آخوند گرجانی، گرگانی) | Official roster records both forms; credential session pending (**A**) | — |
 | 62 | Bani Taraf / Dasht-e Mishan / Susangerd | Mir Majid Moqarrab (میر مجید مقرب) | Official member; credential session pending | — |
 | 63 | Damavand | Mohammad-Ali Masoudi (محمدعلی مسعودی) | Official member; credential session pending | — |
 | 64 | Rasht | Hassan Akbar (حسن اکبر) | Official member; credential session pending | — |
-| 65 | Rasht | Amir Eqlim Amini (امیر اقلیم امینی) | Accepted government office; seat became vacant (**A**) | Independent notable in opening synthesis (**B**) |
+| 65 | Rasht | Abol-Qasem Amini (ابوالقاسم امینی) | Accepted government office; seat became vacant (**A**) | Independent notable; earlier Liberal-caucus aristocrat and anti-court politician (**B**) |
 | 66 | Rezaieh | Mohsen Afshar-Sadeqi (محسن افشار صادقی) | Credential approved session 3 (**A**) | — |
 | 67 | Rafsanjan | Mehdi Mo'inzadeh-Bagheri (مهدی معین‌زاده باقری) | Official member; credential session pending | — |
 | 68 | Zabol / Sistan | Amir-Hossein Khozaymeh Alam (امیرحسین خزیمه علم) | Official member; credential session pending | — |
@@ -159,11 +172,11 @@ crosswalked. It is not a claim that the member sat from opening day.
 | 87 | Shahreza / Qomsheh | Dr Gholamreza Kian (دکتر غلامرضا کیان) | Official member; credential session pending | — |
 | 88 | Shahrekord / Bakhtiari | — | No completed election (**A**) | — |
 | 89 | Shahriar / Savojbolagh / Karaj | Baha al-Din Kahbod (بهاءالدین کهبد) | Credential approved session 6 (**A**) | — |
-| 90 | Fars / Shiraz | Reza Hekmat, Sardar Fakher (رضا حکمت، سردار فاخر) | Permanent president of the Majles (**A**) | Establishment conservative (**B**) |
+| 90 | Fars / Shiraz | Reza Hekmat, Sardar Fakher (رضا حکمت، سردار فاخر) | Permanent president of the Majles (**A**) | Establishment conservative and tactically double-positioned: privately claimed a role in anti-Mossadegh obstruction, but reportedly cooperated with the National Front late in the term under public pressure (**B**) |
 | 91 | Fars | Ali-Mohammad Dehqan (علی‌محمد دهقان) | Official member; credential session pending | — |
 | 92 | Fars | Abol-Hassan Razavi (ابوالحسن رضوی) | Official member; credential session pending | — |
 | 93 | Fars | Mehdi Sadrzadeh (مهدی صدرزاده) | Official member; credential session pending | — |
-| 94 | Fars | Lotfali Khan Moaddel (لطف‌علی خان معدل) | Official member; credential session pending | — |
+| 94 | Fars | Lotfali Khan Moaddel (لطف‌علی خان معدل) | Official member; credential session pending | Anti-Mossadegh and associated with the pro-Seyyed Zia succession network by 1951 (**B**) |
 | 95 | Talesh / Gorganrud | Haj Aqa Reza Rafi (حاج‌آقا رضا رفیع) | Official member; credential session pending | — |
 | 96 | Tun / Tabas / Ferdows / Golshan | Mohsen Gonabadi (محسن گنابادی) | Official member; credential session pending | — |
 | 97 | Fasa | Morteza Hekmat (مرتضی حکمت) | Official member; credential session pending | — |
@@ -173,7 +186,7 @@ crosswalked. It is not a claim that the member sat from opening day.
 | 101 | Qazvin | Asghar Saheb Jam' (اصغر صاحب‌جمع) | Official member; later quaestor (**A**) | — |
 | 102 | Qazvin | Abol-Qasem Faqihzadeh (ابوالقاسم فقیه‌زاده) | Official member; credential session pending | — |
 | 103 | Qom | Abolfazl Towlit (ابوالفضل تولیت) | Official member; credential session pending | — |
-| 104 | Quchan | Manuchehr Teymourtash (منوچهر تیمورتاش) | Official member; credential session pending | — |
+| 104 | Quchan | Manuchehr Teymourtash (منوچهر تیمورتاش) | Official member; credential session pending | Vocally anti-Mossadegh and associated with the pro-Seyyed Zia succession network by 1951 (**B**) |
 | 105 | Kashan / Natanz | Mohammad-Kazem Saleh-Sheibani (محمدکاظم صالح شیبانی) | Credential approved session 25; later took government office and vacated seat (**A**) | — |
 | 106 | Kashan / Natanz | Allahyar Saleh (اللهیار صالح) | Credential approved session 25 (**A**) | National Front / Iran Party (**B**) |
 | 107 | Kashmar | Abdol-Vahhab Eqbal (عبدالوهاب اقبال) | Accepted government office; seat became vacant (**A**) | — |
@@ -184,7 +197,7 @@ crosswalked. It is not a claim that the member sat from opening day.
 | 112 | Kermanshah | Abbas Qobadian (عباس قبادیان) | Official member; credential session pending | — |
 | 113 | Gorgan | Seyyed Mohammad-Ali Shoushtari (سید محمدعلی شوشتری) | Official member; credential session pending | — |
 | 114 | Golpayegan / Khansar | Dr Abdollah Moazzami (دکتر عبدالله معظمی) | First vice-president (**A**) | — |
-| 115 | Lar | Abdol-Rahman Faramarzi (عبدالرحمن فرامرزی) | Official member; credential session pending | — |
+| 115 | Lar | Abdol-Rahman Faramarzi (عبدالرحمن فرامرزی) | Official member; credential session pending | Conservative/rightist press figure with court connections; exact Sixteenth-Majles caucus unresolved (**B**) |
 | 116 | Langarud / Lahijan | Gholam-Hossein Ebtehaj (غلامحسین ابتهاج) | Official member; credential session pending | — |
 | 117 | Kangavar / Sonqor / Salavat | Shahab Khosravani (شهاب خسروانی) | Official member; credential session pending | — |
 | 118 | Maragheh | Fath-Ali Khan Afshar (فتح‌علی خان افشار) | Official member; credential session pending | — |
@@ -195,7 +208,7 @@ crosswalked. It is not a claim that the member sat from opening day.
 | 123 | Mashhad | Ahmad Qureshi (احمد قرشی) | Official member; credential session pending | — |
 | 124 | Mashhad | Sa'id Mokarram (سعید مکرم) | Official member; credential session pending | — |
 | 125 | Nahavand / Tuyserkan / Dowlatabad / Malayer | Esma'il Khan Zafri (اسماعیل خان ظفری) | Official member; credential session pending | — |
-| 126 | Nahavand / Tuyserkan / Dowlatabad / Malayer | Hashem Khan Malek-Madani (هاشم خان ملک مدنی) | Official member; credential session pending | — |
+| 126 | Nahavand / Tuyserkan / Dowlatabad / Malayer | Hashem Khan Malek-Madani (هاشم خان ملک مدنی) | Official member; credential session pending | Leading pro-British southern conservative (**B**) |
 | 127 | Savojbolagh / Bukri / Mahabad | — | No completed election (**A**) | — |
 | 128 | Na'in | Dr Abdol-Hossein Taba (دکتر عبدالحسین طبا) | Official member; credential session pending | — |
 | 129 | Najafabad | — | No completed election (**A**) | — |
@@ -203,7 +216,7 @@ crosswalked. It is not a claim that the member sat from opening day.
 | 131 | Khvar / Varamin / Ivanki | Mohammad-Reza Ashtiani-zadeh (محمدرضا آشتیانی‌زاده) | Official member; credential session pending | — |
 | 132 | Hamadan | Gholam-Hossein Amir Qara-Gozlu (غلامحسین امیر قراگوزلو) | Official member; credential session pending | — |
 | 133 | Hamadan | Mirza Hassan Khan Mokhber Farahmand, Mokhber Hozur (میرزا حسن خان مخبر فرهمند، مخبر حضور) | Temporary senior president (**A**) | — |
-| 134 | Yazd | Dr Sheikh Hadi Taheri (دکتر شیخ هادی طاهری) | Official member; credential session pending | — |
+| 134 | Yazd | Dr Sheikh Hadi Taheri (دکتر شیخ هادی طاهری) | Official member; credential session pending | Veteran pro-British southern conservative who advised against Mossadegh, but reportedly cooperated with the National Front late in the term under public pressure (**B**) |
 | 135 | Yazd | Hossein Kour-Oghli (حسین کوراوغلی) | Official member; credential session pending | — |
 | 136 | Yazd | Mohammad Herati (محمد هراتی) | Official member; credential session pending | — |
 
@@ -252,12 +265,30 @@ network, but does not provide a clean 131-name party register. Three
 independent examples it names are Abol-Qasem Amini, Khosrow Qashqai, and
 Nasser Zolfaqari.
 
+Azimi's reconstruction adds a dated late-term opposition layer. By 1951 Jamal
+Emami was the effective parliamentary leader of the anti-Mossadegh
+conservatives; Hossein Farhoudi helped organize deputies and editors against
+the government; Petros Abkar acted as an intermediary; and Hassan Mokarram,
+Lotfali Moaddel, Manuchehr Teymourtash, and Hadi Taheri appeared in the
+British-connected succession network. This still was not a disciplined party:
+Azimi also records Makki's claim that Hekmat and Taheri cooperated with the
+National Front late in the term under pressure from public opinion
+(`MAJ-S1`, pp. 265–67).
+
 Sepehr Zabih shows why no Tudeh or Marxist parliamentary bloc appears:
 following the February 1949 attempt on the Shah, the Tudeh was banned,
 repressed, and forced underground while the National Front was being formed
 as a loose legal coalition (`MAJ-S15`, pp. 161–75). This is a legal and
 organizational fact, not evidence that every unclassified deputy was
 anti-communist or royalist.
+
+The additional biographical classifications use `MAJ-S2`, pp. 179–80
+(Malek-Madani and Taheri as leaders of the pro-British parliamentary
+network), p. 198 (Sartipzadeh's constitutional and communist-organizational
+history), and pp. 201 and 260–67 (Amini's earlier Liberal role and his
+Sixteenth-Majles independent status). Faramarzi's rightist and later royalist
+position uses `MAJ-S3`, pp. 100–17. These biographies do not convert an
+earlier affiliation into an undocumented 1950 caucus.
 
 ## Dated decision ledger
 

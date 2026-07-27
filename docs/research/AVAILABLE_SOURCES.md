@@ -27,11 +27,11 @@ file verification only; an implemented claim still requires a checked locator.
 
 | Archive ID | Bibliography | Local edition and file | File quality | Status |
 | --- | --- | --- | --- | --- |
-| <a id="maj-s1"></a>`MAJ-S1` | [`S1`](BIBLIOGRAPHY.md#s1) | Fakhreddin Azimi, *Iran: The Crisis of Democracy, 1941–1953* (St. Martin's Press, 1989). [PDF](sources/major/MAJ-S1-azimi-1989-crisis-of-democracy.pdf) · [metadata](sources/major/MAJ-S1-azimi-1989-crisis-of-democracy.md) | 456-page OCR scan; stable print pages. SHA-256 `997e891eb44601419d07f6ed4ff4fc4fc5be922b328088a41465801b146e1df6` | **Cited; local-only.** Used for the October 1949 opening, pp. 207–08. |
-| <a id="maj-s2"></a>`MAJ-S2` | [`S2`](BIBLIOGRAPHY.md#s2) | Ervand Abrahamian, *Iran Between Two Revolutions* (Princeton UP, 1982; electronic release 2021). [EPUB](sources/major/MAJ-S2-abrahamian-1982-iran-between-two-revolutions.epub) · [converted PDF](sources/major/MAJ-S2-abrahamian-1982-iran-between-two-revolutions.pdf) · [metadata](sources/major/MAJ-S2-abrahamian-1982-iran-between-two-revolutions.md) | Valid 49-member EPUB, SHA-256 `236dc3987a77eda82d175aecb36430105665638a617aa3b23cf0fc510dc2c15e`; 859-page generated PDF, SHA-256 `0c640c960a90102d0f79296888dc0e2a657eb8adbcdfc9d1bcd350104700bcd6`. EPUB chapters are stable; generated PDF pages are not print locators. | **Acquired; source EPUB and reading derivative local-only.** |
-| <a id="maj-s3"></a>`MAJ-S3` | [`S3`](BIBLIOGRAPHY.md#s3) | Ervand Abrahamian, *Oil Crisis in Iran* (Cambridge UP, 2021). [EPUB](sources/major/MAJ-S3-abrahamian-2021-oil-crisis-in-iran.epub) · [converted PDF](sources/major/MAJ-S3-abrahamian-2021-oil-crisis-in-iran.pdf) · [metadata](sources/major/MAJ-S3-abrahamian-2021-oil-crisis-in-iran.md) | Valid 54-member EPUB, SHA-256 `921fff22e385cbff033eddc4779504289f317bd5fcc2fff843de44b11d801c57`; 365-page generated PDF, SHA-256 `3ed248c0fbfb277416d0a29c4e431b669bfd6a6571167a331efb013301c4aa88`. EPUB chapters are stable; generated PDF pages are not print locators. | **Acquired; source EPUB and reading derivative local-only.** |
+| <a id="maj-s1"></a>`MAJ-S1` | [`S1`](BIBLIOGRAPHY.md#s1) | Fakhreddin Azimi, *Iran: The Crisis of Democracy, 1941–1953* (St. Martin's Press, 1989). [PDF](sources/major/MAJ-S1-azimi-1989-crisis-of-democracy.pdf) · [metadata](sources/major/MAJ-S1-azimi-1989-crisis-of-democracy.md) | 456-page OCR scan; stable print pages. SHA-256 `997e891eb44601419d07f6ed4ff4fc4fc5be922b328088a41465801b146e1df6` | **Cited; local-only.** Used for the October 1949 opening, Sixteenth-Majles opposition at pp. 265–67, and Seventeenth-Majles factionalization at pp. 318–20. |
+| <a id="maj-s2"></a>`MAJ-S2` | [`S2`](BIBLIOGRAPHY.md#s2) | Ervand Abrahamian, *Iran Between Two Revolutions* (Princeton UP, 1982; electronic release 2021). [EPUB](sources/major/MAJ-S2-abrahamian-1982-iran-between-two-revolutions.epub) · [converted PDF](sources/major/MAJ-S2-abrahamian-1982-iran-between-two-revolutions.pdf) · [metadata](sources/major/MAJ-S2-abrahamian-1982-iran-between-two-revolutions.md) | Valid 49-member EPUB, SHA-256 `236dc3987a77eda82d175aecb36430105665638a617aa3b23cf0fc510dc2c15e`; 859-page generated PDF, SHA-256 `0c640c960a90102d0f79296888dc0e2a657eb8adbcdfc9d1bcd350104700bcd6`. The EPUB embeds source-page anchors used by the cited `pp.` locators; generated-PDF page numbers are not locators. | **Cited; source EPUB and reading derivative local-only.** Used for party biographies and the Sixteenth/Seventeenth composition baselines. |
+| <a id="maj-s3"></a>`MAJ-S3` | [`S3`](BIBLIOGRAPHY.md#s3) | Ervand Abrahamian, *Oil Crisis in Iran* (Cambridge UP, 2021). [EPUB](sources/major/MAJ-S3-abrahamian-2021-oil-crisis-in-iran.epub) · [converted PDF](sources/major/MAJ-S3-abrahamian-2021-oil-crisis-in-iran.pdf) · [metadata](sources/major/MAJ-S3-abrahamian-2021-oil-crisis-in-iran.md) | Valid 54-member EPUB, SHA-256 `921fff22e385cbff033eddc4779504289f317bd5fcc2fff843de44b11d801c57`; 365-page generated PDF, SHA-256 `3ed248c0fbfb277416d0a29c4e431b669bfd6a6571167a331efb013301c4aa88`. The EPUB embeds source-page anchors used by the cited `pp.` locators; generated-PDF page numbers are not locators. | **Cited; source EPUB and reading derivative local-only.** Used for Senate profiles and Seventeenth-Majles caucus and quorum reconstruction. |
 | <a id="maj-s4"></a>`MAJ-S4` | [`S4`](BIBLIOGRAPHY.md#s4) | Mark J. Gasiorowski and Malcolm Byrne, eds., *Mohammad Mosaddeq and the 1953 Coup in Iran* (Syracuse UP, 2004). [PDF](sources/major/MAJ-S4-gasiorowski-byrne-2004-mosaddeq-coup.pdf) · [metadata](sources/major/MAJ-S4-gasiorowski-byrne-2004-mosaddeq-coup.md) | 392-page OCR scan; stable print pages. SHA-256 `587674e69691c0492604f13af9a2da6d176166348863423c9bf5fe611c72e1ba` | **Acquired; local-only.** Cite individual chapter authors. |
-| <a id="maj-s5"></a>`MAJ-S5` | [`S5`](BIBLIOGRAPHY.md#s5) | Ali Rahnema, *Behind the 1953 Coup in Iran* (Cambridge UP, 2015). [PDF](sources/major/MAJ-S5-rahnema-2015-behind-1953-coup.pdf) · [metadata](sources/major/MAJ-S5-rahnema-2015-behind-1953-coup.md) | 348-page searchable publisher-layout PDF. SHA-256 `1f728dd622fdbafcedc761e5a5e46f24d5f4638fef811d9c53475b9e1dced649` | **Acquired; local-only.** |
+| <a id="maj-s5"></a>`MAJ-S5` | [`S5`](BIBLIOGRAPHY.md#s5) | Ali Rahnema, *Behind the 1953 Coup in Iran* (Cambridge UP, 2015). [PDF](sources/major/MAJ-S5-rahnema-2015-behind-1953-coup.pdf) · [metadata](sources/major/MAJ-S5-rahnema-2015-behind-1953-coup.md) | 348-page searchable publisher-layout PDF. SHA-256 `1f728dd622fdbafcedc761e5a5e46f24d5f4638fef811d9c53475b9e1dced649` | **Cited; local-only.** Used for the October 1951 Senate delegation at p. 258 and the August 1953 crisis sequence. |
 | <a id="maj-s6"></a>`MAJ-S6` | [`S6`](BIBLIOGRAPHY.md#s6) | Homa Katouzian, *Musaddiq and the Struggle for Power in Iran* (revised paperback 1999; 2009 reprint). [Original scan](sources/major/MAJ-S6-katouzian-1999-musaddiq-struggle-power.pdf) · [searchable OCR derivative](sources/major/MAJ-S6-katouzian-1999-musaddiq-struggle-power-ocr.pdf) · [metadata](sources/major/MAJ-S6-katouzian-1999-musaddiq-struggle-power.md) | 326 stable-page images. Original SHA-256 `e3fc4f9a205298b7587dd6f12ee7abf770dbb32b8575d68826a655490d67dd33`; OCRmyPDF/Tesseract `eng+lat` derivative SHA-256 `5ae1b3e45f03113bfa89a03e49a43d5bdd2c2d4064ab05651ce9284de32ebcb5`. | **Acquired; searchable local derivative available.** |
 | <a id="maj-s7"></a>`MAJ-S7` | [`S7`](BIBLIOGRAPHY.md#s7) | Darioush Bayandor, *Iran and the CIA* (Palgrave Macmillan, 2010). [PDF](sources/major/MAJ-S7-bayandor-2010-iran-cia.pdf) · [metadata](sources/major/MAJ-S7-bayandor-2010-iran-cia.md) | 266-page searchable publisher-layout PDF. SHA-256 `446e3060036ed7fe947a8fdc467532e6e1ad8cfbb75bf3485cfcd00265ee8cef` | **Acquired; local-only; interpretive counterpoint.** |
 | <a id="maj-s8"></a>`MAJ-S8` | [`S15`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Richard W. Cottam, *Nationalism in Iran*, updated ed. (University of Pittsburgh Press, 1979). [Canonical updated PDF](sources/major/MAJ-S8-cottam-1979-nationalism-in-iran-updated.pdf) · [metadata](sources/major/MAJ-S8-cottam-1979-nationalism-in-iran-updated.md) · [retained 1964 first edition](sources/major/MAJ-S8-cottam-1964-nationalism-in-iran-first-edition.pdf) | Canonical 388-page updated-edition scan with OCR, SHA-256 `3af3ab6b8a9eb5315c19bbe33b4a1ab3ae72edc6c62d7e09c7bd036dfcf4a61d`; retained 352-page first-edition SHA-256 `1bdc0a091bde52b83dd489803c7df79099df8ddacee00cc7438751115d451c15`. | **Acquired preferred edition; local-only.** |
@@ -546,6 +546,10 @@ repository and direct-file provenance.
   Thirty Tir sequence and a dense 20 Tir–27 Mordad 1332 sequence.
 - **Role:** Fatemi's interested contemporary press. It establishes what was
   published and how events were framed, not the truth of every report.
+  Issue 1174, 27 Mordad 1332 / 18 August 1953, p. 1 directly captions six
+  deputies leaving a National Movement caucus meeting and is used as a dated
+  organizational record in
+  [`PARLIAMENTARY_CONTROL.md`](PARLIAMENTARY_CONTROL.md).
 
 ## Economic-history records
 
@@ -713,6 +717,130 @@ collections being assigned concurrently.
   senators from the thirty indirectly elected senators and recording
   replacements. Entry route is not ideology; proceedings are still required
   for attendance and divisions.
+
+<a id="sup-054"></a>
+### SUP-054 — British Library, “Persian situation: miscellaneous reports”
+
+- **Status:** Acquired archival file; local-only; context use only pending
+  claim-level review.
+- **Bibliography:** [`P17` trust record](BIBLIOGRAPHY.md#p17).
+- **Local source:** [PDF](sources/supplemental/SUP-054-british-library-ior-l-ps-12-1225-persian-situation-1949.pdf)
+  · [metadata](sources/supplemental/SUP-054-british-library-ior-l-ps-12-1225-persian-situation-1949.md).
+- **Reference and extent:** British Library India Office Records,
+  `IOR/L/PS/12/1225`, Ext 5000/47/3, 10 February 1947–24 October 1949;
+  128 folios in a 259-page Qatar Digital Library PDF.
+- **Provenance:** [Qatar Digital Library carrier](https://www.qdl.qa/en/archive/81055/vdc_100000000517.0x00020e).
+- **SHA-256:** `9301fdec3b0fba60e1c34f2b4e25ea7e31dce105594348a42f3d354e296d3cf9`.
+- **Role:** Contemporary British diplomatic context for constitutional
+  revision, the Senate, the Seven-Year Plan, Tudeh suppression, and election
+  administration before the Sixteenth Majles. It is **not** `FO 371/75466`,
+  does not contain that file's two known candidate-influence documents, and
+  cannot replace it. Cite individual documents only after checking sender,
+  recipient, date, folio or carrier page, and comparison evidence.
+
+<a id="sup-055"></a>
+### SUP-055 — ILO, *Labour Conditions in the Oil Industry in Iran*
+
+- **Status:** Acquired official field-mission report; local-only; claim-level
+  review pending.
+- **Bibliography:** [`E18` trust record](BIBLIOGRAPHY.md#economic-history-source-families).
+- **Local source:** [PDF](sources/supplemental/SUP-055-ilo-1950-labour-conditions-oil-industry-iran.pdf)
+  · [metadata](sources/supplemental/SUP-055-ilo-1950-labour-conditions-oil-industry-iran.md).
+- **Publication:** International Labour Office, *Studies and Reports*, New
+  Series, no. 24 (Geneva, 1950); iv + 87 printed pages with plates and map,
+  106 PDF pages.
+- **Provenance:** [Official ILO PDF](https://webapps.ilo.org/public/libdoc/ilo/ILO-SR/ILO-SR_NS24_engl.pdf).
+- **SHA-256:** `08217aa82252a109f9d2d3518d779be80c19f9f8b6d7bf6b84a9dd382ec6e4c7`.
+- **Role:** Priority pre-nationalization field baseline for oil employment,
+  wages, hours, safety, housing, health, welfare, and industrial relations.
+  It records a January–February 1950 mission and partly relies on AIOC
+  information; do not project it unchanged into the 1951–53 shutdown.
+
+<a id="sup-056"></a>
+### SUP-056 — Ahmadi-Nasab and Sadeghi, “The Sixteenth Majles and the Nationalization of Oil”
+
+- **Status:** Acquired author-posted chapter version; local-only; print
+  comparison and claim-level review pending.
+- **Bibliography:** [`S25`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining).
+- **Local source:** [HTML](sources/supplemental/SUP-056-ahmadi-nasab-sadeghi-2013-sixteenth-majles-nationalization.html)
+  · [metadata](sources/supplemental/SUP-056-ahmadi-nasab-sadeghi-2013-sixteenth-majles-nationalization.md).
+- **Probable publication:** chapter in *Nigāhī bih sākhtār va kārkard-i
+  Majlis-i Shūrā-yi Millī: dawrah-i sīzdahum tā shānzdahum* (Parliament
+  Library, 1392 SH / 2013–14).
+- **Provenance:** [Younes Sadeghi's 17 Mehr 1392 Blogfa post](https://alalima.blogfa.com/post/22).
+- **SHA-256:** `a10f6edeaf6d877211fd64fcbaf2a6bcf6b1c03e7f4f4849d2c7e53e196c427a`.
+- **Role:** Partial recovery of one priority chapter from `S25`, covering the
+  special oil commission and the legislative sequence of nationalization.
+  The complete-looking text includes forty notes but no print pagination.
+  Treat it as an author-posted version, verify all factual claims against
+  official proceedings and stronger scholarship, and replace its locators
+  when the edited volume is acquired.
+
+<a id="sup-057"></a>
+### SUP-057 — IMF, *International Financial Statistics*, selected 1950–54 vintages
+
+- **Status:** Four complete contemporary issues acquired; local-only.
+- **Bibliography:** [`E16` trust record](BIBLIOGRAPHY.md#economic-history-source-families).
+- **Local collection:** [coverage, provenance, locators, and
+  checksums](sources/supplemental/SUP-057-imf-ifs-selected-1950-1954/README.md).
+- **Issues:** December 1950, December 1951, August 1953, and December
+  1954, with the Internet Archive's OCR derivatives retained only as
+  navigation aids.
+- **Provenance:** [Internet Archive's August 1953 issue](https://archive.org/details/sim_imf-international-financial-stats_1953-08_6_8)
+  and the same public serial run for the other three issues.
+- **Role:** Best openly retrievable contemporary substitute for the missing
+  Bank Melli bulletin run. The Iran sheets preserve report-vintage monetary,
+  banking, foreign-asset, trade, price, exchange-rate, AIOC-payment, and oil-
+  output series plus definitions. They are IMF transcriptions and
+  standardizations, not Bank Melli originals; page images, units, footnotes,
+  and revision vintages must control every extraction.
+
+<a id="sup-058"></a>
+### SUP-058 — UN Middle East economic surveys, 1949/50–1951/52
+
+- **Status:** Three complete official surveys acquired; local-only.
+- **Bibliography:** [`E17` trust record](BIBLIOGRAPHY.md#economic-history-source-families).
+- **Local collection:** [editions, provenance, limitations, and
+  checksums](sources/supplemental/SUP-058-un-middle-east-economic-surveys-1950-1952/README.md).
+- **Documents:** `E/1910/Add.2/Rev.1`, `E/2193/Add.3`, and
+  `E/2353/Add.1`, covering 1949/50 through 1951/52.
+- **Provenance:** Official UN Digital Library records
+  [3903408](https://digitallibrary.un.org/record/3903408),
+  [3903410](https://digitallibrary.un.org/record/3903410), and
+  [3903412](https://digitallibrary.un.org/record/3903412).
+- **Role:** Independent contemporary institutional checks on production,
+  trade, petroleum, prices, finance, and development across the onset of the
+  oil shock. UN standardization and occasional private-source substitution
+  require table-level source notes. The 1952–53 successor is indexed online
+  but its current direct download path is broken and remains unarchived.
+
+<a id="sup-059"></a>
+### SUP-059 — Official Sixteenth-Majles Special Oil Commission minutes
+
+- **Status:** Two-volume official record acquired; local-only; claim-level
+  review pending.
+- **Bibliography:** [`P16` trust record](BIBLIOGRAPHY.md#p16).
+- **Local sources:** [print-order no. 172](sources/supplemental/SUP-059-majles-special-oil-commission-minutes-print-172.pdf)
+  · [print-order no. 300](sources/supplemental/SUP-059-majles-special-oil-commission-minutes-print-300.pdf)
+  · [metadata](sources/supplemental/SUP-059-majles-special-oil-commission-minutes.md).
+- **Publication:** Majles-e Showra-ye Melli, *Surat-e Muzakerat-e Komision-e
+  Makhsus-e Naft-e Majles-e Showra-ye Melli* (Tehran: Majles Information and
+  Publications Administration); first, second, and third commission periods.
+- **Extent:** 198-page print-order no. 172 plus 169-page print-order no. 300;
+  367 image pages without OCR.
+- **Provenance:** Wikimedia Commons carrier records for
+  [no. 172](https://commons.wikimedia.org/wiki/File:صورت_مذاکرات_کمیسیون_مخصوص_نفت_مجلس_شورای_ملی_(شماره_ترتیب_چاپ_۱۷۲).pdf)
+  and
+  [no. 300](https://commons.wikimedia.org/wiki/File:صورت_مذاکرات_کمیسیون_مخصوص_نفت_مجلس_شورای_ملی_(شماره_ترتیب_چاپ_۳۰۰).pdf),
+  sourced from the Iranian Parliament Library.
+- **SHA-256:** no. 172
+  `ed794dd87ad51e3890e7aad106c11f128112418451e457eeda77e245db59c43b`;
+  no. 300
+  `6db3ebeef1ecfee703a7f130d12c7b56b1d398579a6c0ddd9c3d3e22507bf985`.
+- **Role:** Controlling primary evidence for recorded Oil Commission
+  membership, interventions, motions, reports, and decisions. Join it to the
+  chamber proceedings (`SUP-007`), enacted law (`SUP-006`), and specialist
+  scholarship; it is not a chamber-wide ideological register.
 
 ## Additional supplemental scholarship
 

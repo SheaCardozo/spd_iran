@@ -77,6 +77,116 @@ const electronicSources = [
     hash: 'd467b6eba9c53313735e238702444ad11b91b3b63c59c41a2f7c11bdf26fc0f6',
   },
 ];
+const recentSourceFiles = [
+  {
+    id: 'SUP-054',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-054-british-library-ior-l-ps-12-1225-persian-situation-1949.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-054-british-library-ior-l-ps-12-1225-persian-situation-1949.md',
+    hash: '9301fdec3b0fba60e1c34f2b4e25ea7e31dce105594348a42f3d354e296d3cf9',
+  },
+  {
+    id: 'SUP-055',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-055-ilo-1950-labour-conditions-oil-industry-iran.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-055-ilo-1950-labour-conditions-oil-industry-iran.md',
+    hash: '08217aa82252a109f9d2d3518d779be80c19f9f8b6d7bf6b84a9dd382ec6e4c7',
+  },
+  {
+    id: 'SUP-056',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-056-ahmadi-nasab-sadeghi-2013-sixteenth-majles-nationalization.html',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-056-ahmadi-nasab-sadeghi-2013-sixteenth-majles-nationalization.md',
+    hash: 'a10f6edeaf6d877211fd64fcbaf2a6bcf6b1c03e7f4f4849d2c7e53e196c427a',
+  },
+  {
+    id: 'SUP-059 print-order 172',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-059-majles-special-oil-commission-minutes-print-172.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-059-majles-special-oil-commission-minutes.md',
+    hash: 'ed794dd87ad51e3890e7aad106c11f128112418451e457eeda77e245db59c43b',
+  },
+  {
+    id: 'SUP-059 print-order 300',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-059-majles-special-oil-commission-minutes-print-300.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-059-majles-special-oil-commission-minutes.md',
+    hash: '6db3ebeef1ecfee703a7f130d12c7b56b1d398579a6c0ddd9c3d3e22507bf985',
+  },
+];
+const recentSourceCollections = [
+  {
+    id: 'SUP-057',
+    directory: 'SUP-057-imf-ifs-selected-1950-1954',
+    files: [
+      [
+        '1950-12-vol3-no12.pdf',
+        '97612c1838fc8aea98dc3c7553a43fc8f65e9d311c1783ebb953260edd4f95e8',
+      ],
+      [
+        '1950-12-vol3-no12.ocr.txt',
+        'ed976eddb1604b2398541a74e73be3e403b46238eae353bd3b20a8d829760bc2',
+      ],
+      [
+        '1951-12-vol4-no12.pdf',
+        '9711c758c0d8bd265f0cb6ad09431334099b593ac80d50b7150ce4165473b0c9',
+      ],
+      [
+        '1951-12-vol4-no12.ocr.txt',
+        '385d6a0016a409837bce4f9116599f266341c76baf213e18a1b32eec3b78d034',
+      ],
+      [
+        '1953-08-vol6-no8.pdf',
+        '1219fe948d4574f8b4be9f3aadf85806fa2aa0403a1d99a1677755b3767ce6b4',
+      ],
+      [
+        '1953-08-vol6-no8.ocr.txt',
+        '47b1a25b7fa30bc785d7aa0a5df640212ff3452508fb1db8ef916a07a1627516',
+      ],
+      [
+        '1954-12-vol7-no12.pdf',
+        'a25398dfc28879630f2b34313e59d93beeb31282c5abe825b97752b74d86e618',
+      ],
+      [
+        '1954-12-vol7-no12.ocr.txt',
+        '6dcb414088978b01b70dae4a98259b1016b933a24f494d97f42652cb3272a156',
+      ],
+    ],
+  },
+  {
+    id: 'SUP-058',
+    directory: 'SUP-058-un-middle-east-economic-surveys-1950-1952',
+    files: [
+      [
+        '1950-review-economic-conditions-middle-east.pdf',
+        '77b4abaef72175d63c54150c0f3727d1e59a8700fd2044a40cdd544be964f117',
+      ],
+      [
+        '1951-summary-recent-economic-developments-middle-east.pdf',
+        '2d9a348a947eead594874daeff28c21632995f496d3802a49a1e8aa110a0a6ec',
+      ],
+      [
+        '1952-review-economic-conditions-middle-east.pdf',
+        'a3f8f9001b112c69d0d7b78cfeadc046e786e2722d11addd1358ae941b239bdf',
+      ],
+    ],
+  },
+];
 const retainedSourceFiles = [
   {
     id: 'SUP-010 2017 first edition',
@@ -443,6 +553,8 @@ test('research source taxonomy and catalog cross-references are present', () => 
   const catalogIds = [
     ...sources.map((source) => source.id),
     ...electronicSources.map((source) => source.id.replace(/ EPUB$/, '')),
+    ...recentSourceFiles.map((source) => source.id.match(/^SUP-\d{3}/)[0]),
+    ...recentSourceCollections.map((collection) => collection.id),
     'SUP-021',
     'SUP-022',
   ];
@@ -488,11 +600,26 @@ test('economic source-family registry is synchronized', () => {
 
   for (const id of [
     'E1', 'E2', 'E2a', 'E3', 'E4', 'E5', 'E9', 'E10', 'E11', 'E12',
-    'E13', 'E14', 'E15', 'E16', 'E17', 'E18', 'E19', 'E20', 'E21',
+    'E13', 'E14', 'E15', 'E16', 'E17', 'E19', 'E20', 'E21',
     'E22', 'E23',
   ]) {
     assert.match(unavailable, new RegExp(`\\b${id}\\b`), `${id} queue record`);
   }
+
+  const activeEconomicQueue = unavailable.slice(
+    unavailable.indexOf('## Economic-history acquisition queue'),
+    unavailable.indexOf('## Exact primary-record leads'),
+  );
+  assert.doesNotMatch(
+    activeEconomicQueue,
+    /\[`E18`\]/,
+    'acquired ILO report must not remain an active economic target',
+  );
+  assert.match(
+    unavailable,
+    /\| `E18` \| 2026-07-26 \|/,
+    'acquired ILO report should remain in the resolution history',
+  );
 
   for (let id = 40; id <= 47; id += 1) {
     assert.match(available, new RegExp(`SUP-0${id}`));
@@ -565,6 +692,27 @@ test('ignored local archive matches its catalog when present', async () => {
     const bytes = fs.readFileSync(electronicSource.path);
     const actualHash = crypto.createHash('sha256').update(bytes).digest('hex');
     assert.equal(actualHash, electronicSource.hash, electronicSource.id);
+  }
+
+  for (const recentSource of recentSourceFiles) {
+    const actualHash = await sha256File(recentSource.path);
+    assert.equal(actualHash, recentSource.hash, recentSource.id);
+
+    const sidecar = fs.readFileSync(recentSource.sidecar, 'utf8');
+    assert.match(sidecar, new RegExp(recentSource.id.match(/^SUP-\d{3}/)[0]));
+  }
+
+  for (const collection of recentSourceCollections) {
+    const collectionRoot =
+      `${sourceRoot}/supplemental/${collection.directory}`;
+    const readme = fs.readFileSync(`${collectionRoot}/README.md`, 'utf8');
+    assert.match(readme, new RegExp(collection.id));
+    for (const [relativePath, expectedHash] of collection.files) {
+      const actualHash = await sha256File(
+        `${collectionRoot}/${relativePath}`,
+      );
+      assert.equal(actualHash, expectedHash, `${collection.id} ${relativePath}`);
+    }
   }
 
   for (const retainedSource of retainedSourceFiles) {

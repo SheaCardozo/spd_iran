@@ -107,8 +107,10 @@ Their numerical effects are balance scaffolding, not historical measurements.
 5. Implement Sixteenth Majles constituencies and candidates.
    The complete research baseline is
    [`docs/research/SIXTEENTH_MAJLES_LEDGER.md`](research/SIXTEENTH_MAJLES_LEDGER.md);
-   implementation must preserve its separate return, credential, seat-status,
-   dated-tendency, attendance, and vote layers.
+   implementation must preserve its separate `return_date`,
+   `credential_status`, `seat_status`, `declared_party`, `dated_tendency`,
+   `dated_institutional_alignment`, `dated_caucus`, `attendance`, `votes`,
+   `source_locators`, `confidence`, and `inherited_prior` layers.
 6. Add the first oil-policy state only when the campaign reaches the relevant
    proposals.
 
@@ -123,16 +125,22 @@ These should be evaluated when their dependent system is implemented:
   Iranian elections in scope were staggered, candidate-based contests whose
   returns were followed by credential disputes and fluid caucus alignments.
   Before implementing this system, define separate records for constituency
-  returns, credential status, attendance, dated caucus or allegiance, and
-  roll-call behavior. For the Senate, also preserve whether a member was
-  elected or appointed. Do not derive a permanent party-seat chart from any
-  one of those layers. The migration path from the current placeholder is to
-  introduce constituency and member records before any national summary
-  display; validate them against named returns and dated votes in
-  `docs/research/TIMELINE_PRIMER.md`. The complete current roster baseline,
-  source-graded tendencies, denominator audit, and dated control layers are in
-  `docs/research/PARLIAMENTARY_CONTROL.md`; the wider evidentiary boundary is
-  summarized in
+  returns, credential status, declared party or organization, dated
+  constitutional or ideological tendency, dated institutional alignment,
+  dated caucus, attendance, and roll-call behavior. For the Senate, also
+  preserve whether a member was elected or appointed. A separate
+  `inherited_prior` may supply
+  qualitative, phase-specific expectations for unresolved members, following
+  `docs/research/PARLIAMENTARY_VIBE_MODEL.md`; it must carry heuristic status
+  and must never populate a historical-evidence field. Do not derive a
+  permanent party-seat chart from any one of those layers. The migration path
+  from the current placeholder is to introduce constituency and member
+  records before any national summary display; validate them against named
+  returns, credentials, dated alignments, and votes in
+  `docs/research/SIXTEENTH_MAJLES_LEDGER.md` and
+  `docs/research/PARLIAMENTARY_CONTROL.md`, then confirm that any public
+  summary remains consistent with `docs/research/TIMELINE_PRIMER.md`. The
+  wider evidentiary boundary is summarized in
   `docs/research/CRISIS_EVIDENCE_AUDIT.md#5-parliamentary-factions-and-effective-control`;
 - term-by-term oil proposals instead of one policy meter;
 - an economic representation more detailed than SPD's abstract budget,
