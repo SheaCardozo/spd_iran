@@ -9,7 +9,7 @@ must identify the claimed jurisdiction or rationale; age alone is not enough.
 - **Hold** — downloaded for research, but not cleared for use.
 - **Candidate** — identified online but not downloaded or verified.
 
-## Initial asset set
+## Approved asset set
 
 ### `assets/img/majlis_1940s.jpg`
 
@@ -93,6 +93,106 @@ must identify the claimed jurisdiction or rationale; age alone is not enough.
 - **Intended use:** Geographic orientation in the standalone historical
   primer, especially the relationship between Tehran, Abadan, Iraq, and the
   Persian Gulf during the oil crisis.
+
+### `assets/img/abadan_workers_1952.jpg`
+
+- **Status:** Approved for prototype use; retain the identified magazine issue
+  in the provenance chain.
+- **Depicts:** A large gathering of workers in Abadan expressing support for
+  Mohammad Mossadegh.
+- **Date/creator:** Published 11 January 1952; staff of *Tehran Mosavvar*.
+- **Source record:** Wikimedia Commons,
+  <https://commons.wikimedia.org/wiki/File:Workers_in_Abadan_expressing_their_support_for_Dr._Mosaddegh.jpg>.
+- **Direct file source:** Wikimedia Commons file redirect,
+  <https://commons.wikimedia.org/wiki/Special:Redirect/file/Workers_in_Abadan_expressing_their_support_for_Dr._Mosaddegh.jpg>.
+- **Underlying source:** *Tehran Mosavvar*, no. 439, 20 Dey 1330 SH
+  (11 January 1952); the Commons scan was extracted from the archived issue and
+  records its immediate source as a personal archive.
+- **Retrieval date:** 27 July 2026.
+- **Rights statement:** Commons marks the photograph public domain in Iran
+  under the thirty-year term for photographic works and the digital image as a
+  noncreative scan of the public-domain original.
+- **Attribution:** “Workers rallying in Abadan, published in *Tehran
+  Mosavvar*, no. 439, 11 January 1952; magazine staff; public domain.”
+- **Modifications:** None.
+- **SHA-256:** `9fb91f90649b2e71e091e36312996ab77d5de9a5189a4d0fa62b29bbe2ac7e79`.
+- **Intended use:** The primer's economic section, connecting the oil crisis to
+  organized workers and public mobilization in Abadan.
+
+### `assets/img/mossadegh_truman_1951.jpg`
+
+- **Status:** Approved for prototype and release use.
+- **Depicts:** US President Harry S. Truman and Iranian Prime Minister
+  Mohammad Mossadegh at Blair House in Washington, D.C.
+- **Date/creator:** 23 October 1951; United States federal government.
+- **Source record:** Wikimedia Commons,
+  <https://commons.wikimedia.org/wiki/File:President_Truman_and_Prime_Minister_Mohammad_Mossadegh_of_Iran.jpg>.
+- **Direct file source:** Wikimedia Commons file redirect,
+  <https://commons.wikimedia.org/wiki/Special:Redirect/file/President_Truman_and_Prime_Minister_Mohammad_Mossadegh_of_Iran.jpg>.
+- **Holding institutions:** US National Archives and Records Administration;
+  Harry S. Truman Presidential Library and Museum. NARA ARC identifier
+  `200363`.
+- **Retrieval date:** 27 July 2026.
+- **Rights statement:** Public domain as a work prepared by a United States
+  federal employee as part of official duties; the Commons file was supplied
+  through NARA.
+- **Attribution:** “President Harry S. Truman and Prime Minister Mohammad
+  Mossadegh at Blair House, 23 October 1951; US National Archives / Harry S.
+  Truman Library; public domain.”
+- **Modifications:** None.
+- **SHA-256:** `c5f082ffd29db62f30d708c6a8d53c99cf25a059a2ad7b866526f32205d144d5`.
+- **Intended use:** The primer's Washington negotiation sequence.
+
+### `assets/img/tehran_rally_1953-08-16.jpg`
+
+- **Status:** Approved for prototype use; confirm William Arthur Cram's exact
+  federal assignment or an original federal catalog record before commercial
+  release.
+- **Depicts:** A pro-Mossadegh demonstration in Tehran after the first coup
+  attempt failed.
+- **Date/creator:** 16 August 1953; William Arthur Cram.
+- **Source record:** Wikimedia Commons,
+  <https://commons.wikimedia.org/wiki/File:1953_Iranian_coup_d%27%C3%A9tat_-_Tehran_rally.jpg>.
+- **Direct file source:** Wikimedia Commons file redirect,
+  <https://commons.wikimedia.org/wiki/Special:Redirect/file/1953_Iranian_coup_d%27%C3%A9tat_-_Tehran_rally.jpg>.
+- **Recorded underlying source:** *The Guardian*, as identified by the Commons
+  file record.
+- **Retrieval date:** 27 July 2026.
+- **Rights statement:** Commons identifies the photograph as a work prepared
+  by a United States federal employee in the course of official duties and
+  marks it public domain with no known restrictions. The source record does not
+  identify the original federal series, so that provenance gap is recorded for
+  release review.
+- **Attribution:** “Pro-Mossadegh demonstration in Tehran, 16 August 1953;
+  William Arthur Cram; US-government public-domain photograph via Wikimedia
+  Commons.”
+- **Modifications:** None.
+- **SHA-256:** `4e3709dee5014e3344f718df88bf1ba36a00b0bf1f06cd60928f9a3d462b8069`.
+- **Intended use:** The primer's account of the apparent government victory
+  after the failed 15–16 August coup attempt.
+
+### `assets/img/ferdowsi_tanks_1953-08-19.png`
+
+- **Status:** Approved for prototype and release use.
+- **Depicts:** Tanks in Ferdowsi Square, Tehran, during the successful coup.
+- **Date/creator:** 19 August 1953; Stephen Langlie, USAF/MAAG.
+- **Source record:** Wikimedia Commons,
+  <https://commons.wikimedia.org/wiki/File:1953_Iranian_coup_d%27%C3%A9tat_by_Stephen_Langlie_%281%29.png>.
+- **Direct file source:** Wikimedia Commons file redirect,
+  <https://commons.wikimedia.org/wiki/Special:Redirect/file/1953_Iranian_coup_d%27%C3%A9tat_by_Stephen_Langlie_%281%29.png>.
+- **Underlying source:** Stephen Langlie Collection,
+  `GB165-0351-2.1.19`, Middle East Centre Archive, St Antony's College,
+  Oxford. The Commons copy was reproduced from Mark J. Gasiorowski and Malcolm
+  Byrne, eds., *Mohammad Mosaddeq and the 1953 Coup in Iran*, p. 88.
+- **Retrieval date:** 27 July 2026.
+- **Rights statement:** Public domain as a photograph made by a United States
+  Air Force airman or employee as part of official duties.
+- **Attribution:** “Tanks in Ferdowsi Square, Tehran, 19 August 1953; Stephen
+  Langlie, USAF/MAAG; public domain.”
+- **Modifications:** None.
+- **SHA-256:** `e271bd17bf3c1d4b768474d34999dc01c1334b04511597a89b62700b5c8d168e`.
+- **Intended use:** The primer's account of the decisive military phase on
+  19 August.
 
 ## Candidate and hold notes
 

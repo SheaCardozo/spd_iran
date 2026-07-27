@@ -138,10 +138,31 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.match(timeline, /id="iran-around-1950"/);
   assert.match(
     timeline,
-    /<figure class="orientation-map orientation-map-abadan">[\s\S]*?<img src="img\/iran_abadan_map_1950\.jpg"[^>]*loading="lazy">[\s\S]*?<span class="map-locator" aria-hidden="true"><span>Abadan<\/span><\/span>/,
+    /<figure class="historical-figure orientation-map orientation-map-abadan">[\s\S]*?<img src="img\/iran_abadan_map_1950\.jpg"[^>]*loading="lazy">[\s\S]*?<span class="map-locator" aria-hidden="true"><span>Abadan<\/span><\/span>/,
   );
   assert.match(timeline, /British War Office map, third edition, 1950/);
   assert.match(timeline, /British sheet uses <q>Persia<\/q> for Iran/);
+  for (const filename of [
+    'abadan_workers_1952.jpg',
+    'mossadegh_truman_1951.jpg',
+    'tehran_rally_1953-08-16.jpg',
+    'ferdowsi_tanks_1953-08-19.png',
+  ]) {
+    assert.match(
+      timeline,
+      new RegExp(
+        `<figure class="historical-figure historical-photo">\\s*<div class="historical-figure-frame">\\s*<img src="img/${filename.replaceAll('.', '\\.')}"[^>]*loading="lazy">`,
+      ),
+    );
+  }
+  assert.match(timeline, /Workers gathering in support of/);
+  assert.match(timeline, /at Blair House, Washington, D\.C\., 23 October 1951/);
+  assert.match(timeline, /after the first coup attempt failed/);
+  assert.match(timeline, /Tanks in Ferdowsi Square, Tehran, 19 August 1953/);
+  assert.match(
+    timelineCss,
+    /\.historical-figure\s*\{[\s\S]*?break-inside:\s*avoid;/,
+  );
   assert.match(
     timelineCss,
     /\.map-locator\s*\{[\s\S]*?top:\s*61\.1%;[\s\S]*?left:\s*19%;/,
@@ -511,6 +532,10 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
     'img/shah_1949.jpg',
     'img/makki_abadan_1951.jpg',
     'img/iran_abadan_map_1950.jpg',
+    'img/abadan_workers_1952.jpg',
+    'img/mossadegh_truman_1951.jpg',
+    'img/tehran_rally_1953-08-16.jpg',
+    'img/ferdowsi_tanks_1953-08-19.png',
   ]) {
     assert.ok(fs.existsSync(`out/timeline/${filename}`));
   }

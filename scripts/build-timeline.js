@@ -19,6 +19,10 @@ const standaloneAssets = [
   ['assets/img/shah_1949.jpg', 'img/shah_1949.jpg'],
   ['assets/img/makki_abadan_1951.jpg', 'img/makki_abadan_1951.jpg'],
   ['assets/img/iran_abadan_map_1950.jpg', 'img/iran_abadan_map_1950.jpg'],
+  ['assets/img/abadan_workers_1952.jpg', 'img/abadan_workers_1952.jpg'],
+  ['assets/img/mossadegh_truman_1951.jpg', 'img/mossadegh_truman_1951.jpg'],
+  ['assets/img/tehran_rally_1953-08-16.jpg', 'img/tehran_rally_1953-08-16.jpg'],
+  ['assets/img/ferdowsi_tanks_1953-08-19.png', 'img/ferdowsi_tanks_1953-08-19.png'],
 ];
 
 const sources = {
@@ -360,8 +364,8 @@ function renderBlocks(lines, options = {}) {
       const [, alt, source, caption] = image;
       const abadanLocator = source === 'img/iran_abadan_map_1950.jpg';
       html.push(
-        `<figure class="orientation-map${abadanLocator ? ' orientation-map-abadan' : ''}">
-<div class="orientation-map-frame">
+        `<figure class="historical-figure${abadanLocator ? ' orientation-map orientation-map-abadan' : ' historical-photo'}">
+<div class="historical-figure-frame${abadanLocator ? ' orientation-map-frame' : ''}">
 <img src="${escapeHtml(source)}" alt="${escapeHtml(alt)}" loading="lazy">
 ${abadanLocator ? '<span class="map-locator" aria-hidden="true"><span>Abadan</span></span>' : ''}
 </div>

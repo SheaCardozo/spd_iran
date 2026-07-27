@@ -83,3 +83,4 @@ bibliography entry, or asset-rights record.
 - [Abadan orientation map](2026-07-27-abadan-orientation-map.md)
 - [Adversarial historical-primer final audit](2026-07-27-adversarial-primer-final-audit.md)
 - [Reader-first historical synthesis](2026-07-27-reader-first-historical-synthesis.md)
+- [Primer historical image sequence](2026-07-27-primer-historical-image-sequence.md)

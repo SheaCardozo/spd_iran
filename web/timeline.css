@@ -808,11 +808,12 @@ main {
   text-wrap: pretty;
 }
 
-.orientation-map {
+.historical-figure {
   margin: 32px 0 36px;
+  break-inside: avoid;
 }
 
-.orientation-map-frame {
+.historical-figure-frame {
   position: relative;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--line) 82%, transparent);
@@ -820,13 +821,13 @@ main {
   box-shadow: 0 10px 24px rgba(50, 39, 28, 0.12);
 }
 
-.orientation-map img {
+.historical-figure img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.orientation-map figcaption {
+.historical-figure figcaption {
   max-width: 640px;
   margin: 12px 0 0;
   color: var(--muted);

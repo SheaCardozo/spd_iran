@@ -313,6 +313,8 @@ rather than passive endurance
 ([`MAJ-S18`, pp. 120–28](AVAILABLE_SOURCES.md#maj-s18);
 [`SUP-057`, pp. 187–88](AVAILABLE_SOURCES.md#sup-057)).
 
+![A dense crowd of workers carrying flags at a pro-Mossadegh gathering in Abadan](../../assets/img/abadan_workers_1952.jpg "Workers gathering in support of Mohammad Mossadegh in Abadan, published in *Tehran Mosavvar*, no. 439, 11 January 1952; public domain.")
+
 ## 1. Before Mossadegh: concession, dictatorship, and political opening
 
 ### 1901–1941: oil and the Pahlavi state
@@ -501,6 +503,8 @@ AIOC, restricted compensation, and threatened British interests in other oil
 concessions
 ([`MAJ-S14`, chapter 3, “The Charm Offensive” and “The Price of a
 Deal”](AVAILABLE_SOURCES.md#maj-s14)).
+
+![President Harry S. Truman and Prime Minister Mohammad Mossadegh standing at Blair House in Washington, D.C.](../../assets/img/mossadegh_truman_1951.jpg "President Harry S. Truman and Prime Minister Mohammad Mossadegh at Blair House, Washington, D.C., 23 October 1951. US National Archives / Harry S. Truman Library; public domain.")
 
 The World Bank's January–March 1952 intervention was meant to postpone those
 final questions. For as long as two years, the Bank would manage the industry,
@@ -822,6 +826,8 @@ planned, and the operation collapsed.
 The Shah fled first to Baghdad and then Rome. Crowds pulled down royal statues.
 The government appeared to have won.
 
+![A large pro-Mossadegh demonstration with flags and banners in Tehran](../../assets/img/tehran_rally_1953-08-16.jpg "A pro-Mossadegh demonstration in Tehran on 16 August 1953, after the first coup attempt failed. Photograph by William Arthur Cram; US-government public-domain photograph via Wikimedia Commons.")
+
 ### 17–18 August: the failed plan gives way to improvisation
 
 CIA officer Kermit Roosevelt remained in Tehran and continued the operation
@@ -849,6 +855,8 @@ Pro-Shah groups appeared in south Tehran during the morning and moved toward
 the center. They attacked pro-government newspapers and National Front
 institutions. Police and military units that might have suppressed them stood
 aside or joined.
+
+![Tanks positioned in Ferdowsi Square in Tehran on 19 August 1953](../../assets/img/ferdowsi_tanks_1953-08-19.png "Tanks in Ferdowsi Square, Tehran, 19 August 1953. Photograph by Stephen Langlie, USAF/MAAG; public domain.")
 
 The decisive phase was military. Pro-Shah officers and units deployed tanks
 and occupied the telegraph office, police headquarters, and radio station.
