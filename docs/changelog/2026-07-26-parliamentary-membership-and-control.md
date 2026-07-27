@@ -1,5 +1,8 @@
 # Parliamentary membership and dated control reconstruction
 
+- **Date:** 2026-07-26
+- **Status:** Implemented
+
 ## Summary
 
 Expanded the parliamentary research from a handful of aggregate estimates

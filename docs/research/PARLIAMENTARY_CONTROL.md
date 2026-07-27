@@ -730,8 +730,9 @@ original slate as permanent voting parties.
 4. Build roll calls for government formation, nationalization, special
    powers, the Committee of Eight, the Senate term, and dissolution.
 5. Acquire the complete First Senate proceedings, especially the exact
-   sessions cited in `UNAVAILABLE_SOURCES.md`, and join divisions to the
-   `SUP-053` roster.
+   sessions mapped in
+   [`FIRST_SENATE_SOURCE_ACQUISITION.md`](FIRST_SENATE_SOURCE_ACQUISITION.md),
+   and join divisions to the `SUP-053` roster.
 6. Verify every Latin transliteration against the official scans and
    specialist biographical references before names become data identifiers.
 
@@ -755,4 +756,4 @@ original slate as permanent voting parties.
 | Committee of Eight and wavering majority | [FRUS, Iran, doc. 193](https://history.state.gov/historicaldocuments/frus1951-54Iran/d193) |
 | July 1953 legalistic quorum model | [FRUS, Iran, doc. 239](https://history.state.gov/historicaldocuments/frus1951-54Iran/d239) |
 | Late government support and public-position estimate | [FRUS, Iran, doc. 233](https://history.state.gov/historicaldocuments/frus1951-54Iran/d233) |
-| First Senate proceedings still missing | `IR-P4` in `BIBLIOGRAPHY.md` and `UNAVAILABLE_SOURCES.md` |
+| First Senate proceedings still missing | `IR-P4` in `BIBLIOGRAPHY.md` and [`FIRST_SENATE_SOURCE_ACQUISITION.md`](FIRST_SENATE_SOURCE_ACQUISITION.md) |

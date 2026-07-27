@@ -6,7 +6,9 @@
   intake recorded as `SUP-002`–`SUP-031`, `MAJ-S8`–`MAJ-S12`, and
   `S14`–`S23`, and the model-neutral economic corpus registered as
   `E1`–`E23` (including subrecords `E2a` and `E9a`) and acquired as
-  `SUP-040`–`SUP-047`
+  `SUP-040`–`SUP-047`; subsequent parliamentary, economic, and crisis intake
+  through `MAJ-S18`, `SUP-060`, `S26`, and primary/reference families
+  `P12`–`P17`
 
 This audit applies the project's book-first standard to the existing design
 bibliography. It does not certify that a source supports a particular claim.
@@ -32,7 +34,11 @@ are maintained in [`BIBLIOGRAPHY.md`](BIBLIOGRAPHY.md).
 | S16 / MAJ-S9 | **Approved major labor history; acquired locally.** | Ladjevardi's university-press monograph is a specialist foundation for unions and state–labor relations. Compare it with later labor scholarship and organization-level primary records. |
 | S17 / MAJ-S10 | **Approved major Persian oil history; volume II acquired.** | Movahed's legal and historical expertise makes the work important for oil law and negotiations. Only volume II is local, and its interpretations still require comparison. |
 | S18 / MAJ-S12 | **Approved major oil-history monograph; acquired locally.** | Elm's training as an economist and experience as an Iranian diplomat make the book a valuable Iranian account of negotiations and economic pressure. Compare its political and causal judgments with later scholarship and primary records. |
+| S19 / MAJ-S15 | **Approved major history of Iranian communism; initial parliamentary review completed.** | Zabih's university-press study and Persian/Soviet evidence support Tudeh institutional and electoral context, with Cold War framing checked against Abrahamian, Ladjevardi, Chaqueri, and later scholarship. |
 | S20 / SUP-011 | **Approved documentary collection; partial corpus acquired.** | Chaqueri's editorial work gives access to dispersed records of the Iranian left. Cite individual documents as situated primary evidence. The local 2025 typesettings require checking against facsimiles because their editors acknowledge textual normalization. |
+| S21 / MAJ-S13 | **Approved constitutional synthesis; acquired, substantive review pending.** | Azimi's book-length history is appropriate for institutional and democratic context, but the present substitution audit does not replace a chapter-level review or the missing Senate proceedings. |
+| S22 / MAJ-S14 | **Approved and reviewed recent oil-crisis synthesis.** | Painter and Brew's university-press study is cited by chapter and section throughout the historical primer. Its international-relations focus remains paired with Iranian parliamentary and social evidence. |
+| E10–E12 / MAJ-S16–MAJ-S18 | **Approved book-length economic foundations; acquired, systematic extraction pending.** | Katouzian, Bharier, and Brew provide complementary political-economy, long-run quantitative, and oil/development interpretations. Their current role is triangulation and source mapping, not authorization for unverified exact mechanics. |
 
 All of S1–S7 are now present in the local archive and have passed edition,
 page-count, searchability, and checksum intake. Acquisition does not clear a
@@ -66,8 +72,11 @@ The local formats affect locator practice:
 | S11 / SUP-013 | **Approved focused source; accepted manuscript acquired.** | Siavush Randjbar-Daemi is a modern-Iran historian whose research uses Persian political and party materials. Appropriate for the Tudeh peasant question, with exact manuscript pages and version identification. |
 | S12 / SUP-014 | **Approved focused source with a narrow remit; acquired.** | Nukii's specialist bazaar research supports bazaar organization and mobilization. Do not use it as the sole book-length political narrative. |
 | S13 / SUP-015 | **Approved focused source; acquired.** | Firoozeh Kashani-Sabet is an established historian of modern Iran. The article is appropriate for women's organization and suffrage during nationalization; follow its notes into Persian publications and cite exact pages. |
+| S23 / SUP-048 | **Approved only as a near-contemporary historiographic supplement; acquired, review pending.** | Efimenco's 1955 framing predates later archival access and must not displace Azimi or later constitutional scholarship. |
+| S26 / SUP-060 | **Approved focused source; acquired and evidence-mapped.** | Randjbar-Daemi's peer-reviewed reconstruction uses Persian sources and contemporaneous BBC/FBIS monitoring. It is strong for Radio Tehran timing and communications control, not casualty, payment, or general coup attribution. |
+| S25 chapter / SUP-056 | **Approved as an author-posted chapter version, with print comparison pending.** | The chapter is useful scholarly analysis of the Sixteenth Majles and nationalization; official commission minutes and chamber records remain controlling for recorded proceedings. |
 
-The present opening uses Azimi's S1/MAJ-S1, pp. 207–08, as its book-length
+The playable opening uses Azimi's S1/MAJ-S1, pp. 207–08, as its book-length
 foundation and the separate Nukii article archived as
 [`SUP-001`](AVAILABLE_SOURCES.md#sup-001), p. 10, as specialist
 corroboration. The project still withholds a precise date and participant count
@@ -81,6 +90,13 @@ pending contemporary Iranian evidence.
 | P2 / SUP-016, P3 / SUP-017, P4 / SUP-018, P6 / SUP-020, P7 / SUP-021, P8 / SUP-022 | **Approved primary/institutional collections; acquired.** | Cite the individual document, meeting, judgment, file, date, sender, and recipient as applicable. These sources are authoritative evidence of what their institutions recorded, argued, or did—not neutral accounts of Iranian motives. |
 | P5 / SUP-019 / SUP-026 | **Approved institutional collection; partial corpus acquired and exact remainder queued.** | `SUP-019` is a finding aid, not claim evidence. `SUP-026` supplies folder `1806440`, the Bank's published negotiation review, annual summary, participant oral histories, and access decisions. Cite individual records and preserve institutional interest; the unavailable meeting, proposal, and correspondence folders cannot be replaced by the inventory or oral histories. |
 | IR-P6 / SUP-025 | **Approved interested primary editions; complete target set acquired.** | Bozorgmehr's direct role as defense counsel makes the first-instance, appeal, and cassation editions central to the recorded defense and procedure, but assertions and later editorial commentary require comparison. Cite the exact proceeding, document, and printed page. |
+| P12 / SUP-049 | **Approved interested contemporary government record; acquired and evidence-mapped.** | The British memorandum is detailed and near-contemporary, but its author and informants are unidentified and Britain participated in the operation. Attribute every claim and compare it with Iranian, U.S., and scholarly evidence. |
+| P14 / SUP-051–SUP-053 | **Approved official retrospective rosters; acquired and used.** | Controlling for returned membership and biographical metadata within their scope. A roster does not establish an individual's ideology, attendance, or vote. |
+| P16 / SUP-059 | **Approved official Oil Commission record; acquired, claim-level extraction pending.** | Controlling for recorded attendance, motions, interventions, reports, and decisions inside the commission; not a chamber-wide alignment register. |
+| P17 / SUP-054 | **Approved archival context file; acquired, claim use pending.** | A distinct British India Office series for 1947–49. It must not be substituted for `FO 371/75466` merely because dates and subject overlap. |
+| E18 / SUP-055 | **Approved official field report; acquired, systematic extraction pending.** | Strong pre-nationalization oil-labor baseline, limited by its 1950 date and partial reliance on AIOC-supplied material. |
+| E16–E17 / SUP-057–SUP-058 | **Approved contemporary institutional data bundles; acquired and observation-mapped.** | Preserve report vintages, transmitted Iranian sources, definitions, and revisions. They are practical proxies, not the missing original Bank Melli, Customs, or Treasury publications. |
+| SUP-050 | **Approved comparative constitutional reference.** | Authoritative for modern UK constitutional convention only. It supports careful Westminster comparison and is not evidence of Iranian constitutional practice. |
 | P9 | **Approved document portal and editorial aid.** | Distinguish National Security Archive commentary from the attached declassified documents. |
 | P10 | **Approved finding aid.** | Use the Truman Library entry to locate and cite the underlying document. |
 | P11 | **Approved official historical orientation.** | Follow the essay to British files and cite those files for implemented events. |
@@ -106,7 +122,9 @@ official proceedings, Persian memoirs, party collections, and newspaper runs.
 Iranica entries on oil agreements, the 1953 coup, Kashani, and the Tudeh Party
 were then used only to cross-check and extend those leads. This produced the
 exact scholarly acquisition queue `S14`–`S23` and the official-record leads
-`IR-P1`–`IR-P6` in `UNAVAILABLE_SOURCES.md`.
+`IR-P1`–`IR-P6`. Resolved items now live only in
+`AVAILABLE_SOURCES.md`; active residual gaps remain in
+`UNAVAILABLE_SOURCES.md`.
 
 Iran Archive and Mashruteh were evaluated as discovery repositories, not
 authorities. Four identified Persian books or documentary editions were
@@ -165,10 +183,12 @@ positions and scholarship. Seven complete *Shahed* issue PDFs for 20, 22, and
 render and the first-page mastheads and dates were visually checked. *Shahed*
 for the 1949 opening and Thirty Tir, other opposing 28 Mordad issues,
 religious-right press, *Shurish*, and *Tihran-i Musavvar* remain priorities.
-Institutional digital, microfilm, and ILL routes are recorded under `IR-P5` in
-`UNAVAILABLE_SOURCES.md`.
+Institutional digital, microfilm, and ILL routes are recorded in
+[`NEWSPAPER_SOURCE_ACQUISITION.md`](NEWSPAPER_SOURCE_ACQUISITION.md).
 
 `IR-P4` remains unavailable locally, but is no longer a merely physical lead.
+The maintained session and carrier map is
+[`FIRST_SENATE_SOURCE_ACQUISITION.md`](FIRST_SENATE_SOURCE_ACQUISITION.md).
 The Shahr-e Danesh Institute for Law Research and Study (SDIL) public catalog,
 database 13, exposes individual First-Senate records whose “complete work”
 links resolve to digitized files. Exact records were confirmed for the oil-law
@@ -254,8 +274,9 @@ supplemental bibliographic and historiographic lead only.
 The user subsequently supplied complete JSTOR copies of all three targets.
 They are now archived as [`MAJ-S13`](AVAILABLE_SOURCES.md#maj-s13),
 [`MAJ-S14`](AVAILABLE_SOURCES.md#maj-s14), and
-[`SUP-048`](AVAILABLE_SOURCES.md#sup-048). This resolves acquisition only:
-none has yet been promoted to reviewed or claim-level evidence.
+[`SUP-048`](AVAILABLE_SOURCES.md#sup-048). `MAJ-S14` was subsequently reviewed
+and cited by chapter/section throughout the historical primer. `MAJ-S13` and
+`SUP-048` remain acquired but not substantively reviewed.
 
 ### User-supplied scholarly and FRUS intake
 
@@ -353,11 +374,17 @@ reproducing Bank Melli series were acquired as `SUP-040`–`SUP-047`. These are
 contemporary or near-contemporary cross-checks, not replacements for the
 underlying Iranian records. Exact LOC and Japanese holding paths now exist for
 the Bank Melli bulletin, annual Customs statistics, and monthly foreign-trade
-statistics. The direct S9 challenge by Majd and the principal book-length
-economic interpretations are separately queued.
+statistics. Subsequent intake added the official ILO oil-labor report
+`SUP-055`, selected contemporary IMF IFS vintages `SUP-057`, three UN regional
+survey vintages `SUP-058`, and the book-length interpretations `MAJ-S16`–
+`MAJ-S18`. Majd's direct S9 challenge remains desirable but is no longer a
+general blocker; account-level and local-welfare claims still require the
+missing originals or explicit uncertainty.
 
 ## Registry synchronization rules
 
+- `docs/research/README.md` defines the authority boundary and update order for
+  the current research records.
 - `docs/GAME_DESIGN.md` remains the broad discovery inventory and preserves the
   original `P`, `S`, and `R` identifiers.
 - `docs/research/BIBLIOGRAPHY.md` is the authority registry. It records sources
@@ -366,9 +393,9 @@ economic interpretations are separately queued.
 - `docs/research/AVAILABLE_SOURCES.md` is the inventory of files actually held
   under the ignored `docs/research/sources/` archive, with archive IDs,
   checksums, access status, and project uses.
-- `docs/research/UNAVAILABLE_SOURCES.md` is the acquisition queue. Inclusion
-  there signals that a source is promising and respected, not that its contents
-  have been verified.
+- `docs/research/UNAVAILABLE_SOURCES.md` is the active residual-gap queue.
+  Resolved acquisitions are removed rather than retained as a second history;
+  inclusion signals potential value, not that contents have been verified.
 - An event or historical mechanic is release-ready only when its own research
   metadata points to an accessible source and precise locator.
 - Edited volumes are recorded at chapter level when used. Reference entries,
@@ -377,9 +404,10 @@ economic interpretations are separately queued.
 
 ## Gaps exposed by the audit
 
-1. S2, S3, and MAJ-S12 still need publisher-layout or print-equivalent copies
-   when a claim specifically requires printed-page rather than EPUB section
-   locators.
+1. S2, S3, MAJ-S12, and MAJ-S14 use source EPUB structure. A
+   publisher-layout or print-equivalent copy is needed only when a claim
+   specifically requires printed-page rather than stable chapter/section or
+   embedded source-page locators.
 2. The bibliography remains weighted toward English-language scholarship and
    Western institutional archives. Persian primary editions, a partial
    Chaqueri corpus, and volume II of Movahed's major Persian oil history are now
@@ -392,19 +420,20 @@ economic interpretations are separately queued.
    target court-record set is now local. Newspaper holdings are now broad but
    still uneven: *Shahed* outside the acquired coup window, opposing
    coup-period titles, and further full 28 Mordad issues remain major gaps.
-   Economic official records also remain a major gap, although `SUP-040`–
-   `SUP-047` now provide official international cross-checks and the 1332
-   legal budget. Seven complete coup-week *Shahed* PDFs are now local;
+   Economic originals remain a precision gap, although `SUP-040`–`SUP-047`,
+   `SUP-055`, and `SUP-057`–`SUP-058` provide official international
+   cross-checks, selected contemporary vintages, the 1332 legal budget, and an
+   oil-labor baseline. Seven complete coup-week *Shahed* PDFs are now local;
    Princeton's five-reel 1946–53 run remains the strongest route for the 1949,
    Thirty Tir, and wider missing dates. Exact reproduction paths are recorded
    for Bank Melli and Customs serials.
 4. Most planned events in `docs/GAME_DESIGN.md` have discovery citations but
    not adjacent claim-level records or precise locators.
-5. All six focused articles are available, but they still require
-   claim-specific reading before numerical or causal arguments are translated
-   into content. S9's method and evidence trail have been mapped, but its
-   estimates remain unapproved pending dataset comparison with Iranian records
-   and later scholarship. No economic gameplay model has been selected.
+5. The original six focused articles and the later Radio Tehran study are
+   available. S9's method and evidence trail and S26's broadcast chronology
+   have been mapped; other numerical or causal uses still require
+   claim-specific reading and comparison. No economic gameplay model has been
+   selected.
 6. P5 is partially resolved: folder `1806440` and the Bank's published
    negotiation review are local, while the principal meeting, proposal,
    calculation, mission, and correspondence folders remain identified but

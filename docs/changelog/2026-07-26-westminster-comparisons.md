@@ -1,5 +1,8 @@
 # Westminster comparisons in the constitutional primer
 
+- **Date:** 2026-07-26
+- **Status:** Implemented
+
 ## Summary
 
 Recalibrated *The Last Majles* for a politically literate reader who may be new

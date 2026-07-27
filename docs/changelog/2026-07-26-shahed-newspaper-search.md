@@ -1,5 +1,8 @@
 # *Shahed* newspaper search and coup-window intake
 
+- **Date:** 2026-07-26
+- **Status:** Implemented
+
 ## Summary
 
 - Located complete PDF attachments for Baghai's *Shahed* dated 20, 22, and

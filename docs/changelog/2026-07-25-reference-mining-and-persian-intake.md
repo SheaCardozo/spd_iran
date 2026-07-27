@@ -1,5 +1,8 @@
 # Reference mining and Persian-source intake
 
+- **Date:** 2026-07-25
+- **Status:** Implemented
+
 ## Summary
 
 - Mined the reference sections of all seven acquired major sources for

@@ -72,3 +72,4 @@ bibliography entry, or asset-rights record.
 - [Unavailable-source queue reconciliation](2026-07-26-unavailable-source-reconciliation.md)
 - [Economic monograph intake](2026-07-26-economic-book-intake.md)
 - [Online substitutes for inaccessible priority sources](2026-07-26-online-source-substitution-audit.md)
+- [Documentation and source-registry reconciliation](2026-07-26-documentation-registry-reconciliation.md)

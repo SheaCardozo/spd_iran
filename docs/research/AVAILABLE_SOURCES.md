@@ -30,17 +30,17 @@ file verification only; an implemented claim still requires a checked locator.
 | <a id="maj-s1"></a>`MAJ-S1` | [`S1`](BIBLIOGRAPHY.md#s1) | Fakhreddin Azimi, *Iran: The Crisis of Democracy, 1941–1953* (St. Martin's Press, 1989). [PDF](sources/major/MAJ-S1-azimi-1989-crisis-of-democracy.pdf) · [metadata](sources/major/MAJ-S1-azimi-1989-crisis-of-democracy.md) | 456-page OCR scan; stable print pages. SHA-256 `997e891eb44601419d07f6ed4ff4fc4fc5be922b328088a41465801b146e1df6` | **Cited; local-only.** Used for the October 1949 opening, Sixteenth-Majles opposition at pp. 265–67, and Seventeenth-Majles factionalization at pp. 318–20. |
 | <a id="maj-s2"></a>`MAJ-S2` | [`S2`](BIBLIOGRAPHY.md#s2) | Ervand Abrahamian, *Iran Between Two Revolutions* (Princeton UP, 1982; electronic release 2021). [EPUB](sources/major/MAJ-S2-abrahamian-1982-iran-between-two-revolutions.epub) · [converted PDF](sources/major/MAJ-S2-abrahamian-1982-iran-between-two-revolutions.pdf) · [metadata](sources/major/MAJ-S2-abrahamian-1982-iran-between-two-revolutions.md) | Valid 49-member EPUB, SHA-256 `236dc3987a77eda82d175aecb36430105665638a617aa3b23cf0fc510dc2c15e`; 859-page generated PDF, SHA-256 `0c640c960a90102d0f79296888dc0e2a657eb8adbcdfc9d1bcd350104700bcd6`. The EPUB embeds source-page anchors used by the cited `pp.` locators; generated-PDF page numbers are not locators. | **Cited; source EPUB and reading derivative local-only.** Used for party biographies and the Sixteenth/Seventeenth composition baselines. |
 | <a id="maj-s3"></a>`MAJ-S3` | [`S3`](BIBLIOGRAPHY.md#s3) | Ervand Abrahamian, *Oil Crisis in Iran* (Cambridge UP, 2021). [EPUB](sources/major/MAJ-S3-abrahamian-2021-oil-crisis-in-iran.epub) · [converted PDF](sources/major/MAJ-S3-abrahamian-2021-oil-crisis-in-iran.pdf) · [metadata](sources/major/MAJ-S3-abrahamian-2021-oil-crisis-in-iran.md) | Valid 54-member EPUB, SHA-256 `921fff22e385cbff033eddc4779504289f317bd5fcc2fff843de44b11d801c57`; 365-page generated PDF, SHA-256 `3ed248c0fbfb277416d0a29c4e431b669bfd6a6571167a331efb013301c4aa88`. The EPUB embeds source-page anchors used by the cited `pp.` locators; generated-PDF page numbers are not locators. | **Cited; source EPUB and reading derivative local-only.** Used for Senate profiles and Seventeenth-Majles caucus and quorum reconstruction. |
-| <a id="maj-s4"></a>`MAJ-S4` | [`S4`](BIBLIOGRAPHY.md#s4) | Mark J. Gasiorowski and Malcolm Byrne, eds., *Mohammad Mosaddeq and the 1953 Coup in Iran* (Syracuse UP, 2004). [PDF](sources/major/MAJ-S4-gasiorowski-byrne-2004-mosaddeq-coup.pdf) · [metadata](sources/major/MAJ-S4-gasiorowski-byrne-2004-mosaddeq-coup.md) | 392-page OCR scan; stable print pages. SHA-256 `587674e69691c0492604f13af9a2da6d176166348863423c9bf5fe611c72e1ba` | **Acquired; local-only.** Cite individual chapter authors. |
+| <a id="maj-s4"></a>`MAJ-S4` | [`S4`](BIBLIOGRAPHY.md#s4) | Mark J. Gasiorowski and Malcolm Byrne, eds., *Mohammad Mosaddeq and the 1953 Coup in Iran* (Syracuse UP, 2004). [PDF](sources/major/MAJ-S4-gasiorowski-byrne-2004-mosaddeq-coup.pdf) · [metadata](sources/major/MAJ-S4-gasiorowski-byrne-2004-mosaddeq-coup.md) | 392-page OCR scan; stable print pages. SHA-256 `587674e69691c0492604f13af9a2da6d176166348863423c9bf5fe611c72e1ba` | **Cited; local-only.** Used for the Behrooz Tudeh chapter, pp. 102–25, and Gasiorowski coup chapter, pp. 227–80; cite individual chapter authors. |
 | <a id="maj-s5"></a>`MAJ-S5` | [`S5`](BIBLIOGRAPHY.md#s5) | Ali Rahnema, *Behind the 1953 Coup in Iran* (Cambridge UP, 2015). [PDF](sources/major/MAJ-S5-rahnema-2015-behind-1953-coup.pdf) · [metadata](sources/major/MAJ-S5-rahnema-2015-behind-1953-coup.md) | 348-page searchable publisher-layout PDF. SHA-256 `1f728dd622fdbafcedc761e5a5e46f24d5f4638fef811d9c53475b9e1dced649` | **Cited; local-only.** Used for the October 1951 Senate delegation at p. 258 and the August 1953 crisis sequence. |
-| <a id="maj-s6"></a>`MAJ-S6` | [`S6`](BIBLIOGRAPHY.md#s6) | Homa Katouzian, *Musaddiq and the Struggle for Power in Iran* (revised paperback 1999; 2009 reprint). [Original scan](sources/major/MAJ-S6-katouzian-1999-musaddiq-struggle-power.pdf) · [searchable OCR derivative](sources/major/MAJ-S6-katouzian-1999-musaddiq-struggle-power-ocr.pdf) · [metadata](sources/major/MAJ-S6-katouzian-1999-musaddiq-struggle-power.md) | 326 stable-page images. Original SHA-256 `e3fc4f9a205298b7587dd6f12ee7abf770dbb32b8575d68826a655490d67dd33`; OCRmyPDF/Tesseract `eng+lat` derivative SHA-256 `5ae1b3e45f03113bfa89a03e49a43d5bdd2c2d4064ab05651ce9284de32ebcb5`. | **Acquired; searchable local derivative available.** |
-| <a id="maj-s7"></a>`MAJ-S7` | [`S7`](BIBLIOGRAPHY.md#s7) | Darioush Bayandor, *Iran and the CIA* (Palgrave Macmillan, 2010). [PDF](sources/major/MAJ-S7-bayandor-2010-iran-cia.pdf) · [metadata](sources/major/MAJ-S7-bayandor-2010-iran-cia.md) | 266-page searchable publisher-layout PDF. SHA-256 `446e3060036ed7fe947a8fdc467532e6e1ad8cfbb75bf3485cfcd00265ee8cef` | **Acquired; local-only; interpretive counterpoint.** |
+| <a id="maj-s6"></a>`MAJ-S6` | [`S6`](BIBLIOGRAPHY.md#s6) | Homa Katouzian, *Musaddiq and the Struggle for Power in Iran* (revised paperback 1999; 2009 reprint). [Original scan](sources/major/MAJ-S6-katouzian-1999-musaddiq-struggle-power.pdf) · [searchable OCR derivative](sources/major/MAJ-S6-katouzian-1999-musaddiq-struggle-power-ocr.pdf) · [metadata](sources/major/MAJ-S6-katouzian-1999-musaddiq-struggle-power.md) | 326 stable-page images. Original SHA-256 `e3fc4f9a205298b7587dd6f12ee7abf770dbb32b8575d68826a655490d67dd33`; OCRmyPDF/Tesseract `eng+lat` derivative SHA-256 `5ae1b3e45f03113bfa89a03e49a43d5bdd2c2d4064ab05651ce9284de32ebcb5`. | **Cited in the historical primer; original and searchable derivative local-only.** Used by the revised preface and chapters 8–9 and 11–12. |
+| <a id="maj-s7"></a>`MAJ-S7` | [`S7`](BIBLIOGRAPHY.md#s7) | Darioush Bayandor, *Iran and the CIA* (Palgrave Macmillan, 2010). [PDF](sources/major/MAJ-S7-bayandor-2010-iran-cia.pdf) · [metadata](sources/major/MAJ-S7-bayandor-2010-iran-cia.md) | 266-page searchable publisher-layout PDF. SHA-256 `446e3060036ed7fe947a8fdc467532e6e1ad8cfbb75bf3485cfcd00265ee8cef` | **Cited as an interpretive counterpoint; local-only.** The primer uses chapters 7–9 alongside operational records and other scholarship. |
 | <a id="maj-s8"></a>`MAJ-S8` | [`S15`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Richard W. Cottam, *Nationalism in Iran*, updated ed. (University of Pittsburgh Press, 1979). [Canonical updated PDF](sources/major/MAJ-S8-cottam-1979-nationalism-in-iran-updated.pdf) · [metadata](sources/major/MAJ-S8-cottam-1979-nationalism-in-iran-updated.md) · [retained 1964 first edition](sources/major/MAJ-S8-cottam-1964-nationalism-in-iran-first-edition.pdf) | Canonical 388-page updated-edition scan with OCR, SHA-256 `3af3ab6b8a9eb5315c19bbe33b4a1ab3ae72edc6c62d7e09c7bd036dfcf4a61d`; retained 352-page first-edition SHA-256 `1bdc0a091bde52b83dd489803c7df79099df8ddacee00cc7438751115d451c15`. | **Acquired preferred edition; local-only.** |
-| <a id="maj-s9"></a>`MAJ-S9` | [`S16`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Habib Ladjevardi, *Labor Unions and Autocracy in Iran* (Syracuse UP, 1985). [Original scan](sources/major/MAJ-S9-ladjevardi-1985-labor-unions-autocracy.pdf) · [OCR derivative](sources/major/MAJ-S9-ladjevardi-1985-labor-unions-autocracy-ocr.pdf) · [metadata](sources/major/MAJ-S9-ladjevardi-1985-labor-unions-autocracy.md) | Complete two-page-spread scan: 175 PDF images, with stable printed pagination through p. 324. Original SHA-256 `212abcfca908943564346bbfe924cfec537fd7a61ab6144d04aa5518d0a54d06`; English OCR derivative SHA-256 `24496fb1b1ad379616eb85c84fdea049a6be7b932f55a00f9f3fe7504b1178cb`. | **Acquired; searchable local derivative available.** |
+| <a id="maj-s9"></a>`MAJ-S9` | [`S16`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Habib Ladjevardi, *Labor Unions and Autocracy in Iran* (Syracuse UP, 1985). [Original scan](sources/major/MAJ-S9-ladjevardi-1985-labor-unions-autocracy.pdf) · [OCR derivative](sources/major/MAJ-S9-ladjevardi-1985-labor-unions-autocracy-ocr.pdf) · [metadata](sources/major/MAJ-S9-ladjevardi-1985-labor-unions-autocracy.md) | Complete two-page-spread scan: 175 PDF images, with stable printed pagination through p. 324. Original SHA-256 `212abcfca908943564346bbfe924cfec537fd7a61ab6144d04aa5518d0a54d06`; English OCR derivative SHA-256 `24496fb1b1ad379616eb85c84fdea049a6be7b932f55a00f9f3fe7504b1178cb`. | **Cited; original and searchable derivative local-only.** Used for labor/Abadan chapters 3–4 and the pre-shutdown strike at printed pp. 188–92. |
 | <a id="maj-s10"></a>`MAJ-S10` | [`S17`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Mohammad Ali Movahed, *Khab-e Ashofteh-ye Naft*, vol. II, revised second ed. (Karnameh, winter 1384 SH / 2005–06). [PDF](sources/major/MAJ-S10-movahed-1384-khab-e-ashofteh-naft-vol-2.pdf) · [metadata](sources/major/MAJ-S10-movahed-1384-khab-e-ashofteh-naft-vol-2.md) | 584 stable-page scans with a flawed Persian OCR layer. SHA-256 `114325b746d2f8be415920be417458584983dcec8bdb6b6748a35abdd845820c` | **Acquired volume II; local-only.** Volume I remains wanted. |
 | <a id="maj-s11"></a>`MAJ-S11` | [`S14`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | James A. Bill and Wm. Roger Louis, eds., *Musaddiq, Iranian Nationalism, and Oil* (University of Texas Press, 1988). [PDF](sources/major/MAJ-S11-bill-louis-1988-musaddiq-nationalism-oil.pdf) · [metadata](sources/major/MAJ-S11-bill-louis-1988-musaddiq-nationalism-oil.md) | 376-page stable-layout Internet Archive scan with OCR. SHA-256 `13303caafcda31f3ed1f4462a124dfdbe5214d92529cb74dd7cc419821704979`. | **Acquired; local-only. Cite individual chapter authors.** |
-| <a id="maj-s12"></a>`MAJ-S12` | [`S18`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Mostafa Elm, *Oil, Power, and Principle: Iran's Oil Nationalization and Its Aftermath* (Syracuse UP, 1992). [EPUB](sources/major/MAJ-S12-elm-1992-oil-power-principle.epub) · [metadata](sources/major/MAJ-S12-elm-1992-oil-power-principle.md) | Valid 37-member EPUB with complete chapters, notes, and index. SHA-256 `b8c3046b231c5c864db86a283881cc9d36a59f3ccd39f033be7c4a9ef9727b55`. Reflowable sections are stable; print pages are not. | **Acquired; source EPUB local-only.** |
+| <a id="maj-s12"></a>`MAJ-S12` | [`S18`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Mostafa Elm, *Oil, Power, and Principle: Iran's Oil Nationalization and Its Aftermath* (Syracuse UP, 1992). [EPUB](sources/major/MAJ-S12-elm-1992-oil-power-principle.epub) · [metadata](sources/major/MAJ-S12-elm-1992-oil-power-principle.md) | Valid 37-member EPUB with complete chapters, notes, and index. SHA-256 `b8c3046b231c5c864db86a283881cc9d36a59f3ccd39f033be7c4a9ef9727b55`. Reflowable sections are stable; print pages are not. | **Cited in the historical primer; source EPUB local-only.** Used by named nationalization and negotiation chapters. |
 | <a id="maj-s13"></a>`MAJ-S13` | [`S21`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Fakhreddin Azimi, *The Quest for Democracy in Iran* (Harvard UP, 2008). [PDF](sources/major/MAJ-S13-azimi-2008-quest-for-democracy.pdf) · [metadata](sources/major/MAJ-S13-azimi-2008-quest-for-democracy.md) | 508-page JSTOR PDF. SHA-256 `3acd9dc720662b1f79e82aee0a100c2b6543b151f0b5ff0bac07e1c0b8d95ddd`. | **Acquired; local-only; review pending.** |
-| <a id="maj-s14"></a>`MAJ-S14` | [`S22`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | David S. Painter and Gregory Brew, *The Struggle for Iran* (UNC Press, 2023). [EPUB](sources/major/MAJ-S14-painter-brew-2023-struggle-for-iran.epub) · [metadata](sources/major/MAJ-S14-painter-brew-2023-struggle-for-iran.md) | Valid reflowable JSTOR EPUB. SHA-256 `73b9f43999db6a450363d27ddad4c5439150dbd542899dab2c41cfaf161c6cba`. | **Acquired; local-only; review pending.** |
+| <a id="maj-s14"></a>`MAJ-S14` | [`S22`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | David S. Painter and Gregory Brew, *The Struggle for Iran* (UNC Press, 2023). [EPUB](sources/major/MAJ-S14-painter-brew-2023-struggle-for-iran.epub) · [metadata](sources/major/MAJ-S14-painter-brew-2023-struggle-for-iran.md) | Valid reflowable JSTOR EPUB. SHA-256 `73b9f43999db6a450363d27ddad4c5439150dbd542899dab2c41cfaf161c6cba`. | **Reviewed and cited in the historical primer; source EPUB local-only.** Use chapter/section locators. |
 | <a id="maj-s15"></a>`MAJ-S15` | [`S19`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Sepehr Zabih, *The Communist Movement in Iran* (University of California Press, 1966). [PDF](sources/major/MAJ-S15-zabih-1966-communist-movement-iran.pdf) · [metadata](sources/major/MAJ-S15-zabih-1966-communist-movement-iran.md) | Complete 305-page Internet Archive scan with searchable text, bibliography, and index. SHA-256 `fb1835fbd7a3ff291f8c1204187db9e73514132f68a656c5908736be32be7d5e`. | **Acquired; initial Sixteenth-Majles review completed; local-only.** |
 | <a id="maj-s16"></a>`MAJ-S16` | [`E10`](BIBLIOGRAPHY.md#economic-history-source-families) | Homa Katouzian, *The Political Economy of Modern Iran: Despotism and Pseudo-Modernism, 1926–1979* (Macmillan, 1981). [PDF](sources/major/MAJ-S16-katouzian-1981-political-economy-modern-iran.pdf) · [metadata](sources/major/MAJ-S16-katouzian-1981-political-economy-modern-iran.md) | Complete 408-page first-edition Internet Archive scan with searchable text and stable print pagination. SHA-256 `c5f9af1a51e9e46fd83a096ec5b1045457ff249cc5948b67facdca8aa4f7a4fb`. | **Acquired; local-only; economic review pending.** |
 | <a id="maj-s17"></a>`MAJ-S17` | [`E11`](BIBLIOGRAPHY.md#economic-history-source-families) | Julian Bharier, *Economic Development in Iran, 1900–1970* (Oxford University Press, 1971). [PDF](sources/major/MAJ-S17-bharier-1971-economic-development-iran.pdf) · [metadata](sources/major/MAJ-S17-bharier-1971-economic-development-iran.md) | Complete 344-page Internet Archive scan with searchable text, tables, bibliography through printed p. 303, index, and stable print pagination. SHA-256 `6bae08bc32b743ce17191da36c3648b493c033d092b20c9c1423df93b419eda0`. | **Acquired; local-only; economic review pending.** |
@@ -586,6 +586,9 @@ collections being assigned concurrently.
   post-coup period. Audit its tables to contemporaneous Iranian records.
 
 <a id="sup-042"></a>
+<a id="sup-043"></a>
+<a id="sup-044"></a>
+<a id="sup-045"></a>
 ### SUP-042–SUP-045 — IMF annual exchange-restriction reports, 1952–55
 
 - **Status:** Four official reports acquired; local-only.
@@ -633,10 +636,23 @@ collections being assigned concurrently.
   credit series beginning in 1952. Each table's underlying source and later
   report vintage must remain visible.
 
+<a id="sup-048"></a>
+### SUP-048 — Efimenco, “An Experiment with Civilian Dictatorship”
+
+- **Status:** Acquired; local-only; review pending.
+- **Bibliography:** [`S23`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining)
+- **Local source:** [PDF](sources/supplemental/SUP-048-efimenco-1955-civilian-dictatorship.pdf)
+- **Metadata:** [sidecar](sources/supplemental/SUP-048-efimenco-1955-civilian-dictatorship.md)
+- **Stable record:** <https://www.jstor.org/stable/2127013>
+- **SHA-256:** `5d8a748725f5282f0bf98b63cbd776d067b5e66b9f573b62e55ddca4d2cc0193`
+- **Role:** Historiographic and bibliographic lead only; compare its dated
+  constitutional framing with Azimi and later scholarship.
+
 <a id="sup-049"></a>
 ### SUP-049 — British memorandum, “Persia: Political Review of the Recent Crisis”
 
-- **Status:** Acquired declassified government record; local-only.
+- **Status:** Acquired, reviewed, and evidence-mapped declassified government
+  record; local-only.
 - **Bibliography:** [`P12` trust record](BIBLIOGRAPHY.md#reviewed-primary-and-reference-families).
 - **Local source:** [unexpurgated PDF](sources/supplemental/SUP-049-british-1953-09-02-political-review-unexpurgated.pdf)
   · [metadata](sources/supplemental/SUP-049-british-1953-09-02-political-review-unexpurgated.md).
@@ -652,7 +668,7 @@ collections being assigned concurrently.
 <a id="sup-050"></a>
 ### SUP-050 — UK Cabinet Office, *The Cabinet Manual*
 
-- **Status:** Acquired official comparative reference; local-only.
+- **Status:** Acquired and used official comparative reference; local-only.
 - **Bibliography:** [`P13` trust record](BIBLIOGRAPHY.md#reviewed-primary-and-reference-families).
 - **Local source:** [PDF](sources/supplemental/SUP-050-uk-cabinet-office-2011-cabinet-manual.pdf)
   · [metadata](sources/supplemental/SUP-050-uk-cabinet-office-2011-cabinet-manual.md).
@@ -667,7 +683,8 @@ collections being assigned concurrently.
 <a id="sup-051"></a>
 ### SUP-051 — Official Sixteenth-Majles membership roster
 
-- **Status:** Acquired official retrospective reference; local-only.
+- **Status:** Acquired, transcribed, and used official retrospective
+  reference; local-only.
 - **Bibliography:** [`P14` trust record](BIBLIOGRAPHY.md#p14).
 - **Local source:** [PDF](sources/supplemental/SUP-051-iranian-parliament-1977-sixteenth-majles-members.pdf)
   · [metadata](sources/supplemental/SUP-051-iranian-parliament-1977-sixteenth-majles-members.md).
@@ -687,7 +704,8 @@ collections being assigned concurrently.
 <a id="sup-052"></a>
 ### SUP-052 — Official Seventeenth-Majles membership roster
 
-- **Status:** Acquired official retrospective reference; local-only.
+- **Status:** Acquired, reconciled, and used official retrospective reference;
+  local-only.
 - **Bibliography:** [`P14` trust record](BIBLIOGRAPHY.md#p14).
 - **Local source:** [PDF](sources/supplemental/SUP-052-iranian-parliament-1977-seventeenth-majles-members.pdf)
   · [metadata](sources/supplemental/SUP-052-iranian-parliament-1977-seventeenth-majles-members.md).
@@ -706,7 +724,8 @@ collections being assigned concurrently.
 <a id="sup-053"></a>
 ### SUP-053 — Official First-Senate membership roster
 
-- **Status:** Acquired official retrospective reference; local-only.
+- **Status:** Acquired, reconciled, and used official retrospective reference;
+  local-only.
 - **Bibliography:** [`P14` trust record](BIBLIOGRAPHY.md#p14).
 - **Local source:** [PDF](sources/supplemental/SUP-053-iranian-parliament-1977-first-senate-members.pdf)
   · [metadata](sources/supplemental/SUP-053-iranian-parliament-1977-first-senate-members.md).
@@ -782,7 +801,8 @@ collections being assigned concurrently.
 <a id="sup-057"></a>
 ### SUP-057 — IMF, *International Financial Statistics*, selected 1950–54 vintages
 
-- **Status:** Four complete contemporary issues acquired; local-only.
+- **Status:** Four complete contemporary issues acquired and
+  observation-mapped; local-only.
 - **Bibliography:** [`E16` trust record](BIBLIOGRAPHY.md#economic-history-source-families).
 - **Local collection:** [coverage, provenance, locators, and
   checksums](sources/supplemental/SUP-057-imf-ifs-selected-1950-1954/README.md).
@@ -801,7 +821,8 @@ collections being assigned concurrently.
 <a id="sup-058"></a>
 ### SUP-058 — UN Middle East economic surveys, 1949/50–1951/52
 
-- **Status:** Three complete official surveys acquired; local-only.
+- **Status:** Three complete official surveys acquired and observation-mapped;
+  local-only.
 - **Bibliography:** [`E17` trust record](BIBLIOGRAPHY.md#economic-history-source-families).
 - **Local collection:** [editions, provenance, limitations, and
   checksums](sources/supplemental/SUP-058-un-middle-east-economic-surveys-1950-1952/README.md).
@@ -848,7 +869,8 @@ collections being assigned concurrently.
 <a id="sup-060"></a>
 ### SUP-060 — Randjbar-Daemi, “Radio Tehran and the 19 August 1953 Coup”
 
-- **Status:** Acquired open-access publisher full text; local-only.
+- **Status:** Acquired, reviewed, and cited open-access publisher full text;
+  local-only.
 - **Bibliography:** [`S26`](BIBLIOGRAPHY.md#reviewed-focused-scholarship).
 - **Local source:** [HTML](sources/supplemental/SUP-060-randjbar-daemi-2024-radio-tehran-coup.html)
   · [metadata](sources/supplemental/SUP-060-randjbar-daemi-2024-radio-tehran-coup.md).
@@ -866,20 +888,6 @@ collections being assigned concurrently.
   Strong for broadcast timing, named speakers, misinformation, and the spread
   of station capture; not a substitute for a general coup history, casualty
   ledger, or payment record.
-
-## Additional supplemental scholarship
-
-<a id="sup-048"></a>
-### SUP-048 — Efimenco, “An Experiment with Civilian Dictatorship”
-
-- **Status:** Acquired; local-only; review pending.
-- **Bibliography:** [`S23`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining)
-- **Local source:** [PDF](sources/supplemental/SUP-048-efimenco-1955-civilian-dictatorship.pdf)
-- **Metadata:** [sidecar](sources/supplemental/SUP-048-efimenco-1955-civilian-dictatorship.md)
-- **Stable record:** <https://www.jstor.org/stable/2127013>
-- **SHA-256:** `5d8a748725f5282f0bf98b63cbd776d067b5e66b9f573b62e55ddca4d2cc0193`
-- **Role:** Historiographic and bibliographic lead only; compare its dated
-  constitutional framing with Azimi and later scholarship.
 
 ## Intake checklist
 

@@ -1259,9 +1259,11 @@ Dates in the final content database must be verified event by event. The exact s
 
 ---
 
-## Appendix B. Research questions that must remain open until sourced
+## Appendix B. Research questions that must remain bounded until sourced
 
-1. What exact constituency-level evidence is available for the Sixteenth and Seventeenth Majles elections?
+1. Which remaining credential sessions, attendance records, and dated
+   member-alignment evidence can close the gaps left by the acquired
+   Sixteenth- and Seventeenth-Majles rosters and proceedings?
 2. What did each major oil proposal say, term by term, in its latest formal version?
 3. Which NIOC managers and Iranian technicians should be named, and what authority did they exercise at each date?
 4. What monthly fiscal, reserve, import, price, employment, and note-issue series can be responsibly reconstructed?

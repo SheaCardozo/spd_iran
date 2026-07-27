@@ -647,8 +647,8 @@ test('economic source-family registry is synchronized', () => {
   }
 
   const activeEconomicQueue = unavailable.slice(
-    unavailable.indexOf('## Economic-history acquisition queue'),
-    unavailable.indexOf('## Exact primary-record leads'),
+    unavailable.indexOf('## Economic records'),
+    unavailable.indexOf('## Remaining scholarship'),
   );
   for (const id of ['E10', 'E11', 'E12', 'E18']) {
     assert.doesNotMatch(
@@ -657,36 +657,25 @@ test('economic source-family registry is synchronized', () => {
       `acquired ${id} source must not remain an active economic target`,
     );
   }
-  assert.match(
-    unavailable,
-    /\| `E18` \| 2026-07-26 \|/,
-    'acquired ILO report should remain in the resolution history',
-  );
-  for (const id of ['E10', 'E11', 'E12']) {
-    assert.match(
-      unavailable,
-      new RegExp(`\\| \\\`${id}\\\` \\| 2026-07-26 \\|`),
-      `${id} should remain in the resolution history`,
-    );
-  }
 
-  const acquisitionOrder = unavailable.slice(
-    unavailable.indexOf('## Residual acquisition order'),
-    unavailable.indexOf('## Priority scholarly books'),
+  const residualDashboard = unavailable.slice(
+    unavailable.indexOf('## Residual evidence dashboard'),
+    unavailable.indexOf('## Parliament and elections'),
   );
   assert.ok(
-    acquisitionOrder.indexOf('| 1 | First-Senate official proceedings') <
-      acquisitionOrder.indexOf(
-        '| 2 | Sixteenth-Majles election and alignment evidence',
-      ),
-    'First Senate should precede Sixteenth-Majles alignment',
+    residualDashboard.indexOf('| First Senate |') <
+      residualDashboard.indexOf('| Sixteenth Majles |'),
+    'First Senate should precede Sixteenth-Majles evidence',
   );
   assert.ok(
-    acquisitionOrder.indexOf(
-      '| 2 | Sixteenth-Majles election and alignment evidence',
-    ) <
-      acquisitionOrder.indexOf('| 3 | Iranian economic record spine'),
-    'Sixteenth-Majles alignment should precede economic originals',
+    residualDashboard.indexOf('| Sixteenth Majles |') <
+      residualDashboard.indexOf('| Iranian economy |'),
+    'Sixteenth-Majles evidence should precede economic originals',
+  );
+  assert.doesNotMatch(
+    unavailable,
+    /## Resolved acquisitions/,
+    'resolved acquisitions belong only in the available catalog and changelog',
   );
 
   for (let id = 40; id <= 47; id += 1) {
@@ -696,6 +685,11 @@ test('economic source-family registry is synchronized', () => {
   assert.ok(
     available.indexOf('### SUP-047') < available.indexOf('### SUP-048'),
     'supplemental records should remain in archive-ID order',
+  );
+  assert.ok(
+    available.indexOf('### SUP-048') < available.indexOf('### SUP-049') &&
+      available.indexOf('### SUP-049') < available.indexOf('### SUP-060'),
+    'later supplemental records should remain in archive-ID order',
   );
   assert.ok(
     bibliography.indexOf('### SUP-011') <

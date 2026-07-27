@@ -1,5 +1,8 @@
 # Economic monograph intake
 
+- **Date:** 2026-07-26
+- **Status:** Implemented
+
 ## Summary
 
 Cataloged three user-supplied books as major sources: Homa Katouzian's *The

@@ -59,7 +59,7 @@ local holdings; and `UNAVAILABLE_SOURCES.md` remains the acquisition queue.
 The new test protects those boundaries and the intentionally vacant archive-ID
 range from another partial cross-thread update.
 
-## Research and asset implications
+## Research and assets
 
 No source was promoted from unavailable to available, no substantive
 historical claim was approved, and no asset-rights status changed. The

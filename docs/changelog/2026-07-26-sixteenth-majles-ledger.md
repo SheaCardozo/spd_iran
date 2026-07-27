@@ -1,5 +1,8 @@
 # Sixteenth-Majles member and credential ledger
 
+- **Date:** 2026-07-26
+- **Status:** Implemented
+
 ## Summary
 
 Added a complete 136-place Sixteenth-Majles constituency ledger and joined it

@@ -1,5 +1,8 @@
 # JSTOR source intake
 
+- **Date:** 2026-07-26
+- **Status:** Implemented
+
 ## Summary
 
 Ingested the three exact JSTOR targets previously tracked as `S21`–`S23`.

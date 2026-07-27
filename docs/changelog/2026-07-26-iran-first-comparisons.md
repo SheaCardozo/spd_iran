@@ -1,5 +1,8 @@
 # Iran-first comparative framing
 
+- **Date:** 2026-07-26
+- **Status:** Implemented
+
 ## Summary
 
 Reframed the constitutional orientation in *The Last Majles* so that Iranian

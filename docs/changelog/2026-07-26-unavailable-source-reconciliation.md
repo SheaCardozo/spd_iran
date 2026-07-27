@@ -1,5 +1,8 @@
 # Unavailable-source queue reconciliation
 
+- **Date:** 2026-07-26
+- **Status:** Implemented
+
 ## Summary
 
 Reconciled the unavailable-source queue against the local archive, available

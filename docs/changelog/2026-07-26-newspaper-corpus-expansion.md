@@ -1,5 +1,8 @@
 # Persian newspaper corpus expansion
 
+- **Date:** 2026-07-26
+- **Status:** Implemented
+
 ## Summary
 
 - Expanded `SUP-008` from five to twenty-one selected *Ettela'at* issues,

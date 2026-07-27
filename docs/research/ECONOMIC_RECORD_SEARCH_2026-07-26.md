@@ -124,7 +124,9 @@ mechanics; it does not justify invented line-item Treasury accounts.
 The UN Fiscal Division's *Public Finance Information Papers: Iran* (1951),
 `ST/ECA/SER.A/4`, remains a high-priority pre-shock bridge. A
 [Google Books record](https://books.google.com/books/about/Public_Finance_Information_Papers_Iran.html?id=s7RpP16vo0cC)
-exposes catalog/search metadata but no usable ebook.
+exposes catalog/search metadata but no usable ebook. Confirmed physical
+holding identifiers are TUFS `0000671745`, University of Tokyo Law
+`4101737544`, Tohoku `01603173869`, and Uppsala LIBRIS `8126976`.
 
 ## NIOC
 

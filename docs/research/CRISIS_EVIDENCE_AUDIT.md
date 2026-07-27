@@ -319,6 +319,13 @@ faction totals.
    credential, attendance, dated-caucus, and roll-call joins, and acquire the
    First Senate proceedings.
 
+Exact newspaper windows and institutional carriers are maintained in
+[`NEWSPAPER_SOURCE_ACQUISITION.md`](NEWSPAPER_SOURCE_ACQUISITION.md); the
+First-Senate session map is maintained in
+[`FIRST_SENATE_SOURCE_ACQUISITION.md`](FIRST_SENATE_SOURCE_ACQUISITION.md).
+The active queue records only the residual claim gaps in
+[`UNAVAILABLE_SOURCES.md`](UNAVAILABLE_SOURCES.md#crisis-events-and-press).
+
 ## Principal source locators
 
 | Subject | Source |

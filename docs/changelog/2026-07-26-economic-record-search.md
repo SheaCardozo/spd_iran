@@ -1,5 +1,8 @@
 # Economic institutional-record search
 
+- **Date:** 2026-07-26
+- **Status:** Implemented
+
 ## Summary
 
 Searched online for crisis-period Bank Melli, Iranian state-budget, NIOC, and

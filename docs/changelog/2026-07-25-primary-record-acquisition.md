@@ -1,5 +1,8 @@
 # Parliamentary and newspaper primary-record acquisition
 
+- **Date:** 2026-07-25
+- **Status:** Implemented
+
 ## Summary
 
 - Acquired the official Sixteenth-Majles laws compilation and verified the

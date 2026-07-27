@@ -1,5 +1,8 @@
 # Crisis evidence and parliamentary-control audit
 
+- **Date:** 2026-07-26
+- **Status:** Implemented
+
 ## Summary
 
 Added `docs/research/CRISIS_EVIDENCE_AUDIT.md`, a source-graded reconstruction

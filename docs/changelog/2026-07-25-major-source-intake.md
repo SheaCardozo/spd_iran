@@ -1,5 +1,8 @@
 # Major source intake and catalog resolution
 
+- **Date:** 2026-07-25
+- **Status:** Implemented
+
 ## Summary
 
 - Matched seven user-supplied books to bibliography entries `S1`–`S7`.

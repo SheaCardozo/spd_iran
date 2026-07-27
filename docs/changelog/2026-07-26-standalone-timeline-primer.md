@@ -1,5 +1,8 @@
 # Standalone historical timeline primer
 
+- **Date:** 2026-07-26
+- **Status:** Implemented
+
 ## Summary
 
 The historical timeline is now framed as a self-contained introduction for a

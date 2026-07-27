@@ -1,5 +1,8 @@
 # Focused scholarship and institutional source ingestion
 
+- **Date:** 2026-07-26
+- **Status:** Implemented
+
 ## Summary
 
 Ingested all six focused articles and seven institutional-source families as

@@ -35,6 +35,8 @@ historical primer is in
 The maintained source and image-rights registries are in
 [`docs/research/BIBLIOGRAPHY.md`](docs/research/BIBLIOGRAPHY.md) and
 [`docs/research/ASSETS.md`](docs/research/ASSETS.md).
+The responsibilities and update order of every research record are summarized
+in [`docs/research/README.md`](docs/research/README.md).
 The ignored local archive at `docs/research/sources/` is divided into major and
 supplemental evidence. Its tracked available-source catalog, source review, and
 acquisition queue are in

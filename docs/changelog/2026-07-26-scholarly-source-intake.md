@@ -1,5 +1,8 @@
 # Scholarly source and FRUS edition intake
 
+- **Date:** 2026-07-26
+- **Status:** Implemented
+
 ## Summary
 
 - Classified and renamed seven user-supplied PDFs by their internal title and

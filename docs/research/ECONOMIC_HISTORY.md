@@ -257,8 +257,11 @@ runs:
   explains why it is no longer a general blocker: primary and institutional
   observations, their vintages, and the acquired book-length interpretations
   must control the model rather than either article's verdict.
-- The Afshar, Khosropour, and Moghadam dissertations must be acquired because
-  S9's GNP, exchange-control, and AIOC-account figures depend on them.
+- The Afshar, Khosropour, and Moghadam dissertations remain useful method and
+  source-lineage audits because S9 draws on their GNP, exchange-control, and
+  AIOC-account work. They are not general blockers: mechanics must rely on the
+  inspectable observation ledger and carry lower confidence wherever a
+  transformation cannot be reproduced.
 - William Bartsch and Julian Bharier, *The Economy of Iran, 1940–1970: A
   Bibliography* (1971), is a priority discovery tool, not a claim source.
 
@@ -272,6 +275,12 @@ runs:
 | [`SUP-042`](AVAILABLE_SOURCES.md#sup-042)–[`SUP-045`](AVAILABLE_SOURCES.md#sup-045) | IMF exchange-restriction reports, 1952–55 | Exchange regime chronology |
 | [`SUP-046`](AVAILABLE_SOURCES.md#sup-046) | General state budget, 1332 SH | Legal fiscal chronology, not actual execution |
 | [`SUP-047`](AVAILABLE_SOURCES.md#sup-047) | UN Middle East economic survey (1958) | Retrospective Bank Melli-series checksum |
+| [`SUP-055`](AVAILABLE_SOURCES.md#sup-055) | ILO oil-industry field report (1950) | Pre-nationalization labor and welfare baseline |
+| [`SUP-057`](AVAILABLE_SOURCES.md#sup-057) | Selected IMF IFS vintages, 1950–54 | Contemporary Bank Melli-submission and revision checks |
+| [`SUP-058`](AVAILABLE_SOURCES.md#sup-058) | UN Middle East surveys, 1949/50–1951/52 | Contemporary regional and Iranian-series cross-checks |
+| [`MAJ-S16`](AVAILABLE_SOURCES.md#maj-s16) | Katouzian, *Political Economy of Modern Iran* | Book-length political-economy interpretation |
+| [`MAJ-S17`](AVAILABLE_SOURCES.md#maj-s17) | Bharier, *Economic Development in Iran* | Long-run data and definition audit |
+| [`MAJ-S18`](AVAILABLE_SOURCES.md#maj-s18) | Brew, *Petroleum and Progress in Iran* | Modern oil, development, and archive-based interpretation |
 
 ## Immediate extraction sequence
 
