@@ -67,6 +67,33 @@ must identify the claimed jurisdiction or rationale; age alone is not enough.
 - **SHA-256:** `0470ff29dbb1bc1990292d3384492ef5834844a35bd8bd7ffb1fcfd553281e6d`.
 - **Intended use:** Oil nationalization and Abadan scenes.
 
+### `assets/img/iran_abadan_map_1950.jpg`
+
+- **Status:** Approved for prototype and release use.
+- **Depicts:** Iran and its neighbors in 1950, including Tehran, Abadan, the
+  Persian Gulf, the Caspian Sea, and the land frontiers.
+- **Date/creator:** Third edition, 1950; Great Britain, War Office, General
+  Staff, Geographical Section. The sheet was first published in 1912; the
+  third edition revised railways and boundaries in 1950.
+- **Source record:** Wikimedia Commons,
+  <https://commons.wikimedia.org/wiki/File:1950_map_of_Persia_and_Afghanistan.tif>.
+- **Underlying source:** National Library of Australia,
+  <https://nla.gov.au/nla.obj-268204425/view>.
+- **Rights statement:** Commons identifies the map as a United Kingdom
+  Government work in the public domain. It was created and published before
+  1976, and HMSO has declared that expiration of Crown copyright applies
+  worldwide.
+- **Attribution:** “*Persia and Afghanistan*, third edition, 1950; Great
+  Britain, War Office, General Staff, Geographical Section; public domain.”
+- **Modifications:** Cropped from the 3,840-pixel Commons preview to Iran and
+  its immediate neighbors, then resampled to 1,200 × 1,320 pixels. The webpage
+  places a modern locator above the image to identify Abadan; the underlying
+  historical map is otherwise unaltered.
+- **SHA-256:** `c38156c0dd1514a421da041cecdef72e37f111897d21db1078ae721e21bc45b1`.
+- **Intended use:** Geographic orientation in the standalone historical
+  primer, especially the relationship between Tehran, Abadan, Iraq, and the
+  Persian Gulf during the oil crisis.
+
 ## Candidate and hold notes
 
 - The 1951 International News Photos portrait of Mohammad Mossadegh on Commons

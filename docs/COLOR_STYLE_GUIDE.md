@@ -34,26 +34,31 @@ official historical brand.
 7. Composite gradients denote a documented mixed position. Do not invent a
    blend merely to make every character visually unique.
 8. Check light, dark, and disabled-color modes. Meaning must never depend on
-   distinguishing two nearby hues.
+   distinguishing two nearby hues. Test every solid color and every component
+   of a flag-order or political gradient, rather than treating the gradient as
+   one average color.
 
 ## Core palette
 
-The values below are the light-mode anchors. Dark mode uses brighter
-accessibility variants while retaining the same relationships.
+The values below are semantic hue anchors, not a license to reproduce an
+inaccessible hexadecimal value on every background. Browser surfaces use
+contrast-adjusted light and dark variants that retain these relationships.
+Every solid color and every stripe in a text gradient must meet WCAG AA
+contrast against its actual background.
 
 | Meaning | Class | Anchor | Current use |
 | --- | --- | --- | --- |
-| National Front field | `term-national-front` | teal `#2f766a` | National Front; contextual “the Front” |
-| Parliamentary constitutionalism | `term-parliament` | gold `#a87925` | Majles |
-| Secular constitutionalist cadre | `term-constitutionalist` | gold `#a87925` | Iran Party; Sanjabi; Zirakzadeh; Shayegan; Nariman; Saleh |
-| Constitutional-government loyalist | `term-government-loyalist` | gold `#a87925` | General Mahmoud Afshartus |
+| National Front field | `term-national-front` | teal | National Front; contextual “the Front” |
+| Parliamentary constitutionalism | `term-parliament` | gold | Majles |
+| Secular constitutionalist cadre | `term-constitutionalist` | gold | Iran Party; Sanjabi; Zirakzadeh; Shayegan; Nariman; Saleh |
+| Constitutional-government loyalist | `term-government-loyalist` | gold | General Mahmoud Afshartus |
 | Monarchy or sourced pro-monarchy alignment | `term-royalist` | blue `#416a9b` | Shah; Zahedi; Nassiri; SAVAK |
 | Communist current | `term-left` | dark red `#700000` | Tudeh |
 | Social-democratic and democratic-socialist field | `term-social-democratic` | red `#c00000` | Third Force; Toilers' Party |
-| Pragmatic bazaar-clerical politics | `term-religious` | light green `#4f8448` | Kashani; Society of Muslim Warriors |
+| Pragmatic bazaar-clerical politics | `term-religious` | light green | Kashani; Behbehani; Society of Muslim Warriors |
 | Dogmatic or revolutionary Islamism | `term-islamist` | dark green `#24502f` | Fada'iyan-e Islam; Tahmasabi; Khomeini's movement |
-| Independent political figure | `term-independent` | grey `#808080` | Qavam; Razmara |
-| World Bank | `term-world-bank` | institutional blue `#0071bc` | World Bank |
+| Independent political figure | `term-independent` | grey | Qavam; Razmara |
+| World Bank | `term-world-bank` | institutional blue | World Bank |
 | AIOC and TPAJAX | `term-aioc`, `term-tpajax` | brown `#7a3c00` | Deliberate editorial analogy documented below |
 
 “Monarchy or sourced pro-monarchy alignment” is not a generic color for
@@ -110,7 +115,7 @@ Maleki's Third Force, Baghai, Kashani's Society of Muslim Warriors, Fada'iyan-e
 Islam, and the secular cadre that remained with Mossadegh. Fatemi's
 radical-left nationalist treatment is also informed by [`MAJ-S1`, chapter 20,
 especially printed pp. 304–05](research/AVAILABLE_SOURCES.md#maj-s1). The
-primer's [source-locator map](research/TIMELINE_PRIMER.md#source-spine-and-locator-map)
+primer's [bibliography and source guide](research/TIMELINE_PRIMER.md#bibliography-and-source-guide)
 tracks the broader institutional and chronological evidence.
 
 Afshartus receives gold as a role-coded constitutional-government loyalist,
@@ -118,6 +123,14 @@ not as an Iran Party member or a claim about his private ideology. Painter and
 Brew describe him as Mossadegh's own loyalist and an important supporter whose
 police command fortified the government
 ([`MAJ-S14`, pp. 138–39 and 155](research/AVAILABLE_SOURCES.md#maj-s14)).
+
+Ayatollah Mohammad Behbehani receives light green as a role-coded
+bazaar-clerical intermediary. The contemporary crisis review and the
+declassified diplomatic record connect his political network to the August
+mobilization, while neither source justifies treating every later payment
+allegation as proven
+([`SUP-049`, especially paragraph 4](research/AVAILABLE_SOURCES.md#sup-049);
+[`P1`, doc. 362](research/BIBLIOGRAPHY.md#p1)).
 
 These sources establish political characterization, not official party
 colors. Teal and the composite gradients are editorial devices unless a later

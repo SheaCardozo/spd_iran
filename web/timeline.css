@@ -4,23 +4,36 @@
   --paper-deep: #e2dac8;
   --surface: #f8f5ed;
   --ink: #28231e;
-  --muted: #736a5e;
+  --muted: #6d6458;
   --line: #c9bda8;
   --red: #8d2828;
   --red-dark: #5f181b;
   --green: #294b3d;
   --gold: #b29155;
-  --term-nationalist: #2f766a;
+  --term-nationalist: #2c6f64;
   --term-royalist: #416a9b;
   --term-left: #700000;
   --term-social-democratic: #c00000;
-  --term-religious: #4f8448;
+  --term-religious: #3f713a;
   --term-islamist: #24502f;
-  --term-parliament: #a87925;
-  --term-independent: #808080;
-  --term-world-bank: #0071bc;
+  --term-parliament: #7a5718;
+  --term-independent: #626262;
+  --term-world-bank: #0063a3;
   --term-aioc: #7a3c00;
-  --flag-white: #9b9183;
+  --flag-white: #6b6258;
+  --country-iran-green: #176b2c;
+  --country-iran-red: #a00000;
+  --country-uk-blue: #012169;
+  --country-uk-red: #9b1027;
+  --country-us-red: #8f1635;
+  --country-us-blue: #0a3161;
+  --country-france-blue: #002654;
+  --country-france-red: #a91f2d;
+  --country-netherlands-red: #8f1923;
+  --country-netherlands-blue: #21468b;
+  --country-saudi-green: #176b38;
+  --country-ussr-red: #8f211d;
+  --country-israel-blue: #0038b8;
   --shadow: 0 18px 50px rgba(50, 39, 28, 0.12);
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: Inter, "Helvetica Neue", Arial, sans-serif;
@@ -32,6 +45,12 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -71,6 +90,19 @@ body.dark {
   --term-world-bank: #65b5e8;
   --term-aioc: #d28a52;
   --flag-white: #e7e2d8;
+  --country-iran-green: #63c779;
+  --country-iran-red: #ff6b70;
+  --country-uk-blue: #7da6ff;
+  --country-uk-red: #ff7583;
+  --country-us-red: #f07b94;
+  --country-us-blue: #87a9f3;
+  --country-france-blue: #79a4f6;
+  --country-france-red: #ff7d8b;
+  --country-netherlands-red: #f07b84;
+  --country-netherlands-blue: #83a6ec;
+  --country-saudi-green: #63c980;
+  --country-ussr-red: #f07b72;
+  --country-israel-blue: #7da5ff;
   --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
 }
 
@@ -213,6 +245,7 @@ main {
   font-weight: 400;
   line-height: 0.88;
   letter-spacing: -0.055em;
+  text-wrap: balance;
 }
 
 .hero h1 em {
@@ -226,6 +259,7 @@ main {
   color: var(--muted);
   font-size: clamp(20px, 2.1vw, 27px);
   line-height: 1.4;
+  text-wrap: pretty;
 }
 
 .era-tags {
@@ -286,6 +320,7 @@ main {
   color: #f8f4e9;
   background: var(--red-dark);
   font: italic 12px/1.3 var(--serif);
+  text-wrap: pretty;
   transform: rotate(-1.5deg);
 }
 
@@ -340,6 +375,10 @@ main {
   border-left: 1px solid var(--line);
 }
 
+.contents-toggle {
+  display: none;
+}
+
 .contents a {
   position: relative;
   padding: 7px 0 7px 18px;
@@ -369,6 +408,7 @@ main {
   margin: 22px 12px 0 0;
   color: var(--muted);
   font: italic 12px/1.5 var(--serif);
+  text-wrap: pretty;
 }
 
 .primer {
@@ -432,6 +472,7 @@ main {
   font-weight: 400;
   line-height: 1.08;
   letter-spacing: -0.025em;
+  text-wrap: balance;
 }
 
 .chapter h3 {
@@ -439,10 +480,12 @@ main {
   color: var(--green);
   font-size: 20px;
   line-height: 1.25;
+  text-wrap: balance;
 }
 
 .chapter p {
   margin: 0 0 17px;
+  text-wrap: pretty;
 }
 
 .chapter > p:first-of-type::first-letter {
@@ -462,10 +505,16 @@ main {
 .chapter li {
   margin: 8px 0;
   padding-left: 0.25em;
+  text-wrap: pretty;
 }
 
 .chapter li::marker {
   color: var(--red);
+}
+
+.chapter li[id^="source-"],
+.chapter li span[id^="source-"] {
+  scroll-margin-top: 24px;
 }
 
 .chapter strong {
@@ -596,57 +645,57 @@ main {
 .country-iran {
   background-image: linear-gradient(
     90deg,
-    #239f40 0 33%,
+    var(--country-iran-green) 0 33%,
     var(--flag-white) 33% 66%,
-    #da0000 66%
+    var(--country-iran-red) 66%
   );
 }
 
 .country-uk {
   background-image: linear-gradient(
     90deg,
-    #012169 0 38%,
+    var(--country-uk-blue) 0 38%,
     var(--flag-white) 38% 50%,
-    #c8102e 50% 72%,
-    #012169 72%
+    var(--country-uk-red) 50% 72%,
+    var(--country-uk-blue) 72%
   );
 }
 
 .country-us {
   background-image: linear-gradient(
     90deg,
-    #b31942 0 36%,
+    var(--country-us-red) 0 36%,
     var(--flag-white) 36% 51%,
-    #0a3161 51%
+    var(--country-us-blue) 51%
   );
 }
 
 .country-france {
   background-image: linear-gradient(
     90deg,
-    #002654 0 33%,
+    var(--country-france-blue) 0 33%,
     var(--flag-white) 33% 66%,
-    #ed2939 66%
+    var(--country-france-red) 66%
   );
 }
 
 .country-netherlands {
   background-image: linear-gradient(
     90deg,
-    #ae1c28 0 33%,
+    var(--country-netherlands-red) 0 33%,
     var(--flag-white) 33% 66%,
-    #21468b 66%
+    var(--country-netherlands-blue) 66%
   );
 }
 
 .country-saudi {
-  color: #168544;
+  color: var(--country-saudi-green);
   background: none;
   -webkit-text-fill-color: currentColor;
 }
 
 .country-ussr {
-  color: #a62722;
+  color: var(--country-ussr-red);
   background: none;
   -webkit-text-fill-color: currentColor;
 }
@@ -654,10 +703,18 @@ main {
 .country-israel {
   background-image: linear-gradient(
     90deg,
-    #0038b8 0 38%,
+    var(--country-israel-blue) 0 38%,
     var(--flag-white) 38% 62%,
-    #0038b8 62%
+    var(--country-israel-blue) 62%
   );
+}
+
+@media (forced-colors: active) {
+  .term {
+    color: currentColor;
+    background: none;
+    -webkit-text-fill-color: currentColor;
+  }
 }
 
 .source-name {
@@ -686,16 +743,16 @@ main {
   text-decoration-color: currentColor;
 }
 
-#source-spine-and-locator-map a,
-#source-spine-and-locator-map a:hover {
+#bibliography-and-source-guide a,
+#bibliography-and-source-guide a:hover {
   color: inherit;
 }
 
-#source-spine-and-locator-map a {
+#bibliography-and-source-guide a {
   text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
 }
 
-#source-spine-and-locator-map a:hover {
+#bibliography-and-source-guide a:hover {
   text-decoration-color: currentColor;
 }
 
@@ -748,6 +805,62 @@ main {
   color: var(--muted);
   font-size: 1.12em;
   font-style: italic;
+  text-wrap: pretty;
+}
+
+.orientation-map {
+  margin: 32px 0 36px;
+}
+
+.orientation-map-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--line) 82%, transparent);
+  background: #e8ddc3;
+  box-shadow: 0 10px 24px rgba(50, 39, 28, 0.12);
+}
+
+.orientation-map img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.orientation-map figcaption {
+  max-width: 640px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font: italic 12px/1.5 var(--serif);
+  text-wrap: pretty;
+}
+
+.map-locator {
+  position: absolute;
+  top: 61.1%;
+  left: 19%;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff8e8;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow:
+    0 0 0 2px rgba(104, 28, 25, 0.8),
+    0 2px 5px rgba(37, 25, 16, 0.35);
+  transform: translate(-50%, -50%);
+}
+
+.map-locator span {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  padding: 4px 7px 5px;
+  border: 1px solid rgba(104, 28, 25, 0.72);
+  color: #fff8e8;
+  background: rgba(104, 28, 25, 0.94);
+  box-shadow: 0 2px 7px rgba(37, 25, 16, 0.26);
+  font: 700 11px/1 var(--sans);
+  letter-spacing: 0.03em;
+  transform: translateY(-50%);
 }
 
 .site-footer {
@@ -764,6 +877,7 @@ main {
 
 .site-footer p {
   margin: 0;
+  text-wrap: pretty;
 }
 
 @media (max-width: 920px) {
@@ -854,8 +968,30 @@ main {
     left: -4px;
   }
 
+  .contents.is-collapsible .contents-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    color: var(--ink);
+    background: var(--surface);
+    font: 700 12px/1.2 var(--sans);
+    cursor: pointer;
+  }
+
   .contents nav {
     grid-template-columns: 1fr;
+  }
+
+  .contents.is-collapsible nav {
+    display: none;
+    border-top: 0;
+  }
+
+  .contents.is-collapsible.is-open nav {
+    display: grid;
   }
 
   .chapter {
@@ -910,9 +1046,33 @@ main {
   }
 
   .chapter {
-    break-inside: avoid;
+    break-inside: auto;
     padding: 24px 0;
     border: 0;
     box-shadow: none;
+  }
+
+  .chapter h2,
+  .chapter h3,
+  .chapter table,
+  .chapter blockquote {
+    break-inside: avoid;
+  }
+
+  .chapter h2,
+  .chapter h3 {
+    break-after: avoid;
+  }
+
+  .chapter p,
+  .chapter li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .term {
+    color: currentColor;
+    background: none;
+    -webkit-text-fill-color: currentColor;
   }
 }

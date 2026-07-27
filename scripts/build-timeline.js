@@ -18,6 +18,7 @@ const standaloneAssets = [
   ['assets/img/majlis_1940s.jpg', 'img/majlis_1940s.jpg'],
   ['assets/img/shah_1949.jpg', 'img/shah_1949.jpg'],
   ['assets/img/makki_abadan_1951.jpg', 'img/makki_abadan_1951.jpg'],
+  ['assets/img/iran_abadan_map_1950.jpg', 'img/iran_abadan_map_1950.jpg'],
 ];
 
 const sources = {
@@ -42,15 +43,19 @@ const sources = {
   'sup-017': 'International Court of Justice, 1952 oil judgment',
   'sup-023':
     'Clawson and Sassanpour, “Adjustment to a Foreign Exchange Shock”',
+  'sup-026':
+    'International Bank for Reconstruction and Development, 1952 negotiation review',
   'sup-049': 'British memorandum, “Political Review of the Recent Crisis”',
-  'sup-051': 'Iranian Parliament, official Sixteenth-Majles roster',
-  'sup-052': 'Iranian Parliament, official Seventeenth-Majles roster',
-  'sup-053': 'Iranian Parliament, official First-Senate roster',
+  'sup-051': 'Iranian Parliament, official Sixteenth Majles roster',
+  'sup-052': 'Iranian Parliament, official Seventeenth Majles roster',
+  'sup-053': 'Iranian Parliament, official First Senate roster',
   'sup-055':
     'International Labour Office, <i>Labour Conditions in the Oil Industry in Iran</i>',
   'sup-057':
     'International Monetary Fund, <i>International Financial Statistics</i>',
   'sup-060': 'Randjbar-Daemi, “Radio Tehran and the 19 August 1953 Coup”',
+  p1: '<i>Foreign Relations of the United States, 1952–1954, Iran, 1951–1954</i>',
+  p14: 'Iranian Parliament, official retrospective chamber rosters',
 };
 
 const highlightedTerms = {
@@ -89,6 +94,7 @@ const highlightedTerms = {
   'term-royalist': [
     'Mohammad Reza Shah',
     'Reza Shah',
+    'Prime Minister Zahedi',
     'General Fazlollah Zahedi',
     'Colonel Nematollah Nassiri',
     'Fazlollah Zahedi',
@@ -101,7 +107,11 @@ const highlightedTerms = {
   'term-left': ['Tudeh Party', 'Tudeh'],
   'term-religious': [
     'Ayatollah Abol-Qasem Kashani',
+    'Ayatollah Kashani',
     'Abol-Qasem Kashani',
+    'Ayatollah Mohammad Behbehani',
+    'Mohammad Behbehani',
+    'Behbehani',
     'Kashani',
     'Society of Muslim Warriors',
   ],
@@ -181,9 +191,17 @@ function highlightImportantTerms(value) {
   });
 }
 
+function sourceIdForHref(href) {
+  const anchor = href.match(
+    /(?:AVAILABLE_SOURCES|BIBLIOGRAPHY)\.md#(maj-s\d+|sup-\d+|p\d+)/i,
+  );
+  return anchor ? anchor[1].toLowerCase() : null;
+}
+
 function sourceForHref(href) {
   const anchor = href.match(/AVAILABLE_SOURCES\.md#(maj-s\d+|sup-\d+)/i);
-  return anchor ? sources[anchor[1].toLowerCase()] : null;
+  const id = anchor?.[1].toLowerCase();
+  return id ? sources[id] : null;
 }
 
 function renderInline(value, options = {}) {
@@ -210,18 +228,37 @@ function renderInline(value, options = {}) {
           ? `, ${renderInline(locator, {highlight: false})}`
           : '';
         safeLabel = `<cite class="source-name">${source}</cite>${suffix}`;
-      } else if (href === 'BIBLIOGRAPHY.md' || href === 'AVAILABLE_SOURCES.md') {
-        safeLabel = 'the source guide below';
+      } else if (
+        href === 'BIBLIOGRAPHY.md' ||
+        href === 'AVAILABLE_SOURCES.md'
+      ) {
+        safeLabel = 'the bibliography below';
       } else {
-        safeLabel = renderInline(label);
+        const sourceReference =
+          /^https?:\/\//.test(href) ||
+          href.startsWith('BIBLIOGRAPHY.md') ||
+          href.startsWith('AVAILABLE_SOURCES.md');
+        safeLabel = renderInline(label, {
+          highlight: options.highlight !== false && !sourceReference,
+        });
       }
-      const external = /^https?:\/\//.test(href);
       const fragment = href.startsWith('#');
-      const target = external || fragment ? href : '#source-spine-and-locator-map';
-      const title = external ? '' : ' title="See the source guide below"';
-      const attributes = external
-        ? ' target="_blank" rel="noreferrer"'
-        : ' class="citation"';
+      const sourceId = sourceIdForHref(href);
+      if (options.bibliography && !fragment && !sourceId) {
+        return hold(safeLabel);
+      }
+      if (fragment) {
+        return hold(
+          `<a href="${escapeHtml(href)}" class="jump-link">${safeLabel}</a>`,
+        );
+      }
+      const target = fragment
+        ? href
+        : sourceId && sources[sourceId]
+          ? `#source-${sourceId}`
+          : '#bibliography-and-source-guide';
+      const title = ' title="See this entry in the bibliography"';
+      const attributes = ' class="citation"';
       return hold(
         `<a href="${escapeHtml(target)}"${attributes}${title}>${safeLabel}</a>`,
       );
@@ -264,7 +301,7 @@ function startsBlock(line, nextLine = '') {
   );
 }
 
-function renderBlocks(lines) {
+function renderBlocks(lines, options = {}) {
   const html = [];
   let index = 0;
 
@@ -280,7 +317,9 @@ function renderBlocks(lines) {
     const heading = line.match(/^###\s+(.+)$/);
     if (heading) {
       const label = heading[1];
-      html.push(`<h3 id="${slugify(label)}">${renderInline(label)}</h3>`);
+      html.push(
+        `<h3 id="${slugify(label)}">${renderInline(label, options)}</h3>`,
+      );
       index += 1;
       continue;
     }
@@ -295,18 +334,41 @@ function renderBlocks(lines) {
       }
       html.push(
         '<div class="table-scroll"><table><thead><tr>' +
-          header.map((cell) => `<th>${renderInline(cell)}</th>`).join('') +
+          header
+            .map((cell) => `<th>${renderInline(cell, options)}</th>`)
+            .join('') +
           '</tr></thead><tbody>' +
           rows
             .map(
               (row) =>
                 '<tr>' +
-                row.map((cell) => `<td>${renderInline(cell)}</td>`).join('') +
+                row
+                  .map((cell) => `<td>${renderInline(cell, options)}</td>`)
+                  .join('') +
                 '</tr>',
             )
             .join('') +
           '</tbody></table></div>',
       );
+      continue;
+    }
+
+    const image = line.match(
+      /^!\[([^\]]+)\]\(\.\.\/\.\.\/assets\/(img\/[a-z0-9_.-]+\.(?:jpe?g|png|webp))\s+"([^"]+)"\)$/i,
+    );
+    if (image) {
+      const [, alt, source, caption] = image;
+      const abadanLocator = source === 'img/iran_abadan_map_1950.jpg';
+      html.push(
+        `<figure class="orientation-map${abadanLocator ? ' orientation-map-abadan' : ''}">
+<div class="orientation-map-frame">
+<img src="${escapeHtml(source)}" alt="${escapeHtml(alt)}" loading="lazy">
+${abadanLocator ? '<span class="map-locator" aria-hidden="true"><span>Abadan</span></span>' : ''}
+</div>
+<figcaption>${renderInline(caption, {highlight: false})}</figcaption>
+</figure>`,
+      );
+      index += 1;
       continue;
     }
 
@@ -331,7 +393,28 @@ function renderBlocks(lines) {
           content += ` ${lines[index].trim()}`;
           index += 1;
         }
-        items.push(`<li>${renderInline(content)}</li>`);
+        const bibliographyMarker =
+          options.bibliography &&
+          content.match(/^\[sources?:([^\]]+)\]\s*/i);
+        const bibliographyIds = bibliographyMarker
+          ? bibliographyMarker[1]
+              .split(',')
+              .map((id) => id.trim().toLowerCase())
+              .filter(Boolean)
+          : [];
+        if (bibliographyMarker) {
+          content = content.slice(bibliographyMarker[0].length);
+        }
+        const idAttribute = bibliographyIds.length
+          ? ` id="source-${bibliographyIds[0]}"`
+          : '';
+        const aliasAnchors = bibliographyIds
+          .slice(1)
+          .map((id) => `<span id="source-${escapeHtml(id)}"></span>`)
+          .join('');
+        items.push(
+          `<li${idAttribute}>${aliasAnchors}${renderInline(content, options)}</li>`,
+        );
         while (index < lines.length && !lines[index].trim()) index += 1;
       }
 
@@ -345,7 +428,9 @@ function renderBlocks(lines) {
         quote.push(lines[index].replace(/^>\s?/, ''));
         index += 1;
       }
-      html.push(`<blockquote>${renderInline(quote.join(' '))}</blockquote>`);
+      html.push(
+        `<blockquote>${renderInline(quote.join(' '), options)}</blockquote>`,
+      );
       continue;
     }
 
@@ -358,7 +443,7 @@ function renderBlocks(lines) {
       paragraph.push(lines[index].trim());
       index += 1;
     }
-    html.push(`<p>${renderInline(paragraph.join(' '))}</p>`);
+    html.push(`<p>${renderInline(paragraph.join(' '), options)}</p>`);
   }
 
   return html.join('\n');
@@ -390,21 +475,27 @@ function renderSection(section) {
   const numbered = section.title.match(/^(\d+)\.\s+(.+)$/);
   const id = slugify(section.title);
   const defaultTitle = numbered ? numbered[2] : section.title;
-  const title =
-    section.title === 'Source spine and locator map'
-      ? 'Sources and further reading'
-      : defaultTitle;
+  const title = defaultTitle;
+  const bibliography = section.title === 'Bibliography and source guide';
   const chapterClass = numbered
     ? 'chapter timeline-chapter'
     : 'chapter reference-chapter';
-  const kicker = numbered
-    ? `<p class="chapter-kicker">Chapter ${numbered[1].padStart(2, '0')}</p>`
-    : '<p class="chapter-kicker">Orientation</p>';
+  const referenceKickers = {
+    'Interpretive spine': 'Interpretation',
+    'Bibliography and source guide': 'Sources',
+  };
+  const kickerLabel = numbered
+    ? `Chapter ${numbered[1].padStart(2, '0')}`
+    : referenceKickers[section.title] ?? 'Orientation';
+  const kicker = `<p class="chapter-kicker">${kickerLabel}</p>`;
 
   return `<section class="${chapterClass}" id="${id}">
 ${kicker}
 <h2>${renderInline(title)}</h2>
-${renderBlocks(section.lines)}
+${renderBlocks(section.lines, {
+  highlight: !bibliography,
+  bibliography,
+})}
 </section>`;
 }
 
@@ -412,55 +503,12 @@ function buildTimeline() {
   const markdown = fs.readFileSync(sourcePath, 'utf8');
   const template = fs.readFileSync(templatePath, 'utf8');
   const sections = parseSections(markdown);
-  const purposeSection = sections.find(
-    (section) => section.title === 'Purpose and limits',
-  );
-  if (purposeSection) {
-    purposeSection.title = 'How to read this primer';
-    purposeSection.lines = [
-      'This standalone primer assumes only a general familiarity with Iran. It',
-      'explains the institutions, political coalitions, oil economy, international',
-      'confrontation, and sequence of events that produced the coup of August',
-      '1953. It begins with the political opening of 1941, follows the immediate',
-      'post-coup settlement, and carries the consequences forward to 1979.',
-      '',
-      'Where dates, casualty figures, covert responsibility, or interpretation',
-      'remain disputed, the text says so instead of presenting false precision.',
-      'The citations name the relevant historian or primary record directly;',
-      'the final source guide gives the useful chapter or page range.',
-      '',
-      'Dates are Gregorian. Familiar Iranian calendar names such as **30 Tir**',
-      'and **9 Esfand** are explained when they appear.',
-      '',
-      'Names appear in several transliterations across the literature. This page',
-      'uses **Mossadegh**, **Majles**, **Tudeh**, and **National Front** except',
-      'when reproducing a published title.',
-    ];
-  }
-  const sourceSection = sections.find(
-    (section) => section.title === 'Source spine and locator map',
-  );
-  if (sourceSection) {
-    const firstBreak = sourceSection.lines.findIndex(
-      (line, index) => index > 0 && !line.trim(),
-    );
-    sourceSection.lines.splice(
-      0,
-      firstBreak < 0 ? 0 : firstBreak + 1,
-      'The following guide names the principal works used in this primer and',
-      'the chapters or pages most relevant to each topic.',
-      '',
-    );
-  }
   const content = sections.map(renderSection).join('\n');
   const nav = sections
-    .filter((section) => !section.title.startsWith('Purpose and limits'))
+    .filter((section) => section.title !== 'How to read this primer')
     .map((section) => {
       const defaultLabel = section.title.replace(/^\d+\.\s+/, '');
-      const label =
-        section.title === 'Source spine and locator map'
-          ? 'Sources and further reading'
-          : defaultLabel;
+      const label = defaultLabel;
       return `<a href="#${slugify(section.title)}">${renderInline(label)}</a>`;
     })
     .join('\n');
@@ -469,9 +517,9 @@ function buildTimeline() {
     .replace('<!-- TIMELINE_NAV -->', nav)
     .replace('<!-- TIMELINE_CONTENT -->', content)
     .replace(
-      /<code>(MAJ-S\d+|SUP-\d+)<\/code>/g,
+      /<code>(MAJ-S\d+|SUP-\d+|P\d+)<\/code>/g,
       (_, id) =>
-        `<cite class="source-name">${sources[id.toLowerCase()] || id}</cite>`,
+        `<a href="#source-${id.toLowerCase()}" class="citation" title="See this entry in the bibliography"><cite class="source-name">${sources[id.toLowerCase()] || id}</cite></a>`,
     )
     .replace(
       /;\s*<code>ECONOMIC_HISTORY\.md<\/code>\s+evidence audit/g,

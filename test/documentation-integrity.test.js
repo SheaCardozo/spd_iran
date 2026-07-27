@@ -63,6 +63,8 @@ test('tracked documentation has valid local links and fragments', () => {
     const contents = fs.readFileSync(filePath, 'utf8');
     for (const match of contents.matchAll(/\[[^\]]*]\(([^)]+)\)/g)) {
       let target = match[1].trim();
+      const titleIndex = target.search(/\s+["']/);
+      if (titleIndex !== -1) target = target.slice(0, titleIndex);
       if (target.startsWith('<') && target.endsWith('>')) {
         target = target.slice(1, -1);
       }

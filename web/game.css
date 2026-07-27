@@ -12,17 +12,30 @@ body {
   --tab-hover-color: #ececec;
   --card-border-color: #ccc; 
   --card-bg-color: #ddd; 
-  --term-nationalist: #2f766a;
+  --term-nationalist: #2c6f64;
   --term-royalist: #416a9b;
   --term-left: #700000;
   --term-social-democratic: #c00000;
-  --term-religious: #4f8448;
+  --term-religious: #3f713a;
   --term-islamist: #24502f;
-  --term-parliament: #a87925;
-  --term-independent: #808080;
-  --term-world-bank: #0071bc;
+  --term-parliament: #7a5718;
+  --term-independent: #626262;
+  --term-world-bank: #0063a3;
   --term-aioc: #7a3c00;
-  --flag-white: #9b9183;
+  --flag-white: #6b6258;
+  --country-iran-green: #176b2c;
+  --country-iran-red: #a00000;
+  --country-uk-blue: #012169;
+  --country-uk-red: #9b1027;
+  --country-us-red: #8f1635;
+  --country-us-blue: #0a3161;
+  --country-france-blue: #002654;
+  --country-france-red: #a91f2d;
+  --country-netherlands-red: #8f1923;
+  --country-netherlands-blue: #21468b;
+  --country-saudi-green: #176b38;
+  --country-ussr-red: #8f211d;
+  --country-israel-blue: #0038b8;
   font-family: "Minion Pro", Georgia, serif;
   background-color: var(--bg-color);
   padding: 0;
@@ -52,6 +65,19 @@ body.dark-mode {
   --term-world-bank: #65b5e8;
   --term-aioc: #d28a52;
   --flag-white: #e7e2d8;
+  --country-iran-green: #63c779;
+  --country-iran-red: #ff6b70;
+  --country-uk-blue: #7da6ff;
+  --country-uk-red: #ff7583;
+  --country-us-red: #f07b94;
+  --country-us-blue: #87a9f3;
+  --country-france-blue: #79a4f6;
+  --country-france-red: #ff7d8b;
+  --country-netherlands-red: #f07b84;
+  --country-netherlands-blue: #83a6ec;
+  --country-saudi-green: #63c980;
+  --country-ussr-red: #f07b72;
+  --country-israel-blue: #7da5ff;
 }
 body.dark-mode #content {
   border-style: double;
@@ -1016,57 +1042,57 @@ th {
 .country-iran {
   background-image: linear-gradient(
     90deg,
-    #239f40 0 33%,
+    var(--country-iran-green) 0 33%,
     var(--flag-white) 33% 66%,
-    #da0000 66%
+    var(--country-iran-red) 66%
   );
 }
 
 .country-uk {
   background-image: linear-gradient(
     90deg,
-    #012169 0 38%,
+    var(--country-uk-blue) 0 38%,
     var(--flag-white) 38% 50%,
-    #c8102e 50% 72%,
-    #012169 72%
+    var(--country-uk-red) 50% 72%,
+    var(--country-uk-blue) 72%
   );
 }
 
 .country-us {
   background-image: linear-gradient(
     90deg,
-    #b31942 0 36%,
+    var(--country-us-red) 0 36%,
     var(--flag-white) 36% 51%,
-    #0a3161 51%
+    var(--country-us-blue) 51%
   );
 }
 
 .country-france {
   background-image: linear-gradient(
     90deg,
-    #002654 0 33%,
+    var(--country-france-blue) 0 33%,
     var(--flag-white) 33% 66%,
-    #ed2939 66%
+    var(--country-france-red) 66%
   );
 }
 
 .country-netherlands {
   background-image: linear-gradient(
     90deg,
-    #ae1c28 0 33%,
+    var(--country-netherlands-red) 0 33%,
     var(--flag-white) 33% 66%,
-    #21468b 66%
+    var(--country-netherlands-blue) 66%
   );
 }
 
 .country-saudi {
-  color: #168544;
+  color: var(--country-saudi-green);
   background: none;
   -webkit-text-fill-color: currentColor;
 }
 
 .country-ussr {
-  color: #a62722;
+  color: var(--country-ussr-red);
   background: none;
   -webkit-text-fill-color: currentColor;
 }
@@ -1074,9 +1100,9 @@ th {
 .country-israel {
   background-image: linear-gradient(
     90deg,
-    #0038b8 0 38%,
+    var(--country-israel-blue) 0 38%,
     var(--flag-white) 38% 62%,
-    #0038b8 62%
+    var(--country-israel-blue) 62%
   );
 }
 

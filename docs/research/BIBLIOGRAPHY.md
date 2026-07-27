@@ -730,6 +730,8 @@ below; presence does not turn an unread work into claim-level evidence.
   must identify the proceeding, date or session, document where applicable,
   and printed page.
 
+<a id="p1"></a>
+
 - **P1:** approved and acquired as the official 2018 second edition,
   [`SUP-010`](AVAILABLE_SOURCES.md#sup-010). Use individual document numbers,
   dates, correspondents or meeting records, and editorial notes.
@@ -772,6 +774,8 @@ below; presence does not turn an unread work into claim-level evidence.
   its author, office, audience, and informants remain unidentified. It is
   authoritative evidence of the document's contemporary British assessment
   and allegations, not conclusive evidence that each allegation was true.
+<a id="p13"></a>
+
 - **P13:** the UK Cabinet Office's 2011 *Cabinet Manual* is acquired as
   [`SUP-050`](AVAILABLE_SOURCES.md#sup-050). It is authoritative for the UK
   government's stated modern conventions of sovereign appointment, Commons

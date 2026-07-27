@@ -2,6 +2,8 @@
   const body = document.body;
   const toggle = document.querySelector('.theme-toggle');
   const progress = document.querySelector('.reading-progress span');
+  const contents = document.querySelector('.contents');
+  const contentsToggle = document.querySelector('.contents-toggle');
   const navLinks = [...document.querySelectorAll('.contents a')];
   const sections = [...document.querySelectorAll('.chapter')];
   const themeKey = 'last-majles-primer-theme';
@@ -21,6 +23,26 @@
     const next = body.classList.contains('dark') ? 'light' : 'dark';
     localStorage.setItem(themeKey, next);
     setTheme(next);
+  });
+
+  const setContentsOpen = (open) => {
+    if (!contents || !contentsToggle) return;
+    contents.classList.toggle('is-open', open);
+    contentsToggle.setAttribute('aria-expanded', String(open));
+    contentsToggle.textContent = open ? 'Hide contents' : 'Show contents';
+  };
+
+  contents?.classList.add('is-collapsible');
+  contentsToggle?.addEventListener('click', () => {
+    setContentsOpen(!contents.classList.contains('is-open'));
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.matchMedia('(max-width: 600px)').matches) {
+        setContentsOpen(false);
+      }
+    });
   });
 
   const updateProgress = () => {
