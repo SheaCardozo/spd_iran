@@ -30,11 +30,29 @@ and event reconstruction; it is not a ranking of scholarly prestige.
 | Rank | Acquisition target | Why it comes next | Minimum useful delivery |
 | --- | --- | --- | --- |
 | 1 | First-Senate official proceedings | The membership roster is local, but precise upper-chamber debate, attendance, procedure, and divisions remain the clearest parliamentary blocker. | Sessions 84, 91–92, 95, 125, and 190–193, with session 192 first for the six-month powers measure. |
-| 2 | Iranian economic record spine | IMF, UN, IBRD, and ILO proxies are now local; the largest remaining economic uncertainty is the underlying Iranian monetary, fiscal, trade, and oil-company record. | Bank Melli bulletins and annual accounts for 1949–55, Customs annual series for 1329–1333, Treasury cash/closed accounts, and NIOC 1330–1332 balance sheets or the three-year operational account. |
-| 3 | Sixteenth-Majles election and alignment evidence | The official roster, credentials, debates, oil-commission minutes, and one scholarly chapter are local, but they do not allocate the majority member by member or fully explain electoral sponsorship. | The deputy-statistics and religious-election chapters of [`S25`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining), plus all or the two named documents from [`P15`](BIBLIOGRAPHY.md#p15), `FO 371/75466`. |
+| 2 | Sixteenth-Majles election and alignment evidence | The official roster, credentials, debates, oil-commission minutes, and one scholarly chapter are local, but they do not allocate the majority member by member or fully explain electoral sponsorship. This is the largest remaining gap in the election-centered parliamentary reconstruction. | The deputy-statistics and religious-election chapters of [`S25`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining), plus all or the two named documents from [`P15`](BIBLIOGRAPHY.md#p15), `FO 371/75466`. |
+| 3 | Iranian economic record spine | Katouzian, Bharier, Brew, IMF, UN, IBRD, and ILO are now local. The interpretive foundation is adequate for research, but exact mechanics still require the underlying Iranian monetary, fiscal, trade, and oil-company record. | Bank Melli bulletins and annual accounts for 1949–55, Customs annual series for 1329–1333, Treasury cash/closed accounts, and NIOC 1330–1332 balance sheets or the three-year operational account. |
 | 4 | Thirty Tir and Nineteen August event records | Aggregate narratives are strong enough for a primer, but organizer networks, locality, payment attribution, and casualty definitions remain uneven. | [`S24`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining), especially pp. 465–66 and its documentary apparatus, followed by opposing full newspaper issues for 17–24 July 1952 and 15–22 August 1953. |
-| 5 | Missing book-length foundations | The core library is broad, but major Persian oil-legal analysis and the strongest economic syntheses remain incomplete. | Movahed volume I first; then Katouzian [`E10`](BIBLIOGRAPHY.md#economic-history-source-families), Bharier [`E11`](BIBLIOGRAPHY.md#economic-history-source-families), and Brew [`E12`](BIBLIOGRAPHY.md#economic-history-source-families). |
+| 5 | Remaining scholarly foundations | The three priority economic monographs are now local; the largest remaining scholarly gaps are Persian oil-legal analysis, a direct adversarial economic article, and company-history interpretation. | Movahed volume I first; then Majd [`E13`](BIBLIOGRAPHY.md#economic-history-source-families), Bamberg under [`E19`](BIBLIOGRAPHY.md#economic-history-source-families), and Chaqueri volumes 12 and 17. |
 | 6 | World Bank mediation folders | The finding aid and institutional summaries are local, but the secret negotiation sequence and meeting memoranda are still absent. | Folders `1806451`–`1806454`, `1806448`, and `1806457`, preserving folder IDs and disclosure metadata. |
+
+### Immediate request shortlist
+
+If placing discrete reproduction, library, or database requests now, use this
+sequence:
+
+1. First-Senate session 192, then sessions 84, 91–92, 95, 125, 190–191, and
+   193.
+2. The complete `FO 371/75466` piece, or at minimum the 19 July and 13 October
+   1949 documents with enclosures and registry material.
+3. The deputy-statistics and religious-election chapters of `S25`, followed by
+   its Mesbahzadeh and land-reform chapters.
+4. Bank Melli *Bulletin* nos. 135–136 and 139–144, then the fullest obtainable
+   1949–55 bulletin and annual-account run.
+5. Torkamān's *Qīām-e mellī-e sīom-e Tīr*, especially pp. 465–66, its casualty
+   lists, document reproductions, and bibliography.
+6. Majd's 1995 rejoinder (`E13`), the quickest high-value scholarly acquisition
+   and the required direct challenge to the Clawson–Sassanpour interpretation.
 
 ## Priority scholarly books
 
@@ -119,6 +137,9 @@ edition records live in the available-source catalog.
 | `P7` | 2026-07-26 | [`SUP-021`](AVAILABLE_SOURCES.md#sup-021) | Official historic Hansard page acquired with volume and column locator. |
 | `P8` | 2026-07-26 | [`SUP-022`](AVAILABLE_SOURCES.md#sup-022) | Two complete declassified CIA internal histories acquired through documented public-domain archival mirrors. |
 | `E18` | 2026-07-26 | [`SUP-055`](AVAILABLE_SOURCES.md#sup-055) | Complete official ILO *Studies and Reports*, New Series no. 24 PDF acquired from the ILO carrier; claim-level review and printed-page locators remain pending. |
+| `E10` | 2026-07-26 | [`MAJ-S16`](AVAILABLE_SOURCES.md#maj-s16) | Complete searchable 1981 Macmillan first-edition scan acquired with stable printed pagination and full index. |
+| `E11` | 2026-07-26 | [`MAJ-S17`](AVAILABLE_SOURCES.md#maj-s17) | Complete 1971 Oxford University Press scan acquired, including tables, bibliography pp. 283–303, and index. |
+| `E12` | 2026-07-26 | [`MAJ-S18`](AVAILABLE_SOURCES.md#maj-s18) | Complete searchable 2022 Cambridge University Press edition acquired with stable pagination, notes, bibliography, and index. |
 | `S9` | 2026-07-26 | [`SUP-023`](AVAILABLE_SOURCES.md#sup-023) | User supplied the complete searchable JSTOR article, resolving the earlier publisher-access failure. |
 | `S10` | 2026-07-26 | [`SUP-024`](AVAILABLE_SOURCES.md#sup-024) | User supplied the complete searchable JSTOR article, resolving the earlier get-access-page result. |
 | `S21` | 2026-07-26 | [`MAJ-S13`](AVAILABLE_SOURCES.md#maj-s13) | User supplied the complete 508-page JSTOR book PDF; substantive review remains pending. |
@@ -193,9 +214,6 @@ holdings are imperfectly exposed in the public catalog.
 | [`E16`](BIBLIOGRAPHY.md#economic-history-source-families) | IMF, remaining *International Financial Statistics* vintages; *Balance of Payments Yearbook*, vols. 4–7; *Direction of International Trade* | **Narrow residual gap:** [`SUP-057`](AVAILABLE_SOURCES.md#sup-057) now supplies four strategically selected IFS vintages and the public catalog exposes almost the entire monthly 1950–55 run | Do not acquire all 70 duplicate-heavy issues by default. Add a particular issue only for a missing month or revision; continue searching for the balance-of-payments and partner-trade volumes. |
 | [`E17`](BIBLIOGRAPHY.md#economic-history-source-families) | UN 1952–53 Middle East survey, trade yearbooks, and *World Energy Supplies, 1951–1954* | **Residual independent checksum:** [`SUP-058`](AVAILABLE_SOURCES.md#sup-058) resolves the three predecessor surveys and [`SUP-047`](AVAILABLE_SOURCES.md#sup-047) supplies a later Bank Melli-sourced check | Recover `E/2581` / `ST/ECA/25` from a working full-text endpoint; acquire the trade and energy volumes and record exact Iran-table locators. |
 | [`E19`](BIBLIOGRAPHY.md#economic-history-source-families) | AIOC, *Annual Reports and Accounts*, 1950–53; J. H. Bamberg, *History of BP*, vol. 2 (CUP, 1994) | **High oil-company evidence and archival interpretation:** production, employment, royalty/tax, reserves, policy | Complete corporate reports and Bamberg volume; compare with NIOC, UN energy, ILO, and Iranian scholarship. |
-| [`E10`](BIBLIOGRAPHY.md#economic-history-source-families) | Homa Katouzian, *The Political Economy of Modern Iran* (1981) | **Core book-length political economy** | Complete Macmillan/Palgrave edition, especially pp. 141–210 and notes. |
-| [`E11`](BIBLIOGRAPHY.md#economic-history-source-families) | Julian Bharier, *Economic Development in Iran, 1900–1970* (OUP, 1971) | **Core expert synthesis and data source map** | Complete OUP edition including bibliography pp. 283–303. |
-| [`E12`](BIBLIOGRAPHY.md#economic-history-source-families) | Gregory Brew, *Petroleum and Progress in Iran* (CUP, 2022) | **Core modern oil/development interpretation** | Complete CUP edition, DOI `10.1017/9781009206327`. |
 | [`E13`](BIBLIOGRAPHY.md#economic-history-source-families) | M. G. Majd, “The 1951–53 Oil Nationalization Dispute and the Iranian Economy: A Rejoinder” (1995) | **Required direct challenge to S9** | Complete article, DOI `10.1080/00263209508701063`. |
 | [`E20`](BIBLIOGRAPHY.md#economic-history-source-families) | K. Afshar, *Monetary Estimate of Iran's GNP, 1900–1975* (Florida State PhD, 1977) | **Critical method audit:** S9's GNP path depends on it and S9 itself calls the estimate imprecise | Resolve the author's full identity from an authoritative dissertation catalog; acquire complete dissertation and data appendix. Do not guess metadata. |
 | [`E21`](BIBLIOGRAPHY.md#economic-history-source-families) | Ali Akbar Khosropour, *Le contrôle des changes en Iran depuis 1930 jusqu'à la fin de 1955* (Paris law dissertation, 1956), 118 pp. | **High exchange-control evidence** | Complete dissertation; compare legal chronology with Bank Melli and IMF reports. |

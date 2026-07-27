@@ -70,3 +70,4 @@ bibliography entry, or asset-rights record.
 - [Economic institutional-record search](2026-07-26-economic-record-search.md)
 - [Parallel parliamentary and source-workstream reconciliation](2026-07-26-parallel-parliamentary-reconciliation.md)
 - [Unavailable-source queue reconciliation](2026-07-26-unavailable-source-reconciliation.md)
+- [Economic monograph intake](2026-07-26-economic-book-intake.md)

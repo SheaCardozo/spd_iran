@@ -79,6 +79,36 @@ const electronicSources = [
 ];
 const recentSourceFiles = [
   {
+    id: 'MAJ-S16',
+    path:
+      `${sourceRoot}/major/` +
+      'MAJ-S16-katouzian-1981-political-economy-modern-iran.pdf',
+    sidecar:
+      `${sourceRoot}/major/` +
+      'MAJ-S16-katouzian-1981-political-economy-modern-iran.md',
+    hash: 'c5f9af1a51e9e46fd83a096ec5b1045457ff249cc5948b67facdca8aa4f7a4fb',
+  },
+  {
+    id: 'MAJ-S17',
+    path:
+      `${sourceRoot}/major/` +
+      'MAJ-S17-bharier-1971-economic-development-iran.pdf',
+    sidecar:
+      `${sourceRoot}/major/` +
+      'MAJ-S17-bharier-1971-economic-development-iran.md',
+    hash: '6bae08bc32b743ce17191da36c3648b493c033d092b20c9c1423df93b419eda0',
+  },
+  {
+    id: 'MAJ-S18',
+    path:
+      `${sourceRoot}/major/` +
+      'MAJ-S18-brew-2022-petroleum-progress-iran.pdf',
+    sidecar:
+      `${sourceRoot}/major/` +
+      'MAJ-S18-brew-2022-petroleum-progress-iran.md',
+    hash: '38df072dff3d8ad6c7004d6ec281227046818f6edb3bd4f83e994c98240f9832',
+  },
+  {
     id: 'SUP-054',
     path:
       `${sourceRoot}/supplemental/` +
@@ -553,7 +583,7 @@ test('research source taxonomy and catalog cross-references are present', () => 
   const catalogIds = [
     ...sources.map((source) => source.id),
     ...electronicSources.map((source) => source.id.replace(/ EPUB$/, '')),
-    ...recentSourceFiles.map((source) => source.id.match(/^SUP-\d{3}/)[0]),
+    ...recentSourceFiles.map((source) => source.id.match(/^(?:MAJ|SUP)-S?\d{2,3}/)[0]),
     ...recentSourceCollections.map((collection) => collection.id),
     'SUP-021',
     'SUP-022',
@@ -599,8 +629,8 @@ test('economic source-family registry is synchronized', () => {
   }
 
   for (const id of [
-    'E1', 'E2', 'E2a', 'E3', 'E4', 'E5', 'E9', 'E10', 'E11', 'E12',
-    'E13', 'E14', 'E15', 'E16', 'E17', 'E19', 'E20', 'E21',
+    'E1', 'E2', 'E2a', 'E3', 'E4', 'E5', 'E9', 'E13', 'E14', 'E15',
+    'E16', 'E17', 'E19', 'E20', 'E21',
     'E22', 'E23',
   ]) {
     assert.match(unavailable, new RegExp(`\\b${id}\\b`), `${id} queue record`);
@@ -610,15 +640,43 @@ test('economic source-family registry is synchronized', () => {
     unavailable.indexOf('## Economic-history acquisition queue'),
     unavailable.indexOf('## Exact primary-record leads'),
   );
-  assert.doesNotMatch(
-    activeEconomicQueue,
-    /\[`E18`\]/,
-    'acquired ILO report must not remain an active economic target',
-  );
+  for (const id of ['E10', 'E11', 'E12', 'E18']) {
+    assert.doesNotMatch(
+      activeEconomicQueue,
+      new RegExp(`\\[\\\`${id}\\\`\\]`),
+      `acquired ${id} source must not remain an active economic target`,
+    );
+  }
   assert.match(
     unavailable,
     /\| `E18` \| 2026-07-26 \|/,
     'acquired ILO report should remain in the resolution history',
+  );
+  for (const id of ['E10', 'E11', 'E12']) {
+    assert.match(
+      unavailable,
+      new RegExp(`\\| \\\`${id}\\\` \\| 2026-07-26 \\|`),
+      `${id} should remain in the resolution history`,
+    );
+  }
+
+  const acquisitionOrder = unavailable.slice(
+    unavailable.indexOf('## Current acquisition order'),
+    unavailable.indexOf('## Priority scholarly books'),
+  );
+  assert.ok(
+    acquisitionOrder.indexOf('| 1 | First-Senate official proceedings') <
+      acquisitionOrder.indexOf(
+        '| 2 | Sixteenth-Majles election and alignment evidence',
+      ),
+    'First Senate should precede Sixteenth-Majles alignment',
+  );
+  assert.ok(
+    acquisitionOrder.indexOf(
+      '| 2 | Sixteenth-Majles election and alignment evidence',
+    ) <
+      acquisitionOrder.indexOf('| 3 | Iranian economic record spine'),
+    'Sixteenth-Majles alignment should precede economic originals',
   );
 
   for (let id = 40; id <= 47; id += 1) {
@@ -699,7 +757,10 @@ test('ignored local archive matches its catalog when present', async () => {
     assert.equal(actualHash, recentSource.hash, recentSource.id);
 
     const sidecar = fs.readFileSync(recentSource.sidecar, 'utf8');
-    assert.match(sidecar, new RegExp(recentSource.id.match(/^SUP-\d{3}/)[0]));
+    assert.match(
+      sidecar,
+      new RegExp(recentSource.id.match(/^(?:MAJ|SUP)-S?\d{2,3}/)[0]),
+    );
   }
 
   for (const collection of recentSourceCollections) {

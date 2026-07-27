@@ -233,12 +233,15 @@ runs:
   audited starting hypothesis.
 - [`SUP-041`](AVAILABLE_SOURCES.md#sup-041), IBRD AS-55 (1957), is the nearest
   acquired retrospective quantitative synthesis.
-- Homa Katouzian, *The Political Economy of Modern Iran* (1981), supplies the
-  principal specialist political-economy interpretation.
-- Julian Bharier, *Economic Development in Iran, 1900–1970* (1971), is a
-  foundational compilation and source map.
-- Gregory Brew, *Petroleum and Progress in Iran* (2022), is the priority
-  modern oil-and-development interpretation.
+- [`MAJ-S16`](AVAILABLE_SOURCES.md#maj-s16), Homa Katouzian, *The Political
+  Economy of Modern Iran* (1981), supplies the principal specialist
+  political-economy interpretation.
+- [`MAJ-S17`](AVAILABLE_SOURCES.md#maj-s17), Julian Bharier, *Economic
+  Development in Iran, 1900–1970* (1971), is a foundational compilation and
+  source map.
+- [`MAJ-S18`](AVAILABLE_SOURCES.md#maj-s18), Gregory Brew, *Petroleum and
+  Progress in Iran* (2022), is the priority modern oil-and-development
+  interpretation.
 - George Baldwin, *Planning and Development in Iran* (1967), Frances Bostock
   and Geoffrey Jones, *Planning and Power in Iran* (1989), and Geoffrey Jones,
   *Banking and Empire in Iran* (1986), cover planning and banking institutions.
