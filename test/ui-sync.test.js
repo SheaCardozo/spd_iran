@@ -136,29 +136,77 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.match(localServer, /'\.jpeg':\s*'image\/jpeg'/);
   assert.match(timeline, /id="the-story-in-brief"/);
   assert.match(timeline, /id="iran-around-1950"/);
+  assert.match(timeline, /id="the-last-opening"/);
+  assert.match(timeline, /id="dates-and-names"/);
   assert.match(
     timeline,
-    /<figure class="historical-figure orientation-map orientation-map-abadan">[\s\S]*?<img src="img\/iran_abadan_map_1950\.jpg"[^>]*loading="lazy">[\s\S]*?<span class="map-locator" aria-hidden="true"><span>Abadan<\/span><\/span>/,
+    /tanks and armed units seized Radio Tehran and other central institutions/,
+  );
+  assert.match(timeline, /last sustained twentieth-century attempt/);
+  assert.match(
+    timeline,
+    /rather than a restoration of parliamentary sovereignty/,
+  );
+  assert.match(
+    timeline,
+    /How did an effort with such broad public authority—capable of nationalizing the oil industry and forcing the crown into retreat—end in a broken coalition, a dissolved parliament, and a coup\?/,
+  );
+  assert.doesNotMatch(timeline, /Why this period matters/);
+  assert.doesNotMatch(timeline, /<h2>19 August 1953<\/h2>/);
+  assert.doesNotMatch(timeline, /This primer is intended for/);
+  assert.doesNotMatch(timeline, /Comparisons to other parliamentary systems/);
+  assert.doesNotMatch(timeline, /The primer covers/);
+  assert.doesNotMatch(timeline, /The title does not mean/);
+  assert.doesNotMatch(timeline, /The Last <span class="term term-parliament">Majles<\/span><\/q> names/);
+  assert.doesNotMatch(timeline, /the text marks those limits/);
+  assert.doesNotMatch(timeline, /This document uses/);
+  assert.doesNotMatch(timeline, /The coalition&#39;s composition and tensions are treated/);
+  assert.doesNotMatch(timeline, /Its controlling text is preserved/);
+  assert.doesNotMatch(timeline, /That is the bridge between/);
+  assert.doesNotMatch(timeline, /The paradox is central/);
+  assert.doesNotMatch(timeline, /Modern locator added/);
+  assert.doesNotMatch(timeline, /a reminder that the oil center/);
+  assert.doesNotMatch(timeline, /The next sections are optional orientation/);
+  assert.match(
+    timeline,
+    /alt="The old Iranian Majles building in Tehran in the 1940s"/,
+  );
+  assert.doesNotMatch(timeline, /alt="The Iranian Majles chamber/);
+  assert.match(timeline, /<strong>Image credits:<\/strong>/);
+  assert.match(timeline, /San Diego Air &amp; Space Museum Archives/);
+  assert.match(
+    timeline,
+    /<figure class="historical-figure orientation-map orientation-map-abadan">[\s\S]*?<img src="img\/iran_abadan_map_1950\.jpg"[^>]*width="1200" height="1320"[^>]*loading="lazy">[\s\S]*?<span class="map-locator" aria-hidden="true"><span>Abadan<\/span><\/span>/,
   );
   assert.match(timeline, /British War Office map, third edition, 1950/);
   assert.match(timeline, /British sheet uses <q>Persia<\/q> for Iran/);
-  for (const filename of [
-    'abadan_workers_1952.jpg',
-    'mossadegh_truman_1951.jpg',
-    'tehran_rally_1953-08-16.jpg',
-    'ferdowsi_tanks_1953-08-19.png',
+  for (const [filename, width, height] of [
+    ['abadan_workers_1952.jpg', 1814, 1256],
+    ['mossadegh_truman_1951.jpg', 3000, 2391],
+    ['tehran_rally_1953-08-16.jpg', 1552, 1113],
+    ['ferdowsi_tanks_1953-08-19.png', 896, 486],
   ]) {
     assert.match(
       timeline,
       new RegExp(
-        `<figure class="historical-figure historical-photo">\\s*<div class="historical-figure-frame">\\s*<img src="img/${filename.replaceAll('.', '\\.')}"[^>]*loading="lazy">`,
+        `<figure class="historical-figure historical-photo">\\s*<div class="historical-figure-frame">\\s*<img src="img/${filename.replaceAll('.', '\\.')}"[^>]*width="${width}" height="${height}"[^>]*loading="lazy">`,
       ),
     );
   }
-  assert.match(timeline, /Workers gathering in support of/);
+  assert.match(timeline, /Workers gather in support of/);
+  assert.match(timeline, /role as a center of organized labor and mass politics/);
+  assert.match(timeline, /public domain in Iran/);
   assert.match(timeline, /at Blair House, Washington, D\.C\., 23 October 1951/);
   assert.match(timeline, /after the first coup attempt failed/);
+  assert.match(
+    timeline,
+    /Wikimedia Commons, which identifies it as a US-government public-domain work/,
+  );
   assert.match(timeline, /Tanks in Ferdowsi Square, Tehran, 19 August 1953/);
+  assert.match(
+    timeline,
+    /US Air Force\/Military Assistance Advisory Group/,
+  );
   assert.match(
     timelineCss,
     /\.historical-figure\s*\{[\s\S]*?break-inside:\s*avoid;/,
@@ -332,11 +380,6 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.match(timeline, /<title>The Last Majles<\/title>/);
   assert.match(timeline, /<strong>The Last Majles<\/strong>/);
   assert.match(timeline, /id="page-title">The Last<br><em>Majles<\/em>/);
-  assert.match(
-    timeline,
-    /does not mean that the Seventeenth <span class="term term-parliament">Majles<\/span> was <span class="term term-country country-iran">Iran<\/span>&#39;s final parliament/,
-  );
-  assert.match(timeline, /last parliament of the comparatively open constitutional struggle/);
   assert.match(timeline, /Decades of opposition to autocratic government and foreign concessions/);
   assert.doesNotMatch(timelineMarkdown, /\bfarman\b/i);
   assert.match(timelineMarkdown, /\bfirman\b/i);
@@ -444,8 +487,14 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.match(timeline, /chapter 6, <q>Approaching the Shah<\/q>/);
   assert.match(timeline, /The immediate dispute concerned the boundary between crown and government/);
   assert.match(timeline, /id="january-1953-emergency-powers-and-open-rupture"/);
+  assert.match(timeline, /and allied deputies opposed extending/);
+  assert.doesNotMatch(timeline, /Abdolqadr Haerizadeh/);
   assert.match(timeline, /their dissent had not yet become a parliamentary majority/);
   assert.match(timeline, /before the summer quorum crisis/);
+  assert.equal(
+    timeline.match(/six months of emergency legislative powers/g)?.length,
+    1,
+  );
   assert.match(timeline, /The embargo narrowed the room in which these disputes could be compromised/);
   assert.match(
     timeline,

@@ -287,6 +287,22 @@ main {
   min-height: 500px;
 }
 
+.hero-image-column {
+  min-width: 0;
+}
+
+.hero-image-credits {
+  max-width: 520px;
+  margin: 12px auto 0;
+  color: var(--muted);
+  font: 12px/1.5 var(--sans);
+  text-wrap: pretty;
+}
+
+.hero-image-credits strong {
+  color: var(--ink);
+}
+
 .hero-main {
   position: absolute;
   inset: 20px 42px 30px 44px;
@@ -1028,7 +1044,7 @@ main {
   .site-header,
   .contents,
   .site-footer,
-  .hero-images {
+  .hero-image-column {
     display: none;
   }
 

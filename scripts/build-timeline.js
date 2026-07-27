@@ -25,6 +25,14 @@ const standaloneAssets = [
   ['assets/img/ferdowsi_tanks_1953-08-19.png', 'img/ferdowsi_tanks_1953-08-19.png'],
 ];
 
+const historicalImageDimensions = {
+  'img/iran_abadan_map_1950.jpg': [1200, 1320],
+  'img/abadan_workers_1952.jpg': [1814, 1256],
+  'img/mossadegh_truman_1951.jpg': [3000, 2391],
+  'img/tehran_rally_1953-08-16.jpg': [1552, 1113],
+  'img/ferdowsi_tanks_1953-08-19.png': [896, 486],
+};
+
 const sources = {
   'maj-s1': 'Azimi, <i>Iran: The Crisis of Democracy</i>',
   'maj-s2': 'Abrahamian, <i>Iran Between Two Revolutions</i>',
@@ -363,10 +371,11 @@ function renderBlocks(lines, options = {}) {
     if (image) {
       const [, alt, source, caption] = image;
       const abadanLocator = source === 'img/iran_abadan_map_1950.jpg';
+      const [width, height] = historicalImageDimensions[source];
       html.push(
         `<figure class="historical-figure${abadanLocator ? ' orientation-map orientation-map-abadan' : ' historical-photo'}">
 <div class="historical-figure-frame${abadanLocator ? ' orientation-map-frame' : ''}">
-<img src="${escapeHtml(source)}" alt="${escapeHtml(alt)}" loading="lazy">
+<img src="${escapeHtml(source)}" alt="${escapeHtml(alt)}" width="${width}" height="${height}" loading="lazy">
 ${abadanLocator ? '<span class="map-locator" aria-hidden="true"><span>Abadan</span></span>' : ''}
 </div>
 <figcaption>${renderInline(caption, {highlight: false})}</figcaption>
@@ -509,7 +518,6 @@ function buildTimeline() {
   const sections = parseSections(markdown);
   const content = sections.map(renderSection).join('\n');
   const nav = sections
-    .filter((section) => section.title !== 'How to read this primer')
     .map((section) => {
       const defaultLabel = section.title.replace(/^\d+\.\s+/, '');
       const label = defaultLabel;

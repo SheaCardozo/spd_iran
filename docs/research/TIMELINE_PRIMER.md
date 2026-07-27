@@ -1,32 +1,29 @@
 # The Last Majles
 
-## How to read this primer
+## The last opening
 
-This primer is intended for a politically interested reader who may know
-little more about Iran than the names Mossadegh and the Shah. It explains
-Iranian constitutional vocabulary and political practice on their own terms.
-Comparisons to other parliamentary systems appear only where they clarify a
-particular mechanism or difference. The primer covers the political
-institutions, social coalitions, oil economy, international confrontation,
-and sequence of events that produced the coup of August 1953. It begins with
-the political opening of 1941, follows the immediate post-coup settlement,
-and carries the consequences forward to 1979.
+On 19 August 1953, tanks and armed units seized Radio Tehran and other central
+institutions, and Mohammad Mossadegh's government fell. The coup ended Iran's
+last sustained twentieth-century attempt to place elected parliament and
+responsible government at the center of national power. The Shah built an
+increasingly centralized dictatorship, and the monarchy's fall in 1979
+brought an Islamic Republic dominated by Khomeini's movement rather than a
+restoration of parliamentary sovereignty. How did an effort with such broad
+public authority—capable of nationalizing the oil industry and forcing the
+crown into retreat—end in a broken coalition, a dissolved parliament, and a
+coup?
+([`MAJ-S1`, chapters 1–3 and 15–20](AVAILABLE_SOURCES.md#maj-s1);
+[`MAJ-S2`, chapters 7–11](AVAILABLE_SOURCES.md#maj-s2);
+[`MAJ-S14`, chapters 6–7 and “History and Contested
+Memories”](AVAILABLE_SOURCES.md#maj-s14)).
 
-The title does not mean that the Seventeenth Majles was Iran's final
-parliament. Later Majles terms continued, but under elections and political
-conditions that became increasingly controlled. “The Last Majles” refers to
-the last parliament of the comparatively open constitutional struggle that
-began after Reza Shah's abdication in 1941
-([`MAJ-S2`, chapters 7–9](AVAILABLE_SOURCES.md#maj-s2);
-[`MAJ-S14`, chapter 7](AVAILABLE_SOURCES.md#maj-s14)).
+### Dates and names
 
-Some dates, headcounts, casualty figures, and covert chains of command cannot
-be reconstructed exactly; the text marks those limits where they matter.
-Dates are Gregorian; familiar Iranian calendar names such as 30 Tir and
-9 Esfand are explained at their first historical appearance.
+Dates are Gregorian. Iranian-calendar dates such as 30 Tir and 9 Esfand are
+paired with Gregorian equivalents when first introduced.
 
-The sources transliterate names in several ways. This document uses
-**Mossadegh**, **Majles**, **Tudeh**, and **National Front** except in titles.
+Names follow the spellings **Mossadegh**, **Majles**, **Tudeh**, and
+**National Front**; published titles retain their original spellings.
 
 ## The story in brief
 
@@ -53,11 +50,6 @@ state. Oil exports returned under a Western consortium. The memory of 1953
 poisoned Iran's relationship with the United States and helped shape, without
 by itself causing, the opposition that overthrew the monarchy in 1979.
 
-> The next sections are optional orientation dossiers on Iranian society,
-> constitutional power, elections, and the oil economy. Readers who prefer to
-> meet those institutions as the crisis unfolds can [begin the chronology with
-> the oil concession and the 1941 political opening](#1-before-mossadegh-concession-dictatorship-and-political-opening).
-
 ## Iran around 1950
 
 Iran was territorially large, mostly rural, and difficult to govern evenly.
@@ -69,7 +61,7 @@ Soviet-backed autonomous movements. Distance, poor communications, and strong
 local institutions meant that a decision made in Tehran did not automatically
 become power in every province.
 
-![A 1950 British War Office map of Iran, with Abadan marked in the southwest beside Iraq and the Persian Gulf](../../assets/img/iran_abadan_map_1950.jpg "Iran in 1950. Abadan lies on the Shatt al-Arab in the far southwest, beside Iraq and near the head of the Persian Gulf. The British sheet uses “Persia” for Iran. British War Office map, third edition, 1950; cropped from the public-domain sheet. Modern locator added.")
+![A 1950 British War Office map of Iran, with Abadan marked in the southwest beside Iraq and the Persian Gulf](../../assets/img/iran_abadan_map_1950.jpg "Iran in 1950. Abadan lies on the Shatt al-Arab in the far southwest, beside Iraq and near the head of the Persian Gulf. The British sheet uses “Persia” for Iran. British War Office map, third edition, 1950; cropped from the public-domain sheet. A modern marker identifies Abadan.")
 
 Most rural families were tenant sharecroppers, landless laborers, or members
 of tribal communities rather than independent proprietors. Landlords, tribal
@@ -105,7 +97,10 @@ without a modern mass party
   included veteran constitutional politicians, the secular Iran Party,
   journalists such as Hossein Fatemi, bazaar-connected politicians, and,
   initially, Ayatollah Abol-Qasem Kashani and his supporters. Its breadth
-  enabled mass mobilization but made coherent government difficult.
+  enabled mass mobilization but made coherent government difficult
+  ([`MAJ-S2`, chapter 5](AVAILABLE_SOURCES.md#maj-s2);
+  [`MAJ-S14`, chapter 1, “Mosaddeq and the National
+  Front”](AVAILABLE_SOURCES.md#maj-s14)).
 - **The Tudeh Party:** Iran's large communist party, with important labor,
   student, intellectual, and clandestine military networks. It initially
   denounced Mossadegh as insufficiently anti-imperialist and later supported
@@ -133,10 +128,6 @@ without a modern mass party
 - **The United States:** initially attempted mediation while also supporting
   economic and covert pressure. Under the Eisenhower administration, it
   joined Britain in deciding that Mossadegh should be removed.
-
-The coalition's composition and tensions are treated in
-[`MAJ-S2`, chapter 5](AVAILABLE_SOURCES.md#maj-s2) and
-[`MAJ-S14`, chapter 1, “Mosaddeq and the National Front”](AVAILABLE_SOURCES.md#maj-s14).
 
 ## Political map: how power worked
 
@@ -276,6 +267,8 @@ control of an industrial welfare system—not only the royalty rate
 [`MAJ-S14`, chapter 1](AVAILABLE_SOURCES.md#maj-s14);
 [`SUP-055`, pp. 31–38](AVAILABLE_SOURCES.md#sup-055)).
 
+![A dense crowd of workers carrying flags at a pro-Mossadegh gathering in Abadan](../../assets/img/abadan_workers_1952.jpg "Workers gather in support of Mohammad Mossadegh in Abadan, 11 January 1952. The gathering shows Abadan's role as a center of organized labor and mass politics. Published in *Tehran Mosavvar*, no. 439; Wikimedia Commons records the photograph as public domain in Iran.")
+
 ### What nationalization had to accomplish
 
 Nationalization transferred legal ownership to Iran, but ownership alone could
@@ -312,8 +305,6 @@ oil was indefinitely sustainable, but they constituted an economic program
 rather than passive endurance
 ([`MAJ-S18`, pp. 120–28](AVAILABLE_SOURCES.md#maj-s18);
 [`SUP-057`, pp. 187–88](AVAILABLE_SOURCES.md#sup-057)).
-
-![A dense crowd of workers carrying flags at a pro-Mossadegh gathering in Abadan](../../assets/img/abadan_workers_1952.jpg "Workers gathering in support of Mohammad Mossadegh in Abadan, published in *Tehran Mosavvar*, no. 439, 11 January 1952; public domain.")
 
 ## 1. Before Mossadegh: concession, dictatorship, and political opening
 
@@ -392,8 +383,8 @@ cooperation became the National Front.
 Oil was not the coalition's only, or initially even its principal, demand. It
 soon joined two questions that became inseparable: Iranian sovereignty over
 the country's most important natural resource and constitutional government
-free of royal and foreign interference. The precise day of the palace protest
-is uncertain, so the sequence is dated only to October 1949
+free of royal and foreign interference. Sources place the palace protest on
+differing dates in October 1949
 ([`MAJ-S1`, pp. 207–08](AVAILABLE_SOURCES.md#maj-s1);
 [`MAJ-S2`, chapter 5](AVAILABLE_SOURCES.md#maj-s2)).
 
@@ -404,8 +395,9 @@ created an eighteen-member oil committee that included five National Front
 deputies and made Mossadegh its chair. The committee gave this small,
 organized delegation a platform from which procedural work, public pressure,
 and the unifying oil question could attract deputies who did not belong to the
-Front. That is the bridge between the palace protest and the much broader
-parliamentary coalition that later approved nationalization
+Front. The committee allowed the small National Front delegation to turn
+procedural work, public pressure, and the oil question into a much broader
+parliamentary coalition for nationalization
 ([`MAJ-S2`, chapter 5, especially pp. 250–67](AVAILABLE_SOURCES.md#maj-s2);
 [`MAJ-S14`, chapter 1](AVAILABLE_SOURCES.md#maj-s14)).
 
@@ -436,9 +428,9 @@ mid-March, and the Senate approved it on 20 March
 ([`MAJ-S14`, chapter 1, pp. 36–38](AVAILABLE_SOURCES.md#maj-s14)).
 
 The legislation did not merely demand better royalties. It nationalized the
-industry throughout Iran. A subsequent nine-article law established the
-implementation mechanism. Its controlling text is preserved in
-[`SUP-006`, printed pp. 15–16](AVAILABLE_SOURCES.md#sup-006).
+industry throughout Iran. A subsequent nine-article law set out how
+nationalization would be implemented
+([`SUP-006`, printed pp. 15–16](AVAILABLE_SOURCES.md#sup-006)).
 
 ### April–May 1951: Mossadegh becomes prime minister
 
@@ -599,14 +591,13 @@ coalition's breakup
 ## 5. The coalition fractures, 1952–1953
 
 30 Tir restored Mossadegh at the head of a coalition that had won the
-same battle for different reasons. The victory exposed tensions that already
-existed. Mossadegh took the Defense Ministry, selected a cabinet weighted
-toward loyal Iran Party and technocratic figures, curtailed court influence,
-and obtained six months of delegated lawmaking power. Former lieutenants soon
-disputed appointments and access: Mozaffar Baghai and Hossein Makki believed
-newer figures had received offices that they had earned, while Ayatollah
-Abol-Qasem Kashani challenged appointments and government intrusions into
-clerical, bazaar, and patronage networks
+same battle for different reasons. His cabinet, weighted toward loyal Iran
+Party and technocratic figures, and his efforts to curtail court influence
+exposed tensions that already existed. Former lieutenants soon disputed
+appointments and access: Mozaffar Baghai and Hossein Makki believed newer
+figures had received offices that they had earned, while Ayatollah Abol-Qasem
+Kashani challenged appointments and government intrusions into clerical,
+bazaar, and patronage networks
 ([`MAJ-S2`, pp. 271–76](AVAILABLE_SOURCES.md#maj-s2);
 [`MAJ-S3`, pp. 103–06](AVAILABLE_SOURCES.md#maj-s3);
 [`MAJ-S6`, pp. 164–67](AVAILABLE_SOURCES.md#maj-s6)).
@@ -667,9 +658,9 @@ substantially on liaison through the CIA
 
 ### January 1953: emergency powers and open rupture
 
-The coalition's rupture became public when Kashani, Baghai, Makki, and
-Abdolqadr Haerizadeh opposed extending Mossadegh's delegated lawmaking powers
-for another year. The deputies abstained when the issue was tied to
+The coalition's rupture became public when Kashani, Baghai, Makki, and allied
+deputies opposed extending Mossadegh's delegated lawmaking powers for another
+year. The deputies abstained when the issue was tied to
 confidence, which Mossadegh still won by 59 votes to 1. The result showed both
 that the former allies had openly broken and that their dissent had not yet
 become a parliamentary majority
@@ -793,8 +784,8 @@ dismiss him directly
 [`MAJ-S14`, chapter 5](AVAILABLE_SOURCES.md#maj-s14);
 [`SUP-015`, pp. 275, 278](AVAILABLE_SOURCES.md#sup-015)).
 
-The paradox is central: Mossadegh weakened parliament while trying to defend
-parliamentary government.
+Mossadegh thus weakened parliament while trying to defend parliamentary
+government.
 
 ## 8. The coup, 15–19 August 1953
 
@@ -826,7 +817,7 @@ planned, and the operation collapsed.
 The Shah fled first to Baghdad and then Rome. Crowds pulled down royal statues.
 The government appeared to have won.
 
-![A large pro-Mossadegh demonstration with flags and banners in Tehran](../../assets/img/tehran_rally_1953-08-16.jpg "A pro-Mossadegh demonstration in Tehran on 16 August 1953, after the first coup attempt failed. Photograph by William Arthur Cram; US-government public-domain photograph via Wikimedia Commons.")
+![A large pro-Mossadegh demonstration with flags and banners in Tehran](../../assets/img/tehran_rally_1953-08-16.jpg "A pro-Mossadegh demonstration in Tehran on 16 August 1953, after the first coup attempt failed. Photograph by William Arthur Cram, via Wikimedia Commons, which identifies it as a US-government public-domain work.")
 
 ### 17–18 August: the failed plan gives way to improvisation
 
@@ -856,7 +847,7 @@ the center. They attacked pro-government newspapers and National Front
 institutions. Police and military units that might have suppressed them stood
 aside or joined.
 
-![Tanks positioned in Ferdowsi Square in Tehran on 19 August 1953](../../assets/img/ferdowsi_tanks_1953-08-19.png "Tanks in Ferdowsi Square, Tehran, 19 August 1953. Photograph by Stephen Langlie, USAF/MAAG; public domain.")
+![Tanks positioned in Ferdowsi Square in Tehran on 19 August 1953](../../assets/img/ferdowsi_tanks_1953-08-19.png "Tanks in Ferdowsi Square, Tehran, 19 August 1953. Photograph by Stephen Langlie, US Air Force/Military Assistance Advisory Group; public domain.")
 
 The decisive phase was military. Pro-Shah officers and units deployed tanks
 and occupied the telegraph office, police headquarters, and radio station.
