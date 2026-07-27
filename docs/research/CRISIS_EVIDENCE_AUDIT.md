@@ -93,7 +93,10 @@ specific, but its author and informants are not identified and Britain was a
 participant in the operation. It is therefore a contemporary operational
 estimate, not a neutral master chronology. It should be read alongside
 Rahnema's full reconstruction (`MAJ-S5`, pp. 138–288), the Gasiorowski chapter
-in `MAJ-S4`, pp. 227–80, and the two CIA internal histories in `SUP-022`.
+in `MAJ-S4`, pp. 227–80, the two CIA internal histories in `SUP-022`, and
+Randjbar-Daemi's focused reconstruction of Radio Tehran (`SUP-060`, journal
+pp. 280–87), which uses contemporaneous BBC and FBIS monitoring as well as
+Persian sources.
 
 | Approximate time | Event | Assessment |
 | --- | --- | --- |
@@ -101,8 +104,9 @@ in `MAJ-S4`, pp. 227–80, and the two CIA internal histories in `SUP-022`.
 | **Morning** | One column threatened the bazaar, prompting closure. Trucks and buses moved demonstrators around the city. Police increasingly sympathized with or directed crowds. Government orders for dispersal were delayed or disobeyed. | **Firm in outline.** Doc. 362; `MAJ-S5`, coup-day chapters. |
 | **9:00 a.m.–noon** | Pro-government party offices and about six supporting newspapers were attacked, followed by Tudeh newspaper offices. | **Probable exact interval.** Doc. 362, para. 8. The particular six-paper set still needs an issue-by-issue and address-level reconstruction. |
 | **By midday** | Soldiers, armored vehicles, and tanks appeared. Some fired; many joined the royalist movement. From this point military defection and control of coercive institutions were more important than raw crowd size. | **Firm.** Doc. 362; `SUP-022`; `MAJ-S4`, Gasiorowski, pp. 227–80. |
-| **About 2:30 p.m.** | Zahedi's followers took the radio station and broadcast false reports of complete victory and Fatemi's death, then read the royal decree. | **Firm on capture and broadcast; the memorandum supplies the minute.** Doc. 362, para. 8. |
-| **2:30–4:00 p.m.** | General Staff headquarters and government offices were captured; Zahedi established himself at Central Police headquarters. | **Firm in outline.** Doc. 362. |
+| **About 2:00–2:30 p.m.** | Coup forces ended government control of Radio Tehran and began using the station. The British memorandum gives about 2:30 for capture; broadcast-monitoring evidence places the end of government control by about 2:00. | **Firm on the transition; the exact minute is source-dependent.** `SUP-049`, doc. 362, para. 8; `SUP-060`, pp. 284–86. |
+| **2:30–4:00 p.m.** | General Staff headquarters and government offices were captured; Zahedi established himself at Central Police headquarters. Radio speakers progressively presented the takeover as complete. | **Firm in outline.** `SUP-049`; `SUP-060`. |
+| **About 4:45–4:55 p.m.** | Radio Tehran announced that Mossadegh's house had fallen and Fatemi was dead, although neither claim was true. Zahedi then spoke and read the royal appointment decree. | **Firm broadcast sequence.** `SUP-060`, pp. 284–86. The earlier British memorandum compresses station capture, the false reports, and the decree into its 2:30 entry; do not silently choose one clock. |
 | **Afternoon–about 6:00 p.m.** | Crowds and then pro-Zahedi troops attacked Mossadegh's residence. Early assaults were repelled with lethal fire. Tanks later bombarded the house; its defense collapsed, and the house was looted and burned. Mossadegh escaped and surrendered the next day. | **Firm in outline; unresolved casualty allocation.** Doc. 362; `MAJ-S5`, pp. 138–288. |
 
 The sequence shows three overlapping phases rather than one homogeneous
@@ -113,6 +117,14 @@ the station's own post-operation memorandum acknowledged that many people
 joining the movement were not under its control (FRUS 2018 second edition,
 doc. 306). “Completely spontaneous uprising” and “every person in the street
 was a paid CIA agent” are both contradicted by the record.
+
+`SUP-060` also shows why the radio is a mechanism rather than background
+flavor. Its premature victory claims could demoralize resistance and create
+the appearance of completed state control before Mossadegh's residence had
+fallen. It records royalist politicians, clerical associates, party figures,
+and provincial claimants taking the microphone, while finding no senior
+representative of Grand Ayatollah Borujerdi. These are observed broadcasts,
+not proof that every speaker organized or financed the street action.
 
 ### Casualty findings
 

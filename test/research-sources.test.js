@@ -158,6 +158,16 @@ const recentSourceFiles = [
       'SUP-059-majles-special-oil-commission-minutes.md',
     hash: '6db3ebeef1ecfee703a7f130d12c7b56b1d398579a6c0ddd9c3d3e22507bf985',
   },
+  {
+    id: 'SUP-060',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-060-randjbar-daemi-2024-radio-tehran-coup.html',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-060-randjbar-daemi-2024-radio-tehran-coup.md',
+    hash: 'a7d8ca87da6dcfcdc135d24caf7c9ae2e340e4f0da33b9170ca2ee42ac286266',
+  },
 ];
 const recentSourceCollections = [
   {
@@ -661,7 +671,7 @@ test('economic source-family registry is synchronized', () => {
   }
 
   const acquisitionOrder = unavailable.slice(
-    unavailable.indexOf('## Current acquisition order'),
+    unavailable.indexOf('## Residual acquisition order'),
     unavailable.indexOf('## Priority scholarly books'),
   );
   assert.ok(

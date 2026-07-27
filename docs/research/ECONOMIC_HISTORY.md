@@ -251,8 +251,12 @@ runs:
   institutions but requires explicit treatment of the author's British-policy
   role and comparison with later scholarship.
 - M. G. Majd, “The 1951–53 Oil Nationalization Dispute and the Iranian
-  Economy: A Rejoinder” (1995), is the required direct methodological
-  challenge to S9.
+  Economy: A Rejoinder” (1995), is the most direct published methodological
+  challenge to S9. It remains desirable, but the
+  [online substitution audit](ONLINE_SUBSTITUTION_AUDIT_2026-07-26.md)
+  explains why it is no longer a general blocker: primary and institutional
+  observations, their vintages, and the acquired book-length interpretations
+  must control the model rather than either article's verdict.
 - The Afshar, Khosropour, and Moghadam dissertations must be acquired because
   S9's GNP, exchange-control, and AIOC-account figures depend on them.
 - William Bartsch and Julian Bharier, *The Economy of Iran, 1940–1970: A

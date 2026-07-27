@@ -16,12 +16,19 @@ for both available and unavailable works are in
   establish metadata and research priority, but cannot support a historical
   claim in the game.
 
+The user has indicated that the present priority acquisitions may not be
+practical. The
+[`online substitution audit`](ONLINE_SUBSTITUTION_AUDIT_2026-07-26.md)
+therefore controls implementation planning: none of the items below is a
+general blocker. Each becomes blocking only when a proposed claim needs the
+specific missing granularity recorded in that audit.
+
 When a source is acquired, record the exact edition and file provenance in
 `AVAILABLE_SOURCES.md`, update its access status in `BIBLIOGRAPHY.md`, move its
 queue entry into the resolved table below, and add page or chapter locators
 only after the text has been checked.
 
-## Current acquisition order
+## Residual acquisition order
 
 This is the recommended order for the next substantial acquisitions. It ranks
 remaining evidence gaps by their effect on current parliamentary, economic,
@@ -29,14 +36,14 @@ and event reconstruction; it is not a ranking of scholarly prestige.
 
 | Rank | Acquisition target | Why it comes next | Minimum useful delivery |
 | --- | --- | --- | --- |
-| 1 | First-Senate official proceedings | The membership roster is local, but precise upper-chamber debate, attendance, procedure, and divisions remain the clearest parliamentary blocker. | Sessions 84, 91–92, 95, 125, and 190–193, with session 192 first for the six-month powers measure. |
+| 1 | First-Senate official proceedings | The membership roster and an outcome-level substitute are local, but precise upper-chamber debate, attendance, procedure, and divisions remain the clearest parliamentary precision gap. | Sessions 84, 91–92, 95, 125, and 190–193, with session 192 first for the six-month powers measure. |
 | 2 | Sixteenth-Majles election and alignment evidence | The official roster, credentials, debates, oil-commission minutes, and one scholarly chapter are local, but they do not allocate the majority member by member or fully explain electoral sponsorship. This is the largest remaining gap in the election-centered parliamentary reconstruction. | The deputy-statistics and religious-election chapters of [`S25`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining), plus all or the two named documents from [`P15`](BIBLIOGRAPHY.md#p15), `FO 371/75466`. |
-| 3 | Iranian economic record spine | Katouzian, Bharier, Brew, IMF, UN, IBRD, and ILO are now local. The interpretive foundation is adequate for research, but exact mechanics still require the underlying Iranian monetary, fiscal, trade, and oil-company record. | Bank Melli bulletins and annual accounts for 1949–55, Customs annual series for 1329–1333, Treasury cash/closed accounts, and NIOC 1330–1332 balance sheets or the three-year operational account. |
+| 3 | Iranian economic record spine | Katouzian, Bharier, Brew, IMF, UN, IBRD, and ILO are now local. Directional and range-based mechanics are supportable; account-exact mechanics still require the underlying Iranian monetary, fiscal, trade, and oil-company record. | Bank Melli bulletins and annual accounts for 1949–55, Customs annual series for 1329–1333, Treasury cash/closed accounts, and NIOC 1330–1332 balance sheets or the three-year operational account. |
 | 4 | Thirty Tir and Nineteen August event records | Aggregate narratives are strong enough for a primer, but organizer networks, locality, payment attribution, and casualty definitions remain uneven. | [`S24`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining), especially pp. 465–66 and its documentary apparatus, followed by opposing full newspaper issues for 17–24 July 1952 and 15–22 August 1953. |
-| 5 | Remaining scholarly foundations | The three priority economic monographs are now local; the largest remaining scholarly gaps are Persian oil-legal analysis, a direct adversarial economic article, and company-history interpretation. | Movahed volume I first; then Majd [`E13`](BIBLIOGRAPHY.md#economic-history-source-families), Bamberg under [`E19`](BIBLIOGRAPHY.md#economic-history-source-families), and Chaqueri volumes 12 and 17. |
-| 6 | World Bank mediation folders | The finding aid and institutional summaries are local, but the secret negotiation sequence and meeting memoranda are still absent. | Folders `1806451`–`1806454`, `1806448`, and `1806457`, preserving folder IDs and disclosure metadata. |
+| 5 | Remaining scholarly foundations | The three priority economic monographs are now local. These works would improve Persian legal synthesis, direct adversarial economic comparison, company-history interpretation, and private Tudeh documentation, but the audit identifies workable bundles for each. | Movahed volume I first; then Majd [`E13`](BIBLIOGRAPHY.md#economic-history-source-families), Bamberg under [`E19`](BIBLIOGRAPHY.md#economic-history-source-families), and Chaqueri volumes 12 and 17. |
+| 6 | World Bank mediation folders | The Bank's own reports, oral histories, FRUS sequence, and open scholarly dispute now support a bounded negotiation reconstruction; the secret sequence and meeting memoranda remain absent. | Folders `1806451`–`1806454`, `1806448`, and `1806457`, preserving folder IDs and disclosure metadata. |
 
-### Immediate request shortlist
+### Shortlist if an acquisition route unexpectedly becomes available
 
 If placing discrete reproduction, library, or database requests now, use this
 sequence:
@@ -52,7 +59,8 @@ sequence:
 5. Torkamān's *Qīām-e mellī-e sīom-e Tīr*, especially pp. 465–66, its casualty
    lists, document reproductions, and bibliography.
 6. Majd's 1995 rejoinder (`E13`), the quickest high-value scholarly acquisition
-   and the required direct challenge to the Clawson–Sassanpour interpretation.
+   and the most direct published challenge to the Clawson–Sassanpour
+   interpretation.
 
 ## Priority scholarly books
 
@@ -62,7 +70,7 @@ acquired core bibliographies and specialist reference bibliographies.
 | Bibliography ID | Source | Priority and purpose | Acquisition requirement |
 | --- | --- | --- | --- |
 | [`S17`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Mohammad Ali Movahed, *Khab-e Ashofteh-ye Naft*, 2 vols. | **Critical:** Persian legal and oil-history foundation | Volume II, revised second edition, is [`MAJ-S10`](AVAILABLE_SOURCES.md#maj-s10). No accessible volume-I PDF was found; retail/catalog records identify ISBN `978-964-431-023-2`. Acquire an identified volume-I file or scan. |
-| [`S20`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Cosroe Chaqueri, ed., *Historical Documents: The Workers', Social-Democratic, and Communist Movement in Iran*, 23 vols. (1969–94) | **High:** documentary corpus for the Iranian left | [`SUP-011`](AVAILABLE_SOURCES.md#sup-011) partially resolves the set with retypeset volumes 1–6 and legacy scans of volumes 3, 8, 19, and 20. Acquire original-edition facsimiles and remaining volumes, prioritizing 12 and 17. |
+| [`S20`](BIBLIOGRAPHY.md#priority-leads-from-cross-reference-mining) | Cosroe Chaqueri, ed., *Historical Documents: The Workers', Social-Democratic, and Communist Movement in Iran*, 23 vols. (1969–94) | **High:** documentary corpus for the Iranian left | [`SUP-011`](AVAILABLE_SOURCES.md#sup-011) partially resolves the set with retypeset volumes 1–6 and legacy scans of volumes 3, 8, 19, and 20. Acquire original-edition facsimiles and remaining volumes, prioritizing vol. 12 and the title *The Record of Mossadegh and the Tudeh Party*. The latter is vol. 17 in the newer Persian edition history but appears as “vol. 18, part 1” in Chicago's microfilm list, so number-only requests are unsafe. |
 
 ## Sixteenth-Majles membership and election evidence
 

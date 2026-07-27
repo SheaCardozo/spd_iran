@@ -845,6 +845,28 @@ collections being assigned concurrently.
   chamber proceedings (`SUP-007`), enacted law (`SUP-006`), and specialist
   scholarship; it is not a chamber-wide ideological register.
 
+<a id="sup-060"></a>
+### SUP-060 — Randjbar-Daemi, “Radio Tehran and the 19 August 1953 Coup”
+
+- **Status:** Acquired open-access publisher full text; local-only.
+- **Bibliography:** [`S26`](BIBLIOGRAPHY.md#reviewed-focused-scholarship).
+- **Local source:** [HTML](sources/supplemental/SUP-060-randjbar-daemi-2024-radio-tehran-coup.html)
+  · [metadata](sources/supplemental/SUP-060-randjbar-daemi-2024-radio-tehran-coup.md).
+- **Publication:** Siavush Randjbar-Daemi, “Radio Tehran and the 19 August
+  1953 Coup: A New Perspective,” *International Journal of Middle East
+  Studies* 56, no. 2 (2024), pp. 280–287,
+  DOI `10.1017/S0020743824000588`.
+- **Provenance:** Complete
+  [Cambridge Core article page](https://www.cambridge.org/core/journals/international-journal-of-middle-east-studies/article/radio-tehran-and-the-19-august-1953-coup-a-new-perspective/A14B87CC76133EFE9FF86C88B3E01AAD);
+  the [St Andrews repository record](https://hdl.handle.net/10023/30732)
+  identifies peer-review status and CC BY 4.0 rights.
+- **SHA-256:** `a7d8ca87da6dcfcdc135d24caf7c9ae2e340e4f0da33b9170ca2ee42ac286266`.
+- **Role:** Focused reconstruction of government and coup control of Radio
+  Tehran using Persian material and contemporaneous BBC and FBIS monitoring.
+  Strong for broadcast timing, named speakers, misinformation, and the spread
+  of station capture; not a substitute for a general coup history, casualty
+  ledger, or payment record.
+
 ## Additional supplemental scholarship
 
 <a id="sup-048"></a>

@@ -120,6 +120,28 @@ Truman–Churchill Proposals,” *British Journal of Middle Eastern Studies*
 peer-reviewed scholarly argument and precise archival locator, not a neutral
 substitute for the folders.
 
+An open scholarly exchange now makes the interpretive disagreement inspectable
+even without the folders:
+
+- Homa Katouzian, “The Anglo-Iranian oil crisis revisited: Iran's rejection
+  of the World Bank intervention and the 1953 coup” (published online 2022),
+  argues that rejection was a grave and avoidable error.
+- Gorjestani's 2024 response argues from cited Bank files and FRUS that the
+  proposal would have returned operational control to AIOC under the Bank's
+  cover and that Iran was justified in rejecting it.
+- Katouzian's open 2024 rejoinder disputes both the evidence selection and the
+  counterfactual.
+- Gorjestani's 2026 rejoinder again prioritizes contemporaneous official
+  records over later recollection.
+
+This exchange does not resolve the counterfactual and must not be collapsed
+into a consensus. Joined to `SUP-026` and FRUS docs. 117–169, however, it is a
+workable substitute for proposal terms, technical findings, sticking points,
+and competing interpretations. The unavailable folders remain necessary for
+meeting-specific quotations, internal annotations, full calculations, and
+confident private-motive attribution. See the
+[`online substitution audit`](ONLINE_SUBSTITUTION_AUDIT_2026-07-26.md).
+
 No historical game claim is approved merely because a folder is listed here.
 Implementation still requires review of the underlying item, a precise
 document/page locator, and comparison with Iranian and other interested
