@@ -281,11 +281,22 @@ runs:
 | [`SUP-055`](AVAILABLE_SOURCES.md#sup-055) | ILO oil-industry field report (1950) | Pre-nationalization labor and welfare baseline |
 | [`SUP-057`](AVAILABLE_SOURCES.md#sup-057) | Selected IMF IFS vintages, 1950–54 | Contemporary Bank Melli-submission and revision checks |
 | [`SUP-058`](AVAILABLE_SOURCES.md#sup-058) | UN Middle East surveys, 1949/50–1951/52 | Contemporary regional and Iranian-series cross-checks |
+| [`SUP-063`](AVAILABLE_SOURCES.md#sup-063) | National Archives of Iran oil-negotiation records | Official documentary leads for negotiation positions; cite the individual report and Ministry of Finance identifier |
+| [`SUP-066`](AVAILABLE_SOURCES.md#sup-066) | Two certified 23 July 1951 Council of Ministers records | Formal cabinet deliberation and decisions during the Harriman talks, not a continuous cabinet series |
+| [`SUP-069`](AVAILABLE_SOURCES.md#sup-069) | Finance-to-cabinet oil-expense approval chain | Discovery copy for one numbered administrative decision; official carrier verification remains pending |
+| [`SUP-078`](AVAILABLE_SOURCES.md#sup-078) | Ebtehaj, *Memoirs*, vols. I–II | Interested economic-administrator testimony awaiting page-level extraction and institutional comparison |
+| [`SUP-081`](AVAILABLE_SOURCES.md#sup-081)–[`SUP-082`](AVAILABLE_SOURCES.md#sup-082) | Bazargan collected works and memoir | Participant evidence for the dispossession mission and NIOC administration, not a substitute for accounts or aggregate series |
 | [`MAJ-S16`](AVAILABLE_SOURCES.md#maj-s16) | Katouzian, *Political Economy of Modern Iran* | Book-length political-economy interpretation |
 | [`MAJ-S17`](AVAILABLE_SOURCES.md#maj-s17) | Bharier, *Economic Development in Iran* | Long-run data and definition audit |
 | [`MAJ-S18`](AVAILABLE_SOURCES.md#maj-s18) | Brew, *Petroleum and Progress in Iran* | Modern oil, development, and archive-based interpretation |
 
 ## Immediate extraction sequence
+
+The first bounded extraction is complete: selected annual 1948–52 and monthly
+January 1952–June 1953 observations from the August 1953 `SUP-057` Iran sheets
+are recorded in [`economic_observations/`](economic_observations/README.md).
+They preserve the contemporary report vintage and are not yet a reconciled
+time series.
 
 1. Extract every S9 table, footnote datum, definition, transformation, and
    underlying source into the observation ledger.
@@ -295,9 +306,14 @@ runs:
 4. Transcribe the 1332 budget's legal continuity clauses and schedules, then
    connect each cited older appropriation or emergency measure to Majles,
    cabinet, and gazette records.
-5. Request the exact Bank Melli and Customs runs from LOC and the identified
+5. Extract the checked administrative sequence from `SUP-063`, `SUP-066`,
+   `SUP-069`, and `SUP-081`–`SUP-082`; keep formal decisions, participant
+   recollection, and later editorial compilation as separate evidence layers.
+6. Use `SUP-078` only after its relevant printed pages are visually checked
+   and compared with Bank Melli, IBRD, IMF, cabinet, and ministry records.
+7. Request the exact Bank Melli and Customs runs from LOC and the identified
    Japanese holdings.
-6. Add distributional evidence before characterizing adjustment as successful
+8. Add distributional evidence before characterizing adjustment as successful
    or sustainable for the population.
 
 No gameplay model should be inferred from this sequence. A later design review

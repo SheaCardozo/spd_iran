@@ -1,5 +1,7 @@
 /node_modules
 /out
+/.tools/
+__pycache__/
 /AGENTS.md
 .DS_Store
 npm-debug.log*

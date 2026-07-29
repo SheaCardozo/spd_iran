@@ -130,6 +130,270 @@ true.
 - **Planned use:** Iran Party, National Front leadership, coalition decisions,
   and internal political memory.
 
+<a id="sup-071"></a>
+### SUP-071 — Ahmad Zirakzadeh, *Porsesh-hā-ye bī-pāsokh dar sāl-hā-ye estesnāʾī*
+
+- **Status:** Supplement; acquired and edition-verified; substantive review
+  pending.
+- **Archive:** [`SUP-071` available-source record](AVAILABLE_SOURCES.md#sup-071).
+- **Publication:** Edited by Abolhassan Zia-Zarifi and Khosrow Saidi (Tehran:
+  Entesharat-e Niloufar, first printing, winter 1376 SH / 1997–98), ISBN
+  `9644480368`.
+- **Author expertise and standing:** Zirakzadeh was a French-trained engineer,
+  founder and secretary-general of the Iran Party, National Front organizer,
+  and Seventeenth-Majles deputy. His standing is that of a central participant
+  with direct access to party and coalition politics, not that of a detached
+  historian.
+- **Evidence and language:** Persian retrospective memoir edited for
+  publication more than forty years after the events.
+- **Trust and limitations:** Strong for Zirakzadeh's remembered experience,
+  political vocabulary, and account of the Iran Party and National Front.
+  Personal investment, retrospective compression, and possible later
+  factional interpretation require comparison with party documents,
+  proceedings, correspondence, press, other participants, and specialist
+  histories.
+- **Project use:** Planned adviser and coalition prosopography, Iran Party
+  decision leads, and counterfactual decision points. Use a printed page and
+  identify the passage as participant testimony; no implemented claim
+  currently relies on it.
+
+<a id="sup-072"></a>
+### SUP-072 — Gholam-Hossein Sadighi, final interview
+
+- **Status:** Supplement; acquired and pamphlet-sequence verified;
+  substantive review pending.
+- **Archive:** [`SUP-072` available-source record](AVAILABLE_SOURCES.md#sup-072).
+- **Publication:** Interview by Hamid Seifzadeh, *Ākharin mosāhebeh-ye Doktor
+  Gholāmhossein Sadighi* (Chap-e Towhid, spring 1371 SH / 1992).
+- **Speaker expertise and standing:** Sadighi was a Sorbonne-trained
+  sociologist, University of Tehran professor, National Front politician, and
+  Mossadegh's minister of the interior. He combines scholarly social analysis
+  with direct cabinet and security responsibility, but speaks as an involved
+  participant.
+- **Evidence and language:** Persian memorial pamphlet presenting Sadighi's
+  final interview.
+- **Trust and limitations:** Valuable for Sadighi's remembered constitutional
+  reasoning and assessment of the National Movement. The late date, memorial
+  framing, and unestablished recording and transcription history prevent
+  treating it as a contemporaneous or necessarily verbatim record.
+- **Project use:** Planned character voice and decision-analysis lead. Compare
+  with `SUP-074`, `SUP-075`, contemporary records, and opposing testimony; no
+  implemented claim currently relies on it.
+
+<a id="sup-073"></a>
+### SUP-073 — Ardeshir Zahedi, *Panj ruz-e bohrāni*
+
+- **Status:** Supplement; acquired and electronic edition verified;
+  substantive review pending.
+- **Archive:** [`SUP-073` available-source record](AVAILABLE_SOURCES.md#sup-073).
+- **Publication:** Compiled by Amir Qorbani, *Tarikh-e Shafahi* no. 1
+  (electronic ed., Shahrivar 1395 SH / September 2016), republishing
+  Zahedi's earlier recollections.
+- **Author expertise and standing:** Ardeshir Zahedi was Fazlollah Zahedi's son
+  and aide and directly participated in the successful coup network. His
+  access to the Zahedi group is exceptional; his later diplomatic career and
+  identification with the Pahlavi monarchy do not turn his account into
+  independent scholarship.
+- **Evidence and language:** Persian retrospective participant narrative. The
+  modern electronic compilation is not a facsimile of the original
+  *Ettelaʿat-e Mahaneh* publication and has little critical apparatus.
+- **Trust and limitations:** Important for the people, meetings, assignments,
+  and movements Zahedi says he witnessed. Its royalist legitimating frame,
+  self-justifying interests, and likely minimization of foreign direction
+  require line-by-line comparison with contemporary and opposing evidence.
+- **Project use:** Planned coup-side decision and contingency leads. Treat
+  operational detail as Zahedi's testimony until corroborated; no implemented
+  claim currently relies on it.
+
+<a id="sup-074"></a>
+### SUP-074 — Sadighi–Nejati interview summary
+
+- **Status:** Supplement; complete web transcription acquired; original print
+  images remain wanted for claim-level verification.
+- **Archive:** [`SUP-074` available-source record](AVAILABLE_SOURCES.md#sup-074).
+- **Print transmission:** Summary of eleven Gholamreza Nejati interviews with
+  Sadighi in *Jonbesh-e melli shodan-e sanat-e naft-e Iran*, 3rd ed.
+  (1366 SH / 1987–88), pp. 532–537; reproduced by Parviz Varjavand in *Hameh
+  hasti-am nesar-e Iran* (Chapakhsh, 1372 SH / 1993–94), pp. 141–148.
+- **Speaker and editor standing:** Sadighi's expertise and direct role are
+  described under `SUP-072`. Nejati was an interviewer and documentary
+  historian of the National Movement; his publication supplies the surviving
+  summarized text but is not independent corroboration of Sadighi.
+- **Evidence and language:** Persian web transcription of a printed
+  retrospective interview summary.
+- **Trust and limitations:** Useful for Sadighi's broad causal framework and
+  answers concerning preparedness. It compresses eleven sessions, was
+  transmitted by sympathetic editors, and is not the full interview record.
+  Iranchehr is only the carrier; its framing is not historical authority.
+- **Project use:** Research hypotheses for institutional and coalition failure
+  and leads for decision mechanics. Check the named printed pages before
+  quotation; no implemented claim currently relies on it.
+
+<a id="sup-075"></a>
+### SUP-075 — Sadighi's written account of 28–29 Mordad 1332
+
+- **Status:** Supplement; complete web transcription acquired; original print
+  images remain wanted for claim-level verification.
+- **Archive:** [`SUP-075` available-source record](AVAILABLE_SOURCES.md#sup-075).
+- **Print transmission:** Written by Sadighi at Gholamreza Nejati's request
+  and printed in the third edition of *Jonbesh-e melli shodan-e sanat-e
+  naft-e Iran*; reproduced by Parviz Varjavand in *Hameh hasti-am nesar-e
+  Iran* (Chapakhsh, 1372 SH / 1993–94), pp. 119–140.
+- **Author standing:** Sadighi was the serving interior minister and therefore
+  an unusually important witness to the government's information, police
+  command, appointments, and response. His responsibility also gives him
+  strong reasons to explain or defend government choices after the fact.
+- **Evidence and language:** Persian retrospective written narrative with
+  hour-by-hour times, reported dialogue, and numbered notes.
+- **Trust and limitations:** High-value testimony for what Sadighi says he
+  perceived and did, but not a contemporaneous log. Exact times, quotations,
+  attribution, and omissions require checks against records, other witnesses,
+  radio and press chronology, declassified operational material, and
+  specialist histories.
+- **Project use:** Planned 28-Mordad event chronology and cabinet-response
+  research. Cite the print edition after image verification; no implemented
+  claim currently relies on it.
+
+<a id="sup-078"></a>
+### SUP-078 — Abolhassan Ebtehaj, *Khāterāt-e Abolhassan Ebtehāj*
+
+- **Status:** Supplement; acquired and two-volume sequence verified;
+  substantive review pending.
+- **Archive:** [`SUP-078` available-source record](AVAILABLE_SOURCES.md#sup-078).
+- **Publication:** Edited by Alireza Oruzi (Tehran: Entesharat-e Elmi, first
+  printing, spring 1371 SH / 1992), two volumes with continuous pagination
+  through p. 900.
+- **Author expertise and standing:** Ebtehaj was a senior banker and economic
+  administrator with direct access to Bank Melli, international financial
+  institutions, the court, and successive Iranian governments. This gives
+  him exceptional participant knowledge of elite relationships and economic
+  administration, but not the independence of a later archival historian.
+- **Evidence and language:** Persian retrospective memoir edited for
+  publication; complete-looking image scan without OCR.
+- **Trust and limitations:** Strong for Ebtehaj's remembered experience,
+  institutional vocabulary, and leads to specific people or decisions.
+  Retrospection, self-justification, editorial selection, and his own
+  institutional interests require comparison with Bank Melli, World Bank,
+  IMF, cabinet, ministry, and correspondence records and with specialist
+  economic histories.
+- **Project use:** Planned economic-administration and adviser decision
+  research. Cite a checked printed page and identify participant testimony as
+  such; no implemented claim currently relies on it.
+
+<a id="sup-079"></a>
+### SUP-079 — Hossein Makki, *Tārikh-e bīst sāleh-ye Irān*, volume V
+
+- **Status:** Supplement; acquired and scan sequence verified; substantive
+  review pending.
+- **Archive:** [`SUP-079` available-source record](AVAILABLE_SOURCES.md#sup-079).
+- **Publication:** *Estehkām-e diktātori-ye Pahlavi* (Tehran: Nashr-e Nasher,
+  1362 SH / 1983–84), printed pagination through p. 515.
+- **Author expertise and standing:** Makki combined prolific historical
+  writing with direct political participation as a Majles deputy, National
+  Front organizer, oil-nationalization figure, and later opponent of
+  Mossadegh. He is an important participant-documentarian, not a detached
+  scholarly authority.
+- **Evidence and language:** Persian political history using Makki's
+  documentary selection and narrative; complete-looking image scan without
+  OCR.
+- **Trust and limitations:** Potentially valuable for reproduced documents,
+  political vocabulary, and Makki's interpretation. Document provenance must
+  be checked individually, and his partisan evolution and polemical
+  investments require comparison across political positions and with
+  specialist histories. Volume V concerns Reza Shah's consolidation, not the
+  oil crisis or 1953 coup.
+- **Project use:** Background for the authoritarian order whose weakening
+  made the post-1941 opening possible. It does not replace Makki's missing
+  political memoir, *Vaqāyeʿ-e Sī Tir*, or *Khalʿ-e yad* volumes, and it is
+  distinct from the incomplete coup account in `SUP-080`; no implemented
+  claim currently relies on it.
+
+<a id="sup-080"></a>
+### SUP-080 — Hossein Makki, *Kūdetā-ye 28 Mordād 1332 va rūydādhā-ye motaʿāqeb-e ān*
+
+- **Status:** Supplement; incomplete scan acquired and its gap verified;
+  substantive review pending.
+- **Archive:** [`SUP-080` available-source record](AVAILABLE_SOURCES.md#sup-080).
+- **Publication:** Tehran: Entesharat-e Elmi, first printing, 1378 SH /
+  1999–2000; ISBN `964-404-023-6`; printed pagination through p. 514.
+- **Author expertise and standing:** Makki's parliamentary,
+  oil-nationalization, National Front, and later anti-Mossadegh roles gave him
+  direct access to important actors and events. They make him a consequential
+  participant witness and political documentarian, not a neutral historian.
+- **Evidence and language:** Persian retrospective participant narrative and
+  documentary presentation. The available image scan omits printed
+  pp. 425–440. A complete OCR derivative covers the 509 available carrier
+  pages for discovery but cannot restore the missing interval.
+- **Trust and limitations:** Valuable for Makki's remembered sequence,
+  political vocabulary, and leads to named documents. His changing political
+  alignments, polemical interests, retrospective construction, and the
+  carrier's sixteen-page gap require comparison with contemporary Iranian and
+  foreign records, other participant positions, and specialist histories.
+  The missing interval cannot support a quotation, negative inference, or
+  reconstructed claim.
+- **Project use:** Planned Makki-side comparison for the 28-Mordad chronology,
+  National Front fracture, and immediate aftermath. Cite a visually checked
+  printed page and identify it as participant testimony; no implemented claim
+  currently relies on it.
+
+<a id="sup-081"></a>
+### SUP-081 — Mehdi Bazargan, *Majmūʿeh-ye āsār*, volume 34
+
+- **Status:** Supplement; official collection acquired; oil sections located
+  and sampled.
+- **Archive:** [`SUP-081` available-source record](AVAILABLE_SOURCES.md#sup-081).
+- **Publication:** Mehdi Bazargan Cultural Foundation, comp. and ed.,
+  *Majmūʿeh-ye āsār (34): Mabāhes-e tārīkhī va siyāsī* (Tehran, Bahman 1401
+  SH / January–February 2023).
+- **Author expertise and standing:** Bazargan was a French-trained engineer,
+  University of Tehran professor, chair of the temporary board sent to
+  implement dispossession, and the first managing director of the
+  nationalized oil company. He later became a major religious-nationalist
+  political leader. For the dispossession operation he is an exceptionally
+  well-placed participant, not an independent academic historian.
+- **Evidence and language:** Persian contemporary speeches, reproduced
+  contemporary press, later interviews, photographs, and documents compiled
+  by the Bazargan Foundation. The searchable publisher PDF requires visual
+  checking because right-to-left text extraction corrupts some numerals.
+- **Trust and limitations:** Distinguish contemporary speech from late
+  recollection and foundation compilation. Bazargan's administrative role and
+  later political commitments create both access and self-presentational
+  interests. A speech reproduced from Makki's *Khalʿ-e yad* is evidence
+  transmitted through Makki, not independent support for Makki.
+- **Project use:** Second-best participant evidence for the operational
+  history of oil dispossession, government instructions, negotiation with
+  AIOC managers, staffing problems, and participant disagreement. Planned
+  claim ranges are printed pp. 33–69 and 399–432; no implemented claim
+  currently relies on it.
+
+<a id="sup-082"></a>
+### SUP-082 — Nejati, *Khāterāt-e Bāzargān*, volume I
+
+- **Status:** Supplement; participant memoir acquired and relevant chapter
+  located.
+- **Archive:** [`SUP-082` available-source record](AVAILABLE_SOURCES.md#sup-082).
+- **Publication:** Gholamreza Nejati, interview/editor, *Khāterāt-e Bāzargān:
+  shast sāl khedmat va moqāvemat*, vol. I (Tehran: Mo'asseseh-ye Khadamat-e
+  Farhangi-ye Rasa, fourth printing, 1375 SH / 1996), ISBN
+  `964-317-249-X`.
+- **Author expertise and standing:** The testimony is Bazargan's, whose
+  temporary-oil-board role gave him direct operational access. Nejati was a
+  military officer, National Movement participant, interviewer, and prolific
+  modern-Iran documentarian. The volume is a participant memoir mediated
+  through Nejati's questions and editing, not a scholarly monograph or a
+  contemporary administrative record.
+- **Evidence and language:** Persian late-life interview narrative in an
+  image scan. Chapter seven, printed pp. 267–386, covers Bazargan's entry into
+  politics; the oil-dispossession section begins at p. 273.
+- **Trust and limitations:** Late recollection, self-justification, question
+  framing, editorial selection, and the damaged PDF carrier require caution.
+  Exact pages must be checked visually and compared with Bazargan's
+  contemporary speeches, official records, other participant positions, and
+  specialist scholarship.
+- **Project use:** A fuller participant narrative supplementing `SUP-081` for
+  the oil mission and internal disagreements. No implemented claim currently
+  relies on it.
+
 ## Acquired official and contemporary primary records
 
 <a id="sup-006"></a>
@@ -493,6 +757,34 @@ the audit decisions are in `SOURCE_AUDIT.md`.
 | S13 | Firoozeh Kashani-Sabet, “The Other Fight” (2024) | **Supplement.** Penn's Annenberg Professor of History and an established scholar of Iranian history, nationalism, and gender: <https://web.sas.upenn.edu/endowed-professors/kashani-sabet/>. | **Acquired:** [`SUP-015`](AVAILABLE_SOURCES.md#sup-015), open-access Cambridge publisher PDF. Cite exact pages and follow its Persian primary-source notes. |
 | S26 | Siavush Randjbar-Daemi, “Radio Tehran and the 19 August 1953 Coup: A New Perspective” (2024) | **Supplement.** Peer-reviewed focused reconstruction by a specialist historian of modern Iran. Its use of Persian sources with contemporaneous BBC and FBIS monitoring makes it unusually strong for broadcast timing and communications control; it does not answer the wider casualty, payment, or organizer questions. | **Acquired and used:** [`SUP-060`](AVAILABLE_SOURCES.md#sup-060), unchanged open Cambridge full-text HTML with a St Andrews CC BY 4.0 rights record. Used in the crisis evidence audit for the radio-takeover clock, named speakers, and misinformation; cite journal pages or stable section/footnote locators. |
 
+## Identified decision-making, regional, and ethnopolitical sources
+
+These sources were identified for future adviser, cabinet, foreign-actor,
+regional, and ethnopolitical systems. Where a record says “accessible,” an
+authoritative or author-supplied full text was located online; the individual
+record separately states whether it has been archived, read, or approved for
+claim-level use.
+
+| ID | Source | Expertise, standing, and limitations | Access and planned role |
+| --- | --- | --- | --- |
+| <a id="s27"></a>S27 | Mary Ann Heiss, *Empire and Nationhood: The United States, Great Britain, and Iranian Oil, 1950–1954* (Columbia University Press, 1997), ISBN `9780231108195` | University-press monograph by an established historian of U.S. foreign relations. Its sustained diplomatic reconstruction is especially valuable for separating British and U.S. preferences; its state-centered focus must be compared with Iranian political and social histories. | **Unavailable locally.** [Publisher record](https://cup.columbia.edu/book/empire-and-nationhood/9780231108195/). Planned as a detailed cross-check for Anglo-American bargaining, vetoes, and policy change; useful rather than presently blocking. |
+| <a id="s28"></a>S28 | Jack Taylor, *Oil, Nationalism and British Policy in Iran: The End of Informal Empire, 1941–53* (Bloomsbury Academic, 2023), 240 pp. | Recent scholarly monograph based on British archival material. It is useful for testing how British officials understood declining informal power, but is a focused national-policy study and should supplement, not displace, established Iran specialists and Iranian evidence. | **Unavailable locally.** [Publisher record](https://www.bloomsbury.com/uk/oil-nationalism-and-british-policy-in-iran-9781350321199/). Planned as a modern British-policy cross-check before implementing durable preferences for individual officials. |
+| <a id="s29"></a>S29 | Vladislav M. Zubok, “Stalin, Soviet Intelligence, and the Struggle for Iran, 1945–53,” *Diplomatic History* 44, no. 1 (2020): 22–46, DOI `10.1093/dh/dhz049` | Peer-reviewed article by an established specialist in Soviet and Cold War history. Its Soviet-intelligence focus directly addresses the corpus's weakest great-power perspective; it must still be compared with Iranian communist history and not be converted into a claim that Moscow controlled every Tudeh act. | **Accepted manuscript acquired and initially reviewed:** [`SUP-083`](AVAILABLE_SOURCES.md#sup-083). Soviet intelligence, diplomatic, Stalin, and Molotov records support a passive and mistrustful Soviet policy in 1951–53, not automatic control of Tudeh activity or a general guarantee against intervention in an extreme counterfactual. |
+| <a id="s30"></a>S30 | Mark J. Gasiorowski, “U.S. Perceptions of the Communist Threat in Iran during the Mossadegh Era,” *Journal of Cold War Studies* 21, no. 3 (2019): 185–221, DOI `10.1162/jcws_a_00898` | Peer-reviewed study by a long-standing specialist in Iranian politics and U.S.–Iran relations. It is authoritative for reconstructing what U.S. officials perceived and how those perceptions changed, not for proving that the perceived communist threat was objectively correct. | **Author PDF acquired and initially reviewed:** [`SUP-084`](AVAILABLE_SOURCES.md#sup-084). Printed pp. 185–86 and 216–21 distinguish formidable Tudeh capabilities from evidence of an imminent early-1953 takeover and make the Truman–Eisenhower policy change a contingent variable rather than an automatic reaction. |
+| <a id="s31"></a>S31 | Fulya Özkan, “Turkish Foreign Policy during the Iranian Oil Crisis, 1951–1953,” *New Perspectives on Turkey* 72 (2025): 51–69, published online 2024, DOI `10.1017/npt.2024.15` | Peer-reviewed focused study using Turkish diplomatic archives. It is appropriate for Turkey's diplomacy and proposed mediation, but cannot by itself establish Iranian motives or a broad regional system; the author's argument and archive selection require comparison with Iranian and other diplomatic evidence. | **Open publisher PDF acquired and initially reviewed:** [`SUP-085`](AVAILABLE_SOURCES.md#sup-085). Turkey's official tilt toward Britain coexisted with distinct NATO, regional-alliance, and anti-communist interests and intermittent support for Mossadegh as a pro-American stabilizing figure. |
+| <a id="s32"></a>S32 | Lois Beck, *The Qashqa'i of Iran* (Yale University Press, 1986), xvi + 384 pp., ISBN `0300032129`; and *Nomads in Postrevolutionary Iran: The Qashqa'i in an Era of Change* (Routledge, 2015), 430 pp. | Foundational and longitudinal anthropological work by a specialist who has conducted sustained Qashqai fieldwork since 1969. Her unusual access supports social organization, leadership, migration, and relations with the state. Retrospective field evidence and internal access do not make every reported political memory contemporaneous or uncontested. | **Later monograph acquired; foundational volume unavailable.** [`MAJ-S19`](AVAILABLE_SOURCES.md#maj-s19) provides direct but brief evidence for the khans' National Front alignment, the tribal political hierarchy, and post-coup punishment at PDF pp. 24, 66, 73–74, and 118 / printed pp. xxiii, 39, 46–47, and 91. The mainly post-1979 book narrows the Qashqai gap but does not replace the [1986 volume](https://openlibrary.org/works/OL4085819W/The_Qashqa%27i_of_Iran) for 1941–54 social structure and political capacity. |
+| <a id="s33"></a>S33 | Touraj Atabaki, *Azerbaijan: Ethnicity and Autonomy in Twentieth-Century Iran* (British Academic Press, 1993), revised as *Azerbaijan: Ethnicity and the Struggle for Power in Iran* (I.B. Tauris, 2000); Turkish trans. Hojjat Ghasemlou, *Azerbaycan: Etnisite ve İran'da İktidar Mücadelesi* (Tarih Vakfı Yurt Yayınları, 2021), ISBN `9789753333856` | Book-length specialist history by an established scholar of Iran, ethnicity, labor, and state formation. Atabaki combines Iranian, Azerbaijani, Soviet, British, U.S., Dutch, press, memoir, and interview evidence to connect provincial society with centralization and the 1945–46 autonomy crisis. Its oral evidence and interpretation still require comparison, and the book does not continuously cover 1949–53. | **Acquired in complete Turkish translation:** [`MAJ-S21`](AVAILABLE_SOURCES.md#maj-s21). Initial locators: pp. 71–80 for centralization and homogenization; pp. 81–122 for the post-1941 opening; pp. 123–60 for the Azerbaijan Democratic Party; pp. 161–216 for the autonomous government; and pp. 217–30 for the conclusion. This closes the focused structural acquisition gap. The malformed Bölükbaşı package remains quarantined as [`SUP-065`](AVAILABLE_SOURCES.md#sup-065). |
+| <a id="s34"></a>S34 | Louise L'Estrange Fawcett, *Iran and the Cold War: The Azerbaijan Crisis of 1946* (Cambridge University Press, 1992; later reprint ISBN `9780521104739`) | Specialist university-press diplomatic history by a scholar of international relations and the Middle East. Strong for multi-state crisis reconstruction, but its diplomatic emphasis requires comparison with Iranian Azerbaijani social and political history. | **Unavailable locally.** [Publisher front matter](https://assets.cambridge.org/97805211/04739/frontmatter/9780521104739_frontmatter.pdf). Preferred acquisition for the international decision sequence of the 1946 crisis. |
+| <a id="s35"></a>S35 | Jamil Hasanli, *At the Dawn of the Cold War: The Soviet-American Crisis over Iranian Azerbaijan, 1941–1946* (Rowman & Littlefield, 2006), ISBN `9780742540552` | Large archival study by a historian of Azerbaijani and Cold War history using Soviet, Azerbaijani, Iranian, and Western material. Its national and political context should be compared with Atabaki, Fawcett, and Iranian specialists rather than treated as a neutral final account. | **Unavailable locally.** [Publisher record](https://www.bloomsbury.com/uk/at-the-dawn-of-the-cold-war-9780742570900/). Alternative or complement to S34 for Soviet and Azerbaijani decision-making. |
+| <a id="s36"></a>S36 | Farideh Koohi-Kamali, *The Political Development of the Kurds in Iran: Pastoral Nationalism* (Palgrave Macmillan, 2003), xv + 254 pp., DOI `10.1057/9780230535725` | Book-length specialist political history based on doctoral research into Iranian Kurdish society, tribal change, nationalism, and state formation. Its political-economy interpretation and broad chronology should be tested against focused histories and contemporary records; it does not by itself resolve individual actors' choices in 1949–53. | **Acquired:** [`MAJ-S20`](AVAILABLE_SOURCES.md#maj-s20), a complete searchable publisher-layout ebook with stable print pagination. Chapter 4, pp. 89–125, supports the Mahabad institutional inheritance; chapter 6, pp. 165–96, distinguishes later Kurdish organizations and social bases. It supports a structural model, not a single “Kurdish” faction or exact 1953 mobilization. |
+| <a id="s37"></a>S37 | Nimrod Zagagi, “An Oasis of Radicalism: The Labor Movement in Abadan in the 1940s,” *Iranian Studies* 53, nos. 5–6 (2020): 847–872, DOI `10.1080/00210862.2020.1733393` | Peer-reviewed focused research on underground labor organization in Abadan. Its narrow local and pre-nationalization scope is an advantage for that question, but it remains supplemental to Ladjevardi's book, the ILO report, and contemporaneous labor evidence. | **Unavailable locally.** [Journal record](https://www.cambridge.org/core/journals/iranian-studies/article/abs/an-oasis-of-radicalism-the-labor-movement-in-abadan-in-the-1940s/98BB1A12D63679DDF31D62088B2808B1). Medium priority for connecting class, migration, locality, and organization in Abadan. |
+| <a id="s38"></a>S38 | Lois Beck, *Iran's Minorities: Ethnic and Religious Politics in a Nationalizing State* (Cambridge University Press, 2026), 400 pp., ISBN `9781009072618` | Announced broad synthesis by an established anthropologist of Iran. It may offer a valuable comparative frame across ethnic and religious communities, but its text and scholarly reception were not inspectable in this reconciliation; the title alone cannot support any claim. | **Not yet inspectable locally.** [Publisher record](https://www.cambridge.org/core/books/irans-minorities/B246AAA652BDD7B25C48871093CB190F). Future audit source, lower priority than the focused works above. |
+| <a id="s39"></a>S39 | Suha Bölükbaşı, *Azerbaijan: A Political History* (I.B. Tauris, 2011; ebook 2013), ISBN `9780857737625` | Scholarly political history by an international-relations specialist focused on Soviet and post-Soviet Azerbaijan. It may supply comparative Caucasus and Soviet-Azerbaijani background, but its state, chronology, and subject are not Iranian Azerbaijan. | **Malformed local package quarantined:** [`SUP-065`](AVAILABLE_SOURCES.md#sup-065). Its package metadata falsely identifies Atabaki's Iranian-Azerbaijan book while its actual contents identify Bölükbaşı. Do not cite until authenticated against the [publisher record](https://www.bloomsbury.com/uk/azerbaijan-9780857737625/), and never substitute it for `S33`. |
+| <a id="p18"></a>P18 | Iranian Council of Ministers minutes and Mossadegh-era cabinet decision records | A primary-record family rather than a single edition: official minutes, agendas, executive instruments, circulated memoranda, ministerial correspondence, and authenticated documentary editions. Institutional records control what was formally proposed or resolved, while their silence does not prove that no informal discussion occurred. Public legal output, private deliberation, correspondence, and retrospective testimony are different evidence layers. | **Partially acquired; continuous series unconfirmed.** [`SUP-066`](AVAILABLE_SOURCES.md#sup-066) prints the two certified 23 July 1951 cabinet records filed in the ICJ case, and [`SUP-067`](AVAILABLE_SOURCES.md#sup-067) authenticates their deposit; [`SUP-062`](AVAILABLE_SOURCES.md#sup-062) supplies oral context. [`SUP-068`](AVAILABLE_SOURCES.md#sup-068) preserves submission rules, [`SUP-069`](AVAILABLE_SOURCES.md#sup-069) a proposal chain, and [`SUP-070`](AVAILABLE_SOURCES.md#sup-070) custody evidence; [`SUP-063`](AVAILABLE_SOURCES.md#sup-063) preserves three NLAI oil-negotiation reports; and [`SUP-064`](AVAILABLE_SOURCES.md#sup-064) is Torkaman's edited collection of 553 Mossadegh letters. [`SUP-010`](AVAILABLE_SOURCES.md#sup-010), document 78, local PDF p. 287 / printed p. 250, adds a U.S. cable reporting Hossein Ala's account of a Finance Minister warning inside the 10 June 1952 cabinet meeting, but not the Iranian minute or full debate. No complete online run of minutes, agendas, attendance, submissions, or inter-ministerial correspondence was found. Use the [claim-level substitute stack](SECOND_BEST_EVIDENCE_STACKS_2026-07-29.md#1-iranian-cabinet-and-prime-ministry-records); seek archival originals only when a scene requires private ministerial conduct. |
+| <a id="p19"></a>P19 | Harvard Iranian Oral History Project | Institutionally preserved oral-history collection founded and directed by Habib Ladjevardi. The selected narrators were participants or close witnesses, making their testimony important for remembered motives, relationships, appointments, and factional conflict. The interviews were recorded roughly three decades after the crisis and remain interested, memory-dependent evidence rather than neutral transcripts of private decisions. | **Selected interviews acquired; focused review completed:** [`SUP-061`](AVAILABLE_SOURCES.md#sup-061) preserves complete Harvard transcript facsimiles for Karim Sanjabi, Nosratollah Amini, Mehdi Azar, and Mozaffar Baghai, plus the seven-tape Mohammad Nasser Qashqai audio interview. Official facsimile passages on election administration, ministerial appointments, and National Front formation are reviewed in [`SUBSTANTIVE_SOURCE_REVIEW_2026-07-29.md`](SUBSTANTIVE_SOURCE_REVIEW_2026-07-29.md#sup-061-selected-harvard-oral-histories). The pass is focused, not cover-to-cover. The full 6.20-hour Qashqai delivery has a fixed-Persian machine discovery transcript; a candidate episode is fixed at tape 2, 00:56:23–00:57:33, but is not quotation-cleared without Persian-speaking human listening. A separately preserved third-party transcript remains a search aid only. Use the exact speaker, official tape and verified timecode or transcript page, interview date, and question context; always compare with contemporary records. Sanjabi's interview and `SUP-005` memoir are not independent corroboration unless their textual relationship is established. |
+| <a id="p20"></a>P20 | Participant memoirs and political documentary editions for National Front, clerical, court, economic-administration, and coup-side decision-making | First-person memoirs and edited messages can expose remembered meetings, relationships, political vocabulary, and decisions that institutional files omit. Their authority comes from participant access or identified underlying documents, not authorial neutrality. Late recollection, self-justification, factional transmission, selective editing, and partisan repositories require comparison across positions and with contemporary records and specialist books. | **Partially acquired:** Zirakzadeh is [`SUP-071`](AVAILABLE_SOURCES.md#sup-071); Sadighi's final interview and two Nejati-transmitted texts are [`SUP-072`](AVAILABLE_SOURCES.md#sup-072), [`SUP-074`](AVAILABLE_SOURCES.md#sup-074), and [`SUP-075`](AVAILABLE_SOURCES.md#sup-075); Zahedi is [`SUP-073`](AVAILABLE_SOURCES.md#sup-073); and Ebtehaj's combined two-volume memoir is [`SUP-078`](AVAILABLE_SOURCES.md#sup-078). Makki's background and incomplete coup volumes are [`SUP-079`](AVAILABLE_SOURCES.md#sup-079)–[`SUP-080`](AVAILABLE_SOURCES.md#sup-080). Bazargan's official collected works and Nejati-mediated memoir are [`SUP-081`](AVAILABLE_SOURCES.md#sup-081)–[`SUP-082`](AVAILABLE_SOURCES.md#sup-082). Makki's political memoir and *Vaqāyeʿ-e Sī Tir*, Qashqai's diary, Amir-Alai's rebuttal, and Kashani volumes I–II remain unavailable. The [Qashqai substitute stack](SECOND_BEST_EVIDENCE_STACKS_2026-07-29.md#3-mohammad-nasser-qashqai-salhā-ye-bohrān) supports relationships and broad choices but not the diary's dated entries; acquire it only for diary-specific chronology or wording. Kashani volumes III–V and the two Makki oil volumes have access-controlled readers; their residual value is bounded in the [Ketabnak substitute-evidence map](KETABNAK_SECOND_BEST_ALTERNATIVES_2026-07-29.md). |
+| <a id="p21"></a>P21 | U.S. Consulate Tabriz reporting, 1951–1953 | A primary-record family consisting of Department of State post reporting and CIA summaries that explicitly attribute observations to the Tabriz consulate. These records are authoritative for what U.S. officials transmitted or believed, not for the objective truth of local estimates, political labels, source claims, or public opinion. CIA digests compress the source chain further and must not be described as original consular dispatches. | **Partially acquired:** [`SUP-076`](AVAILABLE_SOURCES.md#sup-076) and [`SUP-077`](AVAILABLE_SOURCES.md#sup-077) preserve two declassified CIA summaries; [`SUP-010`](AVAILABLE_SOURCES.md#sup-010), documents 114 and 233, preserves three further dated references in the official FRUS edition. Together they support limited observations about a July 1951 communist-front demonstration, August 1952 Tudeh meetings, a January 1953 military-security alarm, and public pro- and anti-Mossadegh activity in spring 1953. The underlying Tabriz messages were not found online. See the [record search and archival route](US_CONSULATE_TABRIZ_RECORD_SEARCH_2026-07-28.md). |
+
 ## Economic-history source families
 
 These records support a model-neutral reconstruction of the economic story.
@@ -521,7 +813,7 @@ visible.
 | E13 | M. G. Majd, “The 1951–53 Oil Nationalization Dispute and the Iranian Economy: A Rejoinder” (1995) | The most direct published challenge to the S9 interpretation. It is a desirable point-by-point methodological audit, not a replacement primary foundation and no longer a general implementation blocker because the project can preserve the interpretive dispute through the acquired institutional observation ledger and book-length scholarship. | **Unavailable locally.** *Middle Eastern Studies* 31, no. 3: 449–59, DOI `10.1080/00263209508701063`; see the [`online substitution audit`](ONLINE_SUBSTITUTION_AUDIT_2026-07-26.md). |
 | E14 | National Iranian Oil Company and Iranian oil-sector accounts, 1951–54 | Contemporaneous institutional primary evidence for production, refining, inventories, domestic sales, receipts, employment, payroll, borrowing, and operations. NIOC's reporting interests, changing definitions, and incomplete publication history require comparison with Iranian fiscal records, company records, and independent scholarship. | **Unavailable locally.** No cataloged published 1951–54 annual-report run was found. The 9 Azar 1333 Majles record instead points to High Council-approved internal balance sheets and a requested three-year operational account. Acquire those balance sheets, council minutes, auditor reports, internal schedules, the NIOC statement read in session, and the later published account if it survives. See the [`online search audit`](ECONOMIC_RECORD_SEARCH_2026-07-26.md#nioc). |
 | E15 | Plan Organization First Plan laws, reports, project records, and later reviews | The responsible Iranian planning institution's records control what was authorized, committed, spent, delayed, or cancelled. Plans and retrospective reviews must not be conflated with cash execution or completed work. | **Unavailable locally.** Acquire the First Plan law, project register, annual reports, expenditure records, the five-volume 1949 Overseas Consultants report, and the later review cataloged as CiNii `BA73180213`. |
-| E16 | IMF, *International Financial Statistics*, *Balance of Payments Yearbook*, and *Direction of International Trade*, 1950–55 vintages | Contemporary institutional compilations preserve Bank Melli submissions, international definitions, partner trade, and revision history. Fund categories and later revisions are evidence to audit, not a seamless substitute for the underlying Iranian series. | **Partially acquired and selectively used:** [`SUP-057`](AVAILABLE_SOURCES.md#sup-057) contains December 1950, December 1951, August 1953, and December 1954 IFS issues selected from an open 70-issue 1950–55 run. The primer cites August 1953, printed pp. 187–88, for the June certificate-rate chronology. Acquire an intervening issue only when a specific month or revision requires it; the yearbooks and trade serial remain wanted. |
+| E16 | IMF, *International Financial Statistics*, *Balance of Payments Yearbook*, and *Direction of International Trade*, 1950–55 vintages | Contemporary institutional compilations preserve Bank Melli submissions, international definitions, partner trade, and revision history. Fund categories and later revisions are evidence to audit, not a seamless substitute for the underlying Iranian series. | **Partially acquired and selectively used:** [`SUP-057`](AVAILABLE_SOURCES.md#sup-057) contains December 1950, December 1951, August 1953, and December 1954 IFS issues selected from an open 70-issue 1950–55 run. The primer cites August 1953, printed pp. 187–88, for the June certificate-rate chronology. Five image-checked Iran tables now cover the 1951 shutdown, the pre-coup position, and the first post-coup year at printed pp. 63, 100–01, and 108–09; they preserve issue-specific revisions in [`economic_observations/`](economic_observations/README.md). Acquire an intervening issue only when a specific month or revision requires it; the yearbooks and trade serial remain wanted. |
 | E17 | United Nations Middle East economic surveys, trade yearbooks, and *World Energy Supplies, 1951–1954* | Official contemporary cross-checks for Iranian fiscal, trade, monetary, and energy series. Their value lies in independent transcription and stated sources; regional standardization and later compilation can obscure Iranian definitions. | **Partially acquired:** [`SUP-058`](AVAILABLE_SOURCES.md#sup-058) contains the official 1949/50, 1950/51, and 1951/52 Middle East surveys; [`SUP-047`](AVAILABLE_SOURCES.md#sup-047) supplies a later Bank Melli-sourced checksum. The 1952/53 survey is indexed but its current full-text endpoint is broken. Trade yearbooks and *World Energy Supplies* remain wanted. |
 | E18 | International Labour Office, *Labour Conditions in the Oil Industry in Iran* (1950) | An official field-mission report and the priority pre-nationalization source for workforce, wages, hours, safety, housing, health, welfare, and unions. Its institutional frame, partial dependence on AIOC-supplied information, and 1950 observation date limit later-crisis inference. | **Acquired and partially used:** complete official ILO *Studies and Reports*, New Series no. 24 PDF as [`SUP-055`](AVAILABLE_SOURCES.md#sup-055). Printed pp. 31–38 are reviewed and cited for Abadan housing and essential-supply conditions; systematic review of the remaining chapters is pending. |
 | E19 | Anglo-Iranian Oil Company, *Annual Reports and Accounts*, 1950–53; J. H. Bamberg, *The History of the British Petroleum Company*, vol. 2 (Cambridge University Press, 1994) | A deliberately paired but distinct evidence family: interested corporate primary reports plus a later specialist archival company history. Cite each item separately and compare production, employment, royalties, taxation, reserves, and policy with NIOC, ILO, UN, and Iranian scholarship. | **Unavailable locally.** Acquire the complete annual reports and Bamberg volume; do not collapse their different authorship or evidentiary roles into one citation. |
@@ -545,9 +837,9 @@ below; presence does not turn an unread work into claim-level evidence.
 | S18 | Mostafa Elm, *Oil, Power, and Principle: Iran's Oil Nationalization and Its Aftermath* (Syracuse University Press, 1992) | Scholarly monograph by an Iranian economist and former diplomat, providing a sustained Iranian perspective on nationalization, negotiations, embargo, and aftermath. Its political judgments and retrospective causal claims require comparison with Movahed, Abrahamian, and archival records. | **Acquired and used:** [`MAJ-S12`](AVAILABLE_SOURCES.md#maj-s12), complete reflowable EPUB with notes and index. The primer cites named nationalization and negotiation chapters; use chapter/section locators because print pagination is absent. |
 | S19 | Sepehr Zabih, *The Communist Movement in Iran* (University of California Press, 1966) | Foundational book-length study of Iranian communism by a political scientist specializing in Iran. Zabih used Persian and Soviet primary material and consulted the Melli, Majles, Hoover, New York Public, Library of Congress, and British Museum collections. Its Cold War framing, terminology, and age require comparison with Abrahamian, Ladjevardi, Chaqueri, and later Persian-source scholarship. | **Acquired:** [`MAJ-S15`](AVAILABLE_SOURCES.md#maj-s15), complete 305-page searchable scan. Initial use: Tudeh ban, Sixteenth-Majles election context, National Front competition, and front organizations, pp. 161–75. |
 | S20 | Cosroe Chaqueri, ed., *Historical Documents: The Workers', Social-Democratic, and Communist Movement in Iran*, 23 vols. (1969–94) | Large multilingual documentary edition assembled by a historian of the Iranian left; unusually valuable for otherwise scattered movement records. Individual documents and editorial decisions require scrutiny. | **Partially acquired:** [`SUP-011`](AVAILABLE_SOURCES.md#sup-011) has retypeset volumes 1–6 and legacy scans of volumes 3, 8, 19, and 20. The full corpus, especially volume 12, *Secret Tudeh Documents during Mossadegh*, and volume 17, *The Record of Mossadegh and the Tudeh Party*, remains wanted. A Chicago microfilm list labels the latter material “vol. 18, part 1,” while the newer Persian edition history assigns the consolidated work to vol. 17; request by title as well as number. See the [`online substitution audit`](ONLINE_SUBSTITUTION_AUDIT_2026-07-26.md). |
-| S21 | Fakhreddin Azimi, *The Quest for Democracy in Iran: A Century of Struggle Against Authoritarian Rule* (Harvard University Press, 2008) | Book-length constitutional and political history by an established historian of modern Iran whose specialist work centers on democratic institutions, parties, and authoritarianism. It is the strongest newly identified secondary target for Senate powers and parliamentary-system context. Broad institutional interpretation still needs claim-level comparison with the proceedings. | **Acquired:** [`MAJ-S13`](AVAILABLE_SOURCES.md#maj-s13), complete 508-page JSTOR PDF. Prioritize “Restoration of Parliamentary Politics,” notes, bibliography, and index; review remains pending. |
+| S21 | Fakhreddin Azimi, *The Quest for Democracy in Iran: A Century of Struggle Against Authoritarian Rule* (Harvard University Press, 2008) | Book-length constitutional and political history by an established historian of modern Iran whose specialist work centers on democratic institutions, parties, and authoritarianism. It is a strong institutional source for parliamentary politics and royal power. Its explicit democratic and civic-nationalist interpretation still needs claim-level comparison with proceedings and other evidence. | **Acquired and substantively reviewed:** [`MAJ-S13`](AVAILABLE_SOURCES.md#maj-s13), complete 508-page JSTOR PDF. Chapter 3, “Restoration of Parliamentary Politics,” printed pp. 118–53, and notes 23–46 on pp. 463–64 are mapped in the [`review record`](SUBSTANTIVE_SOURCE_REVIEW_2026-07-29.md#maj-s13-azimi-the-quest-for-democracy-in-iran). It supports institutional structure and constitutional conflict, not invented exact votes, speeches, or procedure. |
 | S22 | David S. Painter and Gregory Brew, *The Struggle for Iran: Oil, Autocracy, and the Cold War, 1951–1954* (University of North Carolina Press, 2023) | Recent university-press synthesis by historians of oil, U.S. foreign relations, and modern Iran. Its use of Iranian, American, and British materials makes it valuable for updating the oil-crisis chronology and identifying primary records; its international-relations focus does not replace Iranian parliamentary evidence. | **Reviewed and used:** [`MAJ-S14`](AVAILABLE_SOURCES.md#maj-s14), complete JSTOR EPUB with notes and bibliography. The historical primer cites named chapters and sections throughout; use stable chapter/section locators unless print pagination is independently verified. |
-| S23 | N. Marbury Efimenco, “An Experiment with Civilian Dictatorship in Iran: The Case of Mohammed Mossadegh,” *The Journal of Politics* 17, no. 3 (August 1955), pp. 390–406 | Near-contemporary peer-reviewed political-science treatment. It may be useful for tracing early constitutional interpretations and citations, but its framing is overtly evaluative, its evidence base predates later archival access, and it must not displace Azimi or later scholarship. | **Acquired:** [`SUP-048`](AVAILABLE_SOURCES.md#sup-048), complete JSTOR article with stable journal pagination. Substantive review remains pending. |
+| S23 | N. Marbury Efimenco, “An Experiment with Civilian Dictatorship in Iran: The Case of Mohammed Mossadegh,” *The Journal of Politics* 17, no. 3 (August 1955), pp. 390–406 | Near-contemporary peer-reviewed political-science treatment. Its modernization-theory premise, loaded account of mass and religious politics, anti-Mossadegh judgments, and pre-archival evidence make it evidence about early post-coup interpretation rather than a neutral baseline. | **Acquired and completely reviewed:** [`SUP-048`](AVAILABLE_SOURCES.md#sup-048), stable journal pp. 390–406. The [`review record`](SUBSTANTIVE_SOURCE_REVIEW_2026-07-29.md#sup-048-efimenco-an-experiment-with-civilian-dictatorship) limits use to historiography, attributed contemporary constitutional framing, and source leads. Do not use its causal coup story, Tudeh threat claims, character judgments, or inherited economic figures without later corroboration. |
 | S24 | M. Torkamān, *Qīām-e mellī-e sīom-e Tīr* (قیام ملی سی‌ام تیر; Tehran, 1361 SH / 1982) | **Priority Persian documentary lead.** Ahmad Ashraf's specialist bibliography cites this work for detailed police evidence, occupational data on arrestees, and a combined 235 killed-and-injured figure. The compiler's expertise, edition history, selection method, and exact use of official records have not yet been established; its value will depend on the reproduced documents and transparent provenance rather than reputation inferred from the citation alone. | **Unavailable locally:** [`UNAVAILABLE_SOURCES.md`](UNAVAILABLE_SOURCES.md#crisis-events-and-press). Acquire the complete identified edition and check pp. 465–66, casualty definitions, geographic scope, lists, document provenance, bibliography, and editorial method before using any number. Iranica remains only the discovery path. |
 | S25 | Ali Tatari and Hasan Zandiyeh, comps., Ruhollah Tahmuresi, ed., *Nigāhī bih sākhtār va kārkard-i Majlis-i Shūrā-yi Millī: dawrah-i sīzdahum tā shānzdahum* (نگاهی به ساختار و کارکرد مجلس شورای ملی دوره‌های سیزدهم تا شانزدهم; Parliament Library, 1392 SH / 2013–14) | **Priority edited scholarly collection.** The issuing institution is Iran's parliamentary library and archive, the papers passed a named conference scientific committee, and several chapters directly concern the Sixteenth-Majles election, membership, oil commission, and legislation. Standing must be evaluated chapter by chapter: institutional publication and peer selection do not establish every contributor's expertise or every claim's reliability. | **Complete volume unavailable locally.** The Library of Congress holds the non-digitized 618-page volume under LCCN `2013358066`, call no. `JQ1787 .N57 2012`; ISBN `9786002201720`. A complete-looking author-posted version of Ahmadi-Nasab and Sadeghi's oil-nationalization chapter is archived as [`SUP-056`](AVAILABLE_SOURCES.md#sup-056). The official three-period Oil Commission minutes are now archived as [`SUP-059`](AVAILABLE_SOURCES.md#sup-059), substantially reducing dependence on the two oil chapters but not replacing their scholarly analysis. See the [`acquisition and substitution audit`](SIXTEENTH_MAJLES_SOURCE_ACQUISITION.md#parliament-library-conference-volume) and the [`active queue`](UNAVAILABLE_SOURCES.md#parliament-and-elections). |
 
@@ -629,9 +921,10 @@ below; presence does not turn an unread work into claim-level evidence.
   speech true, does not classify the wider chamber politically, and may embody
   the parliamentary publication office's selection and correction
   conventions. Compare it with the full-chamber proceedings, enacted law,
-  contemporary papers, and specialist scholarship. The scans are image-only;
-  cite the print-order number, period or meeting, date, and printed page after
-  image verification.
+  contemporary papers, and specialist scholarship. Separate searchable
+  derivatives provide a finding layer for both image-only volumes; cite the
+  print-order number, period or meeting, date, and printed page after image
+  verification.
 - **Project use:** Principal primary substitute for the unavailable
   conference-volume chapters on the Oil Commission and the legislative route
   to nationalization. Planned member-ledger use includes commission
@@ -696,7 +989,9 @@ below; presence does not turn an unread work into claim-level evidence.
   the later constitutional conflict between Mossadegh and the Senate. For the
   six-month powers bill, cite First-Senate session 192, 20 Mordad 1331. Until
   its scan is reviewed, preserve the 26–4 result as provisional and do not
-  invent attendance, abstention, or member-by-member data.
+  invent attendance, abstention, or member-by-member data. The [session-192
+  substitute stack](SECOND_BEST_EVIDENCE_STACKS_2026-07-29.md#2-first-senate-proceedings-session-192)
+  supports chamber-level treatment in the meantime.
 
 <a id="sup-025"></a>
 ### SUP-025 / IR-P6 — Jalil Bozorgmehr, ed., Mossadegh court records

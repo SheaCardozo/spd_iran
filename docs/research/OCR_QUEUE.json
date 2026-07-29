@@ -1,0 +1,317 @@
+{
+  "version": 1,
+  "defaults": {
+    "chunkPages": 75,
+    "ocrJobs": 3,
+    "fileConcurrency": 2,
+    "languages": "fas+eng"
+  },
+  "jobs": [
+    {
+      "id": "MAJ-S10",
+      "priority": 1,
+      "kind": "pdf",
+      "input": "docs/research/sources/major/MAJ-S10-movahed-1384-khab-e-ashofteh-naft-vol-2.pdf",
+      "mode": "redo",
+      "benchmarkPages": "31-40",
+      "note": "Replace the existing unusable right-to-left text layer while preserving the original page images."
+    },
+    {
+      "id": "SUP-078",
+      "priority": 1,
+      "kind": "pdf",
+      "input": "docs/research/sources/supplemental/SUP-078-ebtehaj-1992-memoirs-vols-1-2.pdf",
+      "mode": "normal",
+      "benchmarkPages": "31-40",
+      "note": "Image-only Persian memoir scan."
+    },
+    {
+      "id": "SUP-059-A",
+      "sourceId": "SUP-059",
+      "priority": 1,
+      "kind": "pdf",
+      "input": "docs/research/sources/supplemental/SUP-059-majles-special-oil-commission-minutes-print-172.pdf",
+      "mode": "normal",
+      "normalizePageBoxes": true,
+      "benchmarkPages": "21-30",
+      "note": "First official printed commission compilation."
+    },
+    {
+      "id": "SUP-059-B",
+      "sourceId": "SUP-059",
+      "priority": 1,
+      "kind": "pdf",
+      "input": "docs/research/sources/supplemental/SUP-059-majles-special-oil-commission-minutes-print-300.pdf",
+      "mode": "normal",
+      "normalizePageBoxes": true,
+      "benchmarkPages": "21-30",
+      "note": "Second official printed commission compilation."
+    },
+    {
+      "id": "SUP-064",
+      "priority": 1,
+      "kind": "pdf",
+      "input": "docs/research/sources/supplemental/SUP-064-torkaman-1995-mosaddegh-letters.pdf",
+      "mode": "force",
+      "benchmarkPages": "21-30",
+      "note": "Ignore the sparse watermark text and OCR the page images."
+    },
+    {
+      "id": "SUP-071",
+      "priority": 1,
+      "kind": "spread-pdf",
+      "input": "docs/research/sources/supplemental/SUP-071-zirakzadeh-1997-porseshhaye-bi-pasokh.pdf",
+      "mode": "normal",
+      "spreadOrder": "right-left",
+      "benchmarkPages": "21-30",
+      "note": "Split each Persian two-page spread right page first, then OCR."
+    },
+    {
+      "id": "SUP-061-transcripts",
+      "sourceId": "SUP-061",
+      "priority": 2,
+      "kind": "image-directories",
+      "languages": "fas",
+      "prepareImage": {
+        "maxHeight": 2600
+      },
+      "pageSegmentationMode": 3,
+      "inputs": [
+        "docs/research/sources/supplemental/SUP-061-harvard-iranian-oral-history-selected/transcripts/sanjabi/pages",
+        "docs/research/sources/supplemental/SUP-061-harvard-iranian-oral-history-selected/transcripts/baghai/pages",
+        "docs/research/sources/supplemental/SUP-061-harvard-iranian-oral-history-selected/transcripts/azar/pages",
+        "docs/research/sources/supplemental/SUP-061-harvard-iranian-oral-history-selected/transcripts/amini/pages"
+      ],
+      "note": "Persian-script transcript facsimiles; Persian-only OCR benchmarked cleaner and faster than mixed-language recognition."
+    },
+    {
+      "id": "SUP-007",
+      "priority": 2,
+      "kind": "pdf-directory",
+      "input": "docs/research/sources/supplemental/SUP-007-majles-16-17-session-scans/sessions",
+      "mode": "normal",
+      "languages": "fas",
+      "fileConcurrency": 5,
+      "ocrJobs": 1,
+      "pdfRenderer": "sandwich",
+      "tesseractDownsampleAbove": 1800,
+      "note": "Sixteenth- and Seventeenth-Majles session scans."
+    },
+    {
+      "id": "SUP-025",
+      "priority": 2,
+      "kind": "pdf-directory",
+      "input": "docs/research/sources/supplemental/SUP-025-mossadegh-court-records",
+      "mode": "force",
+      "note": "Court-record scan set; force OCR where legacy layers are malformed."
+    },
+    {
+      "id": "SUP-079",
+      "priority": 2,
+      "kind": "pdf",
+      "input": "docs/research/sources/supplemental/SUP-079-makki-1983-tarikh-bist-saleh-vol-5.pdf",
+      "mode": "normal",
+      "benchmarkPages": "31-40",
+      "note": "Participant history scan."
+    },
+    {
+      "id": "SUP-063",
+      "priority": 3,
+      "kind": "pdf",
+      "input": "docs/research/sources/supplemental/SUP-063-nlai-2021-oil-negotiation-records.pdf",
+      "mode": "skip",
+      "benchmarkPages": "11-20",
+      "note": "Mixed born-digital text and facsimiles; preserve real text and OCR image-only pages."
+    },
+    {
+      "id": "SUP-046",
+      "priority": 3,
+      "kind": "pdf",
+      "input": "docs/research/sources/supplemental/SUP-046-majles-1332-budget.pdf",
+      "mode": "force",
+      "benchmarkPages": "5-12",
+      "note": "OCR aids discovery only; tables still require structured manual transcription."
+    },
+    {
+      "id": "SUP-072",
+      "priority": 3,
+      "kind": "pdf",
+      "input": "docs/research/sources/supplemental/SUP-072-sadighi-1992-final-interview.pdf",
+      "mode": "normal",
+      "benchmarkPages": "1-10",
+      "note": "Short Persian interview scan."
+    },
+    {
+      "id": "SUP-027",
+      "priority": 4,
+      "kind": "pdf-directory",
+      "input": "docs/research/sources/supplemental/SUP-027-mardom-tudeh-fourth-series-1328-1333",
+      "mode": "normal",
+      "languages": "fas",
+      "fileConcurrency": 5,
+      "ocrJobs": 1,
+      "pdfRenderer": "sandwich",
+      "tesseractDownsampleAbove": 1800,
+      "includePatterns": [
+        "-(1331|1332)\\.pdf$"
+      ],
+      "note": "Late-1331 and 1332 Tudeh issues form the available lead-in and coup window; this does not process the complete run."
+    },
+    {
+      "id": "SUP-028",
+      "priority": 4,
+      "kind": "pdf-directory",
+      "input": "docs/research/sources/supplemental/SUP-028-niruye-sevom-piruz-mishavad-1331-1332",
+      "mode": "redo",
+      "languages": "fas",
+      "fileConcurrency": 5,
+      "ocrJobs": 1,
+      "pdfRenderer": "sandwich",
+      "tesseractDownsampleAbove": 1800,
+      "includePatterns": [
+        "-1332-(04-(2[0-9]|3[01])|05-)"
+      ],
+      "note": "Third Force issues from 20 Tir through 28 Mordad 1332 form the immediate coup window; this does not process the complete run."
+    },
+    {
+      "id": "SUP-029",
+      "priority": 4,
+      "kind": "pdf-directory",
+      "input": "docs/research/sources/supplemental/SUP-029-mardom-e-iran-1331-1332",
+      "mode": "redo",
+      "languages": "fas",
+      "fileConcurrency": 5,
+      "ocrJobs": 1,
+      "pdfRenderer": "sandwich",
+      "tesseractDownsampleAbove": 1800,
+      "includePatterns": [
+        "-1332-(04-(2[0-9]|3[01])|05-)"
+      ],
+      "note": "Available socialist-theist issues from 20 Tir through 26 Mordad 1332 form the immediate coup window; this does not process the complete run."
+    },
+    {
+      "id": "SUP-030",
+      "priority": 4,
+      "kind": "pdf-directory",
+      "input": "docs/research/sources/supplemental/SUP-030-apadana-1330-1332",
+      "mode": "redo",
+      "languages": "fas",
+      "fileConcurrency": 5,
+      "ocrJobs": 1,
+      "pdfRenderer": "sandwich",
+      "tesseractDownsampleAbove": 1800,
+      "includePatterns": [
+        "-1332-(04-(2[0-9]|3[01])|05-)"
+      ],
+      "note": "Available Pan-Iranist issues from 20 Tir through 28 Mordad 1332 form the immediate coup window; this does not process the complete run."
+    },
+    {
+      "id": "SUP-031",
+      "priority": 4,
+      "kind": "pdf-directory",
+      "input": "docs/research/sources/supplemental/SUP-031-bakhtar-emruz-1330-1332",
+      "mode": "redo",
+      "languages": "fas",
+      "fileConcurrency": 5,
+      "ocrJobs": 1,
+      "pdfRenderer": "sandwich",
+      "tesseractDownsampleAbove": 1800,
+      "includePatterns": [
+        "bakhtare-emruz-(0863|0864|0865|0866|0867|11[4-9][0-9])-"
+      ],
+      "note": "Five Thirty Tir issues and all available issue 1144 onward files form the Thirty Tir and coup windows; this does not process every acquired issue."
+    },
+    {
+      "id": "SUP-080",
+      "priority": 5,
+      "kind": "pdf",
+      "input": "docs/research/sources/supplemental/SUP-080-makki-1999-kudeta-28-mordad-incomplete.pdf",
+      "mode": "normal",
+      "benchmarkPages": "31-40",
+      "note": "OCR the 509 available carrier pages for discovery without reconstructing or concealing the absent printed pp. 425-440."
+    },
+    {
+      "id": "SUP-008",
+      "priority": 5,
+      "kind": "pdf-directory",
+      "input": "docs/research/sources/supplemental/SUP-008-ettelaat-coup-week-1332-05",
+      "mode": "normal",
+      "languages": "fas",
+      "fileConcurrency": 5,
+      "ocrJobs": 1,
+      "pdfRenderer": "sandwich",
+      "tesseractDownsampleAbove": 1800,
+      "note": "All 21 deliberately selected Ettela'at issues are direct event evidence; OCR the complete local selection."
+    },
+    {
+      "id": "SUP-009",
+      "priority": 5,
+      "kind": "pdf-directory",
+      "input": "docs/research/sources/supplemental/SUP-009-coup-week-partisan-press-1332-05",
+      "mode": "normal",
+      "languages": "fas",
+      "fileConcurrency": 5,
+      "ocrJobs": 1,
+      "pdfRenderer": "sandwich",
+      "tesseractDownsampleAbove": 1800,
+      "note": "All 17 selected coup-week press PDFs are direct event evidence; OCR the complete local selection while retaining source-specific political cautions."
+    },
+    {
+      "id": "SUP-051",
+      "priority": 5,
+      "kind": "pdf",
+      "input": "docs/research/sources/supplemental/SUP-051-iranian-parliament-1977-sixteenth-majles-members.pdf",
+      "mode": "normal",
+      "languages": "fas",
+      "note": "Official roster tables; OCR is a name-finding aid and does not replace image-checked structured transcription."
+    },
+    {
+      "id": "SUP-052",
+      "priority": 5,
+      "kind": "pdf",
+      "input": "docs/research/sources/supplemental/SUP-052-iranian-parliament-1977-seventeenth-majles-members.pdf",
+      "mode": "normal",
+      "languages": "fas",
+      "note": "Official roster tables; OCR is a name-finding aid and does not replace image-checked structured transcription."
+    },
+    {
+      "id": "SUP-053",
+      "priority": 5,
+      "kind": "pdf",
+      "input": "docs/research/sources/supplemental/SUP-053-iranian-parliament-1977-first-senate-members.pdf",
+      "mode": "normal",
+      "languages": "fas",
+      "note": "Official roster tables; OCR is a name-finding aid and does not replace image-checked structured transcription."
+    },
+    {
+      "id": "SUP-076",
+      "priority": 5,
+      "kind": "pdf",
+      "input": "docs/research/sources/supplemental/SUP-076-cia-1951-07-11-daily-digest.pdf",
+      "mode": "normal",
+      "languages": "eng",
+      "note": "Short declassified English scan; OCR the complete carrier while preserving the cataloged page-tree caution."
+    },
+    {
+      "id": "SUP-077",
+      "priority": 5,
+      "kind": "pdf",
+      "input": "docs/research/sources/supplemental/SUP-077-cia-1953-02-18-current-intelligence-bulletin.pdf",
+      "mode": "normal",
+      "languages": "eng",
+      "note": "Short declassified English scan."
+    },
+    {
+      "id": "SUP-011-legacy-scans",
+      "sourceId": "SUP-011",
+      "priority": 6,
+      "kind": "pdf-directory",
+      "input": "docs/research/sources/supplemental/SUP-011-chaqueri-historical-documents-volumes-1-6-2025/original-edition-scans",
+      "mode": "normal",
+      "languages": "fas",
+      "fileConcurrency": 2,
+      "ocrJobs": 2,
+      "note": "Lower-priority legacy facsimiles: volume 3 overlaps a searchable retypesetting, while volumes 8, 19, and 20 are less direct than the still-unavailable campaign-period volumes 12 and 17."
+    }
+  ]
+}

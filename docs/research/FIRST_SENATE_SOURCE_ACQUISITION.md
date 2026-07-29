@@ -88,6 +88,21 @@ provisional 26–4 count.
 - An Iran Archive appendix reproduces an official law colophon already held in
   `SUP-006`; it does not supply the proceeding.
 
+## Online substitute route
+
+The 2026-07-29 follow-up again found no inspectable official session scan.
+Session 192 can nevertheless be represented at chamber scale by joining the
+enacted law and Senate colophon in `SUP-006`, the Senate letter and lower-house
+handling in `SUP-007`, the provisional contemporary 26–4 report, the official
+roster in `SUP-053`, the chamber rules, and contemporary external reaction in
+`SUP-085`, printed p. 59. The resulting [substitute-evidence
+map](SECOND_BEST_EVIDENCE_STACKS_2026-07-29.md#2-first-senate-proceedings-session-192)
+does not authorize named votes, attendance, speeches, or amendments.
+
+Session 192 is therefore a targeted enhancement for a member-level or
+procedurally detailed Senate scene, not a blocker for an institutional
+approval or obstruction mechanic.
+
 ## Current use gate
 
 Safe now:

@@ -6,6 +6,12 @@
   "scripts": {
     "build": "node scripts/build.js",
     "play": "npm run build && node scripts/serve.js",
+    "research:ocr": "node scripts/research-ocr.js",
+    "research:ocr:catalog": "node scripts/research-ocr.js catalog",
+    "research:ocr:doctor": "node scripts/research-ocr.js doctor",
+    "research:ocr:status": "node scripts/research-ocr.js status",
+    "research:ocr:verify": "node scripts/research-ocr.js verify",
+    "research:transcribe:qashqai": ".tools/transcription/venv/bin/python scripts/transcribe-qashqai.py",
     "test": "npm run build && node --test test/*.test.js"
   },
   "dependencies": {

@@ -56,6 +56,15 @@ describe likely conduct rather than declared affiliation. The monarchist
 Mashruteh website is used only to discover or check transcriptions against
 the underlying official scans; its editorial narrative is not evidence.
 
+The selected Harvard oral histories in
+[`SUP-061`](AVAILABLE_SOURCES.md#sup-061) and Ahmad Zirakzadeh's memoir in
+[`SUP-071`](AVAILABLE_SOURCES.md#sup-071) are now locally available, but their
+acquisition has not raised any classification below to a higher confidence
+grade. A remembered affiliation, meeting, or vote enters this ledger only
+after its exact interview or printed-page context is checked and compared
+with contemporary chamber and party records. OCR text is a finding aid, not
+the citation object.
+
 Confidence labels used below:
 
 - **A — official:** official roster, credential decision, chamber office, or
@@ -729,10 +738,11 @@ original slate as permanent voting parties.
    Islamic caucuses.
 4. Build roll calls for government formation, nationalization, special
    powers, the Committee of Eight, the Senate term, and dissolution.
-5. Acquire the complete First Senate proceedings, especially the exact
-   sessions mapped in
-   [`FIRST_SENATE_SOURCE_ACQUISITION.md`](FIRST_SENATE_SOURCE_ACQUISITION.md),
-   and join divisions to the `SUP-053` roster.
+5. Acquire the exact First Senate sessions mapped in
+   [`FIRST_SENATE_SOURCE_ACQUISITION.md`](FIRST_SENATE_SOURCE_ACQUISITION.md)
+   when member-level attendance, speeches, amendments, or votes are needed;
+   then join verified divisions to the `SUP-053` roster. Chamber-level
+   behavior can use the bounded substitute stack meanwhile.
 6. Verify every Latin transliteration against the official scans and
    specialist biographical references before names become data identifiers.
 

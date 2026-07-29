@@ -482,6 +482,14 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.match(timeline, /30 Tir restored <span class="term term-mossadegh">Mossadegh<\/span> at the head of a coalition/);
   assert.doesNotMatch(timeline, /Thirty Tir/);
   assert.match(timeline, /30 Tir uprising of 21 July 1952/);
+  assert.match(
+    timeline,
+    /An estimated 250 or more demonstrators were killed or seriously injured across Tehran, Hamadan, Ahvaz, Isfahan, and Kermanshah/,
+  );
+  assert.match(
+    timeline,
+    /The figure combines deaths and serious injuries across five cities; no agreed death toll survives/,
+  );
   assert.match(timeline, /1946 Iranian Azerbaijan crisis/);
   assert.doesNotMatch(timeline, /1946 Azerbaijan crisis/);
   assert.match(timeline, /chapter 6, <q>Approaching the Shah<\/q>/);

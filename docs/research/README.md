@@ -23,13 +23,20 @@ remain in the active unavailable-source queue.
 | Record | Scope |
 | --- | --- |
 | [`SOURCE_AUDIT.md`](SOURCE_AUDIT.md) | Repository-wide source-policy and trust reconciliation |
+| [`SUBSTANTIVE_SOURCE_REVIEW_2026-07-29.md`](SUBSTANTIVE_SOURCE_REVIEW_2026-07-29.md) | Claim-level reading, interpretive limits, oral-history locators, and image-checked economic-table review for `MAJ-S13`, `SUP-048`, `SUP-061`, and `SUP-057` |
 | [`ONLINE_SUBSTITUTION_AUDIT_2026-07-26.md`](ONLINE_SUBSTITUTION_AUDIT_2026-07-26.md) | What accessible source bundles can and cannot replace |
+| [`KETABNAK_SECOND_BEST_ALTERNATIVES_2026-07-29.md`](KETABNAK_SECOND_BEST_ALTERNATIVES_2026-07-29.md) | Claim-specific substitutes and residual gaps for the inaccessible Ketabnak books |
 | [`TIMELINE_PRIMER.md`](TIMELINE_PRIMER.md) | Standalone narrative and constitutional orientation |
 | [`PARLIAMENTARY_CONTROL.md`](PARLIAMENTARY_CONTROL.md) | Membership, tendencies, caucuses, attendance, and dated control |
 | [`PARLIAMENTARY_VIBE_MODEL.md`](PARLIAMENTARY_VIBE_MODEL.md) | Explicitly heuristic priors for unresolved members |
 | [`SIXTEENTH_MAJLES_LEDGER.md`](SIXTEENTH_MAJLES_LEDGER.md) | Constituency, return, credential, board, and decision ledger |
 | [`CRISIS_EVIDENCE_AUDIT.md`](CRISIS_EVIDENCE_AUDIT.md) | Thirty Tir, 19 August, payments, welfare, and control uncertainty |
 | [`ECONOMIC_HISTORY.md`](ECONOMIC_HISTORY.md) | Economic questions, observation schema, and model-neutral evidence |
+| [`OCR_PROCESSING.md`](OCR_PROCESSING.md) | Local OCR toolchain, queue, benchmarks, processing order, and evidentiary limits |
+| [`OCR_DERIVATIVES.json`](OCR_DERIVATIVES.json) | Tracked paths, page counts, engine settings, completion times, and checksums for generated local derivatives | Whether machine text is historically accurate |
+| [`economic_observations/`](economic_observations/README.md) | Image-checked structured tables with units, date bases, vintages, locators, and missing-value conventions | A seamless or model-ready national economic series |
+| [`TRANSCRIPTION_PROCESSING.md`](TRANSCRIPTION_PROCESSING.md) | Reproducible, resumable Persian discovery transcription and its evidentiary boundary | An official or quotation-ready oral-history transcript |
+| [`TRANSCRIPTION_DERIVATIVES.json`](TRANSCRIPTION_DERIVATIVES.json) | Tracked transcript paths, duration, model snapshot, engine version, completion time, checksums, and review status | Evidence that machine wording is accurate |
 
 ## Acquisition-search records
 
@@ -42,6 +49,10 @@ history—in `UNAVAILABLE_SOURCES.md`.
 - [`NEWSPAPER_SOURCE_ACQUISITION.md`](NEWSPAPER_SOURCE_ACQUISITION.md)
 - [`ECONOMIC_RECORD_SEARCH_2026-07-26.md`](ECONOMIC_RECORD_SEARCH_2026-07-26.md)
 - [`WORLD_BANK_MEDIATION_FILES.md`](WORLD_BANK_MEDIATION_FILES.md)
+- [`IRANIAN_CABINET_RECORDS_SEARCH_2026-07-28.md`](IRANIAN_CABINET_RECORDS_SEARCH_2026-07-28.md)
+- [`US_CONSULATE_TABRIZ_RECORD_SEARCH_2026-07-28.md`](US_CONSULATE_TABRIZ_RECORD_SEARCH_2026-07-28.md)
+- [`PARTICIPANT_SOURCE_ACQUISITION_2026-07-28.md`](PARTICIPANT_SOURCE_ACQUISITION_2026-07-28.md)
+- [`SECOND_BEST_EVIDENCE_STACKS_2026-07-29.md`](SECOND_BEST_EVIDENCE_STACKS_2026-07-29.md)
 
 ## Claim records and update rule
 

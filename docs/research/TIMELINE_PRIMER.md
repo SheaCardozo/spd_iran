@@ -358,7 +358,9 @@ Iranian Azerbaijan and the Kurdish Republic of Mahabad. The central state
 restored control after the Soviet withdrawal and the collapse of both
 movements. The episode made anti-communism, separatism, and territorial
 integrity central political concerns
-([`MAJ-S2`, chapter 5](AVAILABLE_SOURCES.md#maj-s2)).
+([`MAJ-S2`, chapter 5](AVAILABLE_SOURCES.md#maj-s2);
+[`MAJ-S20`, chapter 4, pp. 89–125](AVAILABLE_SOURCES.md#maj-s20);
+[`MAJ-S21`, pp. 123–216](AVAILABLE_SOURCES.md#maj-s21)).
 
 On 4 February 1949, an assassin fired at the Shah. The government used the
 attempt to impose martial law, suppress the Tudeh Party, arrest opponents, and
@@ -556,7 +558,11 @@ Qavam announced that he would restore order and resolve the crisis. On
 21 July—30 Tir in the Iranian calendar—a general uprising engulfed Tehran and
 other cities. National Front organizations, bazaar networks, Kashani's
 followers, and the Tudeh mobilized, but not under one command. Security forces
-fired on demonstrators; no agreed casualty count survives.
+fired on demonstrators. An estimated 250 or more demonstrators were killed or
+seriously injured across Tehran, Hamadan, Ahvaz, Isfahan, and Kermanshah. The
+figure combines deaths and serious injuries across five cities; no agreed
+death toll survives
+([`MAJ-S2`, p. 271](AVAILABLE_SOURCES.md#maj-s2)).
 
 The Shah retreated, Qavam resigned, and Mossadegh returned in triumph.
 Prominent party and clerical leaders mattered, but commercial, neighborhood,
@@ -1010,10 +1016,11 @@ entry rather than to an external website.
 | Topic | Principal source locators |
 | --- | --- |
 | Constitutional order, chamber membership, elections, and parliamentary control | `MAJ-S1`, chapters 1–3 and 15–20; `MAJ-S2`, chapter 5, especially pp. 250–61; `MAJ-S3`, chapter 3, especially pp. 79–117; [Iranian Parliament, official retrospective chamber rosters](BIBLIOGRAPHY.md#p14) |
+| Iranian Azerbaijan, Mahabad, and the regional inheritance of 1945–46 | `MAJ-S20`, chapter 4, pp. 89–125; `MAJ-S21`, pp. 123–216; compare `MAJ-S2`, chapter 5 |
 | National Front composition and mass politics | `MAJ-S1`, pp. 207–08; `MAJ-S2`, chapter 5; `MAJ-S14`, chapter 1 |
 | Oil background, nationalization law, and negotiations | `MAJ-S3`, chapters 1–2; `MAJ-S12`, nationalization and negotiation chapters; `MAJ-S14`, chapters 1–4; `SUP-006`, printed pp. 15–16 |
 | Labor, Abadan, and adjustment to the oil shock | `MAJ-S9`, chapters 3–4; `MAJ-S18`, chapter 4, especially pp. 120–44; `SUP-023`, pp. 2–18; `SUP-055`, pp. 31–38; `SUP-057`, pp. 187–88 |
-| 30 Tir, coalition fracture, and the constitutional crisis | `MAJ-S1`, chapters 19–20; `MAJ-S3`, chapter 3; `MAJ-S6`, chapters 11–13; `SUP-014`, pp. 159–75 |
+| 30 Tir, coalition fracture, and the constitutional crisis | `MAJ-S1`, chapters 19–20; `MAJ-S2`, p. 271; `MAJ-S3`, chapter 3; `MAJ-S6`, chapters 11–13; `SUP-014`, pp. 159–75 |
 | 9 Esfand, 19 August, and the coup's operational sequence | `MAJ-S5`, pp. 49–288; `MAJ-S14`, chapters 5–6; `SUP-049`, paragraphs 8–9; `SUP-060`, pp. 280–87; [*Foreign Relations of the United States, 1952–1954, Iran, 1951–1954*, docs. 306 and 362](BIBLIOGRAPHY.md#p1) |
 | Coup planning, foreign intervention, and Iranian execution | `MAJ-S4`, pp. 227–80; `MAJ-S5`, chapters 8–16; `MAJ-S7`, chapters 7–9 as a contrasting reconstruction; `MAJ-S14`, chapters 4–7; `SUP-012`, pp. 295–99 |
 | Women and suffrage during the crisis | `SUP-015`, pp. 270–79 |
@@ -1045,6 +1052,12 @@ entry rather than to an external website.
   Press, 2023).
 - [source:maj-s18] Gregory Brew, *Petroleum and Progress in Iran: Oil,
   Development, and the Cold War* (Cambridge University Press, 2022).
+- [source:maj-s20] Farideh Koohi-Kamali, *The Political Development of the
+  Kurds in Iran: Pastoral Nationalism* (Palgrave Macmillan, 2003).
+- [source:maj-s21] Touraj Atabaki, *Azerbaycan: Etnisite ve İran'da İktidar
+  Mücadelesi*, trans. Hojjat Ghasemlou (Istanbul: Tarih Vakfı Yurt Yayınları,
+  2021), Turkish translation of the revised *Azerbaijan: Ethnicity and the
+  Struggle for Power in Iran*.
 - [source:sup-006] Majles-e Shura-ye Melli, *Majmu'e-ye Qavanin-e Dowreh-ye
   Shanzdahom-e Qanungozari* [Collection of Laws of the Sixteenth Legislative
   Term] (Majles Printing House, Sixteenth legislative period).

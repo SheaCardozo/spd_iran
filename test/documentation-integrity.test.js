@@ -114,8 +114,16 @@ test('changelog index and required sections are synchronized', () => {
   const indexed = [...index.matchAll(/\((\d{4}-\d{2}-\d{2}-[^)]+\.md)\)/g)]
     .map((match) => match[1])
     .sort();
+  const indexedDates = [
+    ...index.matchAll(/\((\d{4}-\d{2}-\d{2})-[^)]+\.md\)/g),
+  ].map((match) => match[1]);
 
   assert.deepEqual(indexed, entries, 'every dated change must appear once');
+  assert.deepEqual(
+    indexedDates,
+    [...indexedDates].sort(),
+    'dated change index must remain chronological',
+  );
 
   for (const entry of entries) {
     const contents = fs.readFileSync(`${changelogDirectory}/${entry}`, 'utf8');

@@ -109,6 +109,36 @@ const recentSourceFiles = [
     hash: '38df072dff3d8ad6c7004d6ec281227046818f6edb3bd4f83e994c98240f9832',
   },
   {
+    id: 'MAJ-S19',
+    path:
+      `${sourceRoot}/major/` +
+      'MAJ-S19-beck-2015-nomads-postrevolutionary-iran.pdf',
+    sidecar:
+      `${sourceRoot}/major/` +
+      'MAJ-S19-beck-2015-nomads-postrevolutionary-iran.md',
+    hash: '35db8dacad9f43b8b9de3d45438f35341a55552d6692535e1dae2a5b6e95eb7b',
+  },
+  {
+    id: 'MAJ-S20',
+    path:
+      `${sourceRoot}/major/` +
+      'MAJ-S20-koohi-kamali-2003-kurds-iran.pdf',
+    sidecar:
+      `${sourceRoot}/major/` +
+      'MAJ-S20-koohi-kamali-2003-kurds-iran.md',
+    hash: '948555e9e9609aeda43991e3ceed7773a1995c1ae4c831eb052aeb3192112b72',
+  },
+  {
+    id: 'MAJ-S21',
+    path:
+      `${sourceRoot}/major/` +
+      'MAJ-S21-atabaki-2021-azerbaycan-turkish.pdf',
+    sidecar:
+      `${sourceRoot}/major/` +
+      'MAJ-S21-atabaki-2021-azerbaycan-turkish.md',
+    hash: 'b4152b57860564220a63897f3a6cfaa918cdafada8f39a592b36d6aef7347e6f',
+  },
+  {
     id: 'SUP-054',
     path:
       `${sourceRoot}/supplemental/` +
@@ -167,6 +197,246 @@ const recentSourceFiles = [
       `${sourceRoot}/supplemental/` +
       'SUP-060-randjbar-daemi-2024-radio-tehran-coup.md',
     hash: 'a7d8ca87da6dcfcdc135d24caf7c9ae2e340e4f0da33b9170ca2ee42ac286266',
+  },
+  {
+    id: 'SUP-062',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-062-icj-1952-anglo-iranian-oil-oral-proceedings.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-062-icj-1952-anglo-iranian-oil-oral-proceedings.md',
+    hash: '388d224f13f4623211594305ad229774e6c9d803b7f2cda0d786628e0afa03d5',
+  },
+  {
+    id: 'SUP-063',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-063-nlai-2021-oil-negotiation-records.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-063-nlai-2021-oil-negotiation-records.md',
+    hash: '3f8625ae48bbb54e01053e4db34e8d5b34277de3842bb283e47bea29bc361b0d',
+  },
+  {
+    id: 'SUP-064',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-064-torkaman-1995-mosaddegh-letters.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-064-torkaman-1995-mosaddegh-letters.md',
+    hash: 'ab0cae195426bc83683050e9cdb9a6f7667ab1cdba60e7dc94e3d7d2e1770b69',
+  },
+  {
+    id: 'SUP-065',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-065-mislabeled-bolukbasi-2013-azerbaijan.epub',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-065-mislabeled-bolukbasi-2013-azerbaijan.md',
+    hash: 'be8b7c284d0c8dc81e2280cd3317efdda5e5eecbd4a35f71fc85f8b54b0e0f41',
+  },
+  {
+    id: 'SUP-066',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-066-icj-1952-filed-iranian-cabinet-minutes.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-066-icj-1952-filed-iranian-cabinet-minutes.md',
+    hash: '31daebf95fa00385058f9fbb60fe5598999059cf58ffdb730925f35717b8b99e',
+  },
+  {
+    id: 'SUP-067',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-067-icj-1951-1952-case-correspondence.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-067-icj-1951-1952-case-correspondence.md',
+    hash: '9e6ebff1a2095bd796b484354ae9b491e143ec59bff9d5b4d07f8ef42a81af58',
+  },
+  {
+    id: 'SUP-068',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-068-iran-1951-prime-ministry-supreme-council-regulation.html',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-068-iran-1951-prime-ministry-supreme-council-regulation.md',
+    hash: '7e7eee3c9ed7b734e0a78c26a9fe6bf1097bb2084db140ed2c458b35e60d5cdd',
+  },
+  {
+    id: 'SUP-069',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-069-iran-1952-cabinet-oil-expense-approval.html',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-069-iran-1952-cabinet-oil-expense-approval.md',
+    hash: 'cf2b92eabe61bbf6f67a4515a6751ef7ce21b7720cada79e54af4cf277ab8bf0',
+  },
+  {
+    id: 'SUP-070',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-070-iran-2006-presidential-documents-center-merger.html',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-070-iran-2006-presidential-documents-center-merger.md',
+    hash: '80752077a3518a3844b60edd82017ebd6aef368f1956a322c20255ede20283b8',
+  },
+  {
+    id: 'SUP-071',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-071-zirakzadeh-1997-porseshhaye-bi-pasokh.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-071-zirakzadeh-1997-porseshhaye-bi-pasokh.md',
+    hash: 'a6c7dd626253de0c8a49150ba1100dea5c68d0f8adef915d7d77762bfd09ab3a',
+  },
+  {
+    id: 'SUP-072',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-072-sadighi-1992-final-interview.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-072-sadighi-1992-final-interview.md',
+    hash: '0679734e52498f51ef71941ad96e60a9efc76d45c5cae16a05de0edda4668101',
+  },
+  {
+    id: 'SUP-073',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-073-zahedi-panj-ruze-bohrani.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-073-zahedi-panj-ruze-bohrani.md',
+    hash: '7d2a83b59c721a5e65032392717bf064bf532b20f64c1c4f0b75b34bfcf60c1b',
+  },
+  {
+    id: 'SUP-074',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-074-sadighi-nejati-interview-summary.html',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-074-sadighi-nejati-interview-summary.md',
+    hash: '1e968447a21a582db1e37eb11850c4e9166b31f2203c07b1ec4ff4840e33f71f',
+  },
+  {
+    id: 'SUP-075',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-075-sadighi-nejati-28-mordad-account.html',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-075-sadighi-nejati-28-mordad-account.md',
+    hash: '803ab77b3fd5c549de794902efb66f80adf55895c1f04f3eab6df423bd710d1e',
+  },
+  {
+    id: 'SUP-076',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-076-cia-1951-07-11-daily-digest.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-076-cia-1951-07-11-daily-digest.md',
+    hash: 'ab910001d5da9579a443a309de1fa633dadc1e615e4c5d9415ff4e50f6d1cd47',
+  },
+  {
+    id: 'SUP-077',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-077-cia-1953-02-18-current-intelligence-bulletin.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-077-cia-1953-02-18-current-intelligence-bulletin.md',
+    hash: 'f3c9ed9018cef3c90acf11b290e140504241c7f3543ccaa33b2dd26dbe4bd355',
+  },
+  {
+    id: 'SUP-078',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-078-ebtehaj-1992-memoirs-vols-1-2.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-078-ebtehaj-1992-memoirs-vols-1-2.md',
+    hash: '8bd7683d628710ecff7b0353c90f9367ab10f9ccd27cdba0f0e5604298c1e7e2',
+  },
+  {
+    id: 'SUP-079',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-079-makki-1983-tarikh-bist-saleh-vol-5.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-079-makki-1983-tarikh-bist-saleh-vol-5.md',
+    hash: 'b32565303c7af58f99ce4406c169e09dd49d123243e08ada904422064a802b39',
+  },
+  {
+    id: 'SUP-080',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-080-makki-1999-kudeta-28-mordad-incomplete.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-080-makki-1999-kudeta-28-mordad-incomplete.md',
+    hash: 'ef599ffd7c9dc5abe9a98870155fdf53015f8c5533e0011ac20697614f3b2ca8',
+  },
+  {
+    id: 'SUP-081',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-081-bazargan-2023-collected-works-vol-34.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-081-bazargan-2023-collected-works-vol-34.md',
+    hash: '67d62ea6a38d4be1864500588259b6d845496f4a476acb95ec6bcbc1c5e64561',
+  },
+  {
+    id: 'SUP-082',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-082-nejati-1996-bazargan-memoir-vol-1.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-082-nejati-1996-bazargan-memoir-vol-1.md',
+    hash: 'b8bcf6549e449b383ed8f12bab79bd6aaeab2525c89b8e48bc31ad7ce7f157bf',
+  },
+  {
+    id: 'SUP-083',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-083-zubok-2020-stalin-soviet-intelligence-iran-accepted.docx',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-083-zubok-2020-stalin-soviet-intelligence-iran-accepted.md',
+    hash: 'a3be6d19eda3bd4f0538138c352d0f9b465de9753386cb1f61566addd91abc60',
+  },
+  {
+    id: 'SUP-084',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-084-gasiorowski-2019-us-communist-threat-perceptions.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-084-gasiorowski-2019-us-communist-threat-perceptions.md',
+    hash: '0b670110cd94935521c0cda9d62de8dd148d8379d4d6f45035c587371d7d9e0d',
+  },
+  {
+    id: 'SUP-085',
+    path:
+      `${sourceRoot}/supplemental/` +
+      'SUP-085-ozkan-2024-turkish-policy-iran-oil-crisis.pdf',
+    sidecar:
+      `${sourceRoot}/supplemental/` +
+      'SUP-085-ozkan-2024-turkish-policy-iran-oil-crisis.md',
+    hash: '3df07b9d402a440675f63ee121636b3a6519db1a593ef45aebe5577c1badd3cf',
   },
 ];
 const recentSourceCollections = [
@@ -712,10 +982,65 @@ test('multi-file primary collections are cross-referenced', () => {
       'SUP-022',
       'SUP-026',
       ...newspaperCollections.map((collection) => collection.id),
+      'SUP-061',
     ]) {
       assert.match(contents, new RegExp(id));
     }
   }
+});
+
+test('selected Harvard oral-history archive is cataloged and complete', () => {
+  const available = fs.readFileSync(
+    'docs/research/AVAILABLE_SOURCES.md',
+    'utf8',
+  );
+  const bibliography = fs.readFileSync(
+    'docs/research/BIBLIOGRAPHY.md',
+    'utf8',
+  );
+  const unavailable = fs.readFileSync(
+    'docs/research/UNAVAILABLE_SOURCES.md',
+    'utf8',
+  );
+
+  assert.match(available, /SUP-061/);
+  assert.match(bibliography, /SUP-061/);
+  assert.match(bibliography, /<a id="p19"><\/a>P19/);
+  assert.doesNotMatch(
+    unavailable,
+    /\[`P19`\]\(BIBLIOGRAPHY\.md#p19\)/,
+    'acquired oral histories must not remain in the active intake list',
+  );
+
+  if (!fs.existsSync(sourceRoot)) return;
+  const root =
+    `${sourceRoot}/supplemental/` +
+    'SUP-061-harvard-iranian-oral-history-selected';
+  for (const [name, pages] of [
+    ['sanjabi', 531],
+    ['amini', 381],
+    ['azar', 169],
+    ['baghai', 664],
+  ]) {
+    const pageRoot = `${root}/transcripts/${name}/pages`;
+    assert.ok(fs.existsSync(`${root}/transcripts/${name}/manifest.json`));
+    assert.equal(
+      fs.readdirSync(pageRoot).filter((file) => file.endsWith('.jpg')).length,
+      pages,
+      `${name} transcript page count`,
+    );
+  }
+  for (let tape = 1; tape <= 7; tape += 1) {
+    const tapeRoot =
+      `${root}/qashqai/audio/tape-${String(tape).padStart(2, '0')}`;
+    assert.ok(fs.existsSync(`${tapeRoot}/nrs-lookup.json`));
+    assert.ok(fs.existsSync(`${tapeRoot}/player.html`));
+    assert.ok(
+      fs.readdirSync(tapeRoot).some((entry) => entry.startsWith('stream-')),
+      `Qashqai tape ${tape} streams`,
+    );
+  }
+  assert.ok(fs.statSync(`${root}/SHA256SUMS`).size > 100_000);
 });
 
 test('ignored local archive matches its catalog when present', async () => {
@@ -806,7 +1131,7 @@ test('ignored local archive matches its catalog when present', async () => {
     const collectionRoot =
       `${sourceRoot}/supplemental/${collection.directory}`;
     const pdfs = fs.readdirSync(collectionRoot)
-      .filter((name) => name.endsWith('.pdf'));
+      .filter((name) => name.endsWith('.pdf') && !name.endsWith('-ocr.pdf'));
     assert.equal(pdfs.length, collection.pdfCount, collection.id);
 
     const manifestPath = `${collectionRoot}/SHA256SUMS`;

@@ -47,6 +47,8 @@ const sources = {
   'maj-s14': 'Painter and Brew, <i>The Struggle for Iran</i>',
   'maj-s15': 'Zabih, <i>The Communist Movement in Iran</i>',
   'maj-s18': 'Brew, <i>Petroleum and Progress in Iran</i>',
+  'maj-s20': 'Koohi-Kamali, <i>The Political Development of the Kurds in Iran</i>',
+  'maj-s21': 'Atabaki, <i>Azerbaijan: Ethnicity and the Struggle for Power in Iran</i>',
   'sup-006': 'Official Sixteenth Majles laws and decisions',
   'sup-007': 'Official Sixteenth and Seventeenth Majles proceedings',
   'sup-012': 'Azizi, “Communism, Cold War, and the 1953 Coup”',

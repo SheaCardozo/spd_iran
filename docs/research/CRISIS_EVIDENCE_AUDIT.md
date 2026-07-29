@@ -73,14 +73,15 @@ The available counts are not measurements of the same thing:
 | --- | --- | --- |
 | **About 25 dead** | Tehran deaths in a later chronology cited by the specialist reference literature | Plausible death-only order of magnitude, but the underlying chronology and name list have not been checked locally. Do not use as an exact total. |
 | **235 killed and injured** | Combined casualty count in M. Torkamān's Persian documentary study, apparently based substantially on police records | The most important acquisition lead. It is not a death count, and its geographic coverage must be checked in the book before use. |
-| **At least 250 killed or seriously injured** | Later scholarly national reconstruction | Compatible with 235 only at rough scale because both category and geography may differ. Verify the exact locator in the acquired Abrahamian editions before implementing a number. |
+| **More than 250 killed or seriously injured** | Combined national estimate for demonstrators in Tehran, Hamadan, Ahvaz, Isfahan, and Kermanshah | Verified in Abrahamian, `MAJ-S2`, printed p. 271. His note 112 cites Arsanjani's political memoirs, a 1953 *Salnameh-ye Donya* account, Shayegan's September 1952 article, Qodsi's memoir, and the 17–24 July 1952 runs of *Ettela'at* and *Bakhtar-e Emruz*. This is a combined casualty estimate, not a death count. It is compatible with 235 only at rough scale because the categories and perhaps coverage differ. |
 | **Contemporary estimates as high as roughly 800 victims** | Reported newspaper figures | Evidence of contemporary perception and propaganda, not a verified casualty count. The exact issues and their source chains must be checked. |
 
-**Conclusion:** the project can presently say that dozens were killed and at
-least hundreds were killed or injured across the uprising. It cannot responsibly
-publish an exact death toll. The highest-value missing evidence is a
-name-by-name reconciliation of police, hospital, cemetery, newspaper, and
-provincial records, beginning with Torkamān.
+**Conclusion:** the project can say that more than 250 demonstrators were
+killed or seriously injured across the five named cities, citing Abrahamian's
+combined national estimate. It cannot convert that figure into an exact death
+toll. The highest-value missing evidence is a name-by-name reconciliation of
+police, hospital, cemetery, newspaper, and provincial records, beginning with
+Torkamān.
 
 ## 2. Nineteen August: sequence, organization, and casualties
 
@@ -298,6 +299,29 @@ not determine alignment and the complete proceedings are not accessible.
 Represent identified members and dated behavior rather than invented stable
 faction totals.
 
+## Newly available participant evidence
+
+The recent participant-source intake expands the comparison set without, by
+itself, revising the findings above:
+
+- [`SUP-072`](AVAILABLE_SOURCES.md#sup-072),
+  [`SUP-074`](AVAILABLE_SOURCES.md#sup-074), and
+  [`SUP-075`](AVAILABLE_SOURCES.md#sup-075) preserve three differently
+  transmitted late accounts by Interior Minister Gholam-Hossein Sadighi;
+- [`SUP-073`](AVAILABLE_SOURCES.md#sup-073) preserves Ardeshir Zahedi's
+  royalist, self-legitimating coup narrative; and
+- [`SUP-080`](AVAILABLE_SOURCES.md#sup-080) preserves most of Hossein Makki's
+  coup and aftermath volume, but omits printed pp. 425–440.
+
+These sources have passed carrier and edition intake, not a claim-by-claim
+adjudication against the clock, casualty estimates, or payment matrix in this
+audit. They must therefore be cited only after the relevant printed page or
+stable section has been checked and compared with contemporary records and
+specialist scholarship. The Sadighi texts are related transmissions rather
+than three independent witnesses; Zahedi and Makki are interested
+participants; and the absent Makki pages must never be treated as reviewed.
+OCR or searchability changes discovery speed, not this evidentiary status.
+
 ## Remaining acquisition and verification queue
 
 1. **M. Torkamān, *Qīām-e mellī-e sīom-e Tīr* (Tehran, 1361 SH /
@@ -318,6 +342,10 @@ faction totals.
    First-Senate roster baselines are acquired and transcribed. Complete the
    credential, attendance, dated-caucus, and roll-call joins, and acquire the
    First Senate proceedings.
+7. **Participant comparison:** extract exact locators from `SUP-072`–`SUP-075`
+   and the available intervals of `SUP-080`, then compare their remembered
+   sequences with `SUP-010`, `SUP-022`, `SUP-049`, `SUP-060`, and the
+   specialist reconstructions before changing the chronology.
 
 Exact newspaper windows and institutional carriers are maintained in
 [`NEWSPAPER_SOURCE_ACQUISITION.md`](NEWSPAPER_SOURCE_ACQUISITION.md); the

@@ -165,7 +165,7 @@ Fakhreddin Azimi places the crisis in the longer struggle to establish democrati
 
 ### 3.3 Cold War security, the Tudeh Party, and perceptions
 
-The Tudeh Party was a substantial communist organization with trade-union, student, press, and clandestine military connections. It was also illegal after 1949, constrained by state repression, internally shaped by the Soviet relationship, and politically hostile to the National Front for much of the early period. Mark Gasiorowski and other scholars examine both its real capabilities and the way Western fears of communist advance affected the coup decision [S4, R7, S8, S11].
+The Tudeh Party was a substantial communist organization with trade-union, student, press, and clandestine military connections. It was also illegal after 1949, constrained by state repression, internally shaped by the Soviet relationship, and politically hostile to the National Front for much of the early period. Soviet records support a passive and mistrustful Kremlin policy rather than preparation for a takeover, while the assessments available to U.S. officials show formidable Tudeh capabilities without evidence of an imminent seizure of power in early 1953. The game must therefore distinguish Tudeh capacity, Soviet policy, and Western threat perception rather than merge them into one communist-strength value [S4, R7, S8, S11, S29, S30].
 
 **What the game tests:** whether repression increases communist clandestinity; whether democratic inclusion or tactical coordination is feasible; whether exaggerated intelligence and visible street strength alter American policy even when an immediate seizure of power is unlikely.
 
@@ -451,6 +451,7 @@ The army must not be represented by a single loyalty number. The final crisis re
 - **Britain:** distinguish the Attlee and Churchill governments, Foreign Office, embassy, MI6, Treasury, Admiralty, and AIOC. They often cooperate but do not possess identical preferences.
 - **United States:** distinguish the Truman and Eisenhower administrations, State Department, embassy, CIA, oil-policy concerns, and congressional/public considerations. The transition in January 1953 is a major phase change, not a cosmetic leader swap.
 - **Soviet Union:** diplomatic and geopolitical actor whose interests should not be treated as identical to every Tudeh action.
+- **Turkey:** neighboring NATO actor whose official alignment with Britain coexisted with distinct regional-security interests, continued diplomatic contact with Mossadegh, and concern about the alternatives to his government [S31].
 - **International bodies:** United Nations Security Council, International Court of Justice, and World Bank have distinct mandates and cannot simply impose settlements.
 - **Oil market actors:** tanker owners, potential buyers, major oil companies, refiners, and courts in third countries make the boycott effective or porous.
 
@@ -1128,8 +1129,8 @@ Guide to Truman-era documentation and mediation context. Use the underlying docu
 **[P11] Foreign, Commonwealth & Development Office Historians. [“What the Butler saw: Britain and the Abadan Crisis, 1950–51”](https://history.blog.gov.uk/2022/12/07/what-the-butler-saw-britain-and-the-abadan-crisis-1950-51/).**  
 Official historical essay directing researchers to British records and the Butler report. Useful orientation to British governmental thinking; not a substitute for the cited files.
 
-**Required Iranian primary-source expansion.**  
-Before production, add Majles proceedings for the Sixteenth and Seventeenth Majles; the Persian text of the nationalization and implementation laws; government decrees and budget reports; *Bakhtar-e Emruz*, *Ettela'at*, *Keyhan*, *Mardom*, *Shahed*, and other period press across factions; National Front, Iran Party, Third Force, Kashani, and Tudeh publications; speeches and correspondence of Mossadegh; and Iranian memoir/document collections. Each source must record edition, editor, publication details, page number, and political provenance.
+**Iranian primary-source expansion.**
+The local archive now includes the Sixteenth- and Seventeenth-Majles proceedings, the implementation law, Oil Commission minutes, a legal budget, selected decrees and cabinet fragments, Mossadegh correspondence, participant memoirs and oral histories, and substantial but uneven press across National Front, Tudeh, Third Force, Iran Party, Pan-Iranist, clerical-nationalist, and general-news positions. Production research must extend the exact dates, organizations, ministries, and provincial records required by implemented scenes rather than treating those partial collections as complete runs. Every use still requires an edition or document identity, exact locator, and political or institutional provenance. Current access state and residual gaps are controlled by `docs/research/AVAILABLE_SOURCES.md` and `docs/research/UNAVAILABLE_SOURCES.md`, not this broad design bibliography.
 
 ### B. Core scholarly works
 
@@ -1173,6 +1174,15 @@ Valuable reconstruction of bazaar participation in Thirty Tir and an explicit ar
 
 **[S13] Firoozeh Kashani-Sabet. [“The Other Fight: Women's Suffrage and Iran's Oil Nationalization”](https://doi.org/10.1017/S0020743824000576). *International Journal of Middle East Studies* 56, no. 2 (2024): 270–279.**  
 The key focused source for making women's suffrage and organization part of the campaign rather than a footnote. It connects women's publications and associations, Thirty Tir participation, the 1952 election-law debates, and exclusion from the 1953 referendum to the larger struggles over sovereignty and democracy. Its primary-source references should seed the Persian press research list.
+
+**[S29] Vladislav M. Zubok. [“Stalin, Soviet Intelligence, and the Struggle for Iran, 1945–53”](https://doi.org/10.1093/dh/dhz049). *Diplomatic History* 44, no. 1 (2020): 22–46.**
+Peer-reviewed Soviet-archive reconstruction using intelligence, diplomatic, Stalin, and Molotov records. It supports a passive and mistrustful Soviet policy during the campaign and helps separate Kremlin calculations from Tudeh agency. The accepted manuscript is archived as `SUP-083`; do not convert its argument into automatic Soviet control of Tudeh or guaranteed non-intervention in every counterfactual.
+
+**[S30] Mark J. Gasiorowski. [“U.S. Perceptions of the Communist Threat in Iran during the Mossadegh Era”](https://doi.org/10.1162/jcws_a_00898). *Journal of Cold War Studies* 21, no. 3 (2019): 185–221.**
+Focused reconstruction of embassy, intelligence, NSC, and other assessments available to American policymakers. It supports separate variables for actual communist capacity and perceived threat: the article finds no evidence available to U.S. officials of an imminent Tudeh takeover when the Eisenhower administration chose coup cooperation. The author PDF is `SUP-084`.
+
+**[S31] Fulya Özkan. [“Turkish Foreign Policy during the Iranian Oil Crisis, 1951–1953”](https://doi.org/10.1017/npt.2024.15). *New Perspectives on Turkey* 72 (2025): 51–69; published online 2024.**
+Peer-reviewed Turkish Diplomatic Archives study showing that official support for Britain coexisted with Turkey's distinct NATO, regional-alliance, anti-communist, and mediation calculations. Use it for the bounded neighboring-state role, not as a general source for Iranian motives. The publisher PDF is `SUP-085`.
 
 ### D. Specialist reference works
 

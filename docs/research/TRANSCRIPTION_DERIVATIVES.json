@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-29T10:14:14.814438+00:00",
+  "entries": [
+    {
+      "sourceId": "SUP-061",
+      "outputJson": "docs/research/sources/supplemental/SUP-061-harvard-iranian-oral-history-selected/qashqai/transcription/qashqai-discovery-transcript.json",
+      "outputText": "docs/research/sources/supplemental/SUP-061-harvard-iranian-oral-history-selected/qashqai/transcription/qashqai-discovery-transcript.txt",
+      "jsonSha256": "d9196a3aaef3b74eb857e26f84c2087c5e49ba0d75aeab1bfdbfd071ac8561e1",
+      "textSha256": "452b59320b2ed851923ab55fb11b35e6bedf2ee8695616557c4219d23b501797",
+      "tapes": 7,
+      "durationSeconds": 22321.452,
+      "model": "turbo",
+      "modelRepository": "mobiuslabsgmbh/faster-whisper-large-v3-turbo",
+      "modelRevision": "0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf",
+      "fasterWhisper": "1.2.1",
+      "completedAt": "2026-07-29T10:14:14.814090+00:00",
+      "evidentiaryStatus": "discovery only; audio verification required",
+      "sourceCarrier": "docs/research/sources/supplemental/SUP-061-harvard-iranian-oral-history-selected/qashqai/audio",
+      "language": "fa",
+      "status": "machine-generated discovery transcript; not quotation-ready"
+    }
+  ]
+}
