@@ -24,7 +24,7 @@ Choose the emphasis the secretariat will circulate to editors and speakers.
 
 @press_constitution
 title: Lead with constitutional procedure
-subtitle: Build legitimacy and mandate through a consistent institutional case
+subtitle: Every article returns the dispute to law, cabinet responsibility, and the <span class="term term-parliament">Majles</span>
 on-arrival: press_capacity += 4; constitutional_legitimacy += 3; public_mandate += 2
 
 Editors receive a common brief that connects current demands to representative
@@ -38,7 +38,7 @@ momentary slogan. Oil receives less space in this cycle.
 
 @press_oil
 title: Explain the oil case term by term
-subtitle: Strengthen the oil coalition and independent-nationalist relations
+subtitle: Editors make the concession's disputed terms the center of a common nationalist case
 on-arrival: press_capacity += 4; oil_coalition_support += 4; independent_nationalists_relation += 2
 
 The press brief separates ownership, control, marketing, compensation, and
@@ -52,7 +52,7 @@ control grows. Other constitutional issues recede from the immediate campaign.
 
 @press_plural
 title: Publish the coalition's disagreements honestly
-subtitle: Lower dissent with a less concentrated public message
+subtitle: Each component speaks in its own register, making the coalition broader and less uniform
 on-arrival: press_capacity += 3; toilers_dissent -= 3; religious_network_dissent -= 3
 
 The secretariat asks friendly papers to identify the common demand while

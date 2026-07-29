@@ -25,7 +25,7 @@ organizations and which work the coalition postpones.
 
 @resolution_constitution
 title: Restate the constitutional minimum
-subtitle: Stronger legitimacy and broad relations; little immediate oil momentum
+subtitle: The coalition binds itself to a rule all four components can defend, while oil waits
 on-arrival: constitutional_legitimacy += 4; iran_party_relation += 2; independent_nationalists_relation += 2
 
 The resolution confines itself to representative elections, political
@@ -39,7 +39,7 @@ urgency to the oil campaign.
 
 @resolution_oil
 title: Make national control of oil the common demand
-subtitle: Stronger mandate and oil support; dissent from allies guarding a broader program
+subtitle: A single national demand creates momentum—and tests allies who joined for more than oil
 on-arrival: oil_coalition_support += 5; public_mandate += 3; toilers_dissent += 1; iran_party_dissent += 1
 
 The resolution places national control of oil at the center of the
@@ -54,7 +54,7 @@ argument sharpens.
 
 @resolution_amendments
 title: Publish the common text with component amendments
-subtitle: Lower dissent and preserve autonomy; a less concentrated public message
+subtitle: Each organization keeps its own voice beside the common text, at the cost of clarity
 on-arrival: iran_party_dissent -= 2; toilers_dissent -= 2; religious_network_dissent -= 2; press_capacity += 2
 
 The {!<span class="term term-national-front">!}Front{!</span>!} publishes a

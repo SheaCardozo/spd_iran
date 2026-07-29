@@ -218,6 +218,17 @@ function incorrectSemanticClasses(text) {
   return failures;
 }
 
+function mechanicalChoiceSubtitle(text) {
+  const plainText = text.replace(/<[^>]+>/g, '').trim();
+  return (
+    /^(?:stronger|strengthen|build|greater|reduce|lower|improve|balanced)\b/i
+      .test(plainText) ||
+    /\b(?:constitutional legitimacy|public mandate|organizational reach|press capacity|parliamentary procedure legitimacy|oil-coalition support)\b/i
+      .test(plainText) ||
+    /^costs? \d+ resources?\b/i.test(plainText)
+  );
+}
+
 function classifyScene(scene) {
   const id = scene.id;
   if (FRAMEWORK_INTERNAL.has(id)) return 'framework_internal';
@@ -348,6 +359,11 @@ function auditGame(game) {
       if (contentLength(scene) < 1) {
         failures.push(`${scene.id}: consequence has no visible result`);
       }
+      if (scene.subtitle && mechanicalChoiceSubtitle(scene.subtitle)) {
+        failures.push(
+          `${scene.id}: choice subtitle uses mechanical optimization shorthand`,
+        );
+      }
       if (!scene.options?.length) {
         failures.push(`${scene.id}: consequence does not wait for acknowledgement`);
       }
@@ -404,5 +420,6 @@ module.exports = {
   incompleteSemanticPhrases,
   incorrectSemanticClasses,
   loadGame,
+  mechanicalChoiceSubtitle,
   unwrappedSemanticTerms,
 };

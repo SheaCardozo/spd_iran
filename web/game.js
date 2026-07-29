@@ -9,9 +9,130 @@
                  month: 'short',
                  day: 'numeric' };
 
+  var DEBUG_EFFECT_LABELS = {
+    advisor_action_timer: 'adviser cooldown',
+    campaign_complete: 'campaign complete',
+    constitutional_legitimacy: 'constitutional legitimacy',
+    credentials_strategy: 'credential strategy',
+    election_strategy: 'election strategy',
+    front_structure: 'Front structure',
+    independent_nationalists_dissent: 'independent-nationalist dissent',
+    independent_nationalists_organization: 'independent-nationalist organization',
+    independent_nationalists_relation: 'independent-nationalist relations',
+    iran_party_dissent: 'Iran Party dissent',
+    iran_party_organization: 'Iran Party organization',
+    iran_party_relation: 'Iran Party relations',
+    mossadegh_authority: 'Mossadegh authority',
+    nationalization_approved_majles: 'Majles nationalization approval',
+    oil_coalition_support: 'oil-coalition support',
+    oil_terms_position: 'oil position',
+    organizational_reach: 'organizational reach',
+    parliamentary_procedure_legitimacy: 'parliamentary procedure',
+    press_capacity: 'press capacity',
+    prologue_complete: 'prologue complete',
+    prologue_crown_modifier: 'starting Crown modifier',
+    prologue_legitimacy_modifier: 'starting legitimacy modifier',
+    prologue_organization_modifier: 'starting organization modifier',
+    public_mandate: 'public mandate',
+    razmara_response: 'Razmara response',
+    religious_network_dissent: 'religious-network dissent',
+    religious_network_organization: 'religious-network organization',
+    religious_network_relation: 'religious-network relations',
+    resources: 'resources',
+    shah_electoral_influence: 'royal electoral influence',
+    shah_relation: 'Crown relations',
+    shah_resistance: 'Crown resistance',
+    toilers_dissent: "Toilers' Party dissent",
+    toilers_organization: "Toilers' Party organization",
+    toilers_relation: "Toilers' Party relations",
+  };
+
+  function browserDebugModeRequested() {
+    return Boolean(
+      window.location && /[?&]debug=1(?:&|$)/.test(window.location.search),
+    );
+  }
+
+  function debugModeEnabled() {
+    return browserDebugModeRequested();
+  }
+
+  function debugEffectLabel(quality) {
+    return DEBUG_EFFECT_LABELS[quality] || quality.replace(/_/g, ' ');
+  }
+
+  function debugEffectsForScene(scene) {
+    var source = (scene && scene.onArrival || [])
+      .map(function(action) { return action.source || ''; })
+      .join('\n');
+    var effects = [];
+    var deltaPattern =
+      /Q\['([^']+)'\]\s*=\s*\(Q\['\1'\]\s*\|\|\s*0\)\s*([+-])\s*(\d+(?:\.\d+)?);/g;
+    var assignmentPattern =
+      /Q\['([^']+)'\]\s*=\s*(-?\d+(?:\.\d+)?|"(?:[^"\\]|\\.)*");/g;
+    var match;
+
+    while ((match = deltaPattern.exec(source)) !== null) {
+      effects.push(
+        debugEffectLabel(match[1]) + ' ' + match[2] + match[3],
+      );
+    }
+    while ((match = assignmentPattern.exec(source)) !== null) {
+      var value = match[2];
+      if (value.startsWith('"')) value = JSON.parse(value);
+      effects.push(debugEffectLabel(match[1]) + ' → ' + value);
+    }
+    return effects;
+  }
+
+  function installDebugChoiceEffects(dendryUI) {
+    var stockDisplayChoices = dendryUI.displayChoices.bind(dendryUI);
+    dendryUI.displayChoices = function(choices) {
+      stockDisplayChoices(choices);
+      if (!debugModeEnabled()) return;
+
+      var list = this.$content.find('ul.choices').last();
+      list.children('li').each(function(index) {
+        var choice = choices[index];
+        var sceneId = choice.id.replace(/^@/, '');
+        var effects = debugEffectsForScene(dendryUI.game.scenes[sceneId]);
+        if (!effects.length) return;
+
+        var item = $(this).addClass('has-debug-effects');
+        var target = item.find('a').first();
+        var tooltipId = 'debug-effects-' +
+          sceneId.replace(/[^a-z0-9_-]/gi, '-') + '-' + index;
+        var tooltip = $('<span>').attr({
+          id: tooltipId,
+          role: 'tooltip',
+        }).addClass('debug-effect-tooltip').text(
+          'Debug effects: ' + effects.join('; '),
+        );
+        item.append(tooltip);
+        if (target.length) {
+          target.attr('aria-describedby', tooltipId);
+        } else {
+          item.attr({tabindex: '0', 'aria-describedby': tooltipId});
+        }
+      });
+    };
+  }
+
   var main = function(dendryUI) {
     ui = dendryUI;
     game = ui.game;
+
+    // Debug presentation belongs to the current URL, not to a campaign save.
+    // Normalize imported and loaded states before Dendry renders their scene.
+    var stockSetState = ui.dendryEngine.setState.bind(ui.dendryEngine);
+    ui.dendryEngine.setState = function(state) {
+      if (state && state.qualities) {
+        state.qualities.debug_mode = browserDebugModeRequested() ? 1 : 0;
+      }
+      return stockSetState(state);
+    };
+
+    installDebugChoiceEffects(ui);
 
     // Surface prototype slots under the v0.1 title so selecting one produces
     // the explicit schema error instead of making the old save disappear.

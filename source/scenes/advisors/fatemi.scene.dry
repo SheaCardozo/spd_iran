@@ -20,7 +20,7 @@ treat him as the sole editor of every friendly paper.
 
 @fatemi_message
 title: Sharpen the public message
-subtitle: Build press capacity and mandate around one clear argument
+subtitle: <span class="term term-nationalist-social-democratic">Fatemi</span> reduces the campaign to a line editors can carry from headline to meeting hall
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; press_capacity += 5; public_mandate += 3
@@ -37,7 +37,7 @@ emphasis will need attention in a later cycle.
 
 @fatemi_network
 title: Coordinate friendly editors
-subtitle: Build a coordinated press network across independent outlets
+subtitle: Independent papers coordinate timing and argument without becoming an official party press
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; press_capacity += 4; organizational_reach += 2
@@ -53,7 +53,7 @@ papers into a single controlled organ.
 
 @fatemi_dossier
 title: Prepare a documented rebuttal
-subtitle: Trade some immediacy for constitutional credibility and a reusable press record
+subtitle: The rebuttal sacrifices speed for a record opponents must answer point by point
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; press_capacity += 3; constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2

@@ -22,7 +22,7 @@ pressure. Neither guarantees relief from the authorities.
 
 @defense_cases
 title: Fund individual legal cases
-subtitle: Spend one resource on direct defense, legitimacy, and continued organizing
+subtitle: The <span class="term term-national-front">Front</span> stands behind named defendants and pays the cost of keeping their cases alive
 choose-if: resources >= 1
 unavailable-subtitle: Requires one resource.
 on-arrival: resources -= 1; constitutional_legitimacy += 4; organizational_reach += 2; toilers_relation += 2
@@ -43,7 +43,7 @@ partly documented.
 
 @defense_record
 title: Publish a common record of restrictions
-subtitle: Build press capacity and mandate while risking a colder <span class="term term-royalist">Court</span> relationship
+subtitle: A printed catalogue makes repression public—and turns every accusation toward the <span class="term term-royalist">Court</span>
 on-arrival: press_capacity += 5; public_mandate += 3; shah_relation -= 1
 
 Editors and local committees compile dates, orders, interrupted meetings, and

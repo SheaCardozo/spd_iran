@@ -50,6 +50,39 @@ test.beforeEach(async ({page}) => {
   });
 });
 
+test('debug mode reveals exact choice effects only on hover or focus', async ({
+  page,
+}) => {
+  await page.goto('/?debug=1');
+  await firstAvailableChoice(page);
+  await expect(page.locator('#content')).toContainText('4 February 1949');
+
+  const choice = page.locator('#content ul.choices li').first();
+  const tooltip = choice.locator('.debug-effect-tooltip');
+  await expect(tooltip).toHaveCount(1);
+  await expect(tooltip).toBeHidden();
+  await choice.locator('a').focus();
+  await expect(tooltip).toBeVisible();
+  await expect(tooltip).toContainText(
+    'constitutional legitimacy +2',
+  );
+  await expect(tooltip).toContainText(
+    'starting legitimacy modifier +2',
+  );
+
+  await page.evaluate(() => window.dendryUI.quickSave());
+  await page.goto('/');
+  await page.evaluate(() => window.dendryUI.quickLoad());
+  await expect.poll(
+    () => page.evaluate(
+      () => window.dendryUI.dendryEngine.state.qualities.debug_mode,
+    ),
+  ).toBe(0);
+  await expect(
+    page.locator('#content .debug-effect-tooltip'),
+  ).toHaveCount(0);
+});
+
 test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', async ({
   page,
 }, testInfo) => {

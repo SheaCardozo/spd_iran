@@ -177,17 +177,26 @@ Choice count follows the real decision space:
 Every substantive option must have:
 
 - an active title that states what the player will do;
-- a short subtitle describing its likely qualitative emphasis, cost, risk, or
-  requirement;
+- a short subtitle written in the political voice of the scene: it should
+  clarify the action's logic, likely reaction, compromise, or exposure rather
+  than summarize a bundle of state variables;
 - a mechanically distinct effect, unless the point of the choice is explicitly
   expressive;
 - an unavailable explanation when a requirement can fail; and
 - no promise of certainty that the historical record cannot support.
 
-Default-facing text uses qualitative effects such as “strengthens the public
-mandate but strains relations with the Court.” Exact values remain a debug
-view. Choice text must make important tradeoffs legible without revealing a
-complete optimization formula.
+Default-facing subtitles should imply mechanical direction through historical
+action and reaction: “One great gathering makes the Front impossible to
+overlook and gives the Crown a single target,” not “stronger mandate and
+organization; increased Crown resistance.” Do not name qualities, enumerate
+bonuses, or use optimizer shorthand such as “balanced legitimacy, procedure,
+and support.” Hard prerequisites and commitments from the common purse may
+remain explicit when hiding them would make the choice misleading.
+
+Exact immediate state changes are a developer aid. With `?debug=1`, hovering a
+choice or focusing it from the keyboard displays the target scene's numerical
+`on-arrival` changes. They are absent from the ordinary interface and are not
+a substitute for a well-written subtitle.
 
 ### 3. Consequences
 
@@ -253,6 +262,8 @@ the current draft must answer:
 - Does the scene match Dynamic SPD's setup → choice → consequence rhythm?
 - Is the number of choices justified by the decision rather than a template?
 - Does each option communicate a distinct action and qualitative tradeoff?
+- Does its subtitle express political logic and reaction rather than recite
+  quality names or optimization categories?
 - Does every substantive option produce consequence prose?
 - Are fixed outcomes and player-shaped outcomes clearly separated?
 - Is every historical assertion supported by the strongest suitable source

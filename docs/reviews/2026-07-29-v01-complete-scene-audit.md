@@ -1,9 +1,9 @@
 # The Last Majles v0.1 complete compiled-scene audit
 
 **Review date:** 29 July 2026  
-**Reviewed build:** current `source/` and rebuilt `out/game.json` after adviser-roster
-removal, perfect-information cleanup, Library redesign, and the Common
-Resolution card  
+**Reviewed build:** current `source/`, rebuilt `out/game.json`, and
+`web/game.js`/`web/game.css` after the choice-subtitle and debug-effect
+presentation rewrite
 **Standard:** [SCENE_CONTENT_STANDARD.md](../SCENE_CONTENT_STANDARD.md)  
 **Automated inventory:** [audit-scenes.js](../../scripts/audit-scenes.js)  
 **Review posture:** independent, exhaustive, adversarial; no game-source edits by
@@ -11,9 +11,9 @@ this reviewer
 
 ## Verdict
 
-All **166 compiled scene IDs** are inventoried below. The current build has
-**166 passes and 0 failures**. The seven current review-class totals reconcile
-exactly to the automated inventory:
+All **166 compiled scene IDs** are inventoried below. The scene-content
+inventory has **166 passes and 0 failures**. The seven current review-class
+totals reconcile exactly to the automated inventory:
 
 | Review class | Script total | PASS | FAIL |
 |---|---:|---:|---:|
@@ -37,6 +37,15 @@ sentence now wraps `Shah` with the required `term-royalist` class. The compiled
 field has no unwrapped, incomplete, or incorrectly classified semantic term.
 `node scripts/audit-scenes.js` reports no failures.
 
+The broader interface review also passes. Exact choice-effect tooltips are
+absent in ordinary mode and keyboard accessible in debug mode. Debug
+presentation is now URL-only: `browserDebugModeRequested()` checks the current
+query, and `debugModeEnabled()` no longer trusts a persisted campaign quality.
+The wrapped Dendry `setState` normalizes `debug_mode` from the current URL
+before delegating to the engine, so slot loads, quick-loads, and imports cannot
+restore debug disclosure at an ordinary URL. The overall release verdict is
+**PASS**.
+
 ## Method
 
 This audit rebuilt its inventory from the current `out/game.json`; it did not
@@ -49,6 +58,10 @@ The review checked:
 - every historical and recurring decision for sufficient setup, a choice count
   justified by the decision, qualitative tradeoffs, distinct effects, and a
   visible consequence;
+- all 97 substantive option targets for a subtitle that states political or
+  historical action and likely reaction, implies rather than names mechanics,
+  avoids optimizer shorthand and numerical deltas, preserves source bounds,
+  and uses semantic political markup;
 - every consequence for concrete action and reaction, unresolved limits,
   acknowledgement, and the separation of historical fact from plausible
   organizational response;
@@ -63,7 +76,10 @@ The review checked:
   instructions;
 - semantic political spans, correct semantic classes, citation-link exemption,
   and complete multi-line wrappers; and
-- deck, engine, and framework scenes for their narrower ownership boundaries.
+- deck, engine, and framework scenes for their narrower ownership boundaries;
+  and
+- debug tooltip creation, ordinary-mode isolation, hover/focus behavior,
+  accessible description wiring, and save/load/import behavior.
 
 ## Requested regression probes
 
@@ -73,6 +89,48 @@ No compiled player-facing scene contains `political_intelligence`, “political
 intelligence,” the removed fragmentary-report line, run-seed language, or a
 hidden report-reliability mechanic. Choice subtitles consistently disclose
 qualitative direction, costs, and risks.
+
+### Choice subtitles
+
+The compiled build contains 38 decision/continuation menus, 103 routes from
+those menus, and 97 substantive option targets after ordinary return routes
+are excluded. Every substantive target has a subtitle.
+
+All 97 pass the rewritten standard. They name the action or political
+instrument—such as a constitutional brief, common slate, committee majority,
+public dossier, or autonomous joint committee—and describe the likely
+institutional or coalition response. Costs appear in political form (“common
+funds,” “shared purse,” fewer organizers for another task) rather than as
+quality names. Terms such as “organization” and “support” occur only as
+ordinary political nouns, not as labels for hidden variables. No subtitle
+prints a delta, promises certainty unsupported by the record, or substitutes
+“stronger legitimacy/mandate/capacity” shorthand for a described consequence.
+Semantic names and institutions remain correctly wrapped.
+
+Fixed-development and continuation routes are not padded with invented
+alternatives. Their subtitles state the remaining institutional step or lead
+to a fully described strategy menu.
+
+### Debug effect disclosure
+
+In a fresh ordinary run, `displayChoices` returns immediately before creating
+any `.debug-effect-tooltip`, so exact deltas are not present in the ordinary
+DOM. In an explicitly debug run, each affected choice receives a text-only
+tooltip with `role="tooltip"` and a unique ID. Available choice links receive
+`aria-describedby`; focus triggers the same visibility rule as hover through
+`:focus-within`. A choice without a link receives `tabindex="0"` and the same
+description. The tooltip is appended without a persistent badge or other
+always-visible debug marker. Hovering the choice row reveals it directly, and
+keyboard focus reveals the same content through `:focus-within`. These pointer,
+focus, and description paths pass the accessibility review.
+
+The persistence path now passes isolation. Dendry's slot and quick-load
+implementations call the wrapped engine `setState`, as does the project's
+import path. Normalization happens before the stock engine renders the loaded
+scene. Browser coverage now creates and quick-saves a run under `?debug=1`,
+loads it at `/`, and requires both `Q.debug_mode = 0` and zero
+`.debug-effect-tooltip` nodes. This directly covers the former cross-mode
+leak.
 
 ### Research Library and source comments
 

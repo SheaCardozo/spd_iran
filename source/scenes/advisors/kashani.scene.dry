@@ -19,7 +19,7 @@ mobilize religious and bazaar networks without dissolving that independence.
 
 @kashani_bazaar
 title: Coordinate a bazaar appeal
-subtitle: Build <span class="term term-religious">religious-network</span> organization and a wider public mandate
+subtitle: <span class="term term-religious">Kashani</span> carries the oil appeal through the bazaar and <span class="term term-religious">religious networks</span> on his own authority
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; religious_network_organization += 5; public_mandate += 3
@@ -38,7 +38,7 @@ not to a staff apparatus under
 
 @kashani_terms
 title: Negotiate terms of cooperation
-subtitle: Reduce dissent and improve relations through a bounded private agreement
+subtitle: The agreement identifies where cooperation ends, preserving <span class="term term-religious">Kashani</span>'s independence as well as the <span class="term term-national-front">Front</span>'s
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; religious_network_relation += 5; religious_network_dissent -= 3

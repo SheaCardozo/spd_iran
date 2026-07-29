@@ -17,7 +17,7 @@ immediate question, but it cannot erase the coalition's differences.
 
 @constitutional_case
 title: State the constitutional case
-subtitle: Strengthen constitutional and parliamentary legitimacy through a common argument
+subtitle: <span class="term term-mossadegh">Mossadegh</span> gives unlike allies a constitutional formula they can repeat without sharing a full program
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2; mossadegh_authority += 1
@@ -34,7 +34,7 @@ claiming that {!<span class="term term-mossadegh">!}Mossadegh{!</span>!} has res
 
 @hear_tendencies
 title: Hear the coalition's competing tendencies
-subtitle: Reduce dissent among the <span class="term term-national-front">Front</span>'s competing tendencies without forcing agreement
+subtitle: Each tendency is heard in its own language; agreement is postponed rather than forced
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; iran_party_relation += 1; toilers_relation += 1; independent_nationalists_relation += 1; religious_network_relation += 1; iran_party_dissent -= 1; toilers_dissent -= 1; independent_nationalists_dissent -= 1; religious_network_dissent -= 1

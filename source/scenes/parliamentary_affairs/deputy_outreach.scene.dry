@@ -27,7 +27,7 @@ month.
 
 @deputies_procedure
 title: Emphasize parliamentary procedure
-subtitle: Strengthen constitutional and chamber legitimacy beyond the <span class="term term-national-front">Front</span>'s own ranks
+subtitle: Deputies outside the <span class="term term-national-front">Front</span> are asked to defend rules before committing to its program
 on-arrival: parliamentary_procedure_legitimacy += 4; constitutional_legitimacy += 2
 
 {!<span class="term term-national-front">!}Front{!</span>!} deputies ask
@@ -43,7 +43,7 @@ conversation for endorsement of nationalization or
 
 @deputies_oil
 title: Ask for support for nationalization
-subtitle: Build the oil majority and public mandate through a direct commitment
+subtitle: A direct pledge separates allies on nationalization from allies on everything else
 on-arrival: oil_coalition_support += 5; public_mandate += 2
 
 The outreach makes the nationalization principle the explicit question and
@@ -57,7 +57,7 @@ have supported only a narrower procedural motion are harder to bring along.
 
 @deputies_constituency
 title: Share constituency-pressure reports
-subtitle: Convert organizational reach into broader oil support
+subtitle: Reports from home show undecided deputies that oil is no longer only a Tehran argument
 on-arrival: organizational_reach += 2; oil_coalition_support += 4
 
 Organizers summarize verified local reports for deputies without claiming a

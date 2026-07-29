@@ -22,7 +22,7 @@ backward.
 
 @makki_floor
 title: Prepare a floor intervention
-subtitle: Strengthen parliamentary procedure and <span class="term term-mossadegh">Mossadegh</span>'s coordinating authority
+subtitle: <span class="term term-makki">Makki</span> turns <span class="term term-mossadegh">Mossadegh</span>'s constitutional position into a speech the chamber must confront
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; parliamentary_procedure_legitimacy += 4; mossadegh_authority += 2
@@ -39,7 +39,7 @@ the chamber with a clearer division of work, and
 
 @makki_oil
 title: Rally support on oil
-subtitle: Build oil-coalition support and public mandate around a direct appeal
+subtitle: The appeal asks deputies and the public to choose national control before every term is settled
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; oil_coalition_support += 5; public_mandate += 2
@@ -57,7 +57,7 @@ every term of implementation.
 
 @makki_questions
 title: Prepare a committee examination
-subtitle: Strengthen procedure through precise questions on each disputed term
+subtitle: Each question forces the agreement's defenders to name who owns, operates, markets, and pays
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; parliamentary_procedure_legitimacy += 4; oil_coalition_support += 2

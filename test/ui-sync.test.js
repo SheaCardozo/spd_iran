@@ -92,6 +92,7 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
 
   const index = fs.readFileSync('out/html/index.html', 'utf8');
   const gameCss = fs.readFileSync('out/html/game.css', 'utf8');
+  const gameJs = fs.readFileSync('out/html/game.js', 'utf8');
   const compiledGame = JSON.parse(fs.readFileSync('out/game.json', 'utf8'));
   const openingText = compiledGame.scenes.palace_protest.content.flatMap(
     (block) => Array.isArray(block.content) ? block.content : [],
@@ -115,6 +116,19 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.match(gameCss, /--term-nationalist:\s*#2c6f64/i);
   assert.match(gameCss, /--term-parliament:\s*#7a5718/i);
   assert.match(gameCss, /--term-social-democratic:\s*#c00000/i);
+  assert.match(gameCss, /\.debug-effect-tooltip\s*\{/);
+  assert.match(
+    gameCss,
+    /li\.has-debug-effects:focus-within \.debug-effect-tooltip/,
+  );
+  assert.match(gameJs, /function installDebugChoiceEffects\(dendryUI\)/);
+  assert.match(gameJs, /function browserDebugModeRequested\(\)/);
+  assert.match(
+    gameJs,
+    /state\.qualities\.debug_mode = browserDebugModeRequested\(\) \? 1 : 0/,
+  );
+  assert.match(gameJs, /Debug effects: ['"] \+ effects\.join\('; '\)/);
+  assert.match(gameJs, /var deltaPattern/);
   assert.match(
     gameCss,
     /\.term-mossadegh\s*\{[\s\S]*?var\(--term-nationalist\)[\s\S]*?var\(--term-parliament\)/,

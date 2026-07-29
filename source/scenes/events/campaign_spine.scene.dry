@@ -34,7 +34,7 @@ record?
 
 @hazhir_condemn
 title: Issue an immediate, unqualified condemnation
-subtitle: Strong constitutional legitimacy; some strain with religious allies
+subtitle: The <span class="term term-national-front">Front</span> draws a bright line against political murder, even where allies want the election crisis named in the same breath
 on-arrival: constitutional_legitimacy += 4; religious_network_relation -= 1; shah_relation += 1
 
 The {!<span class="term term-national-front">!}Front{!</span>!}'s statement condemns the assassination and insists that political
@@ -50,7 +50,7 @@ less comfortable internally.
 
 @hazhir_bounded
 title: Publish a joint constitutional statement
-subtitle: Documents the wider crisis; a more carefully balanced coalition response
+subtitle: The statement condemns the killing while refusing to let the election crisis disappear behind it
 on-arrival: constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2; religious_network_dissent -= 1
 
 The joint statement condemns the killing, then separates it from the {!<span class="term term-national-front">!}Front{!</span>!}'s
@@ -65,7 +65,7 @@ them as the same allegation. Uncertainty about the killing remains explicit.
 
 @hazhir_verify
 title: Delay the full statement while reports are checked
-subtitle: A firmer evidentiary record; public and <span class="term term-royalist">Court</span> suspicion during the silence
+subtitle: Silence protects the evidentiary standard and leaves newspapers and the <span class="term term-royalist">Court</span> to define the delay
 on-arrival: constitutional_legitimacy += 2; parliamentary_procedure_legitimacy += 2; press_capacity -= 1; shah_relation -= 1
 
 The {!<span class="term term-national-front">!}Front{!</span>!} issues only a brief condemnation while its contacts compare reports
@@ -110,7 +110,7 @@ will be less concentrated in either direction.
 
 @rerun_slate
 title: Concentrate on a common Tehran slate
-subtitle: Stronger candidate organization and mandate; thinner monitoring coverage
+subtitle: A recognizable Tehran list concentrates the campaign and leaves fewer hands to document interference elsewhere
 on-arrival: election_strategy = "Concentrated Tehran slate"; independent_nationalists_organization += 4; iran_party_relation += 2; public_mandate += 2
 
 The coalition negotiates a limited common slate and directs its organizers
@@ -126,7 +126,7 @@ less comprehensive evidentiary record.
 
 @rerun_monitor
 title: Build a common election-monitoring record
-subtitle: Stronger evidence and procedure; less concentrated candidate work
+subtitle: The <span class="term term-national-front">Front</span> prepares cases that can survive scrutiny, even if its candidates receive less concentrated help
 on-arrival: election_strategy = "Monitoring and credential record"; parliamentary_procedure_legitimacy += 5; organizational_reach += 3
 
 Lawyers, editors, and local contacts use a common form for reports about
@@ -141,7 +141,7 @@ being assigned to record keeping rather than turnout.
 
 @rerun_balanced
 title: Fund a smaller slate and selective monitoring teams
-subtitle: Costs 2 resources; modest gains in organization and procedure
+subtitle: Common funds sustain both a modest slate and selected observers; neither effort dominates
 choose-if: resources >= 2
 unavailable-subtitle: The {!<span class="term term-national-front">!}Front{!</span>!} needs 2 resources to sustain both operations.
 on-arrival: resources -= 2; election_strategy = "Slate with selective monitoring"; independent_nationalists_organization += 2; parliamentary_procedure_legitimacy += 3; organizational_reach += 2
@@ -218,7 +218,7 @@ remaining credentials are reviewed.
 
 @opening_procedure
 title: Prepare case-by-case credential objections
-subtitle: Stronger procedural legitimacy; slower political coordination
+subtitle: Each return is tested on its own record, while coalition strategy develops more slowly
 on-arrival: credentials_strategy = "Case-by-case procedural challenge"; parliamentary_procedure_legitimacy += 4
 
 The {!<span class="term term-national-front">!}Front{!</span>!}'s deputies and lawyers organize each objection around a particular
@@ -233,7 +233,7 @@ a common parliamentary program.
 
 @opening_coalition
 title: Establish a coordinated <span class="term term-national-front">National Front</span> group
-subtitle: Stronger internal relations and oil coordination; fewer procedural specialists
+subtitle: The returned deputies speak as one group, even when they have not mastered every procedural weapon
 on-arrival: credentials_strategy = "Coordinated National Front group"; independent_nationalists_relation += 3; oil_coalition_support += 2
 
 The deputies establish a regular meeting, divide responsibility for following
@@ -249,7 +249,7 @@ the same way.
 
 @opening_liaison
 title: Assign deputies to cultivate procedural allies
-subtitle: Broader parliamentary support; looser <span class="term term-national-front">Front</span> discipline
+subtitle: The <span class="term term-national-front">Front</span> trades some internal discipline for allies who can move a chamber it does not control
 on-arrival: credentials_strategy = "Deputy liaison and procedural outreach"; oil_coalition_support += 5; independent_nationalists_dissent += 1
 
 Individual {!<span class="term term-national-front">!}Front{!</span>!} deputies begin regular conversations with members outside the
@@ -315,7 +315,7 @@ secure attention for petitions without building the same public record.
 
 @credentials_public
 title: Publish the strongest documented credential cases
-subtitle: Greater procedural and press legitimacy; sharper conflict with royal influence
+subtitle: Only the best cases go before the country, making royal interference part of the public dispute
 on-arrival: parliamentary_procedure_legitimacy += 5; press_capacity += 2; shah_electoral_influence -= 2
 
 The {!<span class="term term-national-front">!}Front{!</span>!} publishes only cases for which its lawyers can identify the return,
@@ -330,7 +330,7 @@ influence through less visible channels.
 
 @credentials_internal
 title: Negotiate scheduling and support inside the chamber
-subtitle: Better deputy relationships and oil outreach; a quieter public record
+subtitle: Quiet scheduling and persuasion win room inside the chamber without creating a public cause
 on-arrival: oil_coalition_support += 5; independent_nationalists_relation += 3
 
 {!<span class="term term-national-front">!}Front{!</span>!} deputies meet colleagues case by case, asking when a petition will be
@@ -346,7 +346,7 @@ less to explain the credential struggle to people outside the
 
 @credentials_combined
 title: Pair selected petitions with a public legal brief
-subtitle: Costs 2 resources; balanced procedural, press, and deputy work
+subtitle: Common funds join selected petitions to a public legal brief, dividing effort between chamber and country
 choose-if: resources >= 2
 unavailable-subtitle: The {!<span class="term term-national-front">!}Front{!</span>!} needs 2 resources for legal preparation and printing.
 on-arrival: resources -= 2; parliamentary_procedure_legitimacy += 4; press_capacity += 1; oil_coalition_support += 3
@@ -397,7 +397,7 @@ What product should the {!<span class="term term-national-front">!}Front{!</span
 
 @committee_terms
 title: Build a term-by-term committee record
-subtitle: Stronger procedure and evidence; slower coalition outreach
+subtitle: Each disputed clause becomes a question the agreement's defenders must answer; coalition courtship waits
 on-arrival: parliamentary_procedure_legitimacy += 6; oil_coalition_support += 2; oil_terms_position = "Documented term-by-term rejection"
 
 {!<span class="term term-national-front">!}Front{!</span>!} members organize the proposal by ownership recognition, operational
@@ -413,7 +413,7 @@ to a successor policy.
 
 @committee_majority
 title: Recruit support beyond the <span class="term term-national-front">Front</span>'s five members
-subtitle: Broader oil coalition; less detailed common term analysis
+subtitle: The five <span class="term term-national-front">Front</span> members look outward for votes before agreeing on every disputed term
 on-arrival: oil_coalition_support += 6; independent_nationalists_relation += 2; religious_network_relation += 2
 
 {!<span class="term term-national-front">!}Front{!</span>!} deputies meet committee colleagues around propositions they can state
@@ -428,7 +428,7 @@ partners a visible role. The resulting common position is broader than the
 
 @committee_public_brief
 title: Prepare a public brief from verified committee material
-subtitle: Greater press capacity and mandate; more resistance from the <span class="term term-royalist">Court</span>
+subtitle: Verified committee material leaves the chamber as a public case, inviting the <span class="term term-royalist">Court</span> to answer
 on-arrival: press_capacity += 4; public_mandate += 3; shah_resistance += 1
 
 Editors work with the {!<span class="term term-national-front">!}Front{!</span>!}'s committee members to explain what the body is
@@ -475,7 +475,7 @@ channels. Each reaches a different audience and creates a different risk.
 
 @supplemental_explain
 title: Publish a term-by-term press dossier
-subtitle: Stronger press, evidence, and legitimacy; a more technical public case
+subtitle: The dossier asks readers to judge the agreement clause by clause rather than by promised revenue
 on-arrival: press_capacity += 5; parliamentary_procedure_legitimacy += 2; constitutional_legitimacy += 2
 
 The dossier separates additional revenue from ownership recognition,
@@ -491,7 +491,7 @@ carry into a mass meeting than a single slogan.
 
 @supplemental_mandate
 title: Organize public meetings around control and sovereignty
-subtitle: Stronger mandate and oil coalition; greater royal resistance
+subtitle: Meetings turn operational control into a national demand—and a direct challenge to the <span class="term term-royalist">Crown</span>
 on-arrival: public_mandate += 5; oil_coalition_support += 3; shah_resistance += 2
 
 Speakers focus on the question the supplemental agreement leaves open: who
@@ -507,7 +507,7 @@ cannot be confined to committee procedure.
 
 @supplemental_deputies
 title: Brief undecided deputies from the term matrix
-subtitle: Stronger parliamentary support and procedure; less immediate public reach
+subtitle: Undecided deputies receive the complete comparison in private, while the public campaign waits
 on-arrival: oil_coalition_support += 6; parliamentary_procedure_legitimacy += 3
 
 {!<span class="term term-national-front">!}Front{!</span>!} deputies circulate a short brief that states both its conclusion and its
@@ -558,7 +558,7 @@ subtitle: The <span class="term term-national-front">Front</span> must choose it
 
 @committee_claim
 title: Publish the committee reasoning as a constitutional report
-subtitle: Stronger procedure and legitimacy; a narrower coalition appeal
+subtitle: The committee's reasoning becomes the constitutional foundation for what follows, though the appeal remains narrow
 on-arrival: parliamentary_procedure_legitimacy += 5; constitutional_legitimacy += 2
 
 The {!<span class="term term-national-front">!}Front{!</span>!} presents the rejection as the result of committee scrutiny, not as
@@ -573,7 +573,7 @@ declaration.
 
 @committee_bridge
 title: Convene deputies around a successor nationalization motion
-subtitle: Stronger oil coalition and mandate; less emphasis on the committee record
+subtitle: A successor motion gives unlike deputies something affirmative to support before every term is settled
 on-arrival: oil_coalition_support += 6; public_mandate += 2
 
 {!<span class="term term-national-front">!}Front{!</span>!} members use the rejection to ask deputies a new and concrete question:
@@ -588,7 +588,7 @@ made rejection possible.
 
 @committee_joint
 title: Issue a joint parliamentary and public declaration
-subtitle: Balanced mandate, press, and oil support; increased royal resistance
+subtitle: Chamber argument and public declaration move together, making the <span class="term term-royalist">Court</span> part of the dispute
 on-arrival: oil_coalition_support += 3; public_mandate += 3; press_capacity += 2; shah_resistance += 1
 
 Deputies and coalition organizations release a common declaration: the
@@ -638,7 +638,7 @@ subtitle: Choose the institution and audience that should carry the argument
 
 @majles_record
 title: Issue a report on what the <span class="term term-parliament">Majles</span> did—and did not—decide
-subtitle: Stronger parliamentary and constitutional legitimacy
+subtitle: The report denies the government a victory without pretending rejection has already enacted nationalization
 on-arrival: parliamentary_procedure_legitimacy += 4; constitutional_legitimacy += 3
 
 The report describes the chamber's rejection without inventing a numerical
@@ -652,7 +652,7 @@ institutionally precise and less effective as a broad mobilizing message.
 
 @majles_coalition
 title: Convene a cross-faction meeting on the nationalization principle
-subtitle: Stronger oil support and deputy relationships; no public surge
+subtitle: A private meeting tests who will cross from rejecting the agreement to endorsing the principle
 on-arrival: oil_coalition_support += 6; independent_nationalists_relation += 3
 
 {!<span class="term term-national-front">!}Front{!</span>!} deputies invite members who supported rejection to discuss the narrower
@@ -667,7 +667,7 @@ effect is limited.
 
 @majles_movement
 title: Organize a public explanation of the unfinished victory
-subtitle: Stronger mandate and press capacity; less direct deputy coordination
+subtitle: The unfinished victory is explained outside the chamber, where public expectations may outrun deputy commitments
 on-arrival: oil_coalition_support += 3; public_mandate += 4; press_capacity += 2
 
 Newspapers and meetings repeat a disciplined distinction: the supplemental
@@ -715,7 +715,7 @@ Who should carry the answer, and through which institution?
 
 @razmara_terms
 title: Answer through a term-by-term parliamentary brief
-subtitle: Stronger procedure, evidence, and deputy support; limited public reach
+subtitle: Every administrative objection receives a parliamentary answer, keeping the contest inside the record
 on-arrival: razmara_response = "Parliamentary term-by-term rebuttal"; parliamentary_procedure_legitimacy += 5; oil_coalition_support += 4
 
 {!<span class="term term-national-front">!}Front{!</span>!} deputies separate the nationalization principle from the operational
@@ -731,7 +731,7 @@ questions remain genuinely open.
 
 @razmara_public
 title: Publish a public dossier on control and capacity
-subtitle: Stronger mandate and press; more resistance from the <span class="term term-royalist">Crown</span>
+subtitle: The technical dispute becomes a public argument over who is fit to control the industry
 on-arrival: razmara_response = "Public nationalization campaign"; public_mandate += 5; press_capacity += 3; shah_resistance += 2
 
 The {!<span class="term term-national-front">!}Front{!</span>!}'s editors explain the difference between a warning that
@@ -747,7 +747,7 @@ direct challenge during an already tense confrontation.
 
 @razmara_joint
 title: Form a joint deputy-and-expert response group
-subtitle: Costs 2 resources; balanced evidence, coalition, and public capacity
+subtitle: Common funds put deputies and specialists behind one answer for chamber and country
 choose-if: resources >= 2
 unavailable-subtitle: The {!<span class="term term-national-front">!}Front{!</span>!} needs 2 resources for research, coordination, and printing.
 on-arrival: resources -= 2; razmara_response = "Joint parliamentary and public response"; parliamentary_procedure_legitimacy += 2; oil_coalition_support += 4; press_capacity += 2; public_mandate += 2
@@ -797,7 +797,7 @@ its oil case separate from an act of political violence?
 
 @assassination_condemn
 title: Condemn the killing without qualification
-subtitle: Strongest constitutional signal; strain with religious-political allies
+subtitle: The <span class="term term-national-front">Front</span> refuses to let an opponent's murder stand in for a parliamentary victory, risking a breach with allies who read the killing differently
 on-arrival: constitutional_legitimacy += 5; religious_network_relation -= 2; shah_relation += 1
 
 The {!<span class="term term-national-front">!}Front{!</span>!} issues an immediate condemnation and refuses to treat the death of a
@@ -813,7 +813,7 @@ it.
 
 @assassination_bounded
 title: Condemn the killing and restate the constitutional oil case
-subtitle: Balanced legitimacy, procedure, and oil support
+subtitle: The statement condemns the murder and insists the oil case proceed on its own constitutional record
 on-arrival: constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2; oil_coalition_support += 2
 
 The statement condemns the assassination, denies that violence can decide the
@@ -829,7 +829,7 @@ mobilization.
 
 @assassination_verify
 title: Limit comment while wider responsibility is investigated
-subtitle: Evidentiary restraint; costly public ambiguity and <span class="term term-royalist">Court</span> distrust
+subtitle: The <span class="term term-national-front">Front</span> says only what it can prove, leaving an immediate silence others will fill
 on-arrival: parliamentary_procedure_legitimacy += 2; constitutional_legitimacy -= 2; press_capacity -= 1; shah_relation -= 2
 
 The {!<span class="term term-national-front">!}Front{!</span>!} condemns the act itself but postpones a fuller statement while
@@ -888,7 +888,7 @@ implementation is complete.
 
 @nationalization_institution
 title: Circulate the committee and <span class="term term-parliament">Majles</span> record
-subtitle: Stronger procedure, legitimacy, and oil support
+subtitle: The record presents committee and <span class="term term-parliament">Majles</span> action as a constitutional sequence, not a completed administration
 on-arrival: parliamentary_procedure_legitimacy += 5; constitutional_legitimacy += 3; oil_coalition_support += 3
 
 The {!<span class="term term-national-front">!}Front{!</span>!} circulates the committee recommendation and the {!<span class="term term-parliament">!}Majles{!</span>!} decision as
@@ -903,7 +903,7 @@ does less to expand the public organization behind the victory.
 
 @nationalization_public
 title: Organize public briefings on the unfinished measure
-subtitle: Stronger mandate, organization, and press; less direct <span class="term term-senate">Senate</span> liaison
+subtitle: The victory is carried into meetings and newspapers while direct <span class="term term-senate">Senate</span> work receives fewer hands
 on-arrival: public_mandate += 5; organizational_reach += 3; press_capacity += 3
 
 Local committees and newspapers explain what has passed and what has not.
@@ -919,7 +919,7 @@ the {!<span class="term term-senate">!}Senate{!</span>!}.
 
 @nationalization_cross_chamber
 title: Coordinate a constitutional case for the <span class="term term-senate">Senate</span>
-subtitle: Stronger oil support and <span class="term term-royalist">Crown</span> relations; a quieter public campaign
+subtitle: Senators receive a constitutional case designed to isolate the <span class="term term-royalist">Court</span> from open opposition, while public campaigning recedes
 on-arrival: oil_coalition_support += 6; parliamentary_procedure_legitimacy += 1; shah_relation += 1; public_mandate += 1
 
 {!<span class="term term-national-front">!}Front{!</span>!} deputies prepare a chamber-scale explanation of the committee and {!<span class="term term-parliament">!}Majles{!</span>!}

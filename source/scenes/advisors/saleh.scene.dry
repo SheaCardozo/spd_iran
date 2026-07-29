@@ -23,7 +23,7 @@ personal portfolio.
 
 @saleh_reports
 title: Audit constituency reports
-subtitle: Build a defensible electoral record by separating evidence from rumor
+subtitle: <span class="term term-constitutionalist">Saleh</span> separates claims that can survive a credential hearing from rumor that cannot
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; parliamentary_procedure_legitimacy += 4; organizational_reach += 2
@@ -39,7 +39,7 @@ overstating uncertain evidence.
 
 @saleh_committee
 title: Strengthen local committees
-subtitle: Expand organizational reach and <span class="term term-constitutionalist">Iran Party</span> committee capacity
+subtitle: Local <span class="term term-constitutionalist">Iran Party</span> committees collect complaints, names, and returns in a common form
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; organizational_reach += 4; iran_party_organization += 3
@@ -58,7 +58,7 @@ strengthens one component's machinery more than the others.
 
 @saleh_credentials
 title: Prepare a model credential file
-subtitle: Strengthen parliamentary procedure and coalition authority through one exemplary case
+subtitle: One exemplary file becomes a model other deputies can carry into the chamber
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; parliamentary_procedure_legitimacy += 4; mossadegh_authority += 1; iran_party_relation += 2

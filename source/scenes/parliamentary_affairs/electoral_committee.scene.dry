@@ -27,7 +27,7 @@ Choose where the committee will put its limited effort this month.
 
 @electoral_reports
 title: Collect return and interference reports
-subtitle: Build reach and independent organizers' reporting capacity
+subtitle: A common archive lets scattered complaints be compared before they become accusations
 on-arrival: parliamentary_procedure_legitimacy += 3; organizational_reach += 3; independent_nationalists_organization += 2
 
 The committee distributes a common reporting form and asks local contacts to
@@ -43,7 +43,7 @@ step.
 
 @electoral_case
 title: Prepare constitutional petitions
-subtitle: Strengthen institutional legitimacy and <span class="term term-constitutionalist">Iran Party</span> cooperation
+subtitle: <span class="term term-constitutionalist">Iran Party</span> lawyers turn selected complaints into arguments the chamber must answer
 on-arrival: constitutional_legitimacy += 4; parliamentary_procedure_legitimacy += 3; iran_party_relation += 2
 
 Lawyers and party organizers turn the strongest documented complaints into
@@ -58,7 +58,7 @@ meet that standard remain outside the filing.
 
 @electoral_register
 title: Publish a provisional constituency register
-subtitle: Build public scrutiny and press capacity while exposing gaps in the evidence
+subtitle: Publication invites public scrutiny—and exposes every blank the <span class="term term-national-front">Front</span> cannot yet fill
 on-arrival: press_capacity += 4; public_mandate += 3; shah_relation -= 1
 
 The committee publishes only returns and objections it can identify by place,

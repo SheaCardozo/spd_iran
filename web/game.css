@@ -233,6 +233,7 @@ ul.choices {
 ul.choices li {
   border-bottom: 1px solid #876;
   padding: 0.5em;
+  position: relative;
 }
 
 ul.choices li div.subtitle {
@@ -257,6 +258,31 @@ ul.choices li:last-child {
 
 ul.choices a {
   text-decoration: none;
+}
+
+.debug-effect-tooltip {
+  background: var(--content-bg-color);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0.2em 0.7em rgb(0 0 0 / 24%);
+  color: var(--text-color);
+  font-family: monospace;
+  font-size: 0.82em;
+  font-style: normal;
+  left: 2em;
+  line-height: 1.35;
+  max-width: min(38em, calc(100vw - 4em));
+  padding: 0.45em 0.6em;
+  position: absolute;
+  top: calc(100% - 0.15em);
+  visibility: hidden;
+  width: max-content;
+  z-index: 20;
+}
+
+ul.choices li.has-debug-effects:hover .debug-effect-tooltip,
+ul.choices li.has-debug-effects:focus-within .debug-effect-tooltip,
+ul.choices li.has-debug-effects:focus .debug-effect-tooltip {
+  visibility: visible;
 }
 
 blockquote {

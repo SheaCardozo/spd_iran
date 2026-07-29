@@ -67,7 +67,10 @@ Playable historical scenes also follow
 Dynamic SPD's setup → choice → consequence rhythm, requires the number of
 choices to match the actual decision space, defines information-only and
 internal-only exceptions, and makes an independent scene-by-scene source and
-content audit part of release readiness.
+content audit part of release readiness. Choice subtitles state political
+logic and likely reaction rather than quality names; `?debug=1` adds
+hover/focus tooltips derived from the target scene's exact immediate state
+changes.
 
 ## Implemented v0.1 architecture
 

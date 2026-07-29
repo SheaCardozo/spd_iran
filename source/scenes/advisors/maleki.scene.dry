@@ -20,7 +20,7 @@ period and does not project his later {!<span class="term term-social-democratic
 
 @maleki_organizers
 title: Train organizers
-subtitle: Build <span class="term term-social-democratic">Toilers' Party</span> organization and the coalition's wider reach
+subtitle: Organizers learn to connect social demands to the coalition without dissolving into it
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; toilers_organization += 5; organizational_reach += 2
@@ -38,7 +38,7 @@ own organizing traditions.
 
 @maleki_program
 title: Clarify the social program
-subtitle: Reduce <span class="term term-social-democratic">Toilers' Party</span> dissent and strengthen relations, while broadening the public case
+subtitle: <span class="term term-nationalist-social-democratic">Maleki</span> makes room for a social argument inside a coalition held together by constitutional and national demands
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; toilers_relation += 4; toilers_dissent -= 3; public_mandate += 2

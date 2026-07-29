@@ -114,3 +114,4 @@ bibliography entry, or asset-rights record.
 - [Game-wide scene content and adviser-roster rewrite](2026-07-29-all-scenes-content-and-roster.md)
 - [Exhaustive compiled-scene standards gate](2026-07-29-complete-scene-standards-gate.md)
 - [Pinned advisers, perfect information, and source comments](2026-07-29-pinned-advisers-perfect-information-and-source-comments.md)
+- [Historical choice flavour and debug effects](2026-07-29-choice-flavour-and-debug-effects.md)

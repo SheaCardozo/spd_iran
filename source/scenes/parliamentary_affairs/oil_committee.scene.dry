@@ -25,7 +25,7 @@ parliamentary team will make ready first.
 
 @oil_terms
 title: Compare proposal terms one by one
-subtitle: Strengthen procedure while defining a minimum of national control
+subtitle: Ownership, operations, marketing, and compensation are separated before the <span class="term term-national-front">Front</span> names its floor
 on-arrival: parliamentary_procedure_legitimacy += 5; oil_coalition_support += 2; oil_terms_position = "Term-by-term national control"
 
 The team creates a term-by-term comparison and leaves disputed provisions
@@ -41,7 +41,7 @@ defensible. A careful table does not by itself create the votes to adopt it.
 
 @oil_coalition
 title: Build a cross-faction committee majority
-subtitle: Gain direct support and improve relations with nationalist and religious allies
+subtitle: Support is assembled around the parts of national control each faction can defend
 on-arrival: oil_coalition_support += 6; independent_nationalists_relation += 2; religious_network_relation += 2
 
 {!<span class="term term-national-front">!}Front{!</span>!} deputies meet
@@ -57,7 +57,7 @@ unresolved because the work has concentrated on common ground.
 
 @oil_record
 title: Prepare an uncertainty register for the committee
-subtitle: Strengthen procedural legitimacy and press explanation without fixing a final position
+subtitle: Unknown terms remain unknown, giving editors and deputies one defensible record
 on-arrival: parliamentary_procedure_legitimacy += 5; press_capacity += 3
 
 The parliamentary team labels every provision as documented, disputed, or

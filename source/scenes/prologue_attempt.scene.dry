@@ -25,7 +25,7 @@ is useful, frightening, and still unproved.
 
 @attempt_caution
 title: Insist that evidence precede accusation
-subtitle: A public constitutional standard; little preparation for the emergency
+subtitle: The statement sets a public rule without committing the opposition to a campaign it cannot yet sustain
 on-arrival: constitutional_legitimacy += 2; prologue_legitimacy_modifier += 2
 
 Your statement condemns the shooting and refuses to assign a wider
@@ -40,7 +40,7 @@ already widening.
 
 @attempt_quiet
 title: Gather reports before intervening publicly
-subtitle: A stronger legal record; a quieter constitutional objection
+subtitle: A documented case can be assembled before the opposition exposes itself in print
 on-arrival: constitutional_legitimacy += 1; prologue_legitimacy_modifier += 1; parliamentary_procedure_legitimacy += 2
 
 Lawyers, editors, and political contacts compare what they have heard and mark
@@ -54,7 +54,7 @@ standard before emergency measures take effect.
 
 @attempt_joint
 title: Draft a joint statement for opposition newspapers
-subtitle: Some legitimacy and organization; greater attention from the <span class="term term-royalist">Court</span>
+subtitle: A common text brings the opposition into view—and under the <span class="term term-royalist">Court</span>'s eye
 on-arrival: constitutional_legitimacy += 1; prologue_legitimacy_modifier += 1; organizational_reach += 1; prologue_organization_modifier += 1; shah_resistance += 1; prologue_crown_modifier -= 1
 
 Several opposition circles agree on careful language: condemn the assault,
@@ -90,7 +90,7 @@ principle visible but expose its organizers to further pressure.
 
 @ban_legal_record
 title: Build a legal record of the emergency measures
-subtitle: Stronger constitutional case; a sharper dispute with the <span class="term term-royalist">Crown</span>
+subtitle: The emergency decrees become a future constitutional brief rather than an immediate street contest
 on-arrival: constitutional_legitimacy += 2; prologue_legitimacy_modifier += 2; shah_relation -= 1; prologue_crown_modifier -= 1
 
 Lawyers begin recording orders, detentions, closures, and the authority
@@ -104,7 +104,7 @@ the {!<span class="term term-royalist">!}Court{!</span>!} to treat as private un
 
 @ban_contacts
 title: Preserve discreet organizational contacts
-subtitle: Greater organizational reach; little immediate public defense
+subtitle: Political networks survive quietly while the public defense is left to others
 on-arrival: organizational_reach += 2; prologue_organization_modifier += 2
 
 Trusted intermediaries carry news between lawyers, political circles, and
@@ -118,7 +118,7 @@ emergency hear no comparably strong common public answer.
 
 @ban_public_defense
 title: Coordinate a public defense of political liberties
-subtitle: More public and press capacity; increased royal resistance
+subtitle: The ban is answered in print and meeting halls, where the <span class="term term-royalist">Crown</span> cannot ignore it
 on-arrival: public_mandate += 1; press_capacity += 1; prologue_organization_modifier += 1; shah_resistance += 1; prologue_crown_modifier -= 1
 
 Editors and constitutional politicians frame the ban and press restrictions
@@ -155,7 +155,7 @@ organizers to make only one of these a common priority.
 
 @assembly_procedure
 title: Publish a signed constitutional objection
-subtitle: Greater legitimacy; the <span class="term term-royalist">Crown</span> recognizes an open challenge
+subtitle: A public roll of signatures turns constitutional objection into an open challenge
 on-arrival: constitutional_legitimacy += 1; prologue_legitimacy_modifier += 1; shah_resistance += 2; prologue_crown_modifier -= 2
 
 The opposition records that constitutional forms do not make every
@@ -170,7 +170,7 @@ the expanded royal power.
 
 @assembly_risk
 title: Prepare a procedural memorandum for future deputies
-subtitle: Stronger parliamentary procedure; a less visible public objection
+subtitle: Future deputies receive a case they can use inside the chamber; the public dispute remains muted
 on-arrival: constitutional_legitimacy += 1; prologue_legitimacy_modifier += 1; parliamentary_procedure_legitimacy += 2
 
 Attention shifts to procedure, possible triggers for dissolution, and the
@@ -184,7 +184,7 @@ forceful common objection to the revision itself.
 
 @assembly_organize
 title: Build a dissolution-response network
-subtitle: Greater organizational reach; less legal detail and some <span class="term term-royalist">Crown</span> resistance
+subtitle: Local allies prepare for dissolution without making legal doctrine their common language
 on-arrival: organizational_reach += 1; prologue_organization_modifier += 1; shah_resistance += 1; prologue_crown_modifier -= 1
 
 The opposition assigns organizers to keep contacts current and to prepare a
@@ -222,7 +222,7 @@ a defensible constitutional campaign.
 
 @senate_committee
 title: Prepare a common election-monitoring committee
-subtitle: Organizational reach; emphasis on collecting comparable cases
+subtitle: Comparable reports matter more than a single dramatic denunciation
 on-arrival: organizational_reach += 1; prologue_organization_modifier += 1; prologue_complete = 1
 
 Representatives agree on a simple intake: where voting occurred, who reports
@@ -237,7 +237,7 @@ carry the complaints toward a common protest.
 
 @senate_constitution
 title: Prepare a public constitutional appeal
-subtitle: Public mandate; less detailed monitoring capacity
+subtitle: The new chamber is opposed before the public, with fewer organizers left to watch its making
 on-arrival: public_mandate += 1; prologue_complete = 1
 
 The appeal connects representative elections to constitutional government
@@ -251,7 +251,7 @@ The case is legible, but the underlying monitoring record remains uneven.
 
 @senate_correspondents
 title: Recruit provincial and Tehran correspondents
-subtitle: Greater organizational reach; a looser common public message
+subtitle: A dispersed correspondence network sacrifices a single line for wider provincial participation
 on-arrival: organizational_reach += 1; prologue_organization_modifier += 1; prologue_complete = 1
 
 Editors, lawyers, and political acquaintances begin passing reports from

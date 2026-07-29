@@ -23,7 +23,7 @@ while autonomous organizers reduce fears of absorption.
 
 @committees_shared
 title: Build shared local committees
-subtitle: Spend one resource for a stronger common network across all four components
+subtitle: Common offices tie the four components together, but they must be paid for from the shared purse
 choose-if: resources >= 1
 unavailable-subtitle: Requires one resource.
 on-arrival: resources -= 1; iran_party_organization += 3; toilers_organization += 3; independent_nationalists_organization += 3; religious_network_organization += 3; organizational_reach += 4
@@ -40,7 +40,7 @@ the question of ultimate authority for a later meeting.
 
 @committees_autonomy
 title: Fund each component's own organizers
-subtitle: Preserve organizational independence and relationships, with slower common growth
+subtitle: Each component keeps command of its own organizers; coordination remains a negotiation
 on-arrival: iran_party_organization += 2; toilers_organization += 2; independent_nationalists_organization += 2; religious_network_organization += 2; organizational_reach += 2; toilers_relation += 1; religious_network_relation += 1
 
 The secretariat divides practical assistance among the component

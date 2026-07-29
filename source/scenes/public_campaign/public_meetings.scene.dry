@@ -23,7 +23,7 @@ Decide whether this month calls for concentration or reach.
 
 @meetings_tehran
 title: Concentrate scarce organizers in Tehran
-subtitle: Spend one resource for a large public display that may sharpen <span class="term term-royalist">Crown</span> resistance
+subtitle: One great gathering draws on the common purse, makes the <span class="term term-national-front">Front</span> impossible to overlook, and gives the <span class="term term-royalist">Crown</span> a single target
 choose-if: resources >= 1
 unavailable-subtitle: Requires one resource.
 on-arrival: resources -= 1; public_mandate += 6; press_capacity += 2; shah_resistance += 2
@@ -40,7 +40,7 @@ mandate while making royal resistance more likely.
 
 @meetings_network
 title: Coordinate several smaller meetings
-subtitle: Expand organizational reach and train component organizers without a single dramatic crowd
+subtitle: Several modest halls train local organizers without creating one dramatic confrontation
 on-arrival: organizational_reach += 4; independent_nationalists_organization += 2; toilers_organization += 2
 
 Instead of one central event, organizers share speaking notes and reporting

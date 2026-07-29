@@ -25,7 +25,7 @@ organizers.
 
 @meeting_constitution
 title: Reaffirm the narrow constitutional program
-subtitle: Strengthen constitutional credibility, while leaving social disagreements aside
+subtitle: A narrow pledge can be defended by unlike allies, but it postpones their social disagreements
 on-arrival: iran_party_relation += 4; independent_nationalists_relation += 3; toilers_dissent += 1; constitutional_legitimacy += 2
 
 The meeting adopts representative elections and constitutional government as
@@ -44,7 +44,7 @@ differences remain inside the room.
 
 @meeting_dissent
 title: Hear dissent before fixing the agenda
-subtitle: Reduce internal friction at the cost of a less decisive message
+subtitle: Every tendency receives a hearing, even if no sharp public line emerges
 on-arrival: toilers_relation += 4; religious_network_relation += 4; iran_party_dissent -= 2; independent_nationalists_dissent -= 2
 
 The chair gives each component time to state what it will and will not support.
@@ -59,7 +59,7 @@ meeting with better knowledge rather than a sharper line.
 
 @meeting_oil
 title: Put oil coordination on the agenda
-subtitle: Build agreement around national control, without settling every constitutional question
+subtitle: Oil offers common ground without resolving what each ally means by constitutional reform
 on-arrival: independent_nationalists_relation += 4; religious_network_relation += 2; oil_coalition_support += 3
 
 The delegates compare the language their organizations are willing to use on

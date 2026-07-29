@@ -26,7 +26,7 @@ practical independence of the cooperating networks.
 
 @bazaar_oil
 title: Organize around national control of oil
-subtitle: Strengthen <span class="term term-religious">religious-network</span> organization and the oil coalition
+subtitle: Oil supplies a common language for merchants, clerics, and nationalists
 on-arrival: religious_network_relation += 4; religious_network_organization += 4; oil_coalition_support += 3
 
 Intermediaries carry an oil appeal through commercial and religious contacts,
@@ -41,7 +41,7 @@ their own leaders rather than to the secretariat.
 
 @bazaar_constitution
 title: Organize around constitutional government
-subtitle: Build legitimacy and reach while lowering suspicion inside the <span class="term term-religious">religious network</span>
+subtitle: Constitutional government offers cooperation without asking the <span class="term term-religious">religious network</span> to surrender its own authority
 on-arrival: religious_network_relation += 3; religious_network_dissent -= 2; constitutional_legitimacy += 2; organizational_reach += 2
 
 The appeal stresses lawful government and representative institutions rather
@@ -57,7 +57,7 @@ does less this month to consolidate a detailed oil position.
 
 @bazaar_autonomy
 title: Negotiate an autonomous joint committee
-subtitle: Improve relations without demanding a single public line
+subtitle: A joint committee bargains as two partners rather than speaking with one voice
 on-arrival: religious_network_relation += 5; religious_network_dissent -= 4
 
 The secretariat meets intermediaries privately and agrees on a channel for
