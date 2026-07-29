@@ -5,13 +5,14 @@ go-to: post_event if started = 1; start_menu if started = 0
 @start_menu
 new-page: true
 
-= The Last Majles
+= The Last {!<span class="term term-parliament">!}Majles{!</span>!}
 
-## A National Front campaign, 1949–1951
+## A {!<span class="term term-national-front">!}National Front{!</span>!} campaign, 1949–1951
 
 Version 0.1.0
 
-Build a constitutional coalition through the disputed Sixteenth Majles
+Build a constitutional coalition through the disputed Sixteenth
+{!<span class="term term-parliament">!}Majles{!</span>!}
 election and the struggle over oil nationalization. Historical nationalization
 remains fixed; your decisions determine the organization and legitimacy that
 survive it.
@@ -43,32 +44,10 @@ Q.release_version = "0.1.0";
 Q.save_schema_version = 1;
 Q.scenario_id = "historical";
 
-// A URL seed makes a complete decision path replayable. Xorshift32 in
-// post_event advances this state only for whitelisted minor variation.
-var requestedSeed = 0;
-var hasRequestedSeed = 0;
-if (typeof window !== "undefined" && window.location) {
-    var seedMatch = window.location.search.match(/[?&]seed=([0-9]+)/);
-    if (seedMatch) {
-        var parsedSeed = Number(seedMatch[1]);
-        if (parsedSeed >= 0 && parsedSeed <= 4294967295) {
-            requestedSeed = parsedSeed >>> 0;
-            hasRequestedSeed = 1;
-        }
-    }
-}
-Q.run_seed = hasRequestedSeed ? requestedSeed : ((Math.random() * 4294967296) >>> 0);
-Q.rng_state = Q.run_seed === 0 ? 1831565813 : Q.run_seed;
-// Deck shuffling is deterministic and identical across run seeds. The public
-// seed is reserved for the explicitly whitelisted bounded variation below.
-Q.deck_rng_state = 19491014;
 Q.debug_mode = 0;
 if (typeof window !== "undefined" && window.location && /[?&]debug=1/.test(window.location.search)) {
     Q.debug_mode = 1;
 }
-Q.last_minor_variation = 0;
-Q.report_reliability = 50;
-Q.constituency_pressure = 50;
 
 // Prologue takes place before the monthly clock and may move any starting
 // quality by no more than five points.
@@ -77,7 +56,6 @@ Q.prologue_stage = 1;
 Q.prologue_crown_modifier = 0;
 Q.prologue_legitimacy_modifier = 0;
 Q.prologue_organization_modifier = 0;
-Q.prologue_intelligence_modifier = 0;
 
 Q.time = 0;
 Q.year = 1949;
@@ -93,7 +71,6 @@ Q.constitutional_legitimacy = 50;
 Q.public_mandate = 35;
 Q.organizational_reach = 25;
 Q.press_capacity = 30;
-Q.political_intelligence = 25;
 Q.parliamentary_procedure_legitimacy = 40;
 Q.oil_coalition_support = 30;
 Q.mossadegh_authority = 60;
@@ -359,17 +336,10 @@ Q.majles_national_front_usable = 0;
 Q.senate_usable_members = 0;
 Q.majles_phase = "Disputed Sixteenth Majles election";
 
-Q.active_advisors = ["mossadegh", "fatemi", "saleh"];
-Q.advisor_mossadegh_active = 1;
-Q.advisor_fatemi_active = 1;
-Q.advisor_saleh_active = 1;
-Q.advisor_maleki_active = 0;
-Q.advisor_makki_active = 0;
-Q.advisor_kashani_active = 0;
 Q.advisor_action_timer = 0;
-Q.advisor_roster_timer = 0;
 
 Q.coalition_meeting_timer = 0;
+Q.common_resolution_timer = 0;
 Q.membership_committees_timer = 0;
 Q.fundraising_timer = 0;
 Q.press_coordination_timer = 0;
@@ -381,7 +351,7 @@ Q.credential_petitions_timer = 0;
 Q.oil_committee_preparation_timer = 0;
 Q.deputy_outreach_timer = 0;
 Q.timers = [
-    "advisor_action", "advisor_roster", "coalition_meeting",
+    "advisor_action", "coalition_meeting", "common_resolution",
     "membership_committees", "fundraising", "press_coordination",
     "public_meetings", "bazaar_outreach", "legal_defense",
     "electoral_committee", "credential_petitions",
@@ -416,10 +386,16 @@ new-page: true
 
 = About v0.1
 
-This public demo covers the National Front's formation, the disputed Sixteenth
-Majles, and the passage of the nationalization principle through the Senate on
-20 March 1951. It uses one monthly action, three action decks, three active
-advisers, tagged event routing, and centralized state reducers adapted from
-*Dynamic Social Democracy*.
+This public demo covers the
+{!<span class="term term-national-front">!}National Front{!</span>!}'s
+formation, the disputed Sixteenth
+{!<span class="term term-parliament">!}Majles{!</span>!}, and the passage of
+the nationalization principle through the
+{!<span class="term term-senate">!}Senate{!</span>!} on
+20 March 1951. It begins in the constitutional emergency after the February
+1949 attempt on the
+{!<span class="term term-royalist">!}Shah{!</span>!} and ends when the
+nationalization principle has passed both chambers. Premiership and the later
+struggle over implementation lie beyond this release.
 
 - @start_menu: Return to title

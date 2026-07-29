@@ -1,27 +1,37 @@
+# Source: Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
+# pp. 207–208. Choice effects are counterfactual abstractions.
 title: The Palace Protest
+subtitle: Separate election complaints become a common constitutional action
 new-page: true
 max-visits: 1
 
 = October 1949
 
-Reports of manipulation in the elections to the Sixteenth
+Reports of interference in the elections to the Sixteenth
 {!<span class="term term-parliament">!}Majles{!</span>!} have brought
-{!<span class="term term-mossadegh">!}Mohammad Mossadegh{!</span>!} and other opposition
-politicians together. They prepare a protest at the royal palace. The loose
-cooperation formed around this electoral struggle will become the
+{!<span class="term term-mossadegh">!}Mohammad Mossadegh{!</span>!} and other
+opposition politicians together. Individual candidates can protest their own
+returns; acting together would turn those complaints into a public demand for
+representative elections.
+
+The group goes to the royal palace to press that demand. It is not yet a
+disciplined party, and the protest does not give it control over the election.
+What it creates is a shared political purpose and a place where politicians
+with different organizations and constituencies can continue cooperating.
+That cooperation will become the
 {!<span class="term term-national-front">!}National Front{!</span>!}.
 
-This opening establishes the coalition's first shared purpose: representative
-elections.
-
-*Research note: Mari Nukii, “Protest Events in the Tehran Bazaar during the Oil
-Nationalization Movement of Iran,”* Annals of Japan Association for Middle East
-Studies *28, no. 1 (2012), p. 10. Nukii dates the protest to 14 October and
-describes Mossadegh and nineteen other politicians organizing against royal and
-royalist manipulation of the Sixteenth Majles election. Other chronologies vary
-by a day, so the game does not assign a day at this stage.*
-
-- @begin_organizing: Begin organizing
+- @begin_organizing
 
 @begin_organizing
-go-to: main
+title: Carry the protest into an organized election campaign
+subtitle: Forms the common arena from which the <span class="term term-national-front">National Front</span> will emerge
+
+The protesters leave without a final settlement of the disputed returns.
+They do, however, continue meeting, comparing election complaints, and
+defining the constitutional grounds on which they can act together.
+
+The new cooperation still contains separate loyalties, unequal organizations,
+and different ideas about how far the alliance should extend.
+
+- @main: Deal the first monthly hand

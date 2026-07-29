@@ -21,6 +21,16 @@ Public mandate:
 [? if public_mandate >= 35 and public_mandate < 65: growing ?]
 [? if public_mandate >= 65: broad ?]
 
+Organizational reach:
+[? if organizational_reach < 35: limited ?]
+[? if organizational_reach >= 35 and organizational_reach < 65: extending ?]
+[? if organizational_reach >= 65: extensive ?]
+
+Press capacity:
+[? if press_capacity < 35: fragmented ?]
+[? if press_capacity >= 35 and press_capacity < 65: coordinated ?]
+[? if press_capacity >= 65: formidable ?]
+
 [? if debug_mode = 1: **Debug values:** legitimacy [+ constitutional_legitimacy +], mandate [+ public_mandate +], reach [+ organizational_reach +], press [+ press_capacity +]. ?]
 
 - @main: Return
@@ -38,43 +48,96 @@ Cohesion:
 Structure: [+ front_structure +]
 
 {!<span class="term term-constitutionalist">!}Iran Party{!</span>!}:
+[? if iran_party_strength < 35: limited weight; ?]
+[? if iran_party_strength >= 35 and iran_party_strength < 65: substantial weight; ?]
+[? if iran_party_strength >= 65: leading weight; ?]
 [? if iran_party_relation < 35: estranged ?]
 [? if iran_party_relation >= 35 and iran_party_relation < 65: cooperative ?]
 [? if iran_party_relation >= 65: closely aligned ?]
+[? if iran_party_dissent < 35: contained dissent; ?]
+[? if iran_party_dissent >= 35 and iran_party_dissent < 65: active dissent; ?]
+[? if iran_party_dissent >= 65: severe dissent; ?]
+[? if iran_party_organization < 35: limited organization. ?]
+[? if iran_party_organization >= 35 and iran_party_organization < 65: developing organization. ?]
+[? if iran_party_organization >= 65: strong organization. ?]
 
 {!<span class="term term-social-democratic">!}Toilers' Party{!</span>!}:
+[? if toilers_strength < 35: limited weight; ?]
+[? if toilers_strength >= 35 and toilers_strength < 65: substantial weight; ?]
+[? if toilers_strength >= 65: leading weight; ?]
 [? if toilers_relation < 35: estranged ?]
 [? if toilers_relation >= 35 and toilers_relation < 65: cooperative ?]
 [? if toilers_relation >= 65: closely aligned ?]
+[? if toilers_dissent < 35: contained dissent; ?]
+[? if toilers_dissent >= 35 and toilers_dissent < 65: active dissent; ?]
+[? if toilers_dissent >= 65: severe dissent; ?]
+[? if toilers_organization < 35: limited organization. ?]
+[? if toilers_organization >= 35 and toilers_organization < 65: developing organization. ?]
+[? if toilers_organization >= 65: strong organization. ?]
 
 {!<span class="term term-national-front">!}Independent nationalists{!</span>!}:
+[? if independent_nationalists_strength < 35: limited weight; ?]
+[? if independent_nationalists_strength >= 35 and independent_nationalists_strength < 65: substantial weight; ?]
+[? if independent_nationalists_strength >= 65: leading weight; ?]
 [? if independent_nationalists_relation < 35: estranged ?]
 [? if independent_nationalists_relation >= 35 and independent_nationalists_relation < 65: cooperative ?]
 [? if independent_nationalists_relation >= 65: closely aligned ?]
+[? if independent_nationalists_dissent < 35: contained dissent; ?]
+[? if independent_nationalists_dissent >= 35 and independent_nationalists_dissent < 65: active dissent; ?]
+[? if independent_nationalists_dissent >= 65: severe dissent; ?]
+[? if independent_nationalists_organization < 35: limited organization. ?]
+[? if independent_nationalists_organization >= 35 and independent_nationalists_organization < 65: developing organization. ?]
+[? if independent_nationalists_organization >= 65: strong organization. ?]
 
 {!<span class="term term-religious">!}Religious network{!</span>!}:
+[? if religious_network_strength < 35: limited weight; ?]
+[? if religious_network_strength >= 35 and religious_network_strength < 65: substantial weight; ?]
+[? if religious_network_strength >= 65: leading weight; ?]
 [? if religious_network_relation < 35: estranged ?]
 [? if religious_network_relation >= 35 and religious_network_relation < 65: cooperative ?]
 [? if religious_network_relation >= 65: closely aligned ?]
+[? if religious_network_dissent < 35: contained dissent; ?]
+[? if religious_network_dissent >= 35 and religious_network_dissent < 65: active dissent; ?]
+[? if religious_network_dissent >= 65: severe dissent; ?]
+[? if religious_network_organization < 35: limited organization. ?]
+[? if religious_network_organization >= 35 and religious_network_organization < 65: developing organization. ?]
+[? if religious_network_organization >= 65: strong organization. ?]
 
 [? if debug_mode = 1: **Debug:** cohesion [+ coalition_cohesion +]; Iran [+ iran_party_relation +]/[+ iran_party_dissent +]; Toilers [+ toilers_relation +]/[+ toilers_dissent +]; independents [+ independent_nationalists_relation +]/[+ independent_nationalists_dissent +]; religious [+ religious_network_relation +]/[+ religious_network_dissent +]. ?]
 
 @majles
 title: Parliament
 
-= Majles and Senate
+= {!<span class="term term-parliament">!}Majles{!</span>!} and {!<span class="term term-senate">!}Senate{!</span>!}
 
 Phase: [+ majles_phase +]
 
-Majles returns: [+ majles_returns_recorded +] / 136
+{!<span class="term term-parliament">!}Majles{!</span>!} returns: [+ majles_returns_recorded +] / 136
 
 Credentials approved: [+ majles_credentials_approved +]
 
 Usable members: [+ majles_usable_members +]
 
-Usable National Front members: [+ majles_national_front_usable +]
+Usable {!<span class="term term-national-front">!}National Front{!</span>!}
+members: [+ majles_national_front_usable +]
 
-Senate usable members: [+ senate_usable_members +] / 60
+{!<span class="term term-senate">!}Senate{!</span>!} usable members:
+[+ senate_usable_members +] / 60
+
+Usable {!<span class="term term-national-front">!}Front{!</span>!} representation:
+[? if majles_national_front_usable < 3: marginal ?]
+[? if majles_national_front_usable >= 3 and majles_national_front_usable < 6: emerging ?]
+[? if majles_national_front_usable >= 6: established cohort ?]
+
+Oil-coalition support:
+[? if oil_coalition_support < 35: narrow ?]
+[? if oil_coalition_support >= 35 and oil_coalition_support < 65: competitive ?]
+[? if oil_coalition_support >= 65: broad ?]
+
+Parliamentary-procedure legitimacy:
+[? if parliamentary_procedure_legitimacy < 35: weak ?]
+[? if parliamentary_procedure_legitimacy >= 35 and parliamentary_procedure_legitimacy < 65: credible ?]
+[? if parliamentary_procedure_legitimacy >= 65: strong ?]
 
 Parliamentary capacity:
 [? if ending_parliament < 35: marginal ?]
@@ -82,9 +145,9 @@ Parliamentary capacity:
 [? if ending_parliament >= 65: commanding ?]
 
 @crown
-title: Crown
+title: <span class="term term-royalist">Crown</span>
 
-= Crown
+= {!<span class="term term-royalist">!}Crown{!</span>!}
 
 {!<span class="term term-royalist">!}Mohammad Reza Shah{!</span>!}
 
@@ -98,7 +161,7 @@ Resistance:
 [? if shah_resistance >= 35 and shah_resistance < 65: substantial ?]
 [? if shah_resistance >= 65: severe ?]
 
-Court capacity:
+{!<span class="term term-royalist">!}Court{!</span>!} capacity:
 [? if shah_court_capacity < 35: constrained ?]
 [? if shah_court_capacity >= 35 and shah_court_capacity < 65: capable ?]
 [? if shah_court_capacity >= 65: dominant ?]

@@ -67,6 +67,7 @@ const sources = {
     'International Labour Office, <i>Labour Conditions in the Oil Industry in Iran</i>',
   'sup-057':
     'International Monetary Fund, <i>International Financial Statistics</i>',
+  'sup-059': 'Iranian Parliament, official Special Oil Commission minutes',
   'sup-060': 'Randjbar-Daemi, “Radio Tehran and the 19 August 1953 Coup”',
   p1: '<i>Foreign Relations of the United States, 1952–1954, Iran, 1951–1954</i>',
   p14: 'Iranian Parliament, official retrospective chamber rosters',

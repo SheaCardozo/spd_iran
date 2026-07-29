@@ -1,3 +1,6 @@
+# Sources for the oil committee and proposal dispute: Painter and Brew,
+# The Struggle for Iran, ch. 1; official Special Oil Commission minutes,
+# first period. The recurring preparation and its effects are counterfactual.
 title: Oil Committee Preparation
 new-page: true
 is-card: true
@@ -7,13 +10,62 @@ on-arrival: month_actions += 1; oil_committee_preparation_timer = 5
 
 = Oil Committee Preparation
 
-- @oil_terms: Compare proposal terms one by one
-- @oil_coalition: Build a cross-faction committee majority
+The oil dispute contains several separate questions: ownership, operations,
+marketing, compensation, finance, personnel authority, and review. Committee
+work can clarify those terms, build a majority around a principle, or prepare
+a procedure that keeps uncertain provisions from being silently treated as
+settled.
+
+Choose what the {!<span class="term term-national-front">!}Front's{!</span>!}
+parliamentary team will make ready first.
+
+- @oil_terms
+- @oil_coalition
+- @oil_record
 
 @oil_terms
-on-arrival: political_intelligence += 4; parliamentary_procedure_legitimacy += 3; oil_terms_position = "Term-by-term national control"
-go-to: post_event
+title: Compare proposal terms one by one
+subtitle: Strengthen procedure while defining a minimum of national control
+on-arrival: parliamentary_procedure_legitimacy += 5; oil_coalition_support += 2; oil_terms_position = "Term-by-term national control"
+
+The team creates a term-by-term comparison and leaves disputed provisions
+blank rather than assigning them a neutral value. Deputies can now see whether
+a proposal recognizes Iranian ownership, transfers operational authority, or
+merely changes payment language.
+
+The {!<span class="term term-national-front">!}Front{!</span>!}'s minimum
+becomes more precise and its committee case more
+defensible. A careful table does not by itself create the votes to adopt it.
+
+- @post_event: Continue
 
 @oil_coalition
+title: Build a cross-faction committee majority
+subtitle: Gain direct support and improve relations with nationalist and religious allies
 on-arrival: oil_coalition_support += 6; independent_nationalists_relation += 2; religious_network_relation += 2
-go-to: post_event
+
+{!<span class="term term-national-front">!}Front{!</span>!} deputies meet
+prospective supporters separately, asking what language
+they can defend and where they will refuse compromise. {!<span class="term term-national-front">!}Independent
+nationalists{!</span>!} and {!<span class="term term-religious">!}religious-network{!</span>!} allies see their priorities reflected in
+the effort.
+
+The committee majority becomes more plausible. Some technical terms remain
+unresolved because the work has concentrated on common ground.
+
+- @post_event: Continue
+
+@oil_record
+title: Prepare an uncertainty register for the committee
+subtitle: Strengthen procedural legitimacy and press explanation without fixing a final position
+on-arrival: parliamentary_procedure_legitimacy += 5; press_capacity += 3
+
+The parliamentary team labels every provision as documented, disputed, or
+still unknown and attaches the strongest available record. Friendly editors
+receive the same distinctions so that uncertainty is not reported as a
+compromise.
+
+Committee work becomes more transparent and the public explanation improves.
+The register deliberately stops short of selecting the final acceptable terms.
+
+- @post_event: Continue

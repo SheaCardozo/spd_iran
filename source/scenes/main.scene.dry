@@ -5,17 +5,25 @@ max-cards: 5
 
 = [+ month : month +] [+ year +]
 
-The secretariat can make one major organizational commitment this month.
-Adviser consultations are separate, but all advisers share a six-month
-cooldown.
+# Sources for the monthly briefings:
+# October-November 1949 and the Tehran rerun — Azimi, Iran: The Crisis of
+# Democracy, ch. 5, pp. 250–267; Abrahamian, Iran Between Two Revolutions,
+# ch. 15, p. 208.
+# Sixteenth Majles credentials — official Majles proceedings, sessions 2, 25,
+# and 30 (18 February, 18 May, and 1 June 1950).
+# Oil dispute and Saudi comparison — Painter and Brew, The Struggle for Iran,
+# ch. 1; official Oil Commission record, meeting 22 and first-period report;
+# official Majles proceedings, session 102.
 
-[? if debug_mode = 1: **Seeded minor variation:** report reliability [+ report_reliability +]/100; constituency pressure [+ constituency_pressure +]/100. These bounded fields do not select or suppress historical events. ?]
-
-[? if year = 1950 and month >= 2 and month <= 4: **Institutional briefing:** credential approvals are proceeding in waves rather than as one settled national result. Research: SUP-007, Sixteenth Majles sessions 2–8. ?]
-[? if year = 1950 and month >= 5 and month <= 6: **Credential briefing:** later decisions on Kashan/Natanz and Tehran determine when the Front's returned cohort becomes usable in the chamber. Research: SUP-007, sessions 25 and 30. ?]
-[? if year = 1950 and month >= 7 and month <= 11: **Oil briefing:** the supplemental agreement remains under committee and public scrutiny; proposal terms are kept separate in the Library. Research: MAJ-S3, chapter 1; MAJ-S14, chapter 1. ?]
-[? if year = 1950 and month = 12: **Comparative report:** the Saudi-Aramco arrangement is increasing pressure on the supplemental agreement, but the game does not treat unlike contracts as identical. Research: MAJ-S14, chapter 1. ?]
-[? if year = 1951 and month <= 2: **Parliamentary briefing:** rejection of the supplemental agreement has moved the dispute from revision toward the nationalization principle. Research: MAJ-S3, chapter 1. ?]
+[? if year = 1949 and month = 10: **Opening briefing:** the palace protest brought opposition figures together around objections to the Sixteenth-{!<span class="term term-parliament">!}Majles{!</span>!} election. It did not yet make them one disciplined party. ?]
+[? if year = 1949 and month = 11: **Coalition briefing:** the cooperation is becoming the {!<span class="term term-national-front">!}National Front{!</span>!}, united around representative elections, constitutional government, and political liberties while retaining unlike organizations and tendencies. ?]
+[? if year = 1949 and month = 12: **Organizational briefing:** the new {!<span class="term term-national-front">!}Front{!</span>!} must turn its chosen structure into repeatable committee, press, fundraising, and electoral work. ?]
+[? if year = 1950 and month = 1: **Rerun briefing:** Tehran's cancelled election has opened a second contest. The secretariat proceeds with “[+ election_strategy +].” ?]
+[? if year = 1950 and month >= 2 and month <= 4: **Institutional briefing:** the Sixteenth {!<span class="term term-parliament">!}Majles{!</span>!} approved 98 credentials in its second session, while other places remained subject to later decisions. ?]
+[? if year = 1950 and month >= 5 and month <= 6: **Credential briefing:** {!<span class="term term-constitutionalist">!}Allahyar Saleh's{!</span>!} Kashan/Natanz credential passed on 18 May; the eleven Tehran credentials passed on 1 June. ?]
+[? if year = 1950 and month >= 7 and month <= 11: **Oil briefing:** the supplemental agreement remains under committee and public scrutiny. Ownership, control, marketing, compensation, finance, personnel, and review are each in dispute. ?]
+[? if year = 1950 and month = 12: **Comparative briefing:** {!<span class="term term-country country-saudi">!}Saudi Arabia's{!</span>!} 1950 arrangement with Aramco has sharpened the Iranian comparison over profit sharing, though the two contracts are not identical. ?]
+[? if year = 1951 and month <= 2: **Parliamentary briefing:** the oil committee rejected the supplemental agreement on 25 November 1950, and the {!<span class="term term-parliament">!}Majles{!</span>!} approved that rejection on 11 January 1951. The dispute is moving from revision toward nationalization. ?]
 
 - @party_affairs
 - @public_campaign

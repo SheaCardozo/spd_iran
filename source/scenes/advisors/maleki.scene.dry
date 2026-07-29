@@ -1,28 +1,57 @@
-title: Khalil Maleki
+# Source: Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
+# chs. 5–6, especially pp. 250–267. Mechanical effects are counterfactual
+# abstractions.
+title: <span class="term term-nationalist-social-democratic">Khalil Maleki</span>
 new-page: true
 is-pinned-card: true
 tags: advisor
-view-if: advisor_maleki_active = 1
 
-= {!<span class="term term-social-democratic">!}Khalil Maleki{!</span>!}
+= {!<span class="term term-nationalist-social-democratic">!}Khalil Maleki{!</span>!}
 
-Maleki advises on social-democratic organization and internal political
-education.
+{!<span class="term term-nationalist-social-democratic">!}Maleki{!</span>!} advises on social-democratic organization and internal political
+education. The adviser abstracts work within the
+{!<span class="term term-social-democratic">!}Toilers' Party{!</span>!}
+current in this
+period and does not project his later {!<span class="term term-social-democratic">!}Third Force{!</span>!} position backward.
 
 - @maleki_organizers
 - @maleki_program
-- @main: Return
+- @main: Return to the monthly briefing
 
 @maleki_organizers
 title: Train organizers
+subtitle: Build <span class="term term-social-democratic">Toilers' Party</span> organization and the coalition's wider reach
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; toilers_organization += 5; organizational_reach += 2
-go-to: main
+
+{!<span class="term term-nationalist-social-democratic">!}Maleki{!</span>!} turns a political discussion into practical organizer training:
+running a small meeting, recording disagreements, recruiting follow-up
+contacts, and reporting what actually happened.
+
+The {!<span class="term term-social-democratic">!}Toilers' Party{!</span>!}
+current gains people who can reproduce the work, and some of
+those methods travel into the wider coalition. Other components retain their
+own organizing traditions.
+
+- @main: Return to the monthly briefing
 
 @maleki_program
 title: Clarify the social program
+subtitle: Reduce <span class="term term-social-democratic">Toilers' Party</span> dissent and strengthen relations, while broadening the public case
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; toilers_relation += 4; toilers_dissent -= 3; public_mandate += 2
-go-to: main
+
+{!<span class="term term-nationalist-social-democratic">!}Maleki{!</span>!}
+asks {!<span class="term term-social-democratic">!}Toilers' Party{!</span>!}
+organizers to distinguish the social commitments they
+will continue to argue for from the narrower program they can pursue through
+the {!<span class="term term-national-front">!}Front{!</span>!} now. The
+exercise does not erase disagreement; it makes the terms of
+cooperation explicit.
+
+Internal frustration eases, and the coalition can address social concerns
+without claiming a program its other components have not accepted.
+
+- @main: Return to the monthly briefing

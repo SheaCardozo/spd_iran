@@ -10,9 +10,9 @@ economic pressure, and coalition fracture.
 Version 0.1 is an end-to-end public demo. It begins with a four-scene 1949
 prologue, then runs eighteen monthly actions from October 1949 through Senate
 approval of the nationalization principle on 20 March 1951. It includes three
-action decks, six researched advisers with three active at a time, the complete
-historical event spine, structured Majles/Senate and oil records, seeded
-replays, save/load, a Research Library, and four conditional evaluations.
+action decks, six continuously pinned researched advisers, the complete
+historical event spine, structured Majles/Senate and oil records, save/load, a
+Research Library, and four conditional evaluations.
 
 ## Design commitments
 
@@ -21,7 +21,8 @@ replays, save/load, a Research Library, and four conditional evaluations.
   score.
 - Oil agreements model ownership, control, marketing, compensation, and
   finance separately.
-- Political intelligence is incomplete, delayed, and attributable to sources.
+- Political information relevant to a decision is available to the player;
+  uncertainty belongs to the historical record, not a hidden-information stat.
 - The August 1953 coup is modeled as a network of domestic and foreign actors,
   not a single progress meter.
 - The project is single-player and is not designed around symmetric factions
@@ -59,9 +60,9 @@ npm run build
 ```
 
 The generated web build is written to `out/html/`. Open
-`out/html/index.html` in a browser to run it locally. Add
-`?seed=<uint32>` to replay a known seed, and `&debug=1` (or `?debug=1`) to show
-exact state values that are qualitative by default.
+`out/html/index.html` in a browser to run it locally. Add `?debug=1` to show
+exact state values that are qualitative by default. New campaigns use Dendry's
+normal randomized deck order; loading a save resumes its stored deck state.
 
 For a normal local webpage with automatic rebuilding, run:
 
@@ -69,7 +70,9 @@ For a normal local webpage with automatic rebuilding, run:
 npm run play
 ```
 
-Then open <http://127.0.0.1:8080>. Set `GAME_PORT` to use another port.
+Then open <http://127.0.0.1:8080>. The development server watches game source,
+browser files, assets, and the primer; successful rebuilds automatically reload
+open local pages. Set `GAME_PORT` to use another port.
 The formatted historical orientation is available at
 <http://127.0.0.1:8080/timeline.html> and is generated from
 [`docs/research/TIMELINE_PRIMER.md`](docs/research/TIMELINE_PRIMER.md) during

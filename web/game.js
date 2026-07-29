@@ -237,22 +237,107 @@
   // This function allows you to do something in response to signals.
   window.handleSignal = function(signal, event, scene_id) {
   };
+
+  // Dendry's stock card renderer escapes title markup. The campaign's
+  // semantic name spans are trusted source content, so render them as markup
+  // while keeping the native card/deck DOM and click contract.
+  function plainCardText(value) {
+    return $('<div>').html(value || '').text();
+  }
+
+  function cardElement(card) {
+    var link = $('<a>').addClass('card').attr({
+      href: '#',
+      'card-id': card.id,
+      title: plainCardText(card.title),
+    });
+    if (card.image) {
+      link.append($('<img>').addClass('card-img').attr({src: card.image}));
+    }
+    if (card.subtitle) {
+      link.append(
+        $('<span>').addClass('card-tooltip').html(card.subtitle),
+      );
+    }
+    return {
+      link: link,
+      caption: $('<span>').addClass('card-caption').html(card.title),
+    };
+  }
+
+  window.displayHand = function(hand, maxCards) {
+    var description =
+      window.dendryUI.dendryEngine.state.qualities.handDescription ||
+      window.handDescription ||
+      'Current hand';
+    var list = $('.hand');
+    var existing = list.length > 0;
+    if (existing) {
+      list.empty();
+    } else {
+      list = $('<ul>').addClass('hand');
+      $('#content').append($('<hr>'));
+      $('#content').append(
+        $('<p>').addClass('hand-description').text(description),
+      );
+    }
+    for (var index = 0; index < maxCards; index += 1) {
+      var item = $('<li>').addClass('card-in-hand');
+      if (hand[index]) {
+        var card = cardElement(hand[index]);
+        item.append(card.link).append(card.caption);
+      } else {
+        item.append($('<div>').addClass('blank-card'));
+      }
+      list.append(item);
+    }
+    if (!existing) $('#content').append(list);
+  };
+
+  window.displayDecks = function(decks) {
+    var q = window.dendryUI.dendryEngine.state.qualities;
+    var description =
+      q.deckDescription || window.deckDescription || 'Action decks';
+    $('#content').append($('<hr>'));
+    $('#content').append(
+      $('<p>').addClass('deck-description').text(description),
+    );
+    var list = $('<ul>').addClass('decks');
+    decks.forEach(function(deck) {
+      var item = $('<li>').addClass('deck');
+      var card = cardElement(deck);
+      if (!deck.canChoose) item.addClass('unavailable-card');
+      item.append(card.link).append(card.caption);
+      list.append(item);
+    });
+    $('#content').append(list);
+  };
+
+  window.displayPinnedCards = function(cards) {
+    if (!cards.length) return;
+    var q = window.dendryUI.dendryEngine.state.qualities;
+    var description = 'Advisers';
+    if (q.advisor_action_timer > 0) {
+      description += ' — available in ' + q.advisor_action_timer + ' months';
+    }
+    $('#content').append($('<hr>'));
+    $('#content').append(
+      $('<p>').addClass('pinned-text-description').text(description),
+    );
+    var list = $('<ul>').addClass('pinned-cards');
+    cards.forEach(function(pinned) {
+      var item = $('<li>').addClass('pinned-card');
+      var card = cardElement(pinned);
+      item.append(card.link).append(card.caption);
+      list.append(item);
+    });
+    $('#content').append(list);
+  };
   
   // This function runs on a new page. Right now, this auto-saves.
   window.onNewPage = function() {
     var scene = window.dendryUI.dendryEngine.state.sceneId;
     var q = window.dendryUI.dendryEngine.state.qualities;
-    if (q && q.save_schema_version === 1) {
-      // Dendry's default browser RNG is unique per load. Replace only the deck
-      // draw source with a persisted fixed stream so run seeds affect nothing
-      // beyond the explicitly whitelisted minor-report variation.
-      window.dendryUI.dendryEngine.random.uint32 = function() {
-        var x = q.deck_rng_state >>> 0;
-        x ^= (x << 13); x ^= (x >>> 17); x ^= (x << 5);
-        q.deck_rng_state = x >>> 0;
-        return q.deck_rng_state;
-      };
-    }
     if (
       scene != 'root' &&
       q &&

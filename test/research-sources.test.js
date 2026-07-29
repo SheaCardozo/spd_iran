@@ -876,7 +876,7 @@ test('research source taxonomy and catalog cross-references are present', () => 
     const contents = fs.readFileSync(path, 'utf8');
     for (const id of new Set(catalogIds)) {
       if (path.includes('palace-protest') &&
-          !['MAJ-S1', 'SUP-001'].includes(id)) continue;
+          id !== 'MAJ-S1') continue;
       assert.match(contents, new RegExp(id));
     }
   }

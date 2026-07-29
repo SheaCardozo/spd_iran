@@ -1,3 +1,6 @@
+# Source for the Front's heterogeneous coalition: Fakhreddin Azimi,
+# Iran: The Crisis of Democracy, 1941–1953, ch. 5, pp. 250–267.
+# The recurring meeting and its effects are counterfactual.
 title: Coalition Meeting
 new-page: true
 is-card: true
@@ -7,20 +10,63 @@ on-arrival: month_actions += 1; coalition_meeting_timer = 3
 
 = Coalition Meeting
 
-Settle a shared priority without pretending the Front is a disciplined party.
+The {!<span class="term term-national-front">!}Front's{!</span>!} component
+organizations have agreed to cooperate, but they do not
+share a single membership, chain of command, or political program. A meeting
+can settle one common priority for the next round of work; it cannot turn the
+coalition into a disciplined party.
 
-- @meeting_constitution: Reaffirm the narrow constitutional program
-- @meeting_dissent: Hear dissent before fixing the agenda
-- @meeting_oil: Put oil coordination on the agenda
+Choose what the secretariat will ask every component to carry back to its own
+organizers.
+
+- @meeting_constitution
+- @meeting_dissent
+- @meeting_oil
 
 @meeting_constitution
+title: Reaffirm the narrow constitutional program
+subtitle: Strengthen constitutional credibility, while leaving social disagreements aside
 on-arrival: iran_party_relation += 4; independent_nationalists_relation += 3; toilers_dissent += 1; constitutional_legitimacy += 2
-go-to: post_event
+
+The meeting adopts representative elections and constitutional government as
+the language every component can repeat.
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!} members
+and {!<span class="term term-national-front">!}independent nationalists{!</span>!} leave with a clear common case, while some
+{!<span class="term term-social-democratic">!}Toilers' Party{!</span>!}
+organizers question what
+the narrow formula postpones.
+
+The {!<span class="term term-national-front">!}Front{!</span>!} sounds more
+coherent in public. Its unresolved programmatic
+differences remain inside the room.
+
+- @post_event: Continue
 
 @meeting_dissent
-on-arrival: toilers_relation += 3; religious_network_relation += 3; iran_party_dissent -= 2; independent_nationalists_dissent -= 2; political_intelligence += 2
-go-to: post_event
+title: Hear dissent before fixing the agenda
+subtitle: Reduce internal friction at the cost of a less decisive message
+on-arrival: toilers_relation += 4; religious_network_relation += 4; iran_party_dissent -= 2; independent_nationalists_dissent -= 2
+
+The chair gives each component time to state what it will and will not support.
+No common slogan emerges, but the secretariat learns where a future demand
+would split the room and where compromise is still possible.
+
+Allies who feared being overruled are more willing to remain at the table.
+The {!<span class="term term-national-front">!}Front{!</span>!} ends the
+meeting with better knowledge rather than a sharper line.
+
+- @post_event: Continue
 
 @meeting_oil
+title: Put oil coordination on the agenda
+subtitle: Build agreement around national control, without settling every constitutional question
 on-arrival: independent_nationalists_relation += 4; religious_network_relation += 2; oil_coalition_support += 3
-go-to: post_event
+
+The delegates compare the language their organizations are willing to use on
+oil. {!<span class="term term-national-front">!}Independent nationalists{!</span>!} and {!<span class="term term-religious">!}religious-network{!</span>!} organizers find a shared
+public emphasis even though their reasons for supporting it differ.
+
+The coalition is better prepared to speak together on oil. Its machinery and
+its other disagreements are unchanged.
+
+- @post_event: Continue

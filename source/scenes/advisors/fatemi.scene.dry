@@ -1,27 +1,69 @@
-title: Hossein Fatemi
+# Source: Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
+# ch. 5, pp. 250–267. Mechanical effects are counterfactual abstractions.
+title: <span class="term term-nationalist-social-democratic">Hossein Fatemi</span>
 new-page: true
 is-pinned-card: true
 tags: advisor
-view-if: advisor_fatemi_active = 1
 
-= {!<span class="term term-national-front">!}Hossein Fatemi{!</span>!}
+= {!<span class="term term-nationalist-social-democratic">!}Hossein Fatemi{!</span>!}
 
-Fatemi advises on press strategy and public campaigning.
+{!<span class="term term-nationalist-social-democratic">!}Fatemi{!</span>!} is a
+journalist and {!<span class="term term-national-front">!}National Front{!</span>!}
+political figure. The consultation
+models his contribution to press strategy and public campaigning; it does not
+treat him as the sole editor of every friendly paper.
 
 - @fatemi_message
 - @fatemi_network
-- @main: Return
+- @fatemi_dossier
+- @main: Return to the monthly briefing
 
 @fatemi_message
 title: Sharpen the public message
+subtitle: Build press capacity and mandate around one clear argument
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; press_capacity += 5; public_mandate += 3
-go-to: main
+
+{!<span class="term term-nationalist-social-democratic">!}Fatemi{!</span>!} reduces the current case to a headline, a short explanation, and a set
+of answers for predictable objections. Friendly editors adapt the brief to
+their own papers rather than printing an identical instruction.
+
+The {!<span class="term term-national-front">!}Front{!</span>!} speaks more
+clearly in public. Arguments that do not fit the chosen
+emphasis will need attention in a later cycle.
+
+- @main: Return to the monthly briefing
 
 @fatemi_network
 title: Coordinate friendly editors
+subtitle: Build a coordinated press network across independent outlets
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
-on-arrival: advisor_action_timer = 6; press_capacity += 4; political_intelligence += 3
-go-to: main
+on-arrival: advisor_action_timer = 6; press_capacity += 4; organizational_reach += 2
+
+{!<span class="term term-nationalist-social-democratic">!}Fatemi{!</span>!} convenes editors to compare what they can verify, what readers are
+asking, and which claims should not be repeated without evidence. The papers
+remain independent, but their reporting no longer works at cross-purposes.
+
+The network carries the campaign's arguments farther without turning friendly
+papers into a single controlled organ.
+
+- @main: Return to the monthly briefing
+
+@fatemi_dossier
+title: Prepare a documented rebuttal
+subtitle: Trade some immediacy for constitutional credibility and a reusable press record
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+on-arrival: advisor_action_timer = 6; press_capacity += 3; constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2
+
+{!<span class="term term-nationalist-social-democratic">!}Fatemi{!</span>!} organizes a rebuttal around dated statements and institutional records,
+marking uncertain reports instead of turning them into accusations. Editors
+gain material they can quote and check over more than one issue.
+
+The response is less dramatic than a single slogan, but it strengthens the
+{!<span class="term term-national-front">!}Front's{!</span>!} claim to speak
+from evidence and constitutional principle.
+
+- @main: Return to the monthly briefing

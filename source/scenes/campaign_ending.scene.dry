@@ -5,47 +5,68 @@ new-page: true
 
 **[+ ending_name +]**
 
-The Senate has approved the nationalization principle. These scores evaluate
-the political organization that reaches the fixed historical anchor.
+The {!<span class="term term-senate">!}Senate{!</span>!} has approved the
+nationalization principle.
+
+[? if ending_name = "A Constitutional Coalition": The {!<span class="term term-national-front">!}Front{!</span>!} arrives as more than a temporary oil alliance. Its component organizations remain distinct, but they have enough trust, constitutional credibility, and parliamentary capacity to keep negotiating a common course after the vote. Nationalization is therefore paired with a plausible coalition for the institutional struggle that follows. ?]
+
+[? if ending_name = "A Parliamentary Vanguard": A disciplined group inside the {!<span class="term term-parliament">!}Majles{!</span>!} has carried the principle farther than the coalition's wider organization can comfortably sustain. Parliamentary leverage is the {!<span class="term term-national-front">!}Front{!</span>!}'s strongest instrument, but it rests on a narrower base: either internal durability or public organization has not kept pace with chamber success. ?]
+
+[? if ending_name = "A Movement of the Streets": The campaign reaches the vote with its clearest strength outside the chambers. Meetings, press, and organizational networks have created a broad public force, even though constitutional or parliamentary consolidation remains less secure. The movement can exert pressure; converting that pressure into durable institutional control is the unresolved task. ?]
+
+[? if ending_name = "A Fragile Nationalization": The principle passes, but the organization carrying it remains vulnerable. Coalition relations, constitutional standing, parliamentary leverage, and public machinery have not combined into one dependable base. The fixed victory has been reached without settling who can defend or administer its consequences. ?]
+
+= Four dimensions
 
 * Coalition durability: [+ ending_coalition +] / 100
 * Constitutional legitimacy: [+ ending_legitimacy +] / 100
 * Parliamentary capacity: [+ ending_parliament +] / 100
 * Public organization: [+ ending_public +] / 100
 
-Run seed: [+ run_seed +]
-
 Release: [+ release_version +]
 
 = Causal recap
 
-Front structure: [+ front_structure +]
+**{!<span class="term term-national-front">!}Front{!</span>!} structure —
+[+ front_structure +].**
 
-Election strategy: [+ election_strategy +]
+[? if front_structure = "Narrow constitutional alliance": You kept the common program narrow enough for unlike organizations to defend together. That strengthened a public constitutional rule while leaving local machinery primarily with the components. ?]
+[? if front_structure = "Loose coordination committee": You protected the autonomy of cooperating organizations and improved their willingness to share information. The {!<span class="term term-national-front">!}Front{!</span>!} remained dependent on several chains of authority whenever it needed to act as one. ?]
+[? if front_structure = "Membership-based coalition": You invested in a common membership organization that could reach supporters directly. The same structure produced arguments over control among organizations that feared absorption. ?]
 
-Credential strategy: [+ credentials_strategy +]
+**Election strategy — [+ election_strategy +].**
 
-Oil position: [+ oil_terms_position +]
+[? if election_strategy = "Concentrated Tehran slate": You concentrated scarce organizers behind a visible Tehran slate, strengthening electoral identity more than nationwide documentation. ?]
+[? if election_strategy = "Monitoring and credential record": You prioritized a record of returns and interference, giving the later credential campaign stronger evidence and procedure. ?]
+[? if election_strategy = "Slate with selective monitoring": You paid for a mixed approach: a recognizable slate accompanied by selective monitoring, without maximizing either concentration or coverage. ?]
 
-Response to Razmara: [+ razmara_response +]
+**Credential strategy — [+ credentials_strategy +].**
 
-Active adviser roster at the finish:
-[? if advisor_mossadegh_active = 1: Mossadegh. ?]
-[? if advisor_fatemi_active = 1: Fatemi. ?]
-[? if advisor_saleh_active = 1: Saleh. ?]
-[? if advisor_maleki_active = 1: Maleki. ?]
-[? if advisor_makki_active = 1: Makki. ?]
-[? if advisor_kashani_active = 1: Kashani, as an independent counterpart. ?]
+[? if credentials_strategy = "Case-by-case procedural challenge": You treated each credential as its own constitutional case, building procedural standing without assuming that every returned ally was already usable. ?]
+[? if credentials_strategy = "Coordinated National Front group": You emphasized the returned deputies as a visible {!<span class="term term-national-front">!}Front{!</span>!} group, turning a small cohort into a clearer parliamentary force. ?]
+[? if credentials_strategy = "Deputy liaison and procedural outreach": You worked through liaison and persuasion beyond the {!<span class="term term-national-front">!}Front{!</span>!}, exchanging some internal simplicity for a wider parliamentary network. ?]
 
-Crown relationship:
+**Oil position — [+ oil_terms_position +].**
+
+[? if oil_terms_position = "Constitutional control": Your baseline remained a general demand for constitutionally accountable national control. ?]
+[? if oil_terms_position = "Term-by-term national control": Recurring committee work separated ownership, operations, marketing, compensation, finance, personnel, and review before defining an acceptable minimum. ?]
+[? if oil_terms_position = "Documented term-by-term rejection": The rejection campaign tied its position to a documented comparison rather than a single compromise score. ?]
+
+**Response to {!<span class="term term-independent">!}Razmara{!</span>!} — [+ razmara_response +].**
+
+[? if razmara_response = "Parliamentary term-by-term rebuttal": You answered {!<span class="term term-independent">!}Razmara{!</span>!} primarily through the parliamentary record, strengthening the committee case and its procedural credibility. ?]
+[? if razmara_response = "Public nationalization campaign": You carried the confrontation into a more direct public campaign, expanding mandate while sharpening resistance from the {!<span class="term term-royalist">!}Crown{!</span>!}. ?]
+[? if razmara_response = "Joint parliamentary and public response": You spent scarce resources to coordinate the chamber case with public explanation, building a broader response without fully specializing in either route. ?]
+
+**{!<span class="term term-royalist">!}Crown{!</span>!} relationship:**
 [? if shah_relation < 35: hostile. ?]
 [? if shah_relation >= 35 and shah_relation < 65: guarded. ?]
 [? if shah_relation >= 65: workable. ?]
 
-Crown resistance:
+**{!<span class="term term-royalist">!}Crown{!</span>!} resistance:**
 [? if shah_resistance < 35: limited. ?]
 [? if shah_resistance >= 35 and shah_resistance < 65: substantial. ?]
 [? if shah_resistance >= 65: severe. ?]
 
 - @research_library: Review the Research Library
-- @root.start_menu: Begin a new seeded campaign
+- @root.start_menu: Begin a new campaign

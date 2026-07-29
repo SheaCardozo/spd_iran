@@ -13,6 +13,30 @@ function loadGame() {
   });
 }
 
+function contentLength(scene) {
+  if (Array.isArray(scene?.content)) return scene.content.length;
+  if (Array.isArray(scene?.content?.content)) return scene.content.content.length;
+  return scene?.content ? 1 : 0;
+}
+
+function withoutSemanticMarkup(source) {
+  return source
+    .replace(/\{!<span\b[^>]*>!\}/g, '')
+    .replace(/\{!<\/span>!\}/g, '')
+    .replace(/<span\b[^>]*>/g, '')
+    .replace(/<\/span>/g, '');
+}
+
+function chooseById(dendry, id) {
+  const choices = dendry._compileChoices(
+    dendry.game.scenes[dendry.state.sceneId],
+  );
+  const index = choices.findIndex((choice) => choice.id === id);
+  assert.notEqual(index, -1, `${id} is visible in ${dendry.state.sceneId}`);
+  assert.equal(choices[index].canChoose, true, `${id} is available`);
+  dendry.choose(index);
+}
+
 async function initialState() {
   const game = await loadGame();
   const dendry = new engine.DendryEngine(
@@ -33,14 +57,20 @@ async function initializedEngine() {
   return dendry;
 }
 
-test('v0.1 initializes versioned deterministic campaign state', async () => {
+test('v0.1 initializes versioned campaign state without public seed fields', async () => {
   const q = await initialState();
   assert.equal(q.save_schema_version, 1);
   assert.equal(q.scenario_id, 'historical');
-  assert.ok(Number.isInteger(q.run_seed));
-  assert.ok(q.run_seed >= 0 && q.run_seed <= 0xffffffff);
-  assert.equal(q.rng_state, q.run_seed === 0 ? 1831565813 : q.run_seed);
-  assert.equal(q.deck_rng_state, 19491014);
+  for (const field of [
+    'run_seed',
+    'rng_state',
+    'deck_rng_state',
+    'last_minor_variation',
+    'report_reliability',
+    'constituency_pressure',
+  ]) {
+    assert.equal(field in q, false, `${field} is absent`);
+  }
 });
 
 test('all authorized chamber places have unique evidence/scenario records', async () => {
@@ -134,13 +164,72 @@ test('all twelve action cards and six pinned advisers compile', async () => {
       card.options.length >= 2 && card.options.length <= 3,
       `${card.id} has two or three choices`,
     );
+    assert.ok(
+      contentLength(card) >= 3,
+      `${card.id} explains the operational problem`,
+    );
+    for (const option of card.options) {
+      const target = game.scenes[option.id.replace(/^@/, '')];
+      assert.ok(target?.title?.trim(), `${target?.id} states an action`);
+      assert.ok(target?.subtitle?.trim(), `${target?.id} previews a tradeoff`);
+      assert.ok(
+        contentLength(target) >= 2,
+        `${target?.id} narrates the result`,
+      );
+      assert.ok(target?.options?.length >= 1, `${target?.id} waits for acknowledgement`);
+      assert.equal(target?.goTo, undefined, `${target?.id} does not skip result prose`);
+    }
+  }
+  const actionChoiceCounts = new Set(
+    actionCards
+      .map((card) => card.options.length),
+  );
+  assert.deepEqual(
+    [...actionChoiceCounts].sort(),
+    [2, 3],
+    'recurring actions include genuine binary and three-way decisions',
+  );
+
+  for (const adviser of advisers) {
+    assert.ok(
+      contentLength(adviser) >= 2,
+      `${adviser.id} explains the figure and consultation boundary`,
+    );
+    const consultations = adviser.options
+      .map((option) => game.scenes[option.id.replace(/^@/, '')])
+      .filter((target) => target?.onArrival);
+    assert.ok(
+      consultations.length >= 2 && consultations.length <= 3,
+      `${adviser.id} exposes two or three substantive consultations`,
+    );
+    for (const consultation of consultations) {
+      assert.ok(consultation.title?.trim(), `${consultation.id} states an action`);
+      assert.ok(consultation.subtitle?.trim(), `${consultation.id} previews a tradeoff`);
+      assert.ok(
+        contentLength(consultation) >= 2,
+        `${consultation.id} narrates the consultation result`,
+      );
+      assert.ok(
+        consultation.options?.length >= 1,
+        `${consultation.id} waits for acknowledgement`,
+      );
+      assert.equal(
+        consultation.goTo,
+        undefined,
+        `${consultation.id} does not skip result prose`,
+      );
+    }
   }
 });
 
-test('deck gates and leadership replacement follow the shared hand model', async () => {
+test('deck gates and always-pinned advisers follow the shared hand model', async () => {
   const dendry = await initializedEngine();
   const q = dendry.state.qualities;
-  for (let step = 0; step < 4; step += 1) dendry.choose(0);
+  for (let step = 0; step < 4; step += 1) {
+    dendry.choose(0);
+    dendry.choose(0);
+  }
+  dendry.choose(0);
   dendry.choose(0);
   assert.equal(dendry.state.sceneId, 'main');
   let visible = dendry._compileChoices(dendry.game.scenes.main).map(
@@ -157,15 +246,159 @@ test('deck gates and leadership replacement follow the shared hand model', async
   assert.ok(visible.includes('main.public_campaign'));
   assert.ok(visible.includes('main.parliamentary_affairs'));
 
-  dendry.goToScene('leadership_roster');
-  assert.equal(q.month_actions, 1);
-  dendry.choose(1);
-  assert.deepEqual(q.active_advisors, ['mossadegh', 'maleki', 'kashani']);
-  assert.equal(q.advisor_mossadegh_active, 1);
-  assert.equal(q.advisor_maleki_active, 1);
-  assert.equal(q.advisor_kashani_active, 1);
-  assert.equal(q.advisor_fatemi_active, 0);
-  assert.equal(q.advisor_roster_timer, 5);
+  const advisers = Object.values(dendry.game.scenes).filter(
+    (scene) => scene.isPinnedCard && scene.tags?.includes('advisor'),
+  );
+  assert.equal(advisers.length, 6);
+  assert.ok(advisers.every((adviser) => adviser.viewIf === undefined));
+  assert.equal(dendry.game.scenes.leadership_roster, undefined);
+  for (const field of [
+    'active_advisors',
+    'advisor_roster_timer',
+    'advisor_mossadegh_active',
+    'advisor_fatemi_active',
+    'advisor_saleh_active',
+    'advisor_maleki_active',
+    'advisor_makki_active',
+    'advisor_kashani_active',
+  ]) {
+    assert.equal(field in q, false, `${field} is absent`);
+  }
+});
+
+test('menu, briefing, Library, status, and ending meet the scene-wide standard', async () => {
+  const game = await loadGame();
+  const explanatoryScenes = [
+    'root.start_menu',
+    'root.about',
+    'main',
+    'status',
+    'status.coalition',
+    'status.majles',
+    'status.crown',
+    'research_library',
+    'research_library.government',
+    'research_library.timeline',
+    'research_library.coalition_people',
+    'research_library.chambers',
+    'research_library.oil',
+    'research_library.events',
+    'research_library.uncertainty',
+    'research_library.bibliography',
+  ];
+  for (const id of explanatoryScenes) {
+    const scene = game.scenes[id];
+    assert.ok(scene, `${id} exists`);
+    const minimum = id === 'research_library' ? 1 : 2;
+    assert.ok(
+      contentLength(scene) >= minimum,
+      `${id} explains its purpose or data`,
+    );
+  }
+
+  const librarySource = fs.readFileSync(
+    'source/scenes/research_library.scene.dry',
+    'utf8',
+  );
+  const libraryPlainText = withoutSemanticMarkup(librarySource);
+  assert.doesNotMatch(librarySource, /Seeded variation/);
+  assert.match(librarySource, /25 November 1950/);
+  assert.match(librarySource, /11 January 1951/);
+  assert.match(librarySource, /Gass–Golshayan supplemental agreement/);
+  assert.match(librarySource, /Nationalization principle, 20 March 1951/);
+  assert.match(librarySource, /Minimum acceptable terms/);
+  assert.match(librarySource, /@backSpecialScene: Return/);
+  assert.doesNotMatch(librarySource, /component prefixes/);
+  assert.match(librarySource, /prime\s+minister/i);
+  assert.doesNotMatch(librarySource, /\b(?:MAJ|SUP)-S?\d+\b/);
+  assert.match(librarySource, /sessions 2, 25, and 30/);
+  for (const person of [
+    'Mohammad Mossadegh',
+    'Hossein Fatemi',
+    'Allahyar Saleh',
+    'Khalil Maleki',
+    'Hossein Makki',
+    'Ayatollah Abol-Qasem Kashani',
+  ]) {
+    assert.match(
+      librarySource,
+      new RegExp(person.replaceAll(' ', '\\s+')),
+    );
+  }
+  for (const eventLabel of [
+    'attempt on the Shah',
+    'constituent assembly',
+    'palace protest',
+    'Tehran rerun',
+    'Special Oil Commission',
+    'Razmara',
+    'oil nationalization',
+  ]) {
+    assert.match(libraryPlainText, new RegExp(eventLabel, 'i'));
+  }
+
+  const statusSource = fs.readFileSync('source/scenes/status.scene.dry', 'utf8');
+  const statusPlainText = withoutSemanticMarkup(statusSource);
+  for (const field of [
+    'Organizational reach',
+    'Press capacity',
+    'iran_party_strength',
+    'iran_party_dissent',
+    'iran_party_organization',
+    'toilers_strength',
+    'independent_nationalists_strength',
+    'religious_network_strength',
+    'Usable Front representation',
+    'Oil-coalition support',
+    'Parliamentary-procedure legitimacy',
+  ]) {
+    assert.match(statusPlainText, new RegExp(field));
+  }
+
+  const timeline = fs.readFileSync('out/html/timeline.html', 'utf8');
+  assert.match(timeline, /id="source-sup-059"/);
+
+  const mainSource = fs.readFileSync('source/scenes/main.scene.dry', 'utf8');
+  for (const month of [
+    'month = 10',
+    'month = 11',
+    'month = 12',
+    'month = 1',
+  ]) {
+    assert.match(mainSource, new RegExp(month));
+  }
+
+  assert.equal(game.scenes.leadership_roster, undefined);
+
+  const ending = game.scenes.campaign_ending;
+  assert.ok(contentLength(ending) >= 12);
+  const endingText = fs.readFileSync(
+    'source/scenes/campaign_ending.scene.dry',
+    'utf8',
+  );
+  for (const name of [
+    'A Constitutional Coalition',
+    'A Parliamentary Vanguard',
+    'A Movement of the Streets',
+    'A Fragile Nationalization',
+  ]) {
+    assert.match(endingText, new RegExp(name));
+  }
+  for (const decision of [
+    'front_structure',
+    'election_strategy',
+    'credentials_strategy',
+    'oil_terms_position',
+    'razmara_response',
+  ]) {
+    assert.match(endingText, new RegExp(decision));
+  }
+
+  const dendry = await initializedEngine();
+  dendry.goToScene('campaign_ending');
+  dendry.goToScene('research_library');
+  chooseById(dendry, 'backSpecialScene');
+  assert.equal(dendry.state.sceneId, 'campaign_ending');
 });
 
 test('the fixed spine has thirteen one-time tagged events plus the palace opening', async () => {
@@ -181,61 +414,78 @@ test('the fixed spine has thirteen one-time tagged events plus the palace openin
   assert.ok(game.scenes.palace_protest);
 });
 
-test('seeded minor variation is reproducible and changes only whitelisted fields', async () => {
-  const first = await initializedEngine();
-  const second = await initializedEngine();
-  const beforeFirst = structuredClone(first.state.qualities);
-  const beforeSecond = structuredClone(second.state.qualities);
-  for (const dendry of [first, second]) {
-    dendry.state.qualities.run_seed = 123456789;
-    dendry.state.qualities.rng_state = 123456789;
-    dendry.state.qualities.month_actions = 1;
-    dendry.goToScene('post_event');
-  }
-  assert.equal(
-    first.state.qualities.last_minor_variation,
-    second.state.qualities.last_minor_variation,
-  );
-  assert.equal(first.state.qualities.rng_state, second.state.qualities.rng_state);
-  assert.ok(first.state.qualities.report_reliability >= 48);
-  assert.ok(first.state.qualities.report_reliability <= 52);
-  assert.ok(first.state.qualities.constituency_pressure >= 48);
-  assert.ok(first.state.qualities.constituency_pressure <= 52);
-  const allowed = new Set([
-    'run_seed',
-    'rng_state',
-    'last_minor_variation',
-    'report_reliability',
-    'constituency_pressure',
-    'time',
-    'months_advanced',
-    'month_actions',
-    'month',
-    'coalition_cohesion',
-    'ending_coalition',
-    'ending_legitimacy',
-    'ending_parliament',
-    'ending_public',
-    'ending_name',
-    'ending_scores',
-    'decision_flags',
-    'event_flags',
-    'has_event',
-  ]);
-  for (const key of Object.keys(beforeFirst)) {
-    if (!allowed.has(key)) {
-      assert.deepEqual(
-        first.state.qualities[key],
-        beforeFirst[key],
-        `${key} is not seed-variable`,
-      );
-      assert.deepEqual(
-        second.state.qualities[key],
-        beforeSecond[key],
-        `${key} is not seed-variable`,
-      );
+test('major events follow the setup, choice, and visible consequence standard', async () => {
+  const game = await loadGame();
+  const setupIds = [
+    'prologue_attempt',
+    'prologue_attempt.prologue_ban',
+    'prologue_attempt.prologue_constituent',
+    'prologue_attempt.prologue_senate',
+    'palace_protest',
+    ...Object.values(game.scenes)
+      .filter((scene) => scene.tags?.includes('event'))
+      .map((scene) => scene.id),
+  ];
+  const choiceCounts = new Set();
+
+  for (const id of setupIds) {
+    const scene = game.scenes[id];
+    assert.ok(scene.subtitle?.trim(), `${id} has an orienting subtitle`);
+    assert.ok(scene.content?.length >= 3, `${id} has a developed setup`);
+    assert.ok(scene.options?.length >= 1, `${id} has at least one continuation`);
+    choiceCounts.add(scene.options.length);
+
+    for (const option of scene.options) {
+      const target = game.scenes[option.id.replace(/^@/, '')];
+      assert.ok(target, `${id} option ${option.id} resolves to a scene`);
+      assert.ok(target.title?.trim(), `${target.id} states a concrete action`);
+      assert.ok(target.subtitle?.trim(), `${target.id} previews its direction`);
     }
   }
+
+  assert.ok(choiceCounts.has(1), 'fixed result scenes may have one continuation');
+  assert.ok(choiceCounts.has(3), 'multi-strategy events are represented');
+
+  const eventBranchPrefixes = [
+    'prologue_attempt.',
+    'palace_protest.',
+    'front_formation.',
+    'campaign_spine.',
+  ];
+  const consequenceScenes = Object.values(game.scenes).filter(
+    (scene) => eventBranchPrefixes.some((prefix) => scene.id.startsWith(prefix)) &&
+      scene.onArrival &&
+      !scene.tags?.includes('event'),
+  );
+  for (const scene of consequenceScenes) {
+    const contentLength = Array.isArray(scene.content)
+      ? scene.content.length
+      : (scene.content ? 1 : 0);
+    assert.ok(contentLength >= 1, `${scene.id} narrates its consequence`);
+    assert.ok(scene.options?.length >= 1, `${scene.id} waits for acknowledgement`);
+    assert.equal(scene.goTo, undefined, `${scene.id} does not skip its result prose`);
+  }
+
+  const palaceResult = game.scenes['palace_protest.begin_organizing'];
+  assert.ok(palaceResult.content.length >= 2);
+  assert.ok(palaceResult.options.length >= 1);
+});
+
+test('new campaigns use unique Dendry RNG streams for deck draws', async () => {
+  const browser = fs.readFileSync('web/game.js', 'utf8');
+  assert.doesNotMatch(browser, /deck_rng_state/);
+  assert.doesNotMatch(browser, /dendryEngine\.random\.uint32\s*=/);
+
+  const game = await loadGame();
+  const first = new engine.DendryEngine(
+    new engine.NullUserInterface(),
+    game,
+  ).beginGame();
+  const second = new engine.DendryEngine(
+    new engine.NullUserInterface(),
+    game,
+  ).beginGame();
+  assert.notDeepEqual(first.random.getState(), second.random.getState());
 });
 
 test('ending formulas and precedence produce all four named evaluations', async () => {
@@ -327,10 +577,40 @@ test('every major anchor and adviser has an adjacent research record', () => {
     'people/khalil-maleki.md',
     'people/hossein-makki.md',
     'people/abol-qasem-kashani.md',
+    'systems/recurring-actions.md',
+    'systems/information-and-ending-surfaces.md',
   ];
   for (const record of records) {
     const content = fs.readFileSync(`docs/research/${record}`, 'utf8');
     assert.match(content, /Source|Sources/);
     assert.match(content, /MAJ-|SUP-/);
   }
+});
+
+test('historical scenes keep citations in comments and expose no intelligence stat', () => {
+  const historicalSceneFiles = [
+    'source/scenes/prologue_attempt.scene.dry',
+    'source/scenes/events/1949/palace_protest.scene.dry',
+    'source/scenes/events/1949/front_formation.scene.dry',
+    'source/scenes/events/campaign_spine.scene.dry',
+    'source/scenes/main.scene.dry',
+  ];
+  for (const file of historicalSceneFiles) {
+    const source = fs.readFileSync(file, 'utf8');
+    assert.match(source, /^# Sources?\b/m, `${file} has adjacent source comments`);
+    const visibleLines = source
+      .split('\n')
+      .filter((line) => !line.trimStart().startsWith('#'))
+      .join('\n');
+    assert.doesNotMatch(visibleLines, /\bResearch:/);
+    assert.doesNotMatch(visibleLines, /\b(?:MAJ|SUP)-S?\d+\b/);
+  }
+
+  const sceneSource = fs
+    .readdirSync('source/scenes', {recursive: true, withFileTypes: true})
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.scene.dry'))
+    .map((entry) => fs.readFileSync(`${entry.parentPath}/${entry.name}`, 'utf8'))
+    .join('\n');
+  assert.doesNotMatch(sceneSource, /political_intelligence/);
+  assert.doesNotMatch(sceneSource, /Political intelligence/i);
 });

@@ -30,6 +30,8 @@ remain in the active unavailable-source queue.
 | [`PARLIAMENTARY_CONTROL.md`](PARLIAMENTARY_CONTROL.md) | Membership, tendencies, caucuses, attendance, and dated control |
 | [`PARLIAMENTARY_VIBE_MODEL.md`](PARLIAMENTARY_VIBE_MODEL.md) | Explicitly heuristic priors for unresolved members |
 | [`SIXTEENTH_MAJLES_LEDGER.md`](SIXTEENTH_MAJLES_LEDGER.md) | Constituency, return, credential, board, and decision ledger |
+| [`systems/recurring-actions.md`](systems/recurring-actions.md) | Historical boundary and mechanical abstraction for recurring cards, adviser consultations, and roster changes |
+| [`systems/information-and-ending-surfaces.md`](systems/information-and-ending-surfaces.md) | Claim routing and simulation boundaries for menus, briefings, status, Library, and endings |
 | [`CRISIS_EVIDENCE_AUDIT.md`](CRISIS_EVIDENCE_AUDIT.md) | Thirty Tir, 19 August, payments, welfare, and control uncertainty |
 | [`ECONOMIC_HISTORY.md`](ECONOMIC_HISTORY.md) | Economic questions, observation schema, and model-neutral evidence |
 | [`OCR_PROCESSING.md`](OCR_PROCESSING.md) | Local OCR toolchain, queue, benchmarks, processing order, and evidentiary limits |
@@ -59,6 +61,13 @@ history—in `UNAVAILABLE_SOURCES.md`.
 Implemented historical content requires an adjacent record under `events/` or
 equivalent claim metadata. A synthesis or bibliography entry does not replace
 a precise page, chapter, session, document, or section locator.
+
+The playable-scene definition of done is in
+[`../SCENE_CONTENT_STANDARD.md`](../SCENE_CONTENT_STANDARD.md). In particular,
+the internal `major`/`supplemental` archive role is not an authority ranking:
+specialist monographs normally provide interpretation, while an official
+proceeding filed as supplemental can still be the strongest source for an
+exact parliamentary act. Incidental papers must not displace either.
 
 For every source intake or status change:
 

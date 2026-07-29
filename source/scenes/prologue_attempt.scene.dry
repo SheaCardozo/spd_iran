@@ -1,83 +1,265 @@
-title: The attempt on the Shah
+# Sources for the February 1949 attempt, martial law, Tudeh ban, and
+# constitutional revision: Ervand Abrahamian, Iran Between Two Revolutions,
+# ch. 15; Mostafa Elm, Oil, Power, and Principle, ch. 3, pp. 82–86.
+# First-Senate composition: official First-Senate roster, appointed and
+# elected tables. Choice effects are counterfactual abstractions.
+title: The attempt on the <span class="term term-royalist">Shah</span>
+subtitle: An attack becomes a constitutional emergency
 new-page: true
 
 = 4 February 1949
 
-An assailant wounds {!<span class="term term-royalist">!}Mohammad Reza
-Shah{!</span>!} at Tehran University. The attack opens an immediate crisis:
-claims about responsibility are uncertain, while coercive measures are already
-being prepared.
+An assailant fires on {!<span class="term term-royalist">!}Mohammad Reza
+Shah{!</span>!} and wounds him. Before the opposition can establish who knew
+what, the attack has become the justification for an emergency. The government
+declares martial law, begins arrests, and prepares measures against its
+political opponents.
 
-- @attempt_caution: Insist publicly that evidence precede accusation
-- @attempt_quiet: Gather reports before making a public intervention
+The attack is documented; a larger directing conspiracy is not established.
+The emerging opposition must decide what standard to use when an allegation
+is useful, frightening, and still unproved.
+
+- @attempt_caution
+- @attempt_quiet
+- @attempt_joint
 
 @attempt_caution
+title: Insist that evidence precede accusation
+subtitle: A public constitutional standard; little preparation for the emergency
 on-arrival: constitutional_legitimacy += 2; prologue_legitimacy_modifier += 2
-go-to: prologue_ban
 
-You establish a constitutional standard without claiming knowledge the
-opposition does not possess.
+Your statement condemns the shooting and refuses to assign a wider
+responsibility without evidence. It gives opponents of collective punishment
+a public standard they can repeat, even though it does little to reveal what
+the authorities intend to do next.
+
+The emergency does not wait for that evidence. Arrests and restrictions are
+already widening.
+
+- @prologue_ban: Continue
 
 @attempt_quiet
-on-arrival: political_intelligence += 2; prologue_intelligence_modifier += 2
-go-to: prologue_ban
+title: Gather reports before intervening publicly
+subtitle: A stronger legal record; a quieter constitutional objection
+on-arrival: constitutional_legitimacy += 1; prologue_legitimacy_modifier += 1; parliamentary_procedure_legitimacy += 2
 
-The network records conflicting reports and marks what remains unverified.
+Lawyers, editors, and political contacts compare what they have heard and mark
+contradictions rather than forcing them into one story. The resulting record
+separates verified acts from politically convenient inferences.
+
+Because the work is discreet, the opposition establishes less of a public
+standard before emergency measures take effect.
+
+- @prologue_ban: Continue
+
+@attempt_joint
+title: Draft a joint statement for opposition newspapers
+subtitle: Some legitimacy and organization; greater attention from the <span class="term term-royalist">Court</span>
+on-arrival: constitutional_legitimacy += 1; prologue_legitimacy_modifier += 1; organizational_reach += 1; prologue_organization_modifier += 1; shah_resistance += 1; prologue_crown_modifier -= 1
+
+Several opposition circles agree on careful language: condemn the assault,
+reject unsupported collective blame, and ask under what law the emergency
+will be administered. Drafting together creates a modest working connection
+that did not exist before the crisis.
+
+It also identifies the signatories to a {!<span class="term term-royalist">!}Court{!</span>!} newly alert to organized
+opposition. The statement cannot prevent the measures that follow.
+
+- @prologue_ban: Continue
 
 @prologue_ban
+title: Martial law and the <span class="term term-left">Tudeh</span> ban
+subtitle: Emergency power reaches parties, newspapers, and political networks
 new-page: true
 
-= Martial law and the Tudeh ban
+= February 1949
 
-Martial law follows the attack. The Tudeh Party is outlawed and opposition
-press and political activity face new restrictions.
+Under martial law the state outlaws the {!<span class="term term-left">!}Tudeh
+Party{!</span>!}, arrests political opponents, and restricts newspapers and
+public activity. Constitutional opposition must now work under these
+conditions.
 
-- @ban_legal_record: Build a legal record of emergency measures
-- @ban_contacts: Preserve discreet organizational contacts
+The immediate question is where to put scarce attention. A legal record can
+contest the normalization of emergency rule. Discreet contacts can preserve
+some organizational knowledge. A public civil-liberties defense can keep the
+principle visible but expose its organizers to further pressure.
+
+- @ban_legal_record
+- @ban_contacts
+- @ban_public_defense
 
 @ban_legal_record
+title: Build a legal record of the emergency measures
+subtitle: Stronger constitutional case; a sharper dispute with the <span class="term term-royalist">Crown</span>
 on-arrival: constitutional_legitimacy += 2; prologue_legitimacy_modifier += 2; shah_relation -= 1; prologue_crown_modifier -= 1
-go-to: prologue_constituent
+
+Lawyers begin recording orders, detentions, closures, and the authority
+claimed for them. The record cannot reopen a newspaper or free a detainee by
+itself, but it prevents every measure from dissolving into rumor.
+
+The choice also makes the opposition's constitutional objection harder for
+the {!<span class="term term-royalist">!}Court{!</span>!} to treat as private unease.
+
+- @prologue_constituent: Continue
 
 @ban_contacts
-on-arrival: organizational_reach += 2; prologue_organization_modifier += 2; political_intelligence += 1; prologue_intelligence_modifier += 1
-go-to: prologue_constituent
+title: Preserve discreet organizational contacts
+subtitle: Greater organizational reach; little immediate public defense
+on-arrival: organizational_reach += 2; prologue_organization_modifier += 2
+
+Trusted intermediaries carry news between lawyers, political circles, and
+families affected by the arrests. The network learns which channels still
+function and which reports can be corroborated.
+
+The work preserves capacity for a later campaign, but people facing the
+emergency hear no comparably strong common public answer.
+
+- @prologue_constituent: Continue
+
+@ban_public_defense
+title: Coordinate a public defense of political liberties
+subtitle: More public and press capacity; increased royal resistance
+on-arrival: public_mandate += 1; press_capacity += 1; prologue_organization_modifier += 1; shah_resistance += 1; prologue_crown_modifier -= 1
+
+Editors and constitutional politicians frame the ban and press restrictions
+as a test of lawful government rather than as proof of an unverified
+conspiracy. The argument gives later opposition writing a common vocabulary.
+
+Publication under martial law is uneven, and the visible coordination gives
+the {!<span class="term term-royalist">!}Court{!</span>!} another reason to regard these circles as a developing challenge.
+
+- @prologue_constituent: Continue
 
 @prologue_constituent
+title: The constituent assembly
+subtitle: Constitutional revision changes the balance between <span class="term term-royalist">Crown</span> and <span class="term term-parliament">Majles</span>
 new-page: true
 
-= The constituent assembly
+= Spring 1949
 
-The 1949 constituent assembly strengthens the Shah's constitutional position,
-including a power to dissolve the Majles under revised Article 48.
+The constituent assembly strengthens the constitutional position of
+{!<span class="term term-royalist">!}Mohammad Reza Shah{!</span>!}. Among the
+changes, revised Article 48 gives the {!<span class="term term-royalist">!}Shah{!</span>!} a power to dissolve the
+{!<span class="term term-parliament">!}Majles{!</span>!}.
 
-- @assembly_procedure: Challenge the procedure and preserve a constitutional objection
-- @assembly_risk: Concentrate on the practical risk of dissolution
+The practical disagreement is how to answer it. One course preserves a formal
+objection to the way constitutional power is being altered. Another treats
+the revision as an operating risk and prepares a procedural memorandum for
+future deputies. A third begins building a dissolution-response network.
+Before the elections, the loose opposition has enough shared lawyers and
+organizers to make only one of these a common priority.
+
+- @assembly_procedure
+- @assembly_risk
+- @assembly_organize
 
 @assembly_procedure
+title: Publish a signed constitutional objection
+subtitle: Greater legitimacy; the <span class="term term-royalist">Crown</span> recognizes an open challenge
 on-arrival: constitutional_legitimacy += 1; prologue_legitimacy_modifier += 1; shah_resistance += 2; prologue_crown_modifier -= 2
-go-to: prologue_senate
+
+The opposition records that constitutional forms do not make every
+constitutional change legitimate. Its objection gives later parliamentary
+arguments a clear lineage and makes accommodation harder to misrepresent as
+consent.
+
+The {!<span class="term term-royalist">!}Court{!</span>!}, in turn, has little difficulty identifying who intends to contest
+the expanded royal power.
+
+- @prologue_senate: Continue
 
 @assembly_risk
-on-arrival: political_intelligence += 2; prologue_intelligence_modifier += 2
-go-to: prologue_senate
+title: Prepare a procedural memorandum for future deputies
+subtitle: Stronger parliamentary procedure; a less visible public objection
+on-arrival: constitutional_legitimacy += 1; prologue_legitimacy_modifier += 1; parliamentary_procedure_legitimacy += 2
+
+Attention shifts to procedure, possible triggers for dissolution, and the
+people through whom royal influence might reach an election. The opposition
+has a procedural answer ready when pressure develops.
+
+That preparation is useful but quiet. The public record contains a less
+forceful common objection to the revision itself.
+
+- @prologue_senate: Continue
+
+@assembly_organize
+title: Build a dissolution-response network
+subtitle: Greater organizational reach; less legal detail and some <span class="term term-royalist">Crown</span> resistance
+on-arrival: organizational_reach += 1; prologue_organization_modifier += 1; shah_resistance += 1; prologue_crown_modifier -= 1
+
+The opposition assigns organizers to keep contacts current and to prepare a
+common response if dissolution pressure interrupts parliamentary work. The
+network creates no power to reverse Article 48 and makes no prediction that
+dissolution must occur.
+
+Choosing organization leaves fewer shared lawyers for a detailed memorandum or
+formal public objection. It also makes the opposition's preparation more
+visible to the {!<span class="term term-royalist">!}Court{!</span>!}.
+
+- @prologue_senate: Continue
 
 @prologue_senate
+title: A new <span class="term term-senate">Senate</span> and a disputed election
+subtitle: Two chambers, mixed routes to office, and no common opposition yet
 new-page: true
 
-= A new Senate and a disputed election
+= Summer–Autumn 1949
 
-Preparations for the first Senate coincide with the election for the Sixteenth
-Majles. Opposition politicians must decide how to organize before scattered
-complaints become a common campaign.
+Preparations for the first {!<span class="term term-senate">!}Senate{!</span>!}
+coincide with elections for the Sixteenth
+{!<span class="term term-parliament">!}Majles{!</span>!}. The {!<span class="term term-senate">!}Senate{!</span>!} will
+combine elected and royally appointed members. In the {!<span class="term term-parliament">!}Majles{!</span>!} contest,
+complaints about interference remain scattered among candidates, newspapers,
+and local political circles.
 
-- @senate_committee: Prepare a common election-monitoring committee
-- @senate_constitution: Prepare a public constitutional appeal
+There is still no {!<span class="term term-national-front">!}National Front{!</span>!} organization to command. The immediate task
+is narrower: create enough common method that separate complaints can become
+a defensible constitutional campaign.
+
+- @senate_committee
+- @senate_constitution
+- @senate_correspondents
 
 @senate_committee
+title: Prepare a common election-monitoring committee
+subtitle: Organizational reach; emphasis on collecting comparable cases
 on-arrival: organizational_reach += 1; prologue_organization_modifier += 1; prologue_complete = 1
-go-to: palace_protest
+
+Representatives agree on a simple intake: where voting occurred, who reports
+interference, and what evidence can be preserved. The committee has no power
+to certify a national result, but it gives otherwise isolated candidates a
+place to compare cases.
+
+When the Tehran dispute sharpens, a small coordinating apparatus is ready to
+carry the complaints toward a common protest.
+
+- @palace_protest: Continue to October 1949
 
 @senate_constitution
+title: Prepare a public constitutional appeal
+subtitle: Public mandate; less detailed monitoring capacity
 on-arrival: public_mandate += 1; prologue_complete = 1
-go-to: palace_protest
+
+The appeal connects representative elections to constitutional government
+without pretending that every disputed return has already been proved. It
+gives the opposition a public principle around which different politicians
+can gather.
+
+The case is legible, but the underlying monitoring record remains uneven.
+
+- @palace_protest: Continue to October 1949
+
+@senate_correspondents
+title: Recruit provincial and Tehran correspondents
+subtitle: Greater organizational reach; a looser common public message
+on-arrival: organizational_reach += 1; prologue_organization_modifier += 1; prologue_complete = 1
+
+Editors, lawyers, and political acquaintances begin passing reports from
+constituencies to Tehran. They do not produce a complete national ledger, but
+they help the opposition distinguish recurring methods from one unverified
+complaint.
+
+The correspondents create a wider reporting network; agreement on a single
+public demand will have to be forged in the approaching protest.
+
+- @palace_protest: Continue to October 1949

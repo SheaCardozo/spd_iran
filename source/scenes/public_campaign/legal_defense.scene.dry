@@ -1,3 +1,6 @@
+# Source for the Front's constitutional and press campaign: Fakhreddin Azimi,
+# Iran: The Crisis of Democracy, 1941–1953, ch. 5, pp. 250–267.
+# The recurring defense work and its effects are counterfactual.
 title: Legal Defense and Repression Response
 new-page: true
 is-card: true
@@ -7,15 +10,48 @@ on-arrival: month_actions += 1; legal_defense_timer = 5
 
 = Legal Defense and Repression Response
 
-- @defense_cases: Fund individual legal cases
-- @defense_record: Publish a common record of restrictions
+Restrictions do not affect every component in the same way. The secretariat
+can concentrate scarce money on particular legal cases or assemble a public
+record that makes separate incidents legible as a constitutional problem.
+
+One route gives immediate assistance; the other creates information and public
+pressure. Neither guarantees relief from the authorities.
+
+- @defense_cases
+- @defense_record
 
 @defense_cases
+title: Fund individual legal cases
+subtitle: Spend one resource on direct defense, legitimacy, and continued organizing
 choose-if: resources >= 1
 unavailable-subtitle: Requires one resource.
 on-arrival: resources -= 1; constitutional_legitimacy += 4; organizational_reach += 2; toilers_relation += 2
-go-to: post_event
+
+The secretariat selects defensible cases, pays for counsel and filings, and
+keeps affected organizers connected to their committees.
+{!<span class="term term-social-democratic">!}Toilers' Party{!</span>!}
+organizers see that the
+coalition will spend common resources on members under pressure.
+
+The legal work reinforces the
+{!<span class="term term-national-front">!}Front's{!</span>!} constitutional
+claim and preserves some
+organizational continuity. The broader pattern of restrictions remains only
+partly documented.
+
+- @post_event: Continue
 
 @defense_record
-on-arrival: press_capacity += 4; political_intelligence += 3; public_mandate += 2; shah_relation -= 1
-go-to: post_event
+title: Publish a common record of restrictions
+subtitle: Build press capacity and mandate while risking a colder <span class="term term-royalist">Court</span> relationship
+on-arrival: press_capacity += 5; public_mandate += 3; shah_relation -= 1
+
+Editors and local committees compile dates, orders, interrupted meetings, and
+other reports into one careful dossier. Claims that cannot be checked are
+marked as uncertain rather than repeated as fact.
+
+The record gives the press and leadership a clearer picture and widens public
+attention. Its direct attribution of responsibility further strains relations
+with the {!<span class="term term-royalist">!}Court{!</span>!}.
+
+- @post_event: Continue

@@ -176,6 +176,18 @@ a {
   line-height: 1.2;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.campaign-link {
+  font: 700 12px/1 var(--sans);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .wordmark small {
   margin-top: 3px;
   color: var(--muted);

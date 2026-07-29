@@ -1,3 +1,7 @@
+# Sources for religious and bazaar networks in the coalition: Fakhreddin
+# Azimi, Iran: The Crisis of Democracy, 1941–1953, chs. 5–6,
+# especially pp. 250–267; Painter and Brew, The Struggle for Iran, ch. 1.
+# The recurring outreach and its effects are counterfactual.
 title: Bazaar Outreach
 new-page: true
 is-card: true
@@ -7,13 +11,61 @@ on-arrival: month_actions += 1; bazaar_outreach_timer = 4
 
 = Bazaar Outreach
 
-- @bazaar_oil: Organize around national control of oil
-- @bazaar_constitution: Organize around constitutional government
+Bazaar and {!<span class="term term-religious">!}religious networks{!</span>!} can carry a political appeal through
+relationships the {!<span class="term term-national-front">!}Front's{!</span>!}
+formal committees do not command. Outreach must be
+negotiated with those networks, and the language chosen will determine which
+part of the coalition feels represented.
+
+The secretariat can foreground oil, constitutional government, or the
+practical independence of the cooperating networks.
+
+- @bazaar_oil
+- @bazaar_constitution
+- @bazaar_autonomy
 
 @bazaar_oil
+title: Organize around national control of oil
+subtitle: Strengthen <span class="term term-religious">religious-network</span> organization and the oil coalition
 on-arrival: religious_network_relation += 4; religious_network_organization += 4; oil_coalition_support += 3
-go-to: post_event
+
+Intermediaries carry an oil appeal through commercial and religious contacts,
+adapting the language to meetings the
+{!<span class="term term-national-front">!}Front{!</span>!} itself could not convene. The
+campaign gains organizers as well as listeners.
+
+Cooperation around oil becomes more practical. Those networks still answer to
+their own leaders rather than to the secretariat.
+
+- @post_event: Continue
 
 @bazaar_constitution
+title: Organize around constitutional government
+subtitle: Build legitimacy and reach while lowering suspicion inside the <span class="term term-religious">religious network</span>
 on-arrival: religious_network_relation += 3; religious_network_dissent -= 2; constitutional_legitimacy += 2; organizational_reach += 2
-go-to: post_event
+
+The appeal stresses lawful government and representative institutions rather
+than asking every participant to endorse a broader social program.
+{!<span class="term term-religious">!}Religious-network{!</span>!} organizers can carry that case without surrendering their
+own political identity.
+
+The {!<span class="term term-national-front">!}Front{!</span>!} reaches new
+listeners and reduces immediate suspicion, though it
+does less this month to consolidate a detailed oil position.
+
+- @post_event: Continue
+
+@bazaar_autonomy
+title: Negotiate an autonomous joint committee
+subtitle: Improve relations without demanding a single public line
+on-arrival: religious_network_relation += 5; religious_network_dissent -= 4
+
+The secretariat meets intermediaries privately and agrees on a channel for
+sharing plans without placing their organizations under
+{!<span class="term term-national-front">!}Front{!</span>!} discipline.
+Each side explains where cooperation is possible and where it would be refused.
+
+The coalition gains a more reliable working relationship and fewer surprises.
+It gains less immediate public pressure than a full campaign appeal.
+
+- @post_event: Continue

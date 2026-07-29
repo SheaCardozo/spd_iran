@@ -17,8 +17,12 @@ function loadGame() {
 function reachMonthlyHand(dendry, choices = [0, 0, 0, 0]) {
   dendry.choose(0);
   assert.equal(dendry.state.sceneId, 'prologue_attempt');
-  for (const choice of choices) dendry.choose(choice);
+  for (const choice of choices) {
+    dendry.choose(choice);
+    dendry.choose(0);
+  }
   assert.equal(dendry.state.sceneId, 'palace_protest');
+  dendry.choose(0);
   dendry.choose(0);
   assert.equal(dendry.state.sceneId, 'main');
 }
@@ -36,12 +40,12 @@ test('opening an action and resolving it advances one month', async () => {
   assert.equal(dendry.state.qualities.month, 10);
   assert.equal(dendry.state.qualities.year, 1949);
 
-  const card = dendry.drawCard('main.party_affairs');
-  assert.ok(card.id);
-
-  dendry.playCard(card.id);
+  dendry.playCard('fundraising');
   assert.equal(dendry.state.qualities.month_actions, 1);
 
+  dendry.choose(0);
+  assert.match(dendry.state.sceneId, /^[^.]+\.[^.]+$/);
+  assert.ok(dendry.game.scenes[dendry.state.sceneId].content);
   dendry.choose(0);
   assert.equal(dendry.state.sceneId, 'post_event.events_choice');
   assert.equal(dendry.state.qualities.time, 1);
@@ -54,11 +58,18 @@ test('opening an action and resolving it advances one month', async () => {
   assert.equal(dendry.state.qualities.hazhir_seen, 1);
 
   dendry.choose(0);
+  assert.equal(dendry.state.sceneId, 'campaign_spine.hazhir_condemn');
+  assert.ok(dendry.game.scenes[dendry.state.sceneId].content.length >= 2);
+
+  dendry.choose(0);
   assert.equal(dendry.state.sceneId, 'post_event.events_choice');
 
   dendry.choose(0);
   assert.equal(dendry.state.sceneId, 'front_formation');
   assert.equal(dendry.state.qualities.front_formed, 1);
+
+  dendry.choose(0);
+  assert.equal(dendry.state.sceneId, 'front_formation.narrow_program');
 
   dendry.choose(0);
   assert.equal(dendry.state.sceneId, 'main');
@@ -82,13 +93,16 @@ test('a pinned adviser uses the shared cooldown without advancing time', async (
   assert.equal(dendry.state.qualities.month_actions, 0);
 
   dendry.choose(0);
+  assert.equal(dendry.state.sceneId, 'mossadegh.constitutional_case');
+  assert.ok(dendry.game.scenes[dendry.state.sceneId].content);
+  dendry.choose(0);
   assert.equal(dendry.state.sceneId, 'main');
   assert.equal(dendry.state.qualities.advisor_action_timer, 6);
   assert.equal(dendry.state.qualities.month, 10);
   assert.equal(dendry.state.qualities.time, 0);
 
-  const card = dendry.drawCard('main.party_affairs');
-  dendry.playCard(card.id);
+  dendry.playCard('coalition_meeting');
+  dendry.choose(0);
   dendry.choose(0);
   assert.equal(dendry.state.sceneId, 'post_event.events_choice');
   assert.equal(dendry.state.qualities.advisor_action_timer, 5);
@@ -96,9 +110,15 @@ test('a pinned adviser uses the shared cooldown without advancing time', async (
 
 test('all prologue paths keep each starting modifier within five points', async () => {
   const game = await loadGame();
+  const choiceSets = [3, 3, 3, 3];
+  const paths = choiceSets.reduce(
+    (existing, count) => existing.flatMap(
+      (path) => Array.from({length: count}, (_, choice) => [...path, choice]),
+    ),
+    [[]],
+  );
 
-  for (let path = 0; path < 16; path += 1) {
-    const choices = [0, 1, 2, 3].map((bit) => (path >> bit) & 1);
+  for (const choices of paths) {
     const dendry = new engine.DendryEngine(
       new engine.NullUserInterface(),
       game,
@@ -108,9 +128,9 @@ test('all prologue paths keep each starting modifier within five points', async 
     assert.ok(Math.abs(q.prologue_crown_modifier) <= 5);
     assert.ok(Math.abs(q.prologue_legitimacy_modifier) <= 5);
     assert.ok(Math.abs(q.prologue_organization_modifier) <= 5);
-    assert.ok(Math.abs(q.prologue_intelligence_modifier) <= 5);
     assert.equal(q.prologue_complete, 1);
   }
+  assert.equal(paths.length, 81);
 });
 
 test('historical card assets are copied into the web build', async () => {
@@ -149,7 +169,6 @@ test('the historical path reaches Senate approval after exactly eighteen actions
       }
       assert.ok(card?.id, 'a Party Affairs action remains available');
       dendry.playCard(card.id);
-      dendry.choose(0);
     } else {
       dendry.choose(0);
     }

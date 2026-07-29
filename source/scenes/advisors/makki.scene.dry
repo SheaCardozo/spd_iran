@@ -1,27 +1,74 @@
-title: Hossein Makki
+# Sources: Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
+# ch. 5, pp. 250–267; official Majles proceedings, session 30, 1 June 1950.
+# Mechanical effects are counterfactual abstractions.
+title: <span class="term term-makki">Hossein Makki</span>
 new-page: true
 is-pinned-card: true
 tags: advisor
-view-if: advisor_makki_active = 1
 
-= {!<span class="term term-national-front">!}Hossein Makki{!</span>!}
+= {!<span class="term term-makki">!}Hossein Makki{!</span>!}
 
-Makki advises on parliamentary advocacy and the oil campaign.
+{!<span class="term term-makki">!}Makki{!</span>!} is a
+{!<span class="term term-national-front">!}National Front{!</span>!} deputy
+for Tehran and a prominent parliamentary
+advocate on oil. The consultation models floor, committee, and campaign work
+within this period rather than projecting his later political position
+backward.
 
 - @makki_floor
 - @makki_oil
-- @main: Return
+- @makki_questions
+- @main: Return to the monthly briefing
 
 @makki_floor
 title: Prepare a floor intervention
+subtitle: Strengthen parliamentary procedure and <span class="term term-mossadegh">Mossadegh</span>'s coordinating authority
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; parliamentary_procedure_legitimacy += 4; mossadegh_authority += 2
-go-to: main
+
+{!<span class="term term-makki">!}Makki{!</span>!} prepares the order of claims, documents, and procedural motions for a
+floor intervention, then coordinates the handoff between speakers. The plan
+keeps the constitutional case visible alongside the political demand.
+
+{!<span class="term term-national-front">!}Front{!</span>!} deputies enter
+the chamber with a clearer division of work, and
+{!<span class="term term-mossadegh">!}Mossadegh{!</span>!}'s role in holding that work together becomes more credible.
+
+- @main: Return to the monthly briefing
 
 @makki_oil
 title: Rally support on oil
+subtitle: Build oil-coalition support and public mandate around a direct appeal
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; oil_coalition_support += 5; public_mandate += 2
-go-to: main
+
+{!<span class="term term-makki">!}Makki{!</span>!} identifies deputies who can be moved on oil without asking them to join
+the {!<span class="term term-national-front">!}Front{!</span>!} or endorse
+its whole program. He supplies the press with the same
+limited question so that parliamentary outreach and public advocacy reinforce
+one another.
+
+Support for the oil campaign grows. Agreement on the principle does not settle
+every term of implementation.
+
+- @main: Return to the monthly briefing
+
+@makki_questions
+title: Prepare a committee examination
+subtitle: Strengthen procedure through precise questions on each disputed term
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+on-arrival: advisor_action_timer = 6; parliamentary_procedure_legitimacy += 4; oil_coalition_support += 2
+
+{!<span class="term term-makki">!}Makki{!</span>!} turns the proposal comparison into a sequence of committee questions:
+who owns, who operates, who markets, who appoints, and what remains reviewable.
+Unknown provisions are left open rather than answered for the government.
+
+The examination gives the
+{!<span class="term term-national-front">!}Front{!</span>!} a stronger
+procedural record and makes evasive answers more visible. It does not
+guarantee the committee's conclusion.
+
+- @main: Return to the monthly briefing

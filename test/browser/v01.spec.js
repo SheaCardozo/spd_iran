@@ -7,17 +7,27 @@ async function firstAvailableChoice(page) {
 }
 
 async function reachMonthlyHand(page) {
-  await page.goto('/?seed=424242');
+  await page.goto('/');
   await expect(page.locator('#content')).toContainText('The Last Majles');
   await firstAvailableChoice(page);
   await expect(page.locator('#content')).toContainText('4 February 1949');
   for (let step = 0; step < 4; step += 1) {
     await firstAvailableChoice(page);
+    if (step === 0) {
+      await expect(page.locator('#content')).toContainText(
+        'Your statement condemns the shooting',
+      );
+    }
+    await firstAvailableChoice(page);
   }
   await expect(page.locator('#content')).toContainText('October 1949');
   await firstAvailableChoice(page);
   await expect(page.locator('#content')).toContainText(
-    'one major organizational commitment',
+    'The protesters leave without a final settlement',
+  );
+  await firstAvailableChoice(page);
+  await expect(page.locator('#content')).toContainText(
+    'Opening briefing',
   );
 }
 
@@ -47,14 +57,17 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   await page.getByRole('link', {name: 'Historical Primer'}).click();
   await expect(page).toHaveURL(/\/timeline\.html$/);
   await expect(page.locator('#page-title')).toContainText('The Last');
+  await expect(page.getByRole('link', {name: 'Play the campaign'})).toHaveAttribute(
+    'href',
+    './',
+  );
 
   await reachMonthlyHand(page);
 
-  const state = await page.evaluate(() => ({
-    seed: window.dendryUI.dendryEngine.state.qualities.run_seed,
-    schema: window.dendryUI.dendryEngine.state.qualities.save_schema_version,
-  }));
-  expect(state).toEqual({seed: 424242, schema: 1});
+  const schema = await page.evaluate(
+    () => window.dendryUI.dendryEngine.state.qualities.save_schema_version,
+  );
+  expect(schema).toBe(1);
 
   for (const [tab, text] of [
     ['main_tab', 'Constitutional legitimacy'],
@@ -67,25 +80,37 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   }
 
   await page.locator('#library-link').click();
-  await expect(page.locator('#content')).toContainText('Run seed: 424242');
+  await expect(page.locator('#content')).toContainText('Research Library');
   const libraryChoice = page.locator('#content ul.choices a').first();
   await libraryChoice.focus();
   await page.keyboard.press('Enter');
-  await expect(page.locator('#content')).toContainText('How Government Works');
-  await page.getByRole('link', {name: 'Library index'}).click();
-  await page.getByRole('link', {name: 'Return to the campaign'}).click();
+  await expect(page.locator('#content')).toContainText('Government and Constitution');
+  await page.getByRole('link', {name: 'Library'}).click();
+  await page.getByRole('link', {name: 'Return', exact: true}).click();
   await expect(page.locator('#content')).toContainText(
-    'one major organizational commitment',
+    'Opening briefing',
   );
 
-  await expect(page.locator('ul.pinned-cards li')).toHaveCount(3);
+  await expect(page.locator('ul.pinned-cards li')).toHaveCount(6);
+  await expect(
+    page.locator('ul.pinned-cards .card-caption', {
+      hasText: 'Mohammad Mossadegh',
+    }).locator('.term-mossadegh'),
+  ).toHaveCount(1);
+  await expect(
+    page.locator('ul.pinned-cards .card-caption').first(),
+  ).not.toContainText('<span');
   await page.locator('ul.pinned-cards li', {hasText: 'Mohammad Mossadegh'})
     .locator('a')
     .click();
   await expect(page.locator('#content')).toContainText('Mohammad Mossadegh');
   await firstAvailableChoice(page);
   await expect(page.locator('#content')).toContainText(
-    'one major organizational commitment',
+    'The coalition leaves with a case',
+  );
+  await firstAvailableChoice(page);
+  await expect(page.locator('#content')).toContainText(
+    'Opening briefing',
   );
 
   await page.locator('ul.decks li a').first().click();
@@ -101,7 +126,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
     return JSON.parse(localStorage[key]);
   });
   expect(saved.qualities.save_schema_version).toBe(1);
-  expect(saved.qualities.run_seed).toBe(424242);
+  expect(saved.qualities).not.toHaveProperty('run_seed');
 
   await page.evaluate(() => {
     window.dendryUI.dendryEngine.state.qualities.public_mandate = 1;
@@ -134,9 +159,9 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   });
   await expect.poll(
     () => page.evaluate(
-      () => window.dendryUI.dendryEngine.state.qualities.run_seed,
+      () => window.dendryUI.dendryEngine.state.qualities.save_schema_version,
     ),
-  ).toBe(424242);
+  ).toBe(1);
 
   await page.evaluate(() => {
     window.enableDarkMode();
@@ -157,7 +182,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   expect([1440, 768, 390]).toContain(testInfo.project.use.viewport.width);
 });
 
-test('complete browser playthrough reaches the seeded ending', async ({page}) => {
+test('complete browser playthrough reaches the ending', async ({page}) => {
   await reachMonthlyHand(page);
 
   const result = await page.evaluate(() => {
@@ -188,7 +213,6 @@ test('complete browser playthrough reaches the seeded ending', async ({page}) =>
       year: dendry.state.qualities.year,
       month: dendry.state.qualities.month,
       senate: dendry.state.qualities.nationalization_approved_senate,
-      seed: dendry.state.qualities.run_seed,
       ending: dendry.state.qualities.ending_name,
     };
   });
@@ -198,7 +222,6 @@ test('complete browser playthrough reaches the seeded ending', async ({page}) =>
   expect(result.year).toBe(1951);
   expect(result.month).toBe(3);
   expect(result.senate).toBe(1);
-  expect(result.seed).toBe(424242);
   expect([
     'A Constitutional Coalition',
     'A Parliamentary Vanguard',
@@ -207,6 +230,10 @@ test('complete browser playthrough reaches the seeded ending', async ({page}) =>
   ]).toContain(result.ending);
 
   await expect(page.locator('#content')).toContainText(result.ending);
-  await expect(page.locator('#content')).toContainText('Run seed: 424242');
   await expect(page.locator('#content')).toContainText('Causal recap');
+
+  await page.getByRole('link', {name: 'Review the Research Library'}).click();
+  await expect(page.locator('#content')).toContainText('Research Library');
+  await page.getByRole('link', {name: 'Return', exact: true}).click();
+  await expect(page.locator('#content')).toContainText(result.ending);
 });

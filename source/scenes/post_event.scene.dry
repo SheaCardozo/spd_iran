@@ -21,24 +21,14 @@ if (Q.month_actions >= 1 && !Q.campaign_complete) {
         var timerName = timer + "_timer";
         if (Q[timerName] > 0) Q[timerName] -= 1;
     }
-
-    // Seeded variation is deliberately small and limited to reporting and
-    // constituency-pressure fields. It cannot select or suppress events.
-    var x = Q.rng_state >>> 0;
-    x ^= (x << 13); x ^= (x >>> 17); x ^= (x << 5);
-    Q.rng_state = x >>> 0;
-    Q.last_minor_variation = (Q.rng_state % 5) - 2;
-    Q.report_reliability = 50 + Q.last_minor_variation;
-    Q.constituency_pressure = 50 + Q.last_minor_variation;
 }
 
 var boundedQualities = [
     "constitutional_legitimacy", "public_mandate", "organizational_reach",
-    "press_capacity", "political_intelligence",
+    "press_capacity",
     "parliamentary_procedure_legitimacy", "oil_coalition_support",
-    "mossadegh_authority", "report_reliability", "constituency_pressure",
-    "shah_relation", "shah_resistance", "shah_court_capacity",
-    "shah_electoral_influence"
+    "mossadegh_authority", "shah_relation", "shah_resistance",
+    "shah_court_capacity", "shah_electoral_influence"
 ];
 var factionPrefixes = [
     "iran_party", "toilers", "independent_nationalists", "religious_network"
@@ -117,8 +107,7 @@ Q.decision_flags = {
     election_strategy: Q.election_strategy,
     credentials_strategy: Q.credentials_strategy,
     oil_terms_position: Q.oil_terms_position,
-    razmara_response: Q.razmara_response,
-    active_advisors: Q.active_advisors.slice()
+    razmara_response: Q.razmara_response
 };
 Q.event_flags = {
     hazhir: Q.hazhir_seen,

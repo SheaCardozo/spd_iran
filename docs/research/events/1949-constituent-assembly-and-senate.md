@@ -20,5 +20,8 @@ from mutable usability and support.
 
 ## Sources
 
-- `MAJ-S3`, chapter 3, “The Constitution.”
-- `MAJ-S13`, chapter 3, pp. 118–153.
+- `MAJ-S3`, chapter 3, “The Constitution,” especially pp. 82–86, for the
+  revision and dissolution power.
+- `SUP-053`, official First-Senate roster, “appointed senators” and “elected
+  senators” tables, for the two thirty-member routes. The roster establishes
+  route, not political alignment.

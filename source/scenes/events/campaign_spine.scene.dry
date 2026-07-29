@@ -1,4 +1,8 @@
-title: The Front responds to Hazhir's assassination
+# Sources: Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
+# pp. 207–208; Ervand Abrahamian, Iran Between Two Revolutions, ch. 5,
+# pp. 250–267. Wider responsibility is deliberately left unassigned.
+title: The <span class="term term-national-front">Front</span> responds to Hazhir's assassination
+subtitle: Political violence tests a coalition founded on constitutional method
 new-page: true
 tags: event
 view-if: year = 1949 and month >= 11 and hazhir_seen = 0
@@ -8,22 +12,78 @@ on-arrival: hazhir_seen = 1
 
 = November 1949
 
-Abdolhossein Hazhir is assassinated. The Front must respond to political
-violence without claiming responsibility it does not possess.
+{!<span class="term term-royalist">!}Abdolhossein Hazhir{!</span>!} is
+assassinated amid the election crisis from which the
+{!<span class="term term-national-front">!}National Front{!</span>!} is
+emerging. The killing is a fact. It does not establish that the {!<span class="term term-national-front">!}Front{!</span>!} planned,
+approved, or knew of it, and the coalition does not possess evidence with
+which to make that claim.
 
-- @hazhir_condemn: Condemn the killing and insist on constitutional methods
-- @hazhir_bounded: Condemn the killing while documenting the wider crisis
+Silence, however, will also be interpreted. An unqualified condemnation may
+reassure the {!<span class="term term-royalist">!}Court{!</span>!} but strain allies who want the election crisis kept in view.
+A joint statement can address both matters but risks blurring them. Waiting
+for better reports protects the evidentiary standard while leaving newspapers
+and officials to interpret the delay.
+
+The {!<span class="term term-national-front">!}Front{!</span>!} controls only its own response. What will it put into the public
+record?
+
+- @hazhir_condemn
+- @hazhir_bounded
+- @hazhir_verify
 
 @hazhir_condemn
+title: Issue an immediate, unqualified condemnation
+subtitle: Strong constitutional legitimacy; some strain with religious allies
 on-arrival: constitutional_legitimacy += 4; religious_network_relation -= 1; shah_relation += 1
-go-to: post_event
+
+The {!<span class="term term-national-front">!}Front{!</span>!}'s statement condemns the assassination and insists that political
+change must proceed through lawful and representative institutions. It avoids
+every unsupported claim about accomplices or motives.
+
+{!<span class="term term-royalist">!}Court{!</span>!} circles receive the clarity they demanded. Some religious-political
+partners believe the statement gives too little attention to the coercion
+surrounding the election, leaving the coalition more legitimate but slightly
+less comfortable internally.
+
+- @post_event: Continue
 
 @hazhir_bounded
-on-arrival: constitutional_legitimacy += 2; political_intelligence += 3; religious_network_dissent -= 1
-go-to: post_event
+title: Publish a joint constitutional statement
+subtitle: Documents the wider crisis; a more carefully balanced coalition response
+on-arrival: constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2; religious_network_dissent -= 1
 
+The joint statement condemns the killing, then separates it from the {!<span class="term term-national-front">!}Front{!</span>!}'s
+documented objections to election interference. Editors circulate only claims
+the participating lawyers and politicians are prepared to defend.
+
+The result is less absolute than a one-line condemnation but more useful to a
+coalition that must discuss violence and electoral coercion without treating
+them as the same allegation. Uncertainty about the killing remains explicit.
+
+- @post_event: Continue
+
+@hazhir_verify
+title: Delay the full statement while reports are checked
+subtitle: A firmer evidentiary record; public and <span class="term term-royalist">Court</span> suspicion during the silence
+on-arrival: constitutional_legitimacy += 2; parliamentary_procedure_legitimacy += 2; press_capacity -= 1; shah_relation -= 1
+
+The {!<span class="term term-national-front">!}Front{!</span>!} issues only a brief condemnation while its contacts compare reports
+about the killing and the response of the authorities. The pause prevents
+unverified detail from entering the coalition's own account.
+
+The cost is political: newspapers have little common language to print, and
+the {!<span class="term term-royalist">!}Court{!</span>!} reads the delay as
+reluctance. Checking the record does not remove the need for a constitutional
+position.
+
+- @post_event: Continue
+
+# Source: Ervand Abrahamian, Iran Between Two Revolutions, ch. 5,
+# pp. 250–267. Choice effects are counterfactual abstractions.
 @tehran_rerun
 title: Tehran's election is cancelled
+subtitle: A second contest must produce both defensible candidates and defensible evidence
 new-page: true
 tags: event
 view-if: year = 1950 and month >= 1 and tehran_rerun_seen = 0
@@ -33,22 +93,75 @@ on-arrival: tehran_rerun_seen = 1; parliamentary_deck_unlocked = 1; majles_phase
 
 = January 1950
 
-The Tehran election is cancelled and must be rerun. The Front can concentrate
-on a defensible slate or extend its monitoring network.
+The disputed Tehran election is cancelled and must be rerun. Cancellation does
+not hand the {!<span class="term term-national-front">!}National
+Front{!</span>!} a victory. It creates another contest in which royal and
+administrative influence remain powerful and the opposition's people, money,
+and documentary capacity remain limited.
 
-- @rerun_slate: Concentrate resources on a common Tehran slate
-- @rerun_monitor: Build the strongest possible record of the rerun
+The {!<span class="term term-national-front">!}Front{!</span>!} must decide where to concentrate. A common slate can prevent allied
+candidates from dividing their support. Monitoring can preserve cases for
+later credential disputes. Attempting both requires additional resources and
+will be less concentrated in either direction.
+
+- @rerun_slate
+- @rerun_monitor
+- @rerun_balanced
 
 @rerun_slate
+title: Concentrate on a common Tehran slate
+subtitle: Stronger candidate organization and mandate; thinner monitoring coverage
 on-arrival: election_strategy = "Concentrated Tehran slate"; independent_nationalists_organization += 4; iran_party_relation += 2; public_mandate += 2
-go-to: post_event
+
+The coalition negotiates a limited common slate and directs its organizers
+toward those candidacies. {!<span class="term term-national-front">!}Independent nationalists{!</span>!} gain access to party
+workers they could not command alone, while the {!<span class="term term-constitutionalist">!}Iran Party{!</span>!} sees a clearer
+connection between its effort and the agreed campaign.
+
+Fewer people remain available to document every disputed polling place. The
+{!<span class="term term-national-front">!}Front{!</span>!} enters the credential phase with a more coherent political group and a
+less comprehensive evidentiary record.
+
+- @post_event: Continue
 
 @rerun_monitor
-on-arrival: election_strategy = "Monitoring and credential record"; political_intelligence += 4; parliamentary_procedure_legitimacy += 3; organizational_reach += 2
-go-to: post_event
+title: Build a common election-monitoring record
+subtitle: Stronger evidence and procedure; less concentrated candidate work
+on-arrival: election_strategy = "Monitoring and credential record"; parliamentary_procedure_legitimacy += 5; organizational_reach += 3
 
+Lawyers, editors, and local contacts use a common form for reports about
+returns and interference. They distinguish a witness, a copied document, and
+an allegation that still needs corroboration.
+
+The network will be useful when credentials reach the {!<span class="term term-parliament">!}Majles{!</span>!}. It does not
+solve the coalition's candidate coordination, and some local workers resent
+being assigned to record keeping rather than turnout.
+
+- @post_event: Continue
+
+@rerun_balanced
+title: Fund a smaller slate and selective monitoring teams
+subtitle: Costs 2 resources; modest gains in organization and procedure
+choose-if: resources >= 2
+unavailable-subtitle: The {!<span class="term term-national-front">!}Front{!</span>!} needs 2 resources to sustain both operations.
+on-arrival: resources -= 2; election_strategy = "Slate with selective monitoring"; independent_nationalists_organization += 2; parliamentary_procedure_legitimacy += 3; organizational_reach += 2
+
+The {!<span class="term term-national-front">!}Front{!</span>!} narrows both ambitions. It supports fewer candidacies through shared
+machinery and sends trained monitors only where reports indicate the greatest
+risk. Paying travel, printing, and coordination costs consumes funds that
+could have supported later organizing.
+
+Neither operation is as deep as a single-purpose campaign, but the coalition
+carries a usable slate and a selective evidence file into the next phase.
+
+- @post_event: Continue
+
+# Sources: official Sixteenth-Majles proceedings, session 2, 18 February
+# 1950, printed pp. 1–15; Homa Katouzian, Musaddiq and the Struggle for
+# Power in Iran, ch. 3, pp. 118–153; official First-Senate roster.
 @chambers_open
-title: The Sixteenth Majles and First Senate open
+title: The Sixteenth <span class="term term-parliament">Majles</span> and First <span class="term term-senate">Senate</span> open
+subtitle: A returned name is not yet the same thing as a usable parliamentary seat
 new-page: true
 tags: event
 view-if: year = 1950 and month >= 2 and chambers_open_seen = 0
@@ -84,23 +197,77 @@ for (var s = 0; s < 60; s += 1) {
 
 = February 1950
 
-The two chambers open with different routes to membership. Returns,
-credentials, usable membership, alignments, and attendance remain separate in
-the campaign ledger.
+The Sixteenth {!<span class="term term-parliament">!}Majles{!</span>!} and the
+first {!<span class="term term-senate">!}Senate{!</span>!} open. The {!<span class="term term-senate">!}Senate{!</span>!}
+combines elected and royally appointed routes. In the {!<span class="term term-parliament">!}Majles{!</span>!}, the opening
+proceedings record 98 approved credentials, with other decisions still to
+come.
 
-- @opening_procedure: Make credential procedure the immediate priority
-- @opening_coalition: Keep the parliamentary group politically coordinated
+That procedure matters. A constituency may have returned a name, but a deputy
+cannot act as a usable member until the chamber accepts the credential and the
+member attends. Nor does an approved credential establish a permanent party
+alignment. The {!<span class="term term-national-front">!}Front{!</span>!}'s small group must build capacity inside a chamber that
+cannot be reduced to a stable government and opposition chart.
+
+The first parliamentary priority will shape how those deputies work while the
+remaining credentials are reviewed.
+
+- @opening_procedure
+- @opening_coalition
+- @opening_liaison
 
 @opening_procedure
+title: Prepare case-by-case credential objections
+subtitle: Stronger procedural legitimacy; slower political coordination
 on-arrival: credentials_strategy = "Case-by-case procedural challenge"; parliamentary_procedure_legitimacy += 4
-go-to: post_event
+
+The {!<span class="term term-national-front">!}Front{!</span>!}'s deputies and lawyers organize each objection around a particular
+return, credential rule, and supporting record. They avoid pretending that one
+national slogan can establish every local case.
+
+The method strengthens their standing when procedure is contested. It also
+consumes the small group's time one case at a time, leaving less attention for
+a common parliamentary program.
+
+- @post_event: Continue
 
 @opening_coalition
+title: Establish a coordinated <span class="term term-national-front">National Front</span> group
+subtitle: Stronger internal relations and oil coordination; fewer procedural specialists
 on-arrival: credentials_strategy = "Coordinated National Front group"; independent_nationalists_relation += 3; oil_coalition_support += 2
-go-to: post_event
 
+The deputies establish a regular meeting, divide responsibility for following
+debates, and agree to consult before questions affecting the {!<span class="term term-national-front">!}Front{!</span>!}'s common
+program. {!<span class="term term-national-front">!}Independent nationalists{!</span>!} acquire a parliamentary routine that no
+single party can impose.
+
+Coordination makes the small delegation more coherent. It does not give it a
+majority, settle disputed credentials, or guarantee that every ally will vote
+the same way.
+
+- @post_event: Continue
+
+@opening_liaison
+title: Assign deputies to cultivate procedural allies
+subtitle: Broader parliamentary support; looser <span class="term term-national-front">Front</span> discipline
+on-arrival: credentials_strategy = "Deputy liaison and procedural outreach"; oil_coalition_support += 5; independent_nationalists_dissent += 1
+
+Individual {!<span class="term term-national-front">!}Front{!</span>!} deputies begin regular conversations with members outside the
+group about scheduling, credentials, and the coming oil question. The approach
+does not label those members as permanent allies; it identifies issues on
+which cooperation may be possible.
+
+The {!<span class="term term-national-front">!}Front{!</span>!} learns more about the chamber and widens its reach. Its own group
+meets less often, and some members worry that private understandings will
+substitute for a common line.
+
+- @post_event: Continue
+
+# Source: official Sixteenth-Majles proceedings, sessions 25 (18 May 1950)
+# and 30 (1 June 1950). Choice effects are counterfactual abstractions.
 @credential_campaign
 title: The credential campaign
+subtitle: Chamber decisions make the <span class="term term-national-front">Front</span>'s returned deputies usable in successive waves
 new-page: true
 tags: event
 view-if: year = 1950 and month >= 5 and credentials_seen = 0
@@ -131,22 +298,76 @@ for (var c = 0; c < 136 && approvedCount < 120; c += 1) {
 
 = May–June 1950
 
-Credential decisions arrive in waves rather than as a single national result.
-The Front's usable parliamentary group takes shape within that process.
+Credential decisions arrive as successive acts of the chamber, not as one
+national result. The official proceedings record approval of
+{!<span class="term term-constitutionalist">!}Allahyar Saleh{!</span>!}'s
+Kashan–Natanz credential on 18 May and the eleven Tehran credentials on
+1 June. Those decisions help make the {!<span class="term term-national-front">!}Front{!</span>!}'s returned group usable.
 
-- @credentials_public: Publish the strongest documented cases
-- @credentials_internal: Preserve relationships needed for later votes
+A credential fight is both legal and political. Publishing a well-supported
+case can make procedure visible outside the chamber, but public pressure can
+make later negotiation harder. Quiet scheduling and deputy outreach can
+secure attention for petitions without building the same public record.
+
+- @credentials_public
+- @credentials_internal
+- @credentials_combined
 
 @credentials_public
+title: Publish the strongest documented credential cases
+subtitle: Greater procedural and press legitimacy; sharper conflict with royal influence
 on-arrival: parliamentary_procedure_legitimacy += 5; press_capacity += 2; shah_electoral_influence -= 2
-go-to: post_event
+
+The {!<span class="term term-national-front">!}Front{!</span>!} publishes only cases for which its lawyers can identify the return,
+the objection, and the evidence being presented to the chamber. Readers can
+see why approval of one credential does not automatically settle another.
+
+The campaign makes interference more costly to defend in public. It also
+hardens the contest with networks accustomed to exercising electoral
+influence through less visible channels.
+
+- @post_event: Continue
 
 @credentials_internal
-on-arrival: oil_coalition_support += 4; independent_nationalists_relation += 2; political_intelligence += 2
-go-to: post_event
+title: Negotiate scheduling and support inside the chamber
+subtitle: Better deputy relationships and oil outreach; a quieter public record
+on-arrival: oil_coalition_support += 5; independent_nationalists_relation += 3
 
+{!<span class="term term-national-front">!}Front{!</span>!} deputies meet colleagues case by case, asking when a petition will be
+heard and which procedural claim a member is willing to support. The
+conversations also reveal who may later listen on oil even if they will not
+join the {!<span class="term term-national-front">!}Front{!</span>!}.
+
+The approach preserves working relationships and broadens support. It does
+less to explain the credential struggle to people outside the
+{!<span class="term term-parliament">!}Majles{!</span>!}.
+
+- @post_event: Continue
+
+@credentials_combined
+title: Pair selected petitions with a public legal brief
+subtitle: Costs 2 resources; balanced procedural, press, and deputy work
+choose-if: resources >= 2
+unavailable-subtitle: The {!<span class="term term-national-front">!}Front{!</span>!} needs 2 resources for legal preparation and printing.
+on-arrival: resources -= 2; parliamentary_procedure_legitimacy += 4; press_capacity += 1; oil_coalition_support += 3
+
+The {!<span class="term term-national-front">!}Front{!</span>!} chooses a small number of petitions for full legal preparation and
+prints a brief that explains their procedure without declaring every other
+case fraudulent. Deputies can negotiate around a document they are prepared
+to defend.
+
+The combined effort is expensive and selective. It creates neither a complete
+national audit nor a permanent parliamentary alliance, but it links public
+explanation to work inside the chamber.
+
+- @post_event: Continue
+
+# Sources: David S. Painter and Gregory Brew, The Struggle for Iran, ch. 1;
+# Ervand Abrahamian, Iran Between Two Revolutions, ch. 5, pp. 250–267;
+# official Special Oil Commission minutes, first period, meeting 1.
 @oil_committee_formation
 title: The oil committee
+subtitle: A small <span class="term term-national-front">Front</span> delegation gains a forum for detailed scrutiny
 new-page: true
 tags: event
 view-if: year = 1950 and month >= 5 and majles_convened = 1 and oil_committee_formed = 0
@@ -154,25 +375,78 @@ max-visits: 1
 priority: 20
 on-arrival: oil_committee_formed = 1
 
-= May 1950
+= Mid-1950
 
-The Majles creates a committee to consider the supplemental oil agreement.
-The Front can insist on term-by-term scrutiny or begin assembling a broader
-nationalization coalition.
+The {!<span class="term term-parliament">!}Majles{!</span>!} creates an
+eighteen-member special oil committee to consider the supplemental agreement.
+Five members belong to the
+{!<span class="term term-national-front">!}National Front{!</span>!}. The
+proportion gives a small parliamentary delegation an important forum, not
+control over the committee or the chamber.
 
-- @committee_terms: Establish a term-by-term record
-- @committee_majority: Build beyond the Front's own deputies
+Committee work can turn a broad oil demand into a record: which terms alter
+revenue, which leave ownership or operational control untouched, and which
+questions remain unanswered. It can also identify deputies outside the {!<span class="term term-national-front">!}Front{!</span>!}
+who may agree on a particular conclusion without joining its wider program.
+
+What product should the {!<span class="term term-national-front">!}Front{!</span>!} prioritize in the committee's first period?
+
+- @committee_terms
+- @committee_majority
+- @committee_public_brief
 
 @committee_terms
-on-arrival: parliamentary_procedure_legitimacy += 4; political_intelligence += 3; oil_terms_position = "Documented term-by-term rejection"
-go-to: post_event
+title: Build a term-by-term committee record
+subtitle: Stronger procedure and evidence; slower coalition outreach
+on-arrival: parliamentary_procedure_legitimacy += 6; oil_coalition_support += 2; oil_terms_position = "Documented term-by-term rejection"
+
+{!<span class="term term-national-front">!}Front{!</span>!} members organize the proposal by ownership recognition, operational
+control, marketing, compensation, finance, personnel authority, and duration.
+Where the record does not establish a term, the file says “unknown” rather
+than supplying a convenient midpoint.
+
+The matrix gives the committee a precise basis for scrutiny. Preparing it
+takes time that might otherwise be spent asking additional deputies to commit
+to a successor policy.
+
+- @post_event: Continue
 
 @committee_majority
+title: Recruit support beyond the <span class="term term-national-front">Front</span>'s five members
+subtitle: Broader oil coalition; less detailed common term analysis
 on-arrival: oil_coalition_support += 6; independent_nationalists_relation += 2; religious_network_relation += 2
-go-to: post_event
 
+{!<span class="term term-national-front">!}Front{!</span>!} deputies meet committee colleagues around propositions they can state
+without demanding membership in the coalition. The conversations search for a
+majority on the agreement and on what should follow it.
+
+The outreach widens support and gives independent and religious-political
+partners a visible role. The resulting common position is broader than the
+{!<span class="term term-national-front">!}Front{!</span>!} and less detailed than a complete term record.
+
+- @post_event: Continue
+
+@committee_public_brief
+title: Prepare a public brief from verified committee material
+subtitle: Greater press capacity and mandate; more resistance from the <span class="term term-royalist">Court</span>
+on-arrival: press_capacity += 4; public_mandate += 3; shah_resistance += 1
+
+Editors work with the {!<span class="term term-national-front">!}Front{!</span>!}'s committee members to explain what the body is
+examining and what it has not yet decided. The brief does not attribute a
+statement to the committee unless it appears in the record.
+
+The public gains a clearer view of an otherwise technical dispute. Moving the
+argument outside the chamber also convinces the {!<span class="term term-royalist">!}Court{!</span>!} that committee procedure
+is becoming a national political campaign.
+
+- @post_event: Continue
+
+# Sources: David S. Painter and Gregory Brew, The Struggle for Iran, ch. 1;
+# Mostafa Elm, Oil, Power, and Principle, ch. 1. Choice effects are
+# counterfactual abstractions.
 @supplemental_campaign
 title: The supplemental-agreement campaign
+subtitle: More revenue does not by itself settle ownership, control, or duration
 new-page: true
 tags: event
 view-if: year = 1950 and month >= 8 and supplemental_campaign_seen = 0
@@ -182,48 +456,157 @@ on-arrival: supplemental_campaign_seen = 1
 
 = August 1950
 
-Debate over the Gass–Golshayan supplemental agreement intensifies. Reports
-about other oil arrangements, including the Saudi-Aramco comparison, increase
-pressure without making unlike contracts mechanically identical.
+Debate over the Gass–Golshayan supplemental agreement intensifies. The proposal
+would increase Iran's revenue while leaving the basic
+{!<span class="term term-aioc">!}Anglo-Iranian Oil Company{!</span>!}
+structure and operational control substantially intact. The {!<span class="term term-national-front">!}Front{!</span>!}'s objection
+therefore concerns the distribution of authority as well as the amount paid.
 
-- @supplemental_explain: Explain the disputed terms precisely
-- @supplemental_mandate: Turn the issue into a public mandate
+Public comparisons with other oil arrangements can sharpen pressure, but
+unlike contracts are not mechanically identical. Unknown or disputed terms
+remain unknown.
+
+The {!<span class="term term-national-front">!}Front{!</span>!} can translate this structured case through different political
+channels. Each reaches a different audience and creates a different risk.
+
+- @supplemental_explain
+- @supplemental_mandate
+- @supplemental_deputies
 
 @supplemental_explain
-on-arrival: press_capacity += 4; political_intelligence += 3; constitutional_legitimacy += 2
-go-to: post_event
+title: Publish a term-by-term press dossier
+subtitle: Stronger press, evidence, and legitimacy; a more technical public case
+on-arrival: press_capacity += 5; parliamentary_procedure_legitimacy += 2; constitutional_legitimacy += 2
+
+The dossier separates additional revenue from ownership recognition,
+operational control, marketing authority, personnel, compensation, interim
+finance, and duration. Blank cells are described as unresolved rather than
+quietly treated as acceptable.
+
+Editors can now explain why the dispute is not reducible to one royalty
+number. The precision strengthens the {!<span class="term term-national-front">!}Front{!</span>!}'s case, though it is slower to
+carry into a mass meeting than a single slogan.
+
+- @post_event: Continue
 
 @supplemental_mandate
+title: Organize public meetings around control and sovereignty
+subtitle: Stronger mandate and oil coalition; greater royal resistance
 on-arrival: public_mandate += 5; oil_coalition_support += 3; shah_resistance += 2
-go-to: post_event
 
+Speakers focus on the question the supplemental agreement leaves open: who
+will control the industry and on whose authority. They use the revenue
+comparison as context without claiming that unlike contracts contain the same
+terms.
+
+The meetings widen the nationalization demand and bring new partners into the
+oil coalition. The {!<span class="term term-royalist">!}Court{!</span>!} increasingly sees the campaign as a challenge that
+cannot be confined to committee procedure.
+
+- @post_event: Continue
+
+@supplemental_deputies
+title: Brief undecided deputies from the term matrix
+subtitle: Stronger parliamentary support and procedure; less immediate public reach
+on-arrival: oil_coalition_support += 6; parliamentary_procedure_legitimacy += 3
+
+{!<span class="term term-national-front">!}Front{!</span>!} deputies circulate a short brief that states both its conclusion and its
+limits. It distinguishes the agreement's revenue changes from the ownership
+and control questions that remain, and it labels unresolved terms rather than
+silently treating them as concessions.
+
+The careful briefing gives wavering members a defensible reason to reject the
+agreement. It does not build the same visible public mandate as meetings or a
+press campaign.
+
+- @post_event: Continue
+
+# Sources: official Special Oil Commission minutes, first period, meeting 22
+# and final report dated 9 Azar 1329; Painter and Brew, The Struggle for
+# Iran, ch. 1.
 @committee_rejection
 title: The oil committee rejects Gass–Golshayan
+subtitle: The committee decision opens the question of what should replace the agreement
 new-page: true
 tags: event
-view-if: year = 1950 and month >= 12 and gass_golshayan_rejected_committee = 0
+view-if: year = 1950 and month >= 11 and gass_golshayan_rejected_committee = 0
 max-visits: 1
 priority: 10
 on-arrival: gass_golshayan_rejected_committee = 1
 
-= December 1950
+= 25 November 1950
 
-The oil committee rejects the supplemental agreement. The recorded result is
-an institutional decision, not a free-floating popularity bonus.
+After its first period of work, the oil committee rejects the supplemental
+agreement as an inadequate basis for securing Iran's rights. The decision is
+an act of a {!<span class="term term-parliament">!}Majles{!</span>!} committee; it does not itself enact nationalization or
+commit every deputy to the next measure.
 
-- @committee_claim: Claim the procedural victory narrowly
-- @committee_bridge: Use the decision to widen the nationalization coalition
+For the {!<span class="term term-national-front">!}Front{!</span>!}, rejection changes the problem. It must carry the committee's
+reasoning into the chamber and make clear what policy should follow, while
+keeping the institutional victory from dissolving into a claim that the final
+work is already done.
+
+- @committee_rejection_response
+
+@committee_rejection_response
+title: Decide how to carry the committee report forward
+subtitle: The <span class="term term-national-front">Front</span> must choose its next political instrument
+
+- @committee_claim
+- @committee_bridge
+- @committee_joint
 
 @committee_claim
+title: Publish the committee reasoning as a constitutional report
+subtitle: Stronger procedure and legitimacy; a narrower coalition appeal
 on-arrival: parliamentary_procedure_legitimacy += 5; constitutional_legitimacy += 2
-go-to: post_event
+
+The {!<span class="term term-national-front">!}Front{!</span>!} presents the rejection as the result of committee scrutiny, not as
+an instruction issued by the street. Its report distinguishes the proposal
+that has failed from the nationalization principle that has not yet passed.
+
+The narrow claim is difficult to dismiss as procedural theater. It gives
+potential allies less space, however, to join through a broader political
+declaration.
+
+- @post_event: Continue
 
 @committee_bridge
+title: Convene deputies around a successor nationalization motion
+subtitle: Stronger oil coalition and mandate; less emphasis on the committee record
 on-arrival: oil_coalition_support += 6; public_mandate += 2
-go-to: post_event
 
+{!<span class="term term-national-front">!}Front{!</span>!} members use the rejection to ask deputies a new and concrete question:
+whether the nationalization principle should replace another attempt to amend
+the existing arrangement. Participation does not require joining the {!<span class="term term-national-front">!}Front{!</span>!}.
+
+The meetings widen the possible majority. Because attention moves quickly to
+the successor motion, fewer people learn the exact committee reasoning that
+made rejection possible.
+
+- @post_event: Continue
+
+@committee_joint
+title: Issue a joint parliamentary and public declaration
+subtitle: Balanced mandate, press, and oil support; increased royal resistance
+on-arrival: oil_coalition_support += 3; public_mandate += 3; press_capacity += 2; shah_resistance += 1
+
+Deputies and coalition organizations release a common declaration: the
+committee decision is documented, nationalization is the proposed next
+principle, and implementation terms remain to be written later.
+
+The declaration connects chamber work to public organization without claiming
+that one commands the other. Its breadth also makes the {!<span class="term term-royalist">!}Court{!</span>!} more conscious
+of a coordinated challenge extending beyond the {!<span class="term term-parliament">!}Majles{!</span>!}.
+
+- @post_event: Continue
+
+# Source: official Sixteenth-Majles proceedings, session 102,
+# 11 January 1951; interpreted with Painter and Brew, The Struggle for Iran,
+# ch. 1.
 @majles_rejection
-title: The Majles rejects the supplemental agreement
+title: The <span class="term term-parliament">Majles</span> rejects the supplemental agreement
+subtitle: The chamber closes one proposal without yet enacting nationalization
 new-page: true
 tags: event
 view-if: year = 1951 and month >= 1 and gass_golshayan_rejected_committee = 1 and gass_golshayan_rejected_majles = 0
@@ -233,21 +616,75 @@ on-arrival: gass_golshayan_rejected_majles = 1
 
 = 11 January 1951
 
-The Majles follows the committee and rejects the supplemental agreement.
+The {!<span class="term term-parliament">!}Majles{!</span>!} follows the
+committee and rejects the Gass–Golshayan supplemental agreement. The chamber
+has refused this modification of the existing oil relationship. It has not
+yet approved the nationalization principle or settled the terms that would
+make that principle operational.
 
-- @majles_record: Emphasize the constitutional parliamentary record
-- @majles_movement: Emphasize the public coalition behind the vote
+The {!<span class="term term-national-front">!}Front{!</span>!} must keep those stages distinct. It can make the parliamentary
+record its foundation, gather deputies around the next measure, or explain to
+the public why a rejected agreement is not yet a completed oil settlement.
+
+- @majles_rejection_response
+
+@majles_rejection_response
+title: Turn rejection into preparation for the next vote
+subtitle: Choose the institution and audience that should carry the argument
+
+- @majles_record
+- @majles_coalition
+- @majles_movement
 
 @majles_record
+title: Issue a report on what the <span class="term term-parliament">Majles</span> did—and did not—decide
+subtitle: Stronger parliamentary and constitutional legitimacy
 on-arrival: parliamentary_procedure_legitimacy += 4; constitutional_legitimacy += 3
-go-to: post_event
+
+The report describes the chamber's rejection without inventing a numerical
+division or treating every supporting deputy as a permanent {!<span class="term term-national-front">!}Front{!</span>!} member. It
+then lists the questions a nationalization measure will still have to face.
+
+The constitutional sequence becomes harder to blur. The report is
+institutionally precise and less effective as a broad mobilizing message.
+
+- @post_event: Continue
+
+@majles_coalition
+title: Convene a cross-faction meeting on the nationalization principle
+subtitle: Stronger oil support and deputy relationships; no public surge
+on-arrival: oil_coalition_support += 6; independent_nationalists_relation += 3
+
+{!<span class="term term-national-front">!}Front{!</span>!} deputies invite members who supported rejection to discuss the narrower
+question of nationalization. They do not ask those deputies to accept the
+{!<span class="term term-national-front">!}Front{!</span>!}'s full program or assign them a permanent caucus label.
+
+The meeting reveals where a majority may exist and which concerns remain
+unanswered. Because it occurs inside the parliamentary world, its public
+effect is limited.
+
+- @post_event: Continue
 
 @majles_movement
-on-arrival: oil_coalition_support += 4; public_mandate += 4; press_capacity += 2
-go-to: post_event
+title: Organize a public explanation of the unfinished victory
+subtitle: Stronger mandate and press capacity; less direct deputy coordination
+on-arrival: oil_coalition_support += 3; public_mandate += 4; press_capacity += 2
 
+Newspapers and meetings repeat a disciplined distinction: the supplemental
+agreement has been rejected, but nationalization and its later implementation
+have not yet been enacted. The public is asked to sustain pressure through the
+next institutional stage.
+
+The campaign grows without pretending the legal work is complete. More of the
+{!<span class="term term-national-front">!}Front{!</span>!}'s attention now sits outside the chamber as the next vote approaches.
+
+- @post_event: Continue
+
+# Sources: David S. Painter and Gregory Brew, The Struggle for Iran, ch. 1;
+# Mostafa Elm, Oil, Power, and Principle, ch. 1.
 @razmara_confrontation
-title: Confrontation with Razmara
+title: Confrontation with <span class="term term-independent">Razmara</span>
+subtitle: The prime minister challenges the administrative case for immediate nationalization
 new-page: true
 tags: event
 view-if: year = 1951 and month >= 2 and razmara_confrontation_seen = 0
@@ -257,23 +694,80 @@ on-arrival: razmara_confrontation_seen = 1
 
 = February 1951
 
-Prime Minister Haj Ali Razmara argues against immediate nationalization. The
-Front must answer without allowing one disputed exchange to substitute for the
-structured oil case.
+{!<span class="term term-independent">!}Prime Minister Haj Ali
+Razmara{!</span>!} argues that immediate nationalization carries serious
+administrative and economic dangers. His case cannot be answered responsibly
+by inventing a single exchange or reducing his position to personal motive.
+It raises practical questions about whether the state has the capacity to
+carry the principle into operation.
 
-- @razmara_terms: Answer term by term in parliament
-- @razmara_public: Organize a public rebuttal
+The {!<span class="term term-national-front">!}National Front{!</span>!} has
+spent months arguing that additional revenue without control is inadequate.
+It must now show whether nationalization is only a principle of ownership or a
+position capable of answering implementation concerns—without pretending
+that the later implementation law has already been written.
+
+Who should carry the answer, and through which institution?
+
+- @razmara_terms
+- @razmara_public
+- @razmara_joint
 
 @razmara_terms
-on-arrival: razmara_response = "Parliamentary term-by-term rebuttal"; parliamentary_procedure_legitimacy += 4; political_intelligence += 2; oil_coalition_support += 3
-go-to: post_event
+title: Answer through a term-by-term parliamentary brief
+subtitle: Stronger procedure, evidence, and deputy support; limited public reach
+on-arrival: razmara_response = "Parliamentary term-by-term rebuttal"; parliamentary_procedure_legitimacy += 5; oil_coalition_support += 4
+
+{!<span class="term term-national-front">!}Front{!</span>!} deputies separate the nationalization principle from the operational
+questions that must follow it. The brief identifies what is known, what
+requires later legislation, and why those unknowns do not automatically
+validate the supplemental agreement.
+
+The response reassures deputies who want a procedural answer rather than a
+slogan. It does not produce an immediate mass campaign, and several practical
+questions remain genuinely open.
+
+- @post_event: Continue
 
 @razmara_public
+title: Publish a public dossier on control and capacity
+subtitle: Stronger mandate and press; more resistance from the <span class="term term-royalist">Crown</span>
 on-arrival: razmara_response = "Public nationalization campaign"; public_mandate += 5; press_capacity += 3; shah_resistance += 2
-go-to: post_event
 
+The {!<span class="term term-national-front">!}Front{!</span>!}'s editors explain the difference between a warning that
+implementation will be difficult and a conclusion that Iran cannot claim
+control. They acknowledge unresolved questions rather than assigning them
+imaginary neutral terms.
+
+The dossier carries the argument beyond the {!<span class="term term-parliament">!}Majles{!</span>!} and increases public
+confidence in the campaign. The {!<span class="term term-royalist">!}Court{!</span>!} reads the widening mobilization as a
+direct challenge during an already tense confrontation.
+
+- @post_event: Continue
+
+@razmara_joint
+title: Form a joint deputy-and-expert response group
+subtitle: Costs 2 resources; balanced evidence, coalition, and public capacity
+choose-if: resources >= 2
+unavailable-subtitle: The {!<span class="term term-national-front">!}Front{!</span>!} needs 2 resources for research, coordination, and printing.
+on-arrival: resources -= 2; razmara_response = "Joint parliamentary and public response"; parliamentary_procedure_legitimacy += 2; oil_coalition_support += 4; press_capacity += 2; public_mandate += 2
+
+Deputies, lawyers, and technically informed supporters prepare one answer for
+the chamber and a shorter version for public circulation. Both distinguish
+the principle before the {!<span class="term term-parliament">!}Majles{!</span>!} from the implementation machinery that would
+have to come later.
+
+The coordinated response is expensive and cannot settle every operational
+question. It keeps the parliamentary and public arguments from contradicting
+one another.
+
+- @post_event: Continue
+
+# Source: David S. Painter and Gregory Brew, The Struggle for Iran, ch. 1,
+# pp. 36–38. Wider responsibility is deliberately left unassigned.
 @razmara_assassination
-title: Razmara is assassinated
+title: <span class="term term-independent">Razmara</span> is assassinated
+subtitle: A documented assailant does not resolve wider responsibility
 new-page: true
 tags: event
 view-if: year = 1951 and month >= 3 and razmara_assassination_seen = 0
@@ -283,49 +777,167 @@ on-arrival: razmara_assassination_seen = 1
 
 = 7 March 1951
 
-Razmara is assassinated. Responsibility and political consequence must remain
-separate: the Front can condemn political killing while continuing its oil
-campaign.
+{!<span class="term term-islamist">!}Khalil Tahmasabi{!</span>!}, a member of
+{!<span class="term term-islamist">!}Fada'iyan-e Islam{!</span>!},
+assassinates {!<span class="term term-independent">!}Prime Minister Haj Ali
+Razmara{!</span>!}. The identity of the assailant does not settle who else
+encouraged, knew of, or bears political responsibility for the killing.
 
-- @assassination_condemn: Condemn the killing without qualification
-- @assassination_bounded: Condemn it and restate the constitutional oil case
+The {!<span class="term term-national-front">!}Front{!</span>!} has opposed {!<span class="term term-independent">!}Razmara{!</span>!} on oil. That political conflict is not evidence
+that the coalition authorized his murder. Its statement must respond to the
+killing while religious-political allies, the {!<span class="term term-royalist">!}Court{!</span>!}, newspapers, and deputies
+watch for different signals.
+
+Nationalization remains before the institutions. How should the {!<span class="term term-national-front">!}Front{!</span>!} keep
+its oil case separate from an act of political violence?
+
+- @assassination_condemn
+- @assassination_bounded
+- @assassination_verify
 
 @assassination_condemn
+title: Condemn the killing without qualification
+subtitle: Strongest constitutional signal; strain with religious-political allies
 on-arrival: constitutional_legitimacy += 5; religious_network_relation -= 2; shah_relation += 1
-go-to: post_event
+
+The {!<span class="term term-national-front">!}Front{!</span>!} issues an immediate condemnation and refuses to treat the death of a
+political opponent as a substitute for parliamentary victory. The statement
+assigns no collective responsibility beyond the documented assailant.
+
+The {!<span class="term term-royalist">!}Court{!</span>!} receives an unambiguous constitutional signal. Some
+religious-political partners think the {!<span class="term term-national-front">!}Front{!</span>!} has separated the killing from
+the oil conflict so sharply that it has ignored the confrontation surrounding
+it.
+
+- @post_event: Continue
 
 @assassination_bounded
+title: Condemn the killing and restate the constitutional oil case
+subtitle: Balanced legitimacy, procedure, and oil support
 on-arrival: constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2; oil_coalition_support += 2
-go-to: post_event
 
+The statement condemns the assassination, denies that violence can decide the
+oil question, and asks the committee and {!<span class="term term-parliament">!}Majles{!</span>!} to proceed through their own
+record. It makes no allegation about prior knowledge or encouragement.
+
+Coalition partners can continue the nationalization campaign without treating
+{!<span class="term term-independent">!}Razmara{!</span>!}'s death as its mandate. The carefully bounded language satisfies
+neither those demanding only condemnation nor those demanding only
+mobilization.
+
+- @post_event: Continue
+
+@assassination_verify
+title: Limit comment while wider responsibility is investigated
+subtitle: Evidentiary restraint; costly public ambiguity and <span class="term term-royalist">Court</span> distrust
+on-arrival: parliamentary_procedure_legitimacy += 2; constitutional_legitimacy -= 2; press_capacity -= 1; shah_relation -= 2
+
+The {!<span class="term term-national-front">!}Front{!</span>!} condemns the act itself but postpones a fuller statement while
+lawyers and political contacts seek verified information about the
+circumstances. They explicitly refuse to turn unanswered questions into
+insinuation.
+
+The caution protects the coalition's evidentiary standard. In the immediate
+crisis, it also creates an ambiguous silence that newspapers and the {!<span class="term term-royalist">!}Court{!</span>!}
+fill with their own interpretations.
+
+- @post_event: Continue
+
+# Sources: official Special Oil Commission minutes, second-period record;
+# official Sixteenth-Majles proceedings, session 128, 15 March 1951;
+# Painter and Brew, The Struggle for Iran, ch. 1, pp. 36–38.
 @nationalization_approval
-title: Committee and Majles approve nationalization
+title: Committee and <span class="term term-parliament">Majles</span> approve nationalization
+subtitle: Two institutional steps establish the principle, not its later implementation
 new-page: true
 tags: event
 view-if: year = 1951 and month >= 3 and razmara_assassination_seen = 1 and nationalization_approved_majles = 0
 max-visits: 1
 priority: 20
-on-arrival: nationalization_approved_committee = 1; nationalization_approved_majles = 1
+on-arrival: nationalization_approved_committee = 1
 
-= 8–15 March 1951
+= 8 March 1951 — the committee
 
-The oil committee recommends the nationalization principle, and the Majles
-approves it. The passage is fixed; your choice shapes how the Front explains
-the victory and prepares for Senate consideration.
+The oil committee recommends that the oil industry throughout Iran be
+nationalized. The recommendation answers the policy question that followed
+rejection of Gass–Golshayan. It is not yet an act of the full {!<span class="term term-parliament">!}Majles{!</span>!}.
 
-- @nationalization_institution: Protect the institutional record
-- @nationalization_public: Consolidate the public mandate
+The principle does not settle operational control, marketing, personnel
+authority, compensation, interim finance, or the machinery of implementation.
+
+- @majles_approval_beat: Follow the report to the <span class="term term-parliament">Majles</span>
+
+@majles_approval_beat
+title: The <span class="term term-parliament">Majles</span> approves the principle
+subtitle: The lower chamber acts; <span class="term term-senate">Senate</span> consideration remains
+new-page: true
+on-arrival: nationalization_approved_majles = 1
+
+= 15 March 1951 — the {!<span class="term term-parliament">!}Majles{!</span>!}
+
+The {!<span class="term term-parliament">!}Majles{!</span>!} approves the
+nationalization principle. The
+{!<span class="term term-national-front">!}Front{!</span>!}'s remaining
+choice is how to carry the institutional
+sequence and its unresolved terms toward the {!<span class="term term-senate">!}Senate{!</span>!} without claiming that
+implementation is complete.
+
+- @nationalization_institution
+- @nationalization_public
+- @nationalization_cross_chamber
 
 @nationalization_institution
+title: Circulate the committee and <span class="term term-parliament">Majles</span> record
+subtitle: Stronger procedure, legitimacy, and oil support
 on-arrival: parliamentary_procedure_legitimacy += 5; constitutional_legitimacy += 3; oil_coalition_support += 3
-go-to: post_event
+
+The {!<span class="term term-national-front">!}Front{!</span>!} circulates the committee recommendation and the {!<span class="term term-parliament">!}Majles{!</span>!} decision as
+separate stages. Its summary states plainly that approval of the principle
+precedes the later rules needed to administer it.
+
+The institutional record gives {!<span class="term term-senate">!}Senate{!</span>!} consideration a constitutional
+foundation and reassures allies wary of substituting mobilization for law. It
+does less to expand the public organization behind the victory.
+
+- @post_event: Continue
 
 @nationalization_public
+title: Organize public briefings on the unfinished measure
+subtitle: Stronger mandate, organization, and press; less direct <span class="term term-senate">Senate</span> liaison
 on-arrival: public_mandate += 5; organizational_reach += 3; press_capacity += 3
-go-to: post_event
 
+Local committees and newspapers explain what has passed and what has not.
+They celebrate the principle while refusing to describe the future
+implementation law, administration, compensation, or marketing arrangements
+as settled facts.
+
+The campaign consolidates the public organization that made nationalization a
+national demand. Fewer {!<span class="term term-national-front">!}Front{!</span>!} organizers are assigned to direct contact with
+the {!<span class="term term-senate">!}Senate{!</span>!}.
+
+- @post_event: Continue
+
+@nationalization_cross_chamber
+title: Coordinate a constitutional case for the <span class="term term-senate">Senate</span>
+subtitle: Stronger oil support and <span class="term term-royalist">Crown</span> relations; a quieter public campaign
+on-arrival: oil_coalition_support += 6; parliamentary_procedure_legitimacy += 1; shah_relation += 1; public_mandate += 1
+
+{!<span class="term term-national-front">!}Front{!</span>!} deputies prepare a chamber-scale explanation of the committee and {!<span class="term term-parliament">!}Majles{!</span>!}
+sequence for senators. Their case presents the committee recommendation and
+the {!<span class="term term-parliament">!}Majles{!</span>!} vote as successive constitutional acts.
+
+The approach concentrates on institutional continuity and reduces the {!<span class="term term-royalist">!}Court{!</span>!}'s
+room to portray the measure as only an extra-parliamentary challenge. It adds
+little to the {!<span class="term term-national-front">!}Front{!</span>!}'s public machinery.
+
+- @post_event: Continue
+
+# Source: David S. Painter and Gregory Brew, The Struggle for Iran, ch. 1,
+# pp. 36–38. The available record supports the date and chamber action, not
+# a fabricated attendance list, division, or speeches.
 @senate_approval
-title: The Senate approves nationalization
+title: The <span class="term term-senate">Senate</span> approves nationalization
+subtitle: The principle clears both chambers; implementation lies beyond this campaign
 new-page: true
 tags: event
 view-if: march_action_complete = 1 and nationalization_approved_majles = 1 and nationalization_approved_senate = 0
@@ -335,12 +947,28 @@ on-arrival: nationalization_approved_senate = 1
 
 = 20 March 1951
 
-The Senate approves the nationalization principle. The historical anchor is
-complete; the political organization that reaches it reflects eighteen months
-of decisions.
+The {!<span class="term term-senate">!}Senate{!</span>!} approves the
+nationalization principle. With the upper chamber's assent, the principle has
+passed both houses.
 
-- @finish_campaign: Evaluate the campaign
+The decision completes the constitutional sequence. It does not enact the
+later implementation law or settle administration,
+personnel, marketing, compensation, and interim finance. Those struggles lie
+beyond this ending.
+
+The vote leaves behind a political organization, parliamentary position,
+public network, and relationship with the
+{!<span class="term term-royalist">!}Crown{!</span>!}.
+
+- @finish_campaign
 
 @finish_campaign
+title: Evaluate the campaign
+subtitle: See the coalition and institutions produced by eighteen months of decisions
 on-arrival: campaign_complete = 1
-go-to: post_event
+
+Nationalization has passed as a constitutional principle. The
+{!<span class="term term-national-front">!}Front{!</span>!} carries forward the structure it built, the allies it relied on,
+its parliamentary position, and its public organization.
+
+- @post_event: Continue to the campaign evaluation

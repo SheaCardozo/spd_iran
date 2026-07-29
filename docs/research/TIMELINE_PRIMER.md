@@ -1098,6 +1098,10 @@ entry rather than to an external website.
 - [source:sup-057] International Monetary Fund, *International Financial
   Statistics*, vol. 3, no. 12 (December 1950); vol. 4, no. 12 (December 1951);
   vol. 6, no. 8 (August 1953); and vol. 7, no. 12 (December 1954).
+- [source:sup-059] Majles-e Showra-ye Melli, *Surat-e Muzakerat-e Komision-e
+  Makhsus-e Naft-e Majles-e Showra-ye Melli* [Proceedings of the National
+  Consultative Assembly's Special Oil Commission] (Tehran: Majles Information
+  and Publications Administration), print-order nos. 172 and 300.
 - [source:sup-060] Siavush Randjbar-Daemi, “Radio Tehran and the 19 August 1953
   Coup: A New Perspective,” *International Journal of Middle East Studies* 56,
   no. 2 (2024): 280–287.

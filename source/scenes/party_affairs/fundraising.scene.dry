@@ -1,3 +1,6 @@
+# Source for the Front's heterogeneous coalition: Fakhreddin Azimi,
+# Iran: The Crisis of Democracy, 1941–1953, ch. 5, pp. 250–267.
+# The recurring fundraising drive and its effects are counterfactual.
 title: Fundraising
 new-page: true
 is-card: true
@@ -7,13 +10,57 @@ on-arrival: month_actions += 1; fundraising_timer = 4
 
 = Fundraising
 
-- @fund_small: Seek many small organizational contributions
-- @fund_notables: Approach sympathetic notables
+Printing, travel, meeting rooms, and legal work all draw from the same limited
+fund. The coalition can widen its base of contributors, ask a smaller circle
+for larger sums, or use its press network to stage a public subscription.
+
+Money does not arrive without a political relationship. Choose which
+relationship the secretariat will cultivate.
+
+- @fund_small
+- @fund_notables
+- @fund_subscription
 
 @fund_small
+title: Seek many small organizational contributions
+subtitle: A modest return that also widens independent-nationalist organization
 on-arrival: resources += 2; organizational_reach += 2; independent_nationalists_organization += 2
-go-to: post_event
+
+Local volunteers assemble many small contributions and report where new
+supporters can be contacted again. The total is limited, but the collection
+itself leaves behind useful lists and habits.
+
+The treasury improves gradually, and independent organizers gain a broader
+base that is not tied to one benefactor.
+
+- @post_event: Continue
 
 @fund_notables
+title: Approach sympathetic notables
+subtitle: Raise more immediately, while risking rank-and-file suspicion
 on-arrival: resources += 4; public_mandate -= 1; iran_party_relation += 2; toilers_dissent += 2
-go-to: post_event
+
+Established intermediaries secure several larger contributions quickly. {!<span class="term term-constitutionalist">!}Iran
+Party{!</span>!} contacts appreciate the practical result, but organizers on the social
+left ask what access the donors will expect in return.
+
+The treasury is healthier. The coalition's public independence is a little
+harder to explain.
+
+- @post_event: Continue
+
+@fund_subscription
+title: Run a public subscription through friendly papers
+subtitle: A balanced return that strengthens press capacity but yields less cash than notable donors
+on-arrival: resources += 3; press_capacity += 2; public_mandate += 1
+
+Friendly papers publish a time-limited appeal and direct readers to local
+collectors. The subscription raises less than a concentrated approach to
+wealthy supporters, but it turns the request for money into a demonstration of
+visible participation.
+
+Editors and collectors learn to coordinate more closely, and the
+{!<span class="term term-national-front">!}Front{!</span>!} can
+describe the fund as publicly supported.
+
+- @post_event: Continue

@@ -1,3 +1,7 @@
+# Sources for the disputed election and Front cohort: Fakhreddin Azimi,
+# Iran: The Crisis of Democracy, 1941–1953, pp. 207–208; Ervand Abrahamian,
+# Iran Between Two Revolutions, ch. 5, pp. 250–267.
+# The recurring committee work and its effects are counterfactual.
 title: Electoral Committee
 new-page: true
 is-card: true
@@ -8,13 +12,63 @@ card-image: img/majlis_1940s.jpg
 
 = Electoral Committee
 
-- @electoral_reports: Collect return and interference reports
-- @electoral_case: Prepare constitutional petitions
+Before the Sixteenth {!<span class="term term-parliament">!}Majles{!</span>!}
+convenes, the {!<span class="term term-national-front">!}Front{!</span>!}
+must distinguish rumor from a
+usable election record. Constituency reports can reveal patterns, legal
+petitions can force precise claims, and a public register can connect local
+complaints without pretending that every return is already known.
+
+Choose where the committee will put its limited effort this month.
+
+- @electoral_reports
+- @electoral_case
+- @electoral_register
 
 @electoral_reports
-on-arrival: political_intelligence += 5; organizational_reach += 3; independent_nationalists_organization += 2
-go-to: post_event
+title: Collect return and interference reports
+subtitle: Build reach and independent organizers' reporting capacity
+on-arrival: parliamentary_procedure_legitimacy += 3; organizational_reach += 3; independent_nationalists_organization += 2
+
+The committee distributes a common reporting form and asks local contacts to
+separate what they observed from what they heard. Incomplete reports remain
+marked as such rather than being promoted into a national result.
+
+The {!<span class="term term-national-front">!}Front{!</span>!} gains a
+wider and more disciplined picture of the election.
+Converting those reports into a constitutional case still requires another
+step.
+
+- @post_event: Continue
 
 @electoral_case
+title: Prepare constitutional petitions
+subtitle: Strengthen institutional legitimacy and <span class="term term-constitutionalist">Iran Party</span> cooperation
 on-arrival: constitutional_legitimacy += 4; parliamentary_procedure_legitimacy += 3; iran_party_relation += 2
-go-to: post_event
+
+Lawyers and party organizers turn the strongest documented complaints into
+petitions with named constituencies, dates, and requested remedies.
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!}
+figures value a method that can be defended inside constitutional institutions.
+
+The case becomes more precise and procedurally credible. Reports that cannot
+meet that standard remain outside the filing.
+
+- @post_event: Continue
+
+@electoral_register
+title: Publish a provisional constituency register
+subtitle: Build public scrutiny and press capacity while exposing gaps in the evidence
+on-arrival: press_capacity += 4; public_mandate += 3; shah_relation -= 1
+
+The committee publishes only returns and objections it can identify by place,
+labeling missing or disputed evidence instead of filling it with estimates.
+Friendly papers can now compare claims against one common register.
+
+Public scrutiny grows, as does the
+{!<span class="term term-royalist">!}Court's{!</span>!} irritation with the
+{!<span class="term term-national-front">!}Front's{!</span>!}
+challenge. The document is explicitly provisional and must be revised as
+better evidence arrives.
+
+- @post_event: Continue

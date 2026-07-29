@@ -1,3 +1,7 @@
+# Sources for the small Front delegation and wider oil coalition: Ervand
+# Abrahamian, Iran Between Two Revolutions, ch. 5, pp. 250–267;
+# Painter and Brew, The Struggle for Iran, ch. 1.
+# The recurring outreach and its effects are counterfactual.
 title: Deputy Outreach
 new-page: true
 is-card: true
@@ -7,18 +11,61 @@ on-arrival: month_actions += 1; deputy_outreach_timer = 3
 
 = Deputy Outreach
 
-- @deputies_procedure: Emphasize parliamentary procedure
-- @deputies_oil: Emphasize nationalization
-- @deputies_constituency: Share constituency-pressure reports
+Many deputies who are not part of the
+{!<span class="term term-national-front">!}Front{!</span>!} may still support a particular
+constitutional motion or oil position. Outreach works best when it asks for a
+specific commitment rather than treating every potential vote as a new member
+of the coalition.
+
+Choose the case {!<span class="term term-national-front">!}Front{!</span>!}
+deputies will carry into private conversations this
+month.
+
+- @deputies_procedure
+- @deputies_oil
+- @deputies_constituency
 
 @deputies_procedure
+title: Emphasize parliamentary procedure
+subtitle: Strengthen constitutional and chamber legitimacy beyond the <span class="term term-national-front">Front</span>'s own ranks
 on-arrival: parliamentary_procedure_legitimacy += 4; constitutional_legitimacy += 2
-go-to: post_event
+
+{!<span class="term term-national-front">!}Front{!</span>!} deputies ask
+colleagues to defend the chamber's own procedures even
+where they disagree with the coalition's broader program. The appeal offers a
+limited commitment that constitutional conservatives can support.
+
+Procedural credibility grows across factional lines. No one mistakes the
+conversation for endorsement of nationalization or
+{!<span class="term term-national-front">!}Front{!</span>!} membership.
+
+- @post_event: Continue
 
 @deputies_oil
+title: Ask for support for nationalization
+subtitle: Build the oil majority and public mandate through a direct commitment
 on-arrival: oil_coalition_support += 5; public_mandate += 2
-go-to: post_event
+
+The outreach makes the nationalization principle the explicit question and
+asks deputies where they stand. Supporters receive a common explanation they
+can defend to colleagues and constituents.
+
+The potential oil majority becomes firmer and more visible. Deputies who might
+have supported only a narrower procedural motion are harder to bring along.
+
+- @post_event: Continue
 
 @deputies_constituency
-on-arrival: political_intelligence += 2; organizational_reach += 2; oil_coalition_support += 3
-go-to: post_event
+title: Share constituency-pressure reports
+subtitle: Convert organizational reach into broader oil support
+on-arrival: organizational_reach += 2; oil_coalition_support += 4
+
+Organizers summarize verified local reports for deputies without claiming a
+nationwide plebiscite. The material shows where oil has become an urgent
+constituency question and where the coalition still lacks evidence.
+
+Deputies gain a clearer sense of pressure outside Tehran, while the
+secretariat improves the channel by which local information reaches the
+chamber.
+
+- @post_event: Continue

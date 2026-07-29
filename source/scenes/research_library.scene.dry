@@ -4,154 +4,234 @@ is-special: true
 
 = Research Library
 
-The Library distinguishes documented history, dispute, uncertainty, and
-counterfactual game mechanics. It never treats a scenario value as historical
-evidence.
-
-Run seed: [+ run_seed +]
-
-Release: [+ release_version +]
-
-- @government: How Government Works
-- @timeline: Timeline
+- @government: Government and Constitution
+- @timeline: Campaign Timeline
 - @coalition_people: Coalition and People
-- @chambers: Majles and Senate
+- @chambers: <span class="term term-parliament">Majles</span> and <span class="term term-senate">Senate</span>
 - @oil: Oil Proposals
-- @events: Event Notes
-- @uncertainty: Uncertainty Guide
-- @bibliography: Bibliography
-- @main: Return to the campaign
+- @events: Historical Notes
+- @uncertainty: Reading the Record
+- @bibliography: Sources
+- @backSpecialScene: Return
 
 @government
-title: How Government Works
+title: Government and Constitution
 
-= How Government Works
+= Government and Constitution
 
-The campaign keeps the Crown, cabinet, Majles, and Senate distinct. The Shah's
-relationship, resistance, court capacity, and electoral influence are separate
-qualities. Majles returns are not usable until the corresponding scenario
-credential and usability states permit it.
+The cabinet, {!<span class="term term-parliament">!}Majles{!</span>!},
+{!<span class="term term-senate">!}Senate{!</span>!}, and
+{!<span class="term term-royalist">!}Crown{!</span>!} exercised distinct,
+overlapping powers. Parliamentary factions indicated a candidate for prime
+minister; the {!<span class="term term-royalist">!}Shah{!</span>!} issued the
+decree to form a ministry; and the cabinet returned to the
+{!<span class="term term-parliament">!}Majles{!</span>!} for confidence.
 
-Research map:
-{!<a href="timeline.html#source-maj-s3">!}MAJ-S3{!</a>!}, chapter 3;
-{!<a href="timeline.html#source-sup-007">!}SUP-007{!</a>!}, Sixteenth Majles
-proceedings; and
-{!<a href="timeline.html#source-sup-051">!}SUP-051{!</a>!}. See the generated
-{!<a href="timeline.html">!}historical primer{!</a>!}.
+The 1949 constitutional revision strengthened royal authority, including a
+power to dissolve the {!<span class="term term-parliament">!}Majles{!</span>!}.
+The First {!<span class="term term-senate">!}Senate{!</span>!} had thirty
+royally appointed and thirty elected members. Neither chamber can be reduced
+to a single party bloc.
 
-- @research_library: Library index
+Further reading:
+{!<a href="timeline.html#the-constitutional-framework">!}The constitutional
+framework{!</a>!};
+Mostafa Elm, *Oil, Power, and Principle*, chapter 3, pp. 79–86; and
+Fakhreddin Azimi, *Iran: The Crisis of Democracy*, chapter 5, pp. 260–267.
+
+- @research_library: Library
 
 @timeline
-title: Timeline
+title: Campaign Timeline
 
-= Timeline
+= Campaign Timeline
 
-* February 1949: attempt on the Shah, martial law, and political restriction.
-* 1949: constituent assembly and preparation of the first Senate.
-* October–November 1949: palace protest and National Front formation.
-* February 1950: Sixteenth Majles and First Senate convene.
-* December 1950: supplemental agreement rejected.
-* 7–20 March 1951: Razmara's assassination and parliamentary approval of the
+* **4 February 1949:** attempt on the
+  {!<span class="term term-royalist">!}Shah{!</span>!}; martial law,
+  arrests, press restrictions, and the ban on the
+  {!<span class="term term-left">!}Tudeh Party{!</span>!} follow.
+* **Spring 1949:** the constituent assembly strengthens royal authority.
+* **October–November 1949:** the palace protest brings the opposition
+  coalition that becomes the
+  {!<span class="term term-national-front">!}National Front{!</span>!}
+  together.
+* **18 February 1950:** the Sixteenth
+  {!<span class="term term-parliament">!}Majles{!</span>!} opens; the First
+  {!<span class="term term-senate">!}Senate{!</span>!} also opens that month.
+* **25 November 1950:** the Special Oil Commission rejects the supplemental
+  agreement.
+* **11 January 1951:** the
+  {!<span class="term term-parliament">!}Majles{!</span>!} approves the
+  rejection.
+* **7–20 March 1951:** {!<span class="term term-independent">!}Razmara{!</span>!}
+  is assassinated; the Oil Commission, the
+  {!<span class="term term-parliament">!}Majles{!</span>!}, and the
+  {!<span class="term term-senate">!}Senate{!</span>!} approve the
   nationalization principle.
 
-Research map:
-{!<a href="timeline.html#source-maj-s1">!}MAJ-S1{!</a>!}, chapter 15;
-{!<a href="timeline.html#source-maj-s3">!}MAJ-S3{!</a>!}, chapter 3; and
-{!<a href="timeline.html#source-sup-006">!}SUP-006{!</a>!}, pp. 15–16.
+{!<a href="timeline.html#the-national-front-and-nationalization-19491951">!}Read
+the illustrated chronology{!</a>!}.
 
-- @research_library: Library index
+- @research_library: Library
 
 @coalition_people
 title: Coalition and People
 
 = Coalition and People
 
-The four component prefixes are political abstractions: Iran Party, Toilers,
-independent nationalists, and religious networks. Each separately tracks
-strength, relationship, dissent, and organization. Mossadegh's authority is
-not coalition cohesion. Kashani is represented as an independent counterpart.
+The {!<span class="term term-national-front">!}National Front{!</span>!}
+joined constitutionalists, the
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!}, the
+{!<span class="term term-social-democratic">!}Toilers' Party{!</span>!},
+{!<span class="term term-national-front">!}independent nationalists{!</span>!},
+and religious and bazaar networks without turning
+them into one homogeneous party.
 
-Research map:
-{!<a href="timeline.html#source-maj-s2">!}MAJ-S2{!</a>!}, chapter 5,
-especially pp. 250–267; and
-{!<a href="timeline.html#source-maj-s14">!}MAJ-S14{!</a>!}, chapter 1.
+{!<span class="term term-mossadegh">!}Mohammad Mossadegh{!</span>!} served as
+its central constitutional coordinator.
+{!<span class="term term-nationalist-social-democratic">!}Hossein Fatemi{!</span>!}
+worked through journalism and public advocacy;
+{!<span class="term term-constitutionalist">!}Allahyar Saleh{!</span>!}
+through party, electoral, and parliamentary work;
+{!<span class="term term-nationalist-social-democratic">!}Khalil Maleki{!</span>!}
+through the social-democratic current;
+and {!<span class="term term-makki">!}Hossein Makki{!</span>!} through the
+{!<span class="term term-parliament">!}Majles{!</span>!} and the oil
+campaign. {!<span class="term term-religious">!}Ayatollah Abol-Qasem
+Kashani{!</span>!} remained an independent ally with his own following.
 
-- @research_library: Library index
+Further reading:
+{!<a href="timeline.html#parties-factions-and-political-networks">!}Parties,
+factions, and political networks{!</a>!}; Fakhreddin Azimi,
+*Iran: The Crisis of Democracy*, chapter 5, pp. 250–267.
+
+- @research_library: Library
 
 @chambers
-title: Majles and Senate
+title: <span class="term term-parliament">Majles</span> and <span class="term term-senate">Senate</span>
 
-= Majles and Senate
+= {!<span class="term term-parliament">!}Majles{!</span>!} and {!<span class="term term-senate">!}Senate{!</span>!}
 
-The ledger contains exactly 136 authorized Sixteenth-Majles places and 60
-First-Senate places. Historical evidence and mutable scenario state never
-overwrite one another. Unknown constituency-level evidence remains null.
+The Sixteenth {!<span class="term term-parliament">!}Majles{!</span>!}
+contained 136 authorized places. The First
+{!<span class="term term-senate">!}Senate{!</span>!} contained sixty.
+A return, an approved credential, attendance, and practical use of a seat were
+not the same thing.
 
-Current derived totals:
+* {!<span class="term term-parliament">!}Majles{!</span>!} returns:
+  [+ majles_returns_recorded +] / 136
+* Credentials approved: [+ majles_credentials_approved +]
+* Usable members: [+ majles_usable_members +]
+* Usable {!<span class="term term-national-front">!}National Front{!</span>!}
+  members: [+ majles_national_front_usable +]
+* {!<span class="term term-senate">!}Senate{!</span>!} usable members:
+  [+ senate_usable_members +] / 60
 
-* Majles returns: [+ majles_returns_recorded +] / 136
-* Majles usable members: [+ majles_usable_members +]
-* Usable National Front members: [+ majles_national_front_usable +]
-* Senate usable members: [+ senate_usable_members +] / 60
+Further reading: the official Sixteenth-{!<span class="term term-parliament">!}Majles{!</span>!}
+roster, pp. 1–11; official
+{!<span class="term term-parliament">!}Majles{!</span>!} proceedings,
+sessions 2, 25, and 30; and the official
+First-{!<span class="term term-senate">!}Senate{!</span>!} roster.
 
-Research map:
-{!<a href="timeline.html#source-sup-051">!}SUP-051{!</a>!};
-{!<a href="timeline.html#source-sup-007">!}SUP-007{!</a>!}, sessions 2–128;
-and the tracked *SIXTEENTH_MAJLES_LEDGER.md*.
-
-- @research_library: Library index
+- @research_library: Library
 
 @oil
 title: Oil Proposals
 
 = Oil Proposals
 
-The game compares ownership recognition, operational control, marketing,
-compensation, interim finance, personnel authority, and duration/review.
-Unknown and disputed terms remain null. The March 1951 nationalization
-principle does not pretend to settle the later implementation law.
+Current position: **[+ oil_terms_position +]**
 
-Player position: [+ oil_terms_position +]
+## Gass–Golshayan supplemental agreement
 
-Research map:
-{!<a href="timeline.html#source-maj-s3">!}MAJ-S3{!</a>!};
-{!<a href="timeline.html#source-maj-s14">!}MAJ-S14{!</a>!}, chapter 1; and
-{!<a href="timeline.html#source-sup-006">!}SUP-006{!</a>!}, pp. 15–16.
+* Ownership: the {!<span class="term term-aioc">!}AIOC{!</span>!} concession
+  remained.
+* Operations and marketing: {!<span class="term term-aioc">!}AIOC{!</span>!}
+  control remained.
+* Finance: supplemental royalty and payment provisions.
+* Compensation and personnel authority: unresolved in the present record.
+* Review: within the 1933 concession framework.
 
-- @research_library: Library index
+## Nationalization principle, 20 March 1951
+
+* Ownership: Iranian national ownership.
+* Operations: transfer required; implementation remained unsettled.
+* Marketing, compensation, interim finance, and personnel: not settled by the
+  principle alone.
+* Review: implementation legislation lay beyond this campaign's endpoint.
+
+## Minimum acceptable terms
+
+* Iranian ownership and accountable Iranian operational authority.
+* Compensation limited to lawful claims.
+* Review by Iranian constitutional institutions.
+* No fixed minimum yet for marketing, interim finance, or personnel.
+
+Further reading: Mostafa Elm, *Oil, Power, and Principle*, chapter 3; David S.
+Painter and Gregory Brew, *The Struggle for Iran*, chapter 1.
+
+- @research_library: Library
 
 @events
-title: Event Notes
+title: Historical Notes
 
-= Event Notes
+= Historical Notes
 
-Every major scene has an adjacent claim record under `docs/research/events/`.
-Those records identify the documented anchor, disputes, counterfactual choice,
-mechanical abstraction, and precise source locator. Scene effects are scenario
-logic, not historical measurements.
+## 1949
 
-- @research_library: Library index
+The attempt on the {!<span class="term term-royalist">!}Shah{!</span>!}
+became the occasion for martial law, repression, and constitutional revision.
+The October palace protest arose from the disputed
+Sixteenth-{!<span class="term term-parliament">!}Majles{!</span>!} election
+and brought together the coalition that became the
+{!<span class="term term-national-front">!}National Front{!</span>!}.
+
+## 1950
+
+The Tehran rerun returned a small
+{!<span class="term term-national-front">!}National Front{!</span>!} cohort.
+Credentials made that cohort usable in stages. The Special Oil Commission
+gave its deputies a forum from which the supplemental agreement could be
+examined term by term.
+
+## 1951
+
+The {!<span class="term term-parliament">!}Majles{!</span>!} approved the
+commission's rejection of the supplemental agreement on 11 January.
+{!<span class="term term-independent">!}Razmara{!</span>!} was assassinated
+on 7 March. The commission and both chambers then approved the principle of
+oil nationalization, with the
+{!<span class="term term-senate">!}Senate{!</span>!} acting on 20 March.
+
+{!<a href="timeline.html#the-national-front-and-nationalization-19491951">!}Dates,
+notes, and further reading{!</a>!}.
+
+- @research_library: Library
 
 @uncertainty
-title: Uncertainty Guide
+title: Reading the Record
 
-= Uncertainty Guide
+= Reading the Record
 
-Null means unknown or disputed. Qualitative sidebar language communicates
-scenario risk without false precision. Seeded variation changes only minor
-report reliability and constituency pressure by at most two points per turn;
-it never changes an event, date, person, fact, source confidence, or vote.
+Unknown terms remain unknown. Disputed claims remain disputed.
 
-- @research_library: Library index
+- @research_library: Library
 
 @bibliography
-title: Bibliography
+title: Sources
 
-= Bibliography
+= Sources
 
-Stable source IDs and assessments of expertise, standing, evidence base, and
-limitations are maintained in `docs/research/BIBLIOGRAPHY.md`. The generated
-{!<a href="timeline.html#source-maj-s1">!}primer bibliography{!</a>!} provides the
-public reading route.
+The campaign's principal works include:
 
-- @research_library: Library index
+* Fakhreddin Azimi, *Iran: The Crisis of Democracy, 1941–1953*.
+* Ervand Abrahamian, *Iran Between Two Revolutions*.
+* Mostafa Elm, *Oil, Power, and Principle*.
+* David S. Painter and Gregory Brew, *The Struggle for Iran*.
+* Official proceedings and rosters of the Sixteenth
+  {!<span class="term term-parliament">!}Majles{!</span>!}, the Special Oil
+  Commission, and the First {!<span class="term term-senate">!}Senate{!</span>!}.
+
+{!<a href="timeline.html#bibliography">!}Full bibliography and source notes{!</a>!}.
+
+- @research_library: Library

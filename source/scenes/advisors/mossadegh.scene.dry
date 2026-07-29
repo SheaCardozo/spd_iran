@@ -1,12 +1,13 @@
-title: Mohammad Mossadegh
+# Source: Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
+# ch. 5, pp. 250–253. Mechanical effects are counterfactual abstractions.
+title: <span class="term term-mossadegh">Mohammad Mossadegh</span>
 new-page: true
 is-pinned-card: true
 tags: advisor
-view-if: advisor_mossadegh_active = 1
 
 = {!<span class="term term-mossadegh">!}Mohammad Mossadegh{!</span>!}
 
-Mossadegh is the central coordinating figure in the electoral protest that
+{!<span class="term term-mossadegh">!}Mossadegh{!</span>!} is the central coordinating figure in the electoral protest that
 brings the opposition coalition together. His intervention can help settle an
 immediate question, but it cannot erase the coalition's differences.
 
@@ -16,22 +17,35 @@ immediate question, but it cannot erase the coalition's differences.
 
 @constitutional_case
 title: State the constitutional case
-subtitle: Use the shared adviser action.
+subtitle: Strengthen constitutional and parliamentary legitimacy through a common argument
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2; mossadegh_authority += 1
-go-to: main
 
-Mossadegh restates the coalition's demand for representative elections and
-constitutional government.
+{!<span class="term term-mossadegh">!}Mossadegh{!</span>!} restates the coalition's demand for representative elections and
+constitutional government, then tests each part of the argument against the
+procedure the {!<span class="term term-national-front">!}Front{!</span>!}
+expects the {!<span class="term term-parliament">!}Majles{!</span>!} to follow.
+
+The coalition leaves with a case its different components can repeat without
+claiming that {!<span class="term term-mossadegh">!}Mossadegh{!</span>!} has resolved their wider disagreements.
+
+- @main: Return to the monthly briefing
 
 @hear_tendencies
 title: Hear the coalition's competing tendencies
-subtitle: Use the shared adviser action.
+subtitle: Reduce dissent among the <span class="term term-national-front">Front</span>'s competing tendencies without forcing agreement
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
-on-arrival: advisor_action_timer = 6; political_intelligence += 3; iran_party_dissent -= 1; toilers_dissent -= 1; independent_nationalists_dissent -= 1; religious_network_dissent -= 1
-go-to: main
+on-arrival: advisor_action_timer = 6; iran_party_relation += 1; toilers_relation += 1; independent_nationalists_relation += 1; religious_network_relation += 1; iran_party_dissent -= 1; toilers_dissent -= 1; independent_nationalists_dissent -= 1; religious_network_dissent -= 1
 
 The discussion does not produce agreement, but it clarifies what the
-cooperating circles expect from the emerging Front.
+cooperating circles expect from the
+{!<span class="term term-national-front">!}Front{!</span>!}.
+{!<span class="term term-mossadegh">!}Mossadegh{!</span>!} asks each tendency to
+state the boundary it cannot cross and the narrower action it can support.
+
+Participants are less likely to mistake consultation for an attempt to absorb
+them, and working relations improve across the coalition.
+
+- @main: Return to the monthly briefing

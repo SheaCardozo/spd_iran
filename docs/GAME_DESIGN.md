@@ -198,8 +198,11 @@ The player's persistent resources are:
 - **Public mandate:** perceived popular authority, varying by location and constituency.
 - **Organizational reach:** offices, newspapers, professional networks, guild contacts, mosque contacts, labor organizers, and provincial allies.
 - **Government capacity:** only available when in office; measures administrative compliance rather than abstract state power.
-- **Political intelligence:** the quality and diversity of reports available to the leadership.
 - **Mossadegh's authority and health:** related but not identical to coalition strength.
+
+The player has perfect political information about the live scenario state.
+Historical uncertainty remains explicit in the evidence and prose; it is not
+converted into a hidden-information resource.
 
 These should not all be visible as exact numbers. The normal interface uses qualitative ranges and trends. An accessibility/debug option may expose the underlying values.
 

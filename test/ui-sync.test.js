@@ -93,7 +93,9 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   const index = fs.readFileSync('out/html/index.html', 'utf8');
   const gameCss = fs.readFileSync('out/html/game.css', 'utf8');
   const compiledGame = JSON.parse(fs.readFileSync('out/game.json', 'utf8'));
-  const openingText = compiledGame.scenes.palace_protest.content[1].content;
+  const openingText = compiledGame.scenes.palace_protest.content.flatMap(
+    (block) => Array.isArray(block.content) ? block.content : [],
+  );
   const hasOpeningTerm = (className, label) =>
     openingText.some(
       (item, index) =>
@@ -157,6 +159,10 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   const localServer = fs.readFileSync('scripts/serve.js', 'utf8');
   assert.match(localServer, /'\.jpg':\s*'image\/jpeg'/);
   assert.match(localServer, /'\.jpeg':\s*'image\/jpeg'/);
+  assert.match(localServer, /fs\.watch\(target, \{recursive\}/);
+  assert.match(localServer, /spawn\(process\.execPath, \[buildScript\]/);
+  assert.match(localServer, /\/__live_reload/);
+  assert.match(localServer, /new EventSource\('\/__live_reload'\)/);
   assert.match(timeline, /id="the-story-in-brief"/);
   assert.match(timeline, /id="iran-around-1950"/);
   assert.match(timeline, /id="the-last-opening"/);

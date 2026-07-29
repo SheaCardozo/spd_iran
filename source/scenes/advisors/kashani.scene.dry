@@ -1,29 +1,53 @@
-title: Ayatollah Abol-Qasem Kashani
+# Sources: Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
+# chs. 5–6, especially pp. 250–267; David S. Painter and Gregory Brew,
+# The Struggle for Iran, chs. 1 and 5. Mechanical effects are counterfactual.
+title: <span class="term term-religious">Ayatollah Abol-Qasem Kashani</span>
 new-page: true
 is-pinned-card: true
 tags: advisor
-view-if: advisor_kashani_active = 1
 
 = {!<span class="term term-religious">!}Ayatollah Abol-Qasem Kashani{!</span>!}
 
-Kashani is an independent political counterpart with his own constituency and
-objectives—not a subordinate member of the Front's staff. Cooperation can
+{!<span class="term term-religious">!}Kashani{!</span>!} is an independent political counterpart with his own constituency and
+objectives—not a subordinate member of the
+{!<span class="term term-national-front">!}Front's{!</span>!} staff. Cooperation can
 mobilize religious and bazaar networks without dissolving that independence.
 
 - @kashani_bazaar
 - @kashani_terms
-- @main: Return
+- @main: Return to the monthly briefing
 
 @kashani_bazaar
 title: Coordinate a bazaar appeal
+subtitle: Build <span class="term term-religious">religious-network</span> organization and a wider public mandate
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; religious_network_organization += 5; public_mandate += 3
-go-to: main
+
+{!<span class="term term-religious">!}Kashani{!</span>!}'s intermediaries and
+the {!<span class="term term-national-front">!}Front{!</span>!} agree on
+language that can travel
+through bazaar and {!<span class="term term-religious">!}religious networks{!</span>!} while leaving their separate authority
+visible. The appeal reaches people the secretariat could not summon directly.
+
+The public campaign expands, but the new contacts belong to an allied network,
+not to a staff apparatus under
+{!<span class="term term-national-front">!}Front{!</span>!} command.
+
+- @main: Return to the monthly briefing
 
 @kashani_terms
 title: Negotiate terms of cooperation
+subtitle: Reduce dissent and improve relations through a bounded private agreement
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
-on-arrival: advisor_action_timer = 6; religious_network_relation += 4; religious_network_dissent -= 2; political_intelligence += 2
-go-to: main
+on-arrival: advisor_action_timer = 6; religious_network_relation += 5; religious_network_dissent -= 3
+
+The meeting states what the two sides will coordinate, what they will decide
+independently, and which public language neither will accept. The narrower
+agreement prevents cooperation from being mistaken for subordination.
+
+Relations improve under explicit terms. The political partnership remains
+contingent rather than settled.
+
+- @main: Return to the monthly briefing

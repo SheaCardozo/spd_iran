@@ -1,3 +1,7 @@
+# Sources for the Front's public and oil campaign: Fakhreddin Azimi,
+# Iran: The Crisis of Democracy, 1941–1953, ch. 5, pp. 250–267;
+# Painter and Brew, The Struggle for Iran, ch. 1.
+# The recurring meeting and its effects are counterfactual.
 title: Public Meetings
 new-page: true
 is-card: true
@@ -7,15 +11,44 @@ on-arrival: month_actions += 1; public_meetings_timer = 3
 
 = Public Meetings
 
-- @meetings_tehran: Concentrate scarce organizers in Tehran
-- @meetings_network: Coordinate several smaller meetings
+Public meetings can display a common mandate, recruit new organizers, and
+generate reports from beyond the leadership circle. The same people and money
+cannot produce both one highly visible gathering and a broad circuit of local
+meetings.
+
+Decide whether this month calls for concentration or reach.
+
+- @meetings_tehran
+- @meetings_network
 
 @meetings_tehran
+title: Concentrate scarce organizers in Tehran
+subtitle: Spend one resource for a large public display that may sharpen <span class="term term-royalist">Crown</span> resistance
 choose-if: resources >= 1
 unavailable-subtitle: Requires one resource.
 on-arrival: resources -= 1; public_mandate += 6; press_capacity += 2; shah_resistance += 2
-go-to: post_event
+
+The secretariat brings its best speakers, marshals, and press contacts into one
+Tehran gathering. The visible crowd gives friendly papers a clear image of
+public support and gives participants the sense of acting together.
+
+The demonstration is difficult for the
+{!<span class="term term-royalist">!}Court{!</span>!} to ignore. It strengthens the
+mandate while making royal resistance more likely.
+
+- @post_event: Continue
 
 @meetings_network
+title: Coordinate several smaller meetings
+subtitle: Expand organizational reach and train component organizers without a single dramatic crowd
 on-arrival: organizational_reach += 4; independent_nationalists_organization += 2; toilers_organization += 2
-go-to: post_event
+
+Instead of one central event, organizers share speaking notes and reporting
+forms across several smaller meetings. {!<span class="term term-national-front">!}Independent nationalists{!</span>!} and
+{!<span class="term term-social-democratic">!}Toilers' Party{!</span>!}
+gain practical experience arranging rooms, speakers, and follow-up contacts.
+
+No single gathering dominates the news. The coalition finishes the month with
+more people able to organize the next one.
+
+- @post_event: Continue

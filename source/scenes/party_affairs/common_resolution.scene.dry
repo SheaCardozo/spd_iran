@@ -1,0 +1,68 @@
+# Source for the Front's heterogeneous coalition and narrow common program:
+# Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953, ch. 5,
+# pp. 250–267. The recurring meeting and its effects are counterfactual.
+title: Common Resolution
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: common_resolution_timer <= 0
+on-arrival: month_actions += 1; common_resolution_timer = 4
+
+= Draft a Common Resolution
+
+The {!<span class="term term-national-front">!}National Front{!</span>!}
+must speak collectively without pretending that its component organizations
+share one complete program. A resolution can hold to constitutional ground,
+concentrate on oil, or publish the limits of agreement alongside the common
+demand.
+
+The wording will determine which allies can defend the statement in their own
+organizations and which work the coalition postpones.
+
+- @resolution_constitution
+- @resolution_oil
+- @resolution_amendments
+
+@resolution_constitution
+title: Restate the constitutional minimum
+subtitle: Stronger legitimacy and broad relations; little immediate oil momentum
+on-arrival: constitutional_legitimacy += 4; iran_party_relation += 2; independent_nationalists_relation += 2
+
+The resolution confines itself to representative elections, political
+liberties, and government through constitutional institutions. Each component
+can support that minimum without abandoning its wider program.
+
+The common ground becomes more credible, but the statement gives no new
+urgency to the oil campaign.
+
+- @post_event: Continue
+
+@resolution_oil
+title: Make national control of oil the common demand
+subtitle: Stronger mandate and oil support; dissent from allies guarding a broader program
+on-arrival: oil_coalition_support += 5; public_mandate += 3; toilers_dissent += 1; iran_party_dissent += 1
+
+The resolution places national control of oil at the center of the
+{!<span class="term term-national-front">!}Front's{!</span>!} immediate
+work. Newspapers and deputies receive a direct demand they can repeat.
+
+Some allies object that one issue is beginning to stand in for the coalition's
+constitutional and social commitments. Oil support rises while the internal
+argument sharpens.
+
+- @post_event: Continue
+
+@resolution_amendments
+title: Publish the common text with component amendments
+subtitle: Lower dissent and preserve autonomy; a less concentrated public message
+on-arrival: iran_party_dissent -= 2; toilers_dissent -= 2; religious_network_dissent -= 2; press_capacity += 2
+
+The {!<span class="term term-national-front">!}Front{!</span>!} publishes a
+short common resolution followed by signed statements from organizations that
+want to explain their own reasons or reservations. Disagreement is visible
+without being mistaken for a collapse of cooperation.
+
+The format eases internal pressure and gives friendly papers material for
+different audiences. It lacks the force of one unqualified declaration.
+
+- @post_event: Continue

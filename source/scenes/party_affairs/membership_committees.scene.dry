@@ -1,3 +1,6 @@
+# Source for the Front's heterogeneous coalition: Fakhreddin Azimi,
+# Iran: The Crisis of Democracy, 1941–1953, ch. 5, pp. 250–267.
+# The recurring committee work and its effects are counterfactual.
 title: Membership and Local Committees
 new-page: true
 is-card: true
@@ -7,15 +10,47 @@ on-arrival: month_actions += 1; membership_committees_timer = 4
 
 = Membership and Local Committees
 
-- @committees_shared: Build shared local committees
-- @committees_autonomy: Fund each component's own organizers
+The {!<span class="term term-national-front">!}Front{!</span>!} needs people
+who can turn statements in Tehran into repeatable local
+work. Its components disagree over whether those organizers should answer to a
+common committee or remain within the organizations that recruited them.
+
+This is a real structural choice: shared committees spread common methods,
+while autonomous organizers reduce fears of absorption.
+
+- @committees_shared
+- @committees_autonomy
 
 @committees_shared
+title: Build shared local committees
+subtitle: Spend one resource for a stronger common network across all four components
 choose-if: resources >= 1
 unavailable-subtitle: Requires one resource.
 on-arrival: resources -= 1; iran_party_organization += 3; toilers_organization += 3; independent_nationalists_organization += 3; religious_network_organization += 3; organizational_reach += 4
-go-to: post_event
+
+The secretariat pays for common forms, meeting space, and a small circuit of
+organizers who train local committees to report in the same way. Each
+component receives access to machinery it could not have built as quickly
+alone.
+
+The shared network reaches farther, but it consumes scarce funds and leaves
+the question of ultimate authority for a later meeting.
+
+- @post_event: Continue
 
 @committees_autonomy
+title: Fund each component's own organizers
+subtitle: Preserve organizational independence and relationships, with slower common growth
 on-arrival: iran_party_organization += 2; toilers_organization += 2; independent_nationalists_organization += 2; religious_network_organization += 2; organizational_reach += 2; toilers_relation += 1; religious_network_relation += 1
-go-to: post_event
+
+The secretariat divides practical assistance among the component
+organizations and asks each to report through its own chain.
+{!<span class="term term-social-democratic">!}Toilers' Party{!</span>!} and
+{!<span class="term term-religious">!}religious-network{!</span>!} organizers see that cooperation will not erase their
+independence.
+
+Every component gains some capacity, but the
+{!<span class="term term-national-front">!}Front{!</span>!} still depends on several
+parallel systems when it needs to act together.
+
+- @post_event: Continue

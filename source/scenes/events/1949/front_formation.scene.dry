@@ -1,4 +1,8 @@
-title: The National Front's Structure
+# Sources: Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
+# pp. 207–208; Ervand Abrahamian, Iran Between Two Revolutions, ch. 5,
+# pp. 250–267. The three structures are counterfactual alternatives.
+title: The <span class="term term-national-front">National Front</span>'s Structure
+subtitle: What kind of coalition can hold unlike organizations together?
 new-page: true
 tags: event
 view-if: year = 1949 and month >= 11 and front_formed = 0
@@ -10,27 +14,68 @@ on-arrival: front_formed = 1
 
 The cooperation organized around
 {!<span class="term term-mossadegh">!}Mohammad Mossadegh{!</span>!} and the
-protest against the Sixteenth {!<span class="term term-parliament">!}Majles{!</span>!}
-election is becoming the
-{!<span class="term term-national-front">!}National Front{!</span>!}. Its
-members agree on representative elections and constitutional government, but
-they have not become a disciplined party.
+protest against the Sixteenth
+{!<span class="term term-parliament">!}Majles{!</span>!} election is becoming
+the {!<span class="term term-national-front">!}National Front{!</span>!}.
+Representative elections, constitutional government, and political liberties
+provide common ground. They do not make the participants one party.
+
+The coalition includes established party organizations, {!<span class="term term-national-front">!}independent
+nationalists{!</span>!}, and religious-political networks. Each brings people and access
+the others lack; each also has reasons to resist discipline by the whole. A
+constitution for the {!<span class="term term-national-front">!}Front{!</span>!} would therefore distribute more than offices. It
+would decide how much autonomy its components surrender before they have
+learned to trust one another.
 
 - @narrow_program
 - @coordination_committee
+- @membership_front
 
 @narrow_program
 title: Adopt a narrow constitutional program
+subtitle: Stronger legitimacy and core-party relations; limited common machinery
 on-arrival: front_structure = "Narrow constitutional alliance"; constitutional_legitimacy += 5; iran_party_relation += 3; independent_nationalists_relation += 3
-go-to: post_event
 
-The Front defines a limited common program around honest elections,
-constitutional government, and political freedoms.
+The {!<span class="term term-national-front">!}Front{!</span>!} publishes a compact basis for cooperation: representative elections,
+constitutional government, and political freedoms. Because the program does
+not demand agreement on every social or religious question, the {!<span class="term term-constitutionalist">!}Iran Party{!</span>!} and
+independent constitutional politicians can defend it without disguising their
+differences.
+
+The clarity gives the alliance a strong public rule. It leaves local
+membership and discipline largely in the hands of its component organizations,
+so later coordination will still have to be negotiated.
+
+- @post_event: Continue
 
 @coordination_committee
-title: Remain a coordination committee
-on-arrival: front_structure = "Loose coordination committee"; iran_party_dissent -= 2; toilers_dissent -= 2; independent_nationalists_dissent -= 2; religious_network_dissent -= 2; political_intelligence += 2
-go-to: post_event
+title: Remain a committee of cooperating organizations
+subtitle: Less factional dissent and better reporting; continued structural looseness
+on-arrival: front_structure = "Loose coordination committee"; iran_party_relation += 1; toilers_relation += 1; independent_nationalists_relation += 1; religious_network_relation += 1; iran_party_dissent -= 2; toilers_dissent -= 2; independent_nationalists_dissent -= 2; religious_network_dissent -= 2
 
-The cooperating circles preserve their autonomy while creating a common place
-to exchange reports and coordinate immediate action.
+Each organization keeps its own membership and leadership while sending
+representatives to a common coordinating table. Reports move more easily
+between circles, and nobody must pretend that the {!<span class="term term-national-front">!}Front{!</span>!} can command supporters
+it did not recruit.
+
+The arrangement lowers the immediate cost of cooperation. It also means that a
+future disagreement can travel back through several independent chains of
+authority before the {!<span class="term term-national-front">!}Front{!</span>!} can answer as one body.
+
+- @post_event: Continue
+
+@membership_front
+title: Build a common membership organization
+subtitle: Greater shared organization; more dissent over autonomy and control
+on-arrival: front_structure = "Membership-based coalition"; iran_party_organization += 2; toilers_organization += 2; independent_nationalists_organization += 3; religious_network_organization += 2; iran_party_dissent += 2; toilers_dissent += 2; religious_network_dissent += 3
+
+The coalition begins enrolling supporters through common local committees
+rather than relying only on the rolls of its component groups. {!<span class="term term-national-front">!}Independent
+nationalists{!</span>!} gain machinery they previously lacked, and the {!<span class="term term-national-front">!}Front{!</span>!} acquires a
+more direct route from leadership decisions to local work.
+
+Existing organizations immediately ask who controls those committees and
+whose program new members are joining. The stronger common structure is real;
+so is the resistance from allies who fear being absorbed by it.
+
+- @post_event: Continue

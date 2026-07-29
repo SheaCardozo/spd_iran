@@ -62,6 +62,13 @@ in `web/game.css` and `web/timeline.css`, so the playable campaign and its
 historical primer share one visual language. The CSS class names, not their
 current hexadecimal values, are the content-facing interface.
 
+Playable historical scenes also follow
+[`SCENE_CONTENT_STANDARD.md`](SCENE_CONTENT_STANDARD.md). That standard adopts
+Dynamic SPD's setup → choice → consequence rhythm, requires the number of
+choices to match the actual decision space, defines information-only and
+internal-only exceptions, and makes an independent scene-by-scene source and
+content audit part of release readiness.
+
 ## Implemented v0.1 architecture
 
 The current build follows SPD in these respects:
@@ -73,8 +80,8 @@ The current build follows SPD in these respects:
 - opening a normal action card commits the current month;
 - `post_event.scene.dry` advances the calendar, ticks timers, bounds state, and
   resolves every eligible tagged event before returning to the hand;
-- six pinned adviser cards share one cooldown without spending the monthly
-  action; three are active and the Leadership Roster card replaces them;
+- six continuously pinned adviser cards share one cooldown without spending
+  the monthly action;
 - a tabbed status sidebar exposes the live simulation state;
 - the Shah has separate relationship, resistance, court-capacity, and
   electoral-influence state, adapting SPD's separation of Hindenburg's
@@ -86,8 +93,8 @@ The current build follows SPD in these respects:
 - Gass–Golshayan, nationalization, and the player's minimum position use
   separate term-by-term records with explicit nulls;
 - a four-scene prologue precedes exactly eighteen monthly actions;
-- seeded bounded variation touches only report reliability and minor
-  constituency pressure;
+- new campaigns use Dendry's normal randomized deck stream, which continues
+  from stored engine state when a save is loaded;
 - a special-scene Research Library and conditional scorecard ending mirror
   SPD's Library and game-over responsibility boundaries;
 - browser saves persist `save_schema_version = 1` and reject prototype imports;
@@ -95,7 +102,8 @@ The current build follows SPD in these respects:
 
 All numerical action effects remain game-balance abstractions rather than
 historical measurements. Historical anchors, dates, identities, source
-confidence, and passage of nationalization do not vary by seed or choice.
+confidence, and passage of nationalization do not vary with deck order or
+choice.
 
 ## Source layout
 

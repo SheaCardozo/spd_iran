@@ -1,27 +1,74 @@
-title: Allahyar Saleh
+# Sources: Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
+# ch. 5, pp. 250–267; official Majles proceedings, session 25, 18 May 1950.
+# Mechanical effects are counterfactual abstractions.
+title: <span class="term term-constitutionalist">Allahyar Saleh</span>
 new-page: true
 is-pinned-card: true
 tags: advisor
-view-if: advisor_saleh_active = 1
 
 = {!<span class="term term-constitutionalist">!}Allahyar Saleh{!</span>!}
 
-Saleh advises on electoral work and durable organization.
+{!<span class="term term-constitutionalist">!}Saleh{!</span>!} is an
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!} and
+{!<span class="term term-national-front">!}National Front{!</span>!} figure
+whose own Kashan/Natanz credential passed during the Sixteenth
+{!<span class="term term-parliament">!}Majles{!</span>!}. The consultation abstracts
+electoral reporting and durable organization rather than presenting a complete
+personal portfolio.
 
 - @saleh_reports
 - @saleh_committee
-- @main: Return
+- @saleh_credentials
+- @main: Return to the monthly briefing
 
 @saleh_reports
 title: Audit constituency reports
+subtitle: Build a defensible electoral record by separating evidence from rumor
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
-on-arrival: advisor_action_timer = 6; political_intelligence += 5; parliamentary_procedure_legitimacy += 2
-go-to: main
+on-arrival: advisor_action_timer = 6; parliamentary_procedure_legitimacy += 4; organizational_reach += 2
+
+{!<span class="term term-constitutionalist">!}Saleh{!</span>!} reviews constituency reports against the coalition's register and asks
+organizers to label observation, hearsay, and missing evidence separately.
+Uncertain returns remain uncertain.
+
+The secretariat gains a record it can use in credential petitions without
+overstating uncertain evidence.
+
+- @main: Return to the monthly briefing
 
 @saleh_committee
 title: Strengthen local committees
+subtitle: Expand organizational reach and <span class="term term-constitutionalist">Iran Party</span> committee capacity
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; organizational_reach += 4; iran_party_organization += 3
-go-to: main
+
+{!<span class="term term-constitutionalist">!}Saleh{!</span>!} works through
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!} contacts
+to standardize meeting records,
+membership follow-up, and reports to the secretariat. The committees remain
+locally rooted while becoming easier to connect to a national campaign.
+
+The {!<span class="term term-national-front">!}Front{!</span>!} reaches
+farther and receives more regular information. This route
+strengthens one component's machinery more than the others.
+
+- @main: Return to the monthly briefing
+
+@saleh_credentials
+title: Prepare a model credential file
+subtitle: Strengthen parliamentary procedure and coalition authority through one exemplary case
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+on-arrival: advisor_action_timer = 6; parliamentary_procedure_legitimacy += 4; mossadegh_authority += 1; iran_party_relation += 2
+
+{!<span class="term term-constitutionalist">!}Saleh{!</span>!} assembles one complete file that distinguishes the return, the credential
+decision, and the point at which a deputy becomes usable in the chamber. The
+format gives other organizers a standard they can copy.
+
+The credential campaign becomes more disciplined and
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!} cooperation
+improves. One model cannot resolve every disputed place.
+
+- @main: Return to the monthly briefing
