@@ -1,0 +1,27 @@
+title: Allahyar Saleh
+new-page: true
+is-pinned-card: true
+tags: advisor
+view-if: advisor_saleh_active = 1
+
+= {!<span class="term term-constitutionalist">!}Allahyar Saleh{!</span>!}
+
+Saleh advises on electoral work and durable organization.
+
+- @saleh_reports
+- @saleh_committee
+- @main: Return
+
+@saleh_reports
+title: Audit constituency reports
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+on-arrival: advisor_action_timer = 6; political_intelligence += 5; parliamentary_procedure_legitimacy += 2
+go-to: main
+
+@saleh_committee
+title: Strengthen local committees
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+on-arrival: advisor_action_timer = 6; organizational_reach += 4; iran_party_organization += 3
+go-to: main

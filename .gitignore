@@ -1,10 +1,13 @@
 /node_modules
 /out
+/.open-next
 /.tools/
 __pycache__/
 /AGENTS.md
 .DS_Store
 npm-debug.log*
+/test-results/
+/playwright-report/
 
 # Local research corpus; tracked catalogs preserve provenance and checksums.
 /docs/research/sources/

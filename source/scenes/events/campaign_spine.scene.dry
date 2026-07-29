@@ -1,0 +1,346 @@
+title: The Front responds to Hazhir's assassination
+new-page: true
+tags: event
+view-if: year = 1949 and month >= 11 and hazhir_seen = 0
+max-visits: 1
+priority: 30
+on-arrival: hazhir_seen = 1
+
+= November 1949
+
+Abdolhossein Hazhir is assassinated. The Front must respond to political
+violence without claiming responsibility it does not possess.
+
+- @hazhir_condemn: Condemn the killing and insist on constitutional methods
+- @hazhir_bounded: Condemn the killing while documenting the wider crisis
+
+@hazhir_condemn
+on-arrival: constitutional_legitimacy += 4; religious_network_relation -= 1; shah_relation += 1
+go-to: post_event
+
+@hazhir_bounded
+on-arrival: constitutional_legitimacy += 2; political_intelligence += 3; religious_network_dissent -= 1
+go-to: post_event
+
+@tehran_rerun
+title: Tehran's election is cancelled
+new-page: true
+tags: event
+view-if: year = 1950 and month >= 1 and tehran_rerun_seen = 0
+max-visits: 1
+priority: 10
+on-arrival: tehran_rerun_seen = 1; parliamentary_deck_unlocked = 1; majles_phase = "Tehran rerun and disputed returns"
+
+= January 1950
+
+The Tehran election is cancelled and must be rerun. The Front can concentrate
+on a defensible slate or extend its monitoring network.
+
+- @rerun_slate: Concentrate resources on a common Tehran slate
+- @rerun_monitor: Build the strongest possible record of the rerun
+
+@rerun_slate
+on-arrival: election_strategy = "Concentrated Tehran slate"; independent_nationalists_organization += 4; iran_party_relation += 2; public_mandate += 2
+go-to: post_event
+
+@rerun_monitor
+on-arrival: election_strategy = "Monitoring and credential record"; political_intelligence += 4; parliamentary_procedure_legitimacy += 3; organizational_reach += 2
+go-to: post_event
+
+@chambers_open
+title: The Sixteenth Majles and First Senate open
+new-page: true
+tags: event
+view-if: year = 1950 and month >= 2 and chambers_open_seen = 0
+max-visits: 1
+priority: 10
+on-arrival: {!
+Q.chambers_open_seen = 1;
+Q.majles_convened = 1;
+Q.senate_convened = 1;
+Q.majles_phase = "Credentials under review";
+var vacantIndexes = [0, 87, 107, 126, 128];
+var nfIndexes = [38, 39, 40, 41, 42, 44, 45, 105];
+for (var i = 0; i < 136; i += 1) {
+    if (vacantIndexes.indexOf(i) < 0) Q.majles_places[i].scenario.current_return = "returned";
+}
+var openingCredentials = 0;
+for (var c = 0; c < 136 && openingCredentials < 98; c += 1) {
+    if (vacantIndexes.indexOf(c) < 0 && nfIndexes.indexOf(c) < 0) {
+        Q.majles_places[c].scenario.credential = "approved";
+        Q.majles_places[c].scenario.usability = "usable";
+        openingCredentials += 1;
+    }
+}
+for (var n of nfIndexes) {
+    Q.majles_places[n].scenario.support = "national_front";
+}
+for (var s = 0; s < 60; s += 1) {
+    Q.senate_places[s].scenario.current_return = "returned";
+    Q.senate_places[s].scenario.credential = "approved";
+    Q.senate_places[s].scenario.usability = "usable";
+}
+!}
+
+= February 1950
+
+The two chambers open with different routes to membership. Returns,
+credentials, usable membership, alignments, and attendance remain separate in
+the campaign ledger.
+
+- @opening_procedure: Make credential procedure the immediate priority
+- @opening_coalition: Keep the parliamentary group politically coordinated
+
+@opening_procedure
+on-arrival: credentials_strategy = "Case-by-case procedural challenge"; parliamentary_procedure_legitimacy += 4
+go-to: post_event
+
+@opening_coalition
+on-arrival: credentials_strategy = "Coordinated National Front group"; independent_nationalists_relation += 3; oil_coalition_support += 2
+go-to: post_event
+
+@credential_campaign
+title: The credential campaign
+new-page: true
+tags: event
+view-if: year = 1950 and month >= 5 and credentials_seen = 0
+max-visits: 1
+priority: 10
+on-arrival: {!
+Q.credentials_seen = 1;
+var nfIndexes = [38, 39, 40, 41, 42, 44, 45, 105];
+for (var n of nfIndexes) {
+    Q.majles_places[n].scenario.current_return = "returned";
+    Q.majles_places[n].scenario.credential = "approved";
+    Q.majles_places[n].scenario.usability = "usable";
+    Q.majles_places[n].scenario.support = "national_front";
+}
+var approvedCount = 0;
+for (var place of Q.majles_places) {
+    if (place.scenario.credential === "approved") approvedCount += 1;
+}
+for (var c = 0; c < 136 && approvedCount < 120; c += 1) {
+    if (Q.majles_places[c].scenario.current_return === "returned" &&
+        Q.majles_places[c].scenario.credential !== "approved") {
+        Q.majles_places[c].scenario.credential = "approved";
+        Q.majles_places[c].scenario.usability = "usable";
+        approvedCount += 1;
+    }
+}
+!}
+
+= May–June 1950
+
+Credential decisions arrive in waves rather than as a single national result.
+The Front's usable parliamentary group takes shape within that process.
+
+- @credentials_public: Publish the strongest documented cases
+- @credentials_internal: Preserve relationships needed for later votes
+
+@credentials_public
+on-arrival: parliamentary_procedure_legitimacy += 5; press_capacity += 2; shah_electoral_influence -= 2
+go-to: post_event
+
+@credentials_internal
+on-arrival: oil_coalition_support += 4; independent_nationalists_relation += 2; political_intelligence += 2
+go-to: post_event
+
+@oil_committee_formation
+title: The oil committee
+new-page: true
+tags: event
+view-if: year = 1950 and month >= 5 and majles_convened = 1 and oil_committee_formed = 0
+max-visits: 1
+priority: 20
+on-arrival: oil_committee_formed = 1
+
+= May 1950
+
+The Majles creates a committee to consider the supplemental oil agreement.
+The Front can insist on term-by-term scrutiny or begin assembling a broader
+nationalization coalition.
+
+- @committee_terms: Establish a term-by-term record
+- @committee_majority: Build beyond the Front's own deputies
+
+@committee_terms
+on-arrival: parliamentary_procedure_legitimacy += 4; political_intelligence += 3; oil_terms_position = "Documented term-by-term rejection"
+go-to: post_event
+
+@committee_majority
+on-arrival: oil_coalition_support += 6; independent_nationalists_relation += 2; religious_network_relation += 2
+go-to: post_event
+
+@supplemental_campaign
+title: The supplemental-agreement campaign
+new-page: true
+tags: event
+view-if: year = 1950 and month >= 8 and supplemental_campaign_seen = 0
+max-visits: 1
+priority: 10
+on-arrival: supplemental_campaign_seen = 1
+
+= August 1950
+
+Debate over the Gass–Golshayan supplemental agreement intensifies. Reports
+about other oil arrangements, including the Saudi-Aramco comparison, increase
+pressure without making unlike contracts mechanically identical.
+
+- @supplemental_explain: Explain the disputed terms precisely
+- @supplemental_mandate: Turn the issue into a public mandate
+
+@supplemental_explain
+on-arrival: press_capacity += 4; political_intelligence += 3; constitutional_legitimacy += 2
+go-to: post_event
+
+@supplemental_mandate
+on-arrival: public_mandate += 5; oil_coalition_support += 3; shah_resistance += 2
+go-to: post_event
+
+@committee_rejection
+title: The oil committee rejects Gass–Golshayan
+new-page: true
+tags: event
+view-if: year = 1950 and month >= 12 and gass_golshayan_rejected_committee = 0
+max-visits: 1
+priority: 10
+on-arrival: gass_golshayan_rejected_committee = 1
+
+= December 1950
+
+The oil committee rejects the supplemental agreement. The recorded result is
+an institutional decision, not a free-floating popularity bonus.
+
+- @committee_claim: Claim the procedural victory narrowly
+- @committee_bridge: Use the decision to widen the nationalization coalition
+
+@committee_claim
+on-arrival: parliamentary_procedure_legitimacy += 5; constitutional_legitimacy += 2
+go-to: post_event
+
+@committee_bridge
+on-arrival: oil_coalition_support += 6; public_mandate += 2
+go-to: post_event
+
+@majles_rejection
+title: The Majles rejects the supplemental agreement
+new-page: true
+tags: event
+view-if: year = 1951 and month >= 1 and gass_golshayan_rejected_committee = 1 and gass_golshayan_rejected_majles = 0
+max-visits: 1
+priority: 20
+on-arrival: gass_golshayan_rejected_majles = 1
+
+= 11 January 1951
+
+The Majles follows the committee and rejects the supplemental agreement.
+
+- @majles_record: Emphasize the constitutional parliamentary record
+- @majles_movement: Emphasize the public coalition behind the vote
+
+@majles_record
+on-arrival: parliamentary_procedure_legitimacy += 4; constitutional_legitimacy += 3
+go-to: post_event
+
+@majles_movement
+on-arrival: oil_coalition_support += 4; public_mandate += 4; press_capacity += 2
+go-to: post_event
+
+@razmara_confrontation
+title: Confrontation with Razmara
+new-page: true
+tags: event
+view-if: year = 1951 and month >= 2 and razmara_confrontation_seen = 0
+max-visits: 1
+priority: 10
+on-arrival: razmara_confrontation_seen = 1
+
+= February 1951
+
+Prime Minister Haj Ali Razmara argues against immediate nationalization. The
+Front must answer without allowing one disputed exchange to substitute for the
+structured oil case.
+
+- @razmara_terms: Answer term by term in parliament
+- @razmara_public: Organize a public rebuttal
+
+@razmara_terms
+on-arrival: razmara_response = "Parliamentary term-by-term rebuttal"; parliamentary_procedure_legitimacy += 4; political_intelligence += 2; oil_coalition_support += 3
+go-to: post_event
+
+@razmara_public
+on-arrival: razmara_response = "Public nationalization campaign"; public_mandate += 5; press_capacity += 3; shah_resistance += 2
+go-to: post_event
+
+@razmara_assassination
+title: Razmara is assassinated
+new-page: true
+tags: event
+view-if: year = 1951 and month >= 3 and razmara_assassination_seen = 0
+max-visits: 1
+priority: 10
+on-arrival: razmara_assassination_seen = 1
+
+= 7 March 1951
+
+Razmara is assassinated. Responsibility and political consequence must remain
+separate: the Front can condemn political killing while continuing its oil
+campaign.
+
+- @assassination_condemn: Condemn the killing without qualification
+- @assassination_bounded: Condemn it and restate the constitutional oil case
+
+@assassination_condemn
+on-arrival: constitutional_legitimacy += 5; religious_network_relation -= 2; shah_relation += 1
+go-to: post_event
+
+@assassination_bounded
+on-arrival: constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2; oil_coalition_support += 2
+go-to: post_event
+
+@nationalization_approval
+title: Committee and Majles approve nationalization
+new-page: true
+tags: event
+view-if: year = 1951 and month >= 3 and razmara_assassination_seen = 1 and nationalization_approved_majles = 0
+max-visits: 1
+priority: 20
+on-arrival: nationalization_approved_committee = 1; nationalization_approved_majles = 1
+
+= 8–15 March 1951
+
+The oil committee recommends the nationalization principle, and the Majles
+approves it. The passage is fixed; your choice shapes how the Front explains
+the victory and prepares for Senate consideration.
+
+- @nationalization_institution: Protect the institutional record
+- @nationalization_public: Consolidate the public mandate
+
+@nationalization_institution
+on-arrival: parliamentary_procedure_legitimacy += 5; constitutional_legitimacy += 3; oil_coalition_support += 3
+go-to: post_event
+
+@nationalization_public
+on-arrival: public_mandate += 5; organizational_reach += 3; press_capacity += 3
+go-to: post_event
+
+@senate_approval
+title: The Senate approves nationalization
+new-page: true
+tags: event
+view-if: march_action_complete = 1 and nationalization_approved_majles = 1 and nationalization_approved_senate = 0
+max-visits: 1
+priority: 30
+on-arrival: nationalization_approved_senate = 1
+
+= 20 March 1951
+
+The Senate approves the nationalization principle. The historical anchor is
+complete; the political organization that reaches it reflects eighteen months
+of decisions.
+
+- @finish_campaign: Evaluate the campaign
+
+@finish_campaign
+on-arrival: campaign_complete = 1
+go-to: post_event

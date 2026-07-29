@@ -1,0 +1,27 @@
+title: Hossein Makki
+new-page: true
+is-pinned-card: true
+tags: advisor
+view-if: advisor_makki_active = 1
+
+= {!<span class="term term-national-front">!}Hossein Makki{!</span>!}
+
+Makki advises on parliamentary advocacy and the oil campaign.
+
+- @makki_floor
+- @makki_oil
+- @main: Return
+
+@makki_floor
+title: Prepare a floor intervention
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+on-arrival: advisor_action_timer = 6; parliamentary_procedure_legitimacy += 4; mossadegh_authority += 2
+go-to: main
+
+@makki_oil
+title: Rally support on oil
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+on-arrival: advisor_action_timer = 6; oil_coalition_support += 5; public_mandate += 2
+go-to: main

@@ -1,16 +1,18 @@
 # The Last Majles
 
 *The Last Majles* is a single-player historical political simulation about
-Iran's constitutional and oil crises from 1949 to 1953. The player represents
+Iran's constitutional and oil crises from 1949 to 1951. The player represents
 the coordinating leadership of the National Front: a coalition trying to
 secure representative government, establish Iranian control of the oil
 industry, and preserve constitutional politics amid institutional rivalry,
-economic pressure, coalition fracture, and covert intervention.
+economic pressure, and coalition fracture.
 
-The project is in early implementation. The current build establishes an
-SPD-style monthly card loop, shared political state, an initial status screen,
-and the sourced October 1949 opening. Its action effects are prototype balance
-values; it does not yet implement the historical campaign beyond that opening.
+Version 0.1 is an end-to-end public demo. It begins with a four-scene 1949
+prologue, then runs eighteen monthly actions from October 1949 through Senate
+approval of the nationalization principle on 20 March 1951. It includes three
+action decks, six researched advisers with three active at a time, the complete
+historical event spine, structured Majles/Senate and oil records, seeded
+replays, save/load, a Research Library, and four conditional evaluations.
 
 ## Design commitments
 
@@ -57,7 +59,9 @@ npm run build
 ```
 
 The generated web build is written to `out/html/`. Open
-`out/html/index.html` in a browser to run it locally.
+`out/html/index.html` in a browser to run it locally. Add
+`?seed=<uint32>` to replay a known seed, and `&debug=1` (or `?debug=1`) to show
+exact state values that are qualitative by default.
 
 For a normal local webpage with automatic rebuilding, run:
 
@@ -70,6 +74,20 @@ The formatted historical orientation is available at
 <http://127.0.0.1:8080/timeline.html> and is generated from
 [`docs/research/TIMELINE_PRIMER.md`](docs/research/TIMELINE_PRIMER.md) during
 each build.
+
+Run the deterministic engine, research, documentation, and UI-sync suite with:
+
+```sh
+npm test
+```
+
+Install Playwright's Chromium and Firefox runtimes for the current platform,
+then run the six-project browser matrix with:
+
+```sh
+npx playwright install --with-deps chromium firefox
+npm run test:browser
+```
 
 ## Project layout
 
@@ -90,13 +108,7 @@ project keeps the same browser behavior in `web/` because `out/` is disposable;
 
 ## Current milestone
 
-The first playable vertical slice will cover the formation of the National
-Front through the passage of oil nationalization. Implementation begins close
-to the structure of *Dynamic Social Democracy* and will diverge piecemeal where
-Iran's institutions require it, with:
-
-- the October 1949 palace protest as the campaign opening;
-- a monthly briefing and decision loop;
-- coalition and named-institution records;
-- an initial oil-proposal model;
-- sourced research notes for every implemented historical event.
+`0.1.0` covers the National Front's formation through the passage of oil
+nationalization. Premiership, the implementation law, NIOC administration,
+embargo economics, Abadan, the ICJ, the Seventeenth Majles, and the 1953 coup
+remain outside this release.

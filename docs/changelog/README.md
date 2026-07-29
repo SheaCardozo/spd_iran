@@ -104,3 +104,7 @@ bibliography entry, or asset-rights record.
 - [Inaccessible-source substitution rules](2026-07-29-inaccessible-source-substitution.md)
 - [Final research-processing coverage audit](2026-07-29-final-research-processing-audit.md)
 - [Substantive source review and economic tables](2026-07-29-substantive-source-review-and-economic-tables.md)
+- [Dynamic SPD gameplay-architecture foundation](2026-07-29-spd-architecture-foundation.md)
+- [v0.1 end-to-end public demo](2026-07-29-v01-end-to-end-demo.md)
+- [Production hosting adapter](2026-07-29-sites-hosting.md)
+- [Title-menu primer and bounded-report copy](2026-07-29-menu-primer-and-report-copy.md)

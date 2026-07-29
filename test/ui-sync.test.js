@@ -101,12 +101,14 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
         item.content === `<span class="term ${className}">` &&
         openingText[index + 1] === label &&
         openingText[index + 2]?.content === '</span>',
-    );
+  );
   assert.match(index, /id="stats-link"[^>]*>Status</);
-  assert.match(index, /id="primer-link"[^>]*href="timeline\.html"/);
+  assert.doesNotMatch(index, /id="primer-link"/);
+  assert.match(index, /id="library-link"/);
   assert.match(index, /id="main_tab"/);
   assert.match(index, /id="coalition_tab"/);
-  assert.match(index, /id="relations_tab"/);
+  assert.match(index, /id="majles_tab"/);
+  assert.match(index, /id="crown_tab"/);
   assert.match(index, />\s*Event images:/);
   assert.match(gameCss, /--term-nationalist:\s*#2c6f64/i);
   assert.match(gameCss, /--term-parliament:\s*#7a5718/i);
@@ -122,6 +124,27 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.ok(hasOpeningTerm('term-mossadegh', 'Mohammad Mossadegh'));
   assert.ok(hasOpeningTerm('term-parliament', 'Majles'));
   assert.ok(hasOpeningTerm('term-national-front', 'National Front'));
+  assert.ok(compiledGame.scenes['status.majles']);
+  assert.ok(compiledGame.scenes['status.crown']);
+  assert.ok(compiledGame.scenes.research_library);
+  assert.ok(compiledGame.scenes.campaign_ending);
+  assert.deepEqual(
+    compiledGame.scenes['root.start_menu'].options.map((option) => option.title),
+    [
+      'Begin the Historical Scenario',
+      'Historical Primer',
+      'About this release',
+    ],
+  );
+  assert.match(
+    compiledGame.scenes['root.historical_primer'].onArrival[0].$code,
+    /window\.location\.assign\("timeline\.html"\)/,
+  );
+  assert.doesNotMatch(
+    JSON.stringify(compiledGame.scenes.main.content),
+    /Reports are unusually fragmentary this month/,
+  );
+  assert.ok(compiledGame.qdisplays.shah_resistance);
 
   const timeline = fs.readFileSync('out/html/timeline.html', 'utf8');
   const timelineCss = fs.readFileSync('out/html/timeline.css', 'utf8');
@@ -616,20 +639,22 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
 
 test('status sidebar scenes and qdisplay compile with stable IDs', () => {
   const game = JSON.parse(fs.readFileSync('out/game.json', 'utf8'));
-  const relationsText = JSON.stringify(game.scenes['status.relations']);
+  const coalitionText = JSON.stringify(game.scenes['status.coalition']);
 
   assert.equal(game.scenes.status.isSpecial, true);
   assert.ok(game.scenes['status.coalition']);
-  assert.ok(game.scenes['status.relations']);
+  assert.ok(game.scenes['status.majles']);
+  assert.ok(game.scenes['status.crown']);
   assert.match(
-    relationsText,
+    coalitionText,
     /term term-constitutionalist\\?">.*Iran Party/,
   );
   assert.match(
-    relationsText,
+    coalitionText,
     /term term-social-democratic\\?">.*Toilers' Party/,
   );
   assert.ok(game.qdisplays.month);
+  assert.ok(game.qdisplays.shah_resistance);
   assert.ok(
     fs.existsSync('source/scenes/events/1949/palace_protest.scene.dry'),
   );

@@ -1,0 +1,157 @@
+title: Research Library
+new-page: true
+is-special: true
+
+= Research Library
+
+The Library distinguishes documented history, dispute, uncertainty, and
+counterfactual game mechanics. It never treats a scenario value as historical
+evidence.
+
+Run seed: [+ run_seed +]
+
+Release: [+ release_version +]
+
+- @government: How Government Works
+- @timeline: Timeline
+- @coalition_people: Coalition and People
+- @chambers: Majles and Senate
+- @oil: Oil Proposals
+- @events: Event Notes
+- @uncertainty: Uncertainty Guide
+- @bibliography: Bibliography
+- @main: Return to the campaign
+
+@government
+title: How Government Works
+
+= How Government Works
+
+The campaign keeps the Crown, cabinet, Majles, and Senate distinct. The Shah's
+relationship, resistance, court capacity, and electoral influence are separate
+qualities. Majles returns are not usable until the corresponding scenario
+credential and usability states permit it.
+
+Research map:
+{!<a href="timeline.html#source-maj-s3">!}MAJ-S3{!</a>!}, chapter 3;
+{!<a href="timeline.html#source-sup-007">!}SUP-007{!</a>!}, Sixteenth Majles
+proceedings; and
+{!<a href="timeline.html#source-sup-051">!}SUP-051{!</a>!}. See the generated
+{!<a href="timeline.html">!}historical primer{!</a>!}.
+
+- @research_library: Library index
+
+@timeline
+title: Timeline
+
+= Timeline
+
+* February 1949: attempt on the Shah, martial law, and political restriction.
+* 1949: constituent assembly and preparation of the first Senate.
+* October–November 1949: palace protest and National Front formation.
+* February 1950: Sixteenth Majles and First Senate convene.
+* December 1950: supplemental agreement rejected.
+* 7–20 March 1951: Razmara's assassination and parliamentary approval of the
+  nationalization principle.
+
+Research map:
+{!<a href="timeline.html#source-maj-s1">!}MAJ-S1{!</a>!}, chapter 15;
+{!<a href="timeline.html#source-maj-s3">!}MAJ-S3{!</a>!}, chapter 3; and
+{!<a href="timeline.html#source-sup-006">!}SUP-006{!</a>!}, pp. 15–16.
+
+- @research_library: Library index
+
+@coalition_people
+title: Coalition and People
+
+= Coalition and People
+
+The four component prefixes are political abstractions: Iran Party, Toilers,
+independent nationalists, and religious networks. Each separately tracks
+strength, relationship, dissent, and organization. Mossadegh's authority is
+not coalition cohesion. Kashani is represented as an independent counterpart.
+
+Research map:
+{!<a href="timeline.html#source-maj-s2">!}MAJ-S2{!</a>!}, chapter 5,
+especially pp. 250–267; and
+{!<a href="timeline.html#source-maj-s14">!}MAJ-S14{!</a>!}, chapter 1.
+
+- @research_library: Library index
+
+@chambers
+title: Majles and Senate
+
+= Majles and Senate
+
+The ledger contains exactly 136 authorized Sixteenth-Majles places and 60
+First-Senate places. Historical evidence and mutable scenario state never
+overwrite one another. Unknown constituency-level evidence remains null.
+
+Current derived totals:
+
+* Majles returns: [+ majles_returns_recorded +] / 136
+* Majles usable members: [+ majles_usable_members +]
+* Usable National Front members: [+ majles_national_front_usable +]
+* Senate usable members: [+ senate_usable_members +] / 60
+
+Research map:
+{!<a href="timeline.html#source-sup-051">!}SUP-051{!</a>!};
+{!<a href="timeline.html#source-sup-007">!}SUP-007{!</a>!}, sessions 2–128;
+and the tracked *SIXTEENTH_MAJLES_LEDGER.md*.
+
+- @research_library: Library index
+
+@oil
+title: Oil Proposals
+
+= Oil Proposals
+
+The game compares ownership recognition, operational control, marketing,
+compensation, interim finance, personnel authority, and duration/review.
+Unknown and disputed terms remain null. The March 1951 nationalization
+principle does not pretend to settle the later implementation law.
+
+Player position: [+ oil_terms_position +]
+
+Research map:
+{!<a href="timeline.html#source-maj-s3">!}MAJ-S3{!</a>!};
+{!<a href="timeline.html#source-maj-s14">!}MAJ-S14{!</a>!}, chapter 1; and
+{!<a href="timeline.html#source-sup-006">!}SUP-006{!</a>!}, pp. 15–16.
+
+- @research_library: Library index
+
+@events
+title: Event Notes
+
+= Event Notes
+
+Every major scene has an adjacent claim record under `docs/research/events/`.
+Those records identify the documented anchor, disputes, counterfactual choice,
+mechanical abstraction, and precise source locator. Scene effects are scenario
+logic, not historical measurements.
+
+- @research_library: Library index
+
+@uncertainty
+title: Uncertainty Guide
+
+= Uncertainty Guide
+
+Null means unknown or disputed. Qualitative sidebar language communicates
+scenario risk without false precision. Seeded variation changes only minor
+report reliability and constituency pressure by at most two points per turn;
+it never changes an event, date, person, fact, source confidence, or vote.
+
+- @research_library: Library index
+
+@bibliography
+title: Bibliography
+
+= Bibliography
+
+Stable source IDs and assessments of expertise, standing, evidence base, and
+limitations are maintained in `docs/research/BIBLIOGRAPHY.md`. The generated
+{!<a href="timeline.html#source-maj-s1">!}primer bibliography{!</a>!} provides the
+public reading route.
+
+- @research_library: Library index

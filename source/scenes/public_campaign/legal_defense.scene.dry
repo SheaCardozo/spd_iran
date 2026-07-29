@@ -1,0 +1,21 @@
+title: Legal Defense and Repression Response
+new-page: true
+is-card: true
+tags: public_campaign
+view-if: legal_defense_timer <= 0
+on-arrival: month_actions += 1; legal_defense_timer = 5
+
+= Legal Defense and Repression Response
+
+- @defense_cases: Fund individual legal cases
+- @defense_record: Publish a common record of restrictions
+
+@defense_cases
+choose-if: resources >= 1
+unavailable-subtitle: Requires one resource.
+on-arrival: resources -= 1; constitutional_legitimacy += 4; organizational_reach += 2; toilers_relation += 2
+go-to: post_event
+
+@defense_record
+on-arrival: press_capacity += 4; political_intelligence += 3; public_mandate += 2; shah_relation -= 1
+go-to: post_event

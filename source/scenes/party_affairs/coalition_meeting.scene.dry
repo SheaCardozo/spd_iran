@@ -3,27 +3,24 @@ new-page: true
 is-card: true
 tags: party_affairs
 view-if: coalition_meeting_timer <= 0
-on-arrival: month_actions += 1; coalition_meeting_timer += 3
+on-arrival: month_actions += 1; coalition_meeting_timer = 3
 
 = Coalition Meeting
 
-The organizations and political circles cooperating with Mossadegh do not yet
-constitute a disciplined party. A meeting can settle immediate priorities, but
-not erase their different interests.
+Settle a shared priority without pretending the Front is a disciplined party.
 
-- @shared_program: Draft a narrow shared program
-- @open_floor: Give every tendency room to state its priorities
+- @meeting_constitution: Reaffirm the narrow constitutional program
+- @meeting_dissent: Hear dissent before fixing the agenda
+- @meeting_oil: Put oil coordination on the agenda
 
-@shared_program
-on-arrival: coalition_cohesion += 6; constitutional_legitimacy += 2; iran_party_relation += 2; toilers_relation -= 1
+@meeting_constitution
+on-arrival: iran_party_relation += 4; independent_nationalists_relation += 3; toilers_dissent += 1; constitutional_legitimacy += 2
 go-to: post_event
 
-The meeting agrees to concentrate on representative elections and constitutional
-government. Broader disagreements remain outside the common program.
-
-@open_floor
-on-arrival: coalition_cohesion += 3; toilers_relation += 2; muslim_warriors_relation += 2; political_intelligence += 2
+@meeting_dissent
+on-arrival: toilers_relation += 3; religious_network_relation += 3; iran_party_dissent -= 2; independent_nationalists_dissent -= 2; political_intelligence += 2
 go-to: post_event
 
-The discussion exposes disagreements, but the secretariat leaves with a clearer
-picture of what each circle expects from cooperation.
+@meeting_oil
+on-arrival: independent_nationalists_relation += 4; religious_network_relation += 2; oil_coalition_support += 3
+go-to: post_event

@@ -13,10 +13,82 @@
     ui = dendryUI;
     game = ui.game;
 
-    // Add your custom code here.
+    // Surface prototype slots under the v0.1 title so selecting one produces
+    // the explicit schema error instead of making the old save disappear.
+    var oldPrefix =
+      'The Last Majles: Iran, 1949–1953_The Last Majles contributors_save';
+    for (var oldSlot of ['a0', 'a1', '0', '1', '2', '3', '4', '5', '6', '7']) {
+      var oldKey = oldPrefix + '_' + oldSlot;
+      var newKey = ui.save_prefix + '_' + oldSlot;
+      if (localStorage[oldKey] && !localStorage[newKey]) {
+        localStorage[newKey] = localStorage[oldKey];
+        localStorage[ui.save_prefix + '_timestamp_' + oldSlot] =
+          localStorage[oldPrefix + '_timestamp_' + oldSlot] || 'Prototype save';
+      }
+    }
+
+    function compatibleSave(state) {
+      return Boolean(
+        state &&
+        state.qualities &&
+        state.qualities.save_schema_version === 1
+      );
+    }
+
+    function rejectOldSave() {
+      window.alert(
+        'This save predates The Last Majles v0.1 and is incompatible. ' +
+        'Start a new Historical Scenario; prototype saves are not migrated.'
+      );
+    }
+
+    var originalLoadSlot = ui.loadSlot.bind(ui);
+    ui.loadSlot = function(slot) {
+      var raw = localStorage[this.save_prefix + '_' + slot];
+      if (!raw) return originalLoadSlot(slot);
+      try {
+        if (!compatibleSave(JSON.parse(raw))) return rejectOldSave();
+      } catch (error) {
+        window.alert('This save file is invalid and could not be loaded.');
+        return;
+      }
+      return originalLoadSlot(slot);
+    };
+
+    var originalQuickLoad = ui.quickLoad.bind(ui);
+    ui.quickLoad = function() {
+      var raw = localStorage[this.save_prefix + '_q'];
+      if (!raw) return originalQuickLoad();
+      try {
+        if (!compatibleSave(JSON.parse(raw))) return rejectOldSave();
+      } catch (error) {
+        window.alert('This save file is invalid and could not be loaded.');
+        return;
+      }
+      return originalQuickLoad();
+    };
+
+    ui.importSave = function(docId) {
+      var that = this;
+      var uploader = document.getElementById(docId);
+      var reader = new FileReader();
+      var file = uploader.files[0];
+      reader.onload = function(event) {
+        try {
+          var state = JSON.parse(event.target.result);
+          if (!compatibleSave(state)) return rejectOldSave();
+          that.dendryEngine.setState(state);
+          that.hideSaveSlots();
+          window.alert('Loaded.');
+        } catch (error) {
+          window.alert('This save file is invalid and could not be loaded.');
+        }
+      };
+      reader.readAsText(file);
+    };
   };
 
-  var TITLE = "The Last Majles: Iran, 1949–1953" + '_' + "The Last Majles contributors";
+  var TITLE = "The Last Majles: Iran, 1949–1951" + '_' + "The Last Majles contributors";
 
   window.showStats = function() {
     if (window.dendryUI.dendryEngine.state.sceneId.startsWith('status')) {
@@ -24,6 +96,10 @@
     } else {
         window.dendryUI.dendryEngine.goToScene('status');
     }
+  };
+
+  window.showLibrary = function() {
+    window.dendryUI.dendryEngine.goToScene('research_library');
   };
   
   window.showOptions = function() {
@@ -165,7 +241,24 @@
   // This function runs on a new page. Right now, this auto-saves.
   window.onNewPage = function() {
     var scene = window.dendryUI.dendryEngine.state.sceneId;
-    if (scene != 'root' && !window.justLoaded) {
+    var q = window.dendryUI.dendryEngine.state.qualities;
+    if (q && q.save_schema_version === 1) {
+      // Dendry's default browser RNG is unique per load. Replace only the deck
+      // draw source with a persisted fixed stream so run seeds affect nothing
+      // beyond the explicitly whitelisted minor-report variation.
+      window.dendryUI.dendryEngine.random.uint32 = function() {
+        var x = q.deck_rng_state >>> 0;
+        x ^= (x << 13); x ^= (x >>> 17); x ^= (x << 5);
+        q.deck_rng_state = x >>> 0;
+        return q.deck_rng_state;
+      };
+    }
+    if (
+      scene != 'root' &&
+      q &&
+      q.save_schema_version === 1 &&
+      !window.justLoaded
+    ) {
         window.dendryUI.autosave();
     }
     if (window.justLoaded) {

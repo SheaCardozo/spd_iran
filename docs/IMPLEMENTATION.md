@@ -62,57 +62,101 @@ in `web/game.css` and `web/timeline.css`, so the playable campaign and its
 historical primer share one visual language. The CSS class names, not their
 current hexadecimal values, are the content-facing interface.
 
-## Implemented foundation
+## Implemented v0.1 architecture
 
 The current build follows SPD in these respects:
 
 - one shared `Q` state initialized in `root.scene.dry`;
-- a card hand with a Party Affairs deck;
+- a card hand with Party Affairs, Public Campaign, and Parliamentary Affairs
+  decks containing twelve recurring actions;
 - action cards selected by tags and gated by cooldown timers;
 - opening a normal action card commits the current month;
 - `post_event.scene.dry` advances the calendar, ticks timers, bounds state, and
-  returns to the hand;
-- a numerical status screen exposes the live simulation state;
+  resolves every eligible tagged event before returning to the hand;
+- six pinned adviser cards share one cooldown without spending the monthly
+  action; three are active and the Leadership Roster card replaces them;
+- a tabbed status sidebar exposes the live simulation state;
+- the Shah has separate relationship, resistance, court-capacity, and
+  electoral-influence state, adapting SPD's separation of Hindenburg's
+  relationship and anger;
+- 136 Majles and 60 Senate place records separate historical evidence from
+  mutable scenario state; reducers derive every public total from the records;
+- coalition cohesion is derived from four component prefixes, each with
+  strength, relation, dissent, and organization;
+- Gass–Golshayan, nationalization, and the player's minimum position use
+  separate term-by-term records with explicit nulls;
+- a four-scene prologue precedes exactly eighteen monthly actions;
+- seeded bounded variation touches only report reliability and minor
+  constituency pressure;
+- a special-scene Research Library and conditional scorecard ending mirror
+  SPD's Library and game-over responsibility boundaries;
+- browser saves persist `save_schema_version = 1` and reject prototype imports;
 - annual organizational income is applied at year rollover.
 
-The initial Party Affairs deck contains three prototype cards:
-
-- Coalition Meeting;
-- Coordinate the Press;
-- Build an Electoral Committee.
-
-Their numerical effects are balance scaffolding, not historical measurements.
+All numerical action effects remain game-balance abstractions rather than
+historical measurements. Historical anchors, dates, identities, source
+confidence, and passage of nationalization do not vary by seed or choice.
 
 ## Source layout
 
 | Path | Responsibility |
 | --- | --- |
 | `source/scenes/root.scene.dry` | Menu and initial shared state |
-| `source/scenes/events/1949/palace_protest.scene.dry` | Sourced campaign opening |
+| `source/scenes/events/1949/` | Sourced opening and tagged historical events |
 | `source/scenes/main.scene.dry` | Hand, decks, and recurring briefing |
+| `source/scenes/advisors/` | Pinned advisers using one shared cooldown |
 | `source/scenes/party_affairs/` | Organizational action cards |
-| `source/scenes/post_event.scene.dry` | Calendar and shared reducers |
+| `source/scenes/public_campaign/` | Press, meeting, bazaar, and legal-response actions |
+| `source/scenes/parliamentary_affairs/` | Election, credential, oil-committee, and deputy actions |
+| `source/scenes/post_event.scene.dry` | Calendar, shared reducers, and tagged-event routing |
 | `source/scenes/status.scene.dry` | Visible state |
+| `source/scenes/research_library.scene.dry` | Special-scene research interface |
+| `source/scenes/campaign_ending.scene.dry` | Score presentation and causal recap |
 | `source/qdisplays/` | Shared human-readable quality displays |
 | `web/` | Reproducible Dynamic SPD-style browser overlay |
 | `docs/research/events/` | Claim-level research records |
 
-## Near-term extension order
+## v0.1 release boundary
 
-1. Add an event deck and an SPD-style event-resolution pass in `post_event`.
-2. Implement the October 1949 protest sequence as several sourced events and
-   decisions rather than one briefing.
-3. Add advisers as cards with a shared action cooldown.
-4. Add coalition factions and faction-specific dissent.
-5. Implement Sixteenth Majles constituencies and candidates.
-   The complete research baseline is
-   [`docs/research/SIXTEENTH_MAJLES_LEDGER.md`](research/SIXTEENTH_MAJLES_LEDGER.md);
-   implementation must preserve its separate `return_date`,
-   `credential_status`, `seat_status`, `declared_party`, `dated_tendency`,
-   `dated_institutional_alignment`, `dated_caucus`, `attendance`, `votes`,
-   `source_locators`, `confidence`, and `inherited_prior` layers.
-6. Add the first oil-policy state only when the campaign reaches the relevant
-   proposals.
+The implemented release ends on 20 March 1951. Extending into Mossadegh's
+premiership would add an economic and international layer and is not an
+implicit continuation of the current reducers. Any change to the monthly
+action economy, shared-state ownership, event routing, save model, or fixed
+nationalization anchor requires a new major-divergence note before code.
+
+## Structural adoption policy for v0.1
+
+Dynamic SPD is the default implementation architecture for the first playable
+slice. The project copies its responsibility boundaries before considering a
+new system:
+
+- the browser sidebar renders status subscenes and refreshes them after content
+  changes;
+- normal action cards live in tagged decks and commit time when opened;
+- advisers are pinned cards selected through `#advisor` and share
+  `advisor_action_timer`;
+- `post_event.scene.dry` owns calendar advancement, common reducers, timer
+  ticks, bounds, and event discovery;
+- historical events own their eligibility through the `event` tag,
+  `view-if`, `priority`, and `max-visits`;
+- the monarch has distinct relationship and resistance state rather than being
+  collapsed into a national popularity value; and
+- parliamentary state is centrally summarized for the status UI.
+
+Iranian adaptations change the data, not those boundaries. Mohammad Reza Shah
+occupies the structural role that Hindenburg occupies in SPD, but Iranian royal
+power must be sourced to the constitutional and institutional record rather
+than inheriting presidential mechanics. The Majles occupies the structural
+role of the Reichstag, but it does not inherit a nationwide proportional-vote
+algorithm or stable party caucuses. Its authoritative model keeps constituency
+returns, credentials, usable seats, dated alignments, attendance, and observed
+votes separate, following
+[`SIXTEENTH_MAJLES_LEDGER.md`](research/SIXTEENTH_MAJLES_LEDGER.md) and
+[`PARLIAMENTARY_CONTROL.md`](research/PARLIAMENTARY_CONTROL.md).
+
+Changing any of these responsibility boundaries requires the major-divergence
+plan described above. Adding Iran-specific records or event effects within the
+boundaries does not.
 
 ## Candidate divergences
 
@@ -169,6 +213,10 @@ easier to inspect, balance, and compare with SPD.
 | Hand, recurring decks, and turn selection | `source/scenes/main.scene.dry` |
 | Post-card event routing and shared updates | `source/scenes/post_event.scene.dry` |
 | Numerical state display | `source/scenes/status.scene.dry` |
+| Pinned advisers and shared adviser cooldown | `source/scenes/advisors/wels.scene.dry`, `source/scenes/main.scene.dry` |
+| Monarch relationship and resistance | `source/scenes/root.scene.dry`, `source/qdisplays/hindenburg_angry.qdisplay.dry`, `source/scenes/post_event.scene.dry` |
+| Parliamentary state and display | `source/scenes/root.scene.dry`, `source/scenes/status.scene.dry`, `source/scenes/election_algorithm.scene.dry` |
+| Tagged historical event | `source/scenes/events/black_thursday.scene.dry` |
 | Party-affairs action pattern | `source/scenes/party_affairs/media.scene.dry` |
 | Browser shell and responsive styling | `out/html/index.html`, `out/html/game.js`, `out/html/game.css` |
 | Inline political colors | `source/scenes/**/*.scene.dry`, especially `source/scenes/main.scene.dry` |

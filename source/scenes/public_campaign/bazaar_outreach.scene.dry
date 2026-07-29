@@ -1,0 +1,19 @@
+title: Bazaar Outreach
+new-page: true
+is-card: true
+tags: public_campaign
+view-if: bazaar_outreach_timer <= 0
+on-arrival: month_actions += 1; bazaar_outreach_timer = 4
+
+= Bazaar Outreach
+
+- @bazaar_oil: Organize around national control of oil
+- @bazaar_constitution: Organize around constitutional government
+
+@bazaar_oil
+on-arrival: religious_network_relation += 4; religious_network_organization += 4; oil_coalition_support += 3
+go-to: post_event
+
+@bazaar_constitution
+on-arrival: religious_network_relation += 3; religious_network_dissent -= 2; constitutional_legitimacy += 2; organizational_reach += 2
+go-to: post_event

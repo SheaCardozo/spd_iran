@@ -1,10 +1,15 @@
 title: Post Event
 new-page: true
 on-arrival: {!
-if (Q.month_actions >= 1) {
+if (Q.month_actions >= 1 && !Q.campaign_complete) {
     Q.time += 1;
+    Q.months_advanced += 1;
     Q.month_actions = 0;
-    Q.month += 1;
+    if (Q.year === 1951 && Q.month === 3) {
+        Q.march_action_complete = 1;
+    } else {
+        Q.month += 1;
+    }
 
     if (Q.month >= 13) {
         Q.month = 1;
@@ -13,30 +18,143 @@ if (Q.month_actions >= 1) {
     }
 
     for (var timer of Q.timers) {
-        var timerName = timer + '_timer';
-        if (Q[timerName] > 0) {
-            Q[timerName] -= 1;
-        }
+        var timerName = timer + "_timer";
+        if (Q[timerName] > 0) Q[timerName] -= 1;
     }
+
+    // Seeded variation is deliberately small and limited to reporting and
+    // constituency-pressure fields. It cannot select or suppress events.
+    var x = Q.rng_state >>> 0;
+    x ^= (x << 13); x ^= (x >>> 17); x ^= (x << 5);
+    Q.rng_state = x >>> 0;
+    Q.last_minor_variation = (Q.rng_state % 5) - 2;
+    Q.report_reliability = 50 + Q.last_minor_variation;
+    Q.constituency_pressure = 50 + Q.last_minor_variation;
 }
 
-// Keep prototype qualities within their intended display range.
 var boundedQualities = [
-    'coalition_cohesion',
-    'constitutional_legitimacy',
-    'public_mandate',
-    'organizational_reach',
-    'political_intelligence',
-    'mossadegh_authority',
-    'iran_party_relation',
-    'toilers_relation',
-    'muslim_warriors_relation',
-    'court_relation'
+    "constitutional_legitimacy", "public_mandate", "organizational_reach",
+    "press_capacity", "political_intelligence",
+    "parliamentary_procedure_legitimacy", "oil_coalition_support",
+    "mossadegh_authority", "report_reliability", "constituency_pressure",
+    "shah_relation", "shah_resistance", "shah_court_capacity",
+    "shah_electoral_influence"
 ];
-
+var factionPrefixes = [
+    "iran_party", "toilers", "independent_nationalists", "religious_network"
+];
+for (var prefix of factionPrefixes) {
+    boundedQualities.push(prefix + "_strength");
+    boundedQualities.push(prefix + "_relation");
+    boundedQualities.push(prefix + "_dissent");
+    boundedQualities.push(prefix + "_organization");
+}
 for (var quality of boundedQualities) {
     if (Q[quality] < 0) Q[quality] = 0;
     if (Q[quality] > 100) Q[quality] = 100;
 }
+
+var avgStrength = 0;
+var avgRelation = 0;
+var avgDissent = 0;
+var avgOrganization = 0;
+for (var faction of factionPrefixes) {
+    avgStrength += Q[faction + "_strength"];
+    avgRelation += Q[faction + "_relation"];
+    avgDissent += Q[faction + "_dissent"];
+    avgOrganization += Q[faction + "_organization"];
+}
+avgStrength /= factionPrefixes.length;
+avgRelation /= factionPrefixes.length;
+avgDissent /= factionPrefixes.length;
+avgOrganization /= factionPrefixes.length;
+Q.coalition_cohesion = Math.round(
+    (avgStrength * 0.25) + (avgRelation * 0.35) +
+    ((100 - avgDissent) * 0.25) + (avgOrganization * 0.15)
+);
+
+Q.majles_returns_recorded = 0;
+Q.majles_credentials_approved = 0;
+Q.majles_usable_members = 0;
+Q.majles_national_front_returns = 0;
+Q.majles_national_front_usable = 0;
+for (var place of Q.majles_places) {
+    if (place.scenario.current_return === "returned") Q.majles_returns_recorded += 1;
+    if (place.scenario.credential === "approved") Q.majles_credentials_approved += 1;
+    if (place.scenario.usability === "usable") Q.majles_usable_members += 1;
+    if (place.scenario.support === "national_front") {
+        if (place.scenario.current_return === "returned") Q.majles_national_front_returns += 1;
+        if (place.scenario.usability === "usable") Q.majles_national_front_usable += 1;
+    }
+}
+Q.senate_usable_members = 0;
+for (var senatePlace of Q.senate_places) {
+    if (senatePlace.scenario.usability === "usable") Q.senate_usable_members += 1;
+}
+
+Q.ending_coalition = Math.round(
+    (Q.coalition_cohesion * 0.40) + (avgRelation * 0.30) +
+    ((100 - avgDissent) * 0.30)
+);
+Q.ending_legitimacy = Math.round(Q.constitutional_legitimacy);
+var nfRepresentation = Math.min(100, (Q.majles_national_front_usable / 8) * 100);
+Q.ending_parliament = Math.round(
+    (nfRepresentation * 0.35) + (Q.oil_coalition_support * 0.40) +
+    (Q.parliamentary_procedure_legitimacy * 0.25)
+);
+Q.ending_public = Math.round(
+    (Q.public_mandate * 0.40) + (Q.organizational_reach * 0.40) +
+    (Q.press_capacity * 0.20)
+);
+Q.ending_scores = {
+    coalition_durability: Q.ending_coalition,
+    constitutional_legitimacy: Q.ending_legitimacy,
+    parliamentary_capacity: Q.ending_parliament,
+    public_organization: Q.ending_public
+};
+Q.decision_flags = {
+    front_structure: Q.front_structure,
+    election_strategy: Q.election_strategy,
+    credentials_strategy: Q.credentials_strategy,
+    oil_terms_position: Q.oil_terms_position,
+    razmara_response: Q.razmara_response,
+    active_advisors: Q.active_advisors.slice()
+};
+Q.event_flags = {
+    hazhir: Q.hazhir_seen,
+    front_formed: Q.front_formed,
+    tehran_rerun: Q.tehran_rerun_seen,
+    chambers_open: Q.chambers_open_seen,
+    credentials: Q.credentials_seen,
+    oil_committee: Q.oil_committee_formed,
+    supplemental_campaign: Q.supplemental_campaign_seen,
+    committee_rejection: Q.gass_golshayan_rejected_committee,
+    majles_rejection: Q.gass_golshayan_rejected_majles,
+    razmara_confrontation: Q.razmara_confrontation_seen,
+    razmara_assassination: Q.razmara_assassination_seen,
+    nationalization_majles: Q.nationalization_approved_majles,
+    nationalization_senate: Q.nationalization_approved_senate
+};
+
+if (Q.ending_coalition >= 65 && Q.ending_legitimacy >= 65 && Q.ending_parliament >= 60) {
+    Q.ending_name = "A Constitutional Coalition";
+} else if (Q.ending_parliament >= 70 && (Q.ending_coalition < 60 || Q.ending_public < 60)) {
+    Q.ending_name = "A Parliamentary Vanguard";
+} else if (Q.ending_public >= 70) {
+    Q.ending_name = "A Movement of the Streets";
+} else {
+    Q.ending_name = "A Fragile Nationalization";
+}
+
+Q.has_event = 0;
+var eventScene = this.game.scenes["post_event.events_choice"];
+var eventChoices = this._compileChoices(eventScene);
+if (eventChoices && eventChoices.length > 0 && eventChoices[0].title != "Continue...") {
+    Q.has_event = 1;
+}
 !}
-go-to: main
+go-to: events_choice if has_event = 1; campaign_ending if campaign_complete = 1; main if has_event = 0 and campaign_complete = 0
+
+@events_choice
+
+- #event

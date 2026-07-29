@@ -1,0 +1,21 @@
+title: Public Meetings
+new-page: true
+is-card: true
+tags: public_campaign
+view-if: public_meetings_timer <= 0
+on-arrival: month_actions += 1; public_meetings_timer = 3
+
+= Public Meetings
+
+- @meetings_tehran: Concentrate scarce organizers in Tehran
+- @meetings_network: Coordinate several smaller meetings
+
+@meetings_tehran
+choose-if: resources >= 1
+unavailable-subtitle: Requires one resource.
+on-arrival: resources -= 1; public_mandate += 6; press_capacity += 2; shah_resistance += 2
+go-to: post_event
+
+@meetings_network
+on-arrival: organizational_reach += 4; independent_nationalists_organization += 2; toilers_organization += 2
+go-to: post_event

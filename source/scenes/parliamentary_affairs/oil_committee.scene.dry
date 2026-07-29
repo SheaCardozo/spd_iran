@@ -1,0 +1,19 @@
+title: Oil Committee Preparation
+new-page: true
+is-card: true
+tags: parliamentary_affairs
+view-if: oil_committee_preparation_timer <= 0 and majles_convened = 1
+on-arrival: month_actions += 1; oil_committee_preparation_timer = 5
+
+= Oil Committee Preparation
+
+- @oil_terms: Compare proposal terms one by one
+- @oil_coalition: Build a cross-faction committee majority
+
+@oil_terms
+on-arrival: political_intelligence += 4; parliamentary_procedure_legitimacy += 3; oil_terms_position = "Term-by-term national control"
+go-to: post_event
+
+@oil_coalition
+on-arrival: oil_coalition_support += 6; independent_nationalists_relation += 2; religious_network_relation += 2
+go-to: post_event

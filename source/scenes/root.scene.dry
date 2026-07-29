@@ -7,66 +7,419 @@ new-page: true
 
 = The Last Majles
 
-## Iran, 1949–1953
+## A National Front campaign, 1949–1951
 
-You represent the coordinating leadership of the
-{!<span class="term term-national-front">!}National Front{!</span>!}. Build an
-effective constitutional opposition, hold together a diverse coalition, and
-prepare for the struggle over representative government and Iranian control
-of the oil industry.
+Version 0.1.0
 
-- @start_game: Start game
-- @about: About this prototype
+Build a constitutional coalition through the disputed Sixteenth Majles
+election and the struggle over oil nationalization. Historical nationalization
+remains fixed; your decisions determine the organization and legitimacy that
+survive it.
+
+- @start_game: Begin the Historical Scenario
+- @historical_primer: Historical Primer
+- @about: About this release
+
+@historical_primer
+new-page: true
+on-arrival: {!
+if (typeof window !== "undefined" && window.location) {
+    window.location.assign("timeline.html");
+}
+!}
+
+= Historical Primer
+
+Opening the historical primer. If it does not open automatically,
+<a href="timeline.html">continue to the primer</a>.
+
+- @start_menu: Return to title
 
 @start_game
 new-page: true
 on-arrival: {!
 Q.started = 1;
+Q.release_version = "0.1.0";
+Q.save_schema_version = 1;
+Q.scenario_id = "historical";
 
-// Calendar: October 1949. As in SPD, one normal action advances one month.
-Q.time = 1;
+// A URL seed makes a complete decision path replayable. Xorshift32 in
+// post_event advances this state only for whitelisted minor variation.
+var requestedSeed = 0;
+var hasRequestedSeed = 0;
+if (typeof window !== "undefined" && window.location) {
+    var seedMatch = window.location.search.match(/[?&]seed=([0-9]+)/);
+    if (seedMatch) {
+        var parsedSeed = Number(seedMatch[1]);
+        if (parsedSeed >= 0 && parsedSeed <= 4294967295) {
+            requestedSeed = parsedSeed >>> 0;
+            hasRequestedSeed = 1;
+        }
+    }
+}
+Q.run_seed = hasRequestedSeed ? requestedSeed : ((Math.random() * 4294967296) >>> 0);
+Q.rng_state = Q.run_seed === 0 ? 1831565813 : Q.run_seed;
+// Deck shuffling is deterministic and identical across run seeds. The public
+// seed is reserved for the explicitly whitelisted bounded variation below.
+Q.deck_rng_state = 19491014;
+Q.debug_mode = 0;
+if (typeof window !== "undefined" && window.location && /[?&]debug=1/.test(window.location.search)) {
+    Q.debug_mode = 1;
+}
+Q.last_minor_variation = 0;
+Q.report_reliability = 50;
+Q.constituency_pressure = 50;
+
+// Prologue takes place before the monthly clock and may move any starting
+// quality by no more than five points.
+Q.prologue_complete = 0;
+Q.prologue_stage = 1;
+Q.prologue_crown_modifier = 0;
+Q.prologue_legitimacy_modifier = 0;
+Q.prologue_organization_modifier = 0;
+Q.prologue_intelligence_modifier = 0;
+
+Q.time = 0;
 Q.year = 1949;
 Q.month = 10;
 Q.month_actions = 0;
+Q.months_advanced = 0;
+Q.march_action_complete = 0;
+Q.campaign_complete = 0;
 
-// Coalition resources. These are prototype balance values, not historical data.
-Q.resources = 2;
-Q.dues = 3;
-Q.coalition_cohesion = 50;
+Q.resources = 5;
+Q.dues = 2;
 Q.constitutional_legitimacy = 50;
 Q.public_mandate = 35;
-Q.organizational_reach = 20;
-Q.political_intelligence = 20;
-
-// Named relationships remain numerical during the SPD-baseline phase.
+Q.organizational_reach = 25;
+Q.press_capacity = 30;
+Q.political_intelligence = 25;
+Q.parliamentary_procedure_legitimacy = 40;
+Q.oil_coalition_support = 30;
 Q.mossadegh_authority = 60;
-Q.iran_party_relation = 55;
-Q.toilers_relation = 40;
-Q.muslim_warriors_relation = 35;
-Q.court_relation = 15;
 
-// Card cooldowns.
-Q.coalition_meeting_timer = 0;
-Q.press_coordination_timer = 0;
-Q.electoral_committee_timer = 0;
-Q.timers = [
-    'coalition_meeting',
-    'press_coordination',
-    'electoral_committee'
+// Coalition components own the mutable faction state. Aggregate cohesion is
+// derived in post_event and never changed directly by content.
+Q.iran_party_strength = 45;
+Q.iran_party_relation = 55;
+Q.iran_party_dissent = 25;
+Q.iran_party_organization = 45;
+Q.toilers_strength = 35;
+Q.toilers_relation = 45;
+Q.toilers_dissent = 35;
+Q.toilers_organization = 35;
+Q.independent_nationalists_strength = 50;
+Q.independent_nationalists_relation = 55;
+Q.independent_nationalists_dissent = 25;
+Q.independent_nationalists_organization = 30;
+Q.religious_network_strength = 40;
+Q.religious_network_relation = 40;
+Q.religious_network_dissent = 40;
+Q.religious_network_organization = 45;
+Q.coalition_cohesion = 50;
+
+// Crown state follows SPD's Hindenburg responsibility boundary: scenes change
+// conduct; the reducer bounds and reports it.
+Q.shah_relation = 20;
+Q.shah_resistance = 35;
+Q.shah_court_capacity = 55;
+Q.shah_electoral_influence = 60;
+
+Q.front_formed = 0;
+Q.front_structure = "Not yet settled";
+Q.election_strategy = "Not yet settled";
+Q.credentials_strategy = "Not yet settled";
+Q.razmara_response = "Not yet reached";
+Q.oil_terms_position = "Constitutional control";
+Q.parliamentary_deck_unlocked = 0;
+Q.majles_convened = 0;
+Q.senate_convened = 0;
+Q.oil_committee_formed = 0;
+Q.gass_golshayan_rejected_committee = 0;
+Q.gass_golshayan_rejected_majles = 0;
+Q.nationalization_approved_committee = 0;
+Q.nationalization_approved_majles = 0;
+Q.nationalization_approved_senate = 0;
+
+// Historical proposals and the player's floor remain distinct structured
+// records. Null means unknown or disputed, never a midpoint.
+Q.oil_proposals = {
+    gass_golshayan: {
+        ownership_recognition: "AIOC concession retained",
+        operational_control: "AIOC",
+        marketing: "AIOC",
+        compensation_scope: null,
+        interim_finance: "Supplemental royalty and payment provisions",
+        personnel_authority: null,
+        duration_review: "Within the 1933 concession framework",
+        uncertainty_note: "Detailed disputed terms require claim-level consultation."
+    },
+    nationalization_principle: {
+        ownership_recognition: "Iranian national ownership",
+        operational_control: "Transfer required; implementation unsettled at this endpoint",
+        marketing: null,
+        compensation_scope: null,
+        interim_finance: null,
+        personnel_authority: null,
+        duration_review: "Principle enacted; implementation deferred beyond v0.1",
+        uncertainty_note: "The March principle did not settle the later implementation regime."
+    }
+};
+Q.player_oil_minimums = {
+    ownership_recognition: "Iranian national ownership",
+    operational_control: "Accountable Iranian authority",
+    marketing: null,
+    compensation_scope: "Lawful claims only",
+    interim_finance: null,
+    personnel_authority: null,
+    duration_review: "Reviewable by Iranian constitutional institutions"
+};
+
+// Every authorized place exists from campaign start. Historical evidence and
+// scenario state are separate objects. Unknown evidence remains null.
+Q.majles_places = [];
+for (var m = 1; m <= 136; m += 1) {
+    Q.majles_places.push({
+        id: "m16-" + ("000" + m).slice(-3),
+        place_number: m,
+        historical: {
+            constituency: null,
+            route: "elected",
+            return: null,
+            credential: null,
+            seat_status: null,
+            declared_organization: null,
+            dated_alignment: null,
+            attendance: null,
+            observed_votes: null,
+            locators: {
+                route: "SUP-007, Sixteenth Majles proceedings; place register",
+                confidence: "SIXTEENTH_MAJLES_LEDGER.md, Scope and method"
+            },
+            confidence: "D",
+            inherited_prior: null
+        },
+        scenario: {
+            current_return: "pending",
+            credential: "pending",
+            usability: "unavailable",
+            attendance: "unknown",
+            support: "uncommitted",
+            player_influence: 0
+        }
+    });
+}
+var majlesRosterEvidence = [
+    ["Abadeh",null], ["Arak","Hossein Khakbaz"], ["Arak","Yusef Shokra'i"], ["Ardabil","Ahmad Vahhabzadeh"],
+    ["Arasbaran / Ahar","Ali-Akbar Emami-Ahari"], ["Isfahan","Taqi Boroumand"], ["Isfahan","Mojtaba Dowlatabadi"], ["Isfahan","Abolfath Qahreman, Sardar A'zam"],
+    ["Armenians, south","Petros Abkar"], ["Armenians, north","Aram Budaghian"], ["Zoroastrians","Rostam Giv"], ["Chaldeans","Dr Musa Baral"],
+    ["Iranshahr / Fahraj / Baluchistan","Mehdi Aryab"], ["Babol / Babolfurush","Abbas Eslami"], ["Babol","Dr Ali Jalali"], ["Babol","Musa Goudarzi"],
+    ["Bojnord","Ardeshir Shadlu → Nasrollah Shadlu"], ["Borujerd","Seyyed Mohammad Tabataba'i, Soltan al-Olama"], ["Borujerd","Qasem Fuladvand"], ["Bam","Ali-Akbar Salar Behzadi"],
+    ["Bandar Pahlavi","Mahmoud Mahmoudi"], ["Bandar Abbas","Dr Mostafa Mosbahzadeh"], ["Bushehr","Shokrollah Safavi"], ["Bushehr","Dr Hassan Alavi"],
+    ["Behbahan / Kohgiluyeh","Soltan-Ali Khan Soltani, Sheikh al-Islami"], ["Bijar / Garrus","Abdol-Hossein Oreng, Sheikh al-Molk"], ["Qa'enat / Birjand","Mirza Mohammad-Ali Khan Monsef"], ["Tabriz","Amir Nosratollah Eskandari"],
+    ["Tabriz","Habib Panahi"], ["Tabriz","Musa Taqa-Eslami"], ["Tabriz","Javad Ganjei"], ["Tabriz","Nasser Sadr Tabrizi"],
+    ["Tabriz","Abdol-Hossein Mojtahedi"], ["Tabriz","Dr Yusef Mojtahedi"], ["Tabriz","Ali-Asghar Sartipzadeh"], ["Tabriz","Dr Seyyed Ahmad Emami"],
+    ["Tabriz","Vali-zadeh Javanshiri"], ["Torbat Heydariyeh","Emad al-Din Torbati"], ["Tehran","Dr Mohammad Mossadegh"], ["Tehran","Dr Mozaffar Baghai Kermani"],
+    ["Tehran","Seyyed Hossein Makki"], ["Tehran","Seyyed Abol-Hassan Haerizadeh"], ["Tehran","Abdol-Qadir Azad"], ["Tehran","Jamal Emami-Kho'i"],
+    ["Tehran","Dr Seyyed Ali Shayegan"], ["Tehran","Mahmoud Nariman"], ["Tehran","Seyyed Mohammad-Sadeq Tabataba'i"], ["Tehran","Javad Masoudi"],
+    ["Tehran","Seyyed Ali Behbahani"], ["Jahrom","Abolfazl Khaledi"], ["Jiroft","Sadra Saber-Hosseini"], ["Luristan / Khorramabad","Mohammad-Ali Ghazanfari"],
+    ["Luristan / Khorramabad","Mohammad-Ali Sadr-Keshavarz"], ["Khorramshahr","Dr Abdol-Hossein Raji"], ["Khalkhal","Ahmad Dehqan"], ["Khalkhal","Seyyed Hamdollah Zaka'i"],
+    ["Khoy / Maku / Salmas","Nour al-Din Emami-Kho'i"], ["Khoy / Maku / Salmas","Mir Majid Mousavi"], ["Dorud","Hassan Mokarram"], ["Dezful","Hossein Farhoudi"],
+    ["Dasht-e Gorgan and dependencies","Mohammad Akhund Gerjani / Gorgani"], ["Bani Taraf / Dasht-e Mishan / Susangerd","Mir Majid Moqarrab"], ["Damavand","Mohammad-Ali Masoudi"], ["Rasht","Hassan Akbar"],
+    ["Rasht","Abol-Qasem Amini"], ["Rezaieh","Mohsen Afshar-Sadeqi"], ["Rafsanjan","Mehdi Mo'inzadeh-Bagheri"], ["Zabol / Sistan","Amir-Hossein Khozaymeh Alam"],
+    ["Zanjan","Mohammad-Hassan Amir-Afshari"], ["Zanjan","Mohammad Zolfaqari"], ["Zanjan","Nasser Zolfaqari"], ["Sari / Tonekabon","Abdol-Saheb Safa'i-Haeri"],
+    ["Sari / Tonekabon","Dr Nosratollah Kalasi"], ["Saveh / Zarand","Seyyed Mehdi Pirasteh"], ["Sabzevar","Mirza Ali Bozorgnia"], ["Sabzevar","Dr Ahmad Nabavi"],
+    ["Sarab / Garmerud / Mianeh","Ahmad Bahadori"], ["Saqqez / Baneh","Mohammad Abbasi"], ["Semnan / Damghan","Javad Ameri"], ["Sanandaj","Nasser-Qoli Ardalan"],
+    ["Sanandaj","Mohammad-Reza Asaf"], ["Sanandaj","Abdol-Hamid Sanandaji"], ["Sirjan","Ahmad Nazerzadeh-Kermani"], ["Shahroud","Gholamreza Fuladvand"],
+    ["Shushtar","Mohammad Abrishamkar"], ["Shahreza","Dr Mohammad-Ali Hedayati"], ["Shahreza / Qomsheh","Dr Gholamreza Kian"], ["Shahrekord / Bakhtiari",null],
+    ["Shahriar / Savojbolagh / Karaj","Baha al-Din Kahbod"], ["Fars / Shiraz","Reza Hekmat, Sardar Fakher"], ["Fars","Ali-Mohammad Dehqan"], ["Fars","Abol-Hassan Razavi"],
+    ["Fars","Mehdi Sadrzadeh"], ["Fars","Lotfali Khan Moaddel"], ["Talesh / Gorganrud","Haj Aqa Reza Rafi"], ["Tun / Tabas / Ferdows / Golshan","Mohsen Gonabadi"],
+    ["Fasa","Morteza Hekmat"], ["Fasa","Abbasqoli Arab Sheibani"], ["Quchan","Mohammad-Ali Nasirian"], ["Firuzabad / Khamseh tribes","Khosrow Qashqai"],
+    ["Qazvin","Asghar Saheb Jam'"], ["Qazvin","Abol-Qasem Faqihzadeh"], ["Qom","Abolfazl Towlit"], ["Quchan","Manuchehr Teymourtash"],
+    ["Kashan / Natanz","Mohammad-Kazem Saleh-Sheibani"], ["Kashan / Natanz","Allahyar Saleh"], ["Kashmar","Abdol-Vahhab Eqbal"], ["Kerman, second place",null],
+    ["Kermanshah","Aziz A'zam Zanganeh"], ["Kermanshah","Hedayatollah Khan Papiri"], ["Kermanshah","Abolfath Doulatchahi"], ["Kermanshah","Abbas Qobadian"],
+    ["Gorgan","Seyyed Mohammad-Ali Shoushtari"], ["Golpayegan / Khansar","Dr Abdollah Moazzami"], ["Lar","Abdol-Rahman Faramarzi"], ["Langarud / Lahijan","Gholam-Hossein Ebtehaj"],
+    ["Kangavar / Sonqor / Salavat","Shahab Khosravani"], ["Maragheh","Fath-Ali Khan Afshar"], ["Maragheh","Ahmad Hamidiyeh"], ["Meshkinshahr / Khiyav","Abol-Hassan Hakimi"],
+    ["Mashhad / Khorasan","Samad Soudavar"], ["Mashhad","Mohsen Taheri"], ["Mashhad","Ahmad Qureshi"], ["Mashhad","Sa'id Mokarram"],
+    ["Nahavand / Tuyserkan / Dowlatabad / Malayer","Esma'il Khan Zafri"], ["Nahavand / Tuyserkan / Dowlatabad / Malayer","Hashem Khan Malek-Madani"], ["Savojbolagh / Bukri / Mahabad",null], ["Na'in","Dr Abdol-Hossein Taba"],
+    ["Najafabad",null], ["Nishapur","Mohsen Nabavi"], ["Khvar / Varamin / Ivanki","Mohammad-Reza Ashtiani-zadeh"], ["Hamadan","Gholam-Hossein Amir Qara-Gozlu"],
+    ["Hamadan","Mirza Hassan Khan Mokhber Farahmand, Mokhber Hozur"], ["Yazd","Dr Sheikh Hadi Taheri"], ["Yazd","Hossein Kour-Oghli"], ["Yazd","Mohammad Herati"]
 ];
+for (var rosterIndex = 0; rosterIndex < majlesRosterEvidence.length; rosterIndex += 1) {
+    var rosterPlace = Q.majles_places[rosterIndex];
+    var rosterEvidence = majlesRosterEvidence[rosterIndex];
+    rosterPlace.historical.constituency = rosterEvidence[0];
+    rosterPlace.historical.return = rosterEvidence[1];
+    rosterPlace.historical.seat_status = rosterEvidence[1] === null ?
+        "No completed return" : "Official return recorded";
+    rosterPlace.historical.locators.constituency = "SUP-051, Sixteenth-Majles roster, pp. 1–11";
+    rosterPlace.historical.locators.return = "SUP-051, Sixteenth-Majles roster, pp. 1–11";
+    rosterPlace.historical.locators.seat_status = "SUP-051, Sixteenth-Majles roster, pp. 1–11";
+    rosterPlace.historical.locators.route = "SUP-051, Sixteenth-Majles roster, pp. 1–11";
+    rosterPlace.historical.confidence = "A";
+}
+var nationalFrontEvidence = [
+    [39, "Tehran", "Mohammad Mossadegh", "National Front chair"],
+    [40, "Tehran", "Mozaffar Baghai", "National Front / Toilers' Party"],
+    [41, "Tehran", "Hossein Makki", "National Front"],
+    [42, "Tehran", "Abol-Hassan Haerizadeh", "National Front"],
+    [43, "Tehran", "Abdol-Qadir Azad", "National Front"],
+    [45, "Tehran", "Ali Shayegan", "National Front"],
+    [46, "Tehran", "Mahmoud Nariman", "National Front"],
+    [106, "Kashan / Natanz", "Allahyar Saleh", "National Front / Iran Party"]
+];
+for (var evidenceRow of nationalFrontEvidence) {
+    var evidencePlace = Q.majles_places[evidenceRow[0] - 1];
+    evidencePlace.historical.constituency = evidenceRow[1];
+    evidencePlace.historical.return = evidenceRow[2];
+    evidencePlace.historical.credential = evidenceRow[0] === 106 ?
+        "Approved 18 May 1950" : "Approved 1 June 1950";
+    evidencePlace.historical.seat_status = "Returned and credentialed";
+    evidencePlace.historical.declared_organization = evidenceRow[3];
+    evidencePlace.historical.dated_alignment = evidenceRow[3] + ", 1950";
+    evidencePlace.historical.locators.constituency = "SUP-051, pp. 1–11";
+    evidencePlace.historical.locators.return = "SUP-051, pp. 1–11";
+    evidencePlace.historical.locators.credential = evidenceRow[0] === 106 ?
+        "SUP-007, session 25, 18 May 1950" :
+        "SUP-007, session 30, 1 June 1950";
+    evidencePlace.historical.locators.seat_status = evidencePlace.historical.locators.credential;
+    evidencePlace.historical.locators.declared_organization = "MAJ-S2, ch. 5, pp. 250–267";
+    evidencePlace.historical.locators.dated_alignment = "MAJ-S2, ch. 5, pp. 250–267";
+    evidencePlace.historical.locators.confidence = "SIXTEENTH_MAJLES_LEDGER.md, Scope and method";
+    evidencePlace.historical.confidence = "B";
+}
+Q.senate_places = [];
+for (var s = 1; s <= 60; s += 1) {
+    Q.senate_places.push({
+        id: "s1-" + ("00" + s).slice(-2),
+        place_number: s,
+        historical: {
+            constituency: null,
+            route: s <= 30 ? "appointed" : "elected",
+            return: null,
+            credential: null,
+            seat_status: null,
+            declared_organization: null,
+            dated_alignment: null,
+            attendance: null,
+            observed_votes: null,
+            locators: {
+                route: "MAJ-S13, ch. 3, pp. 118–153",
+                confidence: "MAJ-S13, ch. 3, pp. 118–153"
+            },
+            confidence: "C",
+            inherited_prior: null
+        },
+        scenario: {
+            current_return: "pending",
+            credential: "pending",
+            usability: "unavailable",
+            attendance: "unknown",
+            support: "uncommitted",
+            player_influence: 0
+        }
+    });
+}
+var senateRosterEvidence = [
+    ["Tehran","Nasrollah Saba"], ["Tehran","Dr Qasem Qasemzadeh"], ["Tehran","Maj-Gen Azizollah Zarghami"], ["Tehran","Lt-Gen Mohammad Nakhjavan"],
+    ["Tehran","Lt-Gen Ahmad Amir-Ahmadi"], ["Tehran","Ali Haqnevis"], ["Tehran","Nasrollah Khalatbari"], ["Tehran","Anushirvan Sepahbodi"],
+    ["Tehran","Dr Mahmoud Hesabi → Ali Dashti"], ["Tehran","Dr Amir A'lam"], ["Tehran","Sadeq Sadeq"], ["Tehran","Abdol-Mehdi Tabataba'i"],
+    ["Tehran","Dr Sadeq Rezazadeh-Shafaq"], ["Tehran","Seyyed Baqer Kazemi"], ["Tehran","Seyyed Javad Emami, Zahir al-Islam"], ["Isfahan","Seyyed Kazem Jalili"],
+    ["Ahvaz","Mohammad-Ali Nezam-Mafi"], ["Tabriz","Abolfath Valatabar"], ["Tabriz","Mostafa Adl → Ali Hay'at"], ["Rasht","Isa Sorush"],
+    ["Rezaieh","Mohammad Sa'ed-Maraghe'i → Seyyed Mehdi Farrukh"], ["Sari","Dr Esmail Sang"], ["Shiraz","Lt-Gen Amanollah Jahanbani"], ["Shiraz","Mohammad Nasser Qashqai"],
+    ["Kerman","Mohammad-Mehdi Nahvi"], ["Kermanshah","Ali Divanbeigi"], ["Qazvin","Ali Moqaddam"], ["Mashhad","Hassan Masoudi-Khorasani"],
+    ["Mashhad","Badi' al-Zaman Foruzanfar"], ["Hamadan","Maj-Gen Fazlollah Zahedi"], ["Tehran","Dr Ahmad Matin-Daftari"], ["Tehran","Dr Isa Sadiq"],
+    ["Tehran","Mohammad Soruri"], ["Tehran","Seyyed Hassan Taqizadeh"], ["Tehran","Javad Bushehri → Abolfazl Lesani"], ["Tehran","Abol-Qasem Najm"],
+    ["Tehran","Abdol-Hossein Nikpur"], ["Tehran","Hossein-Ali Kamal-Hedayat"], ["Tehran","Abbas Masoudi"], ["Tehran","Ebrahim Khajeh-Nouri"],
+    ["Tehran","Hassan Naqavi"], ["Tehran","Dr Saeed Malek"], ["Tehran","Dr Mehdi Malekzadeh"], ["Tehran","Ebrahim Hakimi"],
+    ["Tehran","Asadollah Yamin-Esfandiyari"], ["Isfahan","Mehdi Moshir-Fatemi"], ["Ahvaz","Amir-Hossein Ilkhan-Zafar"], ["Tabriz","Asadollah Mamagani"],
+    ["Tabriz","Dr Qasem Ahari"], ["Rasht","Hossein Sami'i"], ["Rezaieh","Javad Emami-Kho'i"], ["Sari","Hossein Dadgar"],
+    ["Shiraz","Ebrahim Qavam"], ["Shiraz","Mohammad-Mehdi Namazi"], ["Kerman","Ataollah Rouhi"], ["Kermanshah","Farajollah Asef"],
+    ["Qazvin","Ebrahim Afkhami"], ["Mashhad","Seyyed Mohammad Tadayyon → Sultan Ahmad Rad"], ["Mashhad","Seyyed Ali Moayyed-Sabti"], ["Hamadan","Morteza-Qoli Bayat, Saham al-Soltan"]
+];
+for (var senateIndex = 0; senateIndex < senateRosterEvidence.length; senateIndex += 1) {
+    var senateEvidencePlace = Q.senate_places[senateIndex];
+    senateEvidencePlace.historical.constituency = senateRosterEvidence[senateIndex][0];
+    senateEvidencePlace.historical.return = senateRosterEvidence[senateIndex][1];
+    senateEvidencePlace.historical.seat_status = "Official opening roster";
+    senateEvidencePlace.historical.locators.constituency = "SUP-053, First-Senate section, appointed and elected roster tables";
+    senateEvidencePlace.historical.locators.return = "SUP-053, First-Senate section, appointed and elected roster tables";
+    senateEvidencePlace.historical.locators.seat_status = "SUP-053, First-Senate section, appointed and elected roster tables";
+    senateEvidencePlace.historical.locators.route = "SUP-053, First-Senate section, appointed and elected roster tables";
+    senateEvidencePlace.historical.locators.confidence = "SUP-053, First-Senate section, appointed and elected roster tables";
+    senateEvidencePlace.historical.confidence = "A";
+}
+Q.majles_authorized_places = Q.majles_places.length;
+Q.senate_authorized_places = Q.senate_places.length;
+Q.majles_returns_recorded = 0;
+Q.majles_credentials_approved = 0;
+Q.majles_usable_members = 0;
+Q.majles_national_front_returns = 0;
+Q.majles_national_front_usable = 0;
+Q.senate_usable_members = 0;
+Q.majles_phase = "Disputed Sixteenth Majles election";
+
+Q.active_advisors = ["mossadegh", "fatemi", "saleh"];
+Q.advisor_mossadegh_active = 1;
+Q.advisor_fatemi_active = 1;
+Q.advisor_saleh_active = 1;
+Q.advisor_maleki_active = 0;
+Q.advisor_makki_active = 0;
+Q.advisor_kashani_active = 0;
+Q.advisor_action_timer = 0;
+Q.advisor_roster_timer = 0;
+
+Q.coalition_meeting_timer = 0;
+Q.membership_committees_timer = 0;
+Q.fundraising_timer = 0;
+Q.press_coordination_timer = 0;
+Q.public_meetings_timer = 0;
+Q.bazaar_outreach_timer = 0;
+Q.legal_defense_timer = 0;
+Q.electoral_committee_timer = 0;
+Q.credential_petitions_timer = 0;
+Q.oil_committee_preparation_timer = 0;
+Q.deputy_outreach_timer = 0;
+Q.timers = [
+    "advisor_action", "advisor_roster", "coalition_meeting",
+    "membership_committees", "fundraising", "press_coordination",
+    "public_meetings", "bazaar_outreach", "legal_defense",
+    "electoral_committee", "credential_petitions",
+    "oil_committee_preparation", "deputy_outreach"
+];
+
+Q.ending_coalition = 0;
+Q.ending_legitimacy = 0;
+Q.ending_parliament = 0;
+Q.ending_public = 0;
+Q.ending_name = "";
+Q.ending_scores = {
+    coalition_durability: 0,
+    constitutional_legitimacy: 0,
+    parliamentary_capacity: 0,
+    public_organization: 0
+};
+Q.decision_flags = {};
+Q.event_flags = {};
+Q.hazhir_seen = 0;
+Q.tehran_rerun_seen = 0;
+Q.chambers_open_seen = 0;
+Q.credentials_seen = 0;
+Q.supplemental_campaign_seen = 0;
+Q.razmara_confrontation_seen = 0;
+Q.razmara_assassination_seen = 0;
 !}
-go-to: palace_protest
+go-to: prologue_attempt
 
 @about
 new-page: true
 
-= About this prototype
+= About v0.1
 
-This build establishes the same basic implementation rhythm as *Dynamic Social
-Democracy*: initialize a large shared state, draw organizational action cards,
-take one strategic action per month, update the simulation, and resolve events.
-
-The historical campaign is not implemented yet. Numerical effects in this build
-are tuning placeholders rather than estimates of historical quantities.
+This public demo covers the National Front's formation, the disputed Sixteenth
+Majles, and the passage of the nationalization principle through the Senate on
+20 March 1951. It uses one monthly action, three action decks, three active
+advisers, tagged event routing, and centralized state reducers adapted from
+*Dynamic Social Democracy*.
 
 - @start_menu: Return to title

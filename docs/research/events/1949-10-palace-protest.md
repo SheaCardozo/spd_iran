@@ -5,7 +5,7 @@
 | Claim | Location in game | Source |
 | --- | --- | --- |
 | Opposition politicians organized around Mohammad Mossadegh to protest manipulation of the Sixteenth Majles election. | `source/scenes/events/1949/palace_protest.scene.dry` | [`MAJ-S1`](../AVAILABLE_SOURCES.md#maj-s1), Fakhreddin Azimi, *Iran: The Crisis of Democracy, 1941–1953* (St. Martin's Press, 1989), pp. 207–08; [`SUP-001`](../AVAILABLE_SOURCES.md#sup-001), Mari Nukii, “Protest Events in the Tehran Bazaar during the Oil Nationalization Movement of Iran,” *Annals of Japan Association for Middle East Studies* 28, no. 1 (2012), p. 10. |
-| The cooperation produced the National Front and initially centered representative elections. | `source/scenes/events/1949/palace_protest.scene.dry` | [`MAJ-S1`](../AVAILABLE_SOURCES.md#maj-s1), Azimi, *Iran*, p. 208; [`SUP-001`](../AVAILABLE_SOURCES.md#sup-001), Nukii, “Protest Events,” p. 10. |
+| The cooperation produced the National Front and initially centered representative elections. | `source/scenes/events/1949/palace_protest.scene.dry`; `source/scenes/events/1949/front_formation.scene.dry`; `source/scenes/advisors/mossadegh.scene.dry` | [`MAJ-S1`](../AVAILABLE_SOURCES.md#maj-s1), Azimi, *Iran*, p. 208; [`SUP-001`](../AVAILABLE_SOURCES.md#sup-001), Nukii, “Protest Events,” p. 10. |
 
 The major Azimi scan (`MAJ-S1`) and Nukii publisher PDF (`SUP-001`) are
 archived locally. Their catalog entries record editions, provenance,
@@ -21,6 +21,9 @@ political history and contemporary Iranian reporting, the playable scene uses
 
 The action-card effects following this event are prototype balance abstractions.
 Their numerical values are not presented as historical measurements.
+The two Front-structure choices are explicitly counterfactual organizational
+framings. Their numerical effects do not claim that the historical Front made
+either choice in this form.
 
 The two generalized claims now meet the project's book-first requirement
 through Azimi, pp. 207–08. Expansion into an exact-day chronology, participant

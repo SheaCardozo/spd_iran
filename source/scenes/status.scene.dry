@@ -2,47 +2,110 @@ title: Status
 new-page: true
 is-special: true
 
-= Status
+= Campaign
 
-[+ month : month +] [+ year +]
+[+ month : month +] [+ year +] — turn [+ months_advanced +] of 18
 
-Resources available: [+ resources +]
+Resources: [+ resources +]
 
-Major commitments this month: [+ month_actions +] / 1
+[? if advisor_action_timer <= 0: Adviser consultation: available ?]
+[? if advisor_action_timer > 0: Adviser consultation: available in [+ advisor_action_timer +] months ?]
 
-Constitutional legitimacy: [+ constitutional_legitimacy +]
+Constitutional legitimacy:
+[? if constitutional_legitimacy < 35: weak ?]
+[? if constitutional_legitimacy >= 35 and constitutional_legitimacy < 65: contested ?]
+[? if constitutional_legitimacy >= 65: strong ?]
 
-Public mandate: [+ public_mandate +]
+Public mandate:
+[? if public_mandate < 35: narrow ?]
+[? if public_mandate >= 35 and public_mandate < 65: growing ?]
+[? if public_mandate >= 65: broad ?]
 
-*All values are visible prototype state, following the SPD implementation
-baseline. They are not historical measurements.*
+[? if debug_mode = 1: **Debug values:** legitimacy [+ constitutional_legitimacy +], mandate [+ public_mandate +], reach [+ organizational_reach +], press [+ press_capacity +]. ?]
 
-- @main: Return to the monthly briefing
+- @main: Return
 
 @coalition
 title: Coalition
 
 = Coalition
 
-Cohesion: [+ coalition_cohesion +]
+Cohesion:
+[? if coalition_cohesion < 35: fractured ?]
+[? if coalition_cohesion >= 35 and coalition_cohesion < 65: workable ?]
+[? if coalition_cohesion >= 65: durable ?]
 
-Organizational reach: [+ organizational_reach +]
-
-Political intelligence: [+ political_intelligence +]
-
-Mossadegh's authority: [+ mossadegh_authority +]
-
-@relations
-title: Relations
-
-= Relations
+Structure: [+ front_structure +]
 
 {!<span class="term term-constitutionalist">!}Iran Party{!</span>!}:
-[+ iran_party_relation +]
+[? if iran_party_relation < 35: estranged ?]
+[? if iran_party_relation >= 35 and iran_party_relation < 65: cooperative ?]
+[? if iran_party_relation >= 65: closely aligned ?]
 
 {!<span class="term term-social-democratic">!}Toilers' Party{!</span>!}:
-[+ toilers_relation +]
+[? if toilers_relation < 35: estranged ?]
+[? if toilers_relation >= 35 and toilers_relation < 65: cooperative ?]
+[? if toilers_relation >= 65: closely aligned ?]
 
-Society of Muslim Warriors: [+ muslim_warriors_relation +]
+{!<span class="term term-national-front">!}Independent nationalists{!</span>!}:
+[? if independent_nationalists_relation < 35: estranged ?]
+[? if independent_nationalists_relation >= 35 and independent_nationalists_relation < 65: cooperative ?]
+[? if independent_nationalists_relation >= 65: closely aligned ?]
 
-Court: [+ court_relation +]
+{!<span class="term term-religious">!}Religious network{!</span>!}:
+[? if religious_network_relation < 35: estranged ?]
+[? if religious_network_relation >= 35 and religious_network_relation < 65: cooperative ?]
+[? if religious_network_relation >= 65: closely aligned ?]
+
+[? if debug_mode = 1: **Debug:** cohesion [+ coalition_cohesion +]; Iran [+ iran_party_relation +]/[+ iran_party_dissent +]; Toilers [+ toilers_relation +]/[+ toilers_dissent +]; independents [+ independent_nationalists_relation +]/[+ independent_nationalists_dissent +]; religious [+ religious_network_relation +]/[+ religious_network_dissent +]. ?]
+
+@majles
+title: Parliament
+
+= Majles and Senate
+
+Phase: [+ majles_phase +]
+
+Majles returns: [+ majles_returns_recorded +] / 136
+
+Credentials approved: [+ majles_credentials_approved +]
+
+Usable members: [+ majles_usable_members +]
+
+Usable National Front members: [+ majles_national_front_usable +]
+
+Senate usable members: [+ senate_usable_members +] / 60
+
+Parliamentary capacity:
+[? if ending_parliament < 35: marginal ?]
+[? if ending_parliament >= 35 and ending_parliament < 65: consequential ?]
+[? if ending_parliament >= 65: commanding ?]
+
+@crown
+title: Crown
+
+= Crown
+
+{!<span class="term term-royalist">!}Mohammad Reza Shah{!</span>!}
+
+Relationship:
+[? if shah_relation < 35: hostile ?]
+[? if shah_relation >= 35 and shah_relation < 65: guarded ?]
+[? if shah_relation >= 65: workable ?]
+
+Resistance:
+[? if shah_resistance < 35: limited ?]
+[? if shah_resistance >= 35 and shah_resistance < 65: substantial ?]
+[? if shah_resistance >= 65: severe ?]
+
+Court capacity:
+[? if shah_court_capacity < 35: constrained ?]
+[? if shah_court_capacity >= 35 and shah_court_capacity < 65: capable ?]
+[? if shah_court_capacity >= 65: dominant ?]
+
+Electoral influence:
+[? if shah_electoral_influence < 35: constrained ?]
+[? if shah_electoral_influence >= 35 and shah_electoral_influence < 65: substantial ?]
+[? if shah_electoral_influence >= 65: pervasive ?]
+
+[? if debug_mode = 1: **Debug values:** relation [+ shah_relation +], resistance [+ shah_resistance +], capacity [+ shah_court_capacity +], influence [+ shah_electoral_influence +]. ?]

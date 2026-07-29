@@ -1,0 +1,28 @@
+title: Khalil Maleki
+new-page: true
+is-pinned-card: true
+tags: advisor
+view-if: advisor_maleki_active = 1
+
+= {!<span class="term term-social-democratic">!}Khalil Maleki{!</span>!}
+
+Maleki advises on social-democratic organization and internal political
+education.
+
+- @maleki_organizers
+- @maleki_program
+- @main: Return
+
+@maleki_organizers
+title: Train organizers
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+on-arrival: advisor_action_timer = 6; toilers_organization += 5; organizational_reach += 2
+go-to: main
+
+@maleki_program
+title: Clarify the social program
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+on-arrival: advisor_action_timer = 6; toilers_relation += 4; toilers_dissent -= 3; public_mandate += 2
+go-to: main

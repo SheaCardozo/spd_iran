@@ -1,0 +1,19 @@
+title: Fundraising
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: fundraising_timer <= 0
+on-arrival: month_actions += 1; fundraising_timer = 4
+
+= Fundraising
+
+- @fund_small: Seek many small organizational contributions
+- @fund_notables: Approach sympathetic notables
+
+@fund_small
+on-arrival: resources += 2; organizational_reach += 2; independent_nationalists_organization += 2
+go-to: post_event
+
+@fund_notables
+on-arrival: resources += 4; public_mandate -= 1; iran_party_relation += 2; toilers_dissent += 2
+go-to: post_event
