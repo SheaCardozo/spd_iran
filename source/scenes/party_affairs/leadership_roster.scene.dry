@@ -1,0 +1,42 @@
+title: Leadership Roster
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: advisor_roster_timer <= 0
+on-arrival: month_actions += 1; advisor_roster_timer = 6
+
+= Leadership Roster
+
+Select three active advisers. The roster change consumes this month's normal
+action; substantive consultations continue to share their own cooldown.
+
+- @roster_opening: Mossadegh, Fatemi, and Saleh
+- @roster_organization: Mossadegh, Maleki, and Kashani
+- @roster_parliament: Mossadegh, Makki, and Fatemi
+
+@roster_opening
+on-arrival: {!
+Q.active_advisors = ["mossadegh", "fatemi", "saleh"];
+Q.advisor_mossadegh_active = 1; Q.advisor_fatemi_active = 1;
+Q.advisor_saleh_active = 1; Q.advisor_maleki_active = 0;
+Q.advisor_makki_active = 0; Q.advisor_kashani_active = 0;
+!}
+go-to: post_event
+
+@roster_organization
+on-arrival: {!
+Q.active_advisors = ["mossadegh", "maleki", "kashani"];
+Q.advisor_mossadegh_active = 1; Q.advisor_fatemi_active = 0;
+Q.advisor_saleh_active = 0; Q.advisor_maleki_active = 1;
+Q.advisor_makki_active = 0; Q.advisor_kashani_active = 1;
+!}
+go-to: post_event
+
+@roster_parliament
+on-arrival: {!
+Q.active_advisors = ["mossadegh", "makki", "fatemi"];
+Q.advisor_mossadegh_active = 1; Q.advisor_fatemi_active = 1;
+Q.advisor_saleh_active = 0; Q.advisor_maleki_active = 0;
+Q.advisor_makki_active = 1; Q.advisor_kashani_active = 0;
+!}
+go-to: post_event

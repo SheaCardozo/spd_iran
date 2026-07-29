@@ -1,0 +1,47 @@
+title: Monthly briefing
+new-page: true
+is-hand: true
+max-cards: 5
+
+= [+ month : month +] [+ year +]
+
+The secretariat can make one major organizational commitment this month.
+Adviser consultations are separate, but all advisers share a six-month
+cooldown.
+
+[? if last_minor_variation < 0: Reports are unusually fragmentary this month. ?]
+[? if last_minor_variation = 0: Reports arrive with no unusual change in reliability. ?]
+[? if last_minor_variation > 0: Local reports are slightly clearer this month. ?]
+
+[? if year = 1950 and month >= 2 and month <= 4: **Institutional briefing:** credential approvals are proceeding in waves rather than as one settled national result. Research: SUP-007, Sixteenth Majles sessions 2–8. ?]
+[? if year = 1950 and month >= 5 and month <= 6: **Credential briefing:** later decisions on Kashan/Natanz and Tehran determine when the Front's returned cohort becomes usable in the chamber. Research: SUP-007, sessions 25 and 30. ?]
+[? if year = 1950 and month >= 7 and month <= 11: **Oil briefing:** the supplemental agreement remains under committee and public scrutiny; proposal terms are kept separate in the Library. Research: MAJ-S3, chapter 1; MAJ-S14, chapter 1. ?]
+[? if year = 1950 and month = 12: **Comparative report:** the Saudi-Aramco arrangement is increasing pressure on the supplemental agreement, but the game does not treat unlike contracts as identical. Research: MAJ-S14, chapter 1. ?]
+[? if year = 1951 and month <= 2: **Parliamentary briefing:** rejection of the supplemental agreement has moved the dispute from revision toward the nationalization principle. Research: MAJ-S3, chapter 1. ?]
+
+- @party_affairs
+- @public_campaign
+- @parliamentary_affairs
+- #advisor
+- @research_library: Research Library
+- @status: Full status
+
+@party_affairs
+title: Party Affairs
+is-deck: true
+
+- #party_affairs
+
+@public_campaign
+title: Public Campaign
+is-deck: true
+view-if: front_formed = 1
+
+- #public_campaign
+
+@parliamentary_affairs
+title: Parliamentary Affairs
+is-deck: true
+view-if: parliamentary_deck_unlocked = 1
+
+- #parliamentary_affairs

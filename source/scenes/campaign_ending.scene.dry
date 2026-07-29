@@ -1,0 +1,51 @@
+title: Campaign ending
+new-page: true
+
+= 20 March 1951
+
+**[+ ending_name +]**
+
+The Senate has approved the nationalization principle. These scores evaluate
+the political organization that reaches the fixed historical anchor.
+
+* Coalition durability: [+ ending_coalition +] / 100
+* Constitutional legitimacy: [+ ending_legitimacy +] / 100
+* Parliamentary capacity: [+ ending_parliament +] / 100
+* Public organization: [+ ending_public +] / 100
+
+Run seed: [+ run_seed +]
+
+Release: [+ release_version +]
+
+= Causal recap
+
+Front structure: [+ front_structure +]
+
+Election strategy: [+ election_strategy +]
+
+Credential strategy: [+ credentials_strategy +]
+
+Oil position: [+ oil_terms_position +]
+
+Response to Razmara: [+ razmara_response +]
+
+Active adviser roster at the finish:
+[? if advisor_mossadegh_active = 1: Mossadegh. ?]
+[? if advisor_fatemi_active = 1: Fatemi. ?]
+[? if advisor_saleh_active = 1: Saleh. ?]
+[? if advisor_maleki_active = 1: Maleki. ?]
+[? if advisor_makki_active = 1: Makki. ?]
+[? if advisor_kashani_active = 1: Kashani, as an independent counterpart. ?]
+
+Crown relationship:
+[? if shah_relation < 35: hostile. ?]
+[? if shah_relation >= 35 and shah_relation < 65: guarded. ?]
+[? if shah_relation >= 65: workable. ?]
+
+Crown resistance:
+[? if shah_resistance < 35: limited. ?]
+[? if shah_resistance >= 35 and shah_resistance < 65: substantial. ?]
+[? if shah_resistance >= 65: severe. ?]
+
+- @research_library: Review the Research Library
+- @root.start_menu: Begin a new seeded campaign

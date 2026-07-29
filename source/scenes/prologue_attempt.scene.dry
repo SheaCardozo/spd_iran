@@ -1,0 +1,83 @@
+title: The attempt on the Shah
+new-page: true
+
+= 4 February 1949
+
+An assailant wounds {!<span class="term term-royalist">!}Mohammad Reza
+Shah{!</span>!} at Tehran University. The attack opens an immediate crisis:
+claims about responsibility are uncertain, while coercive measures are already
+being prepared.
+
+- @attempt_caution: Insist publicly that evidence precede accusation
+- @attempt_quiet: Gather reports before making a public intervention
+
+@attempt_caution
+on-arrival: constitutional_legitimacy += 2; prologue_legitimacy_modifier += 2
+go-to: prologue_ban
+
+You establish a constitutional standard without claiming knowledge the
+opposition does not possess.
+
+@attempt_quiet
+on-arrival: political_intelligence += 2; prologue_intelligence_modifier += 2
+go-to: prologue_ban
+
+The network records conflicting reports and marks what remains unverified.
+
+@prologue_ban
+new-page: true
+
+= Martial law and the Tudeh ban
+
+Martial law follows the attack. The Tudeh Party is outlawed and opposition
+press and political activity face new restrictions.
+
+- @ban_legal_record: Build a legal record of emergency measures
+- @ban_contacts: Preserve discreet organizational contacts
+
+@ban_legal_record
+on-arrival: constitutional_legitimacy += 2; prologue_legitimacy_modifier += 2; shah_relation -= 1; prologue_crown_modifier -= 1
+go-to: prologue_constituent
+
+@ban_contacts
+on-arrival: organizational_reach += 2; prologue_organization_modifier += 2; political_intelligence += 1; prologue_intelligence_modifier += 1
+go-to: prologue_constituent
+
+@prologue_constituent
+new-page: true
+
+= The constituent assembly
+
+The 1949 constituent assembly strengthens the Shah's constitutional position,
+including a power to dissolve the Majles under revised Article 48.
+
+- @assembly_procedure: Challenge the procedure and preserve a constitutional objection
+- @assembly_risk: Concentrate on the practical risk of dissolution
+
+@assembly_procedure
+on-arrival: constitutional_legitimacy += 1; prologue_legitimacy_modifier += 1; shah_resistance += 2; prologue_crown_modifier -= 2
+go-to: prologue_senate
+
+@assembly_risk
+on-arrival: political_intelligence += 2; prologue_intelligence_modifier += 2
+go-to: prologue_senate
+
+@prologue_senate
+new-page: true
+
+= A new Senate and a disputed election
+
+Preparations for the first Senate coincide with the election for the Sixteenth
+Majles. Opposition politicians must decide how to organize before scattered
+complaints become a common campaign.
+
+- @senate_committee: Prepare a common election-monitoring committee
+- @senate_constitution: Prepare a public constitutional appeal
+
+@senate_committee
+on-arrival: organizational_reach += 1; prologue_organization_modifier += 1; prologue_complete = 1
+go-to: palace_protest
+
+@senate_constitution
+on-arrival: public_mandate += 1; prologue_complete = 1
+go-to: palace_protest

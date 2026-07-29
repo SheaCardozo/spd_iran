@@ -1,0 +1,24 @@
+title: Deputy Outreach
+new-page: true
+is-card: true
+tags: parliamentary_affairs
+view-if: deputy_outreach_timer <= 0 and majles_convened = 1
+on-arrival: month_actions += 1; deputy_outreach_timer = 3
+
+= Deputy Outreach
+
+- @deputies_procedure: Emphasize parliamentary procedure
+- @deputies_oil: Emphasize nationalization
+- @deputies_constituency: Share constituency-pressure reports
+
+@deputies_procedure
+on-arrival: parliamentary_procedure_legitimacy += 4; constitutional_legitimacy += 2
+go-to: post_event
+
+@deputies_oil
+on-arrival: oil_coalition_support += 5; public_mandate += 2
+go-to: post_event
+
+@deputies_constituency
+on-arrival: political_intelligence += 2; organizational_reach += 2; oil_coalition_support += 3
+go-to: post_event

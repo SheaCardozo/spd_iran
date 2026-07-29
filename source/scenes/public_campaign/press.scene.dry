@@ -1,0 +1,24 @@
+title: Coordinate the Press
+new-page: true
+is-card: true
+tags: public_campaign
+view-if: press_coordination_timer <= 0
+on-arrival: month_actions += 1; press_coordination_timer = 4
+
+= Coordinate the Press
+
+- @press_constitution: Lead with constitutional procedure
+- @press_oil: Explain the oil case
+- @press_plural: Preserve room for coalition disagreement
+
+@press_constitution
+on-arrival: press_capacity += 4; constitutional_legitimacy += 3; public_mandate += 2
+go-to: post_event
+
+@press_oil
+on-arrival: press_capacity += 4; oil_coalition_support += 4; independent_nationalists_relation += 2
+go-to: post_event
+
+@press_plural
+on-arrival: press_capacity += 3; toilers_dissent -= 2; religious_network_dissent -= 2; political_intelligence += 2
+go-to: post_event

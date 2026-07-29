@@ -1,0 +1,20 @@
+title: Electoral Committee
+new-page: true
+is-card: true
+tags: parliamentary_affairs
+view-if: electoral_committee_timer <= 0 and majles_convened = 0
+on-arrival: month_actions += 1; electoral_committee_timer = 5
+card-image: img/majlis_1940s.jpg
+
+= Electoral Committee
+
+- @electoral_reports: Collect return and interference reports
+- @electoral_case: Prepare constitutional petitions
+
+@electoral_reports
+on-arrival: political_intelligence += 5; organizational_reach += 3; independent_nationalists_organization += 2
+go-to: post_event
+
+@electoral_case
+on-arrival: constitutional_legitimacy += 4; parliamentary_procedure_legitimacy += 3; iran_party_relation += 2
+go-to: post_event

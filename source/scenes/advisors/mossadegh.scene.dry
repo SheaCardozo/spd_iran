@@ -1,0 +1,37 @@
+title: Mohammad Mossadegh
+new-page: true
+is-pinned-card: true
+tags: advisor
+view-if: advisor_mossadegh_active = 1
+
+= {!<span class="term term-mossadegh">!}Mohammad Mossadegh{!</span>!}
+
+Mossadegh is the central coordinating figure in the electoral protest that
+brings the opposition coalition together. His intervention can help settle an
+immediate question, but it cannot erase the coalition's differences.
+
+- @constitutional_case
+- @hear_tendencies
+- @main: Return to the monthly briefing
+
+@constitutional_case
+title: State the constitutional case
+subtitle: Use the shared adviser action.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+on-arrival: advisor_action_timer = 6; constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2; mossadegh_authority += 1
+go-to: main
+
+Mossadegh restates the coalition's demand for representative elections and
+constitutional government.
+
+@hear_tendencies
+title: Hear the coalition's competing tendencies
+subtitle: Use the shared adviser action.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+on-arrival: advisor_action_timer = 6; political_intelligence += 3; iran_party_dissent -= 1; toilers_dissent -= 1; independent_nationalists_dissent -= 1; religious_network_dissent -= 1
+go-to: main
+
+The discussion does not produce agreement, but it clarifies what the
+cooperating circles expect from the emerging Front.

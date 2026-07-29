@@ -1,0 +1,26 @@
+title: Coalition Meeting
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: coalition_meeting_timer <= 0
+on-arrival: month_actions += 1; coalition_meeting_timer = 3
+
+= Coalition Meeting
+
+Settle a shared priority without pretending the Front is a disciplined party.
+
+- @meeting_constitution: Reaffirm the narrow constitutional program
+- @meeting_dissent: Hear dissent before fixing the agenda
+- @meeting_oil: Put oil coordination on the agenda
+
+@meeting_constitution
+on-arrival: iran_party_relation += 4; independent_nationalists_relation += 3; toilers_dissent += 1; constitutional_legitimacy += 2
+go-to: post_event
+
+@meeting_dissent
+on-arrival: toilers_relation += 3; religious_network_relation += 3; iran_party_dissent -= 2; independent_nationalists_dissent -= 2; political_intelligence += 2
+go-to: post_event
+
+@meeting_oil
+on-arrival: independent_nationalists_relation += 4; religious_network_relation += 2; oil_coalition_support += 3
+go-to: post_event
