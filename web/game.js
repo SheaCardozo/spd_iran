@@ -30,6 +30,10 @@
     parliamentary_procedure_legitimacy: 'parliamentary procedure',
     press_capacity: 'press capacity',
     public_mandate: 'public mandate',
+    support_bazaar: 'bazaar support',
+    support_professional: 'professional support',
+    support_provincial: 'provincial support',
+    support_workers: 'wage-earner support',
     razmara_response: 'Razmara response',
     religious_network_dissent: 'religious-network dissent',
     religious_network_organization: 'religious-network organization',
@@ -148,14 +152,14 @@
       return Boolean(
         state &&
         state.qualities &&
-        state.qualities.save_schema_version === 3
+        state.qualities.save_schema_version === 4
       );
     }
 
     function rejectOldSave() {
       window.alert(
-        'This save uses a retired campaign chronology and is incompatible. ' +
-        'Start a new Historical Scenario beginning in January 1949.'
+        'This save predates the v0.2 Iran Party and constituency systems and ' +
+        'is incompatible. Start a new Historical Scenario beginning in January 1949.'
       );
     }
 
@@ -433,11 +437,10 @@
   window.displayPinnedCards = function(cards) {
     if (!cards.length) return;
     var q = window.dendryUI.dendryEngine.state.qualities;
-    var description = 'Advisers';
-    if (!q.front_formed) {
-      description += ' — no consultations currently available';
-    } else if (q.advisor_action_timer > 0) {
-      description += ' — available in ' + q.advisor_action_timer + ' months';
+    var description = 'Adviser action — available';
+    if (q.advisor_action_timer > 0) {
+      description = 'Adviser action — available in ' +
+        q.advisor_action_timer + ' months';
     }
     $('#content').append($('<hr>'));
     $('#content').append(
@@ -460,7 +463,7 @@
     if (
       scene != 'root' &&
       q &&
-      q.save_schema_version === 3 &&
+      q.save_schema_version === 4 &&
       !window.justLoaded
     ) {
         window.dendryUI.autosave();
@@ -472,6 +475,8 @@
 
   window.updateSidebar = function() {
       $('#qualities').empty();
+      var q = dendryUI.dendryEngine.state.qualities;
+      $('#coalition_tab').text(q.front_formed ? 'Coalition' : 'Opposition');
       var scene = dendryUI.game.scenes[window.statusTab];
       if (!scene) return;
       if (scene.onArrival) {
@@ -479,6 +484,111 @@
       }
       var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
       $('#qualities').append(dendryUI.contentToHTML.convert(displayContent));
+      if (window.statusTab === 'status.majles') {
+          window.renderChamberVisualizations(q);
+      }
+  };
+
+  function seatCategory(place, chamber) {
+    if (place.scenario.current_return !== 'returned') return 'pending';
+    if (place.scenario.credential === 'rejected') return 'rejected';
+    if (place.scenario.credential !== 'approved') return 'credential-pending';
+    if (place.scenario.usability !== 'usable') return 'unavailable';
+    if (chamber === 'majles' && place.scenario.support === 'national_front') {
+      return 'front';
+    }
+    if (chamber === 'senate') return place.historical.route;
+    return 'usable';
+  }
+
+  function seatLabel(place, chamber) {
+    var evidence = place.historical;
+    var scenario = place.scenario;
+    var person = evidence.return || scenario.scenario_return_label ||
+      'return not recorded';
+    return [
+      chamber === 'majles' ? 'Majles' : 'Senate',
+      'place ' + place.place_number,
+      evidence.constituency || 'constituency not recorded',
+      person,
+      'return: ' + scenario.current_return,
+      'credential: ' + scenario.credential,
+      'status: ' + scenario.usability,
+      'campaign influence: ' + scenario.player_influence,
+    ].join(' — ');
+  }
+
+  function chamberSvg(places, chamber) {
+    var namespace = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(namespace, 'svg');
+    svg.setAttribute('class', 'chamber-chart ' + chamber + '-chart');
+    svg.setAttribute('viewBox', '0 0 240 128');
+    svg.setAttribute('role', 'img');
+    svg.setAttribute(
+      'aria-label',
+      (chamber === 'majles' ? 'Majles' : 'Senate') +
+        ' place-by-place chamber diagram',
+    );
+    var rings = chamber === 'majles' ? 6 : 4;
+    var weights = [];
+    var totalWeight = 0;
+    for (var ring = 0; ring < rings; ring += 1) {
+      var radius = 42 + (ring * 12);
+      weights.push(radius);
+      totalWeight += radius;
+    }
+    var counts = [];
+    var assigned = 0;
+    for (var countRing = 0; countRing < rings; countRing += 1) {
+      var count = countRing === rings - 1
+        ? places.length - assigned
+        : Math.round(places.length * weights[countRing] / totalWeight);
+      counts.push(count);
+      assigned += count;
+    }
+    var placeIndex = 0;
+    counts.forEach(function(ringCount, ringIndex) {
+      var radius = 42 + (ringIndex * 12);
+      for (var index = 0; index < ringCount; index += 1) {
+        var angle = Math.PI - (Math.PI * index / Math.max(1, ringCount - 1));
+        var place = places[placeIndex++];
+        var circle = document.createElementNS(namespace, 'circle');
+        circle.setAttribute('cx', String(120 + Math.cos(angle) * radius));
+        circle.setAttribute('cy', String(116 - Math.sin(angle) * radius));
+        circle.setAttribute('r', chamber === 'majles' ? '3.2' : '4.2');
+        circle.setAttribute('class', 'chamber-seat seat-' + seatCategory(place, chamber));
+        circle.setAttribute('tabindex', '0');
+        circle.setAttribute('data-place-id', place.id);
+        circle.setAttribute('aria-label', seatLabel(place, chamber));
+        var title = document.createElementNS(namespace, 'title');
+        title.textContent = seatLabel(place, chamber);
+        circle.appendChild(title);
+        svg.appendChild(circle);
+      }
+    });
+    return svg;
+  }
+
+  window.renderChamberVisualizations = function(q) {
+    var container = $('<section>').addClass('chamber-visualizations');
+    container.append($('<h3>').text('Majles places'));
+    container[0].appendChild(chamberSvg(q.majles_places, 'majles'));
+    container.append(
+      $('<p>').addClass('chamber-legend').text(
+        'Gold: usable Front member · dark: other usable member · outline: ' +
+        'credential pending · pale: no return',
+      ),
+    );
+    if (q.senate_convened) {
+      container.append($('<h3>').text('Senate places'));
+      container[0].appendChild(chamberSvg(q.senate_places, 'senate'));
+      container.append(
+        $('<p>').addClass('chamber-legend').text(
+          'Green: elected · blue: appointed · pale: not yet usable',
+        ),
+      );
+    }
+    $('#qualities').append(container);
   };
 
   window.changeTab = function(newTab, tabId) {

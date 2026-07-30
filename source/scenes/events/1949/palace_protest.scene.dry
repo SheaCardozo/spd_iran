@@ -1,5 +1,7 @@
-# Source: Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
-# pp. 207–208. Choice effects are counterfactual abstractions.
+# Sources: Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
+# pp. 207–208; Ervand Abrahamian, Iran Between Two Revolutions, ch. 5,
+# pp. 250–253, which identifies Fatemi and Makki in the Committee of Twenty.
+# Choice effects are counterfactual abstractions.
 title: The Palace Protest
 subtitle: Separate election complaints become a common constitutional action
 new-page: true
@@ -7,6 +9,7 @@ tags: event
 view-if: year = 1949 and month >= 10 and front_formed = 0
 max-visits: 1
 priority: 40
+on-arrival: advisor_fatemi_available = 1; advisor_makki_available = 1
 
 = October 1949
 
@@ -21,8 +24,6 @@ The group goes to the royal palace to press that demand. It is not yet a
 disciplined party, and the protest does not give it control over the election.
 What it creates is a shared political purpose and a place where politicians
 with different organizations and constituencies can continue cooperating.
-That cooperation will become the
-{!<span class="term term-national-front">!}National Front{!</span>!}.
 
 - @begin_organizing
 

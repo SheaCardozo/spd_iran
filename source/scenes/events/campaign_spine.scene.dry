@@ -177,6 +177,20 @@ var nfIndexes = [38, 39, 40, 41, 42, 44, 45, 105];
 for (var i = 0; i < 136; i += 1) {
     if (vacantIndexes.indexOf(i) < 0) Q.majles_places[i].scenario.current_return = "returned";
 }
+// Historical evidence remains untouched. A sufficiently organized campaign
+// can produce counterfactual returns in places whose historical return record
+// is vacant; these begin with credentials still pending.
+var additionalReturns = 0;
+if (Q.election_campaign_capacity >= 35) additionalReturns = 1;
+if (Q.election_campaign_capacity >= 45) additionalReturns = 2;
+if (Q.election_campaign_capacity >= 55) additionalReturns = 3;
+for (var extra = 0; extra < additionalReturns; extra += 1) {
+    var extraIndex = vacantIndexes[extra];
+    Q.majles_places[extraIndex].scenario.current_return = "returned";
+    Q.majles_places[extraIndex].scenario.scenario_return_label =
+        "National Front-supported candidate (counterfactual)";
+    Q.majles_places[extraIndex].scenario.support = "national_front";
+}
 var openingCredentials = 0;
 for (var c = 0; c < 136 && openingCredentials < 98; c += 1) {
     if (vacantIndexes.indexOf(c) < 0 && nfIndexes.indexOf(c) < 0) {
@@ -294,6 +308,14 @@ for (var c = 0; c < 136 && approvedCount < 120; c += 1) {
         approvedCount += 1;
     }
 }
+var counterfactualUsable = 0;
+for (var counterfactualPlace of Q.majles_places) {
+    if (counterfactualPlace.scenario.scenario_return_label &&
+        counterfactualPlace.scenario.usability === "usable") {
+        counterfactualUsable += 1;
+    }
+}
+Q.oil_coalition_support += counterfactualUsable * 2;
 !}
 
 = May–June 1950

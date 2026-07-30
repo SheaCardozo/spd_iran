@@ -2,19 +2,20 @@
 
 *The Last Majles* is a single-player historical political simulation about
 Iran's constitutional and oil crises from 1949 to 1951. The player begins
-among separate constitutional-opposition circles and helps build the National
-Front: a coalition trying to secure representative government, establish
+with the opposition before helping build the National Front:
+a coalition trying to secure representative government, establish
 Iranian control of the oil industry, and preserve constitutional politics
 amid institutional rivalry, economic pressure, and coalition fracture.
 
-Version 0.1 is an end-to-end public demo. It begins in January 1949 and runs
+Version 0.2 is an end-to-end public demo. It begins in January 1949 and runs
 twenty-seven ordinary monthly actions through Senate approval of the
 nationalization principle on 20 March 1951. The February attempt on the Shah,
 constitutional emergency, constituent assembly, election preparations, and
 palace protest occur inside the same playable campaign as the later Front. It
-includes three action decks, six continuously pinned researched advisers, the
-complete historical event spine, structured Majles/Senate and oil records,
-save/load, a Research Library, and four conditional evaluations.
+includes three action decks, historically gated pinned advisers, qualitative
+constituency support, place-by-place Majles and Senate diagrams, transparent
+credential state, the complete historical event spine, structured chamber and
+oil records, save/load, a Research Library, and four conditional evaluations.
 
 ## Design commitments
 
@@ -113,7 +114,8 @@ project keeps the same browser behavior in `web/` because `out/` is disposable;
 
 ## Current milestone
 
-`0.1.0` covers the National Front's formation through the passage of oil
+`0.2.0` covers the opposition's pre-election work, the National Front's
+formation, and the passage of oil
 nationalization. Premiership, the implementation law, NIOC administration,
 embargo economics, Abadan, the ICJ, the Seventeenth Majles, and the 1953 coup
 remain outside this release.

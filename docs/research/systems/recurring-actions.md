@@ -10,8 +10,16 @@ networks. The Sixteenth-Majles campaign also required the coalition to work
 through elections, credentials, parliamentary procedure, public advocacy, and
 the oil dispute.
 
-The six pinned figures' narrower documented roles are controlled by their
-individual records under `docs/research/people/`.
+The pinned figures' narrower documented roles are controlled by their
+individual records under `docs/research/people/`. Mohammad Mossadegh and
+Allahyar Saleh are available at the start: Mossadegh as the constitutional
+figure at the center of the playable opposition, and Saleh through the Iran
+Party's organized work. Hossein Fatemi and Hossein Makki enter the interface
+with the documented October 1949 Committee of Twenty and palace protest.
+Ayatollah Abol-Qasem Kashani becomes an independent counterpart when the
+National Front forms. Khalil Maleki remains outside the playable adviser hand
+through the March 1951 endpoint because the current source record does not
+establish an earlier organizational entry suitable for this mechanic.
 
 ## Mechanical abstraction
 
@@ -22,11 +30,14 @@ specific undocumented meeting occurred in a particular month. Effects on
 relations, dissent, organization, legitimacy, press capacity, and support are
 scenario values rather than historical measurements.
 
-The one-action month, deck cooldowns, six continuously pinned advisers, and
+“Opposition” describes the player's political position, not the name of a
+January 1949 organization. The one-action month, deck cooldowns, historically
+gated pinned advisers, and
 six-month shared consultation cooldown are game architecture. They do not
 claim that the historical Front had an equivalent formal secretariat,
-calendar, or adviser hierarchy. Kashani remains an independent counterpart
-in the interface.
+calendar, or adviser hierarchy. Adviser visibility records availability, not
+subordination or agreement; Kashani remains an independent counterpart in the
+interface.
 
 ## Sources
 

@@ -174,6 +174,77 @@ February/May/July/October anchors, twenty-seven calendar advances, event priorit
 pre-Front card gating, save rejection, and the unchanged 20 March 1951
 terminal route.
 
+## v0.2 opposition, adviser, support, and chamber architecture
+
+Version 0.2 makes the pre-coalition player viewpoint the constitutional
+opposition. “Opposition” is a political position, not the name of a January
+1949 organization: the Iran Party, aligned politicians, newspapers, and
+personal networks remain institutionally separate. This boundary changes status presentation,
+adviser discovery, election-facing state, and persistence, but retains the
+existing monthly action economy, tagged event router, randomized Dendry decks,
+and one shared `Q` state.
+
+Dynamic SPD supplies four relevant patterns:
+
+- `source/scenes/main.scene.dry` renders a distinct adviser-action availability
+  line immediately above `#advisor`;
+- each file under `source/scenes/advisors/` remains a pinned adviser card but
+  uses a figure-specific `view-if` quality, so unavailable advisers do not
+  appear and the shared adviser cooldown does not control visibility;
+- `source/scenes/status.scene.dry` and the Polls tab in `out/html/index.html`
+  put constituency support in the persistent status interface; and
+- the Reichstag section of `source/scenes/library.scene.dry` uses a semicircle
+  seat visualization, while `source/scenes/election_algorithm.scene.dry`
+  converts demographic support into proportional seats.
+
+The Iran implementation retains the adviser availability line, conditional
+pinned cards, persistent support display, and chamber semicircle. It adapts
+them as follows:
+
+1. `player_organization` begins as `Opposition`, a description of the player's
+   political position rather than an organization. Before the November 1949 formation
+   scene, the sidebar and ordinary scene prose expose only institutions,
+   people, and alignments that presently exist. The Opposition tab becomes a
+   Coalition tab after the National Front forms.
+2. Each of the original six advisers has a separate historical-availability
+   flag. Mohammad Mossadegh and Allahyar Saleh are available at campaign
+   start. Fatemi and Makki become visible when they join the documented
+   Committee of Twenty and palace protest in October 1949. Kashani becomes an
+   independent political counterpart at Front formation; his card does not
+   imply subordination or physical presence. Maleki remains unavailable within
+   this release unless a dated source establishes his participation before the
+   March 1951 endpoint. Visibility is independent of the shared six-month
+   consultation cooldown, and the same flags can remove a figure in a future
+   release when a sourced departure occurs.
+3. The Support tab describes qualitative campaign support among social and
+   organizational constituencies. These values are scenario abstractions, not
+   retrospective opinion polls. They affect campaign reach and the
+   defensibility of individual place records; exact values appear only in
+   debug mode.
+4. Majles and Senate diagrams render all 136 and 60 place records. Their
+   categories come from return, credential, usability, documented route, and
+   mutable support state. Hover or focus exposes the place record. No
+   unsupported party label is assigned to an unknown member.
+5. Election support never passes through SPD's nationwide proportional
+   vote-to-seat algorithm. Iran's election was staggered, candidate-based, and
+   followed by credential judgments. The historical return remains in the
+   evidence object; scenario campaign influence modifies the separate scenario
+   object and the resources required to defend a returned ally's credential.
+6. Parliament status explicitly presents the pipeline **authorized place →
+   return → credential approval → attendance/usable member**. A credential
+   challenge cannot create an elected return. It can defend or delay the
+   chamber's acceptance of a returned member, and the public totals remain
+   derived from individual records.
+
+This is a major status and persistence change. Save schema 4 rejects v0.1
+saves rather than guessing adviser availability, constituency support, or
+place-level campaign influence. The migration path is to begin a new campaign;
+there is no promised public save compatibility yet. Validation must cover
+pre-formation language, adviser visibility separate from cooldown, support
+effects on scenario state without mutation of historical evidence, all 196
+visualized places, the credential pipeline, spending bounds, deterministic
+state for identical choices, and the unchanged March 1951 terminal route.
+
 ## v0.1 release boundary
 
 The implemented release ends on 20 March 1951. Extending into Mossadegh's

@@ -110,6 +110,7 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.match(index, /id="library-link"/);
   assert.match(index, /id="main_tab"/);
   assert.match(index, /id="coalition_tab"/);
+  assert.match(index, /id="support_tab"/);
   assert.match(index, /id="majles_tab"/);
   assert.match(index, /id="crown_tab"/);
   assert.match(index, />\s*Event images:/);
@@ -123,6 +124,9 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   );
   assert.match(gameJs, /function installDebugChoiceEffects\(dendryUI\)/);
   assert.match(gameJs, /function browserDebugModeRequested\(\)/);
+  assert.match(gameJs, /function chamberSvg\(places, chamber\)/);
+  assert.match(gameJs, /data-place-id/);
+  assert.match(gameCss, /\.chamber-chart\s*\{/);
   assert.match(
     gameJs,
     /state\.qualities\.debug_mode = browserDebugModeRequested\(\) \? 1 : 0/,
@@ -139,7 +143,7 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   );
   assert.ok(hasOpeningTerm('term-mossadegh', 'Mohammad Mossadegh'));
   assert.ok(hasOpeningTerm('term-parliament', 'Majles'));
-  assert.ok(hasOpeningTerm('term-national-front', 'National Front'));
+  assert.equal(hasOpeningTerm('term-national-front', 'National Front'), false);
   assert.ok(compiledGame.scenes['status.majles']);
   assert.ok(compiledGame.scenes['status.crown']);
   assert.ok(compiledGame.scenes.research_library);
@@ -663,6 +667,7 @@ test('status sidebar scenes and qdisplay compile with stable IDs', () => {
 
   assert.equal(game.scenes.status.isSpecial, true);
   assert.ok(game.scenes['status.coalition']);
+  assert.ok(game.scenes['status.support']);
   assert.ok(game.scenes['status.majles']);
   assert.ok(game.scenes['status.crown']);
   assert.match(
@@ -671,7 +676,7 @@ test('status sidebar scenes and qdisplay compile with stable IDs', () => {
   );
   assert.match(
     coalitionText,
-    /term term-social-democratic\\?">.*Toilers' Party/,
+    /term term-social-democratic\\?">.*Social-democratic organizers/,
   );
   assert.ok(game.qdisplays.month);
   assert.ok(game.qdisplays.shah_resistance);

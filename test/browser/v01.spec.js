@@ -87,17 +87,29 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   const schema = await page.evaluate(
     () => window.dendryUI.dendryEngine.state.qualities.save_schema_version,
   );
-  expect(schema).toBe(3);
+  expect(schema).toBe(4);
 
   for (const [tab, text] of [
     ['main_tab', 'Constitutional legitimacy'],
-    ['coalition_tab', 'Coalition'],
-    ['majles_tab', 'Majles and Senate'],
+    ['coalition_tab', 'Opposition'],
+    ['support_tab', 'Professional and constitutional circles'],
+    ['majles_tab', 'Majles'],
     ['crown_tab', 'Mohammad Reza Shah'],
   ]) {
     await page.locator(`#${tab}`).click();
     await expect(page.locator('#qualities')).toContainText(text);
   }
+  await page.locator('#majles_tab').click();
+  await expect(page.locator('#qualities .majles-chart .chamber-seat')).toHaveCount(136);
+  await expect(page.locator('#qualities .senate-chart')).toHaveCount(0);
+  await expect(page.locator('#qualities')).toContainText(
+    'authorized place → returned candidate → approved credential',
+  );
+  await page.evaluate(() => {
+    window.dendryUI.dendryEngine.state.qualities.senate_convened = 1;
+    window.updateSidebar();
+  });
+  await expect(page.locator('#qualities .senate-chart .chamber-seat')).toHaveCount(60);
 
   await page.locator('#library-link').click();
   await expect(page.locator('#content')).toContainText('Research Library');
@@ -108,34 +120,32 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   await page.getByRole('link', {name: 'Library'}).click();
   await page.getByRole('link', {name: 'Return', exact: true}).click();
   await expect(page.locator('#content')).toContainText(
-    'Political briefing',
+    'Opposition briefing',
   );
 
-  await expect(page.locator('ul.pinned-cards li')).toHaveCount(6);
+  await expect(page.locator('ul.pinned-cards li')).toHaveCount(2);
   await expect(
     page.locator('ul.pinned-cards .card-caption', {
       hasText: 'Mohammad Mossadegh',
-    }).locator('.term-mossadegh'),
+    }),
   ).toHaveCount(1);
+  await expect(
+    page.locator('.pinned-text-description'),
+  ).toContainText('Adviser action — available');
   await expect(
     page.locator('ul.pinned-cards .card-caption').first(),
   ).not.toContainText('<span');
-  await page.evaluate(() => {
-    const dendry = window.dendryUI.dendryEngine;
-    dendry.state.qualities.front_formed = 1;
-    dendry.goToScene('main');
-  });
   await page.locator('ul.pinned-cards li', {hasText: 'Mohammad Mossadegh'})
     .locator('a')
     .click();
   await expect(page.locator('#content')).toContainText('Mohammad Mossadegh');
   await firstAvailableChoice(page);
   await expect(page.locator('#content')).toContainText(
-    'The coalition leaves with a case',
+    'leave with a common case',
   );
   await firstAvailableChoice(page);
   await expect(page.locator('#content')).toContainText(
-    'Political briefing',
+    'Opposition briefing',
   );
 
   await page.locator('ul.decks li a').first().click();
@@ -150,7 +160,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
     const key = window.dendryUI.save_prefix + '_0';
     return JSON.parse(localStorage[key]);
   });
-  expect(saved.qualities.save_schema_version).toBe(3);
+  expect(saved.qualities.save_schema_version).toBe(4);
   expect(saved.qualities).not.toHaveProperty('run_seed');
 
   await page.evaluate(() => {
@@ -169,7 +179,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
     window.dendryUI.loadSlot(1);
   });
   await expect.poll(() => page.dialogMessages).toContainEqual(
-    expect.stringContaining('retired campaign chronology'),
+    expect.stringContaining('predates the v0.2'),
   );
 
   await page.evaluate(() => window.dendryUI.showSaveSlots());
@@ -186,7 +196,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
     () => page.evaluate(
       () => window.dendryUI.dendryEngine.state.qualities.save_schema_version,
     ),
-  ).toBe(3);
+  ).toBe(4);
 
   await page.evaluate(() => {
     window.enableDarkMode();

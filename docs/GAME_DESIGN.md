@@ -5,7 +5,7 @@
 **Document status:** pre-production proposal  
 **Intended engine:** the repository's Dendry-based narrative simulator  
 **Campaign span:** January 1949 to August 1953, with conditional epilogues
-**Recommended player role:** the collective leadership of the National Front  
+**Recommended player role:** the opposition in the current release; National Front coalition leadership in the expanded campaign
 **Historical priority:** very high; uncertainty and disagreement are to be represented, not silently resolved
 
 ---
@@ -14,7 +14,14 @@
 
 Iran between 1949 and 1953 is an excellent setting for this style of political simulation, but it cannot be made accurate by replacing German parties and names in the existing model. Iran had a constitution, elections, a parliament, cabinets, political parties, a press, and mass political mobilization. It did **not** have a stable national party system, clean nationwide vote shares, a cabinet securely responsible to parliament, or a state whose coercive institutions answered consistently to the elected government.
 
-The game should therefore be about **building and maintaining constitutional power in a divided sovereignty**. The player leads the National Front as a coalition, first in opposition and then, potentially, in government. Oil nationalization is the central policy struggle, but the deeper problem is whether popular sovereignty can be made durable when:
+The game should therefore be about **building and maintaining constitutional
+power in a divided sovereignty**. In the current January 1949 opening, the
+player coordinates the opposition without pretending it is a
+single organization. After the Front forms—and throughout a future
+expanded campaign—the player leads the National Front as a coalition, first in
+opposition and then, potentially, in government. Oil nationalization is the
+central policy struggle, but the deeper problem is whether popular sovereignty
+can be made durable when:
 
 - the Shah and court retain contested constitutional powers and informal patronage;
 - the Majles and Senate are shaped by local notables, landowners, electoral interference, and weak party discipline;
@@ -47,7 +54,12 @@ The game must not reduce the coup to a single CIA button, but it must be equally
 
 ### 1.1 Player fantasy
 
-The player is not an omniscient Mohammad Mossadegh and is not “Iran.” The player represents the **National Front leadership and its coordinating circle**. This creates three useful changes over a conventional head-of-government simulator:
+The player is not Mohammad Mossadegh as an individual and is not “Iran.” In
+the current release, the player represents the **opposition**. This is a
+political position, not a formal organization or common command. At Front
+formation the playable subject becomes the **National Front leadership and its
+coordinating circle**. This creates three useful changes over a conventional
+head-of-government simulator:
 
 1. The campaign can begin before Mossadegh becomes prime minister.
 2. Internal allies have independent interests and may leave, split, obstruct, or act without permission.
@@ -62,7 +74,10 @@ Mossadegh is the indispensable central character and, once prime minister, the p
 3. **Oil proposals have terms.** Ownership, operational control, marketing, compensation, interim finance, and legal recognition must be modeled separately.
 4. **The economy has balance sheets and lags.** Oil production, oil exports, foreign exchange, state revenue, imports, prices, employment, and payroll are related but not interchangeable.
 5. **Covert action is a network.** The coup is produced by authorization, money, propaganda, royal decrees, officers, police, street brokers, communications, and timing—not a visible progress meter.
-6. **Knowledge is situated.** The player receives reports of differing reliability. Archival truth is reserved for the research overlay and retrospective ending, not handed to the historical actors in real time.
+6. **Political information is legible.** The player sees the political
+   information required to make a decision. Disagreement and evidentiary
+   uncertainty remain attached to historical claims rather than becoming a
+   hidden intelligence statistic.
 7. **Constitutional means matter.** The score evaluates how an outcome was reached, not merely whether oil remained nationalized or Mossadegh remained in office.
 
 ### 1.3 Explicit non-goals
@@ -256,8 +271,16 @@ The game uses monthly turns for most of the campaign. Certain crises switch to w
 
 ### 5.1 The emergency and election: the shot at the university
 
-The player begins with an ordinary January hand among separate opposition
-circles. After that first action, the player observes, but does not control,
+For the current playable release, the player acts through the constitutional
+opposition. The label describes a political position, not a January 1949
+organization: the Iran Party, Mossadegh, and other aligned constitutional
+figures retain separate positions and networks. A later campaign may widen or
+replace this viewpoint,
+but v0.2 does not treat the player as identical to the Iran Party or as an
+already formed National Front.
+
+The campaign begins with an ordinary January hand among those separate
+opposition circles. After that first action, the player observes, but does not control,
 the attempt on the Shah on 4 February 1949. Its wider responsibility was
 politically contested and used to justify repression. The attempt, immediate
 emergency measures, and later constitutional and election developments arrive
@@ -827,16 +850,20 @@ An MVP should stop at September 1951 rather than build an under-researched coup.
 
 ## 11. Character and adviser design
 
-The final roster needs a dedicated prosopographical review. Initial candidates:
+The long-campaign roster needs a dedicated prosopographical review. The
+current January 1949–March 1951 release uses six pinned figures:
 
-- Mohammad Mossadegh — prime minister, coalition symbol, constitutional nationalist;
-- Hossein Fatemi — journalist, organizer, foreign minister, increasingly republican voice;
+- Mohammad Mossadegh — constitutional nationalist and the opening opposition's central figure;
+- Hossein Fatemi — journalist and organizer;
 - Allahyar Saleh — Iran Party figure and diplomat;
-- Karim Sanjabi — Iran Party organizer and constitutional politician;
-- Khalil Maleki — socialist intellectual and later Third Force leader;
-- Mozzafar Baghai — activist, newspaper politician, future opponent;
-- Hossein Makki — oil campaigner and later defector;
+- Khalil Maleki — socialist intellectual, compiled but not yet available in this release;
+- Hossein Makki — parliamentary and oil campaigner;
 - Ayatollah Abol-Qasem Kashani — independent religious-nationalist power center;
+
+Possible figures for later campaign phases include:
+
+- Karim Sanjabi — Iran Party organizer and constitutional politician;
+- Mozzafar Baghai — activist, newspaper politician, future opponent;
 - Dariush Forouhar — nationalist activist;
 - Mehdi Bazargan — engineer and NIOC-related technical/administrative perspective;
 - Gholam Hossein Sadighi — academic and ministerial perspective;

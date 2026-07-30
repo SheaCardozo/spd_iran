@@ -8,7 +8,7 @@ tags: event
 view-if: year = 1949 and month >= 11 and front_formed = 0
 max-visits: 1
 priority: 20
-on-arrival: front_formed = 1
+on-arrival: front_formed = 1; player_organization = "National Front"; advisor_kashani_available = 1
 
 = November 1949
 

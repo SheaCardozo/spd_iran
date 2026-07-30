@@ -1,10 +1,10 @@
-# Source: Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
-# chs. 5–6, especially pp. 250–267. Mechanical effects are counterfactual
-# abstractions.
+# Source: Ervand Abrahamian, Iran Between Two Revolutions, chs. 5–6,
+# especially pp. 250–267. Mechanical effects are counterfactual abstractions.
 title: <span class="term term-nationalist-social-democratic">Khalil Maleki</span>
 new-page: true
 is-pinned-card: true
 tags: advisor
+view-if: advisor_maleki_available = 1
 
 = {!<span class="term term-nationalist-social-democratic">!}Khalil Maleki{!</span>!}
 

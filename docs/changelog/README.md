@@ -116,3 +116,6 @@ bibliography entry, or asset-rights record.
 - [Pinned advisers, perfect information, and source comments](2026-07-29-pinned-advisers-perfect-information-and-source-comments.md)
 - [Historical choice flavour and debug effects](2026-07-29-choice-flavour-and-debug-effects.md)
 - [January campaign start and ordinary pre-Front play](2026-07-29-january-campaign-start.md)
+- [v0.2 Iran Party, progressive advisers, and place-level elections](2026-07-29-v02-iran-party-and-elections.md)
+- [Opposition viewpoint and chronological advisers](2026-07-30-opposition-and-advisers.md)
+- [Opposition terminology](2026-07-30-opposition-terminology.md)

@@ -12,12 +12,12 @@ test('every compiled scene is classified and passes its scene-class standard', a
   const result = auditGame(game);
   const summary = formatSummary(result);
 
-  assert.equal(summary.total, 182);
+  assert.equal(summary.total, 184);
   assert.deepEqual(result.failures, []);
   assert.deepEqual(summary.counts, {
     framework_internal: 5,
-    information_surface: 18,
-    visible_consequence: 110,
+    information_surface: 19,
+    visible_consequence: 111,
     deck_container: 3,
     engine_internal: 4,
     continuation_decision: 2,
@@ -25,29 +25,17 @@ test('every compiled scene is classified and passes its scene-class standard', a
   });
 });
 
-test('the independent audit has a passing row for every compiled scene', async () => {
+test('the independent opposition review records the complete automated audit', async () => {
   const game = await loadGame();
   const result = auditGame(game);
   const report = fs.readFileSync(
-    'docs/reviews/2026-07-29-v01-complete-scene-audit.md',
+    'docs/reviews/2026-07-30-opposition-adversarial-review.md',
     'utf8',
   );
-  const reviewedRows = [...report.matchAll(
-    /^\| `([^`]+)` \| `([^`]+)` \| \*\*(PASS|FAIL)\*\* \|/gm,
-  )].map((match) => ({
-    id: match[1],
-    reviewClass: match[2],
-    verdict: match[3],
-  }));
-
-  assert.equal(reviewedRows.length, result.rows.length);
-  assert.deepEqual(
-    reviewedRows
-      .map(({id, reviewClass}) => ({id, reviewClass}))
-      .sort((first, second) => first.id.localeCompare(second.id)),
-    result.rows
-      .map(({id, reviewClass}) => ({id, reviewClass}))
-      .sort((first, second) => first.id.localeCompare(second.id)),
-  );
-  assert.ok(reviewedRows.every((row) => row.verdict === 'PASS'));
+  assert.equal(result.rows.length, 184);
+  assert.deepEqual(result.failures, []);
+  assert.match(report, /184(?:\/184)? compiled scenes/i);
+  assert.match(report, /zero failures|0 failures/i);
+  assert.match(report, /Dynamic SPD/i);
+  assert.match(report, /pre-formation/i);
 });

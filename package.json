@@ -1,8 +1,8 @@
 {
   "name": "spd-iran",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "A historically grounded political simulation of Iran's National Front, parliament, and oil campaign, 1949–1951.",
+  "description": "A historically grounded political simulation of the opposition, National Front, parliament, and oil campaign, 1949–1951.",
   "scripts": {
     "build": "node scripts/build.js",
     "build:hosting": "npm run build && node scripts/build-hosting.js",

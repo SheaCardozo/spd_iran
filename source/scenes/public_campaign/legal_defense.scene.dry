@@ -18,6 +18,7 @@ One route gives immediate assistance; the other creates information and public
 pressure. Neither guarantees relief from the authorities.
 
 - @defense_cases
+- @defense_test_case
 - @defense_record
 
 @defense_cases
@@ -38,6 +39,23 @@ The legal work reinforces the
 claim and preserves some
 organizational continuity. The broader pattern of restrictions remains only
 partly documented.
+
+- @post_event: Continue
+
+@defense_test_case
+title: Carry a test case through every available proceeding
+subtitle: A sustained lawsuit creates a record that later defendants and petitioners can reuse
+choose-if: resources >= 2
+unavailable-subtitle: Requires 2 resources.
+on-arrival: resources -= 2; constitutional_legitimacy += 5; parliamentary_procedure_legitimacy += 4; organizational_reach += 2
+
+Counsel selects a case with a clear procedural record and pays the costs of
+filings, appearances, copied documents, and continued contact with the
+defendant's organization. The campaign refuses to promise a favorable court.
+
+Even an adverse decision now leaves a record other lawyers can cite and
+organizers can explain. The treasury bears the full cost of seeing the case
+through.
 
 - @post_event: Continue
 

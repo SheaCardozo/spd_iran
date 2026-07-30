@@ -7,6 +7,7 @@ title: <span class="term term-religious">Ayatollah Abol-Qasem Kashani</span>
 new-page: true
 is-pinned-card: true
 tags: advisor
+view-if: advisor_kashani_available = 1
 
 = {!<span class="term term-religious">!}Ayatollah Abol-Qasem Kashani{!</span>!}
 
@@ -29,8 +30,9 @@ place him physically in Tehran. ?]
 @kashani_bazaar
 title: Coordinate a bazaar appeal
 subtitle: <span class="term term-religious">Kashani</span> carries the oil appeal through the bazaar and <span class="term term-religious">religious networks</span> on his own authority
+view-if: oil_committee_formed = 1
 choose-if: advisor_action_timer <= 0 and oil_committee_formed = 1
-unavailable-subtitle: [? if oil_committee_formed = 0: Available once oil has become a common parliamentary campaign. ?][? if oil_committee_formed = 1: [+ advisor_action_timer +] months before another adviser action. ?]
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; religious_network_organization += 5; public_mandate += 3
 
 {!<span class="term term-religious">!}Kashani{!</span>!}'s intermediaries and
@@ -49,7 +51,7 @@ not to a staff apparatus under
 title: Negotiate terms of cooperation
 subtitle: The agreement identifies where cooperation ends, preserving <span class="term term-religious">Kashani</span>'s independence as well as the <span class="term term-national-front">Front</span>'s
 choose-if: advisor_action_timer <= 0 and front_formed = 1
-unavailable-subtitle: [? if front_formed = 0: Available after the common electoral protest. ?][? if front_formed = 1: [+ advisor_action_timer +] months before another adviser action. ?]
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; religious_network_relation += 5; religious_network_dissent -= 3
 
 Messages exchanged through intermediaries state what the two sides will

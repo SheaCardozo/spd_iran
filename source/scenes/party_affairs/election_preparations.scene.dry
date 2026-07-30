@@ -2,7 +2,7 @@
 # pp. 250–253, which dates the Sixteenth-Majles election period from July
 # 1949; Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
 # pp. 207–208. All player operations and effects are counterfactual.
-title: Election Preparations
+title: <span class="term term-constitutionalist">Iran Party</span> Election Preparations
 new-page: true
 is-card: true
 tags: party_affairs
@@ -15,35 +15,35 @@ on-arrival: month_actions += 1; election_preparations_timer = 3
 {!<span class="term term-parliament">!}Majles{!</span>!}. ?]
 [? if month >= 7: The election to the Sixteenth
 {!<span class="term term-parliament">!}Majles{!</span>!} is under way. ?]
-Candidates and organizations opposed to administrative interference do not
-yet possess a common slate, monitoring body, or campaign command.
+The {!<span class="term term-constitutionalist">!}Iran Party{!</span>!} has
+prospective candidates and local contacts, but it does not command the other
+constitutional politicians entering the contest.
 
 They can nevertheless coordinate one practical task before scattered
 complaints harden into a general election crisis.
 
 - @election_candidates
 - @election_observers
-- @election_correspondents
+- @election_campaign
 
 @election_candidates
 title: Compare prospective candidates
 subtitle: Private coordination reduces collisions among constitutional candidates without presenting them as one slate
-on-arrival: independent_nationalists_relation += 3; iran_party_relation += 2; public_mandate += 1
+on-arrival: independent_nationalists_relation += 3; iran_party_relation += 2; public_mandate += 1; support_professional += 3
 
 Representatives compare constituencies, local connections, and the claims
 different candidates intend to make. Some avoid competing directly where
 doing so would divide the same limited body of supporters.
 
 The talks improve coordination without producing a national list or binding
-any participant to a {!<span class="term term-national-front">!}Front{!</span>!}
-that does not yet exist.
+any participant to another organization's discipline.
 
 - @post_event: Continue
 
 @election_observers
 title: Prepare common observer forms
 subtitle: Comparable records strengthen later objections, even though observers cannot compel honest administration
-on-arrival: parliamentary_procedure_legitimacy += 3; organizational_reach += 2
+on-arrival: parliamentary_procedure_legitimacy += 3; organizational_reach += 2; support_provincial += 2
 
 Lawyers devise a short form recording the place, date, witness, reported act,
 and available document. Candidates distribute it where they have trustworthy
@@ -54,16 +54,18 @@ certify the election or prevent interference.
 
 - @post_event: Continue
 
-@election_correspondents
-title: Concentrate on Tehran and provincial correspondence
-subtitle: A wider reporting circuit reveals recurring complaints while leaving candidate coordination unresolved
-on-arrival: organizational_reach += 3; press_capacity += 2
+@election_campaign
+title: Finance a focused party campaign
+subtitle: Printing, travel, and meeting rooms give the party's candidates a clearer presence in selected constituencies
+choose-if: resources >= 2
+unavailable-subtitle: Requires 2 resources.
+on-arrival: resources -= 2; organizational_reach += 3; press_capacity += 2; support_professional += 3; support_bazaar += 2; support_provincial += 3
 
-Editors and candidates establish regular routes for reports from Tehran and
-selected provincial constituencies. Repeated methods become easier to
-distinguish from a single local grievance.
+The party pays for printing, travel, and meeting rooms in constituencies where
+its candidates already have credible local contacts. Organizers avoid claiming
+a national slate they do not possess.
 
-The correspondence broadens the coming public case. Candidates still enter
-the contest through separate organizations and personal followings.
+The campaign gives selected candidacies a firmer public presence. It also
+spends money that will not be available for a later petition or lawsuit.
 
 - @post_event: Continue

@@ -1,20 +1,23 @@
-# Source: Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
+# Source: Ervand Abrahamian, Iran Between Two Revolutions,
 # ch. 5, pp. 250–253. Mechanical effects are counterfactual abstractions.
 title: <span class="term term-mossadegh">Mohammad Mossadegh</span>
 new-page: true
 is-pinned-card: true
 tags: advisor
+view-if: advisor_mossadegh_available = 1
 
 = {!<span class="term term-mossadegh">!}Mohammad Mossadegh{!</span>!}
 
 [? if front_formed = 0 and attempt_emergency_seen = 0: {!<span class="term term-mossadegh">!}Mossadegh{!</span>!}
-remains outside any common opposition organization. His constitutional
-authority is important, but the electoral protest that will bring opposition
-figures together has not yet occurred. ?]
+is an independent constitutional leader rather than the head of a common
+opposition organization.
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!} figures
+and other politicians may consult him without surrendering their separate
+positions. ?]
 [? if front_formed = 0 and attempt_emergency_seen = 1: {!<span class="term term-mossadegh">!}Mossadegh{!</span>!}
 has been confined to his estates during the emergency. His constitutional
-authority remains important, but the common electoral protest that will bring
-the opposition together has not yet occurred. ?]
+authority remains important; consultation now runs through correspondence and
+intermediaries rather than a common headquarters. ?]
 [? if front_formed = 1: {!<span class="term term-mossadegh">!}Mossadegh{!</span>!}
 is the central coordinating figure in the electoral protest that brought the
 opposition coalition together. His intervention can help settle an immediate
@@ -26,26 +29,34 @@ question, but it cannot erase the coalition's differences. ?]
 
 @constitutional_case
 title: State the constitutional case
-subtitle: <span class="term term-mossadegh">Mossadegh</span> gives unlike allies a constitutional formula they can repeat without sharing a full program
-choose-if: advisor_action_timer <= 0 and front_formed = 1
-unavailable-subtitle: [? if front_formed = 0: Available after the common electoral protest. ?][? if front_formed = 1: [+ advisor_action_timer +] months before another adviser action. ?]
-on-arrival: advisor_action_timer = 6; constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2; mossadegh_authority += 1
+subtitle: <span class="term term-mossadegh">Mossadegh</span> gives aligned constitutionalists a formula they can repeat without pretending to share a full program
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+on-arrival: advisor_action_timer = 6; constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2; mossadegh_authority += 1; iran_party_relation += 2
 
-{!<span class="term term-mossadegh">!}Mossadegh{!</span>!} restates the coalition's demand for representative elections and
-constitutional government, then tests each part of the argument against the
-procedure the {!<span class="term term-national-front">!}Front{!</span>!}
-expects the {!<span class="term term-parliament">!}Majles{!</span>!} to follow.
+{!<span class="term term-mossadegh">!}Mossadegh{!</span>!} restates the case
+for representative institutions and constitutional government, then tests each
+part of the argument against the procedure he expects the
+{!<span class="term term-parliament">!}Majles{!</span>!} to follow.
 
-The coalition leaves with a case its different components can repeat without
-claiming that {!<span class="term term-mossadegh">!}Mossadegh{!</span>!} has resolved their wider disagreements.
+[? if front_formed = 0:
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!} figures
+and independent constitutionalists leave with a common case they can repeat
+without claiming to belong to one organization or to have resolved their wider
+disagreements. ?]
+[? if front_formed = 1: The coalition leaves with a case its different
+components can repeat without claiming that
+{!<span class="term term-mossadegh">!}Mossadegh{!</span>!} has resolved
+their wider disagreements. ?]
 
 - @main: Return to the monthly briefing
 
 @hear_tendencies
 title: Hear the coalition's competing tendencies
 subtitle: Each tendency is heard in its own language; agreement is postponed rather than forced
+view-if: front_formed = 1
 choose-if: advisor_action_timer <= 0 and front_formed = 1
-unavailable-subtitle: [? if front_formed = 0: Available after the common electoral protest. ?][? if front_formed = 1: [+ advisor_action_timer +] months before another adviser action. ?]
+unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
 on-arrival: advisor_action_timer = 6; iran_party_relation += 1; toilers_relation += 1; independent_nationalists_relation += 1; religious_network_relation += 1; iran_party_dissent -= 1; toilers_dissent -= 1; independent_nationalists_dissent -= 1; religious_network_dissent -= 1
 
 The discussion does not produce agreement, but it clarifies what the

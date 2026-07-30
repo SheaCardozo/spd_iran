@@ -79,6 +79,85 @@ body.dark-mode {
   --country-ussr-red: #f07b72;
   --country-israel-blue: #7da5ff;
 }
+
+.chamber-visualizations {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.chamber-visualizations h3 {
+  margin: 0.8rem 0 0.2rem;
+  font-size: 0.95rem;
+}
+
+.chamber-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 170px;
+}
+
+.chamber-seat {
+  fill: var(--unavailable-bg-color);
+  stroke: var(--border-color);
+  stroke-width: 0.7;
+}
+
+.chamber-seat:focus {
+  outline: none;
+  stroke-width: 2;
+}
+
+.seat-front {
+  fill: var(--term-parliament);
+}
+
+.seat-usable {
+  fill: var(--term-independent);
+}
+
+.seat-elected {
+  fill: var(--term-religious);
+}
+
+.seat-appointed {
+  fill: var(--term-royalist);
+}
+
+.seat-credential-pending {
+  fill: var(--content-bg-color);
+  stroke-width: 1.2;
+}
+
+.seat-rejected {
+  fill: var(--term-left);
+}
+
+.chamber-legend {
+  margin: 0.1rem 0 0.7rem;
+  font-size: 0.75rem;
+  line-height: 1.25;
+}
+
+body.gray-mode .chamber-seat {
+  fill: #ddd;
+  stroke: #222;
+}
+
+body.gray-mode .seat-front,
+body.gray-mode .seat-appointed {
+  fill: #666;
+}
+
+body.gray-mode .seat-usable,
+body.gray-mode .seat-elected {
+  fill: #999;
+}
+
+body.gray-mode .seat-credential-pending {
+  fill: transparent;
+  stroke-width: 1.4;
+}
 body.dark-mode #content {
   border-style: double;
   border-width: 4px;

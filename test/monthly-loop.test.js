@@ -71,7 +71,6 @@ test('a pinned adviser uses the shared cooldown without advancing time', async (
   ).beginGame([0]);
 
   reachMonthlyHand(dendry);
-  dendry.state.qualities.front_formed = 1;
 
   dendry.playCard('mossadegh');
   assert.equal(dendry.state.sceneId, 'mossadegh');

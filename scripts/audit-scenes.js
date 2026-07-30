@@ -36,6 +36,7 @@ const INFORMATION_SURFACES = new Set([
   'main',
   'status',
   'status.coalition',
+  'status.support',
   'status.majles',
   'status.crown',
   'research_library',

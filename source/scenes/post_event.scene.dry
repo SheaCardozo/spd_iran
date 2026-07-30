@@ -28,7 +28,9 @@ var boundedQualities = [
     "press_capacity",
     "parliamentary_procedure_legitimacy", "oil_coalition_support",
     "mossadegh_authority", "shah_relation", "shah_resistance",
-    "shah_court_capacity", "shah_electoral_influence"
+    "shah_court_capacity", "shah_electoral_influence",
+    "support_professional", "support_bazaar", "support_workers",
+    "support_provincial"
 ];
 var factionPrefixes = [
     "iran_party", "toilers", "independent_nationalists", "religious_network"
@@ -62,6 +64,16 @@ Q.coalition_cohesion = Math.round(
     (avgStrength * 0.25) + (avgRelation * 0.35) +
     ((100 - avgDissent) * 0.25) + (avgOrganization * 0.15)
 );
+
+Q.election_campaign_capacity = Math.round(
+    (Q.support_professional * 0.30) + (Q.support_bazaar * 0.20) +
+    (Q.support_workers * 0.15) + (Q.support_provincial * 0.35)
+);
+var campaignPlaces = [38, 39, 40, 41, 42, 44, 45, 105];
+for (var campaignPlaceIndex of campaignPlaces) {
+    Q.majles_places[campaignPlaceIndex].scenario.player_influence =
+        Q.election_campaign_capacity;
+}
 
 Q.majles_returns_recorded = 0;
 Q.majles_credentials_approved = 0;

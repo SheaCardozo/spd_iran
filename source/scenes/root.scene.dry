@@ -9,12 +9,13 @@ new-page: true
 
 ## A constitutional campaign, 1949–1951
 
-Version 0.1.0
+Version 0.2.0
 
-Gather a constitutional opposition, contest the disputed Sixteenth
+Coordinate the opposition, contest the disputed Sixteenth
 {!<span class="term term-parliament">!}Majles{!</span>!}
-election, and build the coalition that becomes the
-{!<span class="term term-national-front">!}National Front{!</span>!}.
+election, and decide how separate constitutional politicians and the organized
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!} work
+together before they share a formal coalition.
 Historical nationalization
 remains fixed; your decisions determine the organization and legitimacy that
 survive it.
@@ -42,9 +43,10 @@ Opening the historical primer. If it does not open automatically,
 new-page: true
 on-arrival: {!
 Q.started = 1;
-Q.release_version = "0.1.0";
-Q.save_schema_version = 3;
+Q.release_version = "0.2.0";
+Q.save_schema_version = 4;
 Q.scenario_id = "historical";
+Q.player_organization = "Opposition";
 
 Q.debug_mode = 0;
 if (typeof window !== "undefined" && window.location && /[?&]debug=1/.test(window.location.search)) {
@@ -68,6 +70,14 @@ Q.press_capacity = 30;
 Q.parliamentary_procedure_legitimacy = 40;
 Q.oil_coalition_support = 30;
 Q.mossadegh_authority = 60;
+
+// These are scenario estimates of opposition campaign support, not polls or
+// historical measurements. They influence only mutable constituency state.
+Q.support_professional = 42;
+Q.support_bazaar = 30;
+Q.support_workers = 24;
+Q.support_provincial = 28;
+Q.election_campaign_capacity = 0;
 
 // Coalition components own the mutable faction state. Aggregate cohesion is
 // derived in post_event and never changed directly by content.
@@ -172,6 +182,7 @@ for (var m = 1; m <= 136; m += 1) {
         },
         scenario: {
             current_return: "pending",
+            scenario_return_label: null,
             credential: "pending",
             usability: "unavailable",
             attendance: "unknown",
@@ -283,6 +294,7 @@ for (var s = 1; s <= 60; s += 1) {
         },
         scenario: {
             current_return: "pending",
+            scenario_return_label: null,
             credential: "pending",
             usability: "unavailable",
             attendance: "unknown",
@@ -331,6 +343,12 @@ Q.senate_usable_members = 0;
 Q.majles_phase = "Before the Sixteenth Majles election";
 
 Q.advisor_action_timer = 0;
+Q.advisor_saleh_available = 1;
+Q.advisor_mossadegh_available = 1;
+Q.advisor_fatemi_available = 0;
+Q.advisor_makki_available = 0;
+Q.advisor_kashani_available = 0;
+Q.advisor_maleki_available = 0;
 
 Q.coalition_meeting_timer = 0;
 Q.common_resolution_timer = 0;
@@ -385,16 +403,22 @@ go-to: main
 @about
 new-page: true
 
-= About v0.1
+= About v0.2
 
-This public demo covers the
+This public demo begins in January 1949 from the viewpoint of the
+opposition. It does not treat the opposition as a single
+organization:
+{!<span class="term term-mossadegh">!}Mohammad Mossadegh{!</span>!}, the
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!}, and
+other constitutional politicians retain distinct positions. The campaign
+covers the
 {!<span class="term term-national-front">!}National Front{!</span>!}'s
 formation, the disputed Sixteenth
 {!<span class="term term-parliament">!}Majles{!</span>!}, and the passage of
 the nationalization principle through the
 {!<span class="term term-senate">!}Senate{!</span>!} on
-20 March 1951. It begins in January 1949, before the constitutional emergency
-created by the February attempt on the
+20 March 1951. It begins before the constitutional emergency created by the
+February attempt on the
 {!<span class="term term-royalist">!}Shah{!</span>!} and ends when the
 nationalization principle has passed both chambers. Premiership and the later
 struggle over implementation lie beyond this release.

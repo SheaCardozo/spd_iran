@@ -57,10 +57,11 @@ async function initializedEngine() {
   return dendry;
 }
 
-test('v0.1 initializes versioned campaign state without public seed fields', async () => {
+test('v0.2 initializes the opposition viewpoint without public seed fields', async () => {
   const q = await initialState();
-  assert.equal(q.save_schema_version, 3);
+  assert.equal(q.save_schema_version, 4);
   assert.equal(q.scenario_id, 'historical');
+  assert.equal(q.player_organization, 'Opposition');
   assert.equal(q.year, 1949);
   assert.equal(q.month, 1);
   assert.equal(q.attempt_emergency_seen, 0);
@@ -225,7 +226,7 @@ test('all sixteen phase-gated action cards and six pinned advisers compile', asy
   }
 });
 
-test('deck gates and always-pinned advisers follow the shared hand model', async () => {
+test('deck gates and historically available pinned advisers follow the shared hand model', async () => {
   const dendry = await initializedEngine();
   const q = dendry.state.qualities;
   assert.equal(dendry.state.sceneId, 'main');
@@ -244,26 +245,25 @@ test('deck gates and always-pinned advisers follow the shared hand model', async
   );
   assert.ok(!visible.includes('main.public_campaign'));
   assert.ok(!visible.includes('main.parliamentary_affairs'));
+  assert.ok(visible.includes('mossadegh'));
+  assert.ok(visible.includes('saleh'));
+  assert.ok(!visible.includes('fatemi'));
+  assert.ok(!visible.includes('makki'));
+  assert.ok(!visible.includes('kashani'));
+  assert.ok(!visible.includes('maleki'));
 
-  dendry.goToScene('mossadegh');
-  let adviserChoices = dendry._compileChoices(
-    dendry.game.scenes.mossadegh,
-  );
-  assert.equal(
-    adviserChoices.filter((choice) => choice.canChoose).length,
-    1,
-    'pre-Front Mossadegh card offers only its return navigation',
-  );
-  dendry.goToScene('kashani');
-  adviserChoices = dendry._compileChoices(dendry.game.scenes.kashani);
-  assert.equal(
-    adviserChoices.filter((choice) => choice.canChoose).length,
-    1,
-    'pre-Front Kashani card does not place him in a Tehran campaign',
-  );
+  assert.equal(q.advisor_saleh_available, 1);
+  assert.equal(q.advisor_mossadegh_available, 1);
+  assert.equal(q.advisor_fatemi_available, 0);
+  assert.equal(q.advisor_makki_available, 0);
+  assert.equal(q.advisor_kashani_available, 0);
+  assert.equal(q.advisor_maleki_available, 0);
 
   q.front_formed = 1;
   q.parliamentary_deck_unlocked = 1;
+  q.advisor_fatemi_available = 1;
+  q.advisor_makki_available = 1;
+  q.advisor_kashani_available = 1;
   visible = dendry._compileChoices(dendry.game.scenes.main).map(
     (choice) => choice.id,
   );
@@ -274,7 +274,7 @@ test('deck gates and always-pinned advisers follow the shared hand model', async
     (scene) => scene.isPinnedCard && scene.tags?.includes('advisor'),
   );
   assert.equal(advisers.length, 6);
-  assert.ok(advisers.every((adviser) => adviser.viewIf === undefined));
+  assert.ok(advisers.every((adviser) => typeof adviser.viewIf === 'function'));
   assert.equal(dendry.game.scenes.leadership_roster, undefined);
   for (const field of [
     'active_advisors',
@@ -290,6 +290,52 @@ test('deck gates and always-pinned advisers follow the shared hand model', async
   }
 });
 
+test('advisers enter the hand at the documented coalition milestones', async () => {
+  const dendry = await initializedEngine();
+  const q = dendry.state.qualities;
+
+  assert.equal(q.advisor_mossadegh_available, 1);
+  assert.equal(q.advisor_saleh_available, 1);
+  assert.equal(q.advisor_fatemi_available, 0);
+  assert.equal(q.advisor_makki_available, 0);
+  assert.equal(q.advisor_kashani_available, 0);
+  assert.equal(q.advisor_maleki_available, 0);
+
+  dendry.goToScene('palace_protest');
+  assert.equal(q.advisor_fatemi_available, 1);
+  assert.equal(q.advisor_makki_available, 1);
+  assert.equal(q.advisor_kashani_available, 0);
+
+  dendry.goToScene('front_formation');
+  assert.equal(q.player_organization, 'National Front');
+  assert.equal(q.advisor_kashani_available, 1);
+  assert.equal(q.advisor_maleki_available, 0);
+});
+
+test('qualitative support changes only scenario returns at historically vacant places', async () => {
+  const dendry = await initializedEngine();
+  const q = dendry.state.qualities;
+  q.election_campaign_capacity = 55;
+  dendry.goToScene('campaign_spine.chambers_open');
+
+  const vacantIndexes = [0, 87, 107, 126, 128];
+  for (const index of vacantIndexes.slice(0, 3)) {
+    const place = q.majles_places[index];
+    assert.equal(place.historical.return, null);
+    assert.equal(place.scenario.current_return, 'returned');
+    assert.match(place.scenario.scenario_return_label, /counterfactual/);
+    assert.equal(place.scenario.credential, 'pending');
+    assert.equal(place.scenario.usability, 'unavailable');
+    assert.equal(place.scenario.support, 'national_front');
+  }
+  for (const index of vacantIndexes.slice(3)) {
+    assert.equal(q.majles_places[index].scenario.current_return, 'pending');
+  }
+  const oilSupportBeforeCredentials = q.oil_coalition_support;
+  dendry.goToScene('campaign_spine.credential_campaign');
+  assert.equal(q.oil_coalition_support, oilSupportBeforeCredentials + 6);
+});
+
 test('menu, briefing, Library, status, and ending meet the scene-wide standard', async () => {
   const game = await loadGame();
   const explanatoryScenes = [
@@ -298,6 +344,7 @@ test('menu, briefing, Library, status, and ending meet the scene-wide standard',
     'main',
     'status',
     'status.coalition',
+    'status.support',
     'status.majles',
     'status.crown',
     'research_library',
@@ -369,9 +416,13 @@ test('menu, briefing, Library, status, and ending meet the scene-wide standard',
     'iran_party_strength',
     'iran_party_dissent',
     'iran_party_organization',
-    'toilers_strength',
-    'independent_nationalists_strength',
-    'religious_network_strength',
+    'toilers_relation',
+    'independent_nationalists_relation',
+    'religious_network_relation',
+    'support_professional',
+    'support_bazaar',
+    'support_workers',
+    'support_provincial',
     'Usable Front representation',
     'Oil-coalition support',
     'Parliamentary-procedure legitimacy',
@@ -605,6 +656,7 @@ test('every major anchor and adviser has an adjacent research record', () => {
     'people/hossein-makki.md',
     'people/abol-qasem-kashani.md',
     'systems/recurring-actions.md',
+    'systems/support-and-chamber-display.md',
     'systems/information-and-ending-surfaces.md',
   ];
   for (const record of records) {
