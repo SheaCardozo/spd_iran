@@ -1,0 +1,74 @@
+# Historical basis: Fakhreddin Azimi, Iran: The Crisis of Democracy,
+# 1941–1953, pp. 201–208; Ervand Abrahamian, Iran Between Two Revolutions,
+# ch. 5, pp. 249–253. The recurring consultation and all effects are
+# counterfactual abstractions; the scene does not posit a pre-October Front.
+title: Opposition Consultation
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: opposition_consultation_timer <= 0 and front_formed = 0
+on-arrival: month_actions += 1; opposition_consultation_timer = 3
+
+= Opposition Consultation
+
+There is no common opposition organization. Constitutional politicians,
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!}
+organizers, prospective independent candidates, and religious-political intermediaries
+meet through overlapping personal circles, then return to institutions they
+do not share.
+
+One consultation can establish a common piece of work. It cannot give this
+loose company a name, discipline, or authority it has not yet acquired.
+
+- @consult_constitutionalists
+- @consult_organizers
+- @consult_intermediaries
+
+@consult_constitutionalists
+title: Convene the constitutional politicians
+subtitle: Lawyers and former deputies seek a rule they can defend together without claiming a common organization
+on-arrival: constitutional_legitimacy += 3; independent_nationalists_relation += 2; parliamentary_procedure_legitimacy += 1
+
+[? if attempt_emergency_seen = 0: The discussion settles on a limited rule:
+political liberties and public authority must be judged against law and
+representative government. Participants agree to repeat that case in their
+own voices. ?]
+[? if attempt_emergency_seen = 1: The discussion settles on a limited rule:
+emergency measures, constitutional revision, and elections must each be judged
+against law and representative government. Participants agree to repeat that
+case in their own voices. ?]
+
+Nobody leaves as a member of a new party. The constitutional politicians do
+leave with language that makes later cooperation easier.
+
+- @post_event: Continue
+
+@consult_organizers
+title: Bring the party organizers together
+subtitle: Existing organizations compare methods while keeping their memberships and commands separate
+on-arrival: iran_party_organization += 3; iran_party_relation += 2; organizational_reach += 1
+
+Organizers compare contact lists, meeting practices, and the routes by which
+news reaches Tehran. They agree on a few common formats without pooling their
+membership records or surrendering control of local workers.
+
+The practical exchange strengthens the best-established party network.
+Cooperation remains an arrangement between organizations rather than a new
+organization above them.
+
+- @post_event: Continue
+
+@consult_intermediaries
+title: Consult religious and bazaar intermediaries
+subtitle: Independent intermediaries test where constitutional opposition can travel beyond party circles
+on-arrival: religious_network_relation += 3; religious_network_organization += 2; organizational_reach += 1
+
+The intermediaries identify constitutional complaints that can be carried
+through bazaar and {!<span class="term term-religious">!}religious
+networks{!</span>!} without asking those networks to accept a party program.
+They also state where their own authority and priorities remain separate.
+
+A wider channel of cooperation opens. It belongs to the intermediaries who
+maintain it, not to a central opposition staff.
+
+- @post_event: Continue

@@ -7,13 +7,15 @@ new-page: true
 
 = The Last {!<span class="term term-parliament">!}Majles{!</span>!}
 
-## A {!<span class="term term-national-front">!}National Front{!</span>!} campaign, 1949–1951
+## A constitutional campaign, 1949–1951
 
 Version 0.1.0
 
-Build a constitutional coalition through the disputed Sixteenth
+Gather a constitutional opposition, contest the disputed Sixteenth
 {!<span class="term term-parliament">!}Majles{!</span>!}
-election and the struggle over oil nationalization. Historical nationalization
+election, and build the coalition that becomes the
+{!<span class="term term-national-front">!}National Front{!</span>!}.
+Historical nationalization
 remains fixed; your decisions determine the organization and legitimacy that
 survive it.
 
@@ -41,7 +43,7 @@ new-page: true
 on-arrival: {!
 Q.started = 1;
 Q.release_version = "0.1.0";
-Q.save_schema_version = 1;
+Q.save_schema_version = 3;
 Q.scenario_id = "historical";
 
 Q.debug_mode = 0;
@@ -49,17 +51,9 @@ if (typeof window !== "undefined" && window.location && /[?&]debug=1/.test(windo
     Q.debug_mode = 1;
 }
 
-// Prologue takes place before the monthly clock and may move any starting
-// quality by no more than five points.
-Q.prologue_complete = 0;
-Q.prologue_stage = 1;
-Q.prologue_crown_modifier = 0;
-Q.prologue_legitimacy_modifier = 0;
-Q.prologue_organization_modifier = 0;
-
 Q.time = 0;
 Q.year = 1949;
-Q.month = 10;
+Q.month = 1;
 Q.month_actions = 0;
 Q.months_advanced = 0;
 Q.march_action_complete = 0;
@@ -334,7 +328,7 @@ Q.majles_usable_members = 0;
 Q.majles_national_front_returns = 0;
 Q.majles_national_front_usable = 0;
 Q.senate_usable_members = 0;
-Q.majles_phase = "Disputed Sixteenth Majles election";
+Q.majles_phase = "Before the Sixteenth Majles election";
 
 Q.advisor_action_timer = 0;
 
@@ -350,12 +344,18 @@ Q.electoral_committee_timer = 0;
 Q.credential_petitions_timer = 0;
 Q.oil_committee_preparation_timer = 0;
 Q.deputy_outreach_timer = 0;
+Q.opposition_consultation_timer = 0;
+Q.emergency_legal_work_timer = 0;
+Q.political_correspondence_timer = 0;
+Q.election_preparations_timer = 0;
 Q.timers = [
     "advisor_action", "coalition_meeting", "common_resolution",
     "membership_committees", "fundraising", "press_coordination",
     "public_meetings", "bazaar_outreach", "legal_defense",
     "electoral_committee", "credential_petitions",
-    "oil_committee_preparation", "deputy_outreach"
+    "oil_committee_preparation", "deputy_outreach",
+    "opposition_consultation", "emergency_legal_work",
+    "political_correspondence", "election_preparations"
 ];
 
 Q.ending_coalition = 0;
@@ -371,6 +371,7 @@ Q.ending_scores = {
 };
 Q.decision_flags = {};
 Q.event_flags = {};
+Q.attempt_emergency_seen = 0;
 Q.hazhir_seen = 0;
 Q.tehran_rerun_seen = 0;
 Q.chambers_open_seen = 0;
@@ -379,7 +380,7 @@ Q.supplemental_campaign_seen = 0;
 Q.razmara_confrontation_seen = 0;
 Q.razmara_assassination_seen = 0;
 !}
-go-to: prologue_attempt
+go-to: main
 
 @about
 new-page: true
@@ -392,8 +393,8 @@ formation, the disputed Sixteenth
 {!<span class="term term-parliament">!}Majles{!</span>!}, and the passage of
 the nationalization principle through the
 {!<span class="term term-senate">!}Senate{!</span>!} on
-20 March 1951. It begins in the constitutional emergency after the February
-1949 attempt on the
+20 March 1951. It begins in January 1949, before the constitutional emergency
+created by the February attempt on the
 {!<span class="term term-royalist">!}Shah{!</span>!} and ends when the
 nationalization principle has passed both chambers. Premiership and the later
 struggle over implementation lie beyond this release.

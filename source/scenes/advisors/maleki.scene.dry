@@ -8,11 +8,12 @@ tags: advisor
 
 = {!<span class="term term-nationalist-social-democratic">!}Khalil Maleki{!</span>!}
 
-{!<span class="term term-nationalist-social-democratic">!}Maleki{!</span>!} advises on social-democratic organization and internal political
-education. The adviser abstracts work within the
-{!<span class="term term-social-democratic">!}Toilers' Party{!</span>!}
-current in this
-period and does not project his later {!<span class="term term-social-democratic">!}Third Force{!</span>!} position backward.
+{!<span class="term term-nationalist-social-democratic">!}Maleki{!</span>!}
+advises on social-democratic organization and internal political education.
+The consultation becomes available when the opposition has formed a common
+coalition and does not project his later
+{!<span class="term term-social-democratic">!}Third Force{!</span>!}
+position backward.
 
 - @maleki_organizers
 - @maleki_program
@@ -21,8 +22,8 @@ period and does not project his later {!<span class="term term-social-democratic
 @maleki_organizers
 title: Train organizers
 subtitle: Organizers learn to connect social demands to the coalition without dissolving into it
-choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+choose-if: advisor_action_timer <= 0 and front_formed = 1
+unavailable-subtitle: [? if front_formed = 0: Available after the common electoral protest. ?][? if front_formed = 1: [+ advisor_action_timer +] months before another adviser action. ?]
 on-arrival: advisor_action_timer = 6; toilers_organization += 5; organizational_reach += 2
 
 {!<span class="term term-nationalist-social-democratic">!}Maleki{!</span>!} turns a political discussion into practical organizer training:
@@ -39,8 +40,8 @@ own organizing traditions.
 @maleki_program
 title: Clarify the social program
 subtitle: <span class="term term-nationalist-social-democratic">Maleki</span> makes room for a social argument inside a coalition held together by constitutional and national demands
-choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+choose-if: advisor_action_timer <= 0 and front_formed = 1
+unavailable-subtitle: [? if front_formed = 0: Available after the common electoral protest. ?][? if front_formed = 1: [+ advisor_action_timer +] months before another adviser action. ?]
 on-arrival: advisor_action_timer = 6; toilers_relation += 4; toilers_dissent -= 3; public_mandate += 2
 
 {!<span class="term term-nationalist-social-democratic">!}Maleki{!</span>!}

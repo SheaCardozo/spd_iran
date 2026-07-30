@@ -22,11 +22,11 @@ const DECK_CONTAINERS = new Set([
   'main.parliamentary_affairs',
 ]);
 
-const PROLOGUE_DECISIONS = new Set([
-  'prologue_attempt',
-  'prologue_attempt.prologue_ban',
-  'prologue_attempt.prologue_constituent',
-  'prologue_attempt.prologue_senate',
+const OPENING_DECISIONS = new Set([
+  'attempt_and_emergency',
+  'attempt_and_emergency.emergency_measures',
+  'attempt_and_emergency.constituent_assembly',
+  'attempt_and_emergency.senate_election_preparations',
 ]);
 
 const INFORMATION_SURFACES = new Set([
@@ -242,7 +242,7 @@ function classifyScene(scene) {
     return 'continuation_decision';
   }
   if (
-    PROLOGUE_DECISIONS.has(id) ||
+    OPENING_DECISIONS.has(id) ||
     id === 'palace_protest' ||
     scene.tags?.includes('event') ||
     scene.isCard ||

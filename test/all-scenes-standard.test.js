@@ -12,16 +12,16 @@ test('every compiled scene is classified and passes its scene-class standard', a
   const result = auditGame(game);
   const summary = formatSummary(result);
 
-  assert.equal(summary.total, 166);
+  assert.equal(summary.total, 182);
   assert.deepEqual(result.failures, []);
   assert.deepEqual(summary.counts, {
     framework_internal: 5,
     information_surface: 18,
-    visible_consequence: 98,
+    visible_consequence: 110,
     deck_container: 3,
     engine_internal: 4,
     continuation_decision: 2,
-    decision_menu: 36,
+    decision_menu: 40,
   });
 });
 

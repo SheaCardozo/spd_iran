@@ -78,7 +78,7 @@ The current build follows SPD in these respects:
 
 - one shared `Q` state initialized in `root.scene.dry`;
 - a card hand with Party Affairs, Public Campaign, and Parliamentary Affairs
-  decks containing twelve recurring actions;
+  decks containing sixteen recurring actions across the full campaign;
 - action cards selected by tags and gated by cooldown timers;
 - opening a normal action card commits the current month;
 - `post_event.scene.dry` advances the calendar, ticks timers, bounds state, and
@@ -95,12 +95,16 @@ The current build follows SPD in these respects:
   strength, relation, dissent, and organization;
 - Gass–Golshayan, nationalization, and the player's minimum position use
   separate term-by-term records with explicit nulls;
-- a four-scene prologue precedes exactly eighteen monthly actions;
+- the campaign begins with an ordinary January 1949 hand and then runs exactly
+  twenty-seven monthly actions through March 1951;
+- before the National Front forms, the Party Affairs deck deals
+  opposition-network cards rather than relabelling a nonexistent coalition;
 - new campaigns use Dendry's normal randomized deck stream, which continues
   from stored engine state when a save is loaded;
 - a special-scene Research Library and conditional scorecard ending mirror
   SPD's Library and game-over responsibility boundaries;
-- browser saves persist `save_schema_version = 1` and reject prototype imports;
+- browser saves persist `save_schema_version = 3` and reject saves from the
+  retired compressed opening;
 - annual organizational income is applied at year rollover.
 
 All numerical action effects remain game-balance abstractions rather than
@@ -126,6 +130,49 @@ choice.
 | `source/qdisplays/` | Shared human-readable quality displays |
 | `web/` | Reproducible Dynamic SPD-style browser overlay |
 | `docs/research/events/` | Claim-level research records |
+
+## January 1949 campaign-start divergence
+
+The first public-demo implementation compressed February–September 1949 into
+four consecutive decisions before an eighteen-action monthly campaign. That
+prologue is removed. New campaigns begin in January 1949 and use the ordinary
+monthly action economy from the first hand onward.
+
+Dynamic SPD does not use a separate prologue. Its
+`source/scenes/root.scene.dry` initializes January 1928 directly, and
+`source/scenes/main.scene.dry` gives the player normal monthly party work
+before the May election. Historical developments enter the same hand and
+post-event loop used later in the campaign. The Last Majles now retains that
+pattern directly: the player receives an ordinary January hand, then the
+February attempt and emergency measures, May constituent assembly, July
+election preparations, and October palace protest resolve as dated events
+between ordinary actions.
+
+This changes the core turn loop and therefore has the following system-wide
+consequences:
+
+- the campaign contains twenty-seven monthly actions, January 1949 through
+  March 1951 inclusive;
+- `post_event.scene.dry` remains the sole owner of calendar advancement,
+  cooldown ticks, reducers, and tagged-event priority;
+- pre-Front actions modify the political circles that may later enter the
+  coalition, but no Front structure or aggregate cohesion is presented as an
+  existing institution before October;
+- the election-facing parliamentary deck unlocks when election preparations
+  become active, while Front-specific Party and Public Campaign cards retain
+  their historical gates;
+- the additional nine actions require separate early-card cooldowns so the
+  ordinary hand cannot deadlock and so later Front cards do not begin the
+  campaign already cooling down;
+- browser saves use schema version 3. Earlier saves began under retired
+  October- or February-start chronologies and are rejected rather than
+  silently loaded into the new calendar.
+
+The migration is deliberately simple because no published save format has
+been promised: begin a new campaign. Validation covers the January hand,
+February/May/July/October anchors, twenty-seven calendar advances, event priority,
+pre-Front card gating, save rejection, and the unchanged 20 March 1951
+terminal route.
 
 ## v0.1 release boundary
 
@@ -221,7 +268,7 @@ easier to inspect, balance, and compare with SPD.
 | Concern | Dynamic SPD reference |
 | --- | --- |
 | Shared state and startup | `source/scenes/root.scene.dry` |
-| Hand, recurring decks, and turn selection | `source/scenes/main.scene.dry` |
+| Hand, recurring decks, opening month, and turn selection | `source/scenes/main.scene.dry`, `source/scenes/root.scene.dry` |
 | Post-card event routing and shared updates | `source/scenes/post_event.scene.dry` |
 | Numerical state display | `source/scenes/status.scene.dry` |
 | Pinned advisers and shared adviser cooldown | `source/scenes/advisors/wels.scene.dry`, `source/scenes/main.scene.dry` |

@@ -5,7 +5,7 @@ title: Membership and Local Committees
 new-page: true
 is-card: true
 tags: party_affairs
-view-if: membership_committees_timer <= 0
+view-if: membership_committees_timer <= 0 and front_formed = 1
 on-arrival: month_actions += 1; membership_committees_timer = 4
 
 = Membership and Local Committees

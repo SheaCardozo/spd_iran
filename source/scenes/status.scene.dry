@@ -4,12 +4,13 @@ is-special: true
 
 = Campaign
 
-[+ month : month +] [+ year +] — turn [+ months_advanced +] of 18
+[+ month : month +] [+ year +] — actions completed: [+ months_advanced +] / 27
 
 Resources: [+ resources +]
 
-[? if advisor_action_timer <= 0: Adviser consultation: available ?]
-[? if advisor_action_timer > 0: Adviser consultation: available in [+ advisor_action_timer +] months ?]
+[? if front_formed = 0: Adviser consultation: none currently available ?]
+[? if front_formed = 1 and advisor_action_timer <= 0: Adviser consultation: available ?]
+[? if front_formed = 1 and advisor_action_timer > 0: Adviser consultation: available in [+ advisor_action_timer +] months ?]
 
 Constitutional legitimacy:
 [? if constitutional_legitimacy < 35: weak ?]
@@ -40,12 +41,15 @@ title: Coalition
 
 = Coalition
 
-Cohesion:
-[? if coalition_cohesion < 35: fractured ?]
-[? if coalition_cohesion >= 35 and coalition_cohesion < 65: workable ?]
-[? if coalition_cohesion >= 65: durable ?]
+[? if front_formed = 0: The {!<span class="term term-national-front">!}National
+Front{!</span>!} has not yet formed. These are separate political circles and
+potential partners, not components under a common command. ?]
 
-Structure: [+ front_structure +]
+[? if front_formed = 1 and coalition_cohesion < 35: Cohesion: fractured ?]
+[? if front_formed = 1 and coalition_cohesion >= 35 and coalition_cohesion < 65: Cohesion: workable ?]
+[? if front_formed = 1 and coalition_cohesion >= 65: Cohesion: durable ?]
+
+[? if front_formed = 1: Structure: [+ front_structure +] ?]
 
 {!<span class="term term-constitutionalist">!}Iran Party{!</span>!}:
 [? if iran_party_strength < 35: limited weight; ?]
@@ -61,7 +65,8 @@ Structure: [+ front_structure +]
 [? if iran_party_organization >= 35 and iran_party_organization < 65: developing organization. ?]
 [? if iran_party_organization >= 65: strong organization. ?]
 
-{!<span class="term term-social-democratic">!}Toilers' Party{!</span>!}:
+[? if front_formed = 0: {!<span class="term term-social-democratic">!}Social-democratic organizers{!</span>!}: ?]
+[? if front_formed = 1: {!<span class="term term-social-democratic">!}Toilers' Party{!</span>!}: ?]
 [? if toilers_strength < 35: limited weight; ?]
 [? if toilers_strength >= 35 and toilers_strength < 65: substantial weight; ?]
 [? if toilers_strength >= 65: leading weight; ?]

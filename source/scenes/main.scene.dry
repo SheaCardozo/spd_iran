@@ -6,16 +6,25 @@ max-cards: 5
 = [+ month : month +] [+ year +]
 
 # Sources for the monthly briefings:
+# January–September 1949 — Abrahamian, Iran Between Two Revolutions, ch. 5,
+# pp. 249–253; Elm, Oil, Power, and Principle, ch. 3, “The Constitution.” The January
+# hand represents counterfactual coordination among still-separate opposition
+# circles before the documented 4 February attempt.
 # October-November 1949 and the Tehran rerun — Azimi, Iran: The Crisis of
-# Democracy, ch. 5, pp. 250–267; Abrahamian, Iran Between Two Revolutions,
-# ch. 15, p. 208.
+# Democracy, pp. 207–208; Abrahamian, Iran Between Two Revolutions, ch. 5,
+# pp. 250–267.
 # Sixteenth Majles credentials — official Majles proceedings, sessions 2, 25,
 # and 30 (18 February, 18 May, and 1 June 1950).
 # Oil dispute and Saudi comparison — Painter and Brew, The Struggle for Iran,
 # ch. 1; official Oil Commission record, meeting 22 and first-period report;
 # official Majles proceedings, session 102.
 
-[? if year = 1949 and month = 10: **Opening briefing:** the palace protest brought opposition figures together around objections to the Sixteenth-{!<span class="term term-parliament">!}Majles{!</span>!} election. It did not yet make them one disciplined party. ?]
+[? if year = 1949 and month = 1: **Political briefing:** constitutional opponents remain separate politicians, parties, newspapers, and personal networks. There is no common organization to direct their work, but correspondence and private consultation can prepare them for the year ahead. ?]
+[? if year = 1949 and month = 2: **Emergency briefing:** after the attempt on {!<span class="term term-royalist">!}Mohammad Reza Shah{!</span>!}, martial law, arrests, the suppression of the {!<span class="term term-left">!}Tudeh Party{!</span>!}, and restrictions on political activity have narrowed the space in which constitutional opponents can work. They remain separate politicians, parties, newspapers, and personal networks. ?]
+[? if year = 1949 and month >= 3 and month <= 4: **Constitutional briefing:** the emergency has opened a wider argument over royal power. A constituent assembly is being prepared while opponents decide whether to concentrate on a public objection, legal procedure, or the political connections needed for a later contest. ?]
+[? if year = 1949 and month >= 5 and month <= 6: **Constitutional briefing:** the constituent assembly has strengthened the {!<span class="term term-royalist">!}Shah's{!</span>!} constitutional position, including a revised Article 48 power to dissolve the {!<span class="term term-parliament">!}Majles{!</span>!}. Opposition circles must now work inside a settlement they did not make. ?]
+[? if year = 1949 and month >= 7 and month <= 9: **Election briefing:** the Sixteenth-{!<span class="term term-parliament">!}Majles{!</span>!} election is under way. Candidates, editors, party organizers, and constitutional politicians can compare reports and coordinate limited work, but there is still no {!<span class="term term-national-front">!}National Front{!</span>!} organization to command them. ?]
+[? if year = 1949 and month = 10: **Election crisis:** the palace protest has brought opposition figures together around objections to the Sixteenth-{!<span class="term term-parliament">!}Majles{!</span>!} election. It has created common action, not yet one disciplined party. ?]
 [? if year = 1949 and month = 11: **Coalition briefing:** the cooperation is becoming the {!<span class="term term-national-front">!}National Front{!</span>!}, united around representative elections, constitutional government, and political liberties while retaining unlike organizations and tendencies. ?]
 [? if year = 1949 and month = 12: **Organizational briefing:** the new {!<span class="term term-national-front">!}Front{!</span>!} must turn its chosen structure into repeatable committee, press, fundraising, and electoral work. ?]
 [? if year = 1950 and month = 1: **Rerun briefing:** Tehran's cancelled election has opened a second contest. The secretariat proceeds with “[+ election_strategy +].” ?]

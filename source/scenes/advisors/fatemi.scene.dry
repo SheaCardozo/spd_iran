@@ -7,10 +7,10 @@ tags: advisor
 
 = {!<span class="term term-nationalist-social-democratic">!}Hossein Fatemi{!</span>!}
 
-{!<span class="term term-nationalist-social-democratic">!}Fatemi{!</span>!} is a
-journalist and {!<span class="term term-national-front">!}National Front{!</span>!}
-political figure. The consultation
-models his contribution to press strategy and public campaigning; it does not
+{!<span class="term term-nationalist-social-democratic">!}Fatemi{!</span>!} is
+a journalist whose press work becomes important to the
+{!<span class="term term-national-front">!}National Front{!</span>!}. The
+consultation becomes available once that cooperation exists; it does not
 treat him as the sole editor of every friendly paper.
 
 - @fatemi_message
@@ -21,8 +21,8 @@ treat him as the sole editor of every friendly paper.
 @fatemi_message
 title: Sharpen the public message
 subtitle: <span class="term term-nationalist-social-democratic">Fatemi</span> reduces the campaign to a line editors can carry from headline to meeting hall
-choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+choose-if: advisor_action_timer <= 0 and front_formed = 1
+unavailable-subtitle: [? if front_formed = 0: Available after the common electoral protest. ?][? if front_formed = 1: [+ advisor_action_timer +] months before another adviser action. ?]
 on-arrival: advisor_action_timer = 6; press_capacity += 5; public_mandate += 3
 
 {!<span class="term term-nationalist-social-democratic">!}Fatemi{!</span>!} reduces the current case to a headline, a short explanation, and a set
@@ -38,8 +38,8 @@ emphasis will need attention in a later cycle.
 @fatemi_network
 title: Coordinate friendly editors
 subtitle: Independent papers coordinate timing and argument without becoming an official party press
-choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+choose-if: advisor_action_timer <= 0 and front_formed = 1
+unavailable-subtitle: [? if front_formed = 0: Available after the common electoral protest. ?][? if front_formed = 1: [+ advisor_action_timer +] months before another adviser action. ?]
 on-arrival: advisor_action_timer = 6; press_capacity += 4; organizational_reach += 2
 
 {!<span class="term term-nationalist-social-democratic">!}Fatemi{!</span>!} convenes editors to compare what they can verify, what readers are
@@ -54,8 +54,8 @@ papers into a single controlled organ.
 @fatemi_dossier
 title: Prepare a documented rebuttal
 subtitle: The rebuttal sacrifices speed for a record opponents must answer point by point
-choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
+choose-if: advisor_action_timer <= 0 and front_formed = 1
+unavailable-subtitle: [? if front_formed = 0: Available after the common electoral protest. ?][? if front_formed = 1: [+ advisor_action_timer +] months before another adviser action. ?]
 on-arrival: advisor_action_timer = 6; press_capacity += 3; constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2
 
 {!<span class="term term-nationalist-social-democratic">!}Fatemi{!</span>!} organizes a rebuttal around dated statements and institutional records,

@@ -13,7 +13,7 @@ card-image: img/majlis_1940s.jpg
 = Electoral Committee
 
 Before the Sixteenth {!<span class="term term-parliament">!}Majles{!</span>!}
-convenes, the {!<span class="term term-national-front">!}Front{!</span>!}
+convenes, [? if front_formed = 0: cooperating candidates and opposition circles ?][? if front_formed = 1: the {!<span class="term term-national-front">!}Front{!</span>!} ?]
 must distinguish rumor from a
 usable election record. Constituency reports can reveal patterns, legal
 petitions can force precise claims, and a public register can connect local
@@ -34,7 +34,7 @@ The committee distributes a common reporting form and asks local contacts to
 separate what they observed from what they heard. Incomplete reports remain
 marked as such rather than being promoted into a national result.
 
-The {!<span class="term term-national-front">!}Front{!</span>!} gains a
+[? if front_formed = 0: The cooperating circles gain ?][? if front_formed = 1: The {!<span class="term term-national-front">!}Front{!</span>!} gains ?] a
 wider and more disciplined picture of the election.
 Converting those reports into a constitutional case still requires another
 step.
@@ -58,7 +58,7 @@ meet that standard remain outside the filing.
 
 @electoral_register
 title: Publish a provisional constituency register
-subtitle: Publication invites public scrutiny—and exposes every blank the <span class="term term-national-front">Front</span> cannot yet fill
+subtitle: Publication invites public scrutiny—and exposes every blank the opposition cannot yet fill
 on-arrival: press_capacity += 4; public_mandate += 3; shah_relation -= 1
 
 The committee publishes only returns and objections it can identify by place,
@@ -67,8 +67,7 @@ Friendly papers can now compare claims against one common register.
 
 Public scrutiny grows, as does the
 {!<span class="term term-royalist">!}Court's{!</span>!} irritation with the
-{!<span class="term term-national-front">!}Front's{!</span>!}
-challenge. The document is explicitly provisional and must be revised as
+opposition's challenge. The document is explicitly provisional and must be revised as
 better evidence arrives.
 
 - @post_event: Continue

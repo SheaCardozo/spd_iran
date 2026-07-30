@@ -1,11 +1,18 @@
 # Sources for the February 1949 attempt, martial law, Tudeh ban, and
-# constitutional revision: Ervand Abrahamian, Iran Between Two Revolutions,
-# ch. 15; Mostafa Elm, Oil, Power, and Principle, ch. 3, pp. 82–86.
+# constitutional revision: Habib Ladjevardi, Labor Unions and Autocracy in
+# Iran, pp. 90–92, for the exact 4 February date and immediate suppression;
+# Ervand Abrahamian, Iran Between Two Revolutions, ch. 5, pp. 249–250;
+# Mostafa Elm, Oil, Power, and Principle, ch. 3, “The Constitution.”
 # First-Senate composition: official First-Senate roster, appointed and
 # elected tables. Choice effects are counterfactual abstractions.
 title: The attempt on the <span class="term term-royalist">Shah</span>
 subtitle: An attack becomes a constitutional emergency
 new-page: true
+tags: event
+view-if: year = 1949 and month >= 2 and attempt_emergency_seen = 0
+max-visits: 1
+priority: 30
+on-arrival: attempt_emergency_seen = 1
 
 = 4 February 1949
 
@@ -26,7 +33,7 @@ is useful, frightening, and still unproved.
 @attempt_caution
 title: Insist that evidence precede accusation
 subtitle: The statement sets a public rule without committing the opposition to a campaign it cannot yet sustain
-on-arrival: constitutional_legitimacy += 2; prologue_legitimacy_modifier += 2
+on-arrival: constitutional_legitimacy += 2
 
 Your statement condemns the shooting and refuses to assign a wider
 responsibility without evidence. It gives opponents of collective punishment
@@ -36,12 +43,12 @@ the authorities intend to do next.
 The emergency does not wait for that evidence. Arrests and restrictions are
 already widening.
 
-- @prologue_ban: Continue
+- @emergency_measures: Continue
 
 @attempt_quiet
 title: Gather reports before intervening publicly
 subtitle: A documented case can be assembled before the opposition exposes itself in print
-on-arrival: constitutional_legitimacy += 1; prologue_legitimacy_modifier += 1; parliamentary_procedure_legitimacy += 2
+on-arrival: constitutional_legitimacy += 1; parliamentary_procedure_legitimacy += 2
 
 Lawyers, editors, and political contacts compare what they have heard and mark
 contradictions rather than forcing them into one story. The resulting record
@@ -50,12 +57,12 @@ separates verified acts from politically convenient inferences.
 Because the work is discreet, the opposition establishes less of a public
 standard before emergency measures take effect.
 
-- @prologue_ban: Continue
+- @emergency_measures: Continue
 
 @attempt_joint
 title: Draft a joint statement for opposition newspapers
 subtitle: A common text brings the opposition into view—and under the <span class="term term-royalist">Court</span>'s eye
-on-arrival: constitutional_legitimacy += 1; prologue_legitimacy_modifier += 1; organizational_reach += 1; prologue_organization_modifier += 1; shah_resistance += 1; prologue_crown_modifier -= 1
+on-arrival: constitutional_legitimacy += 1; organizational_reach += 1; shah_resistance += 1
 
 Several opposition circles agree on careful language: condemn the assault,
 reject unsupported collective blame, and ask under what law the emergency
@@ -65,9 +72,9 @@ that did not exist before the crisis.
 It also identifies the signatories to a {!<span class="term term-royalist">!}Court{!</span>!} newly alert to organized
 opposition. The statement cannot prevent the measures that follow.
 
-- @prologue_ban: Continue
+- @emergency_measures: Continue
 
-@prologue_ban
+@emergency_measures
 title: Martial law and the <span class="term term-left">Tudeh</span> ban
 subtitle: Emergency power reaches parties, newspapers, and political networks
 new-page: true
@@ -91,7 +98,7 @@ principle visible but expose its organizers to further pressure.
 @ban_legal_record
 title: Build a legal record of the emergency measures
 subtitle: The emergency decrees become a future constitutional brief rather than an immediate street contest
-on-arrival: constitutional_legitimacy += 2; prologue_legitimacy_modifier += 2; shah_relation -= 1; prologue_crown_modifier -= 1
+on-arrival: constitutional_legitimacy += 2; shah_relation -= 1
 
 Lawyers begin recording orders, detentions, closures, and the authority
 claimed for them. The record cannot reopen a newspaper or free a detainee by
@@ -100,12 +107,12 @@ itself, but it prevents every measure from dissolving into rumor.
 The choice also makes the opposition's constitutional objection harder for
 the {!<span class="term term-royalist">!}Court{!</span>!} to treat as private unease.
 
-- @prologue_constituent: Continue
+- @post_event: Continue
 
 @ban_contacts
 title: Preserve discreet organizational contacts
 subtitle: Political networks survive quietly while the public defense is left to others
-on-arrival: organizational_reach += 2; prologue_organization_modifier += 2
+on-arrival: organizational_reach += 2
 
 Trusted intermediaries carry news between lawyers, political circles, and
 families affected by the arrests. The network learns which channels still
@@ -114,12 +121,12 @@ function and which reports can be corroborated.
 The work preserves capacity for a later campaign, but people facing the
 emergency hear no comparably strong common public answer.
 
-- @prologue_constituent: Continue
+- @post_event: Continue
 
 @ban_public_defense
 title: Coordinate a public defense of political liberties
 subtitle: The ban is answered in print and meeting halls, where the <span class="term term-royalist">Crown</span> cannot ignore it
-on-arrival: public_mandate += 1; press_capacity += 1; prologue_organization_modifier += 1; shah_resistance += 1; prologue_crown_modifier -= 1
+on-arrival: public_mandate += 1; press_capacity += 1; shah_resistance += 1
 
 Editors and constitutional politicians frame the ban and press restrictions
 as a test of lawful government rather than as proof of an unverified
@@ -128,12 +135,16 @@ conspiracy. The argument gives later opposition writing a common vocabulary.
 Publication under martial law is uneven, and the visible coordination gives
 the {!<span class="term term-royalist">!}Court{!</span>!} another reason to regard these circles as a developing challenge.
 
-- @prologue_constituent: Continue
+- @post_event: Continue
 
-@prologue_constituent
+@constituent_assembly
 title: The constituent assembly
 subtitle: Constitutional revision changes the balance between <span class="term term-royalist">Crown</span> and <span class="term term-parliament">Majles</span>
 new-page: true
+tags: event
+view-if: year = 1949 and month >= 5
+max-visits: 1
+priority: 20
 
 = Spring 1949
 
@@ -156,7 +167,7 @@ organizers to make only one of these a common priority.
 @assembly_procedure
 title: Publish a signed constitutional objection
 subtitle: A public roll of signatures turns constitutional objection into an open challenge
-on-arrival: constitutional_legitimacy += 1; prologue_legitimacy_modifier += 1; shah_resistance += 2; prologue_crown_modifier -= 2
+on-arrival: constitutional_legitimacy += 1; shah_resistance += 2
 
 The opposition records that constitutional forms do not make every
 constitutional change legitimate. Its objection gives later parliamentary
@@ -166,12 +177,12 @@ consent.
 The {!<span class="term term-royalist">!}Court{!</span>!}, in turn, has little difficulty identifying who intends to contest
 the expanded royal power.
 
-- @prologue_senate: Continue
+- @post_event: Continue
 
 @assembly_risk
 title: Prepare a procedural memorandum for future deputies
 subtitle: Future deputies receive a case they can use inside the chamber; the public dispute remains muted
-on-arrival: constitutional_legitimacy += 1; prologue_legitimacy_modifier += 1; parliamentary_procedure_legitimacy += 2
+on-arrival: constitutional_legitimacy += 1; parliamentary_procedure_legitimacy += 2
 
 Attention shifts to procedure, possible triggers for dissolution, and the
 people through whom royal influence might reach an election. The opposition
@@ -180,12 +191,12 @@ has a procedural answer ready when pressure develops.
 That preparation is useful but quiet. The public record contains a less
 forceful common objection to the revision itself.
 
-- @prologue_senate: Continue
+- @post_event: Continue
 
 @assembly_organize
 title: Build a dissolution-response network
 subtitle: Local allies prepare for dissolution without making legal doctrine their common language
-on-arrival: organizational_reach += 1; prologue_organization_modifier += 1; shah_resistance += 1; prologue_crown_modifier -= 1
+on-arrival: organizational_reach += 1; shah_resistance += 1
 
 The opposition assigns organizers to keep contacts current and to prepare a
 common response if dissolution pressure interrupts parliamentary work. The
@@ -196,12 +207,17 @@ Choosing organization leaves fewer shared lawyers for a detailed memorandum or
 formal public objection. It also makes the opposition's preparation more
 visible to the {!<span class="term term-royalist">!}Court{!</span>!}.
 
-- @prologue_senate: Continue
+- @post_event: Continue
 
-@prologue_senate
+@senate_election_preparations
 title: A new <span class="term term-senate">Senate</span> and a disputed election
 subtitle: Two chambers, mixed routes to office, and no common opposition yet
 new-page: true
+tags: event
+view-if: year = 1949 and month >= 7
+max-visits: 1
+priority: 20
+on-arrival: parliamentary_deck_unlocked = 1; majles_phase = "Sixteenth Majles election under way"
 
 = Summer–Autumn 1949
 
@@ -223,7 +239,7 @@ a defensible constitutional campaign.
 @senate_committee
 title: Prepare a common election-monitoring committee
 subtitle: Comparable reports matter more than a single dramatic denunciation
-on-arrival: organizational_reach += 1; prologue_organization_modifier += 1; prologue_complete = 1
+on-arrival: organizational_reach += 1
 
 Representatives agree on a simple intake: where voting occurred, who reports
 interference, and what evidence can be preserved. The committee has no power
@@ -233,12 +249,12 @@ place to compare cases.
 When the Tehran dispute sharpens, a small coordinating apparatus is ready to
 carry the complaints toward a common protest.
 
-- @palace_protest: Continue to October 1949
+- @post_event: Continue
 
 @senate_constitution
 title: Prepare a public constitutional appeal
 subtitle: The new chamber is opposed before the public, with fewer organizers left to watch its making
-on-arrival: public_mandate += 1; prologue_complete = 1
+on-arrival: public_mandate += 1
 
 The appeal connects representative elections to constitutional government
 without pretending that every disputed return has already been proved. It
@@ -247,12 +263,12 @@ can gather.
 
 The case is legible, but the underlying monitoring record remains uneven.
 
-- @palace_protest: Continue to October 1949
+- @post_event: Continue
 
 @senate_correspondents
 title: Recruit provincial and Tehran correspondents
 subtitle: A dispersed correspondence network sacrifices a single line for wider provincial participation
-on-arrival: organizational_reach += 1; prologue_organization_modifier += 1; prologue_complete = 1
+on-arrival: organizational_reach += 1
 
 Editors, lawyers, and political acquaintances begin passing reports from
 constituencies to Tehran. They do not produce a complete national ledger, but
@@ -262,4 +278,4 @@ complaint.
 The correspondents create a wider reporting network; agreement on a single
 public demand will have to be forged in the approaching protest.
 
-- @palace_protest: Continue to October 1949
+- @post_event: Continue

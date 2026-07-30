@@ -10,24 +10,8 @@ async function reachMonthlyHand(page) {
   await page.goto('/');
   await expect(page.locator('#content')).toContainText('The Last Majles');
   await firstAvailableChoice(page);
-  await expect(page.locator('#content')).toContainText('4 February 1949');
-  for (let step = 0; step < 4; step += 1) {
-    await firstAvailableChoice(page);
-    if (step === 0) {
-      await expect(page.locator('#content')).toContainText(
-        'Your statement condemns the shooting',
-      );
-    }
-    await firstAvailableChoice(page);
-  }
-  await expect(page.locator('#content')).toContainText('October 1949');
-  await firstAvailableChoice(page);
   await expect(page.locator('#content')).toContainText(
-    'The protesters leave without a final settlement',
-  );
-  await firstAvailableChoice(page);
-  await expect(page.locator('#content')).toContainText(
-    'Opening briefing',
+    'Political briefing',
   );
 }
 
@@ -55,6 +39,12 @@ test('debug mode reveals exact choice effects only on hover or focus', async ({
 }) => {
   await page.goto('/?debug=1');
   await firstAvailableChoice(page);
+  await page.evaluate(() => {
+    const dendry = window.dendryUI.dendryEngine;
+    dendry.state.qualities.month = 2;
+    dendry.goToScene('post_event');
+  });
+  await firstAvailableChoice(page);
   await expect(page.locator('#content')).toContainText('4 February 1949');
 
   const choice = page.locator('#content ul.choices li').first();
@@ -65,9 +55,6 @@ test('debug mode reveals exact choice effects only on hover or focus', async ({
   await expect(tooltip).toBeVisible();
   await expect(tooltip).toContainText(
     'constitutional legitimacy +2',
-  );
-  await expect(tooltip).toContainText(
-    'starting legitimacy modifier +2',
   );
 
   await page.evaluate(() => window.dendryUI.quickSave());
@@ -100,7 +87,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   const schema = await page.evaluate(
     () => window.dendryUI.dendryEngine.state.qualities.save_schema_version,
   );
-  expect(schema).toBe(1);
+  expect(schema).toBe(3);
 
   for (const [tab, text] of [
     ['main_tab', 'Constitutional legitimacy'],
@@ -121,7 +108,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   await page.getByRole('link', {name: 'Library'}).click();
   await page.getByRole('link', {name: 'Return', exact: true}).click();
   await expect(page.locator('#content')).toContainText(
-    'Opening briefing',
+    'Political briefing',
   );
 
   await expect(page.locator('ul.pinned-cards li')).toHaveCount(6);
@@ -133,6 +120,11 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   await expect(
     page.locator('ul.pinned-cards .card-caption').first(),
   ).not.toContainText('<span');
+  await page.evaluate(() => {
+    const dendry = window.dendryUI.dendryEngine;
+    dendry.state.qualities.front_formed = 1;
+    dendry.goToScene('main');
+  });
   await page.locator('ul.pinned-cards li', {hasText: 'Mohammad Mossadegh'})
     .locator('a')
     .click();
@@ -143,7 +135,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   );
   await firstAvailableChoice(page);
   await expect(page.locator('#content')).toContainText(
-    'Opening briefing',
+    'Political briefing',
   );
 
   await page.locator('ul.decks li a').first().click();
@@ -158,7 +150,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
     const key = window.dendryUI.save_prefix + '_0';
     return JSON.parse(localStorage[key]);
   });
-  expect(saved.qualities.save_schema_version).toBe(1);
+  expect(saved.qualities.save_schema_version).toBe(3);
   expect(saved.qualities).not.toHaveProperty('run_seed');
 
   await page.evaluate(() => {
@@ -177,7 +169,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
     window.dendryUI.loadSlot(1);
   });
   await expect.poll(() => page.dialogMessages).toContainEqual(
-    expect.stringContaining('predates The Last Majles v0.1'),
+    expect.stringContaining('retired campaign chronology'),
   );
 
   await page.evaluate(() => window.dendryUI.showSaveSlots());
@@ -194,7 +186,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
     () => page.evaluate(
       () => window.dendryUI.dendryEngine.state.qualities.save_schema_version,
     ),
-  ).toBe(1);
+  ).toBe(3);
 
   await page.evaluate(() => {
     window.enableDarkMode();
@@ -251,7 +243,7 @@ test('complete browser playthrough reaches the ending', async ({page}) => {
   });
 
   expect(result.scene).toBe('campaign_ending');
-  expect(result.actions).toBe(18);
+  expect(result.actions).toBe(27);
   expect(result.year).toBe(1951);
   expect(result.month).toBe(3);
   expect(result.senate).toBe(1);

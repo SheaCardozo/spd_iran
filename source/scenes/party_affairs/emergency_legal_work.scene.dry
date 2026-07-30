@@ -1,0 +1,66 @@
+# Historical basis: Ervand Abrahamian, Iran Between Two Revolutions, ch. 5,
+# pp. 249–250; Mostafa Elm, Oil, Power, and Principle, ch. 3,
+# “The Constitution.”
+# The allocation of legal work and all effects are counterfactual abstractions.
+title: Emergency Legal Work
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: emergency_legal_work_timer <= 0 and front_formed = 0 and year = 1949 and month >= 2
+on-arrival: month_actions += 1; emergency_legal_work_timer = 4
+
+= Emergency Legal Work
+
+Martial law, arrests, the suppression of the
+{!<span class="term term-left">!}Tudeh Party{!</span>!}, and restrictions
+on political activity have created more cases than the opposition's lawyers
+can pursue together. Some require immediate representation; others require a
+record that can outlast the emergency.
+
+The lawyers can concentrate on one part of that burden this month.
+
+- @legal_detentions
+- @legal_press
+- @legal_archive
+
+@legal_detentions
+title: Prepare detention cases
+subtitle: Individual files give the emergency a human and legal record, even where immediate release remains beyond reach
+on-arrival: constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2
+
+Lawyers collect orders, dates, family testimony, and the authority claimed for
+each detention. The files do not compel the government to reverse itself, but
+they prevent arrests from becoming an unexamined administrative fact.
+
+The opposition acquires cases it can defend in constitutional language rather
+than relying on a general denunciation alone.
+
+- @post_event: Continue
+
+@legal_press
+title: Defend the restricted newspapers
+subtitle: Editors receive a common legal argument while deciding independently how much danger they can accept
+on-arrival: press_capacity += 3; constitutional_legitimacy += 2
+
+Counsel prepares a short brief on closures, censorship, and the legal limits
+claimed for martial law. Editors adapt it to their own circumstances rather
+than waiting for a central instruction that does not exist.
+
+Several papers are better able to explain the dispute. Their ability to print
+still depends on decisions the lawyers do not control.
+
+- @post_event: Continue
+
+@legal_archive
+title: Keep a common emergency archive
+subtitle: A quiet documentary record sacrifices immediate publicity for evidence that can be used later
+on-arrival: parliamentary_procedure_legitimacy += 3; organizational_reach += 2
+
+A small group catalogs decrees, newspaper orders, detention reports, and
+contradictory official statements. Items that cannot be verified are marked
+as such instead of being discarded or promoted into fact.
+
+The archive attracts little attention this month. It gives future
+constitutional and parliamentary work a firmer record.
+
+- @post_event: Continue

@@ -5,7 +5,7 @@ title: Common Resolution
 new-page: true
 is-card: true
 tags: party_affairs
-view-if: common_resolution_timer <= 0
+view-if: common_resolution_timer <= 0 and front_formed = 1
 on-arrival: month_actions += 1; common_resolution_timer = 4
 
 = Draft a Common Resolution

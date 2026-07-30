@@ -1,0 +1,69 @@
+# Historical basis: Ervand Abrahamian, Iran Between Two Revolutions, ch. 5,
+# pp. 250–253, which dates the Sixteenth-Majles election period from July
+# 1949; Fakhreddin Azimi, Iran: The Crisis of Democracy, 1941–1953,
+# pp. 207–208. All player operations and effects are counterfactual.
+title: Election Preparations
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: election_preparations_timer <= 0 and front_formed = 0 and year = 1949 and month >= 5
+on-arrival: month_actions += 1; election_preparations_timer = 3
+
+= Election Preparations
+
+[? if month < 7: Preparations are beginning for the election to the Sixteenth
+{!<span class="term term-parliament">!}Majles{!</span>!}. ?]
+[? if month >= 7: The election to the Sixteenth
+{!<span class="term term-parliament">!}Majles{!</span>!} is under way. ?]
+Candidates and organizations opposed to administrative interference do not
+yet possess a common slate, monitoring body, or campaign command.
+
+They can nevertheless coordinate one practical task before scattered
+complaints harden into a general election crisis.
+
+- @election_candidates
+- @election_observers
+- @election_correspondents
+
+@election_candidates
+title: Compare prospective candidates
+subtitle: Private coordination reduces collisions among constitutional candidates without presenting them as one slate
+on-arrival: independent_nationalists_relation += 3; iran_party_relation += 2; public_mandate += 1
+
+Representatives compare constituencies, local connections, and the claims
+different candidates intend to make. Some avoid competing directly where
+doing so would divide the same limited body of supporters.
+
+The talks improve coordination without producing a national list or binding
+any participant to a {!<span class="term term-national-front">!}Front{!</span>!}
+that does not yet exist.
+
+- @post_event: Continue
+
+@election_observers
+title: Prepare common observer forms
+subtitle: Comparable records strengthen later objections, even though observers cannot compel honest administration
+on-arrival: parliamentary_procedure_legitimacy += 3; organizational_reach += 2
+
+Lawyers devise a short form recording the place, date, witness, reported act,
+and available document. Candidates distribute it where they have trustworthy
+contacts and leave unsupported allegations marked as allegations.
+
+The resulting files will be easier to compare. The observers have no power to
+certify the election or prevent interference.
+
+- @post_event: Continue
+
+@election_correspondents
+title: Concentrate on Tehran and provincial correspondence
+subtitle: A wider reporting circuit reveals recurring complaints while leaving candidate coordination unresolved
+on-arrival: organizational_reach += 3; press_capacity += 2
+
+Editors and candidates establish regular routes for reports from Tehran and
+selected provincial constituencies. Repeated methods become easier to
+distinguish from a single local grievance.
+
+The correspondence broadens the coming public case. Candidates still enter
+the contest through separate organizations and personal followings.
+
+- @post_event: Continue

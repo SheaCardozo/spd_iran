@@ -115,3 +115,4 @@ bibliography entry, or asset-rights record.
 - [Exhaustive compiled-scene standards gate](2026-07-29-complete-scene-standards-gate.md)
 - [Pinned advisers, perfect information, and source comments](2026-07-29-pinned-advisers-perfect-information-and-source-comments.md)
 - [Historical choice flavour and debug effects](2026-07-29-choice-flavour-and-debug-effects.md)
+- [January campaign start and ordinary pre-Front play](2026-07-29-january-campaign-start.md)

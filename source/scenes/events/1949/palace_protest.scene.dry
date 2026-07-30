@@ -3,7 +3,10 @@
 title: The Palace Protest
 subtitle: Separate election complaints become a common constitutional action
 new-page: true
+tags: event
+view-if: year = 1949 and month >= 10 and front_formed = 0
 max-visits: 1
+priority: 40
 
 = October 1949
 
@@ -34,4 +37,4 @@ defining the constitutional grounds on which they can act together.
 The new cooperation still contains separate loyalties, unequal organizations,
 and different ideas about how far the alliance should extend.
 
-- @main: Deal the first monthly hand
+- @post_event: Continue

@@ -1,0 +1,67 @@
+# Historical basis: Fakhreddin Azimi, Iran: The Crisis of Democracy,
+# 1941–1953, pp. 201–208; Ervand Abrahamian, Iran Between Two Revolutions,
+# ch. 5, pp. 249–253. The correspondence network and effects are
+# counterfactual abstractions.
+title: Political Correspondence
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: political_correspondence_timer <= 0 and front_formed = 0
+on-arrival: month_actions += 1; political_correspondence_timer = 3
+
+= Political Correspondence
+
+The opposition has no secretariat capable of surveying the country. News
+moves through editors, lawyers, party branches, prospective candidates, and personal
+correspondents, each of whom sees only part of the political field.
+
+Concentrating the correspondence can make one of those channels more regular
+without pretending to create complete national coverage.
+
+- @correspondence_editors
+- @correspondence_provinces
+- @correspondence_party
+
+@correspondence_editors
+title: Link the friendly editors
+subtitle: Papers compare what they can print and verify while preserving their own editorial lines
+on-arrival: press_capacity += 3; constitutional_legitimacy += 1
+
+Editors exchange summaries of restrictions, constitutional arguments, and
+reports that require corroboration. They coordinate enough to avoid
+contradicting one another on basic facts, but no paper becomes the organ of a
+coalition that has not formed.
+
+The opposition gains a more coherent press conversation without acquiring
+control over it.
+
+- @post_event: Continue
+
+@correspondence_provinces
+title: Recruit provincial correspondents
+subtitle: Wider correspondence brings distant complaints into view and leaves each report dependent on its named source
+on-arrival: organizational_reach += 3; independent_nationalists_organization += 2
+
+Prospective candidates, lawyers, and editors ask trusted acquaintances outside Tehran to
+send dated reports and identify how they learned each fact. The resulting
+picture is uneven, but it is wider and easier to question.
+
+Independent politicians gain connections that do not depend entirely on a
+single established party.
+
+- @post_event: Continue
+
+@correspondence_party
+title: Strengthen the <span class="term term-constitutionalist">Iran Party</span> circuit
+subtitle: A disciplined party channel moves reports reliably, while other circles remain outside it
+on-arrival: iran_party_organization += 3; iran_party_relation += 2; organizational_reach += 1
+
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!}
+organizers regularize reports between local contacts and Tehran. The circuit
+is narrower than a general opposition network but more dependable within the
+organization that maintains it.
+
+The party becomes a more useful partner. Its correspondence is not a neutral
+register of every opposition group.
+
+- @post_event: Continue

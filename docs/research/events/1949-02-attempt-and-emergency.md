@@ -15,10 +15,22 @@ documented emergency measures.
 
 ## Mechanical abstraction
 
-Small prologue changes to legitimacy, intelligence, organization, or Crown
-relations are scenario values capped at five points, not historical estimates.
+The January recurring cards and the February–April legal, correspondence, and
+consultation cards change legitimacy, organization, press capacity,
+parliamentary procedure, or Crown relations. These are scenario values, not
+historical measurements. The attempt and immediate emergency sequence resolve
+as the first dated event after January's ordinary action.
 
 ## Sources
 
-- `MAJ-S3`, chapter 3, “The Constitution.”
-- `MAJ-S1`, chapter 15.
+- `MAJ-S2`, chapter 5, pp. 249–50.
+- `MAJ-S9`, pp. 90–92, for the exact 4 February date, the attempt, the
+  government's attribution, and the suppression that followed.
+- `MAJ-S12`, chapter 3, “The Constitution.”
+
+## Implemented scenes
+
+- `source/scenes/events/1949/attempt_and_emergency.scene.dry`
+- `source/scenes/party_affairs/emergency_legal_work.scene.dry`
+- `source/scenes/party_affairs/opposition_consultation.scene.dry`
+- `source/scenes/party_affairs/political_correspondence.scene.dry`

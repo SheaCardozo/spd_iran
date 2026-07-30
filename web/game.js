@@ -29,10 +29,6 @@
     organizational_reach: 'organizational reach',
     parliamentary_procedure_legitimacy: 'parliamentary procedure',
     press_capacity: 'press capacity',
-    prologue_complete: 'prologue complete',
-    prologue_crown_modifier: 'starting Crown modifier',
-    prologue_legitimacy_modifier: 'starting legitimacy modifier',
-    prologue_organization_modifier: 'starting organization modifier',
     public_mandate: 'public mandate',
     razmara_response: 'Razmara response',
     religious_network_dissent: 'religious-network dissent',
@@ -152,14 +148,14 @@
       return Boolean(
         state &&
         state.qualities &&
-        state.qualities.save_schema_version === 1
+        state.qualities.save_schema_version === 3
       );
     }
 
     function rejectOldSave() {
       window.alert(
-        'This save predates The Last Majles v0.1 and is incompatible. ' +
-        'Start a new Historical Scenario; prototype saves are not migrated.'
+        'This save uses a retired campaign chronology and is incompatible. ' +
+        'Start a new Historical Scenario beginning in January 1949.'
       );
     }
 
@@ -438,7 +434,9 @@
     if (!cards.length) return;
     var q = window.dendryUI.dendryEngine.state.qualities;
     var description = 'Advisers';
-    if (q.advisor_action_timer > 0) {
+    if (!q.front_formed) {
+      description += ' — no consultations currently available';
+    } else if (q.advisor_action_timer > 0) {
       description += ' — available in ' + q.advisor_action_timer + ' months';
     }
     $('#content').append($('<hr>'));
@@ -462,7 +460,7 @@
     if (
       scene != 'root' &&
       q &&
-      q.save_schema_version === 1 &&
+      q.save_schema_version === 3 &&
       !window.justLoaded
     ) {
         window.dendryUI.autosave();

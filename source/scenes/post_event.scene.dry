@@ -110,6 +110,7 @@ Q.decision_flags = {
     razmara_response: Q.razmara_response
 };
 Q.event_flags = {
+    attempt_emergency: Q.attempt_emergency_seen,
     hazhir: Q.hazhir_seen,
     front_formed: Q.front_formed,
     tehran_rerun: Q.tehran_rerun_seen,

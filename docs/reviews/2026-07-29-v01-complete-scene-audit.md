@@ -2,8 +2,7 @@
 
 **Review date:** 29 July 2026  
 **Reviewed build:** current `source/`, rebuilt `out/game.json`, and
-`web/game.js`/`web/game.css` after the choice-subtitle and debug-effect
-presentation rewrite
+`web/game.js`/`web/game.css` after the January-start campaign rewrite
 **Standard:** [SCENE_CONTENT_STANDARD.md](../SCENE_CONTENT_STANDARD.md)  
 **Automated inventory:** [audit-scenes.js](../../scripts/audit-scenes.js)  
 **Review posture:** independent, exhaustive, adversarial; no game-source edits by
@@ -11,20 +10,28 @@ this reviewer
 
 ## Verdict
 
-All **166 compiled scene IDs** are inventoried below. The scene-content
-inventory has **166 passes and 0 failures**. The seven current review-class
+All **182 compiled scene IDs** are inventoried below. The scene-content
+inventory has **182 passes and 0 failures**. The seven current review-class
 totals reconcile exactly to the automated inventory:
 
 | Review class | Script total | PASS | FAIL |
 |---|---:|---:|---:|
 | `framework_internal` | 5 | 5 | 0 |
 | `information_surface` | 18 | 18 | 0 |
-| `visible_consequence` | 98 | 98 | 0 |
+| `visible_consequence` | 110 | 110 | 0 |
 | `deck_container` | 3 | 3 | 0 |
 | `engine_internal` | 4 | 4 | 0 |
-| `decision_menu` | 36 | 36 | 0 |
+| `decision_menu` | 40 | 40 | 0 |
 | `continuation_decision` | 2 | 2 | 0 |
-| **Total** | **166** | **166** | **0** |
+| **Total** | **182** | **182** | **0** |
+
+The January 1949 hand uses the ordinary campaign loop. The February attempt
+and emergency, May constituent assembly, July election preparations, and
+October palace protest use the tagged-event route. Four pre-Front recurring
+cards and their twelve consequences distinguish separate opposition circles
+from the National Front that forms later. Their
+setup, historical boundary, qualitative choice language, result beats, and
+semantic political markup pass.
 
 The three former manual prose failures in
 `campaign_spine.nationalization_cross_chamber`,
@@ -49,8 +56,8 @@ restore debug disclosure at an ordinary URL. The overall release verdict is
 ## Method
 
 This audit rebuilt its inventory from the current `out/game.json`; it did not
-edit the previous 177-row table or use earlier reviews as a substitute for
-enumeration. Every compiled ID was assigned one of the seven current classes
+use the previous table or earlier reviews as a substitute for enumeration.
+Every compiled ID was assigned one of the seven current classes
 and reviewed against that class's responsibility.
 
 The review checked:
@@ -58,7 +65,7 @@ The review checked:
 - every historical and recurring decision for sufficient setup, a choice count
   justified by the decision, qualitative tradeoffs, distinct effects, and a
   visible consequence;
-- all 97 substantive option targets for a subtitle that states political or
+- all 109 substantive option targets for a subtitle that states political or
   historical action and likely reaction, implies rather than names mechanics,
   avoids optimizer shorthand and numerical deltas, preserves source bounds,
   and uses semantic political markup;
@@ -336,22 +343,38 @@ electoral assumptions.
 | `press.press_plural` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
 | `prevScene` | `framework_internal` | **PASS** | Generated Dendry navigation helper; framework-only responsibility is correct. |
 | `prevTopScene` | `framework_internal` | **PASS** | Generated Dendry navigation helper; framework-only responsibility is correct. |
-| `prologue_attempt` | `decision_menu` | **PASS** | Setup, choice count, tradeoffs, source boundary, and visible result routing pass. |
-| `prologue_attempt.assembly_organize` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
-| `prologue_attempt.assembly_procedure` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
-| `prologue_attempt.assembly_risk` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
-| `prologue_attempt.attempt_caution` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
-| `prologue_attempt.attempt_joint` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
-| `prologue_attempt.attempt_quiet` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
-| `prologue_attempt.ban_contacts` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
-| `prologue_attempt.ban_legal_record` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
-| `prologue_attempt.ban_public_defense` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
-| `prologue_attempt.prologue_ban` | `decision_menu` | **PASS** | Setup, choice count, tradeoffs, source boundary, and visible result routing pass. |
-| `prologue_attempt.prologue_constituent` | `decision_menu` | **PASS** | Setup, choice count, tradeoffs, source boundary, and visible result routing pass. |
-| `prologue_attempt.prologue_senate` | `decision_menu` | **PASS** | Setup, choice count, tradeoffs, source boundary, and visible result routing pass. |
-| `prologue_attempt.senate_committee` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
-| `prologue_attempt.senate_constitution` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
-| `prologue_attempt.senate_correspondents` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `attempt_and_emergency` | `decision_menu` | **PASS** | Setup, choice count, tradeoffs, source boundary, and visible result routing pass. |
+| `attempt_and_emergency.assembly_organize` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `attempt_and_emergency.assembly_procedure` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `attempt_and_emergency.assembly_risk` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `attempt_and_emergency.attempt_caution` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `attempt_and_emergency.attempt_joint` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `attempt_and_emergency.attempt_quiet` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `attempt_and_emergency.ban_contacts` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `attempt_and_emergency.ban_legal_record` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `attempt_and_emergency.ban_public_defense` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `attempt_and_emergency.constituent_assembly` | `decision_menu` | **PASS** | Setup, choice count, tradeoffs, source boundary, and visible result routing pass. |
+| `attempt_and_emergency.emergency_measures` | `decision_menu` | **PASS** | Setup, choice count, tradeoffs, source boundary, and visible result routing pass. |
+| `attempt_and_emergency.senate_committee` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `attempt_and_emergency.senate_constitution` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `attempt_and_emergency.senate_correspondents` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `attempt_and_emergency.senate_election_preparations` | `decision_menu` | **PASS** | Setup, choice count, tradeoffs, source boundary, and visible result routing pass. |
+| `election_preparations` | `decision_menu` | **PASS** | Setup, choice count, tradeoffs, source boundary, and visible result routing pass. |
+| `election_preparations.election_candidates` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `election_preparations.election_correspondents` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `election_preparations.election_observers` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `emergency_legal_work` | `decision_menu` | **PASS** | Setup, choice count, tradeoffs, source boundary, and visible result routing pass. |
+| `emergency_legal_work.legal_archive` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `emergency_legal_work.legal_detentions` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `emergency_legal_work.legal_press` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `opposition_consultation` | `decision_menu` | **PASS** | Setup, choice count, tradeoffs, source boundary, and visible result routing pass. |
+| `opposition_consultation.consult_constitutionalists` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `opposition_consultation.consult_intermediaries` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `opposition_consultation.consult_organizers` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `political_correspondence` | `decision_menu` | **PASS** | Setup, choice count, tradeoffs, source boundary, and visible result routing pass. |
+| `political_correspondence.correspondence_editors` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `political_correspondence.correspondence_party` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
+| `political_correspondence.correspondence_provinces` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
 | `public_meetings` | `decision_menu` | **PASS** | Setup, choice count, tradeoffs, source boundary, and visible result routing pass. |
 | `public_meetings.meetings_network` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |
 | `public_meetings.meetings_tehran` | `visible_consequence` | **PASS** | Visible result, acknowledgement route, and historical/counterfactual boundary pass. |

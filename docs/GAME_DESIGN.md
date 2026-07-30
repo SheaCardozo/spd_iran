@@ -4,7 +4,7 @@
 
 **Document status:** pre-production proposal  
 **Intended engine:** the repository's Dendry-based narrative simulator  
-**Campaign span:** October 1949 to August 1953, with a short prologue and conditional epilogues  
+**Campaign span:** January 1949 to August 1953, with conditional epilogues
 **Recommended player role:** the collective leadership of the National Front  
 **Historical priority:** very high; uncertainty and disagreement are to be represented, not silently resolved
 
@@ -25,7 +25,15 @@ The game should therefore be about **building and maintaining constitutional pow
 - the United States moves from mediation and limited support for Iranian nationalism toward covert regime change;
 - organized crowds, newspapers, mosques, guilds, officers, and covert money can change the political situation faster than formal institutions can.
 
-The campaign begins with the October 1949 palace protest against manipulation of elections to the Sixteenth Majles, the episode from which the National Front emerged. A short prologue covers the February 1949 attempt on the Shah, martial law, the banning of the Tudeh Party, preparations to constitute the Senate, and constitutional changes strengthening royal dissolution powers. The campaign normally ends in August 1953. When a constitutional settlement or survival path requires more time, an epilogue can project consequences into 1954 rather than pretending that the crisis was permanently settled on 20 August.
+The campaign begins with an ordinary January 1949 turn. The February attempt
+on the Shah, martial law, the banning of the Tudeh Party, preparations to constitute the Senate,
+constitutional changes strengthening royal dissolution powers, and the
+Sixteenth-Majles election all occur through ordinary monthly play. The October
+palace protest remains the episode from which the National Front emerges, not
+the point at which the player first acquires agency. The campaign normally
+ends in August 1953. When a constitutional settlement or survival path
+requires more time, an epilogue can project consequences into 1954 rather than
+pretending that the crisis was permanently settled on 20 August.
 
 The design's thesis should be posed as a question, not supplied as an answer:
 
@@ -239,18 +247,29 @@ The game uses monthly turns for most of the campaign. Certain crises switch to w
 
 | Act | Historical span | Central problem | Gameplay shift |
 |---|---|---|---|
-| Prologue | February–October 1949 | Repression, royal constitutional change, electoral manipulation | Tutorials on institutions, uncertainty, and protest |
+| The Emergency and Election | January–October 1949 | Opposition preparation, repression, royal constitutional change, electoral manipulation | Opposition networking, legal work, press, candidate and election preparation |
 | I. The Front | October 1949–March 1951 | Build a coalition and contest the Sixteenth Majles | Opposition organizing, candidate protection, press, parliamentary bargaining |
 | II. Nationalization | March–September 1951 | Convert a national demand into control of the oil industry | Cabinet formation, implementation, labor, AIOC withdrawal, negotiations |
 | III. Abadan and the World | October 1951–July 1952 | Survive isolation, elections, and fiscal shock | UN/ICJ diplomacy, foreign exchange, Seventeenth Majles, World Bank talks |
 | IV. Thirty Tir | July 1952–February 1953 | Convert restored authority into constitutional capacity | Emergency powers, War Ministry, reform, coalition fracture |
 | V. Coup Season | March–August 1953 | Govern amid hidden networks and collapsing trust | Counterintelligence, referendum crisis, royal farmans, daily coup sequence |
 
-### 5.1 Prologue: The shot at the university
+### 5.1 The emergency and election: the shot at the university
 
-The player observes, but does not control, the attempt on the Shah on 4 February 1949. The event teaches the difference between fact and interpretation: the attempt occurred; its wider responsibility was politically contested and used to justify repression. The player then advises opposition figures on how to respond to martial law, the Tudeh ban, the constituent assembly, the Senate, and the coming election.
+The player begins with an ordinary January hand among separate opposition
+circles. After that first action, the player observes, but does not control,
+the attempt on the Shah on 4 February 1949. Its wider responsibility was
+politically contested and used to justify repression. The attempt, immediate
+emergency measures, and later constitutional and election developments arrive
+as dated events through the same post-event route used for the rest of the
+campaign.
 
-The prologue ends with the palace protest or *bast* in October 1949. The initial playable choice is not “form the National Front: yes/no,” but what kind of Front to form:
+Before October, the player coordinates separate politicians, parties,
+newspapers, candidates, lawyers, and personal networks. The interface must not
+describe them as a National Front organization with a common membership or
+command. The palace protest or *bast* in October creates the cooperation from
+which the Front emerges. The subsequent choice is not “form the National
+Front: yes/no,” but what kind of Front to form:
 
 - a narrow electoral and constitutional alliance;
 - a broader nationalist movement centered on oil;
@@ -771,7 +790,7 @@ Examples:
 
 | Event | Date | Classification | Elasticity |
 |---|---|---|---|
-| Attempt on Shah | 4 Feb. 1949 | Fixed prologue anchor | responsibility remains disputed |
+| Attempt on Shah | 4 Feb. 1949 | Fixed opening anchor | responsibility remains disputed |
 | Palace electoral protest and Front formation | Oct. 1949 | Campaign anchor | coalition form is playable |
 | Hazhir assassination | 4 Nov. 1949 | Fixed anchor | political response is playable |
 | Razmara assassination | 7 Mar. 1951 | Strong anchor | preventable only after a very large divergence |
@@ -802,7 +821,7 @@ For a historically responsible full campaign:
 - research notes for every major event and character;
 - at least one primary and one scholarly source for each disputed high-impact scene.
 
-An MVP should stop at September 1951 rather than build an under-researched coup. Recommended MVP scope: prologue plus Acts I–II, 35–45 total scenes, 10 advisers, the full oil-proposal schema, and two provisional endings.
+An MVP should stop at September 1951 rather than build an under-researched coup. Recommended MVP scope: the February 1949 opening plus Acts I–II, 35–45 total scenes, 10 advisers, the full oil-proposal schema, and two provisional endings.
 
 ---
 
@@ -964,7 +983,7 @@ The *Petrograd* source confirms that the engine can support separate institution
 source/
   scenes/
     iran/
-      prologue/
+      opening/
       act_1_front/
       act_2_nationalization/
       act_3_abadan_world/
@@ -1042,7 +1061,7 @@ Do not fill objection arrays from memory. They are deliberately empty until rese
 
 **Milestone 1 — opposition vertical slice**
 
-- October 1949 to March 1951;
+- January 1949 to March 1951;
 - coalition, election, press, and Majles systems;
 - 12–15 major scenes;
 - research overlay prototype.

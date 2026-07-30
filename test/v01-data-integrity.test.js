@@ -59,8 +59,11 @@ async function initializedEngine() {
 
 test('v0.1 initializes versioned campaign state without public seed fields', async () => {
   const q = await initialState();
-  assert.equal(q.save_schema_version, 1);
+  assert.equal(q.save_schema_version, 3);
   assert.equal(q.scenario_id, 'historical');
+  assert.equal(q.year, 1949);
+  assert.equal(q.month, 1);
+  assert.equal(q.attempt_emergency_seen, 0);
   for (const field of [
     'run_seed',
     'rng_state',
@@ -146,7 +149,7 @@ test('oil proposals use structured terms and preserve unknowns as null', async (
   assert.equal(q.nationalization_scalar, undefined);
 });
 
-test('all twelve action cards and six pinned advisers compile', async () => {
+test('all sixteen phase-gated action cards and six pinned advisers compile', async () => {
   const game = await loadGame();
   const actionCards = Object.values(game.scenes).filter(
     (scene) => scene.isCard &&
@@ -157,7 +160,7 @@ test('all twelve action cards and six pinned advisers compile', async () => {
   const advisers = Object.values(game.scenes).filter(
     (scene) => scene.isPinnedCard && scene.tags?.includes('advisor'),
   );
-  assert.equal(actionCards.length, 12);
+  assert.equal(actionCards.length, 16);
   assert.equal(advisers.length, 6);
   for (const card of actionCards) {
     assert.ok(
@@ -225,18 +228,39 @@ test('all twelve action cards and six pinned advisers compile', async () => {
 test('deck gates and always-pinned advisers follow the shared hand model', async () => {
   const dendry = await initializedEngine();
   const q = dendry.state.qualities;
-  for (let step = 0; step < 4; step += 1) {
-    dendry.choose(0);
-    dendry.choose(0);
-  }
-  dendry.choose(0);
-  dendry.choose(0);
   assert.equal(dendry.state.sceneId, 'main');
+  assert.equal(
+    dendry.game.scenes.emergency_legal_work.viewIf(dendry.state, q),
+    false,
+    'January does not deal legal work for an emergency that has not occurred',
+  );
+  assert.equal(
+    dendry.game.scenes.election_preparations.viewIf(dendry.state, q),
+    false,
+    'January does not deal election preparation before its historical phase',
+  );
   let visible = dendry._compileChoices(dendry.game.scenes.main).map(
     (choice) => choice.id,
   );
   assert.ok(!visible.includes('main.public_campaign'));
   assert.ok(!visible.includes('main.parliamentary_affairs'));
+
+  dendry.goToScene('mossadegh');
+  let adviserChoices = dendry._compileChoices(
+    dendry.game.scenes.mossadegh,
+  );
+  assert.equal(
+    adviserChoices.filter((choice) => choice.canChoose).length,
+    1,
+    'pre-Front Mossadegh card offers only its return navigation',
+  );
+  dendry.goToScene('kashani');
+  adviserChoices = dendry._compileChoices(dendry.game.scenes.kashani);
+  assert.equal(
+    adviserChoices.filter((choice) => choice.canChoose).length,
+    1,
+    'pre-Front Kashani card does not place him in a Tehran campaign',
+  );
 
   q.front_formed = 1;
   q.parliamentary_deck_unlocked = 1;
@@ -401,26 +425,29 @@ test('menu, briefing, Library, status, and ending meet the scene-wide standard',
   assert.equal(dendry.state.sceneId, 'campaign_ending');
 });
 
-test('the fixed spine has thirteen one-time tagged events plus the palace opening', async () => {
+test('the fixed spine has seventeen one-time tagged events', async () => {
   const game = await loadGame();
   const events = Object.values(game.scenes).filter(
     (scene) => scene.tags?.includes('event'),
   );
-  assert.equal(events.length, 13);
+  assert.equal(events.length, 17);
   for (const event of events) {
     assert.equal(event.maxVisits, 1, `${event.id} is one-time`);
     assert.ok(Number.isFinite(event.priority), `${event.id} has priority`);
   }
   assert.ok(game.scenes.palace_protest);
+  assert.deepEqual(game.scenes.palace_protest.tags, ['event']);
+  assert.deepEqual(game.scenes.attempt_and_emergency.tags, ['event']);
+  assert.equal(game.scenes.attempt_and_emergency.priority, 30);
 });
 
 test('major events follow the setup, choice, and visible consequence standard', async () => {
   const game = await loadGame();
   const setupIds = [
-    'prologue_attempt',
-    'prologue_attempt.prologue_ban',
-    'prologue_attempt.prologue_constituent',
-    'prologue_attempt.prologue_senate',
+    'attempt_and_emergency',
+    'attempt_and_emergency.emergency_measures',
+    'attempt_and_emergency.constituent_assembly',
+    'attempt_and_emergency.senate_election_preparations',
     'palace_protest',
     ...Object.values(game.scenes)
       .filter((scene) => scene.tags?.includes('event'))
@@ -447,7 +474,7 @@ test('major events follow the setup, choice, and visible consequence standard', 
   assert.ok(choiceCounts.has(3), 'multi-strategy events are represented');
 
   const eventBranchPrefixes = [
-    'prologue_attempt.',
+    'attempt_and_emergency.',
     'palace_protest.',
     'front_formation.',
     'campaign_spine.',
@@ -589,7 +616,7 @@ test('every major anchor and adviser has an adjacent research record', () => {
 
 test('historical scenes keep citations in comments and expose no intelligence stat', () => {
   const historicalSceneFiles = [
-    'source/scenes/prologue_attempt.scene.dry',
+    'source/scenes/events/1949/attempt_and_emergency.scene.dry',
     'source/scenes/events/1949/palace_protest.scene.dry',
     'source/scenes/events/1949/front_formation.scene.dry',
     'source/scenes/events/campaign_spine.scene.dry',

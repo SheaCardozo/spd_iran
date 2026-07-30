@@ -5,7 +5,7 @@ title: Coalition Meeting
 new-page: true
 is-card: true
 tags: party_affairs
-view-if: coalition_meeting_timer <= 0
+view-if: coalition_meeting_timer <= 0 and front_formed = 1
 on-arrival: month_actions += 1; coalition_meeting_timer = 3
 
 = Coalition Meeting

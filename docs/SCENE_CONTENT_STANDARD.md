@@ -3,7 +3,7 @@
 This is the definition of done for every player-facing scene in *The Last
 Majles*. It applies to:
 
-- the title menu, onboarding, prologue, fixed campaign anchors, pressure
+- the title menu, onboarding, monthly opening, fixed campaign anchors, pressure
   events, and monthly briefings;
 - every recurring action card and every action-result branch;
 - every adviser consultation and result;
@@ -22,7 +22,7 @@ an author remembers to nominate. `scripts/audit-scenes.js` must classify every
 ID in `out/game.json` into exactly one of these review classes:
 
 1. **decision menu** — historical decisions, recurring cards, adviser menus,
-   and prologue decision surfaces;
+   and opening decision surfaces;
 2. **continuation decision** — a titled and described strategy menu that
    immediately follows a fixed development and therefore does not repeat its
    setup prose;

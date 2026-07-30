@@ -15,7 +15,7 @@ individual records under `docs/research/people/`.
 
 ## Mechanical abstraction
 
-The twelve cards are recurring counterfactual organizational opportunities.
+The sixteen cards are recurring counterfactual organizational opportunities.
 Their committee meetings, fundraising drives, press briefs, public meetings,
 petitions, and deputy conversations are simulation output, not claims that a
 specific undocumented meeting occurred in a particular month. Effects on
