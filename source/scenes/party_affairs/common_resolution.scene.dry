@@ -22,11 +22,20 @@ organizations and which work the coalition postpones.
 - @resolution_constitution
 - @resolution_oil
 - @resolution_amendments
+- @return_card
 
 @resolution_constitution
 title: Restate the constitutional minimum
 subtitle: The coalition binds itself to a rule all four components can defend, while oil waits
-on-arrival: constitutional_legitimacy += 4; iran_party_relation += 2; independent_nationalists_relation += 2
+on-arrival: {!
+var repeated = Q.coalition_procedure === "Narrow common mandate";
+Q.coalition_procedure = "Narrow common mandate";
+Q.coalition_procedure_stage += 1;
+Q.constitutional_legitimacy += repeated ? 1 : 4;
+Q.iran_party_relation += repeated ? 1 : 2;
+Q.independent_nationalists_relation += repeated ? 1 : 2;
+if (repeated) Q.toilers_dissent += 2;
+!}
 
 The resolution confines itself to representative elections, political
 liberties, and government through constitutional institutions. Each component
@@ -34,13 +43,24 @@ can support that minimum without abandoning its wider program.
 
 The common ground becomes more credible, but the statement gives no new
 urgency to the oil campaign.
+[? if coalition_procedure_stage > 1: The minimum remains defensible, but each
+restatement has less work to do. Allies waiting for a wider program are
+increasingly unwilling to call repetition a new settlement. ?]
 
 - @post_event: Continue
 
 @resolution_oil
 title: Make national control of oil the common demand
 subtitle: A single national demand creates momentum—and tests allies who joined for more than oil
-on-arrival: oil_coalition_support += 5; public_mandate += 3; toilers_dissent += 1; iran_party_dissent += 1
+on-arrival: {!
+var repeated = Q.coalition_procedure === "Oil coordination";
+Q.coalition_procedure = "Oil coordination";
+Q.coalition_procedure_stage += 1;
+Q.oil_coalition_support += repeated ? 2 : 5;
+Q.public_mandate += repeated ? 1 : 3;
+Q.toilers_dissent += repeated ? 2 : 1;
+Q.iran_party_dissent += repeated ? 2 : 1;
+!}
 
 The resolution places national control of oil at the center of the
 {!<span class="term term-national-front">!}Front's{!</span>!} immediate
@@ -49,13 +69,25 @@ work. Newspapers and deputies receive a direct demand they can repeat.
 Some allies object that one issue is beginning to stand in for the coalition's
 constitutional and social commitments. Oil support rises while the internal
 argument sharpens.
+[? if coalition_procedure_stage > 1: The demand is already familiar. Another
+resolution confirms it, but gains fewer new supporters while allies concerned
+with the coalition's other purposes grow more impatient. ?]
 
 - @post_event: Continue
 
 @resolution_amendments
 title: Publish the common text with component amendments
 subtitle: Each organization keeps its own voice beside the common text, at the cost of clarity
-on-arrival: iran_party_dissent -= 2; toilers_dissent -= 2; religious_network_dissent -= 2; press_capacity += 2
+on-arrival: {!
+var repeated = Q.coalition_procedure === "Component council";
+Q.coalition_procedure = "Component council";
+Q.coalition_procedure_stage += 1;
+Q.iran_party_dissent -= repeated ? 1 : 2;
+Q.toilers_dissent -= repeated ? 1 : 2;
+Q.religious_network_dissent -= repeated ? 1 : 2;
+Q.press_capacity += repeated ? 0 : 2;
+if (repeated) Q.public_mandate -= 1;
+!}
 
 The {!<span class="term term-national-front">!}Front{!</span>!} publishes a
 short common resolution followed by signed statements from organizations that
@@ -64,5 +96,8 @@ without being mistaken for a collapse of cooperation.
 
 The format eases internal pressure and gives friendly papers material for
 different audiences. It lacks the force of one unqualified declaration.
+[? if coalition_procedure_stage > 1: The qualifications are now well known.
+Printing them again reassures the component leaderships, but makes the common
+text look less like a decision to readers outside the coalition. ?]
 
 - @post_event: Continue

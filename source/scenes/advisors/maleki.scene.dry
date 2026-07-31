@@ -4,7 +4,7 @@ title: <span class="term term-nationalist-social-democratic">Khalil Maleki</span
 new-page: true
 is-pinned-card: true
 tags: advisor
-view-if: advisor_maleki_available = 1
+view-if: advisor_maleki_available = 1 and advisor_maleki_active = 1
 
 = {!<span class="term term-nationalist-social-democratic">!}Khalil Maleki{!</span>!}
 
@@ -24,7 +24,7 @@ title: Train organizers
 subtitle: Organizers learn to connect social demands to the coalition without dissolving into it
 choose-if: advisor_action_timer <= 0 and front_formed = 1
 unavailable-subtitle: [? if front_formed = 0: Available after the common electoral protest. ?][? if front_formed = 1: [+ advisor_action_timer +] months before another adviser action. ?]
-on-arrival: advisor_action_timer = 6; toilers_organization += 5; organizational_reach += 2
+on-arrival: advisor_action_timer = 6; membership_committees_timer = 0; toilers_organization += 5; organizational_reach += 2
 
 {!<span class="term term-nationalist-social-democratic">!}Maleki{!</span>!} turns a political discussion into practical organizer training:
 running a small meeting, recording disagreements, recruiting follow-up

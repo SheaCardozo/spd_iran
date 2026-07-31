@@ -44,7 +44,7 @@ The generated browser experience now follows Dynamic SPD's customized
   overlays, dark mode, and responsive breakpoints;
 - a persistent left status panel with live tabs;
 - visible Status, Save/Load, and Options controls;
-- event-image, animation, color-scheme, and colored-text settings; and
+- animation, color-scheme, and colored-text settings; and
 - SPD's special-scene return behavior for the full Status page.
 
 Only controls backed by implemented Iran systems are exposed. Music, mod
@@ -72,19 +72,47 @@ logic and likely reaction rather than quality names; `?debug=1` adds
 hover/focus tooltips derived from the target scene's exact immediate state
 changes.
 
-## Implemented v0.1 architecture
+## Rendered-browser adversarial boundary
+
+Qualitative adversarial playtests use the generated browser rather than a
+privileged Dendry-engine interface. The implementation and protocol are
+specified in
+[`ADVERSARIAL_BROWSER_TESTING.md`](ADVERSARIAL_BROWSER_TESTING.md).
+An ephemeral static server exposes only `out/html` on `127.0.0.1`.
+Isolated Playwright contexts provide screenshots, accessibility observations,
+coordinate/keyboard actions, browser traces, and videos. The agent-facing
+gateway has no selector, arbitrary evaluation, scene-ID, source, or shared
+state method; a separate oracle may inspect state privately for invariants and
+replay hashes. Status, Research Library, Save/Load, and Options remain
+player-only; adversarial contexts remove and disable those utilities while
+retaining the live Main, Opposition/Coalition, Support, Parliament, and Crown
+sidebar tabs.
+
+Dynamic SPD's `out/html/index.html`, `out/html/game.js`, and
+`out/html/game.css` establish the rendered browser as the public interaction
+surface, but the reference project has no equivalent black-box agent gateway
+or parallel browser-play policy. Iran retains that browser surface and adds a
+testing adapter around it. This does not change Dendry state ownership, deck
+semantics, action economy, persistence, or historical content.
+
+## Implemented v0.3 architecture
 
 The current build follows SPD in these respects:
 
 - one shared `Q` state initialized in `root.scene.dry`;
-- a card hand with Party Affairs, Public Campaign, and Parliamentary Affairs
-  decks containing sixteen recurring actions across the full campaign;
+- a four-card Dynamic-mode hand with Party Affairs, Public Campaign, and
+  Parliamentary Affairs decks containing sixteen recurring actions across the
+  full campaign;
 - action cards selected by tags and gated by cooldown timers;
-- opening a normal action card commits the current month;
+- opening a normal action card reserves the current month; the universal
+  return route restores the original hand, action, cooldown, visit count, and
+  last-card state until a substantive choice is committed;
 - `post_event.scene.dry` advances the calendar, ticks timers, bounds state, and
   resolves every eligible tagged event before returning to the hand;
-- six continuously pinned adviser cards share one cooldown without spending
-  the monthly action;
+- up to three historically eligible active advisers are pinned and share one
+  consultation cooldown without spending the monthly action; a separate
+  pinned roster manager changes the slate without advancing time and has its
+  own six-month cooldown;
 - a tabbed status sidebar exposes the live simulation state;
 - the Shah has separate relationship, resistance, court-capacity, and
   electoral-influence state, adapting SPD's separation of Hindenburg's
@@ -101,16 +129,21 @@ The current build follows SPD in these respects:
   opposition-network cards rather than relabelling a nonexistent coalition;
 - new campaigns use Dendry's normal randomized deck stream, which continues
   from stored engine state when a save is loaded;
-- a special-scene Research Library and conditional scorecard ending mirror
+- recurring projects remember their direction, stage, investments, and
+  setbacks instead of existing only as one-shot quality awards;
+- a special-scene Research Library and path-dependent scorecard ending mirror
   SPD's Library and game-over responsibility boundaries;
-- browser saves persist `save_schema_version = 3` and reject saves from the
-  retired compressed opening;
-- annual organizational income is applied at year rollover.
+- browser saves persist `save_schema_version = 5`, including Dendry's normal
+  PRNG state, and reject v0.2 and older saves;
+- annual organizational income is applied at year rollover and reported at
+  the top of the arriving January anchor, before any choice;
+- every paid choice states its exact resource cost before commitment.
 
 All numerical action effects remain game-balance abstractions rather than
-historical measurements. Historical anchors, dates, identities, source
-confidence, and passage of nationalization do not vary with deck order or
-choice.
+historical measurements. Historical anchors, dates, identities, and source
+confidence do not vary with deck order or choice. Passage of nationalization
+is a scenario outcome derived from the usable members and oil commitments in
+each chamber; the documented historical passage remains immutable evidence.
 
 ## Source layout
 
@@ -118,8 +151,10 @@ choice.
 | --- | --- |
 | `source/scenes/root.scene.dry` | Menu and initial shared state |
 | `source/scenes/events/1949/` | Sourced opening and tagged historical events |
+| `source/scenes/events/campaign_spine.scene.dry` | Independently gated and routed event families for the later dated anchors |
+| `source/scenes/events/reactions.scene.dry` | Counterfactual coalition and Crown reaction families |
 | `source/scenes/main.scene.dry` | Hand, decks, and recurring briefing |
-| `source/scenes/advisors/` | Pinned advisers using one shared cooldown |
+| `source/scenes/advisors/` | Active pinned advisers, consultations, and roster management |
 | `source/scenes/party_affairs/` | Organizational action cards |
 | `source/scenes/public_campaign/` | Press, meeting, bazaar, and legal-response actions |
 | `source/scenes/parliamentary_affairs/` | Election, credential, oil-committee, and deputy actions |
@@ -164,7 +199,7 @@ consequences:
 - the additional nine actions require separate early-card cooldowns so the
   ordinary hand cannot deadlock and so later Front cards do not begin the
   campaign already cooling down;
-- browser saves use schema version 3. Earlier saves began under retired
+- browser saves use schema version 5. Earlier saves began under retired
   October- or February-start chronologies and are rejected rather than
   silently loaded into the new calendar.
 
@@ -245,13 +280,107 @@ effects on scenario state without mutation of historical evidence, all 196
 visualized places, the credential pipeline, spending bounds, deterministic
 state for identical choices, and the unchanged March 1951 terminal route.
 
-## v0.1 release boundary
+## v0.3 Dynamic-mode convergence
+
+Version 0.3 makes Dynamic SPD's **Dynamic mode** the explicit engineering
+baseline for the v0.x line. The long-term proposal to replace card play is
+deferred. The exact comparison map is:
+
+| Iran subsystem | Dynamic SPD analogue | Decision |
+| --- | --- | --- |
+| Four-card agenda | `source/scenes/main.scene.dry` (`main_easy`) | Retain the hand size and conditional deck responsibility |
+| Safe cancellation | `source/scenes/easy_discard.scene.dry` | Adapt to all three Iran decks and restore the exact original hand |
+| Shared reducer/router | `source/scenes/post_event.scene.dry` | Retain ownership; add Iran-specific coupled consumers and place reducers |
+| Adviser slate | `source/scenes/advisors/shuffle_leadership_pinned.scene.dry`, `source/scenes/party_affairs/shuffle_leadership.scene.dry` | Retain a pinned manager, adapt to no-time changes and separate cooldowns |
+| Evolving projects | `source/scenes/party_affairs/media.scene.dry`, `fundraising.scene.dry`, and `party_organizations.scene.dry` | Retain remembered policy/stage and interruptions |
+| Elections | `source/scenes/election_algorithm.scene.dry` | Retain central derivation, reject proportional seats, resolve sourced contestable place records |
+| Presidential pressure | Hindenburg state in `root.scene.dry`, `post_event.scene.dry`, and related event families | Adapt to four sourced Crown dimensions; royal conduct only occurs in a scene |
+| Library/status | `source/scenes/library.scene.dry`, `status.scene.dry` | Retain persistent summaries and special-scene return behavior |
+
+The migration preserves one shared `Q`, one normal action per month, the three
+Iran-specific decks, tagged-event routing, qualitative normal-mode display,
+perfect political intelligence, and Dendry's unseeded deck stream. It changes
+save schema, adviser selection, cancellation semantics, event reactivity,
+resource pressure, constituency resolution, credential resolution, and
+nationalization endings. There is no v0.2 save migration; players start a new
+January 1949 campaign.
+
+### Displayed-quality consumer matrix
+
+Every scenario quality shown in normal play has a downstream consumer:
+
+| Displayed state | Consumers |
+| --- | --- |
+| Faction strength, relation, dissent, organization | Coalition coordination; joint-action yield; recurring-project costs; coalition reaction variants; endings |
+| Social support and trend | Contestable-place organization; meetings; fundraising; constituency reports; campaign outlook |
+| Resources and dues | Printing, travel, meetings, lawsuits, press work, annual income; each action retains a free lower-yield route |
+| Constitutional and procedural legitimacy | Crown reaction choices; credential defense; Majles and Senate oil commitments; endings |
+| Public mandate, reach, and press | constituency campaign yield; public-pressure scenes; oil commitments; endings |
+| Crown relation, resistance, court capacity, electoral influence | palace access; sourced/counterfactual Court reactions; administrative pressure on contestable places; Senate commitments |
+| Adviser eligibility, active slate, and cooldowns | pinned availability; card resets; scene variants; roster reconciliation |
+| Project direction and stage | later card prose and yield; event variants; ending recap |
+| Return, credential, usability, attendance | chamber diagrams; National Front capacity; eligibility to receive an oil position |
+| Oil position and commitment | Majles and Senate support totals and terminal chamber votes |
+
+Aggregate cohesion, campaign capacity, chamber totals, and ending capacity are
+derived only in `post_event.scene.dry`; scenes mutate components and place
+scenario fields. `post_event` may identify pressure and eligibility but never
+invents a historical royal act.
+
+Zero resources is a live operating condition rather than a decorative floor.
+Each unfunded month reduces press capacity and the organization of one active
+coalition component. The rotation prevents one organization from absorbing
+every setback, while the free route on each recurring card prevents a
+resource deadlock. Fundraising and other persistent projects advance through
+stages; repeating the same method gives a smaller return or a different cost
+instead of reproducing its opening reward indefinitely.
+
+### Nationalization resolution
+
+The Oil Commission recommendation is non-terminal. The Majles vote compares
+supporting attending, usable scenario records with a majority threshold
+derived from those records. If it fails, the campaign ends immediately. If it passes, the
+March action and Senate strategy affect a separately derived Senate vote; a
+failure there also ends immediately. Exact historical attendance or an
+unrecorded division is never fabricated. These thresholds are transparent
+counterfactual game rules, while dates and documented approvals remain in the
+historical evidence and source records.
+
+The player-facing chamber summary presents the complete scenario partition:
+members expected to attend who support the principle, remain conditional, or
+oppose it, together with the majority required. Place dossiers expose return,
+credential, ability to sit, attendance, and oil position. Exact influence and
+administrative-pressure inputs remain debug-only. Once a chamber acts, that
+partition and its place-level positions are frozen; later work in the other
+chamber cannot rewrite a completed vote. The diagram's semantic seat controls
+are supplemented by a touch-sized place selector for dense mobile layouts.
+
+### Rendered adversarial repair boundary
+
+The first qualitative v0.3 browser review is catalogued in
+[`docs/reviews/2026-07-30-v03-rendered-adversarial-repair-review.md`](reviews/2026-07-30-v03-rendered-adversarial-repair-review.md).
+The repair keeps Dynamic SPD's central sidebar refresh, pinned roster manager,
+four-card agenda, safe cancellation, persistent card projects, and
+`post_event` ownership. It adds Iran-specific protections where the reference
+does not provide a fitting analogue:
+
+- the pregame sidebar is hidden until initialized;
+- each SVG chamber place is an independently named, keyboard- and
+  touch-operable control;
+- a required three-person adviser reconciliation cannot be bypassed;
+- underfilled hands and exhausted decks explain their state; and
+- terminal action totals reflect the chamber at which the campaign ended.
+
+These are presentation and invariant repairs within the v0.3 architecture,
+not changes to the turn loop, event router, or persistence model.
+
+## v0.3 release boundary
 
 The implemented release ends on 20 March 1951. Extending into Mossadegh's
 premiership would add an economic and international layer and is not an
 implicit continuation of the current reducers. Any change to the monthly
-action economy, shared-state ownership, event routing, save model, or fixed
-nationalization anchor requires a new major-divergence note before code.
+action economy, shared-state ownership, event routing, save model, or
+March-1951 endpoint requires a new major-divergence note before code.
 
 ## Structural adoption policy for v0.1
 

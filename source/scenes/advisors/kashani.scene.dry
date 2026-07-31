@@ -7,7 +7,7 @@ title: <span class="term term-religious">Ayatollah Abol-Qasem Kashani</span>
 new-page: true
 is-pinned-card: true
 tags: advisor
-view-if: advisor_kashani_available = 1
+view-if: advisor_kashani_available = 1 and advisor_kashani_active = 1
 
 = {!<span class="term term-religious">!}Ayatollah Abol-Qasem Kashani{!</span>!}
 
@@ -33,7 +33,7 @@ subtitle: <span class="term term-religious">Kashani</span> carries the oil appea
 view-if: oil_committee_formed = 1
 choose-if: advisor_action_timer <= 0 and oil_committee_formed = 1
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
-on-arrival: advisor_action_timer = 6; religious_network_organization += 5; public_mandate += 3
+on-arrival: advisor_action_timer = 6; bazaar_outreach_timer = 0; religious_network_organization += 5; public_mandate += 3
 
 {!<span class="term term-religious">!}Kashani{!</span>!}'s intermediaries and
 the {!<span class="term term-national-front">!}Front{!</span>!} agree on

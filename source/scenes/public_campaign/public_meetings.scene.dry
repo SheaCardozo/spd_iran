@@ -20,13 +20,19 @@ Decide whether this month calls for concentration or reach.
 
 - @meetings_tehran
 - @meetings_network
+- @return_card
 
 @meetings_tehran
 title: Concentrate scarce organizers in Tehran
-subtitle: One great gathering draws on the common purse, makes the <span class="term term-national-front">Front</span> impossible to overlook, and gives the <span class="term term-royalist">Crown</span> a single target
+subtitle: One resource supports a great gathering that makes the <span class="term term-national-front">Front</span> impossible to overlook—and gives the <span class="term term-royalist">Crown</span> a single target
 choose-if: resources >= 1
 unavailable-subtitle: Requires one resource.
-on-arrival: resources -= 1; public_mandate += 6; press_capacity += 2; shah_resistance += 2
+on-arrival: {!
+Q.resources -= 1;
+Q.public_mandate += Q.public_mandate < 70 ? 6 : 2;
+Q.press_capacity += Q.press_capacity < 70 ? 2 : 1;
+Q.shah_resistance += Q.public_mandate < 75 ? 2 : 4;
+!}
 
 The secretariat brings its best speakers, marshals, and press contacts into one
 Tehran gathering. The visible crowd gives friendly papers a clear image of
@@ -35,13 +41,23 @@ public support and gives participants the sense of acting together.
 The demonstration is difficult for the
 {!<span class="term term-royalist">!}Court{!</span>!} to ignore. It strengthens the
 mandate while making royal resistance more likely.
+[? if public_mandate >= 75: Another central gathering confirms the
+campaign's strength more than it broadens it. The
+{!<span class="term term-royalist">!}Court{!</span>!} responds more sharply
+to a demonstration it can no longer dismiss as exceptional. ?]
 
 - @post_event: Continue
 
 @meetings_network
 title: Coordinate several smaller meetings
 subtitle: Several modest halls train local organizers without creating one dramatic confrontation
-on-arrival: organizational_reach += 4; independent_nationalists_organization += 2; toilers_organization += 2
+on-arrival: {!
+var established = Q.organizational_reach >= 70;
+Q.organizational_reach += established ? 1 : 4;
+Q.independent_nationalists_organization += established ? 1 : 2;
+Q.toilers_organization += established ? 1 : 2;
+if (established) Q.independent_nationalists_dissent += 1;
+!}
 
 Instead of one central event, organizers share speaking notes and reporting
 forms across several smaller meetings. {!<span class="term term-national-front">!}Independent nationalists{!</span>!} and
@@ -50,5 +66,8 @@ gain practical experience arranging rooms, speakers, and follow-up contacts.
 
 No single gathering dominates the news. The coalition finishes the month with
 more people able to organize the next one.
+[? if organizational_reach >= 70: The established circuit can sustain another
+round, but the same towns and speakers add little new reach. Some organizers
+want resources directed toward places the present network cannot cover. ?]
 
 - @post_event: Continue

@@ -30,6 +30,15 @@ function cssVariable(block, name) {
   return block.match(new RegExp(`--${name}:\\s*(#[0-9a-f]{6})`, 'i'))?.[1];
 }
 
+function flattenCompiledContent(value) {
+  if (Array.isArray(value)) return value.flatMap(flattenCompiledContent);
+  if (value?.type === 'magic') return [value];
+  if (value && typeof value === 'object' && value.content) {
+    return flattenCompiledContent(value.content);
+  }
+  return [value];
+}
+
 test('all semantic text colors and gradient stripes meet WCAG AA contrast', () => {
   const css = fs.readFileSync('web/timeline.css', 'utf8');
   const light = css.match(/^:root\s*\{[\s\S]*?^\}/m)?.[0];
@@ -94,8 +103,8 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   const gameCss = fs.readFileSync('out/html/game.css', 'utf8');
   const gameJs = fs.readFileSync('out/html/game.js', 'utf8');
   const compiledGame = JSON.parse(fs.readFileSync('out/game.json', 'utf8'));
-  const openingText = compiledGame.scenes.palace_protest.content.flatMap(
-    (block) => Array.isArray(block.content) ? block.content : [],
+  const openingText = flattenCompiledContent(
+    compiledGame.scenes.palace_protest.content,
   );
   const hasOpeningTerm = (className, label) =>
     openingText.some(
@@ -113,7 +122,8 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.match(index, /id="support_tab"/);
   assert.match(index, /id="majles_tab"/);
   assert.match(index, /id="crown_tab"/);
-  assert.match(index, />\s*Event images:/);
+  assert.doesNotMatch(index, />\s*Event images:/);
+  assert.doesNotMatch(index, />\s*Backgrounds:/);
   assert.match(gameCss, /--term-nationalist:\s*#2c6f64/i);
   assert.match(gameCss, /--term-parliament:\s*#7a5718/i);
   assert.match(gameCss, /--term-social-democratic:\s*#c00000/i);
@@ -124,15 +134,21 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   );
   assert.match(gameJs, /function installDebugChoiceEffects\(dendryUI\)/);
   assert.match(gameJs, /function browserDebugModeRequested\(\)/);
-  assert.match(gameJs, /function chamberSvg\(places, chamber\)/);
+  assert.match(gameJs, /function chamberSvg\(places, chamber, mode, detailPanel\)/);
+  assert.match(gameJs, /window\.renderSupportTrends = function\(q\)/);
+  assert.match(gameJs, /window\.chamberViewMode/);
   assert.match(gameJs, /data-place-id/);
   assert.match(gameCss, /\.chamber-chart\s*\{/);
+  assert.match(gameCss, /\.chamber-controls\s*\{/);
+  assert.match(gameCss, /\.support-trend-chart\s*\{/);
   assert.match(
     gameJs,
     /state\.qualities\.debug_mode = browserDebugModeRequested\(\) \? 1 : 0/,
   );
   assert.match(gameJs, /Debug effects: ['"] \+ effects\.join\('; '\)/);
   assert.match(gameJs, /var deltaPattern/);
+  assert.match(gameJs, /Place-level legal defense changes/);
+  assert.match(gameJs, /Crown state → access, pressure, and institutional reactions/);
   assert.match(
     gameCss,
     /\.term-mossadegh\s*\{[\s\S]*?var\(--term-nationalist\)[\s\S]*?var\(--term-parliament\)/,

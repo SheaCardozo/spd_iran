@@ -9,16 +9,16 @@ new-page: true
 
 ## A constitutional campaign, 1949–1951
 
-Version 0.2.0
+Version 0.3.0
 
 Coordinate the opposition, contest the disputed Sixteenth
 {!<span class="term term-parliament">!}Majles{!</span>!}
 election, and decide how separate constitutional politicians and the organized
 {!<span class="term term-constitutionalist">!}Iran Party{!</span>!} work
 together before they share a formal coalition.
-Historical nationalization
-remains fixed; your decisions determine the organization and legitimacy that
-survive it.
+Nationalization is no longer assured. Your decisions determine whether the
+opposition can carry the principle through both chambers and what political
+organization survives the vote.
 
 - @start_game: Begin the Historical Scenario
 - @historical_primer: Historical Primer
@@ -43,8 +43,8 @@ Opening the historical primer. If it does not open automatically,
 new-page: true
 on-arrival: {!
 Q.started = 1;
-Q.release_version = "0.2.0";
-Q.save_schema_version = 4;
+Q.release_version = "0.3.0";
+Q.save_schema_version = 5;
 Q.scenario_id = "historical";
 Q.player_organization = "Opposition";
 
@@ -58,11 +58,16 @@ Q.year = 1949;
 Q.month = 1;
 Q.month_actions = 0;
 Q.months_advanced = 0;
+Q.campaign_action_target = 27;
 Q.march_action_complete = 0;
 Q.campaign_complete = 0;
+Q.terminal_reason = "";
+Q.pre_action_last_card_id = "";
+Q.pre_action_hand_ids = [];
 
 Q.resources = 5;
 Q.dues = 2;
+Q.dues_received_this_month = 0;
 Q.constitutional_legitimacy = 50;
 Q.public_mandate = 35;
 Q.organizational_reach = 25;
@@ -78,6 +83,10 @@ Q.support_bazaar = 30;
 Q.support_workers = 24;
 Q.support_provincial = 28;
 Q.election_campaign_capacity = 0;
+Q.support_history = [];
+Q.support_history_length = 0;
+Q.previous_support_average = 0;
+Q.resource_strain_months = 0;
 
 // Coalition components own the mutable faction state. Aggregate cohesion is
 // derived in post_event and never changed directly by content.
@@ -98,6 +107,11 @@ Q.religious_network_relation = 40;
 Q.religious_network_dissent = 40;
 Q.religious_network_organization = 45;
 Q.coalition_cohesion = 50;
+Q.coordination_efficiency = 50;
+Q.iran_party_active = 1;
+Q.toilers_active = 0;
+Q.independent_nationalists_active = 1;
+Q.religious_network_active = 0;
 
 // Crown state follows SPD's Hindenburg responsibility boundary: scenes change
 // conduct; the reducer bounds and reports it.
@@ -105,12 +119,29 @@ Q.shah_relation = 20;
 Q.shah_resistance = 35;
 Q.shah_court_capacity = 55;
 Q.shah_electoral_influence = 60;
+Q.crown_pressure = 0;
+Q.crown_reaction_due = 0;
+Q.last_crown_reaction_time = -6;
+Q.last_coalition_reaction_time = -6;
+Q.last_reaction = "None";
 
 Q.front_formed = 0;
 Q.front_structure = "Not yet settled";
 Q.election_strategy = "Not yet settled";
 Q.credentials_strategy = "Not yet settled";
 Q.razmara_response = "Not yet reached";
+Q.attempt_response = "Not yet reached";
+Q.emergency_response = "Not yet reached";
+Q.assembly_response = "Not yet reached";
+Q.election_preparation_response = "Not yet reached";
+Q.hazhir_response = "Not yet reached";
+Q.credential_campaign_response = "Not yet reached";
+Q.oil_committee_response = "Not yet reached";
+Q.supplemental_response = "Not yet reached";
+Q.committee_rejection_strategy = "Not yet reached";
+Q.majles_rejection_strategy = "Not yet reached";
+Q.assassination_response = "Not yet reached";
+Q.senate_strategy = "Not yet reached";
 Q.oil_terms_position = "Constitutional control";
 Q.parliamentary_deck_unlocked = 0;
 Q.majles_convened = 0;
@@ -121,6 +152,33 @@ Q.gass_golshayan_rejected_majles = 0;
 Q.nationalization_approved_committee = 0;
 Q.nationalization_approved_majles = 0;
 Q.nationalization_approved_senate = 0;
+Q.nationalization_majles_support = 0;
+Q.nationalization_senate_support = 0;
+Q.nationalization_majles_threshold = 0;
+Q.nationalization_senate_threshold = 0;
+Q.nationalization_majles_passed = 0;
+Q.nationalization_senate_passed = 0;
+
+// Persistent organizational projects. Recurring actions change these
+// directions; later cards, reducers, and events consume them.
+Q.press_project = "Unsettled";
+Q.press_project_stage = 0;
+Q.fundraising_policy = "Ad hoc contributions";
+Q.fundraising_stage = 0;
+Q.committee_model = "Separate organizations";
+Q.committee_stage = 0;
+Q.election_project = "Unsettled";
+Q.election_project_stage = 0;
+Q.election_project_setbacks = 0;
+Q.credential_project = "Unsettled";
+Q.credential_project_stage = 0;
+Q.oil_project = "Constitutional control";
+Q.oil_project_stage = 0;
+Q.oil_project_setbacks = 0;
+Q.coalition_procedure = "Unsettled";
+Q.coalition_procedure_stage = 0;
+Q.coalition_procedure_setbacks = 0;
+Q.last_project_setback = "None";
 
 // Historical proposals and the player's floor remain distinct structured
 // records. Null means unknown or disputed, never a midpoint.
@@ -187,7 +245,16 @@ for (var m = 1; m <= 136; m += 1) {
             usability: "unavailable",
             attendance: "unknown",
             support: "uncommitted",
-            player_influence: 0
+            player_influence: 0,
+            contestable: false,
+            support_group: null,
+            campaign_investment: 0,
+            local_organization: 0,
+            administrative_pressure: 0,
+            legal_defense: 0,
+            credential_contest: "none",
+            oil_position: "uncommitted",
+            oil_commitment: 0
         }
     });
 }
@@ -270,6 +337,21 @@ for (var evidenceRow of nationalFrontEvidence) {
     evidencePlace.historical.locators.confidence = "SIXTEENTH_MAJLES_LEDGER.md, Scope and method";
     evidencePlace.historical.confidence = "B";
 }
+// The five uncompleted returns in SUP-051 and the documented Front contests
+// in Tehran and Kashan/Natanz are the only v0.3 scenario-contestable places.
+// Audience labels are balance abstractions, not historical polling.
+var contestableMajlesPlaces = [
+    [0, "provincial"], [38, "professional"], [39, "professional"],
+    [40, "professional"], [41, "bazaar"], [42, "professional"],
+    [44, "professional"], [45, "professional"], [87, "provincial"],
+    [105, "provincial"], [107, "provincial"], [126, "provincial"],
+    [128, "provincial"]
+];
+for (var contestableRow of contestableMajlesPlaces) {
+    Q.majles_places[contestableRow[0]].scenario.contestable = true;
+    Q.majles_places[contestableRow[0]].scenario.support_group =
+        contestableRow[1];
+}
 Q.senate_places = [];
 for (var s = 1; s <= 60; s += 1) {
     Q.senate_places.push({
@@ -299,7 +381,16 @@ for (var s = 1; s <= 60; s += 1) {
             usability: "unavailable",
             attendance: "unknown",
             support: "uncommitted",
-            player_influence: 0
+            player_influence: 0,
+            contestable: false,
+            support_group: null,
+            campaign_investment: 0,
+            local_organization: 0,
+            administrative_pressure: 0,
+            legal_defense: 0,
+            credential_contest: "none",
+            oil_position: "uncommitted",
+            oil_commitment: 0
         }
     });
 }
@@ -337,9 +428,11 @@ Q.senate_authorized_places = Q.senate_places.length;
 Q.majles_returns_recorded = 0;
 Q.majles_credentials_approved = 0;
 Q.majles_usable_members = 0;
+Q.majles_attending_members = 0;
 Q.majles_national_front_returns = 0;
 Q.majles_national_front_usable = 0;
 Q.senate_usable_members = 0;
+Q.senate_attending_members = 0;
 Q.majles_phase = "Before the Sixteenth Majles election";
 
 Q.advisor_action_timer = 0;
@@ -349,6 +442,44 @@ Q.advisor_fatemi_available = 0;
 Q.advisor_makki_available = 0;
 Q.advisor_kashani_available = 0;
 Q.advisor_maleki_available = 0;
+Q.advisor_mossadegh_entry_state = "Present at campaign start";
+Q.advisor_saleh_entry_state = "Present at campaign start";
+Q.advisor_fatemi_entry_state = "Not yet eligible";
+Q.advisor_makki_entry_state = "Not yet eligible";
+Q.advisor_kashani_entry_state = "Not yet eligible";
+Q.advisor_maleki_entry_state = "No supported entry before the endpoint";
+Q.advisor_mossadegh_exit_state = "No sourced exit within scope";
+Q.advisor_saleh_exit_state = "No sourced exit within scope";
+Q.advisor_fatemi_exit_state = "No sourced exit within scope";
+Q.advisor_makki_exit_state = "No sourced exit within scope";
+Q.advisor_kashani_exit_state = "No sourced exit within scope";
+Q.advisor_maleki_exit_state = "Not eligible within scope";
+Q.advisor_saleh_active = 1;
+Q.advisor_mossadegh_active = 1;
+Q.advisor_fatemi_active = 0;
+Q.advisor_makki_active = 0;
+Q.advisor_kashani_active = 0;
+Q.advisor_maleki_active = 0;
+Q.active_advisors = ["mossadegh", "saleh"];
+Q.active_advisor_names = "Mohammad Mossadegh; Allahyar Saleh";
+Q.advisor_pool_size = 2;
+Q.advisor_roster_timer = 0;
+Q.advisor_roster_required = 0;
+Q.advisor_roster_event_return = 0;
+Q.advisor_eligibility_signature = "110000";
+Q.advisor_reconciled_signature = "110000";
+Q.advisor_roster_change_reason = "";
+Q.advisor_roster_original_signature = "110000";
+Q.draft_advisor_names = "Mohammad Mossadegh; Allahyar Saleh";
+
+Q.nationalization_majles_conditional = 0;
+Q.nationalization_majles_opposed = 0;
+Q.nationalization_majles_support_gap = 0;
+Q.nationalization_majles_vote_resolved = 0;
+Q.nationalization_senate_conditional = 0;
+Q.nationalization_senate_opposed = 0;
+Q.nationalization_senate_support_gap = 0;
+Q.nationalization_senate_vote_resolved = 0;
 
 Q.coalition_meeting_timer = 0;
 Q.common_resolution_timer = 0;
@@ -366,8 +497,14 @@ Q.opposition_consultation_timer = 0;
 Q.emergency_legal_work_timer = 0;
 Q.political_correspondence_timer = 0;
 Q.election_preparations_timer = 0;
+Q.political_correspondence_last = "";
+Q.political_correspondence_repeat = 0;
+Q.opposition_consultation_last = "";
+Q.opposition_consultation_repeat = 0;
+Q.emergency_legal_work_last = "";
+Q.emergency_legal_work_repeat = 0;
 Q.timers = [
-    "advisor_action", "coalition_meeting", "common_resolution",
+    "advisor_action", "advisor_roster", "coalition_meeting", "common_resolution",
     "membership_committees", "fundraising", "press_coordination",
     "public_meetings", "bazaar_outreach", "legal_defense",
     "electoral_committee", "credential_petitions",
@@ -390,6 +527,8 @@ Q.ending_scores = {
 Q.decision_flags = {};
 Q.event_flags = {};
 Q.attempt_emergency_seen = 0;
+Q.emergency_crackdown_seen = 0;
+Q.constituent_assembly_seen = 0;
 Q.hazhir_seen = 0;
 Q.tehran_rerun_seen = 0;
 Q.chambers_open_seen = 0;

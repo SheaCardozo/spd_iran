@@ -1,20 +1,47 @@
 title: Campaign ending
 new-page: true
 
-= 20 March 1951
+= [? if terminal_reason = "Majles rejection": 15 March 1951 ?][? if terminal_reason != "Majles rejection": 20 March 1951 ?]
 
 **[+ ending_name +]**
 
-The {!<span class="term term-senate">!}Senate{!</span>!} has approved the
-nationalization principle.
+[? if terminal_reason = "": The {!<span class="term term-senate">!}Senate{!</span>!}
+has approved the nationalization principle. ?]
+[? if terminal_reason = "Majles rejection": The oil committee recommended
+nationalization, but the principle failed to command the required support in
+the {!<span class="term term-parliament">!}Majles{!</span>!}. ?]
+[? if terminal_reason = "Senate rejection": The
+{!<span class="term term-parliament">!}Majles{!</span>!} approved the
+principle, but the {!<span class="term term-senate">!}Senate{!</span>!}
+did not complete the constitutional sequence. ?]
 
-[? if ending_name = "A Constitutional Coalition": The {!<span class="term term-national-front">!}Front{!</span>!} arrives as more than a temporary oil alliance. Its component organizations remain distinct, but they have enough trust, constitutional credibility, and parliamentary capacity to keep negotiating a common course after the vote. Nationalization is therefore paired with a plausible coalition for the institutional struggle that follows. ?]
+[? if terminal_reason = "Majles rejection": Of the
+[+ majles_attending_members +] members present and entitled to
+vote, [+ nationalization_majles_support +] supported nationalization,
+[+ nationalization_majles_conditional +] remained conditional, and
+[+ nationalization_majles_opposed +] opposed it. The proposal fell
+[+ 0 - nationalization_majles_support_gap +] votes short. The campaign's
+returns and credential victories therefore did not become enough firm
+commitments on oil. ?]
 
-[? if ending_name = "A Parliamentary Vanguard": A disciplined group inside the {!<span class="term term-parliament">!}Majles{!</span>!} has carried the principle farther than the coalition's wider organization can comfortably sustain. Parliamentary leverage is the {!<span class="term term-national-front">!}Front{!</span>!}'s strongest instrument, but it rests on a narrower base: either internal durability or public organization has not kept pace with chamber success. ?]
+[? if terminal_reason = "Senate rejection": Lower-chamber success did not
+survive the passage to the upper chamber. Of the
+[+ senate_attending_members +] senators present and entitled
+to vote, [+ nationalization_senate_support +] supported nationalization,
+[+ nationalization_senate_conditional +] remained conditional, and
+[+ nationalization_senate_opposed +] opposed it. The proposal fell
+[+ 0 - nationalization_senate_support_gap +] votes short. The parliamentary
+record, {!<span class="term term-royalist">!}Crown{!</span>!} relationship,
+and cross-chamber appeal had not persuaded enough senators to complete the
+constitutional sequence. ?]
 
-[? if ending_name = "A Movement of the Streets": The campaign reaches the vote with its clearest strength outside the chambers. Meetings, press, and organizational networks have created a broad public force, even though constitutional or parliamentary consolidation remains less secure. The movement can exert pressure; converting that pressure into durable institutional control is the unresolved task. ?]
+[? if terminal_reason = "" and ending_name = "A Constitutional Coalition": The {!<span class="term term-national-front">!}Front{!</span>!} arrives as more than a temporary oil alliance. Its component organizations remain distinct, but they have enough trust, constitutional credibility, and parliamentary capacity to keep negotiating a common course after the vote. Nationalization is therefore paired with a plausible coalition for the institutional struggle that follows. ?]
 
-[? if ending_name = "A Fragile Nationalization": The principle passes, but the organization carrying it remains vulnerable. Coalition relations, constitutional standing, parliamentary leverage, and public machinery have not combined into one dependable base. The fixed victory has been reached without settling who can defend or administer its consequences. ?]
+[? if terminal_reason = "" and ending_name = "A Parliamentary Vanguard": A disciplined group inside the {!<span class="term term-parliament">!}Majles{!</span>!} has carried the principle farther than the coalition's wider organization can comfortably sustain. Parliamentary leverage is the {!<span class="term term-national-front">!}Front{!</span>!}'s strongest instrument, but it rests on a narrower base: either internal durability or public organization has not kept pace with chamber success. ?]
+
+[? if terminal_reason = "" and ending_name = "A Movement of the Streets": The campaign reaches the vote with its clearest strength outside the chambers. Meetings, press, and organizational networks have created a broad public force, even though constitutional or parliamentary consolidation remains less secure. The movement can exert pressure; converting that pressure into durable institutional control is the unresolved task. ?]
+
+[? if terminal_reason = "" and ending_name = "A Fragile Nationalization": The principle passes, but the organization carrying it remains vulnerable. Coalition relations, constitutional standing, parliamentary leverage, and public machinery have not combined into one dependable base. The victory has been reached without settling who can defend or administer its consequences. ?]
 
 = Four dimensions
 
@@ -23,9 +50,32 @@ nationalization principle.
 * Parliamentary capacity: [+ ending_parliament +] / 100
 * Public organization: [+ ending_public +] / 100
 
+{!<span class="term term-parliament">!}Majles{!</span>!} support for
+nationalization: [+ nationalization_majles_support +] /
+[+ nationalization_majles_threshold +] required
+
+[+ nationalization_majles_conditional +] members remained conditional and
+[+ nationalization_majles_opposed +] opposed the principle among
+[+ majles_attending_members +] attending members entitled to
+vote.
+
+[? if nationalization_approved_majles = 1:
+{!<span class="term term-senate">!}Senate{!</span>!} support for nationalization:
+[+ nationalization_senate_support +] / [+ nationalization_senate_threshold +]
+required. [+ nationalization_senate_conditional +] senators remained
+conditional and [+ nationalization_senate_opposed +] opposed the principle
+among [+ senate_attending_members +] attending senators
+entitled to vote. ?]
+
 Release: [+ release_version +]
 
 = Causal recap
+
+**Advisers at the final vote — [+ active_advisor_names +].**
+
+These were the figures whose counsel the opposition had kept closest. Other
+eligible allies remained part of the coalition, but did not shape its final
+preparations as directly.
 
 **{!<span class="term term-national-front">!}Front{!</span>!} structure —
 [+ front_structure +].**
@@ -34,29 +84,108 @@ Release: [+ release_version +]
 [? if front_structure = "Loose coordination committee": You protected the autonomy of cooperating organizations and improved their willingness to share information. The {!<span class="term term-national-front">!}Front{!</span>!} remained dependent on several chains of authority whenever it needed to act as one. ?]
 [? if front_structure = "Membership-based coalition": You invested in a common membership organization that could reach supporters directly. The same structure produced arguments over control among organizations that feared absorption. ?]
 
-**Election strategy — [+ election_strategy +].**
+**The Tehran rerun.**
 
 [? if election_strategy = "Concentrated Tehran slate": You concentrated scarce organizers behind a visible Tehran slate, strengthening electoral identity more than nationwide documentation. ?]
 [? if election_strategy = "Monitoring and credential record": You prioritized a record of returns and interference, giving the later credential campaign stronger evidence and procedure. ?]
 [? if election_strategy = "Slate with selective monitoring": You paid for a mixed approach: a recognizable slate accompanied by selective monitoring, without maximizing either concentration or coverage. ?]
 
-**Credential strategy — [+ credentials_strategy +].**
+**The credential campaign.**
 
 [? if credentials_strategy = "Case-by-case procedural challenge": You treated each credential as its own constitutional case, building procedural standing without assuming that every returned ally was already usable. ?]
 [? if credentials_strategy = "Coordinated National Front group": You emphasized the returned deputies as a visible {!<span class="term term-national-front">!}Front{!</span>!} group, turning a small cohort into a clearer parliamentary force. ?]
 [? if credentials_strategy = "Deputy liaison and procedural outreach": You worked through liaison and persuasion beyond the {!<span class="term term-national-front">!}Front{!</span>!}, exchanging some internal simplicity for a wider parliamentary network. ?]
 
-**Oil position — [+ oil_terms_position +].**
+**Parliamentary position — [+ majles_returns_recorded +] returns recorded,
+[+ majles_credentials_approved +] approved credentials, and
+[+ majles_attending_members +] members present and entitled to vote.**
+
+Campaign work strengthened candidacies only where a genuine contest was
+possible. The later credential campaign could defend a returned deputy, but
+could not create a return; only approved members who attended could vote.
+
+**The oil case.**
 
 [? if oil_terms_position = "Constitutional control": Your baseline remained a general demand for constitutionally accountable national control. ?]
 [? if oil_terms_position = "Term-by-term national control": Recurring committee work separated ownership, operations, marketing, compensation, finance, personnel, and review before defining an acceptable minimum. ?]
-[? if oil_terms_position = "Documented term-by-term rejection": The rejection campaign tied its position to a documented comparison rather than a single compromise score. ?]
+[? if oil_terms_position = "Documented term-by-term rejection": The rejection campaign compared the agreement's provisions directly and explained why improved payments alone did not answer the demand for national control. ?]
 
-**Response to {!<span class="term term-independent">!}Razmara{!</span>!} — [+ razmara_response +].**
+**The confrontation with {!<span class="term term-independent">!}Razmara{!</span>!}.**
 
 [? if razmara_response = "Parliamentary term-by-term rebuttal": You answered {!<span class="term term-independent">!}Razmara{!</span>!} primarily through the parliamentary record, strengthening the committee case and its procedural credibility. ?]
 [? if razmara_response = "Public nationalization campaign": You carried the confrontation into a more direct public campaign, expanding mandate while sharpening resistance from the {!<span class="term term-royalist">!}Crown{!</span>!}. ?]
 [? if razmara_response = "Joint parliamentary and public response": You spent scarce resources to coordinate the chamber case with public explanation, building a broader response without fully specializing in either route. ?]
+
+[? if nationalization_approved_majles = 1: **The approach to the
+{!<span class="term term-senate">!}Senate{!</span>!}.** ?]
+
+[? if nationalization_approved_majles = 1 and senate_strategy = "Institutional record": You sent senators the
+committee and {!<span class="term term-parliament">!}Majles{!</span>!}
+record, asking the upper chamber to complete the institutional sequence. ?]
+[? if nationalization_approved_majles = 1 and senate_strategy = "Public briefings": You carried the public campaign
+into the final days, asking senators to answer a demand already moving through
+meetings and newspapers. ?]
+[? if nationalization_approved_majles = 1 and senate_strategy = "Cross-chamber constitutional case": Deputies and
+senators received one constitutional argument joining the committee record,
+the lower-chamber vote, and the principle of national control. ?]
+
+**Organizational resources — [+ resources +] remaining; [+ dues +] annual
+income.**
+
+[? if resource_strain_months > 0: For the final
+[+ resource_strain_months +] months, an empty treasury forced editors and
+local organizers to let routine work lapse. ?]
+[? if resource_strain_months = 0 and resources > 0: The campaign reached the
+vote with money still available for printing, travel, meetings, or legal work. ?]
+
+[? if press_project = "Constitutional editorial network": Friendly papers
+ended the campaign leading with representative government and lawful
+procedure. ?]
+[? if press_project = "Oil dossier network": Friendly papers ended the
+campaign explaining the disputed oil provisions in detail. ?]
+[? if press_project = "Plural editorial compact": Friendly papers continued
+to state a common demand in distinct political voices. ?]
+[? if press_project = "Fatemi editorial campaign":
+{!<span class="term term-nationalist-social-democratic">!}Hossein Fatemi{!</span>!} had drawn the
+friendly editors into a common public campaign. ?]
+
+[? if committee_model = "Shared local committees": Local work rested on shared
+committees paid from the common purse. ?]
+[? if committee_model = "Autonomous component organizers": Each component
+retained command of its own organizers, leaving joint work dependent on
+negotiation among parallel networks. ?]
+
+[? if credential_project = "Case-by-case files": Credential work ended with
+separate documentary files for the contested returns. ?]
+[? if credential_project = "Floor coordination": Returned opposition deputies
+had divided the speaking work for credential debates. ?]
+
+[? if oil_project = "Term-by-term comparison": The parliamentary team had
+compared the agreement provision by provision. ?]
+[? if oil_project = "Cross-faction majority": The parliamentary team had
+concentrated on language that supporters from several tendencies could defend. ?]
+[? if oil_project = "Procedural commission record": Deputies and editors had
+a common account distinguishing documented, disputed, and unknown provisions. ?]
+[? if oil_project = "Makki committee examination":
+{!<span class="term term-makki">!}Hossein Makki{!</span>!} had pressed the
+committee to test the agreement against the demand for national control. ?]
+
+[? if last_project_setback = "Court pressure on constituency work": The
+{!<span class="term term-royalist">!}Court{!</span>!} had most recently
+obstructed constituency organization. ?]
+[? if last_project_setback = "Court pressure on parliamentary work": The
+{!<span class="term term-royalist">!}Court{!</span>!} had most recently
+obstructed parliamentary work. ?]
+[? if last_project_setback = "Coalition procedure challenged": The coalition's
+agreed procedure had most recently been challenged by its own component
+organizations. ?]
+[? if last_project_setback = "Joint work weakened by coalition coordination":
+The latest joint effort had lost force because component leaders could not
+carry the same decision through their organizations. ?]
+[? if last_project_setback = "Unfunded routine work reduced press and local organizational capacity":
+Earlier in the campaign, the most recent recorded setback came when an empty
+treasury forced press and local work to contract. Later income or fundraising
+may have restored the balance shown above. ?]
 
 **{!<span class="term term-royalist">!}Crown{!</span>!} relationship:**
 [? if shah_relation < 35: hostile. ?]

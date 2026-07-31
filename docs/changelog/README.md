@@ -119,3 +119,7 @@ bibliography entry, or asset-rights record.
 - [v0.2 Iran Party, progressive advisers, and place-level elections](2026-07-29-v02-iran-party-and-elections.md)
 - [Opposition viewpoint and chronological advisers](2026-07-30-opposition-and-advisers.md)
 - [Opposition terminology](2026-07-30-opposition-terminology.md)
+- [v0.3 Dynamic SPD convergence](2026-07-30-v03-dynamic-convergence.md)
+- [Rendered-browser adversarial harness](2026-07-30-rendered-browser-adversarial-harness.md)
+- [v0.3 rendered adversarial repair pass](2026-07-30-v03-adversarial-repair-pass.md)
+- [Attempt and crackdown event queue](2026-07-30-attempt-crackdown-event-queue.md)

@@ -8,6 +8,7 @@ __pycache__/
 npm-debug.log*
 /test-results/
 /playwright-report/
+/artifacts/adversarial-browser/
 
 # Local research corpus; tracked catalogs preserve provenance and checksums.
 /docs/research/sources/

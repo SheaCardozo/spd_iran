@@ -1,0 +1,161 @@
+# Sources for Court intervention in the Sixteenth-Majles election and the
+# opposition's constitutional response: Fakhreddin Azimi, Iran: The Crisis of
+# Democracy, 1941–1953, pp. 201–208; Ervand Abrahamian, Iran Between Two
+# Revolutions, ch. 5, pp. 249–267. The particular reactions and effects below
+# are counterfactual scenario responses, not undocumented historical acts.
+@crown_pressure_response
+title: Pressure from the <span class="term term-royalist">Court</span>
+subtitle: Royal influence turns an opposition initiative into a test of access, procedure, and organization
+new-page: true
+tags: event
+view-if: crown_reaction_due = 1
+priority: 15
+on-arrival: {!
+Q.crown_reaction_due = 0;
+Q.last_crown_reaction_time = Q.time;
+if (!Q.majles_convened) {
+    Q.election_project_setbacks += 1;
+    Q.last_project_setback = "Court pressure on constituency work";
+} else {
+    Q.oil_project_setbacks += 1;
+    Q.last_project_setback = "Court pressure on parliamentary work";
+}
+!}
+
+The {!<span class="term term-royalist">!}Court{!</span>!} has the confidence
+and connections to resist the opposition's latest advance.
+[? if majles_convened = 0: Local correspondents report that official access
+and electoral influence are making several contests harder to defend. ?]
+[? if majles_convened = 1: Deputies and intermediaries find that access,
+scheduling, and private pressure now work against the opposition's
+parliamentary case. ?]
+
+[? if shah_relation < 35: No regular channel to the
+{!<span class="term term-royalist">!}Shah{!</span>!} can be taken for
+granted. ?]
+[? if shah_relation >= 35: A guarded channel to the palace remains open, but
+using it risks appearing to bargain away the public constitutional case. ?]
+
+The opposition must decide whether to answer through access, public
+constitutional argument, or direct protection of the records under pressure.
+
+- @crown_seek_access
+- @crown_public_record
+- @crown_defend_places
+
+@crown_seek_access
+title: Use the guarded palace channel
+subtitle: A private constitutional warning may contain resistance if the relationship can still bear it
+choose-if: shah_relation >= 35
+unavailable-subtitle: Relations with the <span class="term term-royalist">Crown</span> are too hostile for a useful approach.
+on-arrival: shah_relation += 3; shah_resistance -= 3; constitutional_legitimacy += 1; last_reaction = "Guarded palace approach"
+
+The approach is formal and narrow. It asks the palace to avoid making itself
+the visible author of administrative obstruction and leaves the opposition's
+substantive program outside the conversation.
+
+The channel remains guarded, but immediate resistance eases. Allies who wanted
+a public confrontation receive no dramatic declaration.
+
+- @post_event: Continue
+
+@crown_public_record
+title: Make the pressure a constitutional question
+subtitle: A public warning denies the <span class="term term-royalist">Court</span> quiet influence but hardens the confrontation
+on-arrival: constitutional_legitimacy += 3; press_capacity += 2; shah_resistance += 2; last_reaction = "Public constitutional warning"
+
+Friendly papers describe the institutional pressure precisely and ask which
+authority is responsible. They do not claim knowledge they lack or turn every
+adverse decision into a palace order.
+
+The public case becomes clearer. The
+{!<span class="term term-royalist">!}Court{!</span>!} also has less room to retreat
+without appearing to yield to the opposition.
+
+- @post_event: Continue
+
+@crown_defend_places
+title: Reinforce the contested records
+subtitle: One resource keeps lawyers and organizers answering influence with files, witnesses, and sustained local work
+choose-if: resources >= 1 and majles_convened = 0
+unavailable-subtitle: Requires one resource and an election still in progress.
+on-arrival: {!
+Q.resources -= 1;
+for (var place of Q.majles_places) {
+    if (place.scenario.contestable) {
+        place.scenario.legal_defense += 5;
+        place.scenario.campaign_investment += 3;
+    }
+}
+Q.last_reaction = "Reinforced contested records";
+!}
+
+Money goes to travel, copies, witness statements, and the organizers keeping
+each local record alive. The work cannot eliminate official influence, but it
+makes a disputed return harder to dispose of without argument.
+
+- @post_event: Continue
+
+# Source for the Front's heterogeneous structure and recurring internal
+# tensions: Azimi, Iran: The Crisis of Democracy, ch. 5, pp. 250–267.
+# The timing and particular dispute are counterfactual.
+@coalition_strain
+title: A dispute inside the <span class="term term-national-front">Front</span>
+subtitle: A common campaign has outrun the agreement that was supposed to hold it together
+new-page: true
+tags: event
+view-if: front_formed = 1 and coalition_cohesion < 45 and time - last_coalition_reaction_time >= 4
+priority: 12
+on-arrival: last_coalition_reaction_time = time; coalition_procedure_setbacks += 1; last_project_setback = "Coalition procedure challenged"
+
+The component organizations have carried the same public demand for several
+months, but they no longer agree on who may speak for the whole coalition.
+[? if coalition_procedure = "Unsettled": Meetings have produced decisions
+without settling how those decisions bind the participants. ?]
+[? if coalition_procedure != "Unsettled": The existing “[+
+coalition_procedure +]” procedure is now being tested by a disagreement it did
+not prevent. ?]
+
+Continuing without a settlement preserves the immediate campaign. Reopening
+the coalition's procedure will determine whose consent the next common action
+requires.
+
+No component can be ordered into agreement. The available choices redistribute
+authority and delay rather than making disagreement disappear.
+
+- @strain_narrow
+- @strain_council
+- @strain_defer
+
+@strain_narrow
+title: Reduce the common line to one constitutional demand
+subtitle: A narrower obligation protects the alliance at the price of abandoning work some allies expected
+on-arrival: coalition_procedure = "Narrow common mandate"; coalition_procedure_stage += 1; iran_party_relation += 3; independent_nationalists_relation += 3; toilers_dissent += 2; religious_network_dissent += 1; last_reaction = "Coalition mandate narrowed"
+
+The meeting removes disputed social and organizational language from the
+common resolution. {!<span class="term term-constitutionalist">!}Iran
+Party{!</span>!} figures and independent constitutionalists can
+defend what remains, while other organizers record what has been postponed.
+
+- @post_event: Continue
+
+@strain_council
+title: Give every component a voice in a standing council
+subtitle: Consultation slows the coalition but makes unilateral action harder
+on-arrival: coalition_procedure = "Component council"; coalition_procedure_stage += 1; iran_party_dissent -= 2; toilers_dissent -= 2; independent_nationalists_dissent -= 2; religious_network_dissent -= 2; organizational_reach -= 1; last_reaction = "Component council convened"
+
+Each component names its position before a common statement is released.
+Decisions take longer, but allies are less likely to discover a coalition line
+after it has already appeared in print.
+
+- @post_event: Continue
+
+@strain_defer
+title: Leave the disagreement unresolved
+subtitle: Immediate work continues while each organization carries its grievance back to its own supporters
+on-arrival: public_mandate += 2; iran_party_dissent += 2; toilers_dissent += 2; independent_nationalists_dissent += 2; religious_network_dissent += 2; last_reaction = "Coalition dispute deferred"
+
+The public campaign proceeds without a settlement. That preserves the current
+tempo, but it also lets every component explain the dispute in its own way.
+
+- @post_event: Continue

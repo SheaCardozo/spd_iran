@@ -22,14 +22,40 @@ constitutional politicians entering the contest.
 They can nevertheless coordinate one practical task before scattered
 complaints harden into a general election crisis.
 
+[? if election_project = "Candidate coordination": Earlier meetings have
+reduced collisions among cooperating constitutional candidates. ?]
+[? if election_project = "Election observation": Lawyers and candidates have
+already distributed a common form for recording interference. ?]
+[? if election_project = "Funded opposition campaign": Printing, travel, and
+meeting work have already given selected candidacies a clearer presence. ?]
+[? if election_project_stage > 0: Those contacts and records remain available,
+but they have not secured a return by themselves. ?]
+[? if election_project_setbacks > 0: Administrative pressure has already
+forced this work to defend records it expected to use for campaigning. ?]
+
 - @election_candidates
 - @election_observers
 - @election_campaign
+- @return_card
 
 @election_candidates
 title: Compare prospective candidates
 subtitle: Private coordination reduces collisions among constitutional candidates without presenting them as one slate
-on-arrival: independent_nationalists_relation += 3; iran_party_relation += 2; public_mandate += 1; support_professional += 3
+on-arrival: {!
+Q.election_project = "Candidate coordination";
+Q.election_project_stage += 1;
+var mature = Q.election_project_stage > 2;
+Q.independent_nationalists_relation += mature ? 1 : 3;
+Q.iran_party_relation += mature ? 0 : 2;
+Q.public_mandate += mature ? 0 : 1;
+Q.support_professional += mature ? 1 : 3;
+for (var place of Q.majles_places) {
+    if (place.scenario.contestable &&
+        place.scenario.support_group === "professional") {
+        place.scenario.campaign_investment += mature ? 1 : 4;
+    }
+}
+!}
 
 Representatives compare constituencies, local connections, and the claims
 different candidates intend to make. Some avoid competing directly where
@@ -37,13 +63,28 @@ doing so would divide the same limited body of supporters.
 
 The talks improve coordination without producing a national list or binding
 any participant to another organization's discipline.
+[? if election_project_stage > 2: Most avoidable collisions have already been
+discussed. Another conference protects the arrangement, but creates few new
+opportunities. ?]
 
 - @post_event: Continue
 
 @election_observers
 title: Prepare common observer forms
 subtitle: Comparable records strengthen later objections, even though observers cannot compel honest administration
-on-arrival: parliamentary_procedure_legitimacy += 3; organizational_reach += 2; support_provincial += 2
+on-arrival: {!
+Q.election_project = "Election observation";
+Q.election_project_stage += 1;
+var mature = Q.election_project_stage > 2;
+Q.parliamentary_procedure_legitimacy += mature ? 1 : 3;
+Q.organizational_reach += mature ? 0 : 2;
+Q.support_provincial += mature ? 1 : 2;
+for (var place of Q.majles_places) {
+    if (place.scenario.contestable) {
+        place.scenario.legal_defense += mature ? 1 : 4;
+    }
+}
+!}
 
 Lawyers devise a short form recording the place, date, witness, reported act,
 and available document. Candidates distribute it where they have trustworthy
@@ -51,15 +92,33 @@ contacts and leave unsupported allegations marked as allegations.
 
 The resulting files will be easier to compare. The observers have no power to
 certify the election or prevent interference.
+[? if election_project_stage > 2: The forms are now familiar. Further
+distribution mainly preserves coverage where contacts already exist; it
+cannot create observers in places the opposition has never organized. ?]
 
 - @post_event: Continue
 
 @election_campaign
 title: Finance a focused party campaign
-subtitle: Printing, travel, and meeting rooms give the party's candidates a clearer presence in selected constituencies
+subtitle: Two resources pay for printing, travel, and meeting rooms in selected constituencies
 choose-if: resources >= 2
 unavailable-subtitle: Requires 2 resources.
-on-arrival: resources -= 2; organizational_reach += 3; press_capacity += 2; support_professional += 3; support_bazaar += 2; support_provincial += 3
+on-arrival: {!
+Q.election_project = "Funded opposition campaign";
+Q.election_project_stage += 1;
+var mature = Q.election_project_stage > 2;
+Q.resources -= 2;
+Q.organizational_reach += mature ? 1 : 3;
+Q.press_capacity += mature ? 1 : 2;
+Q.support_professional += mature ? 1 : 3;
+Q.support_bazaar += mature ? 1 : 2;
+Q.support_provincial += mature ? 1 : 3;
+for (var place of Q.majles_places) {
+    if (place.scenario.contestable) {
+        place.scenario.campaign_investment += mature ? 2 : 6;
+    }
+}
+!}
 
 The party pays for printing, travel, and meeting rooms in constituencies where
 its candidates already have credible local contacts. Organizers avoid claiming
@@ -67,5 +126,8 @@ a national slate they do not possess.
 
 The campaign gives selected candidacies a firmer public presence. It also
 spends money that will not be available for a later petition or lawsuit.
+[? if election_project_stage > 2: Another expenditure reinforces candidates
+already visible to their constituencies, but the same money now buys fewer new
+contacts than the opening campaign. ?]
 
 - @post_event: Continue

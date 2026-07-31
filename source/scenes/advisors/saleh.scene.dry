@@ -5,7 +5,7 @@ title: <span class="term term-constitutionalist">Allahyar Saleh</span>
 new-page: true
 is-pinned-card: true
 tags: advisor
-view-if: advisor_saleh_available = 1
+view-if: advisor_saleh_available = 1 and advisor_saleh_active = 1
 
 = {!<span class="term term-constitutionalist">!}Allahyar Saleh{!</span>!}
 
@@ -26,7 +26,15 @@ subtitle: <span class="term term-constitutionalist">Saleh</span> separates claim
 view-if: parliamentary_deck_unlocked = 1
 choose-if: advisor_action_timer <= 0 and parliamentary_deck_unlocked = 1
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
-on-arrival: advisor_action_timer = 6; parliamentary_procedure_legitimacy += 4; organizational_reach += 2
+on-arrival: {!
+Q.advisor_action_timer = 6;
+Q.electoral_committee_timer = 0;
+Q.parliamentary_procedure_legitimacy += 4;
+Q.organizational_reach += 2;
+for (var place of Q.majles_places) {
+    if (place.scenario.contestable) place.scenario.legal_defense += 4;
+}
+!}
 
 {!<span class="term term-constitutionalist">!}Saleh{!</span>!} reviews
 constituency reports against
@@ -44,7 +52,7 @@ title: Strengthen local committees
 subtitle: Local <span class="term term-constitutionalist">Iran Party</span> committees collect complaints, names, and returns in a common form
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
-on-arrival: advisor_action_timer = 6; organizational_reach += 4; iran_party_organization += 3; support_provincial += 2
+on-arrival: advisor_action_timer = 6; membership_committees_timer = 0; organizational_reach += 4; iran_party_organization += 3; support_provincial += 2
 
 {!<span class="term term-constitutionalist">!}Saleh{!</span>!} works through
 {!<span class="term term-constitutionalist">!}Iran Party{!</span>!} contacts
@@ -66,7 +74,7 @@ subtitle: One exemplary file becomes a model other deputies can carry into the c
 view-if: majles_convened = 1
 choose-if: advisor_action_timer <= 0 and majles_convened = 1
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
-on-arrival: advisor_action_timer = 6; parliamentary_procedure_legitimacy += 4; mossadegh_authority += 1; iran_party_relation += 2
+on-arrival: advisor_action_timer = 6; credential_petitions_timer = 0; parliamentary_procedure_legitimacy += 4; mossadegh_authority += 1; iran_party_relation += 2
 
 {!<span class="term term-constitutionalist">!}Saleh{!</span>!} assembles one complete file that distinguishes the return, the credential
 decision, and the point at which a deputy becomes usable in the chamber. The

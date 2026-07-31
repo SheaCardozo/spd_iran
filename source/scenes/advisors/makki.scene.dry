@@ -5,7 +5,7 @@ title: <span class="term term-makki">Hossein Makki</span>
 new-page: true
 is-pinned-card: true
 tags: advisor
-view-if: advisor_makki_available = 1
+view-if: advisor_makki_available = 1 and advisor_makki_active = 1
 
 = {!<span class="term term-makki">!}Hossein Makki{!</span>!}
 
@@ -47,7 +47,7 @@ subtitle: The appeal asks deputies and the public to choose national control bef
 view-if: oil_committee_formed = 1
 choose-if: advisor_action_timer <= 0 and oil_committee_formed = 1
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
-on-arrival: advisor_action_timer = 6; oil_coalition_support += 5; public_mandate += 2
+on-arrival: advisor_action_timer = 6; deputy_outreach_timer = 0; oil_coalition_support += 5; public_mandate += 2
 
 {!<span class="term term-makki">!}Makki{!</span>!} identifies deputies who can be moved on oil without asking them to join
 the {!<span class="term term-national-front">!}Front{!</span>!} or endorse
@@ -66,7 +66,7 @@ subtitle: Each question forces the agreement's defenders to name who owns, opera
 view-if: oil_committee_formed = 1
 choose-if: advisor_action_timer <= 0 and oil_committee_formed = 1
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
-on-arrival: advisor_action_timer = 6; parliamentary_procedure_legitimacy += 4; oil_coalition_support += 2
+on-arrival: advisor_action_timer = 6; oil_committee_preparation_timer = 0; oil_project = "Makki committee examination"; oil_project_stage += 1; parliamentary_procedure_legitimacy += 4; oil_coalition_support += 2
 
 {!<span class="term term-makki">!}Makki{!</span>!} turns the proposal comparison into a sequence of committee questions:
 who owns, who operates, who markets, who appoints, and what remains reviewable.

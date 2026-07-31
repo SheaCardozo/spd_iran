@@ -23,11 +23,18 @@ practical independence of the cooperating networks.
 - @bazaar_oil
 - @bazaar_constitution
 - @bazaar_autonomy
+- @return_card
 
 @bazaar_oil
 title: Organize around national control of oil
 subtitle: Oil supplies a common language for merchants, clerics, and nationalists
-on-arrival: religious_network_relation += 4; religious_network_organization += 4; oil_coalition_support += 3
+on-arrival: {!
+var established = Q.religious_network_organization >= 70;
+Q.religious_network_relation += established ? 1 : 4;
+Q.religious_network_organization += established ? 1 : 4;
+Q.oil_coalition_support += Q.oil_coalition_support < 70 ? 3 : 1;
+if (established) Q.iran_party_dissent += 1;
+!}
 
 Intermediaries carry an oil appeal through commercial and religious contacts,
 adapting the language to meetings the
@@ -36,13 +43,22 @@ campaign gains organizers as well as listeners.
 
 Cooperation around oil becomes more practical. Those networks still answer to
 their own leaders rather than to the secretariat.
+[? if religious_network_organization >= 75: The established intermediaries
+can repeat the appeal, but they bring fewer new associations into it. Their
+growing prominence also revives concern among allies who do not share their
+political language. ?]
 
 - @post_event: Continue
 
 @bazaar_constitution
 title: Organize around constitutional government
 subtitle: Constitutional government offers cooperation without asking the <span class="term term-religious">religious network</span> to surrender its own authority
-on-arrival: religious_network_relation += 3; religious_network_dissent -= 2; constitutional_legitimacy += 2; organizational_reach += 2
+on-arrival: {!
+Q.religious_network_relation += Q.religious_network_relation < 70 ? 3 : 1;
+Q.religious_network_dissent -= Q.religious_network_dissent > 30 ? 2 : 1;
+Q.constitutional_legitimacy += Q.constitutional_legitimacy < 70 ? 2 : 1;
+Q.organizational_reach += Q.organizational_reach < 70 ? 2 : 0;
+!}
 
 The appeal stresses lawful government and representative institutions rather
 than asking every participant to endorse a broader social program.
@@ -52,13 +68,20 @@ own political identity.
 The {!<span class="term term-national-front">!}Front{!</span>!} reaches new
 listeners and reduces immediate suspicion, though it
 does less this month to consolidate a detailed oil position.
+[? if religious_network_relation >= 75: The constitutional formula remains
+acceptable, but its repetition no longer resolves the practical questions on
+which these allies expect consultation. ?]
 
 - @post_event: Continue
 
 @bazaar_autonomy
 title: Negotiate an autonomous joint committee
 subtitle: A joint committee bargains as two partners rather than speaking with one voice
-on-arrival: religious_network_relation += 5; religious_network_dissent -= 4
+on-arrival: {!
+Q.religious_network_relation += Q.religious_network_relation < 70 ? 5 : 1;
+Q.religious_network_dissent -= Q.religious_network_dissent > 30 ? 4 : 1;
+if (Q.religious_network_relation >= 80) Q.organizational_reach -= 1;
+!}
 
 The secretariat meets intermediaries privately and agrees on a channel for
 sharing plans without placing their organizations under
@@ -67,5 +90,8 @@ Each side explains where cooperation is possible and where it would be refused.
 
 The coalition gains a more reliable working relationship and fewer surprises.
 It gains less immediate public pressure than a full campaign appeal.
+[? if religious_network_relation >= 75: The channel is already well
+established. Another negotiation protects autonomy, but adds little reach and
+keeps the partners occupied with boundaries they have largely agreed. ?]
 
 - @post_event: Continue

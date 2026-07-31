@@ -31,13 +31,24 @@ relations, dissent, organization, legitimacy, press capacity, and support are
 scenario values rather than historical measurements.
 
 “Opposition” describes the player's political position, not the name of a
-January 1949 organization. The one-action month, deck cooldowns, historically
-gated pinned advisers, and
-six-month shared consultation cooldown are game architecture. They do not
+January 1949 organization. The one-action month, four-card hand, safe
+cancellation, deck cooldowns, historically gated three-person active slate,
+pinned roster manager, and separate six-month consultation and roster
+cooldowns are game architecture. They do not
 claim that the historical Front had an equivalent formal secretariat,
 calendar, or adviser hierarchy. Adviser visibility records availability, not
 subordination or agreement; Kashani remains an independent counterpart in the
 interface.
+
+Press, fundraising, committee, election, credential, coalition-procedure, and
+oil-project stages remember the player's prior direction. Those stages make
+later actions and scenes respond to earlier choices; they are not claims that
+the historical opposition used the named administrative program or sequence.
+Repeated use advances or maintains a project at diminishing yield, and some
+later stages require money to preserve their earlier scale. An unfunded month
+reduces press capacity and the organization of one active component. These
+costs and setbacks are balance abstractions; every recurring card retains a
+free, smaller response so the campaign cannot be trapped by insolvency.
 
 ## Sources
 

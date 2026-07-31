@@ -19,14 +19,28 @@ coalition into a disciplined party.
 Choose what the secretariat will ask every component to carry back to its own
 organizers.
 
+[? if coalition_procedure != "Unsettled": The last durable arrangement was
+“[+ coalition_procedure +].” This meeting can reinforce it or change course. ?]
+[? if coalition_procedure_setbacks > 0: A later dispute has tested that
+arrangement in public; the meeting cannot treat it as an untouched compact. ?]
+
 - @meeting_constitution
 - @meeting_dissent
 - @meeting_oil
+- @return_card
 
 @meeting_constitution
 title: Reaffirm the narrow constitutional program
 subtitle: A narrow pledge can be defended by unlike allies, but it postpones their social disagreements
-on-arrival: iran_party_relation += 4; independent_nationalists_relation += 3; toilers_dissent += 1; constitutional_legitimacy += 2
+on-arrival: {!
+var repeated = Q.coalition_procedure === "Narrow common mandate";
+Q.coalition_procedure = "Narrow common mandate";
+Q.coalition_procedure_stage += 1;
+Q.iran_party_relation += repeated ? 1 : 4;
+Q.independent_nationalists_relation += repeated ? 1 : 3;
+Q.toilers_dissent += repeated ? 3 : 1;
+Q.constitutional_legitimacy += repeated ? 1 : 3;
+!}
 
 The meeting adopts representative elections and constitutional government as
 the language every component can repeat.
@@ -39,13 +53,25 @@ the narrow formula postpones.
 The {!<span class="term term-national-front">!}Front{!</span>!} sounds more
 coherent in public. Its unresolved programmatic
 differences remain inside the room.
+[? if coalition_procedure_stage > 1: At this stage of the coalition's life,
+another narrow declaration settles less than the first. Allies who wanted a
+broader program are less willing to treat postponement as compromise. ?]
 
 - @post_event: Continue
 
 @meeting_dissent
 title: Hear dissent before fixing the agenda
 subtitle: Every tendency receives a hearing, even if no sharp public line emerges
-on-arrival: toilers_relation += 4; religious_network_relation += 4; iran_party_dissent -= 2; independent_nationalists_dissent -= 2
+on-arrival: {!
+var repeated = Q.coalition_procedure === "Component council";
+Q.coalition_procedure = "Component council";
+Q.coalition_procedure_stage += 1;
+Q.toilers_relation += repeated ? 1 : 4;
+Q.religious_network_relation += repeated ? 1 : 4;
+Q.iran_party_dissent -= repeated ? 1 : 2;
+Q.independent_nationalists_dissent -= repeated ? 1 : 2;
+if (repeated) Q.organizational_reach -= 1;
+!}
 
 The chair gives each component time to state what it will and will not support.
 No common slogan emerges, but the secretariat learns where a future demand
@@ -54,13 +80,24 @@ would split the room and where compromise is still possible.
 Allies who feared being overruled are more willing to remain at the table.
 The {!<span class="term term-national-front">!}Front{!</span>!} ends the
 meeting with better knowledge rather than a sharper line.
+[? if coalition_procedure_stage > 1: Hearings still keep allies in the room,
+but organizers waiting for a decision increasingly see consultation itself as
+a reason for delay. ?]
 
 - @post_event: Continue
 
 @meeting_oil
 title: Put oil coordination on the agenda
 subtitle: Oil offers common ground without resolving what each ally means by constitutional reform
-on-arrival: independent_nationalists_relation += 4; religious_network_relation += 2; oil_coalition_support += 3
+on-arrival: {!
+var repeated = Q.coalition_procedure === "Oil coordination";
+Q.coalition_procedure = "Oil coordination";
+Q.coalition_procedure_stage += 1;
+Q.independent_nationalists_relation += repeated ? 1 : 4;
+Q.religious_network_relation += repeated ? 1 : 2;
+Q.oil_coalition_support += repeated ? 1 : 3;
+if (repeated) Q.iran_party_dissent += 1;
+!}
 
 The delegates compare the language their organizations are willing to use on
 oil. {!<span class="term term-national-front">!}Independent nationalists{!</span>!} and {!<span class="term term-religious">!}religious-network{!</span>!} organizers find a shared
@@ -68,5 +105,8 @@ public emphasis even though their reasons for supporting it differ.
 
 The coalition is better prepared to speak together on oil. Its machinery and
 its other disagreements are unchanged.
+[? if coalition_procedure_stage > 1: Oil coordination now produces fewer new
+commitments. Constitutional organizers begin asking when the coalition will
+return to the other undertakings on which it was founded. ?]
 
 - @post_event: Continue

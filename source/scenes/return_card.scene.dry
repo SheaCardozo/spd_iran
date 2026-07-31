@@ -1,0 +1,52 @@
+title: Return card to hand
+new-page: true
+on-arrival: {!
+var card = this.state.lastPlayedCard;
+if (Q.month_actions > 0) Q.month_actions -= 1;
+var timerByCard = {
+    coalition_meeting: "coalition_meeting_timer",
+    common_resolution: "common_resolution_timer",
+    election_preparations: "election_preparations_timer",
+    emergency_legal_work: "emergency_legal_work_timer",
+    fundraising: "fundraising_timer",
+    membership_committees: "membership_committees_timer",
+    opposition_consultation: "opposition_consultation_timer",
+    political_correspondence: "political_correspondence_timer",
+    bazaar_outreach: "bazaar_outreach_timer",
+    legal_defense: "legal_defense_timer",
+    press: "press_coordination_timer",
+    public_meetings: "public_meetings_timer",
+    credential_petitions: "credential_petitions_timer",
+    deputy_outreach: "deputy_outreach_timer",
+    electoral_committee: "electoral_committee_timer",
+    oil_committee: "oil_committee_preparation_timer"
+};
+if (card && timerByCard[card.id]) Q[timerByCard[card.id]] = 0;
+if (card) {
+    card.image = card.cardImage;
+    var hand = this.state.currentHands.main || [];
+    if (Q.pre_action_hand_ids && Q.pre_action_hand_ids.length) {
+        var restoredHand = [];
+        for (var restoredId of Q.pre_action_hand_ids) {
+            var restoredCard = this.game.scenes[restoredId];
+            if (restoredCard) {
+                restoredCard.image = restoredCard.cardImage;
+                restoredHand.push(restoredCard);
+            }
+        }
+        hand = restoredHand;
+    } else {
+        var alreadyPresent = false;
+        for (var held of hand) {
+            if (held.id === card.id) alreadyPresent = true;
+        }
+        if (!alreadyPresent) hand.push(card);
+    }
+    this.state.currentHands.main = hand;
+    if (this.state.visits[card.id]) this.state.visits[card.id] -= 1;
+}
+this.state.lastPlayedCard = Q.pre_action_last_card_id ?
+    this.game.scenes[Q.pre_action_last_card_id] : null;
+Q.pre_action_hand_ids = [];
+!}
+go-to: main

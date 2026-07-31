@@ -18,14 +18,39 @@ differences should remain visible rather than becoming contradictory headlines.
 
 Choose the emphasis the secretariat will circulate to editors and speakers.
 
+[? if press_project = "Constitutional editorial network": The cooperating
+papers have been leading with representative government and lawful procedure. ?]
+[? if press_project = "Oil dossier network": The cooperating papers have been
+explaining the disputed oil provisions in detail. ?]
+[? if press_project = "Plural editorial compact": The cooperating papers have
+been presenting a common demand in several distinct political voices. ?]
+[? if press_project = "Fatemi editorial campaign":
+{!<span class="term term-nationalist-social-democratic">!}Fatemi{!</span>!}
+has already drawn the friendly editors into a common public campaign. ?]
+Editors will judge a new brief against the work their readers have already
+seen.
+
 - @press_constitution
 - @press_oil
 - @press_plural
+- @return_card
 
 @press_constitution
 title: Lead with constitutional procedure
-subtitle: Every article returns the dispute to law, cabinet responsibility, and the <span class="term term-parliament">Majles</span>
-on-arrival: press_capacity += 4; constitutional_legitimacy += 3; public_mandate += 2
+subtitle: One resource keeps articles returning the dispute to law, cabinet responsibility, and the <span class="term term-parliament">Majles</span>
+choose-if: resources >= 1
+unavailable-subtitle: Requires one resource for printing and distribution.
+on-arrival: {!
+var repeated = Q.press_project === "Constitutional editorial network";
+var mature = Q.press_project_stage >= 2;
+Q.press_project = "Constitutional editorial network";
+Q.press_project_stage += 1;
+Q.resources -= 1;
+Q.press_capacity += mature ? 1 : 4;
+Q.constitutional_legitimacy += mature ? 1 : 3;
+Q.public_mandate += mature ? 0 : 2;
+if (repeated && mature) Q.independent_nationalists_dissent += 1;
+!}
 
 Editors receive a common brief that connects current demands to representative
 institutions and lawful procedure. Their papers retain their own voices, but
@@ -33,27 +58,56 @@ readers encounter a recognizable argument across several outlets.
 
 The constitutional case becomes easier to repeat and harder to dismiss as a
 momentary slogan. Oil receives less space in this cycle.
+[? if press_project_stage > 2: Readers now know this argument well. Repetition
+keeps it before them, but wins fewer new adherents and leaves nationalist
+editors impatient for a more direct oil case. ?]
 
 - @post_event: Continue
 
 @press_oil
 title: Explain the oil case term by term
-subtitle: Editors make the concession's disputed terms the center of a common nationalist case
-on-arrival: press_capacity += 4; oil_coalition_support += 4; independent_nationalists_relation += 2
+subtitle: One resource lets editors make the concession's disputed terms the center of a common nationalist case
+choose-if: resources >= 1
+unavailable-subtitle: Requires one resource for the oil dossier.
+on-arrival: {!
+var repeated = Q.press_project === "Oil dossier network";
+var mature = Q.press_project_stage >= 2;
+Q.press_project = "Oil dossier network";
+Q.press_project_stage += 1;
+Q.resources -= 1;
+Q.press_capacity += mature ? 1 : 4;
+Q.oil_coalition_support += mature ? 1 : 4;
+Q.independent_nationalists_relation += mature ? 0 : 2;
+if (repeated && mature) Q.iran_party_dissent += 1;
+!}
 
 The press brief separates ownership, control, marketing, compensation, and
-review instead of reducing the dispute to a single compromise scale.
+review instead of asking readers to judge the agreement by one headline
+figure.
 {!<span class="term term-national-front">!}Independent nationalists{!</span>!} welcome a case that can survive detailed scrutiny.
 
 Editors gain a more disciplined oil vocabulary, and support around national
 control grows. Other constitutional issues recede from the immediate campaign.
+[? if press_project_stage > 2: The basic distinctions have now been printed
+more than once. Another dossier keeps wavering supporters supplied with
+arguments, but adds less than the first and frustrates editors who want to
+return to constitutional questions. ?]
 
 - @post_event: Continue
 
 @press_plural
 title: Publish the coalition's disagreements honestly
 subtitle: Each component speaks in its own register, making the coalition broader and less uniform
-on-arrival: press_capacity += 3; toilers_dissent -= 3; religious_network_dissent -= 3
+on-arrival: {!
+var repeated = Q.press_project === "Plural editorial compact";
+var mature = Q.press_project_stage >= 2;
+Q.press_project = "Plural editorial compact";
+Q.press_project_stage += 1;
+Q.press_capacity += mature ? 1 : 3;
+Q.toilers_dissent -= mature ? 1 : 3;
+Q.religious_network_dissent -= mature ? 1 : 3;
+if (repeated && mature) Q.public_mandate -= 1;
+!}
 
 The secretariat asks friendly papers to identify the common demand while
 allowing component organizations to explain their different reasons for
@@ -63,5 +117,8 @@ can travel across constituencies.
 {!<span class="term term-social-democratic">!}Toilers' Party{!</span>!} and
 {!<span class="term term-religious">!}religious-network{!</span>!} organizers feel less pressure to imitate one
 another. The result is credible pluralism, not a single commanding headline.
+[? if press_project_stage > 2: The component voices are no longer a novelty.
+Another deliberately plural issue reassures insiders, but readers looking for
+a decision may hear hesitation instead. ?]
 
 - @post_event: Continue

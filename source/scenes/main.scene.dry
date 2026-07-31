@@ -1,7 +1,11 @@
 title: Monthly briefing
 new-page: true
 is-hand: true
-max-cards: 5
+max-cards: 4
+on-arrival: {!
+Q.pre_action_last_card_id =
+    this.state.lastPlayedCard ? this.state.lastPlayedCard.id : "";
+!}
 
 = [+ month : month +] [+ year +]
 
@@ -21,23 +25,70 @@ max-cards: 5
 
 [? if year = 1949 and month = 1: **Opposition briefing:** {!<span class="term term-mossadegh">!}Mohammad Mossadegh{!</span>!}, {!<span class="term term-constitutionalist">!}Iran Party{!</span>!} figures, and other constitutional politicians are aligned on parts of the political crisis without belonging to one organization. The party has members, lawyers, and local contacts; the wider opposition remains a set of separate politicians, newspapers, and personal networks. ?]
 [? if year = 1949 and month = 2: **Emergency briefing:** after the attempt on {!<span class="term term-royalist">!}Mohammad Reza Shah{!</span>!}, martial law, arrests, the suppression of the {!<span class="term term-left">!}Tudeh Party{!</span>!}, and restrictions on political activity have narrowed the space in which constitutional opponents can work. They remain separate politicians, parties, newspapers, and personal networks. ?]
-[? if year = 1949 and month >= 3 and month <= 4: **Constitutional briefing:** the emergency has opened a wider argument over royal power. A constituent assembly is being prepared while opponents decide whether to concentrate on a public objection, legal procedure, or the political connections needed for a later contest. ?]
-[? if year = 1949 and month >= 5 and month <= 6: **Constitutional briefing:** the constituent assembly has strengthened the {!<span class="term term-royalist">!}Shah's{!</span>!} constitutional position, including a revised Article 48 power to dissolve the {!<span class="term term-parliament">!}Majles{!</span>!}. Opposition circles must now work inside a settlement they did not make. ?]
-[? if year = 1949 and month >= 7 and month <= 9: **Election briefing:** the Sixteenth-{!<span class="term term-parliament">!}Majles{!</span>!} election is under way. {!<span class="term term-constitutionalist">!}Iran Party{!</span>!} organizers within the opposition can campaign for party candidates and coordinate limited work with editors and other constitutional politicians, but each organization retains its own command. ?]
+[? if year = 1949 and month = 3: **Emergency briefing:** martial law and restrictions on political activity continue to shape what lawyers, editors, and party organizers can do. Constitutional opponents must decide which cases to defend now and which record to preserve for the argument ahead. ?]
+[? if year = 1949 and month = 4: **Constitutional briefing:** preparations for a constituent assembly have turned the emergency into an argument over the balance between royal authority and representative government. The opposition remains divided over whether public protest or a strictly legal case offers the stronger answer. ?]
+[? if year = 1949 and month = 5: **Constitutional briefing:** the constituent assembly has strengthened the {!<span class="term term-royalist">!}Shah's{!</span>!} constitutional position, including a revised Article 48 power to dissolve the {!<span class="term term-parliament">!}Majles{!</span>!}. Opposition circles must now work inside a settlement they did not make. ?]
+[? if year = 1949 and month = 6: **Opposition briefing:** the revised constitutional settlement gives the {!<span class="term term-royalist">!}Crown{!</span>!} a stronger position. Lawyers, editors, and prospective candidates are trying to make a common constitutional objection without claiming an organization they have not formed. ?]
+[? if year = 1949 and month = 7: **Election briefing:** the election to the Sixteenth {!<span class="term term-parliament">!}Majles{!</span>!} is beginning. {!<span class="term term-constitutionalist">!}Iran Party{!</span>!} organizers can prepare candidates, observers, and campaign material, but they do not command the other constitutional politicians entering the contest. ?]
+[? if year = 1949 and month = 8: **Campaign briefing:** candidates and local contacts are now occupied with the Sixteenth-{!<span class="term term-parliament">!}Majles{!</span>!} election. Cooperation can prevent collisions and preserve objections; it cannot turn separate candidacies into a national slate after the fact. ?]
+[? if year = 1949 and month = 9: **Election briefing:** returns, complaints, and reports of official pressure are becoming the substance of the constitutional dispute. The opposition must decide which claims it can document and which constituencies it can still defend. ?]
 [? if year = 1949 and month = 10: **Election crisis:** the palace protest has brought opposition figures together around objections to the Sixteenth-{!<span class="term term-parliament">!}Majles{!</span>!} election. It has created common action, not yet one disciplined party. ?]
 [? if year = 1949 and month = 11: **Coalition briefing:** the cooperation is becoming the {!<span class="term term-national-front">!}National Front{!</span>!}, united around representative elections, constitutional government, and political liberties while retaining unlike organizations and tendencies. ?]
 [? if year = 1949 and month = 12: **Organizational briefing:** the new {!<span class="term term-national-front">!}Front{!</span>!} must turn its chosen structure into repeatable committee, press, fundraising, and electoral work. ?]
-[? if year = 1950 and month = 1: **Rerun briefing:** Tehran's cancelled election has opened a second contest. The secretariat proceeds with “[+ election_strategy +].” ?]
-[? if year = 1950 and month >= 2 and month <= 4: **Institutional briefing:** the Sixteenth {!<span class="term term-parliament">!}Majles{!</span>!} approved 98 credentials in its second session, while other places remained subject to later decisions. ?]
-[? if year = 1950 and month >= 5 and month <= 6: **Credential briefing:** {!<span class="term term-constitutionalist">!}Allahyar Saleh's{!</span>!} Kashan/Natanz credential passed on 18 May; the eleven Tehran credentials passed on 1 June. ?]
-[? if year = 1950 and month >= 7 and month <= 11: **Oil briefing:** the supplemental agreement remains under committee and public scrutiny. Ownership, control, marketing, compensation, finance, personnel, and review are each in dispute. ?]
+[? if year = 1950 and month = 1: **Rerun briefing:** Tehran's cancelled election has opened a second contest. [? if election_strategy = "Concentrated Tehran slate": Organizers are concentrating on a recognizable Tehran slate. ?][? if election_strategy = "Monitoring and credential record": Lawyers and observers are concentrating on the record that later credential debates will require. ?][? if election_strategy = "Slate with selective monitoring": The campaign is dividing scarce money and personnel between a visible slate and selected observation. ?] ?]
+[? if year = 1950 and month = 2: **Institutional briefing:** the Sixteenth {!<span class="term term-parliament">!}Majles{!</span>!} has opened and approved 98 credentials in its second session. Returned candidates whose credentials remain undecided cannot yet be counted as dependable members. ?]
+[? if year = 1950 and month = 3: **Parliamentary briefing:** the first credential decisions have established a chamber, not settled every disputed place. The opposition's returned deputies must coordinate their cases while approaching members beyond their own small group. ?]
+[? if year = 1950 and month = 4: **Credential briefing:** each unresolved return presents a separate parliamentary question. Case files can strengthen an objection and coordination among deputies can keep it before the chamber, but neither can manufacture a return that did not occur. ?]
+[? if year = 1950 and month = 5: **Credential briefing:** {!<span class="term term-constitutionalist">!}Allahyar Saleh's{!</span>!} Kashan–Natanz credential and the returned Tehran deputies remain central to the opposition's effort to become an effective parliamentary group. ?]
+[? if year = 1950 and month = 6: **Credential briefing:** the chamber approved {!<span class="term term-constitutionalist">!}Allahyar Saleh's{!</span>!} Kashan–Natanz credential on 18 May and the eleven Tehran credentials on 1 June. The parliamentary group can now turn from securing its own places toward building support beyond them. ?]
+[? if year = 1950 and month = 7: **Oil briefing:** the supplemental agreement remains before deputies and the oil committee. The opposition is separating questions of ownership and operational authority from the agreement's financial promises. ?]
+[? if year = 1950 and month = 8: **Oil campaign briefing:** committee preparation and public argument now proceed together. A careful case must explain control, marketing, compensation, finance, personnel, and review without pretending that every disputed provision is settled. ?]
+[? if year = 1950 and month = 9: **Committee briefing:** the argument over the supplemental agreement is becoming a contest over what national control would require in practice. Deputies need both a defensible text and colleagues prepared to vote for it. ?]
+[? if year = 1950 and month = 10: **Oil briefing:** friendly papers, public meetings, and parliamentary conversations are carrying different parts of the same dispute. A loud campaign can widen the demand; exact committee work can keep that demand from dissolving into a slogan. ?]
+[? if year = 1950 and month = 11 and gass_golshayan_rejected_committee = 0: **Committee briefing:** the supplemental agreement remains under committee scrutiny. The question is no longer whether its payments can be described more generously, but whether its provisions answer the demand for national control. ?]
+[? if year = 1950 and month = 11 and gass_golshayan_rejected_committee = 1: **Committee briefing:** the oil committee has rejected the supplemental agreement. That recommendation must still be defended in the {!<span class="term term-parliament">!}Majles{!</span>!}, where committee agreement does not automatically provide a plenary majority. ?]
 [? if year = 1950 and month = 12: **Comparative briefing:** {!<span class="term term-country country-saudi">!}Saudi Arabia's{!</span>!} 1950 arrangement with Aramco has sharpened the Iranian comparison over profit sharing, though the two contracts are not identical. ?]
-[? if year = 1951 and month <= 2: **Parliamentary briefing:** the oil committee rejected the supplemental agreement on 25 November 1950, and the {!<span class="term term-parliament">!}Majles{!</span>!} approved that rejection on 11 January 1951. The dispute is moving from revision toward nationalization. ?]
+[? if year = 1951 and month = 1: **Parliamentary briefing:** the oil committee rejected the supplemental agreement on 25 November 1950, and the {!<span class="term term-parliament">!}Majles{!</span>!} approved that rejection on 11 January 1951. The opposition must now turn rejection of one agreement into support for a different principle. ?]
+[? if year = 1951 and month = 2: **Nationalization briefing:** the dispute has moved from revision of the supplemental agreement toward nationalization. The parliamentary case, public demand, and the response to {!<span class="term term-independent">!}Razmara{!</span>!} will determine whether that principle can command the chambers. ?]
+
+[? if front_formed = 1 and coalition_cohesion < 45: Component leaders are
+carrying an unresolved disagreement back into their own organizations. Common
+work continues, but no statement can be assumed to bind the whole
+{!<span class="term term-national-front">!}Front{!</span>!}. ?]
+[? if front_formed = 1 and coalition_cohesion >= 45 and coordination_efficiency >= 65:
+The coalition's separate committees are exchanging decisions reliably enough
+for local and parliamentary work to reinforce one another. ?]
+[? if crown_pressure >= 70: Access, official influence, and the
+{!<span class="term term-royalist">!}Court's{!</span>!} political capacity
+are combining into severe resistance. ?]
+[? if crown_pressure < 45 and shah_relation >= 35: The palace remains guarded,
+but it is not presently able to turn every constitutional initiative into an
+open confrontation. ?]
+[? if press_project = "Constitutional editorial network" and (month = 3 or month = 7 or month = 11): Friendly papers
+continue to lead with representative government, lawful procedure, and the
+authority of the {!<span class="term term-parliament">!}Majles{!</span>!}. ?]
+[? if press_project = "Oil dossier network" and (month = 3 or month = 7 or month = 11): Friendly editors continue to
+explain how ownership, operations, marketing, compensation, and review bear
+on national control. ?]
+[? if press_project = "Plural editorial compact" and (month = 3 or month = 7 or month = 11): Cooperating papers continue
+to state the common demand in distinct constitutional, social, nationalist,
+and religious voices. ?]
+[? if press_project = "Fatemi editorial campaign" and (month = 3 or month = 7 or month = 11):
+{!<span class="term term-nationalist-social-democratic">!}Fatemi's{!</span>!}
+editorial campaign is keeping the opposition's public argument before
+readers. ?]
+[? if majles_convened = 1 and oil_committee_formed = 1 and nationalization_majles_support < nationalization_majles_threshold:
+The oil case is visible, but the deputies able to sit and presently prepared
+to support nationalization do not constitute a chamber majority. ?]
+[? if majles_convened = 1 and oil_committee_formed = 1 and nationalization_majles_support >= nationalization_majles_threshold:
+The parliamentary oil coalition is broad enough to carry a vote if its
+supporters attend and wavering deputies do not turn against it. ?]
 
 - @party_affairs
 - @public_campaign
 - @parliamentary_affairs
 - #advisor
+- @advisor_roster
 - @research_library: Research Library
 - @status: Full status
 

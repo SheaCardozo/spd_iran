@@ -20,13 +20,19 @@ pressure. Neither guarantees relief from the authorities.
 - @defense_cases
 - @defense_test_case
 - @defense_record
+- @return_card
 
 @defense_cases
 title: Fund individual legal cases
-subtitle: The <span class="term term-national-front">Front</span> stands behind named defendants and pays the cost of keeping their cases alive
+subtitle: One resource lets the <span class="term term-national-front">Front</span> stand behind named defendants and keep their cases alive
 choose-if: resources >= 1
 unavailable-subtitle: Requires one resource.
-on-arrival: resources -= 1; constitutional_legitimacy += 4; organizational_reach += 2; toilers_relation += 2
+on-arrival: {!
+Q.resources -= 1;
+Q.constitutional_legitimacy += Q.constitutional_legitimacy < 70 ? 4 : 1;
+Q.organizational_reach += Q.organizational_reach < 70 ? 2 : 1;
+Q.toilers_relation += Q.toilers_relation < 70 ? 2 : 1;
+!}
 
 The secretariat selects defensible cases, pays for counsel and filings, and
 keeps affected organizers connected to their committees.
@@ -39,15 +45,24 @@ The legal work reinforces the
 claim and preserves some
 organizational continuity. The broader pattern of restrictions remains only
 partly documented.
+[? if constitutional_legitimacy >= 75: The most visible cases already have
+counsel. Further spending keeps individual files alive, but no longer changes
+the campaign's constitutional standing as dramatically. ?]
 
 - @post_event: Continue
 
 @defense_test_case
 title: Carry a test case through every available proceeding
-subtitle: A sustained lawsuit creates a record that later defendants and petitioners can reuse
+subtitle: Two resources carry a sustained lawsuit far enough to create a record later defendants and petitioners can reuse
 choose-if: resources >= 2
 unavailable-subtitle: Requires 2 resources.
-on-arrival: resources -= 2; constitutional_legitimacy += 5; parliamentary_procedure_legitimacy += 4; organizational_reach += 2
+on-arrival: {!
+Q.resources -= 2;
+Q.constitutional_legitimacy += Q.constitutional_legitimacy < 70 ? 5 : 2;
+Q.parliamentary_procedure_legitimacy +=
+    Q.parliamentary_procedure_legitimacy < 70 ? 4 : 1;
+Q.organizational_reach += Q.organizational_reach < 70 ? 2 : 0;
+!}
 
 Counsel selects a case with a clear procedural record and pays the costs of
 filings, appearances, copied documents, and continued contact with the
@@ -56,13 +71,21 @@ defendant's organization. The campaign refuses to promise a favorable court.
 Even an adverse decision now leaves a record other lawyers can cite and
 organizers can explain. The treasury bears the full cost of seeing the case
 through.
+[? if parliamentary_procedure_legitimacy >= 75: The reusable procedural
+argument is now established. Another sustained case may defend its named
+party, but offers fewer new lessons for the wider campaign. ?]
 
 - @post_event: Continue
 
 @defense_record
 title: Publish a common record of restrictions
 subtitle: A printed catalogue makes repression public—and turns every accusation toward the <span class="term term-royalist">Court</span>
-on-arrival: press_capacity += 5; public_mandate += 3; shah_relation -= 1
+on-arrival: {!
+var familiar = Q.press_capacity >= 70;
+Q.press_capacity += familiar ? 1 : 5;
+Q.public_mandate += Q.public_mandate < 70 ? 3 : 1;
+Q.shah_relation -= familiar ? 2 : 1;
+!}
 
 Editors and local committees compile dates, orders, interrupted meetings, and
 other reports into one careful dossier. Claims that cannot be checked are
@@ -71,5 +94,8 @@ marked as uncertain rather than repeated as fact.
 The record gives the press and leadership a clearer picture and widens public
 attention. Its direct attribution of responsibility further strains relations
 with the {!<span class="term term-royalist">!}Court{!</span>!}.
+[? if press_capacity >= 75: Readers recognize the pattern. A new catalogue
+keeps the record current, but wins less attention while renewing the
+{!<span class="term term-royalist">!}Court's{!</span>!} hostility. ?]
 
 - @post_event: Continue

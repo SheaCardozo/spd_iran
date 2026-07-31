@@ -994,7 +994,10 @@ The *Petrograd* source confirms that the engine can support separate institution
 
 - additive demographic-to-vote election algorithm;
 - mutually exclusive social classes;
-- card-draw or mirrored party-deck structure;
+- card-draw or mirrored party-deck structure **after the v0.x line**. Version
+  0.3 deliberately retains Dynamic SPD's four-card Dynamic-mode agenda while
+  the coupled Iran simulation is proved; replacing card play remains a
+  separately planned long-term divergence;
 - multiplayer and player-to-party switching scaffolding;
 - fixed macroeconomic monthly changes;
 - Phillips-curve assumptions;

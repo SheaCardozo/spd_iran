@@ -4,7 +4,7 @@ title: <span class="term term-nationalist-social-democratic">Hossein Fatemi</spa
 new-page: true
 is-pinned-card: true
 tags: advisor
-view-if: advisor_fatemi_available = 1
+view-if: advisor_fatemi_available = 1 and advisor_fatemi_active = 1
 
 = {!<span class="term term-nationalist-social-democratic">!}Hossein Fatemi{!</span>!}
 
@@ -23,7 +23,7 @@ title: Sharpen the public message
 subtitle: <span class="term term-nationalist-social-democratic">Fatemi</span> reduces the campaign to a line editors can carry from headline to meeting hall
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
-on-arrival: advisor_action_timer = 6; press_capacity += 5; public_mandate += 3
+on-arrival: advisor_action_timer = 6; press_coordination_timer = 0; press_project = "Fatemi editorial campaign"; press_project_stage += 1; press_capacity += 5; public_mandate += 3
 
 {!<span class="term term-nationalist-social-democratic">!}Fatemi{!</span>!} reduces the current case to a headline, a short explanation, and a set
 of answers for predictable objections. Friendly editors adapt the brief to
@@ -45,7 +45,7 @@ subtitle: Independent papers coordinate timing and argument without becoming an 
 view-if: front_formed = 1
 choose-if: advisor_action_timer <= 0 and front_formed = 1
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
-on-arrival: advisor_action_timer = 6; press_capacity += 4; organizational_reach += 2
+on-arrival: advisor_action_timer = 6; public_meetings_timer = 0; press_capacity += 4; organizational_reach += 2
 
 {!<span class="term term-nationalist-social-democratic">!}Fatemi{!</span>!} convenes editors to compare what they can verify, what readers are
 asking, and which claims should not be repeated without evidence. The papers

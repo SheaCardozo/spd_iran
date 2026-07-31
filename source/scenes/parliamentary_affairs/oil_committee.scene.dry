@@ -5,7 +5,7 @@ title: Oil Committee Preparation
 new-page: true
 is-card: true
 tags: parliamentary_affairs
-view-if: oil_committee_preparation_timer <= 0 and majles_convened = 1
+view-if: oil_committee_preparation_timer <= 0 and majles_convened = 1 and nationalization_approved_majles = 0
 on-arrival: month_actions += 1; oil_committee_preparation_timer = 5
 
 = Oil Committee Preparation
@@ -19,14 +19,34 @@ settled.
 Choose what the {!<span class="term term-national-front">!}Front's{!</span>!}
 parliamentary team will make ready first.
 
+[? if oil_project = "Term-by-term comparison": Earlier work has given deputies
+a provision-by-provision comparison of the supplemental agreement. ?]
+[? if oil_project = "Cross-faction majority": Earlier work has concentrated on
+the language that potential supporters from several tendencies can defend. ?]
+[? if oil_project = "Procedural commission record": Earlier work has separated
+documented provisions from disputed and unknown ones. ?]
+[? if oil_project = "Makki committee examination":
+{!<span class="term term-makki">!}Makki{!</span>!} has already pressed the
+committee to examine the agreement against the demand for national control. ?]
+[? if oil_project_setbacks > 0: Institutional pressure has already interrupted
+the parliamentary work behind that record. ?]
+
 - @oil_terms
 - @oil_coalition
 - @oil_record
+- @return_card
 
 @oil_terms
 title: Compare proposal terms one by one
 subtitle: Ownership, operations, marketing, and compensation are separated before the <span class="term term-national-front">Front</span> names its floor
-on-arrival: parliamentary_procedure_legitimacy += 5; oil_coalition_support += 2; oil_terms_position = "Term-by-term national control"
+on-arrival: {!
+var mature = Q.oil_project_stage >= 2;
+Q.oil_project = "Term-by-term comparison";
+Q.oil_project_stage += 1;
+Q.parliamentary_procedure_legitimacy += mature ? 1 : 5;
+Q.oil_coalition_support += mature ? 1 : 2;
+Q.oil_terms_position = "Term-by-term national control";
+!}
 
 The team creates a term-by-term comparison and leaves disputed provisions
 blank rather than assigning them a neutral value. Deputies can now see whether
@@ -36,13 +56,25 @@ merely changes payment language.
 The {!<span class="term term-national-front">!}Front{!</span>!}'s minimum
 becomes more precise and its committee case more
 defensible. A careful table does not by itself create the votes to adopt it.
+[? if oil_project_stage > 2: The principal provisions have already been
+separated and compared. Another examination can correct the argument, but
+adds less than persuading deputies who have not yet accepted its conclusion. ?]
 
 - @post_event: Continue
 
 @oil_coalition
 title: Build a cross-faction committee majority
 subtitle: Support is assembled around the parts of national control each faction can defend
-on-arrival: oil_coalition_support += 6; independent_nationalists_relation += 2; religious_network_relation += 2
+on-arrival: {!
+var repeated = Q.oil_project === "Cross-faction majority";
+var mature = Q.oil_project_stage >= 2;
+Q.oil_project = "Cross-faction majority";
+Q.oil_project_stage += 1;
+Q.oil_coalition_support += mature ? 2 : 6;
+Q.independent_nationalists_relation += mature ? 0 : 2;
+Q.religious_network_relation += mature ? 0 : 2;
+if (repeated && mature) Q.parliamentary_procedure_legitimacy -= 1;
+!}
 
 {!<span class="term term-national-front">!}Front{!</span>!} deputies meet
 prospective supporters separately, asking what language
@@ -52,13 +84,23 @@ the effort.
 
 The committee majority becomes more plausible. Some technical terms remain
 unresolved because the work has concentrated on common ground.
+[? if oil_project_stage > 2: Most readily persuadable deputies have already
+been approached. Further bargaining secures a few wavering commitments, but
+risks making the committee appear more concerned with votes than with the
+substance of the agreement. ?]
 
 - @post_event: Continue
 
 @oil_record
-title: Prepare an uncertainty register for the committee
-subtitle: Unknown terms remain unknown, giving editors and deputies one defensible record
-on-arrival: parliamentary_procedure_legitimacy += 5; press_capacity += 3
+title: Mark what the agreement does—and does not—settle
+subtitle: Deputies and editors receive the same careful account of documented, disputed, and unknown provisions
+on-arrival: {!
+var mature = Q.oil_project_stage >= 2;
+Q.oil_project = "Procedural commission record";
+Q.oil_project_stage += 1;
+Q.parliamentary_procedure_legitimacy += mature ? 2 : 5;
+Q.press_capacity += mature ? 1 : 3;
+!}
 
 The parliamentary team labels every provision as documented, disputed, or
 still unknown and attaches the strongest available record. Friendly editors
@@ -66,6 +108,9 @@ receive the same distinctions so that uncertainty is not reported as a
 compromise.
 
 Committee work becomes more transparent and the public explanation improves.
-The register deliberately stops short of selecting the final acceptable terms.
+The record deliberately stops short of selecting the final acceptable terms.
+[? if oil_project_stage > 2: The remaining uncertainty cannot be eliminated by
+reformatting the same evidence. Another review preserves the distinction
+between fact and dispute, but wins less new confidence than the first. ?]
 
 - @post_event: Continue

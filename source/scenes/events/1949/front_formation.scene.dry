@@ -7,8 +7,22 @@ new-page: true
 tags: event
 view-if: year = 1949 and month >= 11 and front_formed = 0
 max-visits: 1
-priority: 20
-on-arrival: front_formed = 1; player_organization = "National Front"; advisor_kashani_available = 1
+priority: 35
+on-arrival: {!
+Q.front_formed = 1;
+Q.player_organization = "National Front";
+if (!Q.advisor_kashani_available) {
+    Q.advisor_kashani_available = 1;
+    Q.advisor_kashani_entry_state =
+        "Available as an autonomous counterpart after Front formation";
+    Q.advisor_pool_size = 5;
+    Q.advisor_roster_required = 1;
+    Q.advisor_roster_event_return = 1;
+    Q.advisor_roster_change_reason =
+        "Ayatollah Abol-Qasem Kashani is now available as an autonomous counterpart.";
+}
+Q.religious_network_active = 1;
+!}
 
 = November 1949
 
@@ -46,7 +60,7 @@ The clarity gives the alliance a strong public rule. It leaves local
 membership and discipline largely in the hands of its component organizations,
 so later coordination will still have to be negotiated.
 
-- @post_event: Continue
+- @advisor_roster: Select the active advisers
 
 @coordination_committee
 title: Remain a committee of cooperating organizations
@@ -62,7 +76,7 @@ The arrangement lowers the immediate cost of cooperation. It also means that a
 future disagreement can travel back through several independent chains of
 authority before the {!<span class="term term-national-front">!}Front{!</span>!} can answer as one body.
 
-- @post_event: Continue
+- @advisor_roster: Select the active advisers
 
 @membership_front
 title: Build a common membership organization
@@ -78,4 +92,4 @@ Existing organizations immediately ask who controls those committees and
 whose program new members are joining. The stronger common structure is real;
 so is the resistance from allies who fear being absorbed by it.
 
-- @post_event: Continue
+- @advisor_roster: Select the active advisers

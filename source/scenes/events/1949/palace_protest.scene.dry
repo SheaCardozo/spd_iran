@@ -9,7 +9,19 @@ tags: event
 view-if: year = 1949 and month >= 10 and front_formed = 0
 max-visits: 1
 priority: 40
-on-arrival: advisor_fatemi_available = 1; advisor_makki_available = 1
+on-arrival: {!
+if (!Q.advisor_fatemi_available || !Q.advisor_makki_available) {
+    Q.advisor_fatemi_available = 1;
+    Q.advisor_makki_available = 1;
+    Q.advisor_fatemi_entry_state = "Entered at the October palace protest";
+    Q.advisor_makki_entry_state = "Entered at the October palace protest";
+    Q.advisor_pool_size = 4;
+    Q.advisor_fatemi_active = 1;
+    Q.advisor_eligibility_signature = "111100";
+    Q.advisor_reconciled_signature = "111100";
+}
+Q.toilers_active = 1;
+!}
 
 = October 1949
 
@@ -24,6 +36,16 @@ The group goes to the royal palace to press that demand. It is not yet a
 disciplined party, and the protest does not give it control over the election.
 What it creates is a shared political purpose and a place where politicians
 with different organizations and constituencies can continue cooperating.
+
+[? if election_preparation_response = "Election-monitoring committee": The
+monitoring committee arrives with comparable reports, but no authority to
+compel a remedy. ?]
+[? if election_preparation_response = "Public constitutional appeal": The
+public appeal has already named the election as a constitutional question,
+raising the cost of a quiet settlement. ?]
+[? if election_preparation_response = "Provincial correspondents": The
+provincial correspondence supplies a wider record while leaving the opposition
+without one public voice. ?]
 
 - @begin_organizing
 

@@ -90,6 +90,24 @@ body.dark-mode {
   font-size: 0.95rem;
 }
 
+.chamber-controls {
+  display: flex;
+  gap: 0.35rem;
+  margin-top: 0.7rem;
+}
+
+.chamber-controls button {
+  border: 1px solid var(--border-color);
+  background: var(--content-bg-color);
+  color: var(--main-color);
+  padding: 0.25rem 0.45rem;
+  cursor: pointer;
+}
+
+.chamber-controls button[aria-pressed="true"] {
+  background: var(--card-bg-color);
+}
+
 .chamber-chart {
   display: block;
   width: 100%;
@@ -101,11 +119,33 @@ body.dark-mode {
   fill: var(--unavailable-bg-color);
   stroke: var(--border-color);
   stroke-width: 0.7;
+  cursor: pointer;
 }
 
-.chamber-seat:focus {
+.chamber-seat:focus,
+.chamber-seat:hover,
+.chamber-seat.is-selected {
   outline: none;
   stroke-width: 2;
+}
+
+.chamber-place-picker {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0.3rem 0 0.45rem;
+}
+
+.chamber-place-picker label {
+  font-size: 0.75rem;
+}
+
+.chamber-place-picker select {
+  min-height: 44px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  background: var(--content-bg-color);
+  color: var(--main-color);
+  padding: 0.35rem;
 }
 
 .seat-front {
@@ -133,6 +173,27 @@ body.dark-mode {
   fill: var(--term-left);
 }
 
+.seat-oil-supports {
+  fill: var(--term-parliament);
+}
+
+.seat-oil-conditional {
+  fill: var(--term-independent);
+}
+
+.seat-oil-opposes,
+.seat-oil-uncommitted {
+  fill: var(--unavailable-bg-color);
+}
+
+.chamber-place-detail {
+  min-height: 3.2em;
+  padding: 0.45rem;
+  border: 1px solid var(--border-color);
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+
 .chamber-legend {
   margin: 0.1rem 0 0.7rem;
   font-size: 0.75rem;
@@ -157,6 +218,51 @@ body.gray-mode .seat-elected {
 body.gray-mode .seat-credential-pending {
   fill: transparent;
   stroke-width: 1.4;
+}
+
+body.gray-mode .seat-oil-supports {
+  fill: #444;
+}
+
+body.gray-mode .seat-oil-conditional {
+  fill: #999;
+  stroke-dasharray: 1.5 1;
+}
+
+body.gray-mode .seat-oil-opposes,
+body.gray-mode .seat-oil-uncommitted {
+  fill: #eee;
+  stroke-dasharray: 2 1;
+}
+
+.support-trends {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.support-trend-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.support-trend {
+  fill: none;
+  stroke-width: 2;
+}
+
+.trend-professional { stroke: var(--term-constitutionalist); }
+.trend-bazaar { stroke: var(--term-religious); }
+.trend-workers { stroke: var(--term-social-democratic); }
+.trend-provincial { stroke: var(--term-independent); }
+
+body.gray-mode .trend-professional { stroke: #111; }
+body.gray-mode .trend-bazaar { stroke: #555; stroke-dasharray: 4 2; }
+body.gray-mode .trend-workers { stroke: #888; stroke-dasharray: 2 2; }
+body.gray-mode .trend-provincial { stroke: #aaa; stroke-dasharray: 6 2; }
+
+.support-trend-legend {
+  font-size: 0.75rem;
 }
 body.dark-mode #content {
   border-style: double;
@@ -597,6 +703,30 @@ div.blank-card {
   background-color: var(--card-bg-color);
   border: 10px solid var(--card-border-color);
   margin-bottom: 0.5em;
+  color: var(--unavailable-color);
+  text-align: center;
+}
+
+div.blank-card span {
+  display: block;
+  margin-top: 64px;
+  font-size: 0.82rem;
+}
+
+.hand-state,
+.deck-state {
+  min-height: 1.25em;
+  margin: -0.4em 0 0.65em;
+  color: var(--unavailable-color);
+  font-size: 0.86rem;
+}
+
+.deck-availability {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--unavailable-color);
+  font-size: 0.78rem;
+  text-align: center;
 }
 
 .card-in-hand,
@@ -1026,7 +1156,6 @@ th {
 
 .pinned-text-description {
   margin-left: -10px;
-  white-space: nowrap;
 }
 
 .term {

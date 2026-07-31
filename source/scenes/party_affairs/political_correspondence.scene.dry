@@ -11,21 +11,32 @@ on-arrival: month_actions += 1; political_correspondence_timer = 3
 
 = Political Correspondence
 
-The opposition has no secretariat capable of surveying the country. News
-moves through editors, lawyers, party branches, prospective candidates, and personal
-correspondents, each of whom sees only part of the political field.
+Editors, lawyers, party branches, prospective candidates, and personal
+correspondents already know the political conditions in which they work. What
+the opposition lacks is a common way to circulate their arguments, coordinate
+requests, and preserve records across organizations that answer to different
+leaders.
 
-Concentrating the correspondence can make one of those channels more regular
-without pretending to create complete national coverage.
+Concentrating the correspondence can make one channel more regular. The choice
+is which existing relationships should carry the opposition's common work.
 
 - @correspondence_editors
 - @correspondence_provinces
 - @correspondence_party
+- @return_card
 
 @correspondence_editors
 title: Link the friendly editors
 subtitle: Papers compare what they can print and verify while preserving their own editorial lines
-on-arrival: press_capacity += 3; constitutional_legitimacy += 1
+on-arrival: {!
+Q.political_correspondence_repeat =
+    Q.political_correspondence_last === "editors" ? 1 : 0;
+Q.political_correspondence_last = "editors";
+Q.press_capacity += Q.political_correspondence_repeat ? 1 :
+    (Q.press_capacity < 70 ? 3 : 1);
+Q.constitutional_legitimacy += Q.political_correspondence_repeat ? 0 :
+    (Q.constitutional_legitimacy < 70 ? 1 : 0);
+!}
 
 Editors exchange summaries of restrictions, constitutional arguments, and
 reports that require corroboration. They coordinate enough to avoid
@@ -34,27 +45,63 @@ coalition that has not formed.
 
 The opposition gains a more coherent press conversation without acquiring
 control over it.
+[? if political_correspondence_repeat = 1:
+The same editors resume their exchange. This time the work is maintenance:
+checking a fresh restriction, correcting a doubtful report, and keeping
+separate editorial lines from drifting into contradiction. The channel
+survives, but repetition does not create another newspaper or a common
+editorial command. ?]
+[? if press_capacity >= 75: The editors already know how to reach one another.
+Another exchange keeps their accounts aligned, but does not create another
+paper or a common editorial command. ?]
 
 - @post_event: Continue
 
 @correspondence_provinces
 title: Recruit provincial correspondents
-subtitle: Wider correspondence brings distant complaints into view and leaves each report dependent on its named source
-on-arrival: organizational_reach += 3; independent_nationalists_organization += 2
+subtitle: Regular letters connect provincial candidates and lawyers to Tehran without placing them under a central command
+on-arrival: {!
+Q.political_correspondence_repeat =
+    Q.political_correspondence_last === "provinces" ? 1 : 0;
+Q.political_correspondence_last = "provinces";
+Q.organizational_reach += Q.political_correspondence_repeat ? 1 :
+    (Q.organizational_reach < 70 ? 3 : 1);
+Q.independent_nationalists_organization +=
+    Q.political_correspondence_repeat ? 1 :
+    (Q.independent_nationalists_organization < 70 ? 2 : 1);
+!}
 
 Prospective candidates, lawyers, and editors ask trusted acquaintances outside Tehran to
-send dated reports and identify how they learned each fact. The resulting
-picture is uneven, but it is wider and easier to question.
+send dated reports, requests for assistance, and copies of material needed in
+Tehran. The correspondence gives people who already understand their own
+constituencies a dependable route into common legal and political work.
 
 Independent politicians gain connections that do not depend entirely on a
 single established party.
+[? if political_correspondence_repeat = 1:
+Letters go back to the correspondents already recruited. They clarify missing
+dates, carry replies from Tehran, and keep existing routes alive; they do not
+magically supply trusted contacts in provinces where none was found. ?]
+[? if organizational_reach >= 75: The dependable correspondents are already
+writing. Further requests make the exchange more regular, but add few places
+where no trusted relationship existed. ?]
 
 - @post_event: Continue
 
 @correspondence_party
 title: Strengthen the <span class="term term-constitutionalist">Iran Party</span> circuit
 subtitle: A disciplined party channel moves reports reliably, while other circles remain outside it
-on-arrival: iran_party_organization += 3; iran_party_relation += 2; organizational_reach += 1
+on-arrival: {!
+Q.political_correspondence_repeat =
+    Q.political_correspondence_last === "party" ? 1 : 0;
+Q.political_correspondence_last = "party";
+Q.iran_party_organization += Q.political_correspondence_repeat ? 1 :
+    (Q.iran_party_organization < 70 ? 3 : 1);
+Q.iran_party_relation += Q.political_correspondence_repeat ? 1 :
+    (Q.iran_party_relation < 70 ? 2 : 1);
+Q.organizational_reach += Q.political_correspondence_repeat ? 0 :
+    (Q.organizational_reach < 65 ? 1 : 0);
+!}
 
 {!<span class="term term-constitutionalist">!}Iran Party{!</span>!}
 organizers regularize reports between local contacts and Tehran. The circuit
@@ -63,5 +110,12 @@ organization that maintains it.
 
 The party becomes a more useful partner. Its correspondence is not a neutral
 register of every opposition group.
+[? if political_correspondence_repeat = 1:
+Party organizers work the same circuit again, chasing unanswered letters and
+standardizing reports from contacts already inside it. Reliability improves at
+the margin, while politicians outside the party remain outside its command. ?]
+[? if iran_party_organization >= 75: The party circuit is now dependable.
+Additional discipline mostly strengthens routes it already controls, which
+does not answer the other opposition circles' need for independent contact. ?]
 
 - @post_event: Continue

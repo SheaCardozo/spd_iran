@@ -33,7 +33,7 @@ is useful, frightening, and still unproved.
 @attempt_caution
 title: Insist that evidence precede accusation
 subtitle: The statement sets a public rule without committing the opposition to a campaign it cannot yet sustain
-on-arrival: constitutional_legitimacy += 2
+on-arrival: attempt_response = "Evidence before accusation"; constitutional_legitimacy += 2
 
 Your statement condemns the shooting and refuses to assign a wider
 responsibility without evidence. It gives opponents of collective punishment
@@ -43,12 +43,12 @@ the authorities intend to do next.
 The emergency does not wait for that evidence. Arrests and restrictions are
 already widening.
 
-- @emergency_measures: Continue
+- @post_event: Continue
 
 @attempt_quiet
 title: Gather reports before intervening publicly
 subtitle: A documented case can be assembled before the opposition exposes itself in print
-on-arrival: constitutional_legitimacy += 1; parliamentary_procedure_legitimacy += 2
+on-arrival: attempt_response = "Quiet fact gathering"; constitutional_legitimacy += 1; parliamentary_procedure_legitimacy += 2
 
 Lawyers, editors, and political contacts compare what they have heard and mark
 contradictions rather than forcing them into one story. The resulting record
@@ -57,12 +57,12 @@ separates verified acts from politically convenient inferences.
 Because the work is discreet, the opposition establishes less of a public
 standard before emergency measures take effect.
 
-- @emergency_measures: Continue
+- @post_event: Continue
 
 @attempt_joint
 title: Draft a joint statement for opposition newspapers
 subtitle: A common text brings the opposition into view—and under the <span class="term term-royalist">Court</span>'s eye
-on-arrival: constitutional_legitimacy += 1; organizational_reach += 1; shah_resistance += 1
+on-arrival: attempt_response = "Joint newspaper statement"; constitutional_legitimacy += 1; organizational_reach += 1; shah_resistance += 1
 
 Several opposition circles agree on careful language: condemn the assault,
 reject unsupported collective blame, and ask under what law the emergency
@@ -72,14 +72,29 @@ that did not exist before the crisis.
 It also identifies the signatories to a {!<span class="term term-royalist">!}Court{!</span>!} newly alert to organized
 opposition. The statement cannot prevent the measures that follow.
 
-- @emergency_measures: Continue
+- @post_event: Continue
 
 @emergency_measures
-title: Martial law and the <span class="term term-left">Tudeh</span> ban
+title: The <span class="term term-left">Tudeh</span> ban and opposition crackdown
 subtitle: Emergency power reaches parties, newspapers, and political networks
 new-page: true
+tags: event
+view-if: year = 1949 and month >= 2 and attempt_emergency_seen = 1 and emergency_crackdown_seen = 0 and attempt_response != "Not yet reached"
+max-visits: 1
+priority: 29
+on-arrival: emergency_crackdown_seen = 1
 
 = February 1949
+
+[? if attempt_response = "Evidence before accusation": The opposition's first
+statement established an evidentiary rule; lawyers now try to apply it while
+emergency decrees arrive faster than they can be examined. ?]
+[? if attempt_response = "Quiet fact gathering": Reports collected before the
+public intervention give lawyers a firmer chronology, but newspapers have not
+yet heard a common opposition voice. ?]
+[? if attempt_response = "Joint newspaper statement": The joint statement has
+made the responding editors and politicians visible to authorities enforcing
+the emergency. ?]
 
 Under martial law the state outlaws the {!<span class="term term-left">!}Tudeh
 Party{!</span>!}, arrests political opponents, and restricts newspapers and
@@ -98,7 +113,7 @@ principle visible but expose its organizers to further pressure.
 @ban_legal_record
 title: Build a legal record of the emergency measures
 subtitle: The emergency decrees become a future constitutional brief rather than an immediate street contest
-on-arrival: constitutional_legitimacy += 2; shah_relation -= 1
+on-arrival: emergency_response = "Legal record"; constitutional_legitimacy += 2; shah_relation -= 1
 
 Lawyers begin recording orders, detentions, closures, and the authority
 claimed for them. The record cannot reopen a newspaper or free a detainee by
@@ -112,7 +127,7 @@ the {!<span class="term term-royalist">!}Court{!</span>!} to treat as private un
 @ban_contacts
 title: Preserve discreet organizational contacts
 subtitle: Political networks survive quietly while the public defense is left to others
-on-arrival: organizational_reach += 2
+on-arrival: emergency_response = "Discreet contacts"; organizational_reach += 2
 
 Trusted intermediaries carry news between lawyers, political circles, and
 families affected by the arrests. The network learns which channels still
@@ -126,7 +141,7 @@ emergency hear no comparably strong common public answer.
 @ban_public_defense
 title: Coordinate a public defense of political liberties
 subtitle: The ban is answered in print and meeting halls, where the <span class="term term-royalist">Crown</span> cannot ignore it
-on-arrival: public_mandate += 1; press_capacity += 1; shah_resistance += 1
+on-arrival: emergency_response = "Public liberties campaign"; public_mandate += 1; press_capacity += 1; shah_resistance += 1
 
 Editors and constitutional politicians frame the ban and press restrictions
 as a test of lawful government rather than as proof of an unverified
@@ -145,8 +160,20 @@ tags: event
 view-if: year = 1949 and month >= 5
 max-visits: 1
 priority: 20
+on-arrival: constituent_assembly_seen = 1
 
 = Spring 1949
+
+[? if emergency_response = "Legal record": The legal archive from the
+emergency gives constitutional opponents a record of how exceptional power
+has already been used. ?]
+[? if emergency_response = "Discreet contacts": Preserved contacts can carry
+instructions, but they cannot substitute for a public constitutional
+position. ?]
+[? if emergency_response = "Public liberties campaign": The civil-liberties
+campaign gives the opposition a public language and gives the
+{!<span class="term term-royalist">!}Court{!</span>!} another reason to
+expect organized resistance. ?]
 
 The constituent assembly strengthens the constitutional position of
 {!<span class="term term-royalist">!}Mohammad Reza Shah{!</span>!}. Among the
@@ -167,7 +194,7 @@ organizers to make only one of these a common priority.
 @assembly_procedure
 title: Publish a signed constitutional objection
 subtitle: A public roll of signatures turns constitutional objection into an open challenge
-on-arrival: constitutional_legitimacy += 1; shah_resistance += 2
+on-arrival: assembly_response = "Signed constitutional objection"; constitutional_legitimacy += 1; shah_resistance += 2
 
 The opposition records that constitutional forms do not make every
 constitutional change legitimate. Its objection gives later parliamentary
@@ -182,7 +209,7 @@ the expanded royal power.
 @assembly_risk
 title: Prepare a procedural memorandum for future deputies
 subtitle: Future deputies receive a case they can use inside the chamber; the public dispute remains muted
-on-arrival: constitutional_legitimacy += 1; parliamentary_procedure_legitimacy += 2
+on-arrival: assembly_response = "Procedural memorandum"; constitutional_legitimacy += 1; parliamentary_procedure_legitimacy += 2
 
 Attention shifts to procedure, possible triggers for dissolution, and the
 people through whom royal influence might reach an election. The opposition
@@ -196,7 +223,7 @@ forceful common objection to the revision itself.
 @assembly_organize
 title: Build a dissolution-response network
 subtitle: Local allies prepare for dissolution without making legal doctrine their common language
-on-arrival: organizational_reach += 1; shah_resistance += 1
+on-arrival: assembly_response = "Dissolution-response network"; organizational_reach += 1; shah_resistance += 1
 
 The opposition assigns organizers to keep contacts current and to prepare a
 common response if dissolution pressure interrupts parliamentary work. The
@@ -221,6 +248,17 @@ on-arrival: parliamentary_deck_unlocked = 1; majles_phase = "Sixteenth Majles el
 
 = Summer–Autumn 1949
 
+[? if assembly_response = "Signed constitutional objection": Signatories to
+the spring objection enter the election with a public record and with the
+{!<span class="term term-royalist">!}Court{!</span>!} already attentive to
+their cooperation. ?]
+[? if assembly_response = "Procedural memorandum": The memorandum supplies
+candidates with a common constitutional argument but little local machinery
+for recording interference. ?]
+[? if assembly_response = "Dissolution-response network": The contacts built
+against dissolution can now collect election reports, though their earlier
+purpose has made them conspicuous. ?]
+
 Preparations for the first {!<span class="term term-senate">!}Senate{!</span>!}
 coincide with elections for the Sixteenth
 {!<span class="term term-parliament">!}Majles{!</span>!}. The {!<span class="term term-senate">!}Senate{!</span>!} will
@@ -239,7 +277,7 @@ defensible constitutional campaign.
 @senate_committee
 title: Prepare a common election-monitoring committee
 subtitle: Comparable reports matter more than a single dramatic denunciation
-on-arrival: organizational_reach += 1
+on-arrival: election_preparation_response = "Election-monitoring committee"; organizational_reach += 1
 
 Representatives agree on a simple intake: where voting occurred, who reports
 interference, and what evidence can be preserved. The committee has no power
@@ -254,7 +292,7 @@ carry the complaints toward a common protest.
 @senate_constitution
 title: Prepare a public constitutional appeal
 subtitle: The new chamber is opposed before the public, with fewer organizers left to watch its making
-on-arrival: public_mandate += 1
+on-arrival: election_preparation_response = "Public constitutional appeal"; public_mandate += 1
 
 The appeal connects representative elections to constitutional government
 without pretending that every disputed return has already been proved. It
@@ -268,7 +306,7 @@ The case is legible, but the underlying monitoring record remains uneven.
 @senate_correspondents
 title: Recruit provincial and Tehran correspondents
 subtitle: A dispersed correspondence network sacrifices a single line for wider provincial participation
-on-arrival: organizational_reach += 1
+on-arrival: election_preparation_response = "Provincial correspondents"; organizational_reach += 1
 
 Editors, lawyers, and political acquaintances begin passing reports from
 constituencies to Tehran. They do not produce a complete national ledger, but

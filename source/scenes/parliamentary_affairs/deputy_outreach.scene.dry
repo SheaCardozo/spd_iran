@@ -6,7 +6,7 @@ title: Deputy Outreach
 new-page: true
 is-card: true
 tags: parliamentary_affairs
-view-if: deputy_outreach_timer <= 0 and majles_convened = 1
+view-if: deputy_outreach_timer <= 0 and majles_convened = 1 and nationalization_approved_majles = 0
 on-arrival: month_actions += 1; deputy_outreach_timer = 3
 
 = Deputy Outreach
@@ -24,11 +24,16 @@ month.
 - @deputies_procedure
 - @deputies_oil
 - @deputies_constituency
+- @return_card
 
 @deputies_procedure
 title: Emphasize parliamentary procedure
 subtitle: Deputies outside the <span class="term term-national-front">Front</span> are asked to defend rules before committing to its program
-on-arrival: parliamentary_procedure_legitimacy += 4; constitutional_legitimacy += 2
+on-arrival: {!
+Q.parliamentary_procedure_legitimacy +=
+    Q.parliamentary_procedure_legitimacy < 70 ? 4 : 1;
+Q.constitutional_legitimacy += Q.constitutional_legitimacy < 70 ? 2 : 1;
+!}
 
 {!<span class="term term-national-front">!}Front{!</span>!} deputies ask
 colleagues to defend the chamber's own procedures even
@@ -38,13 +43,20 @@ limited commitment that constitutional conservatives can support.
 Procedural credibility grows across factional lines. No one mistakes the
 conversation for endorsement of nationalization or
 {!<span class="term term-national-front">!}Front{!</span>!} membership.
+[? if parliamentary_procedure_legitimacy >= 70: The deputies most receptive
+to a procedural appeal have heard it before. Further conversations hold that
+ground, but produce few new commitments without a substantive agreement. ?]
 
 - @post_event: Continue
 
 @deputies_oil
 title: Ask for support for nationalization
 subtitle: A direct pledge separates allies on nationalization from allies on everything else
-on-arrival: oil_coalition_support += 5; public_mandate += 2
+on-arrival: {!
+Q.oil_coalition_support += Q.oil_coalition_support < 70 ? 5 : 2;
+Q.public_mandate += Q.public_mandate < 70 ? 2 : 0;
+if (Q.oil_coalition_support >= 80) Q.independent_nationalists_dissent += 1;
+!}
 
 The outreach makes the nationalization principle the explicit question and
 asks deputies where they stand. Supporters receive a common explanation they
@@ -52,13 +64,19 @@ can defend to colleagues and constituents.
 
 The potential oil majority becomes firmer and more visible. Deputies who might
 have supported only a narrower procedural motion are harder to bring along.
+[? if oil_coalition_support >= 75: The remaining holdouts are not waiting for
+another statement of principle. Persuading them will require answers on
+procedure, attendance, or the terms they still dispute. ?]
 
 - @post_event: Continue
 
 @deputies_constituency
 title: Share constituency-pressure reports
 subtitle: Reports from home show undecided deputies that oil is no longer only a Tehran argument
-on-arrival: organizational_reach += 2; oil_coalition_support += 4
+on-arrival: {!
+Q.organizational_reach += Q.organizational_reach < 70 ? 2 : 0;
+Q.oil_coalition_support += Q.oil_coalition_support < 70 ? 4 : 1;
+!}
 
 Organizers summarize verified local reports for deputies without claiming a
 nationwide plebiscite. The material shows where oil has become an urgent
@@ -67,5 +85,8 @@ constituency question and where the coalition still lacks evidence.
 Deputies gain a clearer sense of pressure outside Tehran, while the
 secretariat improves the channel by which local information reaches the
 chamber.
+[? if organizational_reach >= 70: The same well-organized constituencies are
+now supplying most of the letters and delegations. Their pressure remains
+real, but repetition cannot make it appear nationwide. ?]
 
 - @post_event: Continue

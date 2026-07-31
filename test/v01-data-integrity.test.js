@@ -57,14 +57,15 @@ async function initializedEngine() {
   return dendry;
 }
 
-test('v0.2 initializes the opposition viewpoint without public seed fields', async () => {
+test('v0.3 initializes the opposition viewpoint without public seed fields', async () => {
   const q = await initialState();
-  assert.equal(q.save_schema_version, 4);
+  assert.equal(q.save_schema_version, 5);
   assert.equal(q.scenario_id, 'historical');
   assert.equal(q.player_organization, 'Opposition');
   assert.equal(q.year, 1949);
   assert.equal(q.month, 1);
   assert.equal(q.attempt_emergency_seen, 0);
+  assert.equal(q.emergency_crackdown_seen, 0);
   for (const field of [
     'run_seed',
     'rng_state',
@@ -116,6 +117,7 @@ test('all authorized chamber places have unique evidence/scenario records', asyn
     assert.ok(['pending', 'returned'].includes(place.scenario.current_return));
     assert.ok(['pending', 'approved', 'rejected'].includes(place.scenario.credential));
     assert.ok(['unavailable', 'usable'].includes(place.scenario.usability));
+    assert.ok(['unknown', 'attending', 'absent'].includes(place.scenario.attendance));
     for (const [field, value] of Object.entries(place.historical)) {
       if (field !== 'locators' && value !== null) {
         assert.ok(
@@ -164,15 +166,22 @@ test('all sixteen phase-gated action cards and six pinned advisers compile', asy
   assert.equal(actionCards.length, 16);
   assert.equal(advisers.length, 6);
   for (const card of actionCards) {
+    const substantiveOptions = card.options.filter(
+      (option) => !option.id.endsWith('return_card'),
+    );
     assert.ok(
-      card.options.length >= 2 && card.options.length <= 3,
-      `${card.id} has two or three choices`,
+      substantiveOptions.length >= 2 && substantiveOptions.length <= 3,
+      `${card.id} has two or three substantive choices`,
     );
     assert.ok(
       contentLength(card) >= 3,
       `${card.id} explains the operational problem`,
     );
-    for (const option of card.options) {
+    assert.ok(
+      card.options.some((option) => option.id.endsWith('return_card')),
+      `${card.id} can be returned before commitment`,
+    );
+    for (const option of substantiveOptions) {
       const target = game.scenes[option.id.replace(/^@/, '')];
       assert.ok(target?.title?.trim(), `${target?.id} states an action`);
       assert.ok(target?.subtitle?.trim(), `${target?.id} previews a tradeoff`);
@@ -186,14 +195,17 @@ test('all sixteen phase-gated action cards and six pinned advisers compile', asy
   }
   const actionChoiceCounts = new Set(
     actionCards
-      .map((card) => card.options.length),
+      .map(
+        (card) => card.options.filter(
+          (option) => !option.id.endsWith('return_card'),
+        ).length,
+      ),
   );
   assert.deepEqual(
     [...actionChoiceCounts].sort(),
     [2, 3],
     'recurring actions include genuine binary and three-way decisions',
   );
-
   for (const adviser of advisers) {
     assert.ok(
       contentLength(adviser) >= 2,
@@ -201,7 +213,7 @@ test('all sixteen phase-gated action cards and six pinned advisers compile', asy
     );
     const consultations = adviser.options
       .map((option) => game.scenes[option.id.replace(/^@/, '')])
-      .filter((target) => target?.onArrival);
+      .filter((target) => target?.onArrival && target.id !== 'main');
     assert.ok(
       consultations.length >= 2 && consultations.length <= 3,
       `${adviser.id} exposes two or three substantive consultations`,
@@ -226,7 +238,7 @@ test('all sixteen phase-gated action cards and six pinned advisers compile', asy
   }
 });
 
-test('deck gates and historically available pinned advisers follow the shared hand model', async () => {
+test('deck gates and the three-person active adviser slate follow the shared hand model', async () => {
   const dendry = await initializedEngine();
   const q = dendry.state.qualities;
   assert.equal(dendry.state.sceneId, 'main');
@@ -276,6 +288,7 @@ test('deck gates and historically available pinned advisers follow the shared ha
   assert.equal(advisers.length, 6);
   assert.ok(advisers.every((adviser) => typeof adviser.viewIf === 'function'));
   assert.equal(dendry.game.scenes.leadership_roster, undefined);
+  assert.ok(dendry.game.scenes.advisor_roster);
   for (const field of [
     'active_advisors',
     'advisor_roster_timer',
@@ -286,8 +299,12 @@ test('deck gates and historically available pinned advisers follow the shared ha
     'advisor_makki_active',
     'advisor_kashani_active',
   ]) {
-    assert.equal(field in q, false, `${field} is absent`);
+    assert.equal(field in q, true, `${field} is present`);
   }
+  assert.deepEqual(q.active_advisors, ['mossadegh', 'saleh']);
+  assert.equal(q.advisor_mossadegh_active, 1);
+  assert.equal(q.advisor_saleh_active, 1);
+  assert.equal(q.advisor_fatemi_active, 0);
 });
 
 test('advisers enter the hand at the documented coalition milestones', async () => {
@@ -312,13 +329,20 @@ test('advisers enter the hand at the documented coalition milestones', async () 
   assert.equal(q.advisor_maleki_available, 0);
 });
 
-test('qualitative support changes only scenario returns at historically vacant places', async () => {
+test('place-level campaign work resolves returns separately from credentials', async () => {
   const dendry = await initializedEngine();
   const q = dendry.state.qualities;
-  q.election_campaign_capacity = 55;
+  const vacantIndexes = [0, 87, 107, 126, 128];
+  for (const index of vacantIndexes.slice(0, 3)) {
+    q.majles_places[index].scenario.player_influence = 30;
+    q.majles_places[index].scenario.campaign_investment = 25;
+    q.majles_places[index].scenario.legal_defense = 10;
+  }
+  for (const index of vacantIndexes.slice(3)) {
+    q.majles_places[index].scenario.player_influence = 10;
+  }
   dendry.goToScene('campaign_spine.chambers_open');
 
-  const vacantIndexes = [0, 87, 107, 126, 128];
   for (const index of vacantIndexes.slice(0, 3)) {
     const place = q.majles_places[index];
     assert.equal(place.historical.return, null);
@@ -331,9 +355,17 @@ test('qualitative support changes only scenario returns at historically vacant p
   for (const index of vacantIndexes.slice(3)) {
     assert.equal(q.majles_places[index].scenario.current_return, 'pending');
   }
+  for (const index of vacantIndexes.slice(0, 3)) {
+    q.majles_places[index].scenario.legal_defense = 50;
+  }
   const oilSupportBeforeCredentials = q.oil_coalition_support;
   dendry.goToScene('campaign_spine.credential_campaign');
   assert.equal(q.oil_coalition_support, oilSupportBeforeCredentials + 6);
+  for (const index of vacantIndexes.slice(0, 3)) {
+    assert.equal(q.majles_places[index].scenario.credential, 'approved');
+    assert.equal(q.majles_places[index].scenario.usability, 'usable');
+    assert.equal(q.majles_places[index].scenario.credential_contest, 'won');
+  }
 });
 
 test('menu, briefing, Library, status, and ending meet the scene-wide standard', async () => {
@@ -348,6 +380,7 @@ test('menu, briefing, Library, status, and ending meet the scene-wide standard',
     'status.majles',
     'status.crown',
     'research_library',
+    'research_library.current_situation',
     'research_library.government',
     'research_library.timeline',
     'research_library.coalition_people',
@@ -373,10 +406,13 @@ test('menu, briefing, Library, status, and ending meet the scene-wide standard',
   );
   const libraryPlainText = withoutSemanticMarkup(librarySource);
   assert.doesNotMatch(librarySource, /Seeded variation/);
-  assert.match(librarySource, /25 November 1950/);
-  assert.match(librarySource, /11 January 1951/);
+  assert.match(librarySource, /credentials_seen/);
+  assert.match(librarySource, /gass_golshayan_rejected_committee/);
   assert.match(librarySource, /Gass–Golshayan supplemental agreement/);
-  assert.match(librarySource, /Nationalization principle, 20 March 1951/);
+  assert.match(
+    librarySource,
+    /nationalization_approved_committee[\s\S]*?Nationalization principle/,
+  );
   assert.match(librarySource, /Minimum acceptable terms/);
   assert.match(librarySource, /@backSpecialScene: Return/);
   assert.doesNotMatch(librarySource, /component prefixes/);
@@ -403,9 +439,12 @@ test('menu, briefing, Library, status, and ending meet the scene-wide standard',
     'Tehran rerun',
     'Special Oil Commission',
     'Razmara',
-    'oil nationalization',
+    'nationalization principle',
   ]) {
-    assert.match(libraryPlainText, new RegExp(eventLabel, 'i'));
+    assert.match(
+      libraryPlainText,
+      new RegExp(eventLabel.replaceAll(' ', '\\s+'), 'i'),
+    );
   }
 
   const statusSource = fs.readFileSync('source/scenes/status.scene.dry', 'utf8');
@@ -423,7 +462,7 @@ test('menu, briefing, Library, status, and ending meet the scene-wide standard',
     'support_bazaar',
     'support_workers',
     'support_provincial',
-    'Usable Front representation',
+    'Front representation in the chamber',
     'Oil-coalition support',
     'Parliamentary-procedure legitimacy',
   ]) {
@@ -443,7 +482,7 @@ test('menu, briefing, Library, status, and ending meet the scene-wide standard',
     assert.match(mainSource, new RegExp(month));
   }
 
-  assert.equal(game.scenes.leadership_roster, undefined);
+  assert.ok(game.scenes.advisor_roster);
 
   const ending = game.scenes.campaign_ending;
   assert.ok(contentLength(ending) >= 12);
@@ -476,20 +515,29 @@ test('menu, briefing, Library, status, and ending meet the scene-wide standard',
   assert.equal(dendry.state.sceneId, 'campaign_ending');
 });
 
-test('the fixed spine has seventeen one-time tagged events', async () => {
+test('the fixed spine and sourced reactions compile as tagged event families', async () => {
   const game = await loadGame();
   const events = Object.values(game.scenes).filter(
     (scene) => scene.tags?.includes('event'),
   );
-  assert.equal(events.length, 17);
-  for (const event of events) {
+  assert.equal(events.length, 20);
+  for (const event of events.filter((scene) => !scene.id.startsWith('reactions.'))) {
     assert.equal(event.maxVisits, 1, `${event.id} is one-time`);
     assert.ok(Number.isFinite(event.priority), `${event.id} has priority`);
   }
+  assert.ok(Number.isFinite(game.scenes['reactions.coalition_strain'].priority));
   assert.ok(game.scenes.palace_protest);
   assert.deepEqual(game.scenes.palace_protest.tags, ['event']);
   assert.deepEqual(game.scenes.attempt_and_emergency.tags, ['event']);
   assert.equal(game.scenes.attempt_and_emergency.priority, 30);
+  assert.deepEqual(
+    game.scenes['attempt_and_emergency.emergency_measures'].tags,
+    ['event'],
+  );
+  assert.equal(
+    game.scenes['attempt_and_emergency.emergency_measures'].priority,
+    29,
+  );
 });
 
 test('major events follow the setup, choice, and visible consequence standard', async () => {
@@ -509,7 +557,7 @@ test('major events follow the setup, choice, and visible consequence standard', 
   for (const id of setupIds) {
     const scene = game.scenes[id];
     assert.ok(scene.subtitle?.trim(), `${id} has an orienting subtitle`);
-    assert.ok(scene.content?.length >= 3, `${id} has a developed setup`);
+    assert.ok(contentLength(scene) >= 2, `${id} has a developed setup`);
     assert.ok(scene.options?.length >= 1, `${id} has at least one continuation`);
     choiceCounts.add(scene.options.length);
 
@@ -533,6 +581,7 @@ test('major events follow the setup, choice, and visible consequence standard', 
   const consequenceScenes = Object.values(game.scenes).filter(
     (scene) => eventBranchPrefixes.some((prefix) => scene.id.startsWith(prefix)) &&
       scene.onArrival &&
+      !scene.id.endsWith('vote_resolution') &&
       !scene.tags?.includes('event'),
   );
   for (const scene of consequenceScenes) {
@@ -564,6 +613,30 @@ test('new campaigns use unique Dendry RNG streams for deck draws', async () => {
     game,
   ).beginGame();
   assert.notDeepEqual(first.random.getState(), second.random.getState());
+});
+
+test('save and load preserve the hand and subsequent Dendry random stream', async () => {
+  const game = await loadGame();
+  const first = new engine.DendryEngine(
+    new engine.NullUserInterface(),
+    game,
+  ).beginGame([0]);
+  first.choose(0);
+  first.drawCard('main.party_affairs');
+  const saved = JSON.parse(JSON.stringify(first.state));
+  const expectedHand = saved.currentHands.main.map((card) => card.id);
+  const expectedNext = first.drawCard('main.party_affairs').id;
+
+  const restored = new engine.DendryEngine(
+    new engine.NullUserInterface(),
+    game,
+  ).beginGame([1]);
+  restored.setState(saved);
+  assert.deepEqual(
+    restored.state.currentHands.main.map((card) => card.id),
+    expectedHand,
+  );
+  assert.equal(restored.drawCard('main.party_affairs').id, expectedNext);
 });
 
 test('ending formulas and precedence produce all four named evaluations', async () => {
@@ -634,6 +707,44 @@ test('Crown reducer bounds all four dimensions without inferring conduct', async
   assert.equal(q.shah_electoral_influence, 100);
 });
 
+test('coupled reducers consume faction, support, and Crown state downstream', async () => {
+  const dendry = await initializedEngine();
+  const q = dendry.state.qualities;
+  q.front_formed = 1;
+  q.parliamentary_deck_unlocked = 1;
+  q.iran_party_active = 1;
+  q.independent_nationalists_active = 1;
+  for (const prefix of ['iran_party', 'independent_nationalists']) {
+    q[`${prefix}_relation`] = 25;
+    q[`${prefix}_dissent`] = 80;
+    q[`${prefix}_organization`] = 60;
+  }
+  q.support_professional = 90;
+  q.organizational_reach = 40;
+  q.shah_relation = 0;
+  q.shah_resistance = 100;
+  q.shah_court_capacity = 100;
+  q.shah_electoral_influence = 100;
+  q.month_actions = 1;
+  const contested = q.majles_places.find(
+    (place) => place.scenario.contestable &&
+      place.scenario.support_group === 'professional',
+  );
+
+  dendry.goToScene('post_event');
+
+  assert.ok(q.coordination_efficiency < 45);
+  assert.ok(q.organizational_reach < 40, 'high dissent reduces joint reach');
+  assert.ok(contested.scenario.player_influence > 45);
+  assert.ok(contested.scenario.administrative_pressure > 0);
+  assert.ok(q.crown_pressure >= 70);
+  assert.equal(
+    dendry.state.sceneId,
+    'post_event.events_choice',
+    'the reducer routes eligible reactions through the event queue',
+  );
+});
+
 test('every major anchor and adviser has an adjacent research record', () => {
   const records = [
     'events/1949-02-attempt-and-emergency.md',
@@ -658,6 +769,7 @@ test('every major anchor and adviser has an adjacent research record', () => {
     'systems/recurring-actions.md',
     'systems/support-and-chamber-display.md',
     'systems/information-and-ending-surfaces.md',
+    'systems/dynamic-political-simulation.md',
   ];
   for (const record of records) {
     const content = fs.readFileSync(`docs/research/${record}`, 'utf8');
@@ -692,4 +804,36 @@ test('historical scenes keep citations in comments and expose no intelligence st
     .join('\n');
   assert.doesNotMatch(sceneSource, /political_intelligence/);
   assert.doesNotMatch(sceneSource, /Political intelligence/i);
+});
+
+test('every major non-terminal decision receives a later prose callback', () => {
+  const source = fs
+    .readdirSync('source/scenes', {recursive: true, withFileTypes: true})
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.scene.dry'))
+    .map((entry) => fs.readFileSync(`${entry.parentPath}/${entry.name}`, 'utf8'))
+    .join('\n');
+  for (const field of [
+    'attempt_response',
+    'emergency_response',
+    'assembly_response',
+    'election_preparation_response',
+    'hazhir_response',
+    'front_structure',
+    'election_strategy',
+    'credentials_strategy',
+    'credential_campaign_response',
+    'oil_committee_response',
+    'supplemental_response',
+    'committee_rejection_strategy',
+    'majles_rejection_strategy',
+    'razmara_response',
+    'assassination_response',
+    'senate_strategy',
+  ]) {
+    assert.match(
+      source,
+      new RegExp(`\\[\\? if ${field}\\s*=`),
+      `${field} is consumed in later scene prose`,
+    );
+  }
 });

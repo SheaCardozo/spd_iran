@@ -7,15 +7,17 @@ a coalition trying to secure representative government, establish
 Iranian control of the oil industry, and preserve constitutional politics
 amid institutional rivalry, economic pressure, and coalition fracture.
 
-Version 0.2 is an end-to-end public demo. It begins in January 1949 and runs
-twenty-seven ordinary monthly actions through Senate approval of the
-nationalization principle on 20 March 1951. The February attempt on the Shah,
+Version 0.3 is an end-to-end public demo. It begins in January 1949 and runs
+up to twenty-seven ordinary monthly actions through the nationalization votes
+of March 1951. The February attempt on the Shah,
 constitutional emergency, constituent assembly, election preparations, and
 palace protest occur inside the same playable campaign as the later Front. It
-includes three action decks, historically gated pinned advisers, qualitative
+includes a four-card agenda drawn from three action decks, cancellable actions,
+a historically gated three-person adviser slate, persistent political projects, qualitative
 constituency support, place-by-place Majles and Senate diagrams, transparent
-credential state, the complete historical event spine, structured chamber and
-oil records, save/load, a Research Library, and four conditional evaluations.
+credential and oil-vote state, reactive Crown and coalition scenes, structured
+chamber and oil records, save/load, a Research Library, chamber-defeat endings,
+and four conditional passage evaluations.
 
 ## Design commitments
 
@@ -95,6 +97,28 @@ npx playwright install --with-deps chromium firefox
 npm run test:browser
 ```
 
+Rendered-browser adversarial reviewers can be connected through a player-only
+JSON-lines gateway:
+
+```sh
+npm run browser:agent
+```
+
+The gateway exposes screenshots, accessibility observations, clicks,
+keyboard actions, and scrolling without exposing selectors, source files,
+scene IDs, or game state. Run the included parallel transport/playthrough
+smoke policies with:
+
+```sh
+npm run test:agents
+```
+
+Both commands use an ephemeral server restricted to `127.0.0.1`; they do not
+publish the game. Isolation requirements, the protocol, private invariant
+oracle, artifacts, and the distinction between built-in smoke policies and
+qualitative LLM reviewers are documented in
+[`docs/ADVERSARIAL_BROWSER_TESTING.md`](docs/ADVERSARIAL_BROWSER_TESTING.md).
+
 ## Project layout
 
 The implementation follows Dynamic SPD's domain-oriented Dendry layout:
@@ -114,8 +138,8 @@ project keeps the same browser behavior in `web/` because `out/` is disposable;
 
 ## Current milestone
 
-`0.2.0` covers the opposition's pre-election work, the National Front's
-formation, and the passage of oil
-nationalization. Premiership, the implementation law, NIOC administration,
+`0.3.0` covers the opposition's pre-election work, the National Front's
+formation, and a contingent attempt to pass oil nationalization. Rejection in
+either chamber ends the campaign. Premiership, the implementation law, NIOC administration,
 embargo economics, Abadan, the ICJ, the Seventeenth Majles, and the 1953 coup
 remain outside this release.

@@ -1,7 +1,10 @@
 title: Post Event
 new-page: true
 on-arrival: {!
+var advancedThisVisit = false;
 if (Q.month_actions >= 1 && !Q.campaign_complete) {
+    advancedThisVisit = true;
+    Q.dues_received_this_month = 0;
     Q.time += 1;
     Q.months_advanced += 1;
     Q.month_actions = 0;
@@ -15,6 +18,7 @@ if (Q.month_actions >= 1 && !Q.campaign_complete) {
         Q.month = 1;
         Q.year += 1;
         Q.resources += Q.dues;
+        Q.dues_received_this_month = Q.dues;
     }
 
     for (var timer of Q.timers) {
@@ -32,6 +36,62 @@ var boundedQualities = [
     "support_professional", "support_bazaar", "support_workers",
     "support_provincial"
 ];
+var adviserIds = [
+    "mossadegh", "saleh", "fatemi", "makki", "kashani", "maleki"
+];
+var adviserLabels = {
+    mossadegh: "Mohammad Mossadegh", saleh: "Allahyar Saleh",
+    fatemi: "Hossein Fatemi", makki: "Hossein Makki",
+    kashani: "Ayatollah Abol-Qasem Kashani", maleki: "Khalil Maleki"
+};
+Q.advisor_pool_size = 0;
+for (var adviserId of adviserIds) {
+    if (Q["advisor_" + adviserId + "_available"]) {
+        Q.advisor_pool_size += 1;
+    } else {
+        Q["advisor_" + adviserId + "_active"] = 0;
+    }
+}
+var currentEligibilitySignature =
+    "" + Q.advisor_mossadegh_available + Q.advisor_saleh_available +
+    Q.advisor_fatemi_available + Q.advisor_makki_available +
+    Q.advisor_kashani_available + Q.advisor_maleki_available;
+if (currentEligibilitySignature !== Q.advisor_eligibility_signature) {
+    Q.advisor_eligibility_signature = currentEligibilitySignature;
+    if (Q.advisor_pool_size > 3 &&
+        currentEligibilitySignature !== Q.advisor_reconciled_signature) {
+        Q.advisor_roster_required = 1;
+        if (!Q.advisor_roster_change_reason) {
+            Q.advisor_roster_change_reason =
+                "The circle of eligible advisers has changed.";
+        }
+    }
+}
+if (Q.advisor_pool_size <= 3) {
+    for (var earlyAdviserId of adviserIds) {
+        Q["advisor_" + earlyAdviserId + "_active"] =
+            Q["advisor_" + earlyAdviserId + "_available"] ? 1 : 0;
+    }
+    Q.advisor_reconciled_signature = currentEligibilitySignature;
+    Q.advisor_roster_required = 0;
+    Q.advisor_roster_change_reason = "";
+}
+Q.active_advisors = [];
+var activeAdviserLabels = [];
+for (var activeAdviserId of adviserIds) {
+    if (Q["advisor_" + activeAdviserId + "_active"]) {
+        Q.active_advisors.push(activeAdviserId);
+        activeAdviserLabels.push(adviserLabels[activeAdviserId]);
+    }
+}
+Q.active_advisor_names = activeAdviserLabels.join("; ");
+if (Q.advisor_pool_size > 3 && Q.active_advisors.length !== 3) {
+    Q.advisor_roster_required = 1;
+    if (!Q.advisor_roster_change_reason) {
+        Q.advisor_roster_change_reason =
+            "The active slate no longer contains exactly three eligible advisers.";
+    }
+}
 var factionPrefixes = [
     "iran_party", "toilers", "independent_nationalists", "religious_network"
 ];
@@ -46,53 +106,254 @@ for (var quality of boundedQualities) {
     if (Q[quality] > 100) Q[quality] = 100;
 }
 
+var activeFactionPrefixes = [];
+for (var activePrefix of factionPrefixes) {
+    if (Q[activePrefix + "_active"] === 1) activeFactionPrefixes.push(activePrefix);
+}
+if (activeFactionPrefixes.length === 0) activeFactionPrefixes.push("iran_party");
 var avgStrength = 0;
 var avgRelation = 0;
 var avgDissent = 0;
 var avgOrganization = 0;
-for (var faction of factionPrefixes) {
+for (var faction of activeFactionPrefixes) {
     avgStrength += Q[faction + "_strength"];
     avgRelation += Q[faction + "_relation"];
     avgDissent += Q[faction + "_dissent"];
     avgOrganization += Q[faction + "_organization"];
 }
-avgStrength /= factionPrefixes.length;
-avgRelation /= factionPrefixes.length;
-avgDissent /= factionPrefixes.length;
-avgOrganization /= factionPrefixes.length;
+avgStrength /= activeFactionPrefixes.length;
+avgRelation /= activeFactionPrefixes.length;
+avgDissent /= activeFactionPrefixes.length;
+avgOrganization /= activeFactionPrefixes.length;
 Q.coalition_cohesion = Math.round(
     (avgStrength * 0.25) + (avgRelation * 0.35) +
     ((100 - avgDissent) * 0.25) + (avgOrganization * 0.15)
 );
-
-Q.election_campaign_capacity = Math.round(
-    (Q.support_professional * 0.30) + (Q.support_bazaar * 0.20) +
-    (Q.support_workers * 0.15) + (Q.support_provincial * 0.35)
+Q.coordination_efficiency = Math.round(
+    (avgRelation * 0.35) + ((100 - avgDissent) * 0.35) +
+    (avgOrganization * 0.30)
 );
-var campaignPlaces = [38, 39, 40, 41, 42, 44, 45, 105];
-for (var campaignPlaceIndex of campaignPlaces) {
-    Q.majles_places[campaignPlaceIndex].scenario.player_influence =
-        Q.election_campaign_capacity;
+if (advancedThisVisit && Q.resources <= 0) {
+    Q.resource_strain_months += 1;
+    Q.press_capacity = Math.max(0, Q.press_capacity - 1);
+    var strainedFaction =
+        activeFactionPrefixes[Q.time % activeFactionPrefixes.length];
+    Q[strainedFaction + "_organization"] = Math.max(
+        0, Q[strainedFaction + "_organization"] - 1
+    );
+    Q.last_project_setback =
+        "Unfunded routine work reduced press and local organizational capacity";
+} else if (advancedThisVisit) {
+    Q.resource_strain_months = 0;
 }
+Q.crown_pressure = Math.round(
+    (Q.shah_resistance * 0.40) + (Q.shah_court_capacity * 0.25) +
+    (Q.shah_electoral_influence * 0.25) +
+    ((100 - Q.shah_relation) * 0.10)
+);
+if (Q.crown_pressure < 0) Q.crown_pressure = 0;
+if (Q.crown_pressure > 100) Q.crown_pressure = 100;
+if (advancedThisVisit && Q.front_formed) {
+    if (avgDissent >= 65) {
+        Q.organizational_reach -= 2;
+        Q.public_mandate -= 1;
+    }
+    var jointActionCards = [
+        "coalition_meeting", "common_resolution", "membership_committees",
+        "press", "public_meetings", "bazaar_outreach",
+        "electoral_committee", "credential_petitions", "oil_committee",
+        "deputy_outreach"
+    ];
+    var lastActionCardId = this.state.lastPlayedCard ?
+        this.state.lastPlayedCard.id : "";
+    if (jointActionCards.indexOf(lastActionCardId) >= 0 &&
+        Q.coordination_efficiency < 45) {
+        Q.organizational_reach -= 1;
+        Q.last_project_setback = "Joint work weakened by coalition coordination";
+    }
+    if (jointActionCards.indexOf(lastActionCardId) >= 0 &&
+        Q.coordination_efficiency >= 65 && avgOrganization >= 55) {
+        Q.organizational_reach += 1;
+    }
+}
+// Monthly feedback is allowed to consume component and campaign capacity, but
+// no post-event route may leave a displayed quality outside its stated bounds.
+for (var reboundQuality of boundedQualities) {
+    if (Q[reboundQuality] < 0) Q[reboundQuality] = 0;
+    if (Q[reboundQuality] > 100) Q[reboundQuality] = 100;
+}
+avgStrength = 0;
+avgRelation = 0;
+avgDissent = 0;
+avgOrganization = 0;
+for (var reboundFaction of activeFactionPrefixes) {
+    avgStrength += Q[reboundFaction + "_strength"];
+    avgRelation += Q[reboundFaction + "_relation"];
+    avgDissent += Q[reboundFaction + "_dissent"];
+    avgOrganization += Q[reboundFaction + "_organization"];
+}
+avgStrength /= activeFactionPrefixes.length;
+avgRelation /= activeFactionPrefixes.length;
+avgDissent /= activeFactionPrefixes.length;
+avgOrganization /= activeFactionPrefixes.length;
+Q.coalition_cohesion = Math.round(
+    (avgStrength * 0.25) + (avgRelation * 0.35) +
+    ((100 - avgDissent) * 0.25) + (avgOrganization * 0.15)
+);
+Q.coordination_efficiency = Math.round(
+    (avgRelation * 0.35) + ((100 - avgDissent) * 0.35) +
+    (avgOrganization * 0.30)
+);
+if (advancedThisVisit && Q.crown_pressure >= 70 &&
+    Q.time - Q.last_crown_reaction_time >= 4) {
+    Q.crown_reaction_due = 1;
+}
+
+var supportAverage = Math.round(
+    (Q.support_professional + Q.support_bazaar +
+     Q.support_workers + Q.support_provincial) / 4
+);
+if (advancedThisVisit) {
+    Q.support_history.push({
+        time: Q.time, year: Q.year, month: Q.month,
+        professional: Q.support_professional, bazaar: Q.support_bazaar,
+        workers: Q.support_workers, provincial: Q.support_provincial
+    });
+    if (Q.support_history.length > 27) Q.support_history.shift();
+    Q.support_history_length = Q.support_history.length;
+    Q.previous_support_average = supportAverage;
+}
+var contestableCount = 0;
+var contestableNetInfluence = 0;
+for (var campaignPlace of Q.majles_places) {
+    if (!campaignPlace.scenario.contestable) continue;
+    var groupSupport = Q.support_professional;
+    if (campaignPlace.scenario.support_group === "bazaar") {
+        groupSupport = Q.support_bazaar;
+    } else if (campaignPlace.scenario.support_group === "workers") {
+        groupSupport = Q.support_workers;
+    } else if (campaignPlace.scenario.support_group === "provincial") {
+        groupSupport = Q.support_provincial;
+    }
+    campaignPlace.scenario.local_organization = Math.round(
+        (Q.organizational_reach * 0.45) +
+        (Q.iran_party_organization * 0.35) +
+        (campaignPlace.scenario.campaign_investment * 0.20)
+    );
+    campaignPlace.scenario.player_influence = Math.round(
+        (groupSupport * 0.45) +
+        (campaignPlace.scenario.local_organization * 0.35) +
+        (Q.parliamentary_procedure_legitimacy * 0.10) +
+        (campaignPlace.scenario.legal_defense * 0.10)
+    );
+    if (advancedThisVisit && Q.parliamentary_deck_unlocked &&
+        !Q.chambers_open_seen && Q.crown_pressure >= 55) {
+        campaignPlace.scenario.administrative_pressure +=
+            Q.crown_pressure >= 75 ? 3 : 1;
+    }
+    if (campaignPlace.scenario.administrative_pressure > 100) {
+        campaignPlace.scenario.administrative_pressure = 100;
+    }
+    contestableNetInfluence += Math.max(
+        0, campaignPlace.scenario.player_influence -
+        campaignPlace.scenario.administrative_pressure
+    );
+    contestableCount += 1;
+}
+Q.election_campaign_capacity = contestableCount > 0 ?
+    Math.round(contestableNetInfluence / contestableCount) : 0;
 
 Q.majles_returns_recorded = 0;
 Q.majles_credentials_approved = 0;
 Q.majles_usable_members = 0;
+Q.majles_attending_members = 0;
 Q.majles_national_front_returns = 0;
 Q.majles_national_front_usable = 0;
+Q.nationalization_majles_support = 0;
+Q.nationalization_majles_conditional = 0;
+Q.nationalization_majles_opposed = 0;
 for (var place of Q.majles_places) {
     if (place.scenario.current_return === "returned") Q.majles_returns_recorded += 1;
     if (place.scenario.credential === "approved") Q.majles_credentials_approved += 1;
     if (place.scenario.usability === "usable") Q.majles_usable_members += 1;
+    if (place.scenario.usability === "usable" &&
+        place.scenario.attendance === "attending") {
+        Q.majles_attending_members += 1;
+    }
     if (place.scenario.support === "national_front") {
         if (place.scenario.current_return === "returned") Q.majles_national_front_returns += 1;
         if (place.scenario.usability === "usable") Q.majles_national_front_usable += 1;
     }
+    if (place.scenario.usability === "usable" &&
+        place.scenario.attendance === "attending") {
+        if (!Q.nationalization_majles_vote_resolved) {
+            var majlesBias = ((place.place_number * 7) % 25) - 12;
+            place.scenario.oil_commitment = Math.round(
+                (Q.oil_coalition_support * 0.65) +
+                (Q.parliamentary_procedure_legitimacy * 0.20) +
+                (Q.public_mandate * 0.10) -
+                (Q.crown_pressure * 0.10) + majlesBias
+            );
+            if (place.scenario.support === "national_front") {
+                place.scenario.oil_commitment = Math.max(
+                    75, place.scenario.oil_commitment
+                );
+            }
+            place.scenario.oil_position =
+                place.scenario.oil_commitment >= 50 ? "supports" :
+                place.scenario.oil_commitment >= 40 ? "conditional" : "opposes";
+        }
+        if (place.scenario.oil_position === "supports") {
+            Q.nationalization_majles_support += 1;
+        } else if (place.scenario.oil_position === "conditional") {
+            Q.nationalization_majles_conditional += 1;
+        } else {
+            Q.nationalization_majles_opposed += 1;
+        }
+    }
 }
+Q.nationalization_majles_threshold =
+    Math.floor(Q.majles_attending_members / 2) + 1;
+Q.nationalization_majles_support_gap =
+    Q.nationalization_majles_support - Q.nationalization_majles_threshold;
 Q.senate_usable_members = 0;
+Q.senate_attending_members = 0;
+Q.nationalization_senate_support = 0;
+Q.nationalization_senate_conditional = 0;
+Q.nationalization_senate_opposed = 0;
 for (var senatePlace of Q.senate_places) {
-    if (senatePlace.scenario.usability === "usable") Q.senate_usable_members += 1;
+    if (senatePlace.scenario.usability === "usable") {
+        Q.senate_usable_members += 1;
+    }
+    if (senatePlace.scenario.usability === "usable" &&
+        senatePlace.scenario.attendance === "attending") {
+        Q.senate_attending_members += 1;
+        if (!Q.nationalization_senate_vote_resolved) {
+            var senateBias = ((senatePlace.place_number * 11) % 29) - 14;
+            senatePlace.scenario.oil_commitment = Math.round(
+                (Q.oil_coalition_support * 0.60) +
+                (Q.parliamentary_procedure_legitimacy * 0.20) +
+                (Q.shah_relation * 0.15) -
+                (Q.crown_pressure * 0.15) + senateBias
+            );
+            senatePlace.scenario.oil_position =
+                senatePlace.scenario.oil_commitment >= 50 ? "supports" :
+                senatePlace.scenario.oil_commitment >= 40 ? "conditional" :
+                "opposes";
+        }
+        if (senatePlace.scenario.oil_position === "supports") {
+            Q.nationalization_senate_support += 1;
+        } else if (senatePlace.scenario.oil_position === "conditional") {
+            Q.nationalization_senate_conditional += 1;
+        } else {
+            Q.nationalization_senate_opposed += 1;
+        }
+    }
 }
+Q.nationalization_senate_threshold =
+    Math.floor(Q.senate_attending_members / 2) + 1;
+Q.nationalization_senate_support_gap =
+    Q.nationalization_senate_support - Q.nationalization_senate_threshold;
 
 Q.ending_coalition = Math.round(
     (Q.coalition_cohesion * 0.40) + (avgRelation * 0.30) +
@@ -123,6 +384,7 @@ Q.decision_flags = {
 };
 Q.event_flags = {
     attempt_emergency: Q.attempt_emergency_seen,
+    emergency_crackdown: Q.emergency_crackdown_seen,
     hazhir: Q.hazhir_seen,
     front_formed: Q.front_formed,
     tehran_rerun: Q.tehran_rerun_seen,
@@ -138,7 +400,11 @@ Q.event_flags = {
     nationalization_senate: Q.nationalization_approved_senate
 };
 
-if (Q.ending_coalition >= 65 && Q.ending_legitimacy >= 65 && Q.ending_parliament >= 60) {
+if (Q.terminal_reason === "Majles rejection") {
+    Q.ending_name = "Nationalization Defeated in the Majles";
+} else if (Q.terminal_reason === "Senate rejection") {
+    Q.ending_name = "Nationalization Blocked in the Senate";
+} else if (Q.ending_coalition >= 65 && Q.ending_legitimacy >= 65 && Q.ending_parliament >= 60) {
     Q.ending_name = "A Constitutional Coalition";
 } else if (Q.ending_parliament >= 70 && (Q.ending_coalition < 60 || Q.ending_public < 60)) {
     Q.ending_name = "A Parliamentary Vanguard";
@@ -149,13 +415,16 @@ if (Q.ending_coalition >= 65 && Q.ending_legitimacy >= 65 && Q.ending_parliament
 }
 
 Q.has_event = 0;
-var eventScene = this.game.scenes["post_event.events_choice"];
-var eventChoices = this._compileChoices(eventScene);
-if (eventChoices && eventChoices.length > 0 && eventChoices[0].title != "Continue...") {
-    Q.has_event = 1;
+if (!Q.campaign_complete) {
+    var eventScene = this.game.scenes["post_event.events_choice"];
+    var eventChoices = this._compileChoices(eventScene);
+    if (eventChoices && eventChoices.length > 0 &&
+        eventChoices[0].title != "Continue...") {
+        Q.has_event = 1;
+    }
 }
 !}
-go-to: events_choice if has_event = 1; campaign_ending if campaign_complete = 1; main if has_event = 0 and campaign_complete = 0
+go-to: campaign_ending if campaign_complete = 1; advisor_roster if campaign_complete = 0 and advisor_roster_required = 1; events_choice if campaign_complete = 0 and advisor_roster_required = 0 and has_event = 1; main if campaign_complete = 0 and advisor_roster_required = 0 and has_event = 0
 
 @events_choice
 

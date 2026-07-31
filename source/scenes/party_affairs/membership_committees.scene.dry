@@ -18,15 +18,34 @@ common committee or remain within the organizations that recruited them.
 This is a real structural choice: shared committees spread common methods,
 while autonomous organizers reduce fears of absorption.
 
+[? if committee_stage > 0: Existing work follows the “[+ committee_model +]”
+model. A new decision will deepen or reverse that organizational direction. ?]
+
 - @committees_shared
 - @committees_autonomy
+- @return_card
 
 @committees_shared
 title: Build shared local committees
-subtitle: Common offices tie the four components together, but they must be paid for from the shared purse
+subtitle: One resource maintains common offices that tie the four components together
 choose-if: resources >= 1
 unavailable-subtitle: Requires one resource.
-on-arrival: resources -= 1; iran_party_organization += 3; toilers_organization += 3; independent_nationalists_organization += 3; religious_network_organization += 3; organizational_reach += 4
+on-arrival: {!
+var repeated = Q.committee_model === "Shared local committees";
+var mature = Q.committee_stage >= 2;
+Q.committee_model = "Shared local committees";
+Q.committee_stage += 1;
+Q.resources -= 1;
+Q.iran_party_organization += mature ? 1 : 3;
+Q.toilers_organization += mature ? 1 : 3;
+Q.independent_nationalists_organization += mature ? 1 : 3;
+Q.religious_network_organization += mature ? 1 : 3;
+Q.organizational_reach += mature ? 1 : 4;
+if (repeated) {
+    Q.toilers_dissent += 1;
+    Q.religious_network_dissent += 1;
+}
+!}
 
 The secretariat pays for common forms, meeting space, and a small circuit of
 organizers who train local committees to report in the same way. Each
@@ -35,13 +54,29 @@ alone.
 
 The shared network reaches farther, but it consumes scarce funds and leaves
 the question of ultimate authority for a later meeting.
+[? if committee_stage > 2: Most gains now come from maintaining offices and
+replacing exhausted volunteers. Further centralization reaches fewer new
+places while reviving the argument over who commands the shared machinery. ?]
 
 - @post_event: Continue
 
 @committees_autonomy
-title: Fund each component's own organizers
+title: Let each component direct its own organizers
 subtitle: Each component keeps command of its own organizers; coordination remains a negotiation
-on-arrival: iran_party_organization += 2; toilers_organization += 2; independent_nationalists_organization += 2; religious_network_organization += 2; organizational_reach += 2; toilers_relation += 1; religious_network_relation += 1
+on-arrival: {!
+var repeated = Q.committee_model === "Autonomous component organizers";
+var mature = Q.committee_stage >= 2;
+Q.committee_model = "Autonomous component organizers";
+Q.committee_stage += 1;
+Q.iran_party_organization += mature ? 1 : 2;
+Q.toilers_organization += mature ? 1 : 2;
+Q.independent_nationalists_organization += mature ? 1 : 2;
+Q.religious_network_organization += mature ? 1 : 2;
+Q.organizational_reach += mature ? 0 : 2;
+Q.toilers_relation += repeated ? 0 : 1;
+Q.religious_network_relation += repeated ? 0 : 1;
+if (repeated && mature) Q.iran_party_dissent += 1;
+!}
 
 The secretariat divides practical assistance among the component
 organizations and asks each to report through its own chain.
@@ -52,5 +87,8 @@ independence.
 Every component gains some capacity, but the
 {!<span class="term term-national-front">!}Front{!</span>!} still depends on several
 parallel systems when it needs to act together.
+[? if committee_stage > 2: The component organizations can preserve the
+people they have recruited, but another division of work adds little reach.
+The secretariat is now spending more time reconciling parallel instructions. ?]
 
 - @post_event: Continue

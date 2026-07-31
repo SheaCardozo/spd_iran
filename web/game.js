@@ -82,6 +82,62 @@
       if (value.startsWith('"')) value = JSON.parse(value);
       effects.push(debugEffectLabel(match[1]) + ' → ' + value);
     }
+    var placeEffects = [
+      [
+        /place\.scenario\.campaign_investment/,
+        'Contestable-place campaign work changes → return outlook',
+      ],
+      [
+        /place\.scenario\.local_organization/,
+        'Local constituency organization changes → campaign yield',
+      ],
+      [
+        /place\.scenario\.legal_defense/,
+        'Place-level legal defense changes → credential viability',
+      ],
+      [
+        /place\.scenario\.credential_contest/,
+        'Credential contest status changes → chamber usability',
+      ],
+      [
+        /place\.scenario\.administrative_pressure/,
+        'Administrative pressure changes → return and credential risk',
+      ],
+      [
+        /place\.scenario\.oil_(?:commitment|position)/,
+        'Place-level oil position changes → chamber vote',
+      ],
+    ];
+    for (var placeEffect of placeEffects) {
+      if (placeEffect[0].test(source)) effects.push(placeEffect[1]);
+    }
+    var downstreamEffects = [
+      [
+        /oil_coalition_support/,
+        'Oil coalition support → deputy commitments in both chambers',
+      ],
+      [
+        /parliamentary_procedure_legitimacy/,
+        'Procedure legitimacy → credentials, Crown reactions, and votes',
+      ],
+      [
+        /(?:_relation|_dissent|_organization)/,
+        'Component condition → coordination and recurring-action yield',
+      ],
+      [
+        /(?:support_professional|support_bazaar|support_workers|support_provincial)/,
+        'Social support → constituency organization and campaign yield',
+      ],
+      [
+        /(?:shah_relation|shah_resistance|shah_court_capacity|shah_electoral_influence)/,
+        'Crown state → access, pressure, and institutional reactions',
+      ],
+    ];
+    for (var downstreamEffect of downstreamEffects) {
+      if (downstreamEffect[0].test(source)) {
+        effects.push(downstreamEffect[1]);
+      }
+    }
     return effects;
   }
 
@@ -134,6 +190,36 @@
 
     installDebugChoiceEffects(ui);
 
+    // Dendry removes a card before its scene runs. Snapshot the complete
+    // agenda here so the universal return route can restore position as well
+    // as membership, without drawing a replacement.
+    var stockPlayCard = ui.dendryEngine.playCard.bind(ui.dendryEngine);
+    ui.dendryEngine.playCard = function(cardId) {
+      var state = ui.dendryEngine.state;
+      if (state.sceneId === 'main') {
+        state.qualities.pre_action_hand_ids =
+          (state.currentHands.main || []).map(function(card) {
+            return card.id;
+          });
+        state.qualities.pre_action_last_card_id =
+          state.lastPlayedCard ? state.lastPlayedCard.id : '';
+      }
+      return stockPlayCard(cardId);
+    };
+
+    var stockDrawCard = ui.dendryEngine.drawCard.bind(ui.dendryEngine);
+    ui.dendryEngine.drawCard = function(deckId) {
+      var result = stockDrawCard(deckId);
+      refreshDeckAvailability(ui.dendryEngine);
+      if (!result || !result.id) {
+        var message = result && result.title === 'no_space_in_hand'
+          ? 'Hand full.'
+          : 'No card is ready in that deck.';
+        $('.deck-state').last().text(message);
+      }
+      return result;
+    };
+
     // Surface prototype slots under the v0.1 title so selecting one produces
     // the explicit schema error instead of making the old save disappear.
     var oldPrefix =
@@ -152,13 +238,13 @@
       return Boolean(
         state &&
         state.qualities &&
-        state.qualities.save_schema_version === 4
+        state.qualities.save_schema_version === 5
       );
     }
 
     function rejectOldSave() {
       window.alert(
-        'This save predates the v0.2 Iran Party and constituency systems and ' +
+        'This save predates the v0.3 dynamic political and parliamentary systems and ' +
         'is incompatible. Start a new Historical Scenario beginning in January 1949.'
       );
     }
@@ -319,23 +405,11 @@
 
   // populates the checkboxes in the options view
   window.populateOptions = function() {
-    var disable_bg = window.dendryUI.disable_bg;
     var animate = window.dendryUI.animate;
-    var show_portraits = window.dendryUI.show_portraits;
-    if (disable_bg) {
-        $('#backgrounds_no')[0].checked = true;
-    } else {
-        $('#backgrounds_yes')[0].checked = true;
-    }
     if (animate) {
         $('#animate_yes')[0].checked = true;
     } else {
         $('#animate_no')[0].checked = true;
-    }
-    if (show_portraits) {
-        $('#images_yes')[0].checked = true;
-    } else {
-        $('#images_no')[0].checked = true;
     }
     if (window.dendryUI.dark_mode) {
         $('#dark_mode')[0].checked = true;
@@ -386,6 +460,15 @@
     };
   }
 
+  function handStateText(hand, maxCards) {
+    var filledCards = hand.filter(Boolean).length;
+    var openSlots = Math.max(0, maxCards - filledCards);
+    if (filledCards === 0) return 'Hand empty — choose a deck.';
+    if (openSlots === 0) return 'Hand full.';
+    return openSlots + ' open ' + (openSlots === 1 ? 'slot' : 'slots') +
+      ' — choose a deck.';
+  }
+
   window.displayHand = function(hand, maxCards) {
     var description =
       window.dendryUI.dendryEngine.state.qualities.handDescription ||
@@ -401,19 +484,97 @@
       $('#content').append(
         $('<p>').addClass('hand-description').text(description),
       );
+      $('#content').append(
+        $('<p>').addClass('hand-state').attr({
+          role: 'status',
+          'aria-live': 'polite',
+        }),
+      );
     }
+    $('.hand-state').last().text(handStateText(hand, maxCards));
     for (var index = 0; index < maxCards; index += 1) {
       var item = $('<li>').addClass('card-in-hand');
       if (hand[index]) {
         var card = cardElement(hand[index]);
         item.append(card.link).append(card.caption);
       } else {
-        item.append($('<div>').addClass('blank-card'));
+        item.append(
+          $('<div>').addClass('blank-card').attr('aria-hidden', 'true')
+            .append($('<span>').text('Open slot')),
+        );
       }
       list.append(item);
     }
     if (!existing) $('#content').append(list);
+    window.setTimeout(function() {
+      if (
+        window.dendryUI &&
+        window.dendryUI.dendryEngine.state.sceneId === 'main'
+      ) {
+        refreshDeckAvailability(window.dendryUI.dendryEngine);
+      }
+    }, 0);
   };
+
+  function deckHasReadyCard(engine, deckId) {
+    var scene = engine.game.scenes[deckId];
+    if (!scene) return false;
+    var choices = engine._compileChoices(scene) || [];
+    var currentHand = engine.state.currentHands[engine.state.sceneId] || [];
+    var heldIds = currentHand.map(function(card) { return card.id; });
+    return choices.some(function(choice) {
+      return choice.canChoose &&
+        engine.game.scenes[choice.id] &&
+        engine.game.scenes[choice.id].isCard &&
+        heldIds.indexOf(choice.id) < 0;
+    });
+  }
+
+  function explainUnavailableOpenSlots(engine) {
+    var currentHand =
+      engine.state.currentHands[engine.state.sceneId] || [];
+    var maxCards = engine.game.scenes[engine.state.sceneId].maxCards || 4;
+    if (currentHand.length > 0 && currentHand.length < maxCards) {
+      $('.hand-state').last().text(
+        currentHand.length + ' ' +
+        (currentHand.length === 1 ? 'card' : 'cards') +
+        ' in hand — every other eligible card is already held or cooling down.',
+      );
+    }
+  }
+
+  function refreshDeckAvailability(engine) {
+    var readyCount = 0;
+    $('ul.decks li.deck').each(function() {
+      var item = $(this);
+      var link = item.find('a.card').first();
+      var ready = deckHasReadyCard(engine, link.attr('card-id'));
+      item.toggleClass('unavailable-card', !ready);
+      link.attr({
+        'aria-disabled': String(!ready),
+        tabindex: ready ? '0' : '-1',
+      });
+      item.find('.deck-availability').remove();
+      if (ready) {
+        readyCount += 1;
+      } else {
+        item.append(
+          $('<span>').addClass('deck-availability').text('No card ready'),
+        );
+      }
+    });
+    var state = $('.deck-state').last();
+    if (state.length) {
+      state.text(
+        readyCount > 0
+          ? ''
+          : 'No cards are ready in the available decks.',
+      );
+    }
+    if (readyCount === 0) {
+      explainUnavailableOpenSlots(engine);
+    }
+  }
 
   window.displayDecks = function(decks) {
     var q = window.dendryUI.dendryEngine.state.qualities;
@@ -423,24 +584,52 @@
     $('#content').append(
       $('<p>').addClass('deck-description').text(description),
     );
+    $('#content').append(
+      $('<p>').addClass('deck-state').attr({
+        role: 'status',
+        'aria-live': 'polite',
+      }),
+    );
     var list = $('<ul>').addClass('decks');
     decks.forEach(function(deck) {
       var item = $('<li>').addClass('deck');
       var card = cardElement(deck);
-      if (!deck.canChoose) item.addClass('unavailable-card');
+      var availability;
+      if (!deck.canChoose) {
+        item.addClass('unavailable-card');
+        card.link.attr({'aria-disabled': 'true', tabindex: '-1'});
+        availability = $('<span>').addClass('deck-availability')
+          .text('No card ready');
+      } else {
+        card.link.attr('aria-disabled', 'false');
+      }
       item.append(card.link).append(card.caption);
+      if (availability) item.append(availability);
       list.append(item);
     });
     $('#content').append(list);
+    if (!decks.some(function(deck) { return deck.canChoose; })) {
+      $('.deck-state').last().text(
+        'No cards are ready in the available decks.',
+      );
+      explainUnavailableOpenSlots(window.dendryUI.dendryEngine);
+    }
   };
 
   window.displayPinnedCards = function(cards) {
     if (!cards.length) return;
     var q = window.dendryUI.dendryEngine.state.qualities;
-    var description = 'Adviser action — available';
-    if (q.advisor_action_timer > 0) {
-      description = 'Adviser action — available in ' +
-        q.advisor_action_timer + ' months';
+    var consultationMonths = q.advisor_action_timer || 0;
+    var description = consultationMonths > 0
+      ? 'Adviser consultation: available in ' + consultationMonths + ' ' +
+        (consultationMonths === 1 ? 'month.' : 'months.')
+      : 'Adviser consultation: available.';
+    if (cards.some(function(card) { return card.id === 'advisor_roster'; })) {
+      var rosterMonths = q.advisor_roster_timer || 0;
+      description += rosterMonths > 0
+        ? ' Adviser slate review: available in ' + rosterMonths + ' ' +
+          (rosterMonths === 1 ? 'month.' : 'months.')
+        : ' Adviser slate review: available.';
     }
     $('#content').append($('<hr>'));
     $('#content').append(
@@ -463,7 +652,7 @@
     if (
       scene != 'root' &&
       q &&
-      q.save_schema_version === 4 &&
+      q.save_schema_version === 5 &&
       !window.justLoaded
     ) {
         window.dendryUI.autosave();
@@ -476,6 +665,21 @@
   window.updateSidebar = function() {
       $('#qualities').empty();
       var q = dendryUI.dendryEngine.state.qualities;
+      var wrapper = document.getElementById('tools_wrapper');
+      var tabButtons = document.querySelectorAll(
+        '#stats_sidebar .tab_button',
+      );
+      if (!q || q.started !== 1) {
+          if (wrapper) wrapper.hidden = true;
+          tabButtons.forEach(function(button) {
+              button.disabled = true;
+          });
+          return;
+      }
+      if (wrapper) wrapper.hidden = false;
+      tabButtons.forEach(function(button) {
+          button.disabled = false;
+      });
       $('#coalition_tab').text(q.front_formed ? 'Coalition' : 'Opposition');
       var scene = dendryUI.game.scenes[window.statusTab];
       if (!scene) return;
@@ -485,15 +689,23 @@
       var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
       $('#qualities').append(dendryUI.contentToHTML.convert(displayContent));
       if (window.statusTab === 'status.majles') {
-          window.renderChamberVisualizations(q);
+          if (Array.isArray(q.majles_places)) {
+              window.renderChamberVisualizations(q);
+          }
+      } else if (window.statusTab === 'status.support') {
+          window.renderSupportTrends(q);
       }
   };
 
-  function seatCategory(place, chamber) {
+  function seatCategory(place, chamber, mode) {
     if (place.scenario.current_return !== 'returned') return 'pending';
     if (place.scenario.credential === 'rejected') return 'rejected';
-    if (place.scenario.credential !== 'approved') return 'credential-pending';
-    if (place.scenario.usability !== 'usable') return 'unavailable';
+        if (place.scenario.credential !== 'approved') return 'credential-pending';
+        if (place.scenario.usability !== 'usable') return 'unavailable';
+        if (place.scenario.attendance !== 'attending') return 'unavailable';
+    if (mode === 'oil') {
+      return 'oil-' + (place.scenario.oil_position || 'uncommitted');
+    }
     if (chamber === 'majles' && place.scenario.support === 'national_front') {
       return 'front';
     }
@@ -501,34 +713,97 @@
     return 'usable';
   }
 
-  function seatLabel(place, chamber) {
+  function readableSeatValue(value) {
+    return String(value || 'not recorded').replace(/_/g, ' ');
+  }
+
+  function seatAccessibleLabel(place, chamber, mode) {
+    var scenario = place.scenario;
+    var parts = [
+      (chamber === 'majles' ? 'Majles' : 'Senate') +
+        ' place ' + place.place_number,
+      place.historical.constituency || 'constituency not recorded',
+      'return ' + readableSeatValue(scenario.current_return),
+      'credential ' + readableSeatValue(scenario.credential),
+      readableSeatValue(scenario.usability),
+      readableSeatValue(scenario.attendance),
+    ];
+    if (mode === 'oil') {
+      parts.push('oil position ' + readableSeatValue(scenario.oil_position));
+    }
+    return parts.join(', ');
+  }
+
+  function seatDetailLabel(place, chamber, mode) {
     var evidence = place.historical;
     var scenario = place.scenario;
     var person = evidence.return || scenario.scenario_return_label ||
       'return not recorded';
-    return [
+    var details = [
       chamber === 'majles' ? 'Majles' : 'Senate',
       'place ' + place.place_number,
       evidence.constituency || 'constituency not recorded',
       person,
-      'return: ' + scenario.current_return,
-      'credential: ' + scenario.credential,
-      'status: ' + scenario.usability,
-      'campaign influence: ' + scenario.player_influence,
-    ].join(' — ');
+      'return: ' + readableSeatValue(scenario.current_return),
+      'credential: ' + readableSeatValue(scenario.credential),
+      'status: ' + readableSeatValue(scenario.usability),
+      'attendance: ' + readableSeatValue(scenario.attendance),
+      'credential contest: ' +
+        readableSeatValue(scenario.credential_contest),
+    ];
+    if (mode === 'oil') {
+      details.push(
+        'oil position: ' + readableSeatValue(scenario.oil_position),
+      );
+    }
+    if (debugModeEnabled()) {
+      details.push(
+        'campaign influence: ' +
+          readableSeatValue(scenario.player_influence),
+        'administrative pressure: ' +
+          readableSeatValue(scenario.administrative_pressure),
+      );
+    }
+    return details.join(' — ');
   }
 
-  function chamberSvg(places, chamber) {
+  function installSeatInteraction(circle, place, chamber, mode, detailPanel) {
+    var showDetail = function() {
+      var chart = circle.ownerSVGElement;
+      if (chart) {
+        chart.querySelectorAll('.chamber-seat.is-selected').forEach(
+          function(selected) {
+            selected.classList.remove('is-selected');
+            selected.setAttribute('aria-pressed', 'false');
+          },
+        );
+      }
+      circle.classList.add('is-selected');
+      circle.setAttribute('aria-pressed', 'true');
+      detailPanel.textContent = seatDetailLabel(place, chamber, mode);
+    };
+    circle.addEventListener('focus', showDetail);
+    circle.addEventListener('click', showDetail);
+    circle.addEventListener('keydown', function(event) {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      showDetail();
+    });
+  }
+
+  function chamberSvg(places, chamber, mode, detailPanel) {
     var namespace = 'http://www.w3.org/2000/svg';
     var svg = document.createElementNS(namespace, 'svg');
     svg.setAttribute('class', 'chamber-chart ' + chamber + '-chart');
     svg.setAttribute('viewBox', '0 0 240 128');
-    svg.setAttribute('role', 'img');
+    svg.setAttribute('role', 'group');
     svg.setAttribute(
       'aria-label',
       (chamber === 'majles' ? 'Majles' : 'Senate') +
         ' place-by-place chamber diagram',
     );
+    var compactTouchLayout = window.matchMedia &&
+      window.matchMedia('(max-width: 600px)').matches;
     var rings = chamber === 'majles' ? 6 : 4;
     var weights = [];
     var totalWeight = 0;
@@ -556,43 +831,201 @@
         circle.setAttribute('cx', String(120 + Math.cos(angle) * radius));
         circle.setAttribute('cy', String(116 - Math.sin(angle) * radius));
         circle.setAttribute('r', chamber === 'majles' ? '3.2' : '4.2');
-        circle.setAttribute('class', 'chamber-seat seat-' + seatCategory(place, chamber));
-        circle.setAttribute('tabindex', '0');
+        circle.setAttribute(
+          'class',
+          'chamber-seat seat-' + seatCategory(place, chamber, mode),
+        );
         circle.setAttribute('data-place-id', place.id);
-        circle.setAttribute('aria-label', seatLabel(place, chamber));
+        circle.setAttribute('data-place-number', String(place.place_number));
         var title = document.createElementNS(namespace, 'title');
-        title.textContent = seatLabel(place, chamber);
+        title.textContent = seatAccessibleLabel(place, chamber, mode);
         circle.appendChild(title);
+        if (compactTouchLayout) {
+          circle.setAttribute('aria-hidden', 'true');
+          circle.setAttribute('focusable', 'false');
+          circle.classList.add('is-visual-only');
+        } else {
+          circle.setAttribute('tabindex', '0');
+          circle.setAttribute('role', 'button');
+          circle.setAttribute('aria-pressed', 'false');
+          circle.setAttribute('focusable', 'true');
+          circle.setAttribute(
+            'aria-label',
+            seatAccessibleLabel(place, chamber, mode),
+          );
+          installSeatInteraction(circle, place, chamber, mode, detailPanel);
+        }
         svg.appendChild(circle);
       }
     });
     return svg;
   }
 
-  window.renderChamberVisualizations = function(q) {
-    var container = $('<section>').addClass('chamber-visualizations');
+  function chamberPlacePicker(places, chamber, mode, detailPanel) {
+    var chamberLabel = chamber === 'majles' ? 'Majles' : 'Senate';
+    var wrapper = $('<div>').addClass('chamber-place-picker');
+    var id = chamber + '-place-picker';
+    var select = $('<select>').attr({
+      id: id,
+      'aria-label': 'Inspect a ' + chamberLabel + ' place',
+    });
+    select.append(
+      $('<option>').attr({value: ''}).text('Inspect a place…'),
+    );
+    places.forEach(function(place, index) {
+      select.append(
+        $('<option>').attr({value: String(index)}).text(
+          'Place ' + place.place_number + ' — ' +
+          (place.historical.constituency || 'constituency not recorded'),
+        ),
+      );
+    });
+    select.on('change', function() {
+      if (this.value === '') return;
+      var place = places[Number(this.value)];
+      detailPanel.textContent = seatDetailLabel(
+        place,
+        chamber,
+        mode,
+      );
+      var chart = wrapper.parent().find('.' + chamber + '-chart')[0];
+      if (chart) {
+        chart.querySelectorAll('.chamber-seat.is-selected').forEach(
+          function(selected) {
+            selected.classList.remove('is-selected');
+            selected.setAttribute('aria-pressed', 'false');
+          },
+        );
+        var selectedCircle = chart.querySelector(
+          '[data-place-id="' + place.id + '"]',
+        );
+        if (selectedCircle) {
+          selectedCircle.classList.add('is-selected');
+          selectedCircle.setAttribute('aria-pressed', 'true');
+        }
+      }
+    });
+    wrapper.append(
+      $('<label>').attr({for: id}).text('Place dossier'),
+      select,
+    );
+    return wrapper;
+  }
+
+      window.renderChamberVisualizations = function(q) {
+        var container = $('<section>').addClass('chamber-visualizations');
+        var mode = window.chamberViewMode || 'institution';
+        var availableModes = ['institution'];
+        if (
+          q.gass_golshayan_rejected_majles ||
+          q.nationalization_approved_committee
+        ) {
+          availableModes.push('oil');
+        } else {
+          mode = 'institution';
+          window.chamberViewMode = mode;
+        }
+        var controls = $('<div>').addClass('chamber-controls').attr(
+          'aria-label', 'Chamber diagram mode',
+        );
+        availableModes.forEach(function(candidate) {
+      controls.append(
+        $('<button>').attr({
+          type: 'button',
+          'aria-pressed': String(mode === candidate),
+        }).text(candidate === 'institution' ? 'Institutional status' : 'Oil position')
+          .on('click', function() {
+            window.chamberViewMode = candidate;
+            window.updateSidebar();
+          }),
+      );
+    });
+    container.append(controls);
+    var detailPanel = $('<p>').addClass('chamber-place-detail').attr({
+      role: 'status',
+      'aria-live': 'polite',
+    }).text('Focus or select a place to inspect its return, credential, and position.');
     container.append($('<h3>').text('Majles places'));
-    container[0].appendChild(chamberSvg(q.majles_places, 'majles'));
+    container.append(
+      chamberPlacePicker(q.majles_places, 'majles', mode, detailPanel[0]),
+    );
+    container[0].appendChild(
+      chamberSvg(q.majles_places, 'majles', mode, detailPanel[0]),
+    );
     container.append(
       $('<p>').addClass('chamber-legend').text(
-        'Gold: usable Front member · dark: other usable member · outline: ' +
-        'credential pending · pale: no return',
+        mode === 'oil'
+          ? 'Dark: supports · mid-tone: conditional · pale: opposed or uncommitted'
+          : 'Gold: Front member able to sit · dark: other member able to sit · outline: ' +
+            'credential pending · pale: no return',
       ),
     );
-    if (q.senate_convened) {
+    if (q.senate_convened && Array.isArray(q.senate_places)) {
       container.append($('<h3>').text('Senate places'));
-      container[0].appendChild(chamberSvg(q.senate_places, 'senate'));
+      container.append(
+        chamberPlacePicker(q.senate_places, 'senate', mode, detailPanel[0]),
+      );
+      container[0].appendChild(
+        chamberSvg(q.senate_places, 'senate', mode, detailPanel[0]),
+      );
       container.append(
         $('<p>').addClass('chamber-legend').text(
-          'Green: elected · blue: appointed · pale: not yet usable',
+          mode === 'oil'
+            ? 'Dark: supports · mid-tone: conditional · pale: opposed or uncommitted'
+            : 'Green: elected · blue: appointed · pale: not yet able to sit',
         ),
       );
     }
+    container.append(detailPanel);
     $('#qualities').append(container);
   };
 
+  window.renderSupportTrends = function(q) {
+    if (!Array.isArray(q.support_history) || q.support_history.length < 2) {
+      return;
+    }
+    var namespace = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(namespace, 'svg');
+    svg.setAttribute('class', 'support-trend-chart');
+    svg.setAttribute('viewBox', '0 0 240 90');
+    svg.setAttribute('role', 'img');
+    svg.setAttribute(
+      'aria-label',
+      'Qualitative monthly trend for professional, bazaar, wage-earner, and provincial support',
+    );
+    var series = [
+      ['professional', 'trend-professional'],
+      ['bazaar', 'trend-bazaar'],
+      ['workers', 'trend-workers'],
+      ['provincial', 'trend-provincial'],
+    ];
+    series.forEach(function(definition) {
+      var points = q.support_history.map(function(entry, index) {
+        var x = 8 + index * (224 / Math.max(1, q.support_history.length - 1));
+        var y = 82 - Math.max(0, Math.min(100, entry[definition[0]])) * 0.72;
+        return x.toFixed(1) + ',' + y.toFixed(1);
+      }).join(' ');
+      var line = document.createElementNS(namespace, 'polyline');
+      line.setAttribute('points', points);
+      line.setAttribute('class', 'support-trend ' + definition[1]);
+      svg.appendChild(line);
+    });
+    var wrapper = $('<section>').addClass('support-trends');
+    wrapper.append($('<h3>').text('Monthly direction'));
+    wrapper[0].appendChild(svg);
+    wrapper.append(
+      $('<p>').addClass('support-trend-legend').text(
+        'Professional · bazaar · wage-earner · provincial networks',
+      ),
+    );
+    $('#qualities').append(wrapper);
+  };
+
   window.changeTab = function(newTab, tabId) {
+      var q = window.dendryUI.dendryEngine.state.qualities;
+      if (!q || q.started !== 1) return;
       var tabButton = document.getElementById(tabId);
+      if (!tabButton) return;
       var tabButtons = document.querySelectorAll('#stats_sidebar .tab_button');
 
       tabButtons.forEach(function(button) {
@@ -610,6 +1043,7 @@
 
   window.justLoaded = true;
   window.statusTab = 'status';
+  window.chamberViewMode = 'institution';
   window.dendryModifyUI = main;
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
 

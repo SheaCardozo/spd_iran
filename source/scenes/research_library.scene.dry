@@ -4,6 +4,7 @@ is-special: true
 
 = Research Library
 
+- @current_situation: Current Situation
 - @government: Government and Constitution
 - @timeline: Campaign Timeline
 - @coalition_people: Coalition and People
@@ -13,6 +14,51 @@ is-special: true
 - @uncertainty: Reading the Record
 - @bibliography: Sources
 - @backSpecialScene: Return
+
+@current_situation
+title: Current Situation
+
+= Current Situation
+
+Active advisers: [+ active_advisor_names +]
+
+Coalition coordination:
+[? if front_formed = 0: no common coalition yet ?]
+[? if front_formed = 1 and coordination_efficiency < 35: unreliable ?]
+[? if front_formed = 1 and coordination_efficiency >= 35 and coordination_efficiency < 65: workable ?]
+[? if front_formed = 1 and coordination_efficiency >= 65: disciplined ?]
+
+Public campaign:
+[? if election_campaign_capacity < 35: locally thin ?]
+[? if election_campaign_capacity >= 35 and election_campaign_capacity < 65: competitive where organized ?]
+[? if election_campaign_capacity >= 65: strong in selected constituencies ?]
+
+{!<span class="term term-royalist">!}Crown{!</span>!} pressure:
+[? if crown_pressure < 35: limited ?]
+[? if crown_pressure >= 35 and crown_pressure < 65: substantial ?]
+[? if crown_pressure >= 65: severe ?]
+
+[? if gass_golshayan_rejected_majles = 1:
+{!<span class="term term-parliament">!}Majles{!</span>!} nationalization commitments:
+[+ nationalization_majles_support +] of [+ nationalization_majles_threshold +]
+required. ?]
+
+[? if nationalization_approved_majles = 1:
+{!<span class="term term-senate">!}Senate{!</span>!} nationalization commitments:
+[+ nationalization_senate_support +] of [+ nationalization_senate_threshold +]
+required. ?]
+
+Current organizational projects:
+
+* Press: [+ press_project +]
+* Committees: [+ committee_model +]
+* Fundraising: [+ fundraising_policy +]
+* Election work: [+ election_project +]
+* Credentials: [+ credential_project +]
+* Oil: [+ oil_project +]
+* Latest setback: [+ last_project_setback +]
+
+- @research_library: Library
 
 @government
 title: Government and Constitution
@@ -46,31 +92,38 @@ title: Campaign Timeline
 
 = Campaign Timeline
 
-* **4 February 1949:** attempt on the
+[? if attempt_emergency_seen = 1: * **4 February 1949:** attempt on the
   {!<span class="term term-royalist">!}Shah{!</span>!}; martial law,
   arrests, press restrictions, and the ban on the
-  {!<span class="term term-left">!}Tudeh Party{!</span>!} follow.
-* **Spring 1949:** the constituent assembly strengthens royal authority.
-* **October–November 1949:** the palace protest brings the opposition
+  {!<span class="term term-left">!}Tudeh Party{!</span>!} follow. ?]
+[? if constituent_assembly_seen = 1: * **Spring 1949:** the constituent
+  assembly strengthens royal authority. ?]
+[? if front_formed = 1: * **October–November 1949:** the palace protest brings the opposition
   coalition that becomes the
   {!<span class="term term-national-front">!}National Front{!</span>!}
-  together.
-* **18 February 1950:** the Sixteenth
+  together. ?]
+[? if chambers_open_seen = 1: * **18 February 1950:** the Sixteenth
   {!<span class="term term-parliament">!}Majles{!</span>!} opens; the First
-  {!<span class="term term-senate">!}Senate{!</span>!} also opens that month.
-* **25 November 1950:** the Special Oil Commission rejects the supplemental
-  agreement.
-* **11 January 1951:** the
+  {!<span class="term term-senate">!}Senate{!</span>!} also opens that month. ?]
+[? if credentials_seen = 1: * **May–June 1950:** successive credential
+  decisions make the returned opposition deputies usable in the
+  {!<span class="term term-parliament">!}Majles{!</span>!}. ?]
+[? if gass_golshayan_rejected_committee = 1: * **25 November 1950:** the
+  Special Oil Commission rejects the supplemental agreement. ?]
+[? if gass_golshayan_rejected_majles = 1: * **11 January 1951:** the
   {!<span class="term term-parliament">!}Majles{!</span>!} approves the
-  rejection.
-* **7–20 March 1951:** {!<span class="term term-independent">!}Razmara{!</span>!}
-  is assassinated; the Oil Commission, the
-  {!<span class="term term-parliament">!}Majles{!</span>!}, and the
-  {!<span class="term term-senate">!}Senate{!</span>!} approve the
-  nationalization principle.
-
-{!<a href="timeline.html#the-national-front-and-nationalization-19491951">!}Read
-the illustrated chronology{!</a>!}.
+  rejection. ?]
+[? if razmara_assassination_seen = 1: * **7 March 1951:**
+  {!<span class="term term-independent">!}Razmara{!</span>!} is
+  assassinated. ?]
+[? if nationalization_approved_committee = 1: * **March 1951:** the Oil
+  Commission recommends nationalization. ?]
+[? if nationalization_approved_majles = 1: * **15 March 1951:** the
+  {!<span class="term term-parliament">!}Majles{!</span>!} approves the
+  nationalization principle. ?]
+[? if nationalization_approved_senate = 1: * **20 March 1951:** the
+  {!<span class="term term-senate">!}Senate{!</span>!} approves the
+  nationalization principle. ?]
 
 - @research_library: Library
 
@@ -83,27 +136,42 @@ title: Coalition and People
 
 = Coalition and People
 
-The {!<span class="term term-national-front">!}National Front{!</span>!}
+[? if front_formed = 0: The opposition presently consists of separate
+constitutional politicians, the
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!},
+newspapers, and personal networks. They cooperate on particular questions
+without sharing a formal coalition. ?]
+[? if front_formed = 0:
+{!<span class="term term-mossadegh">!}Mohammad Mossadegh{!</span>!} supplies
+constitutional coordination, while
+{!<span class="term term-constitutionalist">!}Allahyar Saleh{!</span>!}
+connects the work to the organized
+{!<span class="term term-constitutionalist">!}Iran Party{!</span>!}. ?]
+
+[? if front_formed = 1: The
+{!<span class="term term-national-front">!}National Front{!</span>!}
 joined constitutionalists, the
 {!<span class="term term-constitutionalist">!}Iran Party{!</span>!}, the
 {!<span class="term term-social-democratic">!}Toilers' Party{!</span>!},
 {!<span class="term term-national-front">!}independent nationalists{!</span>!},
 and religious and bazaar networks without turning
-them into one homogeneous party.
+them into one homogeneous party. ?]
 
+[? if front_formed = 1:
 {!<span class="term term-mossadegh">!}Mohammad Mossadegh{!</span>!} served as
 its central constitutional coordinator.
 {!<span class="term term-nationalist-social-democratic">!}Hossein Fatemi{!</span>!}
 worked through journalism and public advocacy;
 {!<span class="term term-constitutionalist">!}Allahyar Saleh{!</span>!}
-through {!<span class="term term-constitutionalist">!}Iran Party{!</span>!},
-electoral, and parliamentary work;
-{!<span class="term term-nationalist-social-democratic">!}Khalil Maleki{!</span>!}
-through the social-democratic current;
+through the {!<span class="term term-constitutionalist">!}Iran Party{!</span>!};
 and {!<span class="term term-makki">!}Hossein Makki{!</span>!} through the
 {!<span class="term term-parliament">!}Majles{!</span>!} and the oil
 campaign. {!<span class="term term-religious">!}Ayatollah Abol-Qasem
-Kashani{!</span>!} remained an independent ally with his own following.
+Kashani{!</span>!} remained an independent ally with his own following. ?]
+[? if advisor_maleki_available = 1:
+{!<span class="term term-nationalist-social-democratic">!}Khalil
+Maleki{!</span>!} is available through the social-democratic organizational
+current. ?]
 
 Further reading:
 {!<a href="timeline.html#parties-factions-and-political-networks">!}Parties,
@@ -126,11 +194,14 @@ not the same thing.
 * {!<span class="term term-parliament">!}Majles{!</span>!} returns:
   [+ majles_returns_recorded +] / 136
 * Credentials approved: [+ majles_credentials_approved +]
-* Usable members: [+ majles_usable_members +]
-* Usable {!<span class="term term-national-front">!}National Front{!</span>!}
-  members: [+ majles_national_front_usable +]
-* {!<span class="term term-senate">!}Senate{!</span>!} usable members:
+* Members able to sit: [+ majles_usable_members +]
+* Attending members: [+ majles_attending_members +]
+[? if front_formed = 1: * {!<span class="term term-national-front">!}National Front{!</span>!}
+  members able to sit: [+ majles_national_front_usable +] ?]
+[? if senate_convened = 1: * {!<span class="term term-senate">!}Senate{!</span>!} members able to sit:
   [+ senate_usable_members +] / 60
+* {!<span class="term term-senate">!}Senate{!</span>!} attending members:
+  [+ senate_attending_members +] ?]
 
 Further reading: the official Sixteenth-{!<span class="term term-parliament">!}Majles{!</span>!}
 roster, pp. 1–11; official
@@ -157,13 +228,13 @@ Current position: **[+ oil_terms_position +]**
 * Compensation and personnel authority: unresolved in the present record.
 * Review: within the 1933 concession framework.
 
-## Nationalization principle, 20 March 1951
+[? if nationalization_approved_committee = 1: **Nationalization principle** ?]
 
-* Ownership: Iranian national ownership.
-* Operations: transfer required; implementation remained unsettled.
-* Marketing, compensation, interim finance, and personnel: not settled by the
-  principle alone.
-* Review: implementation legislation lay beyond this campaign's endpoint.
+[? if nationalization_approved_committee = 1: Ownership: Iranian national
+ownership. Operations: transfer required; implementation remained unsettled.
+Marketing, compensation, interim finance, and personnel were not settled by
+the principle alone. Implementation legislation lay beyond this campaign's
+endpoint. ?]
 
 ## Minimum acceptable terms
 
@@ -182,34 +253,41 @@ title: Historical Notes
 
 = Historical Notes
 
-## 1949
+[? if attempt_emergency_seen = 1: **1949** ?]
 
-The attempt on the {!<span class="term term-royalist">!}Shah{!</span>!}
+[? if attempt_emergency_seen = 1: The attempt on the
+{!<span class="term term-royalist">!}Shah{!</span>!}
 became the occasion for martial law, repression, and constitutional revision.
-The October palace protest arose from the disputed
+?]
+[? if front_formed = 1: The October palace protest arose from the disputed
 Sixteenth-{!<span class="term term-parliament">!}Majles{!</span>!} election
 and brought together the coalition that became the
-{!<span class="term term-national-front">!}National Front{!</span>!}.
+{!<span class="term term-national-front">!}National Front{!</span>!}. ?]
 
-## 1950
+[? if tehran_rerun_seen = 1: **1950** ?]
 
-The Tehran rerun returned a small
+[? if tehran_rerun_seen = 1: The Tehran rerun returned a small
 {!<span class="term term-national-front">!}National Front{!</span>!} cohort.
-Credentials made that cohort usable in stages. The Special Oil Commission
-gave its deputies a forum from which the supplemental agreement could be
-examined term by term.
+?]
+[? if credentials_seen = 1: Credentials made that cohort usable in stages. ?]
+[? if oil_committee_formed = 1: The Special Oil Commission gave its deputies
+a forum from which the supplemental agreement could be examined term by term.
+?]
 
-## 1951
+[? if gass_golshayan_rejected_majles = 1: **1951** ?]
 
-The {!<span class="term term-parliament">!}Majles{!</span>!} approved the
-commission's rejection of the supplemental agreement on 11 January.
+[? if gass_golshayan_rejected_majles = 1: The
+{!<span class="term term-parliament">!}Majles{!</span>!} approved the
+commission's rejection of the supplemental agreement on 11 January. ?]
+[? if razmara_assassination_seen = 1:
 {!<span class="term term-independent">!}Razmara{!</span>!} was assassinated
-on 7 March. The commission and both chambers then approved the principle of
-oil nationalization, with the
-{!<span class="term term-senate">!}Senate{!</span>!} acting on 20 March.
-
-{!<a href="timeline.html#the-national-front-and-nationalization-19491951">!}Dates,
-notes, and further reading{!</a>!}.
+on 7 March. ?]
+[? if nationalization_approved_majles = 1: The commission and
+{!<span class="term term-parliament">!}Majles{!</span>!} approved the
+nationalization principle. ?]
+[? if nationalization_approved_senate = 1: The
+{!<span class="term term-senate">!}Senate{!</span>!} completed the documented
+sequence on 20 March. ?]
 
 - @research_library: Library
 

@@ -27,15 +27,20 @@ Iranian public opinion.
 
 ## Mechanical abstraction
 
-Support values are mutable scenario estimates. They improve campaign capacity
-at selected place records. At high enough capacity the player may create up to
-three explicitly counterfactual returns in historically vacant places; the
-historical evidence object remains unchanged, and every new return still
-requires a credential before it becomes usable. A counterfactual member who
-becomes usable modestly increases later parliamentary outreach capacity; this
-is a one-time scenario effect, not a claim about an observed vote.
+Support values are mutable scenario estimates. They contribute to local
+organization at the small sourced set of contestable place records. Each such
+place separately combines targeted campaign work, organization,
+administrative pressure, and legal defense. A favorable result may create an
+explicitly counterfactual return only where the historical return is
+uncompleted; the evidence object remains unchanged, and every new return still
+requires its own credential decision before becoming usable.
 
 The semicircle diagrams contain one mark per authorized place. Categories come
 from mutable return, credential, usability, and support state, plus the
-documented Senate route. Unknown party alignments remain unknown. The diagrams
-are a rendering of shared records, not a separate seat chart.
+documented Senate route. Unknown party alignments remain unknown. The
+institutional/position toggle separately renders return, credential,
+usability, and the scenario oil position. An oil commitment is a
+counterfactual game value derived from the player's coalition, procedural
+record, public campaign, and Crown relationship; it is not an observed
+roll-call or a permanent historical alignment. The diagrams are a rendering
+of shared records, not a separate seat chart.

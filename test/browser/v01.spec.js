@@ -11,7 +11,7 @@ async function reachMonthlyHand(page) {
   await expect(page.locator('#content')).toContainText('The Last Majles');
   await firstAvailableChoice(page);
   await expect(page.locator('#content')).toContainText(
-    'Political briefing',
+    'Opposition briefing',
   );
 }
 
@@ -34,11 +34,70 @@ test.beforeEach(async ({page}) => {
   });
 });
 
+test('pregame sidebar is inert and the agenda explains empty states', async ({
+  page,
+}) => {
+  const pageErrors = [];
+  page.on('pageerror', (error) => pageErrors.push(error.message));
+  await page.goto('/');
+
+  await expect(page.locator('#tools_wrapper')).toBeHidden();
+  await expect(
+    page.locator('#stats_sidebar .tab_button').first(),
+  ).toBeDisabled();
+  await page.evaluate(() => window.changeTab('status.majles', 'majles_tab'));
+  expect(pageErrors).toEqual([]);
+
+  await firstAvailableChoice(page);
+  await expect(page.locator('#tools_wrapper')).toBeVisible();
+  await expect(
+    page.locator('#stats_sidebar .tab_button').first(),
+  ).toBeEnabled();
+  await expect(page.locator('.hand-state')).toHaveText(
+    'Hand empty — choose a deck.',
+  );
+  await expect(page.locator('.blank-card').first()).toHaveText('Open slot');
+
+  await page.locator('ul.decks li a').first().click();
+  await page.locator('ul.decks li a').first().click();
+  await expect(page.locator('ul.hand li a')).toHaveCount(2);
+  await expect(page.locator('.hand-state')).toHaveText(
+    '2 cards in hand — every other eligible card is already held or cooling down.',
+  );
+  await expect(page.locator('.deck-state')).toHaveText(
+    'No cards are ready in the available decks.',
+  );
+  await expect(page.locator('ul.decks a.card')).toHaveAttribute(
+    'aria-disabled',
+    'true',
+  );
+  await page.locator('ul.hand li a').first().click();
+  await page.getByRole('link', {name: 'Return card to hand'}).click();
+  await expect(page.locator('.hand-state')).toHaveText(
+    '2 cards in hand — every other eligible card is already held or cooling down.',
+  );
+  expect(pageErrors).toEqual([]);
+});
+
 test('debug mode reveals exact choice effects only on hover or focus', async ({
   page,
 }) => {
   await page.goto('/?debug=1');
   await firstAvailableChoice(page);
+  await page.locator('#majles_tab').click();
+  if (page.viewportSize().width <= 600) {
+    await page.locator('#majles-place-picker').selectOption('0');
+  } else {
+    await page.locator(
+      '.majles-chart .chamber-seat[data-place-number="1"]',
+    ).focus();
+  }
+  await expect(page.locator('.chamber-place-detail')).toContainText(
+    'campaign influence:',
+  );
+  await expect(page.locator('.chamber-place-detail')).toContainText(
+    'administrative pressure:',
+  );
   await page.evaluate(() => {
     const dendry = window.dendryUI.dendryEngine;
     dendry.state.qualities.month = 2;
@@ -87,7 +146,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   const schema = await page.evaluate(
     () => window.dendryUI.dendryEngine.state.qualities.save_schema_version,
   );
-  expect(schema).toBe(4);
+  expect(schema).toBe(5);
 
   for (const [tab, text] of [
     ['main_tab', 'Constitutional legitimacy'],
@@ -105,19 +164,101 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   await expect(page.locator('#qualities')).toContainText(
     'authorized place → returned candidate → approved credential',
   );
+  const firstMajlesPlace = page.locator(
+    '.majles-chart .chamber-seat[data-place-number="1"]',
+  );
+  const secondMajlesPlace = page.locator(
+    '.majles-chart .chamber-seat[data-place-number="2"]',
+  );
+  const compactLayout = page.viewportSize().width <= 600;
+  if (compactLayout) {
+    await expect(firstMajlesPlace).toHaveAttribute('aria-hidden', 'true');
+    await expect(firstMajlesPlace).not.toHaveAttribute('role', 'button');
+  } else {
+    await expect(firstMajlesPlace).toHaveAttribute('role', 'button');
+    await expect(firstMajlesPlace).toHaveAttribute(
+      'aria-label',
+      /^Majles place 1,/,
+    );
+    await expect(firstMajlesPlace).not.toHaveAttribute(
+      'aria-label',
+      /campaign influence|administrative pressure/,
+    );
+  }
+  const majlesPicker = page.locator('#majles-place-picker');
+  await expect(majlesPicker).toBeVisible();
+  await majlesPicker.selectOption('1');
+  await expect(page.locator('.chamber-place-detail')).toContainText(
+    'Majles — place 2 —',
+  );
+  expect((await majlesPicker.boundingBox()).height).toBeGreaterThanOrEqual(44);
+  if (compactLayout) {
+    await majlesPicker.selectOption('0');
+  } else {
+    await firstMajlesPlace.focus();
+  }
+  await expect(page.locator('.chamber-place-detail')).toContainText(
+    'Majles — place 1 —',
+  );
+  await expect(page.locator('.chamber-place-detail')).not.toContainText(
+    'campaign influence:',
+  );
+  if (compactLayout) {
+    await majlesPicker.selectOption('1');
+  } else {
+    await secondMajlesPlace.focus();
+    await page.keyboard.press('Enter');
+  }
+  await expect(page.locator('.chamber-place-detail')).toContainText(
+    'Majles — place 2 —',
+  );
   await page.evaluate(() => {
     window.dendryUI.dendryEngine.state.qualities.senate_convened = 1;
+    window.dendryUI.dendryEngine.state.qualities.gass_golshayan_rejected_majles = 1;
     window.updateSidebar();
   });
   await expect(page.locator('#qualities .senate-chart .chamber-seat')).toHaveCount(60);
+  const firstSenatePlace = page.locator(
+    '.senate-chart .chamber-seat[data-place-number="1"]',
+  );
+  if (compactLayout) {
+    await page.locator('#senate-place-picker').selectOption('0');
+  } else {
+    await firstSenatePlace.focus();
+  }
+  await expect(page.locator('.chamber-place-detail')).toContainText(
+    'Senate — place 1 —',
+  );
+  await page.getByRole('button', {name: 'Oil position', exact: true}).click();
+  await expect(
+    page.getByRole('button', {name: 'Oil position', exact: true}),
+  ).toHaveAttribute('aria-pressed', 'true');
+  if (compactLayout) {
+    await page.locator('#majles-place-picker').selectOption('0');
+  } else {
+    await page.locator('#qualities .majles-chart .chamber-seat').first().focus();
+  }
+  await expect(page.locator('.chamber-place-detail')).toContainText(
+    'oil position',
+  );
+
+  await page.evaluate(() => {
+    const q = window.dendryUI.dendryEngine.state.qualities;
+    q.support_history = [
+      {professional: 40, bazaar: 30, workers: 20, provincial: 25},
+      {professional: 45, bazaar: 34, workers: 23, provincial: 29},
+    ];
+  });
+  await page.locator('#support_tab').click();
+  await expect(page.locator('.support-trend-chart')).toBeVisible();
 
   await page.locator('#library-link').click();
   await expect(page.locator('#content')).toContainText('Research Library');
   const libraryChoice = page.locator('#content ul.choices a').first();
   await libraryChoice.focus();
   await page.keyboard.press('Enter');
-  await expect(page.locator('#content')).toContainText('Government and Constitution');
-  await page.getByRole('link', {name: 'Library'}).click();
+  await expect(page.locator('#content')).toContainText('Current Situation');
+  await page.getByRole('link', {name: 'Library', exact: true}).click();
   await page.getByRole('link', {name: 'Return', exact: true}).click();
   await expect(page.locator('#content')).toContainText(
     'Opposition briefing',
@@ -131,7 +272,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   ).toHaveCount(1);
   await expect(
     page.locator('.pinned-text-description'),
-  ).toContainText('Adviser action — available');
+  ).toContainText('Adviser consultation: available.');
   await expect(
     page.locator('ul.pinned-cards .card-caption').first(),
   ).not.toContainText('<span');
@@ -139,7 +280,8 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
     .locator('a')
     .click();
   await expect(page.locator('#content')).toContainText('Mohammad Mossadegh');
-  await firstAvailableChoice(page);
+  await page.getByRole('link', {name: 'State the constitutional case'})
+    .click();
   await expect(page.locator('#content')).toContainText(
     'leave with a common case',
   );
@@ -148,10 +290,41 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
     'Opposition briefing',
   );
 
+  await page.evaluate(() => {
+    const dendry = window.dendryUI.dendryEngine;
+    const q = dendry.state.qualities;
+    q.advisor_fatemi_available = 1;
+    q.advisor_makki_available = 1;
+    q.advisor_pool_size = 4;
+    dendry.goToScene('advisor_roster');
+  });
+  await page.getByRole('link', {name: 'Review the active slate'}).click();
+  await page.getByRole('link', {name: 'Add Hossein Fatemi'}).click();
+  await page.getByRole('link', {name: 'Confirm the active slate'}).click();
+  await expect(page.locator('ul.pinned-cards li')).toHaveCount(4);
+  await expect(page.locator('.pinned-text-description')).toContainText(
+    'Adviser slate review: available in 6 months.',
+  );
+
   await page.locator('ul.decks li a').first().click();
+  await expect(page.locator('.hand-state')).toContainText('open slots');
+  const originalAgenda = await page.locator(
+    'ul.hand .card-caption',
+  ).allTextContents();
   const handCard = page.locator('ul.hand li a').first();
   await expect(handCard).toBeVisible();
   await handCard.click();
+  await page.getByRole('link', {name: 'Return card to hand'}).click();
+  await expect(page.locator('ul.hand li a').first()).toBeVisible();
+  expect(
+    await page.locator('ul.hand .card-caption').allTextContents(),
+  ).toEqual(originalAgenda);
+  expect(
+    await page.evaluate(
+      () => window.dendryUI.dendryEngine.state.qualities.month_actions,
+    ),
+  ).toBe(0);
+  await page.locator('ul.hand li a').first().click();
   await firstAvailableChoice(page);
   await chooseUntilScene(page, 'main');
 
@@ -160,7 +333,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
     const key = window.dendryUI.save_prefix + '_0';
     return JSON.parse(localStorage[key]);
   });
-  expect(saved.qualities.save_schema_version).toBe(4);
+  expect(saved.qualities.save_schema_version).toBe(5);
   expect(saved.qualities).not.toHaveProperty('run_seed');
 
   await page.evaluate(() => {
@@ -179,7 +352,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
     window.dendryUI.loadSlot(1);
   });
   await expect.poll(() => page.dialogMessages).toContainEqual(
-    expect.stringContaining('predates the v0.2'),
+    expect.stringContaining('predates the v0.3'),
   );
 
   await page.evaluate(() => window.dendryUI.showSaveSlots());
@@ -196,7 +369,7 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
     () => page.evaluate(
       () => window.dendryUI.dendryEngine.state.qualities.save_schema_version,
     ),
-  ).toBe(4);
+  ).toBe(5);
 
   await page.evaluate(() => {
     window.enableDarkMode();
@@ -226,19 +399,64 @@ test('complete browser playthrough reaches the ending', async ({page}) => {
     while (dendry.state.sceneId !== 'campaign_ending' && safety < 300) {
       safety += 1;
       if (dendry.state.sceneId === 'main') {
-        let card = dendry.drawCard('main.party_affairs');
-        if (!card.id && dendry.state.qualities.front_formed) {
-          card = dendry.drawCard('main.public_campaign');
-        }
-        if (!card.id && dendry.state.qualities.parliamentary_deck_unlocked) {
+        let card;
+        if (dendry.state.qualities.parliamentary_deck_unlocked) {
           card = dendry.drawCard('main.parliamentary_affairs');
         }
-        if (!card.id) throw new Error('No normal action available');
+        if (!card?.id && dendry.state.qualities.front_formed) {
+          card = dendry.drawCard('main.public_campaign');
+        }
+        if (!card?.id) {
+          card = dendry.drawCard('main.party_affairs');
+        }
+        if (!card?.id) throw new Error('No normal action available');
         dendry.playCard(card.id);
       }
-      const choiceIndex = dendry.choiceCache.findIndex(
-        (choice) => choice.canChoose,
-      );
+      let choiceIndex;
+      if (dendry.state.sceneId === 'advisor_roster') {
+        choiceIndex = dendry.choiceCache.findIndex(
+          (choice) => choice.canChoose && choice.id === (
+            dendry.state.qualities.advisor_roster_required
+              ? 'advisor_roster.advisor_roster_editor'
+              : 'advisor_roster.cancel_advisor_roster'
+          ),
+        );
+      } else if (
+        dendry.state.sceneId === 'advisor_roster.advisor_roster_editor'
+      ) {
+        choiceIndex = dendry.choiceCache.findIndex(
+          (choice) => choice.canChoose &&
+            choice.id === 'advisor_roster.confirm_advisor_roster',
+        );
+        if (choiceIndex < 0) {
+          choiceIndex = dendry.choiceCache.findIndex(
+            (choice) => choice.canChoose &&
+              choice.id.includes('.draft_add_'),
+          );
+        }
+      } else {
+        const preferred = [
+          '.oil_coalition',
+          '.deputies_oil',
+          '.meeting_oil',
+          '.resolution_oil',
+          '.press_oil',
+          '.bazaar_oil',
+          '.nationalization_cross_chamber',
+        ];
+        choiceIndex = -1;
+        for (const fragment of preferred) {
+          choiceIndex = dendry.choiceCache.findIndex(
+            (choice) => choice.canChoose && choice.id.includes(fragment),
+          );
+          if (choiceIndex >= 0) break;
+        }
+        if (choiceIndex < 0) {
+          choiceIndex = dendry.choiceCache.findIndex(
+            (choice) => choice.canChoose,
+          );
+        }
+      }
       if (choiceIndex < 0) throw new Error('No available choice');
       dendry.choose(choiceIndex);
     }
@@ -266,6 +484,13 @@ test('complete browser playthrough reaches the ending', async ({page}) => {
 
   await expect(page.locator('#content')).toContainText(result.ending);
   await expect(page.locator('#content')).toContainText('Causal recap');
+  await page.locator('#main_tab').click();
+  await expect(page.locator('#qualities')).not.toContainText(
+    'Adviser action: available',
+  );
+  await expect(page.locator('#qualities')).not.toContainText(
+    'Adviser roster: may be changed',
+  );
 
   await page.getByRole('link', {name: 'Review the Research Library'}).click();
   await expect(page.locator('#content')).toContainText('Research Library');

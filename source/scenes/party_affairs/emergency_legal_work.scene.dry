@@ -22,11 +22,21 @@ The lawyers can concentrate on one part of that burden this month.
 - @legal_detentions
 - @legal_press
 - @legal_archive
+- @return_card
 
 @legal_detentions
 title: Prepare detention cases
 subtitle: Individual files give the emergency a human and legal record, even where immediate release remains beyond reach
-on-arrival: constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2
+on-arrival: {!
+Q.emergency_legal_work_repeat =
+    Q.emergency_legal_work_last === "detentions" ? 1 : 0;
+Q.emergency_legal_work_last = "detentions";
+Q.constitutional_legitimacy += Q.emergency_legal_work_repeat ? 1 :
+    (Q.constitutional_legitimacy < 70 ? 3 : 1);
+Q.parliamentary_procedure_legitimacy +=
+    Q.emergency_legal_work_repeat ? 1 :
+    (Q.parliamentary_procedure_legitimacy < 70 ? 2 : 1);
+!}
 
 Lawyers collect orders, dates, family testimony, and the authority claimed for
 each detention. The files do not compel the government to reverse itself, but
@@ -34,13 +44,28 @@ they prevent arrests from becoming an unexamined administrative fact.
 
 The opposition acquires cases it can defend in constitutional language rather
 than relying on a general denunciation alone.
+[? if emergency_legal_work_repeat = 1:
+Counsel return to the detention files already opened, adding new orders,
+answers, and family testimony. The continuing work matters to those cases,
+but it no longer establishes an entirely new constitutional argument. ?]
+[? if constitutional_legitimacy >= 75: The principal detention arguments are
+now preserved. Further work keeps individual files current, but adds less to
+the general constitutional case. ?]
 
 - @post_event: Continue
 
 @legal_press
 title: Defend the restricted newspapers
 subtitle: Editors receive a common legal argument while deciding independently how much danger they can accept
-on-arrival: press_capacity += 3; constitutional_legitimacy += 2
+on-arrival: {!
+Q.emergency_legal_work_repeat =
+    Q.emergency_legal_work_last === "press" ? 1 : 0;
+Q.emergency_legal_work_last = "press";
+Q.press_capacity += Q.emergency_legal_work_repeat ? 1 :
+    (Q.press_capacity < 70 ? 3 : 1);
+Q.constitutional_legitimacy += Q.emergency_legal_work_repeat ? 1 :
+    (Q.constitutional_legitimacy < 70 ? 2 : 1);
+!}
 
 Counsel prepares a short brief on closures, censorship, and the legal limits
 claimed for martial law. Editors adapt it to their own circumstances rather
@@ -48,13 +73,29 @@ than waiting for a central instruction that does not exist.
 
 Several papers are better able to explain the dispute. Their ability to print
 still depends on decisions the lawyers do not control.
+[? if emergency_legal_work_repeat = 1:
+Counsel update the brief for newer restrictions and individual cases. Editors
+gain a current answer, while the basic argument—and the authorities' power to
+prevent publication—remains much as before. ?]
+[? if press_capacity >= 75: The available papers already have the common
+argument. Another brief helps them answer a new order, but cannot restore
+papers the authorities have prevented from printing. ?]
 
 - @post_event: Continue
 
 @legal_archive
 title: Keep a common emergency archive
 subtitle: A quiet documentary record sacrifices immediate publicity for evidence that can be used later
-on-arrival: parliamentary_procedure_legitimacy += 3; organizational_reach += 2
+on-arrival: {!
+Q.emergency_legal_work_repeat =
+    Q.emergency_legal_work_last === "archive" ? 1 : 0;
+Q.emergency_legal_work_last = "archive";
+Q.parliamentary_procedure_legitimacy +=
+    Q.emergency_legal_work_repeat ? 1 :
+    (Q.parliamentary_procedure_legitimacy < 70 ? 3 : 1);
+Q.organizational_reach += Q.emergency_legal_work_repeat ? 1 :
+    (Q.organizational_reach < 70 ? 2 : 1);
+!}
 
 A small group catalogs decrees, newspaper orders, detention reports, and
 contradictory official statements. Items that cannot be verified are marked
@@ -62,5 +103,13 @@ as such instead of being discarded or promoted into fact.
 
 The archive attracts little attention this month. It gives future
 constitutional and parliamentary work a firmer record.
+[? if emergency_legal_work_repeat = 1:
+The archivists add the latest orders and testimony to the system already
+established. Continuity protects the record from dispersal, although another
+month of cataloguing does not by itself broaden the opposition or alter the
+emergency. ?]
+[? if parliamentary_procedure_legitimacy >= 75: The archive's method is now
+established. Continued cataloguing preserves new material, but does not by
+itself broaden the opposition or change the emergency. ?]
 
 - @post_event: Continue

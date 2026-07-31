@@ -4,7 +4,7 @@ title: <span class="term term-mossadegh">Mohammad Mossadegh</span>
 new-page: true
 is-pinned-card: true
 tags: advisor
-view-if: advisor_mossadegh_available = 1
+view-if: advisor_mossadegh_available = 1 and advisor_mossadegh_active = 1
 
 = {!<span class="term term-mossadegh">!}Mohammad Mossadegh{!</span>!}
 
@@ -32,7 +32,7 @@ title: State the constitutional case
 subtitle: <span class="term term-mossadegh">Mossadegh</span> gives aligned constitutionalists a formula they can repeat without pretending to share a full program
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
-on-arrival: advisor_action_timer = 6; constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2; mossadegh_authority += 1; iran_party_relation += 2
+on-arrival: advisor_action_timer = 6; constitutional_legitimacy += 3; parliamentary_procedure_legitimacy += 2; mossadegh_authority += 1; iran_party_relation += 2; common_resolution_timer = 0
 
 {!<span class="term term-mossadegh">!}Mossadegh{!</span>!} restates the case
 for representative institutions and constitutional government, then tests each
@@ -57,7 +57,7 @@ subtitle: Each tendency is heard in its own language; agreement is postponed rat
 view-if: front_formed = 1
 choose-if: advisor_action_timer <= 0 and front_formed = 1
 unavailable-subtitle: [+ advisor_action_timer +] months before another adviser action.
-on-arrival: advisor_action_timer = 6; iran_party_relation += 1; toilers_relation += 1; independent_nationalists_relation += 1; religious_network_relation += 1; iran_party_dissent -= 1; toilers_dissent -= 1; independent_nationalists_dissent -= 1; religious_network_dissent -= 1
+on-arrival: advisor_action_timer = 6; coalition_meeting_timer = 0; iran_party_relation += 1; toilers_relation += 1; independent_nationalists_relation += 1; religious_network_relation += 1; iran_party_dissent -= 1; toilers_dissent -= 1; independent_nationalists_dissent -= 1; religious_network_dissent -= 1
 
 The discussion does not produce agreement, but it clarifies what the
 cooperating circles expect from the

@@ -32,6 +32,7 @@ remain in the active unavailable-source queue.
 | [`SIXTEENTH_MAJLES_LEDGER.md`](SIXTEENTH_MAJLES_LEDGER.md) | Constituency, return, credential, board, and decision ledger |
 | [`systems/recurring-actions.md`](systems/recurring-actions.md) | Historical boundary and mechanical abstraction for recurring cards, adviser consultations, and roster changes |
 | [`systems/support-and-chamber-display.md`](systems/support-and-chamber-display.md) | Historical boundary for qualitative support, candidate-level election effects, credentials, and chamber diagrams |
+| [`systems/dynamic-political-simulation.md`](systems/dynamic-political-simulation.md) | Evidence boundary for coupled faction, Crown, constituency, credential, and chamber-vote reducers |
 | [`systems/information-and-ending-surfaces.md`](systems/information-and-ending-surfaces.md) | Claim routing and simulation boundaries for menus, briefings, status, Library, and endings |
 | [`CRISIS_EVIDENCE_AUDIT.md`](CRISIS_EVIDENCE_AUDIT.md) | Thirty Tir, 19 August, payments, welfare, and control uncertainty |
 | [`ECONOMIC_HISTORY.md`](ECONOMIC_HISTORY.md) | Economic questions, observation schema, and model-neutral evidence |

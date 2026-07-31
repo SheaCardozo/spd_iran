@@ -14,6 +14,26 @@ const ENGINE_INTERNAL = new Set([
   'root.start_game',
   'post_event',
   'post_event.events_choice',
+  'return_card',
+  'reactions',
+  'advisor_roster.advisor_roster_editor',
+  'advisor_roster.draft_remove_mossadegh',
+  'advisor_roster.draft_add_mossadegh',
+  'advisor_roster.draft_remove_saleh',
+  'advisor_roster.draft_add_saleh',
+  'advisor_roster.draft_remove_fatemi',
+  'advisor_roster.draft_add_fatemi',
+  'advisor_roster.draft_remove_makki',
+  'advisor_roster.draft_add_makki',
+  'advisor_roster.draft_remove_kashani',
+  'advisor_roster.draft_add_kashani',
+  'advisor_roster.draft_remove_maleki',
+  'advisor_roster.draft_add_maleki',
+  'advisor_roster.confirm_advisor_roster',
+  'advisor_roster.advisor_roster_resume_events',
+  'advisor_roster.cancel_advisor_roster',
+  'campaign_spine.majles_vote_resolution',
+  'campaign_spine.senate_vote_resolution',
 ]);
 
 const DECK_CONTAINERS = new Set([
@@ -40,6 +60,7 @@ const INFORMATION_SURFACES = new Set([
   'status.majles',
   'status.crown',
   'research_library',
+  'research_library.current_situation',
   'research_library.government',
   'research_library.timeline',
   'research_library.coalition_people',
@@ -49,6 +70,9 @@ const INFORMATION_SURFACES = new Set([
   'research_library.uncertainty',
   'research_library.bibliography',
   'campaign_ending',
+  'campaign_spine.majles_nationalization_defeat',
+  'campaign_spine.senate_passage',
+  'campaign_spine.senate_nationalization_defeat',
 ]);
 
 const SEMANTIC_TERM_RULES = [

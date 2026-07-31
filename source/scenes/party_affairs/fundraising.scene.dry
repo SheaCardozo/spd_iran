@@ -17,14 +17,29 @@ for larger sums, or use its press network to stage a public subscription.
 Money does not arrive without a political relationship. Choose which
 relationship the secretariat will cultivate.
 
+[? if fundraising_stage > 0: The treasury is currently organized around
+“[+ fundraising_policy +].” Changing that policy also changes which
+contributors expect to be heard. ?]
+
 - @fund_small
 - @fund_notables
 - @fund_subscription
+- @return_card
 
 @fund_small
 title: Seek many small organizational contributions
 subtitle: Many modest subscriptions keep the campaign independent, though the treasury fills slowly
-on-arrival: resources += 2; organizational_reach += 2; independent_nationalists_organization += 2
+on-arrival: {!
+var repeated = Q.fundraising_policy === "Broad small subscriptions";
+var mature = Q.fundraising_stage >= 2;
+Q.fundraising_policy = "Broad small subscriptions";
+Q.fundraising_stage += 1;
+Q.dues = 3;
+Q.resources += mature ? 1 : 2;
+Q.organizational_reach += mature ? 0 : 2;
+Q.independent_nationalists_organization += mature ? 1 : 2;
+if (repeated && mature) Q.independent_nationalists_dissent += 1;
+!}
 
 Local volunteers assemble many small contributions and report where new
 supporters can be contacted again. The total is limited, but the collection
@@ -32,13 +47,27 @@ itself leaves behind useful lists and habits.
 
 The treasury improves gradually, and independent organizers gain a broader
 base that is not tied to one benefactor.
+[? if fundraising_stage > 2: The familiar collectors return to much the same
+circle of contributors. They can keep money coming in, but the drive no longer
+opens a fresh layer of organization and some volunteers resent being asked to
+make the same appeal again. ?]
 
 - @post_event: Continue
 
 @fund_notables
 title: Approach sympathetic notables
 subtitle: A few large gifts fill the treasury quickly and invite questions about whom the <span class="term term-national-front">Front</span> serves
-on-arrival: resources += 4; public_mandate -= 1; iran_party_relation += 2; toilers_dissent += 2
+on-arrival: {!
+var repeated = Q.fundraising_policy === "Large private contributions";
+var mature = Q.fundraising_stage >= 2;
+Q.fundraising_policy = "Large private contributions";
+Q.fundraising_stage += 1;
+Q.dues = 2;
+Q.resources += mature ? 2 : 4;
+Q.public_mandate -= repeated ? 2 : 1;
+Q.iran_party_relation += mature ? 1 : 2;
+Q.toilers_dissent += repeated ? 4 : 2;
+!}
 
 Established intermediaries secure several larger contributions quickly. {!<span class="term term-constitutionalist">!}Iran
 Party{!</span>!} contacts appreciate the practical result, but organizers on the social
@@ -46,13 +75,26 @@ left ask what access the donors will expect in return.
 
 The treasury is healthier. The coalition's public independence is a little
 harder to explain.
+[? if fundraising_stage > 2: The same intermediaries now expect continuing
+access rather than offering a disinterested emergency gift. Less new money is
+available, while the argument over dependence becomes harder to contain. ?]
 
 - @post_event: Continue
 
 @fund_subscription
 title: Run a public subscription through friendly papers
 subtitle: The newspapers turn giving into a public act, producing less money but a wider sense of ownership
-on-arrival: resources += 3; press_capacity += 2; public_mandate += 1
+on-arrival: {!
+var repeated = Q.fundraising_policy === "Public press subscription";
+var mature = Q.fundraising_stage >= 2;
+Q.fundraising_policy = "Public press subscription";
+Q.fundraising_stage += 1;
+Q.dues = 2;
+Q.resources += mature ? 1 : 3;
+Q.press_capacity += mature ? 1 : 2;
+Q.public_mandate += mature ? 0 : 1;
+if (repeated && mature) Q.press_capacity -= 1;
+!}
 
 Friendly papers publish a time-limited appeal and direct readers to local
 collectors. The subscription raises less than a concentrated approach to
@@ -62,5 +104,8 @@ visible participation.
 Editors and collectors learn to coordinate more closely, and the
 {!<span class="term term-national-front">!}Front{!</span>!} can
 describe the fund as publicly supported.
+[? if fundraising_stage > 2: Another appeal reaches many of the same readers.
+It still pays some bills, but editors must surrender space that would otherwise
+carry the constitutional and oil campaign. ?]
 
 - @post_event: Continue

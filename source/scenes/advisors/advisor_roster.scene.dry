@@ -1,0 +1,210 @@
+# Dynamic SPD comparison: advisors/shuffle_leadership_pinned.scene.dry and
+# party_affairs/shuffle_leadership.scene.dry. This pinned manager retains the
+# three-person roster but does not spend the monthly action.
+title: Adviser roster
+new-page: true
+is-card: true
+is-pinned-card: true
+view-if: advisor_pool_size > 3
+on-arrival: {!
+Q.draft_mossadegh = Q.advisor_mossadegh_active;
+Q.draft_saleh = Q.advisor_saleh_active;
+Q.draft_fatemi = Q.advisor_fatemi_active;
+Q.draft_makki = Q.advisor_makki_active;
+Q.draft_kashani = Q.advisor_kashani_active;
+Q.draft_maleki = Q.advisor_maleki_active;
+if (!Q.advisor_mossadegh_available) Q.draft_mossadegh = 0;
+if (!Q.advisor_saleh_available) Q.draft_saleh = 0;
+if (!Q.advisor_fatemi_available) Q.draft_fatemi = 0;
+if (!Q.advisor_makki_available) Q.draft_makki = 0;
+if (!Q.advisor_kashani_available) Q.draft_kashani = 0;
+if (!Q.advisor_maleki_available) Q.draft_maleki = 0;
+Q.draft_advisor_count = Q.draft_mossadegh + Q.draft_saleh +
+    Q.draft_fatemi + Q.draft_makki + Q.draft_kashani + Q.draft_maleki;
+Q.advisor_roster_original_signature =
+    "" + Q.advisor_mossadegh_active + Q.advisor_saleh_active +
+    Q.advisor_fatemi_active + Q.advisor_makki_active +
+    Q.advisor_kashani_active + Q.advisor_maleki_active;
+!}
+
+= Adviser roster
+
+Three political figures can take an active part in the opposition's regular
+deliberations. Eligibility follows the documented coalition; selection only
+determines which three consultations are kept immediately at hand.
+
+[? if advisor_roster_required = 1:
+The eligible circle has changed: [+ advisor_roster_change_reason +] The
+existing cooldown is suspended for this review. You must leave exactly three
+active advisers before returning to the campaign. ?]
+
+[? if advisor_roster_timer > 0 and advisor_roster_required = 0:
+The active slate can be changed again in [? if advisor_roster_timer = 1: 1
+month.?][? if advisor_roster_timer > 1: [+ advisor_roster_timer +] months.?] ?]
+
+- @advisor_roster_editor: Review the active slate
+- @cancel_advisor_roster: Return to the monthly briefing
+
+@advisor_roster_editor
+title: Select active advisers
+new-page: true
+choose-if: advisor_roster_timer <= 0 or advisor_roster_required = 1
+unavailable-subtitle: The active slate is still on cooldown.
+on-arrival: {!
+var draftNames = [];
+if (Q.draft_mossadegh) draftNames.push("Mohammad Mossadegh");
+if (Q.draft_saleh) draftNames.push("Allahyar Saleh");
+if (Q.draft_fatemi) draftNames.push("Hossein Fatemi");
+if (Q.draft_makki) draftNames.push("Hossein Makki");
+if (Q.draft_kashani) draftNames.push("Ayatollah Abol-Qasem Kashani");
+if (Q.draft_maleki) draftNames.push("Khalil Maleki");
+Q.draft_advisor_names = draftNames.join("; ");
+!}
+
+= Adviser roster
+
+Active advisers selected: [+ draft_advisor_count +] / 3
+
+Current committed slate: [+ active_advisor_names +].
+
+Proposed slate: [+ draft_advisor_names +].
+
+- @draft_remove_mossadegh
+- @draft_add_mossadegh
+- @draft_remove_saleh
+- @draft_add_saleh
+- @draft_remove_fatemi
+- @draft_add_fatemi
+- @draft_remove_makki
+- @draft_add_makki
+- @draft_remove_kashani
+- @draft_add_kashani
+- @draft_remove_maleki
+- @draft_add_maleki
+- @confirm_advisor_roster
+- @cancel_advisor_roster
+
+@draft_remove_mossadegh
+title: Remove Mohammad Mossadegh
+view-if: draft_mossadegh = 1 and (advisor_roster_timer <= 0 or advisor_roster_required = 1)
+on-arrival: draft_mossadegh = 0; draft_advisor_count -= 1
+go-to: advisor_roster_editor
+
+@draft_add_mossadegh
+title: Add Mohammad Mossadegh
+view-if: advisor_mossadegh_available = 1 and draft_mossadegh = 0 and draft_advisor_count < 3 and (advisor_roster_timer <= 0 or advisor_roster_required = 1)
+on-arrival: draft_mossadegh = 1; draft_advisor_count += 1
+go-to: advisor_roster_editor
+
+@draft_remove_saleh
+title: Remove Allahyar Saleh
+view-if: draft_saleh = 1 and (advisor_roster_timer <= 0 or advisor_roster_required = 1)
+on-arrival: draft_saleh = 0; draft_advisor_count -= 1
+go-to: advisor_roster_editor
+
+@draft_add_saleh
+title: Add Allahyar Saleh
+view-if: advisor_saleh_available = 1 and draft_saleh = 0 and draft_advisor_count < 3 and (advisor_roster_timer <= 0 or advisor_roster_required = 1)
+on-arrival: draft_saleh = 1; draft_advisor_count += 1
+go-to: advisor_roster_editor
+
+@draft_remove_fatemi
+title: Remove Hossein Fatemi
+view-if: draft_fatemi = 1 and (advisor_roster_timer <= 0 or advisor_roster_required = 1)
+on-arrival: draft_fatemi = 0; draft_advisor_count -= 1
+go-to: advisor_roster_editor
+
+@draft_add_fatemi
+title: Add Hossein Fatemi
+view-if: advisor_fatemi_available = 1 and draft_fatemi = 0 and draft_advisor_count < 3 and (advisor_roster_timer <= 0 or advisor_roster_required = 1)
+on-arrival: draft_fatemi = 1; draft_advisor_count += 1
+go-to: advisor_roster_editor
+
+@draft_remove_makki
+title: Remove Hossein Makki
+view-if: draft_makki = 1 and (advisor_roster_timer <= 0 or advisor_roster_required = 1)
+on-arrival: draft_makki = 0; draft_advisor_count -= 1
+go-to: advisor_roster_editor
+
+@draft_add_makki
+title: Add Hossein Makki
+view-if: advisor_makki_available = 1 and draft_makki = 0 and draft_advisor_count < 3 and (advisor_roster_timer <= 0 or advisor_roster_required = 1)
+on-arrival: draft_makki = 1; draft_advisor_count += 1
+go-to: advisor_roster_editor
+
+@draft_remove_kashani
+title: Remove Ayatollah Abol-Qasem Kashani
+view-if: draft_kashani = 1 and (advisor_roster_timer <= 0 or advisor_roster_required = 1)
+on-arrival: draft_kashani = 0; draft_advisor_count -= 1
+go-to: advisor_roster_editor
+
+@draft_add_kashani
+title: Add Ayatollah Abol-Qasem Kashani
+view-if: advisor_kashani_available = 1 and draft_kashani = 0 and draft_advisor_count < 3 and (advisor_roster_timer <= 0 or advisor_roster_required = 1)
+on-arrival: draft_kashani = 1; draft_advisor_count += 1
+go-to: advisor_roster_editor
+
+@draft_remove_maleki
+title: Remove Khalil Maleki
+view-if: draft_maleki = 1 and (advisor_roster_timer <= 0 or advisor_roster_required = 1)
+on-arrival: draft_maleki = 0; draft_advisor_count -= 1
+go-to: advisor_roster_editor
+
+@draft_add_maleki
+title: Add Khalil Maleki
+view-if: advisor_maleki_available = 1 and draft_maleki = 0 and draft_advisor_count < 3 and (advisor_roster_timer <= 0 or advisor_roster_required = 1)
+on-arrival: draft_maleki = 1; draft_advisor_count += 1
+go-to: advisor_roster_editor
+
+@confirm_advisor_roster
+title: Confirm the active slate
+choose-if: draft_advisor_count = 3 and (advisor_roster_timer <= 0 or advisor_roster_required = 1)
+unavailable-subtitle: Select exactly three eligible advisers.
+on-arrival: {!
+var proposedSignature =
+    "" + Q.draft_mossadegh + Q.draft_saleh + Q.draft_fatemi +
+    Q.draft_makki + Q.draft_kashani + Q.draft_maleki;
+var rosterChanged = proposedSignature !== Q.advisor_roster_original_signature;
+Q.advisor_mossadegh_active = Q.draft_mossadegh;
+Q.advisor_saleh_active = Q.draft_saleh;
+Q.advisor_fatemi_active = Q.draft_fatemi;
+Q.advisor_makki_active = Q.draft_makki;
+Q.advisor_kashani_active = Q.draft_kashani;
+Q.advisor_maleki_active = Q.draft_maleki;
+Q.active_advisors = [];
+if (Q.advisor_mossadegh_active) Q.active_advisors.push("mossadegh");
+if (Q.advisor_saleh_active) Q.active_advisors.push("saleh");
+if (Q.advisor_fatemi_active) Q.active_advisors.push("fatemi");
+if (Q.advisor_makki_active) Q.active_advisors.push("makki");
+if (Q.advisor_kashani_active) Q.active_advisors.push("kashani");
+if (Q.advisor_maleki_active) Q.active_advisors.push("maleki");
+var advisorNames = {
+    mossadegh: "Mohammad Mossadegh", saleh: "Allahyar Saleh",
+    fatemi: "Hossein Fatemi", makki: "Hossein Makki",
+    kashani: "Ayatollah Abol-Qasem Kashani", maleki: "Khalil Maleki"
+};
+var activeNames = [];
+for (var activeAdvisor of Q.active_advisors) {
+    activeNames.push(advisorNames[activeAdvisor]);
+}
+Q.active_advisor_names = activeNames.join("; ");
+if (rosterChanged) Q.advisor_roster_timer = 6;
+Q.advisor_roster_required = 0;
+Q.advisor_eligibility_signature =
+    "" + Q.advisor_mossadegh_available + Q.advisor_saleh_available +
+    Q.advisor_fatemi_available + Q.advisor_makki_available +
+    Q.advisor_kashani_available + Q.advisor_maleki_available;
+Q.advisor_reconciled_signature = Q.advisor_eligibility_signature;
+Q.advisor_roster_change_reason = "";
+!}
+go-to: advisor_roster_resume_events if advisor_roster_event_return = 1; main if advisor_roster_event_return = 0
+
+@advisor_roster_resume_events
+title: Return to the campaign
+on-arrival: advisor_roster_event_return = 0
+go-to: post_event
+
+@cancel_advisor_roster
+title: Keep the current slate
+view-if: advisor_roster_required = 0
+go-to: main

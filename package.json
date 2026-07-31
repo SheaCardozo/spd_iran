@@ -1,12 +1,13 @@
 {
   "name": "spd-iran",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "A historically grounded political simulation of the opposition, National Front, parliament, and oil campaign, 1949–1951.",
   "scripts": {
     "build": "node scripts/build.js",
     "build:hosting": "npm run build && node scripts/build-hosting.js",
     "play": "npm run build && node scripts/serve.js",
+    "browser:agent": "npm run build && node scripts/browser-agent/gateway.js",
     "research:ocr": "node scripts/research-ocr.js",
     "research:ocr:catalog": "node scripts/research-ocr.js catalog",
     "research:ocr:doctor": "node scripts/research-ocr.js doctor",
@@ -14,7 +15,8 @@
     "research:ocr:verify": "node scripts/research-ocr.js verify",
     "research:transcribe:qashqai": ".tools/transcription/venv/bin/python scripts/transcribe-qashqai.py",
     "test": "npm run build:hosting && node --test test/*.test.js",
-    "test:browser": "npm run build && playwright test"
+    "test:browser": "npm run build && playwright test",
+    "test:agents": "npm run build && node scripts/browser-agent/batch.js"
   },
   "dependencies": {
     "dendrynexus": "github:originn0/dendrynexus",
