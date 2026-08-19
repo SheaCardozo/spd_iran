@@ -174,6 +174,39 @@ test('the Dynamic-mode agenda has four cards and cancellation restores it exactl
   assert.equal(dendry.state.qualities.time, 0);
 });
 
+test('Parliament inspection preserves the monthly hand and action', async () => {
+  const game = await loadGame();
+  const dendry = new engine.DendryEngine(
+    new engine.NullUserInterface(),
+    game,
+  ).beginGame([0]);
+  reachMonthlyHand(dendry);
+  dendry.drawCard('main.party_affairs');
+  const originalHand = dendry.state.currentHands.main.map((held) => held.id);
+  const originalTime = dendry.state.qualities.time;
+  const originalAction = dendry.state.qualities.month_actions;
+
+  dendry.state.qualities.parliamentary_deck_unlocked = 1;
+  dendry.goToScene('parliament');
+  assert.equal(dendry.state.sceneId, 'parliament');
+  assert.match(
+    JSON.stringify(dendry.game.scenes.parliament.content),
+    /Credential/,
+  );
+  dendry.choose(firstAvailableChoice(
+    dendry,
+    (option) => option.id === 'main',
+  ));
+
+  assert.equal(dendry.state.sceneId, 'main');
+  assert.equal(dendry.state.qualities.time, originalTime);
+  assert.equal(dendry.state.qualities.month_actions, originalAction);
+  assert.deepEqual(
+    dendry.state.currentHands.main.map((held) => held.id),
+    originalHand,
+  );
+});
+
 test('a pinned adviser uses the shared cooldown without advancing time', async () => {
   const game = await loadGame();
   const dendry = new engine.DendryEngine(

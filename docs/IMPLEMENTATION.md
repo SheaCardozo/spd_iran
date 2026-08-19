@@ -85,8 +85,9 @@ gateway has no selector, arbitrary evaluation, scene-ID, source, or shared
 state method; a separate oracle may inspect state privately for invariants and
 replay hashes. Status, Research Library, Save/Load, and Options remain
 player-only; adversarial contexts remove and disable those utilities while
-retaining the live Main, Opposition/Coalition, Support, Parliament, and Crown
-sidebar tabs.
+retaining the live Main, Politics, and Support sidebar tabs. The phase-gated
+Parliament control is part of ordinary play and remains available to an agent
+once the election begins.
 
 Dynamic SPD's `out/html/index.html`, `out/html/game.js`, and
 `out/html/game.css` establish the rendered browser as the public interaction
@@ -94,6 +95,52 @@ surface, but the reference project has no equivalent black-box agent gateway
 or parallel browser-play policy. Iran retains that browser surface and adds a
 testing adapter around it. This does not change Dendry state ownership, deck
 semantics, action economy, persistence, or historical content.
+
+## Sidebar and Parliament surface divergence
+
+The v0.3 convergence initially placed Campaign, Opposition/Coalition, Support,
+Parliament, and Crown in five persistent sidebar tabs. That split is retired.
+It mixed campaign capacities, advisers, government, and two place-level
+chambers in one narrow surface, and exposed the Majles before its election was
+part of the campaign.
+
+Dynamic SPD provides the replacement responsibility boundary:
+
+- `out/html/index.html` defines a compact persistent tab bar;
+- `source/scenes/status.scene.dry` puts date, resources, the player's political
+  position, and the current government on Main;
+- the Politics subscene holds parties and internal factions;
+- the Polls subscene holds constituency support; and
+- `out/html/game.js` centrally refreshes the selected status subscene.
+
+Iran retains those responsibilities with three tabs: **Main** contains date,
+resources, opposition position, campaign capacity, and Crown/government state;
+**Politics** contains the opposition or coalition and its component
+organizations; **Support** contains constituency support and its monthly
+direction. Adviser identity and cooldowns remain on the pinned adviser surface,
+not in the sidebar.
+
+Iran deliberately diverges from SPD's sidebar-scale Reichstag summary. The
+Majles and Senate have 196 place records, separate return, credential,
+usability, attendance, and oil-position states, and touch-accessible dossiers.
+When the Sixteenth-Majles election begins, a non-action **Parliament** control
+appears beside the action decks. It opens a full scene containing the current
+chamber totals, credential explanation, diagrams, and place dossiers. The
+diagrams copy Dynamic SPD's `d3-parliament` election treatment: a 500×250
+semicircle with a 0.4 inner radius, angle-sorted seats, contiguous political
+blocks, center-out animation, and a keyed result table. Iran maps those seats
+to actual place records and retains touch, keyboard, and dossier access; it
+does not reuse German party categories, colors, or historical imagery. Opening
+or closing Parliament does not reserve an action, alter the hand, or advance
+time.
+
+This is a major status-presentation change but not a state or save migration:
+all existing qualities and place records retain their schema-5 meanings.
+Browser-agent policy treats Parliament as gameplay information while the
+full Status, Research Library, save, and option utilities remain player-only.
+Validation covers phase gating, sidebar contents, return to the unchanged hand,
+all chamber modes and dossiers, keyboard/touch operation, agent access, and
+desktop/mobile layout.
 
 ## Implemented v0.3 architecture
 

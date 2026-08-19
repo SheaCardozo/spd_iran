@@ -5,11 +5,11 @@
 This review compares the compiled Iran campaign with Dynamic SPD's hand,
 discard, reducer, adviser, recurring-card, election, event, status, and
 Library responsibilities. It also applies the project-wide scene standard to
-all **217 compiled scenes**.
+all **216 compiled scenes**.
 
 ## Findings
 
-The automated classification covers 217/217 scenes with zero failures. The
+The automated classification covers 216/216 scenes with zero failures. The
 opening remains pre-formation opposition work: it does not leak the National
 Front into January 1949. Every recurring card has a developed setup,
 historical/flavour-led choice subtitles, visible consequence prose, and a

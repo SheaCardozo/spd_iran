@@ -118,10 +118,10 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.doesNotMatch(index, /id="primer-link"/);
   assert.match(index, /id="library-link"/);
   assert.match(index, /id="main_tab"/);
-  assert.match(index, /id="coalition_tab"/);
+  assert.match(index, /id="politics_tab"/);
   assert.match(index, /id="support_tab"/);
-  assert.match(index, /id="majles_tab"/);
-  assert.match(index, /id="crown_tab"/);
+  assert.doesNotMatch(index, /id="majles_tab"/);
+  assert.doesNotMatch(index, /id="crown_tab"/);
   assert.doesNotMatch(index, />\s*Event images:/);
   assert.doesNotMatch(index, />\s*Backgrounds:/);
   assert.match(gameCss, /--term-nationalist:\s*#2c6f64/i);
@@ -135,11 +135,19 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.match(gameJs, /function installDebugChoiceEffects\(dendryUI\)/);
   assert.match(gameJs, /function browserDebugModeRequested\(\)/);
   assert.match(gameJs, /function chamberSvg\(places, chamber, mode, detailPanel\)/);
+  assert.match(gameJs, /function parliamentSeatLayout\(groups, width, height\)/);
+  assert.match(gameJs, /var innerRadiusCoef = 0\.4/);
+  assert.match(gameJs, /function chamberResultsTable\(places, chamber, mode\)/);
+  assert.match(gameJs, /function parliamentControl\(\)/);
+  assert.match(gameJs, /q\.parliamentary_deck_unlocked/);
+  assert.match(gameCss, /\.parliament-button\s*\{/);
   assert.match(gameJs, /window\.renderSupportTrends = function\(q\)/);
   assert.match(gameJs, /window\.chamberViewMode/);
   assert.match(gameJs, /data-place-id/);
   assert.match(gameCss, /\.chamber-chart\s*\{/);
   assert.match(gameCss, /\.chamber-controls\s*\{/);
+  assert.match(gameCss, /\.spd-election-table\s*\{/);
+  assert.match(gameCss, /\.election-result-box\s*\{/);
   assert.match(gameCss, /\.support-trend-chart\s*\{/);
   assert.match(
     gameJs,
@@ -160,10 +168,15 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   assert.ok(hasOpeningTerm('term-mossadegh', 'Mohammad Mossadegh'));
   assert.ok(hasOpeningTerm('term-parliament', 'Majles'));
   assert.equal(hasOpeningTerm('term-national-front', 'National Front'), false);
-  assert.ok(compiledGame.scenes['status.majles']);
-  assert.ok(compiledGame.scenes['status.crown']);
+  assert.ok(compiledGame.scenes.parliament);
+  assert.equal(compiledGame.scenes['status.majles'], undefined);
+  assert.equal(compiledGame.scenes['status.crown'], undefined);
   assert.ok(compiledGame.scenes.research_library);
   assert.ok(compiledGame.scenes.campaign_ending);
+  assert.match(
+    fs.readFileSync('THIRD_PARTY_NOTICES.md', 'utf8'),
+    /d3-parliament[\s\S]*Geoffrey Brossard[\s\S]*MIT/,
+  );
   assert.deepEqual(
     compiledGame.scenes['root.start_menu'].options.map((option) => option.title),
     [
@@ -677,15 +690,19 @@ test('build applies the tracked Dynamic SPD-style browser overlay', () => {
   }
 });
 
-test('status sidebar scenes and qdisplay compile with stable IDs', () => {
+test('SPD-style status tabs and separate Parliament scene compile', () => {
   const game = JSON.parse(fs.readFileSync('out/game.json', 'utf8'));
   const coalitionText = JSON.stringify(game.scenes['status.coalition']);
+  const statusText = JSON.stringify(game.scenes.status);
 
   assert.equal(game.scenes.status.isSpecial, true);
   assert.ok(game.scenes['status.coalition']);
   assert.ok(game.scenes['status.support']);
-  assert.ok(game.scenes['status.majles']);
-  assert.ok(game.scenes['status.crown']);
+  assert.equal(game.scenes['status.majles'], undefined);
+  assert.equal(game.scenes['status.crown'], undefined);
+  assert.equal(game.scenes.parliament.isSpecial, true);
+  assert.match(statusText, /Mohammad Reza Shah/);
+  assert.doesNotMatch(statusText, /Active advisers/);
   assert.match(
     coalitionText,
     /term term-constitutionalist\\?">.*Iran Party/,

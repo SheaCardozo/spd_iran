@@ -45,7 +45,7 @@ test('pregame sidebar is inert and the agenda explains empty states', async ({
   await expect(
     page.locator('#stats_sidebar .tab_button').first(),
   ).toBeDisabled();
-  await page.evaluate(() => window.changeTab('status.majles', 'majles_tab'));
+  await page.evaluate(() => window.changeTab('status.coalition', 'politics_tab'));
   expect(pageErrors).toEqual([]);
 
   await firstAvailableChoice(page);
@@ -84,7 +84,12 @@ test('debug mode reveals exact choice effects only on hover or focus', async ({
 }) => {
   await page.goto('/?debug=1');
   await firstAvailableChoice(page);
-  await page.locator('#majles_tab').click();
+  await page.evaluate(() => {
+    const dendry = window.dendryUI.dendryEngine;
+    dendry.state.qualities.parliamentary_deck_unlocked = 1;
+    dendry.goToScene('main');
+  });
+  await page.getByRole('button', {name: 'Parliament', exact: true}).click();
   if (page.viewportSize().width <= 600) {
     await page.locator('#majles-place-picker').selectOption('0');
   } else {
@@ -150,19 +155,28 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
 
   for (const [tab, text] of [
     ['main_tab', 'Constitutional legitimacy'],
-    ['coalition_tab', 'Opposition'],
+    ['politics_tab', 'Opposition'],
     ['support_tab', 'Professional and constitutional circles'],
-    ['majles_tab', 'Majles'],
-    ['crown_tab', 'Mohammad Reza Shah'],
   ]) {
     await page.locator(`#${tab}`).click();
     await expect(page.locator('#qualities')).toContainText(text);
   }
-  await page.locator('#majles_tab').click();
-  await expect(page.locator('#qualities .majles-chart .chamber-seat')).toHaveCount(136);
-  await expect(page.locator('#qualities .senate-chart')).toHaveCount(0);
-  await expect(page.locator('#qualities')).toContainText(
-    'authorized place → returned candidate → approved credential',
+  await page.locator('#main_tab').click();
+  await expect(page.locator('#qualities')).toContainText('Mohammad Reza Shah');
+  await expect(page.locator('#qualities')).not.toContainText('Active advisers');
+  await expect(
+    page.getByRole('button', {name: 'Parliament', exact: true}),
+  ).toHaveCount(0);
+  await page.evaluate(() => {
+    const dendry = window.dendryUI.dendryEngine;
+    dendry.state.qualities.parliamentary_deck_unlocked = 1;
+    dendry.goToScene('main');
+  });
+  await page.getByRole('button', {name: 'Parliament', exact: true}).click();
+  await expect(page.locator('#content .majles-chart .chamber-seat')).toHaveCount(136);
+  await expect(page.locator('#content .senate-chart')).toHaveCount(0);
+  await expect(page.locator('#content')).toContainText(
+    'Each authorized place passes through distinct questions',
   );
   const firstMajlesPlace = page.locator(
     '.majles-chart .chamber-seat[data-place-number="1"]',
@@ -215,9 +229,12 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   await page.evaluate(() => {
     window.dendryUI.dendryEngine.state.qualities.senate_convened = 1;
     window.dendryUI.dendryEngine.state.qualities.gass_golshayan_rejected_majles = 1;
-    window.updateSidebar();
+    window.renderChamberVisualizations(
+      window.dendryUI.dendryEngine.state.qualities,
+      '#parliament-visualizations',
+    );
   });
-  await expect(page.locator('#qualities .senate-chart .chamber-seat')).toHaveCount(60);
+  await expect(page.locator('#content .senate-chart .chamber-seat')).toHaveCount(60);
   const firstSenatePlace = page.locator(
     '.senate-chart .chamber-seat[data-place-number="1"]',
   );
@@ -236,11 +253,13 @@ test('onboarding, sidebar, Library, cards, advisers, saves, modes, and layout', 
   if (compactLayout) {
     await page.locator('#majles-place-picker').selectOption('0');
   } else {
-    await page.locator('#qualities .majles-chart .chamber-seat').first().focus();
+    await page.locator('#content .majles-chart .chamber-seat').first().focus();
   }
   await expect(page.locator('.chamber-place-detail')).toContainText(
     'oil position',
   );
+  await page.getByRole('link', {name: 'Return to the monthly briefing'}).click();
+  await expect(page.locator('#content')).toContainText('Opposition briefing');
 
   await page.evaluate(() => {
     const q = window.dendryUI.dendryEngine.state.qualities;

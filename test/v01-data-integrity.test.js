@@ -377,8 +377,7 @@ test('menu, briefing, Library, status, and ending meet the scene-wide standard',
     'status',
     'status.coalition',
     'status.support',
-    'status.majles',
-    'status.crown',
+    'parliament',
     'research_library',
     'research_library.current_situation',
     'research_library.government',
@@ -462,11 +461,26 @@ test('menu, briefing, Library, status, and ending meet the scene-wide standard',
     'support_bazaar',
     'support_workers',
     'support_provincial',
-    'Front representation in the chamber',
-    'Oil-coalition support',
-    'Parliamentary-procedure legitimacy',
   ]) {
     assert.match(statusPlainText, new RegExp(field));
+  }
+  assert.doesNotMatch(statusPlainText, /Active advisers/);
+
+  const parliamentSource = fs.readFileSync(
+    'source/scenes/parliament.scene.dry',
+    'utf8',
+  );
+  const parliamentPlainText = withoutSemanticMarkup(parliamentSource);
+  for (const field of [
+    'Front representation',
+    'Oil coalition',
+    'Parliamentary procedure',
+    'Return:',
+    'Credential:',
+    'Usability:',
+    'Attendance:',
+  ]) {
+    assert.match(parliamentPlainText, new RegExp(field));
   }
 
   const timeline = fs.readFileSync('out/html/timeline.html', 'utf8');

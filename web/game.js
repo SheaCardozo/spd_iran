@@ -576,6 +576,26 @@
     }
   }
 
+  function parliamentControl() {
+    var item = $('<li>').addClass('parliament-control');
+    var button = $('<button>').addClass('parliament-button').attr({
+      type: 'button',
+      title: 'View current returns, credentials, attendance, and chamber positions',
+      'aria-label': 'Parliament',
+    });
+    button.append(
+      $('<span>').addClass('parliament-button-face').text('Parliament'),
+    );
+    button.on('click', function() {
+      window.dendryUI.dendryEngine.goToScene('parliament');
+    });
+    item.append(
+      button,
+      $('<span>').addClass('card-caption').text('Parliament'),
+    );
+    return item;
+  }
+
   window.displayDecks = function(decks) {
     var q = window.dendryUI.dendryEngine.state.qualities;
     var description =
@@ -607,6 +627,9 @@
       if (availability) item.append(availability);
       list.append(item);
     });
+    if (q.parliamentary_deck_unlocked) {
+      list.append(parliamentControl());
+    }
     $('#content').append(list);
     if (!decks.some(function(deck) { return deck.canChoose; })) {
       $('.deck-state').last().text(
@@ -680,7 +703,6 @@
       tabButtons.forEach(function(button) {
           button.disabled = false;
       });
-      $('#coalition_tab').text(q.front_formed ? 'Coalition' : 'Opposition');
       var scene = dendryUI.game.scenes[window.statusTab];
       if (!scene) return;
       if (scene.onArrival) {
@@ -688,11 +710,7 @@
       }
       var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
       $('#qualities').append(dendryUI.contentToHTML.convert(displayContent));
-      if (window.statusTab === 'status.majles') {
-          if (Array.isArray(q.majles_places)) {
-              window.renderChamberVisualizations(q);
-          }
-      } else if (window.statusTab === 'status.support') {
+      if (window.statusTab === 'status.support') {
           window.renderSupportTrends(q);
       }
   };
@@ -791,52 +809,214 @@
     });
   }
 
+  /*
+   * Dynamic SPD election analogue: d3-parliament.js and
+   * events/election_1928.scene.dry. This is the same semicircle construction
+   * (0.4 inner radius, angle-sorted seats, contiguous political blocks)
+   * expressed without a D3 runtime so each circle can retain its Iran place
+   * record and accessible dossier interaction.
+   */
+  function parliamentGroupMetadata() {
+    return {
+      front: {
+        label: 'National Front — able to sit',
+        meaning: 'Returned, credential approved, and attending',
+      },
+      usable: {
+        label: 'Other members — able to sit',
+        meaning: 'Returned, credential approved, and attending',
+      },
+      elected: {
+        label: 'Elected senators — able to sit',
+        meaning: 'Elected route, seated, and attending',
+      },
+      appointed: {
+        label: 'Appointed senators — able to sit',
+        meaning: 'Royal appointment, seated, and attending',
+      },
+      'credential-pending': {
+        label: 'Credential pending',
+        meaning: 'A return exists but the mandate is not approved',
+      },
+      rejected: {
+        label: 'Credential rejected',
+        meaning: 'The chamber rejected the returned mandate',
+      },
+      unavailable: {
+        label: 'Unavailable or absent',
+        meaning: 'Not presently part of the attending voting body',
+      },
+      pending: {
+        label: 'No return recorded',
+        meaning: 'No candidate is presently returned for the place',
+      },
+      'oil-supports': {
+        label: 'Supports nationalization',
+        meaning: 'Presently committed to support',
+      },
+      'oil-conditional': {
+        label: 'Conditional',
+        meaning: 'Support remains conditional or unsettled',
+      },
+      'oil-opposes': {
+        label: 'Opposes nationalization',
+        meaning: 'Presently committed against',
+      },
+      'oil-uncommitted': {
+        label: 'Uncommitted',
+        meaning: 'No settled oil position',
+      },
+    };
+  }
+
+  function parliamentCategoryOrder(chamber, mode) {
+    if (mode === 'oil') {
+      return [
+        'oil-supports',
+        'oil-conditional',
+        'oil-opposes',
+        'oil-uncommitted',
+        'credential-pending',
+        'rejected',
+        'unavailable',
+        'pending',
+      ];
+    }
+    if (chamber === 'senate') {
+      return [
+        'elected',
+        'appointed',
+        'credential-pending',
+        'rejected',
+        'unavailable',
+        'pending',
+      ];
+    }
+    return [
+      'front',
+      'usable',
+      'credential-pending',
+      'rejected',
+      'unavailable',
+      'pending',
+    ];
+  }
+
+  function parliamentGroups(places, chamber, mode) {
+    var metadata = parliamentGroupMetadata();
+    var buckets = {};
+    places.forEach(function(place) {
+      var category = seatCategory(place, chamber, mode);
+      if (!buckets[category]) buckets[category] = [];
+      buckets[category].push(place);
+    });
+    return parliamentCategoryOrder(chamber, mode).map(function(category) {
+      return {
+        id: category,
+        label: metadata[category].label,
+        meaning: metadata[category].meaning,
+        places: (buckets[category] || []).sort(function(left, right) {
+          return left.place_number - right.place_number;
+        }),
+      };
+    }).filter(function(group) {
+      return group.places.length > 0;
+    });
+  }
+
+  function parliamentSeatLayout(groups, width, height) {
+    var innerRadiusCoef = 0.4;
+    var outerRadius = Math.min(width / 2, height);
+    var innerRadius = outerRadius * innerRadiusCoef;
+    var seatCount = groups.reduce(function(total, group) {
+      return total + group.places.length;
+    }, 0);
+    var rows = 0;
+    var maximumSeats = 0;
+    var b = 0.5;
+    var a = innerRadiusCoef / (1 - innerRadiusCoef);
+    while (maximumSeats < seatCount) {
+      rows += 1;
+      b += a;
+      maximumSeats = 0;
+      for (var rowIndex = 0; rowIndex < rows; rowIndex += 1) {
+        maximumSeats += Math.floor(Math.PI * (b + rowIndex));
+      }
+    }
+
+    var rowWidth = (outerRadius - innerRadius) / rows;
+    var seatsToRemove = maximumSeats - seatCount;
+    var seats = [];
+    for (var row = 0; row < rows; row += 1) {
+      var radius = innerRadius + rowWidth * (row + 0.5);
+      var rowSeats = Math.floor(Math.PI * (b + row)) -
+        Math.floor(seatsToRemove / rows) -
+        (seatsToRemove % rows > row ? 1 : 0);
+      var anglePerSeat = Math.PI / rowSeats;
+      for (var index = 0; index < rowSeats; index += 1) {
+        var angle = -Math.PI + anglePerSeat * (index + 0.5);
+        seats.push({
+          radius: radius,
+          angle: angle,
+          x: width / 2 + radius * Math.cos(angle),
+          y: outerRadius + radius * Math.sin(angle),
+          seatRadius: 0.4 * rowWidth,
+        });
+      }
+    }
+    seats.sort(function(left, right) {
+      return left.angle - right.angle || right.radius - left.radius;
+    });
+
+    var groupedPlaces = [];
+    groups.forEach(function(group) {
+      group.places.forEach(function(place) {
+        groupedPlaces.push({group: group, place: place});
+      });
+    });
+    seats.forEach(function(seat, index) {
+      seat.group = groupedPlaces[index].group;
+      seat.place = groupedPlaces[index].place;
+    });
+    return seats;
+  }
+
   function chamberSvg(places, chamber, mode, detailPanel) {
     var namespace = 'http://www.w3.org/2000/svg';
+    var width = 500;
+    var height = 250;
     var svg = document.createElementNS(namespace, 'svg');
     svg.setAttribute('class', 'chamber-chart ' + chamber + '-chart');
-    svg.setAttribute('viewBox', '0 0 240 128');
+    svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height);
     svg.setAttribute('role', 'group');
     svg.setAttribute(
       'aria-label',
       (chamber === 'majles' ? 'Majles' : 'Senate') +
-        ' place-by-place chamber diagram',
+        ' place-by-place parliamentary semicircle',
     );
     var compactTouchLayout = window.matchMedia &&
       window.matchMedia('(max-width: 600px)').matches;
-    var rings = chamber === 'majles' ? 6 : 4;
-    var weights = [];
-    var totalWeight = 0;
-    for (var ring = 0; ring < rings; ring += 1) {
-      var radius = 42 + (ring * 12);
-      weights.push(radius);
-      totalWeight += radius;
-    }
-    var counts = [];
-    var assigned = 0;
-    for (var countRing = 0; countRing < rings; countRing += 1) {
-      var count = countRing === rings - 1
-        ? places.length - assigned
-        : Math.round(places.length * weights[countRing] / totalWeight);
-      counts.push(count);
-      assigned += count;
-    }
-    var placeIndex = 0;
-    counts.forEach(function(ringCount, ringIndex) {
-      var radius = 42 + (ringIndex * 12);
-      for (var index = 0; index < ringCount; index += 1) {
-        var angle = Math.PI - (Math.PI * index / Math.max(1, ringCount - 1));
-        var place = places[placeIndex++];
+    var groups = parliamentGroups(places, chamber, mode);
+    var seats = parliamentSeatLayout(groups, width, height);
+    var reducedMotion = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var animate = !reducedMotion &&
+      (!window.dendryUI || window.dendryUI.animate !== false);
+
+    seats.forEach(function(seat, seatIndex) {
+        var place = seat.place;
         var circle = document.createElementNS(namespace, 'circle');
-        circle.setAttribute('cx', String(120 + Math.cos(angle) * radius));
-        circle.setAttribute('cy', String(116 - Math.sin(angle) * radius));
-        circle.setAttribute('r', chamber === 'majles' ? '3.2' : '4.2');
+        circle.setAttribute('cx', animate ? String(width / 2) : String(seat.x));
+        circle.setAttribute('cy', animate ? String(height) : String(seat.y));
+        circle.setAttribute('r', animate ? '0' : String(seat.seatRadius));
         circle.setAttribute(
           'class',
-          'chamber-seat seat-' + seatCategory(place, chamber, mode),
+          'seat chamber-seat seat-' + seat.group.id,
         );
         circle.setAttribute('data-place-id', place.id);
         circle.setAttribute('data-place-number', String(place.place_number));
+        circle.style.transitionDuration =
+          String(Math.min(1000, 430 + seatIndex * 4)) + 'ms';
         var title = document.createElementNS(namespace, 'title');
         title.textContent = seatAccessibleLabel(place, chamber, mode);
         circle.appendChild(title);
@@ -856,9 +1036,51 @@
           installSeatInteraction(circle, place, chamber, mode, detailPanel);
         }
         svg.appendChild(circle);
-      }
+        if (animate) {
+          window.requestAnimationFrame(function() {
+            circle.setAttribute('cx', String(seat.x));
+            circle.setAttribute('cy', String(seat.y));
+            circle.setAttribute('r', String(seat.seatRadius));
+          });
+        }
     });
     return svg;
+  }
+
+  function chamberResultsTable(places, chamber, mode) {
+    var groups = parliamentGroups(places, chamber, mode);
+    var chamberLabel = chamber === 'majles' ? 'Majles' : 'Senate';
+    var table = $('<table>').addClass('spd-election-table');
+    table.append(
+      $('<caption>').text(chamberLabel + ' composition'),
+      $('<thead>').append(
+        $('<tr>').append(
+          $('<th>').attr('scope', 'col').text('Group'),
+          $('<th>').attr('scope', 'col').text('Places'),
+          $('<th>').attr('scope', 'col').text('Share'),
+          $('<th>').attr('scope', 'col').text('Present status'),
+        ),
+      ),
+    );
+    var body = $('<tbody>');
+    groups.forEach(function(group) {
+      var share = ((group.places.length / places.length) * 100).toFixed(1);
+      body.append(
+        $('<tr>').append(
+          $('<th>').attr('scope', 'row').append(
+            $('<span>').addClass(
+              'election-result-box seat-' + group.id,
+            ).attr('aria-hidden', 'true'),
+            document.createTextNode(group.label),
+          ),
+          $('<td>').text(String(group.places.length)),
+          $('<td>').text(share + '%'),
+          $('<td>').text(group.meaning),
+        ),
+      );
+    });
+    table.append(body);
+    return table;
   }
 
   function chamberPlacePicker(places, chamber, mode, detailPanel) {
@@ -912,7 +1134,9 @@
     return wrapper;
   }
 
-      window.renderChamberVisualizations = function(q) {
+      window.renderChamberVisualizations = function(q, targetSelector) {
+        var target = $(targetSelector || '#qualities');
+        if (targetSelector) target.empty();
         var container = $('<section>').addClass('chamber-visualizations');
         var mode = window.chamberViewMode || 'institution';
         var availableModes = ['institution'];
@@ -936,7 +1160,7 @@
         }).text(candidate === 'institution' ? 'Institutional status' : 'Oil position')
           .on('click', function() {
             window.chamberViewMode = candidate;
-            window.updateSidebar();
+            window.renderChamberVisualizations(q, targetSelector);
           }),
       );
     });
@@ -953,12 +1177,7 @@
       chamberSvg(q.majles_places, 'majles', mode, detailPanel[0]),
     );
     container.append(
-      $('<p>').addClass('chamber-legend').text(
-        mode === 'oil'
-          ? 'Dark: supports · mid-tone: conditional · pale: opposed or uncommitted'
-          : 'Gold: Front member able to sit · dark: other member able to sit · outline: ' +
-            'credential pending · pale: no return',
-      ),
+      chamberResultsTable(q.majles_places, 'majles', mode),
     );
     if (q.senate_convened && Array.isArray(q.senate_places)) {
       container.append($('<h3>').text('Senate places'));
@@ -969,15 +1188,11 @@
         chamberSvg(q.senate_places, 'senate', mode, detailPanel[0]),
       );
       container.append(
-        $('<p>').addClass('chamber-legend').text(
-          mode === 'oil'
-            ? 'Dark: supports · mid-tone: conditional · pale: opposed or uncommitted'
-            : 'Green: elected · blue: appointed · pale: not yet able to sit',
-        ),
+        chamberResultsTable(q.senate_places, 'senate', mode),
       );
     }
     container.append(detailPanel);
-    $('#qualities').append(container);
+    target.append(container);
   };
 
   window.renderSupportTrends = function(q) {
@@ -1039,6 +1254,17 @@
 
   window.onDisplayContent = function() {
       window.updateSidebar();
+      var engine = window.dendryUI && window.dendryUI.dendryEngine;
+      if (
+        engine &&
+        engine.state.sceneId === 'parliament' &&
+        document.getElementById('parliament-visualizations')
+      ) {
+        window.renderChamberVisualizations(
+          engine.state.qualities,
+          '#parliament-visualizations',
+        );
+      }
   };
 
   window.justLoaded = true;

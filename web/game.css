@@ -112,7 +112,10 @@ body.dark-mode {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 170px;
+  max-width: 500px;
+  max-height: none;
+  margin: 0 auto 0.6rem;
+  overflow: visible;
 }
 
 .chamber-seat {
@@ -120,6 +123,8 @@ body.dark-mode {
   stroke: var(--border-color);
   stroke-width: 0.7;
   cursor: pointer;
+  transition-property: cx, cy, r;
+  transition-timing-function: ease-out;
 }
 
 .chamber-seat:focus,
@@ -149,41 +154,56 @@ body.dark-mode {
 }
 
 .seat-front {
-  fill: var(--term-parliament);
+  --seat-color: var(--term-parliament);
+  fill: var(--seat-color);
 }
 
 .seat-usable {
-  fill: var(--term-independent);
+  --seat-color: var(--term-independent);
+  fill: var(--seat-color);
 }
 
 .seat-elected {
-  fill: var(--term-religious);
+  --seat-color: var(--term-religious);
+  fill: var(--seat-color);
 }
 
 .seat-appointed {
-  fill: var(--term-royalist);
+  --seat-color: var(--term-royalist);
+  fill: var(--seat-color);
 }
 
 .seat-credential-pending {
-  fill: var(--content-bg-color);
+  --seat-color: var(--content-bg-color);
+  fill: var(--seat-color);
   stroke-width: 1.2;
 }
 
 .seat-rejected {
-  fill: var(--term-left);
+  --seat-color: var(--term-left);
+  fill: var(--seat-color);
+}
+
+.seat-unavailable,
+.seat-pending {
+  --seat-color: var(--unavailable-bg-color);
+  fill: var(--seat-color);
 }
 
 .seat-oil-supports {
-  fill: var(--term-parliament);
+  --seat-color: var(--term-parliament);
+  fill: var(--seat-color);
 }
 
 .seat-oil-conditional {
-  fill: var(--term-independent);
+  --seat-color: var(--term-independent);
+  fill: var(--seat-color);
 }
 
 .seat-oil-opposes,
 .seat-oil-uncommitted {
-  fill: var(--unavailable-bg-color);
+  --seat-color: var(--unavailable-bg-color);
+  fill: var(--seat-color);
 }
 
 .chamber-place-detail {
@@ -200,9 +220,55 @@ body.dark-mode {
   line-height: 1.25;
 }
 
+.spd-election-table {
+  width: 100%;
+  margin: 0.2rem 0 1rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: auto;
+  font-size: 0.78rem;
+}
+
+.spd-election-table caption {
+  padding: 0.35rem 0;
+  text-align: left;
+  font-weight: 700;
+}
+
+.spd-election-table th,
+.spd-election-table td {
+  padding: 0.35rem 0.4rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+  white-space: normal;
+  vertical-align: top;
+}
+
+.spd-election-table th:nth-child(2),
+.spd-election-table th:nth-child(3),
+.spd-election-table td:nth-child(2),
+.spd-election-table td:nth-child(3) {
+  text-align: right;
+}
+
+.election-result-box {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  margin-right: 0.4em;
+  border: 1px solid var(--border-color);
+  background: var(--seat-color);
+  vertical-align: -0.05em;
+}
+
 body.gray-mode .chamber-seat {
   fill: #ddd;
   stroke: #222;
+}
+
+body.gray-mode .election-result-box {
+  background: #ddd;
+  border-color: #222;
 }
 
 body.gray-mode .seat-front,
@@ -680,6 +746,56 @@ ul.pinned-cards {
 
 .deck {}
 
+.parliament-control {
+  display: inline-block;
+  position: relative;
+  max-width: 150px;
+  margin-right: 1em;
+  vertical-align: top;
+}
+
+.parliament-button {
+  display: inline-flex;
+  width: 140px;
+  height: 170px;
+  padding: 10px;
+  margin: 0 0 0.5em;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid var(--card-border-color);
+  background:
+    linear-gradient(
+      155deg,
+      var(--content-bg-color) 0 62%,
+      color-mix(in srgb, var(--term-parliament) 22%, var(--content-bg-color))
+        62% 100%
+    );
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  color: var(--font-color);
+  cursor: pointer;
+  font: inherit;
+}
+
+.parliament-button:hover,
+.parliament-button:focus-visible {
+  position: relative;
+  left: -5px;
+  top: -5px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.parliament-button-face {
+  padding: 0.55rem 0.4rem;
+  border-top: 2px solid var(--term-parliament);
+  border-bottom: 2px solid var(--term-parliament);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+body.gray-mode .parliament-button {
+  background: var(--content-bg-color);
+}
+
 a.card {
   display: inline-block;
   width: 120px;
@@ -888,6 +1004,11 @@ img {
     font-size: 0.8em !important;
   }
 
+  .spd-election-table th:nth-child(4),
+  .spd-election-table td:nth-child(4) {
+    display: none;
+  }
+
   #tools_wrapper {
     position: static;
   }
@@ -937,10 +1058,23 @@ img {
 
   .card-in-hand,
   .pinned-card,
-  .deck {
+  .deck,
+  .parliament-control {
     max-width: 120px;
     margin-right: 1em;
     vertical-align: top;
+  }
+
+  .parliament-button {
+    width: 116px;
+    height: 141px;
+    border-width: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chamber-seat {
+    transition: none;
   }
 }
 

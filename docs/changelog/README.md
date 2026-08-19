@@ -124,3 +124,4 @@ bibliography entry, or asset-rights record.
 - [v0.3 rendered adversarial repair pass](2026-07-30-v03-adversarial-repair-pass.md)
 - [Attempt and crackdown event queue](2026-07-30-attempt-crackdown-event-queue.md)
 - [Title-page mechanical foreshadowing](2026-07-30-title-page-mechanical-foreshadowing.md)
+- [Dynamic SPD sidebar and Parliament surface](2026-07-30-spd-sidebar-and-parliament-surface.md)

@@ -476,10 +476,8 @@ class BrowserPlayerSession {
       }
       const requiredSidebarTabs = [
         'main_tab',
-        'coalition_tab',
+        'politics_tab',
         'support_tab',
-        'majles_tab',
-        'crown_tab',
       ];
       if (
         requiredSidebarTabs.some((id) => !document.getElementById(id))

@@ -1,0 +1,83 @@
+# Historical basis for chamber structure and credential procedure: Abrahamian,
+# Iran Between Two Revolutions, ch. 5, pp. 249–267; Azimi, The Quest for
+# Democracy in Iran, ch. 3, pp. 118–153; official Sixteenth-Majles
+# proceedings, sessions 2, 25, and 30 (18 February, 18 May, and 1 June 1950);
+# official First-Senate roster, elected and appointed tables. Mutable place
+# outcomes and oil positions are scenario state, never historical evidence.
+# Dynamic SPD comparison: status.scene.dry summarizes the Reichstag, while
+# election scenes provide the full chamber visualization. Iran moves its more
+# detailed place ledger to this non-action scene because 196 individual places
+# and credential states are too dense for the persistent sidebar.
+title: Parliament
+subtitle: Returns, credentials, attendance, and the balance in both chambers
+new-page: true
+is-special: true
+
+= {!<span class="term term-parliament">!}Majles{!</span>!}[? if senate_convened = 1:  and {!<span class="term term-senate">!}Senate{!</span>!} ?]
+
+Phase: [+ majles_phase +]
+
+## How a place becomes usable
+
+Each authorized place passes through distinct questions:
+
+1. **Return:** was a candidate returned from that constituency?
+2. **Credential:** did the chamber approve that returned candidate's mandate?
+3. **Usability:** can the approved member take the seat and participate?
+4. **Attendance:** is that member expected to be present for the business at
+   hand?
+
+Campaign work can affect a genuinely contestable return while voting is under
+way. A credential case begins only after a candidate has been returned: legal
+work may defend or contest that mandate, but it cannot create a return where
+none exists. Chamber support is counted only from members able to sit and
+expected to attend.
+
+## Current chamber
+
+{!<span class="term term-parliament">!}Majles{!</span>!} authorized places: 136
+
+Returned candidates: [+ majles_returns_recorded +]
+
+Credentials approved: [+ majles_credentials_approved +]
+
+Members able to sit: [+ majles_usable_members +]
+
+[? if front_formed = 1: {!<span class="term term-national-front">!}National Front{!</span>!} members able to sit: [+ majles_national_front_usable +] ?]
+
+[? if front_formed = 1: {!<span class="term term-national-front">!}Front{!</span>!} representation: ?]
+[? if front_formed = 1 and majles_national_front_usable < 3: marginal ?]
+[? if front_formed = 1 and majles_national_front_usable >= 3 and majles_national_front_usable < 6: emerging ?]
+[? if front_formed = 1 and majles_national_front_usable >= 6: established cohort ?]
+
+[? if senate_convened = 1: {!<span class="term term-senate">!}Senate{!</span>!} authorized places: 60 ?]
+
+[? if senate_convened = 1: Senators able to sit: [+ senate_usable_members +] ?]
+
+[? if majles_convened = 1: Parliamentary procedure: ?]
+[? if majles_convened = 1 and parliamentary_procedure_legitimacy < 35: weak ?]
+[? if majles_convened = 1 and parliamentary_procedure_legitimacy >= 35 and parliamentary_procedure_legitimacy < 65: credible ?]
+[? if majles_convened = 1 and parliamentary_procedure_legitimacy >= 65: strong ?]
+
+[? if oil_committee_formed = 1: Oil coalition: ?]
+[? if oil_committee_formed = 1 and oil_coalition_support < 35: narrow ?]
+[? if oil_committee_formed = 1 and oil_coalition_support >= 35 and oil_coalition_support < 65: competitive ?]
+[? if oil_committee_formed = 1 and oil_coalition_support >= 65: broad ?]
+
+[? if gass_golshayan_rejected_majles = 1: Among the [+
+majles_attending_members +] members expected to attend, [+
+nationalization_majles_support +] support nationalization, [+
+nationalization_majles_conditional +] remain conditional, and [+
+nationalization_majles_opposed +] oppose it. A majority requires [+
+nationalization_majles_threshold +]. ?]
+
+[? if senate_convened = 1 and nationalization_approved_majles = 1:
+Among the [+ senate_attending_members +] senators expected to attend, [+
+nationalization_senate_support +] support nationalization, [+
+nationalization_senate_conditional +] remain conditional, and [+
+nationalization_senate_opposed +] oppose it. A majority requires [+
+nationalization_senate_threshold +]. ?]
+
+{!<div id="parliament-visualizations"></div>!}
+
+- @main: Return to the monthly briefing

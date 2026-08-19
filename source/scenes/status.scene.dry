@@ -1,30 +1,23 @@
-# Historical boundaries for constituency audiences and chamber procedure:
+# Historical boundaries for constituency audiences and Crown conduct:
 # Abrahamian, Iran Between Two Revolutions, ch. 5, pp. 249–267; Azimi,
-# The Quest for Democracy in Iran, ch. 3, pp. 118–153; official Sixteenth-
-# Majles proceedings, sessions 2, 25, and 30. Qualitative values are scenario
-# estimates, not historical polls.
+# The Quest for Democracy in Iran, ch. 3, pp. 118–153. Qualitative values are
+# scenario evaluations, not historical polling or measurements.
+# Dynamic SPD comparison: status.scene.dry puts date, resources, the party's
+# position, and government on Main; its Politics and Polls subscenes separate
+# party organization from electoral support.
 title: Status
 new-page: true
 is-special: true
 
 = Campaign
 
-[+ month : month +] [+ year +] — monthly actions completed: [+ months_advanced +] / [+
-campaign_action_target +]
+[+ month : month +] [+ year +]
 
 Resources: [+ resources +]
 
-[? if campaign_complete = 0 and advisor_action_timer <= 0: Adviser action: available. ?]
-[? if campaign_complete = 0 and advisor_action_timer = 1: Adviser action: available in 1 month. ?]
-[? if campaign_complete = 0 and advisor_action_timer > 1: Adviser action: available in [+ advisor_action_timer +] months. ?]
-[? if campaign_complete = 0 and advisor_pool_size > 3 and advisor_roster_required = 1: Adviser roster:
-must be reconciled now. ?]
-[? if campaign_complete = 0 and advisor_pool_size > 3 and advisor_roster_required = 0 and advisor_roster_timer <= 0: Adviser roster:
-may be changed now. ?]
-[? if campaign_complete = 0 and advisor_pool_size > 3 and advisor_roster_required = 0 and advisor_roster_timer = 1: Adviser roster:
-may be changed in 1 month. ?]
-[? if campaign_complete = 0 and advisor_pool_size > 3 and advisor_roster_required = 0 and advisor_roster_timer > 1: Adviser roster:
-may be changed in [+ advisor_roster_timer +] months. ?]
+Political position:
+[? if front_formed = 0: constitutional opposition ?]
+[? if front_formed = 1: opposition organized through the {!<span class="term term-national-front">!}National Front{!</span>!} ?]
 
 Constitutional legitimacy:
 [? if constitutional_legitimacy < 35: weak ?]
@@ -46,14 +39,41 @@ Press capacity:
 [? if press_capacity >= 35 and press_capacity < 65: coordinated ?]
 [? if press_capacity >= 65: formidable ?]
 
-[? if debug_mode = 1: **Debug values:** legitimacy [+ constitutional_legitimacy +], mandate [+ public_mandate +], reach [+ organizational_reach +], press [+ press_capacity +]. ?]
+= {!<span class="term term-royalist">!}Crown{!</span>!} and government
 
-Active advisers: [+ active_advisor_names +].
+Monarch: {!<span class="term term-royalist">!}Mohammad Reza Shah{!</span>!}
+
+Relationship with the opposition:
+[? if shah_relation < 35: hostile ?]
+[? if shah_relation >= 35 and shah_relation < 65: guarded ?]
+[? if shah_relation >= 65: workable ?]
+
+Royal resistance:
+[? if shah_resistance < 35: limited ?]
+[? if shah_resistance >= 35 and shah_resistance < 65: substantial ?]
+[? if shah_resistance >= 65: severe ?]
+
+{!<span class="term term-royalist">!}Court{!</span>!} capacity:
+[? if shah_court_capacity < 35: constrained ?]
+[? if shah_court_capacity >= 35 and shah_court_capacity < 65: capable ?]
+[? if shah_court_capacity >= 65: dominant ?]
+
+Electoral influence:
+[? if shah_electoral_influence < 35: constrained ?]
+[? if shah_electoral_influence >= 35 and shah_electoral_influence < 65: substantial ?]
+[? if shah_electoral_influence >= 65: pervasive ?]
+
+Current pressure on the campaign:
+[? if crown_pressure < 35: limited ?]
+[? if crown_pressure >= 35 and crown_pressure < 65: substantial ?]
+[? if crown_pressure >= 65: severe ?]
+
+[? if debug_mode = 1: **Debug values:** legitimacy [+ constitutional_legitimacy +], mandate [+ public_mandate +], reach [+ organizational_reach +], press [+ press_capacity +]; royal relation [+ shah_relation +], resistance [+ shah_resistance +], capacity [+ shah_court_capacity +], influence [+ shah_electoral_influence +], pressure [+ crown_pressure +]. ?]
 
 - @main: Return
 
 @coalition
-title: Coalition
+title: Politics
 
 = [? if front_formed = 0: Opposition ?][? if front_formed = 1: Coalition ?]
 
@@ -144,95 +164,3 @@ Election campaign:
 [? if debug_mode = 1: **Debug values:** professional [+ support_professional +], bazaar [+ support_bazaar +], wage earners [+ support_workers +], provincial [+ support_provincial +], campaign capacity [+ election_campaign_capacity +]. ?]
 
 Recorded monthly support observations: [+ support_history_length +]
-
-@majles
-title: Parliament
-
-= {!<span class="term term-parliament">!}Majles{!</span>!}[? if senate_convened = 1:  and {!<span class="term term-senate">!}Senate{!</span>!} ?]
-
-Phase: [+ majles_phase +]
-
-**Seat path:** authorized place → returned candidate → approved credential →
-member able to sit → attending member.
-
-{!<span class="term term-parliament">!}Majles{!</span>!} authorized places: 136
-
-Returned candidates: [+ majles_returns_recorded +]
-
-Credentials approved: [+ majles_credentials_approved +]
-
-Members able to sit: [+ majles_usable_members +]
-
-[? if front_formed = 1: {!<span class="term term-national-front">!}National Front{!</span>!} members able to sit: [+ majles_national_front_usable +] ?]
-
-[? if front_formed = 1: {!<span class="term term-national-front">!}Front{!</span>!} representation in the chamber: ?]
-[? if front_formed = 1 and majles_national_front_usable < 3: marginal ?]
-[? if front_formed = 1 and majles_national_front_usable >= 3 and majles_national_front_usable < 6: emerging ?]
-[? if front_formed = 1 and majles_national_front_usable >= 6: established cohort ?]
-
-[? if senate_convened = 1: {!<span class="term term-senate">!}Senate{!</span>!} authorized places: 60 ?]
-
-[? if senate_convened = 1: Senators able to sit: [+ senate_usable_members +] ?]
-
-[? if oil_committee_formed = 1: Oil-coalition support: ?]
-[? if oil_committee_formed = 1 and oil_coalition_support < 35: narrow ?]
-[? if oil_committee_formed = 1 and oil_coalition_support >= 35 and oil_coalition_support < 65: competitive ?]
-[? if oil_committee_formed = 1 and oil_coalition_support >= 65: broad ?]
-
-[? if gass_golshayan_rejected_majles = 1: Among the [+
-majles_attending_members +] members able to sit and expected to attend, [+
-nationalization_majles_support +] support nationalization, [+
-nationalization_majles_conditional +] remain conditional, and [+
-nationalization_majles_opposed +] oppose it. A majority requires [+
-nationalization_majles_threshold +]. ?]
-
-[? if senate_convened = 1 and nationalization_approved_majles = 1:
-Among the [+ senate_attending_members +] senators expected to attend, [+
-nationalization_senate_support +] support nationalization, [+
-nationalization_senate_conditional +] remain conditional, and [+
-nationalization_senate_opposed +] oppose it. A majority requires [+
-nationalization_senate_threshold +]. ?]
-
-[? if majles_convened = 1: Parliamentary-procedure legitimacy: ?]
-[? if majles_convened = 1 and parliamentary_procedure_legitimacy < 35: weak ?]
-[? if majles_convened = 1 and parliamentary_procedure_legitimacy >= 35 and parliamentary_procedure_legitimacy < 65: credible ?]
-[? if majles_convened = 1 and parliamentary_procedure_legitimacy >= 65: strong ?]
-
-[? if majles_convened = 1: Parliamentary capacity: ?]
-[? if majles_convened = 1 and ending_parliament < 35: marginal ?]
-[? if majles_convened = 1 and ending_parliament >= 35 and ending_parliament < 65: consequential ?]
-[? if majles_convened = 1 and ending_parliament >= 65: commanding ?]
-
-@crown
-title: <span class="term term-royalist">Crown</span>
-
-= {!<span class="term term-royalist">!}Crown{!</span>!}
-
-{!<span class="term term-royalist">!}Mohammad Reza Shah{!</span>!}
-
-Relationship:
-[? if shah_relation < 35: hostile ?]
-[? if shah_relation >= 35 and shah_relation < 65: guarded ?]
-[? if shah_relation >= 65: workable ?]
-
-Resistance:
-[? if shah_resistance < 35: limited ?]
-[? if shah_resistance >= 35 and shah_resistance < 65: substantial ?]
-[? if shah_resistance >= 65: severe ?]
-
-{!<span class="term term-royalist">!}Court{!</span>!} capacity:
-[? if shah_court_capacity < 35: constrained ?]
-[? if shah_court_capacity >= 35 and shah_court_capacity < 65: capable ?]
-[? if shah_court_capacity >= 65: dominant ?]
-
-Electoral influence:
-[? if shah_electoral_influence < 35: constrained ?]
-[? if shah_electoral_influence >= 35 and shah_electoral_influence < 65: substantial ?]
-[? if shah_electoral_influence >= 65: pervasive ?]
-
-Current combined pressure on the campaign:
-[? if crown_pressure < 35: limited ?]
-[? if crown_pressure >= 35 and crown_pressure < 65: substantial ?]
-[? if crown_pressure >= 65: severe ?]
-
-[? if debug_mode = 1: **Debug values:** relation [+ shah_relation +], resistance [+ shah_resistance +], capacity [+ shah_court_capacity +], influence [+ shah_electoral_influence +], combined pressure [+ crown_pressure +]. ?]

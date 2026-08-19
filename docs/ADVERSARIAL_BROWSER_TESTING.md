@@ -34,8 +34,9 @@ Status, Research Library, Save/Load, and Options are player-only utilities.
 Their header controls and overlays are removed from every adversarial context,
 and their full-page entry points are disabled. Scene links to the full Status
 page or Research Library are also removed. Agents retain the live sidebar and
-may inspect its Main, Opposition/Coalition, Support, Parliament, and Crown
-tabs.
+may inspect its Main, Politics, and Support tabs. Once the election begins,
+agents may also use the ordinary Parliament control beside the action decks;
+it exposes only the same rendered chamber information available to a player.
 
 Persistence is disabled inside every adversarial context. Autosave, manual
 save/load, quick save/load, import, export, and deletion methods are replaced
